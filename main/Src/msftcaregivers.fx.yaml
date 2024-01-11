@@ -48,11 +48,12 @@ msftcaregivers As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
+        OnSelect: |+
             =searchClass.Selected.Value=Blank();
             searchLevel.Selected.Value=Blank();
             searchDesignation.Selected.Value=Blank();
             Reset(search);
+            
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -229,6 +230,7 @@ msftcaregivers As screen:
             ZIndex: =8
 
     navBar_2 As navBarVertical:
+        dasboardNav: =msftDashboard
         ZIndex: =35
 
     Component2_2 As navBarHorizontal:

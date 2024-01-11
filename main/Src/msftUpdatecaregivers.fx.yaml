@@ -100,6 +100,8 @@ msftUpdatecaregivers As screen:
         ZIndex: =5
 
     navBarVertical_1 As navBarVertical:
+        caregiversNav: =msftcaregivers
+        dasboardNav: =msftDashboard
         ZIndex: =6
 
     navBarHorizontal_1 As navBarHorizontal:
@@ -128,8 +130,9 @@ msftUpdatecaregivers As screen:
         Height: =66
         Items: =Filter(Caregivers_1,  StartsWith('Caregiver Name',search.Text))
         LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
         TemplateSize: =1227
-        Width: =1258
+        Width: =1243
         X: =90
         Y: =203
         ZIndex: =9
