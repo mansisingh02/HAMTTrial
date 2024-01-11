@@ -11,7 +11,7 @@ msftnewcategory1 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
-        Height: =24
+        Height: =38
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
@@ -19,8 +19,8 @@ msftnewcategory1 As screen:
         Size: =18
         Text: ="New Capability"
         Width: =203
-        X: =89.60009765625
-        Y: =88.7509765625
+        X: =108
+        Y: =85
         ZIndex: =1
 
     msft_Label_3 As label:
@@ -38,12 +38,12 @@ msftnewcategory1 As screen:
         Size: =12.75
         Text: ="Capability Title"
         Width: =126
-        X: =90
-        Y: =141
+        X: =108
+        Y: =154
         ZIndex: =2
 
     msft_TextInput_2 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =RGBA(219, 219, 219, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
         Default: =
@@ -61,14 +61,14 @@ msftnewcategory1 As screen:
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
         Size: =12.75
         Width: =250
-        X: =90
-        Y: =174
+        X: =108
+        Y: =190
         ZIndex: =3
 
     msft_Label_4 As label:
@@ -86,12 +86,12 @@ msftnewcategory1 As screen:
         Size: =12.75
         Text: ="Description"
         Width: =102
-        X: =90
-        Y: =246
+        X: =422
+        Y: =154
         ZIndex: =4
 
     msft_TextInput_3 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =RGBA(219, 219, 219, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
         Default: =
@@ -99,7 +99,7 @@ msftnewcategory1 As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =109
+        Height: =241
         HintText: ="Enter Description"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -111,81 +111,15 @@ msftnewcategory1 As screen:
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
         Size: =12.75
-        Width: =1245
-        X: =90
-        Y: =279
+        Width: =521
+        X: =422
+        Y: =190
         ZIndex: =5
-
-    msft_Button_2 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =37
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Save"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =120
-        X: =1214
-        Y: =707.5
-        ZIndex: =6
-
-    msft_Button_3 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(174, 26, 26, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =37
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Cancel"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =138
-        X: =90
-        Y: =707.5
-        ZIndex: =7
 
     "'Rectangle 31_1' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -211,4 +145,77 @@ msftnewcategory1 As screen:
         Width: =1296.49914550781
         X: =70
         ZIndex: =10
+
+    msft_Button_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="SAVE"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =130
+        X: =1194
+        Y: =681
+        ZIndex: =11
+
+    msft_Button_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =6
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="CANCEL"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =143
+        X: =108
+        Y: =681
+        ZIndex: =12
+
+    navBarVertical_4 As navBarVertical:
+        ZIndex: =13
+
+    navBarHorizontal_4 As navBarHorizontal:
+        ZIndex: =14
 
