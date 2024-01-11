@@ -1,0 +1,86 @@
+navBarVertical As CanvasComponent:
+    Fill: =RGBA(0, 51, 142, 1)
+    Height: =768
+    Width: =75
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Image5 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =If(gblSelected=1,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        FocusedBorderThickness: =4
+        Height: =89
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 38, 106, 1)
+        Image: =dashboard
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Set(gblSelected,1)
+        PressedBorderColor: =RGBA(0, 60, 106, 1)
+        PressedFill: =
+        Width: =75
+        Y: =86
+        ZIndex: =1
+
+    Image5_1 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =If(gblSelected=2,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 38, 106, 1)
+        Image: =Projects_2
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Set(gblSelected,2)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =75
+        Y: =175
+        ZIndex: =2
+
+    Image5_2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =If(gblSelected=3,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 38, 106, 1)
+        Image: =caregivers
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Set(gblSelected,3)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =75
+        Y: =275
+        ZIndex: =3
+
+    Image5_3 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =If(gblSelected=4,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        FocusedBorderThickness: =4
+        Height: =93
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 38, 106, 1)
+        Image: =master_data
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: =Set(gblSelected,4)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =75
+        Y: =375
+        ZIndex: =4
+

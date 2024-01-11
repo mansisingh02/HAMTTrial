@@ -1,0 +1,38 @@
+{
+  "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://providence4.sharepoint.com/sites/HAMT": {
+        "dataSources": {
+          "Caregiver Skills": {
+            "tableName": "f5da718e-4fd5-4e18-a1a2-bd8f25165a0d"
+          },
+          "Caregivers_1": {
+            "tableName": "fadc7aa5-a2d0-4633-977f-29cd77857a20"
+          },
+          "Skills_1": {
+            "tableName": "ad8fe053-a1fb-4586-8ef8-1aa9fb313f64"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Caregivers_1",
+      "Caregiver Skills",
+      "Skills_1"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
+  }
+}
