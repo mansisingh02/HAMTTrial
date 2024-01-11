@@ -1,4 +1,5 @@
 msftUpdatecaregivers As screen:
+    Fill: =RGBA(255, 255, 255, 0)
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1366
@@ -304,6 +305,7 @@ msftUpdatecaregivers As screen:
         Items: |-
             =Table({ID:1,Label:"Beginner Skills"},{ID:2,Label:"Intermediate Skills"},{ID:3,Label:"Advanced Skills"})
         LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
         TemplatePadding: =0
         TemplateSize: =205
         X: =90
@@ -311,7 +313,9 @@ msftUpdatecaregivers As screen:
         ZIndex: =13
 
         Button2 As button:
+            AutoDisableOnSelect: =false
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -327,7 +331,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =1
             PaddingRight: =1
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(0, 152, 41, 0.03)
+            PressedColor: =RGBA(0, 38, 106, 100)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
