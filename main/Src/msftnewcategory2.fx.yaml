@@ -17,7 +17,7 @@ msftnewcategory2 As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="New Category"
+        Text: ="New Capability"
         Width: =203
         X: =107
         Y: =100
@@ -36,7 +36,7 @@ msftnewcategory2 As screen:
         PaddingRight: =0
         PaddingTop: =8
         Size: =12.75
-        Text: ="Category Title"
+        Text: ="Capability Title"
         Width: =126
         X: =107
         Y: =171
@@ -67,7 +67,7 @@ msftnewcategory2 As screen:
         RadiusTopRight: =3
         Size: =12.75
         Width: =250
-        X: =107
+        X: =106
         Y: =212
         ZIndex: =3
 
@@ -194,6 +194,7 @@ msftnewcategory2 As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
