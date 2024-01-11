@@ -272,7 +272,7 @@ msftcaregivers As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =32
         X: =1224
-        Y: =721
+        Y: =717
         ZIndex: =39
 
     Image4 As image:
@@ -297,7 +297,7 @@ msftcaregivers As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =30
         X: =1006
-        Y: =721
+        Y: =717
         ZIndex: =40
 
     hiddenGallery As gallery.galleryVertical:
@@ -346,11 +346,12 @@ msftcaregivers As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =30
         Size: =13
-        Text: ="Page  " &varPageNumber & "  of " & "  " & RoundUp(Value((rowCount.Text)/10),0) & "+"
-        Width: =142
-        X: =1081
-        Y: =714
+        Text: ="Page  " &varPageNumber & "  of " & "  " & RoundUp(Value((rowCount.Text)/8),0) & "+"
+        Width: =146
+        X: =1066
+        Y: =713
         ZIndex: =43
 
     Label2_1 As label:
