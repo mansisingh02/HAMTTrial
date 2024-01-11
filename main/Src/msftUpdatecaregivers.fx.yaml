@@ -56,7 +56,7 @@ msftUpdatecaregivers As screen:
         Text: ="Core Leader"
         Width: =88
         X: =320
-        Y: =191
+        Y: =189
         ZIndex: =3
 
     msft_Label_10 As label:
@@ -76,7 +76,7 @@ msftUpdatecaregivers As screen:
         Text: ="Department"
         Width: =92
         X: =134
-        Y: =191
+        Y: =189
         ZIndex: =4
 
     msft_Label_14 As label:
@@ -96,12 +96,13 @@ msftUpdatecaregivers As screen:
         Text: ="Status"
         Width: =45
         X: =560
-        Y: =191
+        Y: =189
         ZIndex: =5
 
     navBarVertical_1 As navBarVertical:
         caregiversNav: =msftcaregivers
         dasboardNav: =msftDashboard
+        masterDataNav: =msftMasterData
         ZIndex: =6
 
     navBarHorizontal_1 As navBarHorizontal:
@@ -150,6 +151,7 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.'Pillar Name'
+            Y: =4
             ZIndex: =1
 
         Label9 As label:
@@ -167,6 +169,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.'Core Leader'
             Width: =221
             X: =153
+            Y: =4
             ZIndex: =2
 
         Label9_1 As label:
@@ -184,7 +187,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.'Employee Status'.Value
             Width: =221
             X: =377
-            Y: =8
+            Y: =4
             ZIndex: =3
 
         Label9_2 As label:
@@ -202,7 +205,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.Designation
             Width: =221
             X: =601
-            Y: =8
+            Y: =4
             ZIndex: =4
 
         Label9_3 As label:
@@ -220,7 +223,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.Level.Value
             Width: =152
             X: =825
-            Y: =8
+            Y: =4
             ZIndex: =5
 
         Label9_4 As label:
@@ -238,7 +241,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.'Caregiver Email'
             Width: =244
             X: =982
-            Y: =8
+            Y: =4
             ZIndex: =6
 
     msft_Label_15 As label:
@@ -258,7 +261,7 @@ msftUpdatecaregivers As screen:
         Text: ="Designation"
         Width: =136
         X: =768
-        Y: =191
+        Y: =189
         ZIndex: =10
 
     msft_Label_22 As label:
@@ -278,7 +281,7 @@ msftUpdatecaregivers As screen:
         Text: ="Level"
         Width: =45
         X: =981
-        Y: =186
+        Y: =189
         ZIndex: =11
 
     msft_Label_23 As label:
@@ -298,7 +301,7 @@ msftUpdatecaregivers As screen:
         Text: ="Email"
         Width: =45
         X: =1174
-        Y: =186
+        Y: =189
         ZIndex: =12
 
     Gallery7 As gallery.galleryHorizontal:
