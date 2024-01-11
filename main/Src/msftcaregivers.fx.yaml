@@ -219,7 +219,7 @@ msftcaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =If(Lower(ThisItem.'Caregiver Name')=Lower(User().Email),"Update","")
+            Text: =If(Lower(ThisItem.'Caregiver Email')=Lower(User().Email),"Update","")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(ThisItem.'Caregiver Name'=User().FullName,true,false)
@@ -501,19 +501,4 @@ msftcaregivers As screen:
         X: =706
         Y: =149
         ZIndex: =49
-
-    Label5 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: =User().Email
-        X: =384
-        Y: =431
-        ZIndex: =50
 
