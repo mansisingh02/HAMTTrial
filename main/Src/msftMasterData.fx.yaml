@@ -26,6 +26,7 @@ msftMasterData As screen:
         RadiusTopRight: =0
         Reset: =
         Size: =10
+        Visible: =varTabSelected=2
         Width: =214
         X: =100
         Y: =248
@@ -177,7 +178,7 @@ msftMasterData As screen:
         DelayItemLoading: =true
         Height: =381
         Items: |-
-            =Filter(Skills_1,  StartsWith('Skill Name',TextInput1.Text) && 
+            =Filter(Skills_1,  StartsWith('Skill Name',TextInput1_1.Text) && 
             (Capability = capabilitydpdwn.Selected.Value || capabilitydpdwn.Selected.Value=Blank())
              )
         Layout: =Layout.Vertical
@@ -186,8 +187,8 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=3
-        Width: =1130
-        X: =100
+        Width: =1116
+        X: =114
         Y: =348
         ZIndex: =8
 
@@ -349,31 +350,11 @@ msftMasterData As screen:
         Y: =319
         ZIndex: =12
 
-    Icon1 As icon.Search:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(204, 204, 204, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =22
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Search
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =24
-        X: =276
-        Y: =257
-        ZIndex: =13
-
     TextInput1_1 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
-        Default: =""
+        Default: =
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
