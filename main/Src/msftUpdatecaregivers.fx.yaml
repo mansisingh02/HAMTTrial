@@ -33,7 +33,7 @@ msftUpdatecaregivers As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="Update Caregiver"
+        Text: ="My Profile"
         Width: =230
         X: =98
         Y: =82
@@ -53,9 +53,9 @@ msftUpdatecaregivers As screen:
         PaddingRight: =0
         PaddingTop: =8
         Size: =10.5
-        Text: ="Core Leader"
-        Width: =88
-        X: =320
+        Text: ="Primary Allocation"
+        Width: =142
+        X: =319
         Y: =189
         ZIndex: =3
 
@@ -78,26 +78,6 @@ msftUpdatecaregivers As screen:
         X: =134
         Y: =189
         ZIndex: =4
-
-    msft_Label_14 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Status"
-        Width: =45
-        X: =560
-        Y: =189
-        ZIndex: =5
 
     navBarVertical_1 As navBarVertical:
         caregiversNav: =msftcaregivers
@@ -128,14 +108,14 @@ msftUpdatecaregivers As screen:
     Gallery3 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =66
+        Height: =76
         Items: =Filter(Caregivers_1,  'Caregiver Email'=User().Email)
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
-        TemplateSize: =1227
-        Width: =1243
-        X: =90
-        Y: =203
+        TemplateSize: =1219
+        Width: =1236
+        X: =97
+        Y: =207
         ZIndex: =9
 
         Label8 As label:
@@ -222,7 +202,7 @@ msftUpdatecaregivers As screen:
             Size: =12
             Text: =ThisItem.Level.Value
             Width: =152
-            X: =825
+            X: =826
             Y: =4
             ZIndex: =5
 
@@ -243,66 +223,6 @@ msftUpdatecaregivers As screen:
             X: =982
             Y: =4
             ZIndex: =6
-
-    msft_Label_15 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Designation"
-        Width: =136
-        X: =768
-        Y: =189
-        ZIndex: =10
-
-    msft_Label_22 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Level"
-        Width: =45
-        X: =981
-        Y: =189
-        ZIndex: =11
-
-    msft_Label_23 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Email"
-        Width: =45
-        X: =1174
-        Y: =189
-        ZIndex: =12
 
     Gallery7 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -855,6 +775,26 @@ msftUpdatecaregivers As screen:
             X: =123
             Y: =548
             ZIndex: =33
+
+    msft_Label_9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Secondary Allocation"
+        Width: =193
+        X: =515
+        Y: =189
+        ZIndex: =44
 
     Group7_3 As group:
         Height: =5
