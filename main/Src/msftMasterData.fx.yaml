@@ -391,8 +391,8 @@ msftMasterData As screen:
                 msftcapability,
                 ScreenTransition.None,
                 {
-                    CapabilityName: ThisItem.'Capability Name' ?? "",
-                    CapabilityDescription: ThisItem.Description ?? ""
+                    CapabilityName: ThisItem.Name ?? "",
+                    CapabilityDescription: ThisItem. ?? ""
                 }
             )
             
