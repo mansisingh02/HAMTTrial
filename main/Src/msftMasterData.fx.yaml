@@ -385,11 +385,25 @@ msftMasterData As screen:
         Items: =Capabilities
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =2
+        NavigationStep: =0
+        OnSelect: |+
+            =Navigate(
+                msftcapability,
+                ScreenTransition.None,
+                {
+                    CapabilityName: ThisItem.'Capability Name' ?? "",
+                    CapabilityDescription: ThisItem.Description ?? ""
+                }
+            )
+            
+            
+            
+            
+        TemplatePadding: =0
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
         Visible: =varTabSelected=2
-        Width: =1074
-        X: =146
+        Width: =1022
+        X: =114
         Y: =307
         ZIndex: =16
 
@@ -440,8 +454,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Capability Name"
         Visible: =varTabSelected=2
-        X: =180
-        Y: =307
+        X: =150
+        Y: =308
         ZIndex: =17
 
     Label2_11 As label:
@@ -457,8 +471,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Description"
         Visible: =varTabSelected=2
-        X: =908
-        Y: =307
+        X: =772
+        Y: =308
         ZIndex: =18
 
     Label2_12 As label:
