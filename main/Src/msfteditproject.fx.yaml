@@ -77,6 +77,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
+        Default: ="Primary Owner"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -370,7 +371,19 @@ msfteditproject As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+        OnSelect: |
+            =Reset(msft_Dropdown_28);
+            Reset(msft_Dropdown_26);
+            Reset(msft_Dropdown_18);
+            Reset(msft_Dropdown_15);
+            Reset(msft_Dropdown_12);
+            Reset(msft_Dropdown_11);
+            Reset(msft_Dropdown_10);
+            Reset(msft_Dropdown_9);
+            Reset(msft_DatePicker_3);
+            Reset(msft_DatePicker_2);
+            Reset(msft_TextInput_12);
+            Reset(msft_TextInput_8)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32

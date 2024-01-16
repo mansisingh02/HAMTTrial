@@ -181,7 +181,19 @@ msftnewproject As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+        OnSelect: |-
+            =Reset(msft_Dropdown_27);
+            Reset(msft_Dropdown_19);
+            Reset(msft_Dropdown_22);
+            Reset(msft_Dropdown_21);
+            Reset(msft_Dropdown_25);
+            Reset(msft_Dropdown_24);
+            Reset(msft_Dropdown_23);
+            Reset(msft_Dropdown_20);
+            Reset(msft_DatePicker_5);
+            Reset(msft_DatePicker_4);
+            Reset(msft_TextInput_16);
+            Reset(msft_TextInput_13)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
