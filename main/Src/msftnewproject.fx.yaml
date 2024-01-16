@@ -34,13 +34,13 @@ msftnewproject As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =351
+        Height: =577
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =776
         X: =554
-        Y: =342
+        Y: =116
         ZIndex: =29
 
     "'New Project_2' As label":
@@ -102,7 +102,7 @@ msftnewproject As screen:
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =137
+        Height: =101
         HintText: ="Enter Description"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -314,36 +314,6 @@ msftnewproject As screen:
         Y: =226
         ZIndex: =53
 
-    msft_Dropdown_25 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Select allocation %"]
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =12.75
-        Width: =199
-        X: =985
-        Y: =226
-        ZIndex: =55
-
     msft_Button_29 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -517,7 +487,7 @@ msftnewproject As screen:
         Size: =12.75
         Width: =206
         X: =330
-        Y: =568
+        Y: =528
         ZIndex: =65
 
     msft_Dropdown_22 As dropdown:
@@ -563,7 +533,7 @@ msftnewproject As screen:
         Size: =13
         Text: ="Select Capability"
         X: =95
-        Y: =616
+        Y: =576
         ZIndex: =67
 
     Label3_17 As label:
@@ -578,7 +548,7 @@ msftnewproject As screen:
         Size: =13
         Text: ="Primary Owner"
         X: =95
-        Y: =528
+        Y: =488
         ZIndex: =68
 
     Label3_18 As label:
@@ -593,7 +563,7 @@ msftnewproject As screen:
         Size: =13
         Text: ="Project Category"
         X: =330
-        Y: =528
+        Y: =488
         ZIndex: =69
 
     Label6_12 As label:
@@ -608,7 +578,7 @@ msftnewproject As screen:
         Size: =13
         Text: ="*"
         X: =229
-        Y: =616
+        Y: =576
         ZIndex: =70
 
     msft_Dropdown_19 As dropdown:
@@ -741,7 +711,7 @@ msftnewproject As screen:
             =Distinct(
                 Filter(
                     Caregivers_1,
-                    'Level'.Value="4P" || 'Level'.Value="M2" || 'Level'.Value="M3" || 'Level'.Value="M4" || 'Level'.Value="M5" || 'Level'.Value="E1" || 'Level'.Value="E2"
+                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2"
                 ),
                 'Caregiver Name'
             ).Value
@@ -766,7 +736,7 @@ msftnewproject As screen:
         Size: =12.75
         Width: =206
         X: =95
-        Y: =568
+        Y: =528
         ZIndex: =77
 
     msft_Dropdown_24 As dropdown:
@@ -841,8 +811,167 @@ msftnewproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
-        Width: =441
+        Width: =206
         X: =95
-        Y: =656
+        Y: =616
         ZIndex: =80
+
+    msft_Dropdown_25 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Sequence(40, 5, 5)
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =199
+        X: =985
+        Y: =226
+        ZIndex: =81
+
+    msft_Dropdown_33 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =38
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: |-
+            =["Digitalize",
+            "Deconstruct",
+            "Data Science",
+            "Delivery of Care",
+            "Diagnostics"]
+        OnChange: =Set(varSelectedValue, msft_Dropdown_33.Selected.Value)
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =203
+        X: =333
+        Y: =615
+        ZIndex: =82
+
+    Label3_26 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =45
+        Size: =13
+        Text: ="Project Goal"
+        Width: =184
+        X: =330
+        Y: =570
+        ZIndex: =83
+
+    Label6_15 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="*"
+        X: =179
+        Y: =278
+        ZIndex: =84
+
+    Label6_16 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="*"
+        X: =404
+        Y: =275
+        ZIndex: =85
+
+    Label6_17 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="*"
+        X: =213
+        Y: =488
+        ZIndex: =86
+
+    Label6_18 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="*"
+        X: =467
+        Y: =488
+        ZIndex: =87
+
+    Label6_19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="*"
+        X: =426
+        Y: =566
+        ZIndex: =88
 

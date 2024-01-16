@@ -9,13 +9,13 @@ msfteditproject As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =587
+        Height: =568
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =776
         X: =553
-        Y: =102
+        Y: =121
         ZIndex: =1
 
     "'New Project_1' As label":
@@ -89,7 +89,7 @@ msfteditproject As screen:
             =Distinct(
                 Filter(
                     Caregivers_1,
-                    'Level'.Value="4P" || 'Level'.Value="M2" || 'Level'.Value="M3" || 'Level'.Value="M4" || 'Level'.Value="M5" || 'Level'.Value="E1" || 'Level'.Value="E2"
+                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2"
                 ),
                 'Caregiver Name'
             ).Value
@@ -237,7 +237,9 @@ msfteditproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Skills_1,Capability)
+        Items: |+
+            =[""]
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -247,7 +249,7 @@ msfteditproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
-        Width: =441
+        Width: =206
         X: =95
         Y: =652
         ZIndex: =10
@@ -282,36 +284,6 @@ msfteditproject As screen:
         Y: =222
         ZIndex: =11
 
-    msft_Dropdown_15 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Primary Allocation","Secondary Allocation"]
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =12.75
-        Width: =191
-        X: =774
-        Y: =222
-        ZIndex: =12
-
     msft_Dropdown_18 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -327,7 +299,7 @@ msfteditproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Select allocation %"]
+        Items: =Sequence(40, 5, 5)
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -393,7 +365,7 @@ msfteditproject As screen:
             Reset(msft_Dropdown_29);
             Reset(msft_Dropdown_30);
             Reset(msft_Dropdown_18);
-            Reset(msft_Dropdown_15);
+            Reset(msft_Dropdown_31);
             Reset(msft_Dropdown_12);
             Reset(msft_Dropdown_11);
             Reset(msft_Dropdown_10);
@@ -555,21 +527,6 @@ msfteditproject As screen:
         Y: =177
         ZIndex: =27
 
-    Label3_6 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: ="Allocation Type"
-        X: =774
-        Y: =178
-        ZIndex: =28
-
     Label3_7 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -642,8 +599,8 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="Status"
-        X: =322
-        Y: =122
+        X: =95
+        Y: =201
         ZIndex: =33
 
     Label6 As label:
@@ -657,8 +614,8 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="*"
-        X: =372
-        Y: =121
+        X: =149
+        Y: =201
         ZIndex: =34
 
     Label6_1 As label:
@@ -762,8 +719,8 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="*"
-        X: =897
-        Y: =171
+        X: =856
+        Y: =174
         ZIndex: =41
 
     Label6_8 As label:
@@ -809,8 +766,8 @@ msfteditproject As screen:
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
         Width: =215
-        X: =321
-        Y: =161
+        X: =93
+        Y: =243
         ZIndex: =44
 
     msft_Dropdown_29 As dropdown:
@@ -845,9 +802,9 @@ msfteditproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
-        Width: =215
-        X: =321
-        Y: =245
+        Width: =203
+        X: =333
+        Y: =655
         ZIndex: =45
 
     Label3_21 As label:
@@ -863,8 +820,8 @@ msfteditproject As screen:
         Size: =13
         Text: ="Project Goal"
         Width: =184
-        X: =318
-        Y: =200
+        X: =330
+        Y: =610
         ZIndex: =46
 
     msft_Dropdown_30 As dropdown:
@@ -900,7 +857,7 @@ msfteditproject As screen:
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
         Width: =206
-        X: =93
+        X: =325
         Y: =245
         ZIndex: =47
 
@@ -917,7 +874,7 @@ msfteditproject As screen:
         Size: =13
         Text: ="Cost Center Name"
         Width: =184
-        X: =93
+        X: =325
         Y: =201
         ZIndex: =48
 
@@ -932,7 +889,100 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="*"
-        X: =240
-        Y: =201
+        X: =467
+        Y: =200
         ZIndex: =49
+
+    Label3_24 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="Discipline"
+        X: =774
+        Y: =177
+        ZIndex: =50
+
+    msft_Dropdown_31 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =39
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct(Skills_1,Capability)
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =196
+        X: =772
+        Y: =222
+        ZIndex: =51
+
+    msft_Dropdown_32 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        Default: ="Parent Project"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =36
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct('Project Parent Group','Group Name')
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =213
+        X: =318
+        Y: =162
+        ZIndex: =52
+
+    Label3_25 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="Group"
+        X: =310
+        Y: =116
+        ZIndex: =53
 
