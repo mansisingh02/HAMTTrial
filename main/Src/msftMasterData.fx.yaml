@@ -57,11 +57,12 @@ msftMasterData As screen:
         DelayItemLoading: =true
         Height: =101
         Items: |-
-            =Table({ID:1,Label:"Certifications available"},{ID:2,Label:"Capability"},{ID:3,Label:"Technology"})
+            =Table({ID:1,Label:"Certifications"},{ID:2,Label:"Team Disciplines"},{ID:3,Label:"Technology"})
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =205
+        TemplateSize: =170
+        Width: =620
         X: =88
         Y: =132
         ZIndex: =3
@@ -78,7 +79,7 @@ msftMasterData As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =61
+            Height: =52
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -90,9 +91,8 @@ msftMasterData As screen:
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =12
             Text: =ThisItem.Label
-            Width: =194
             X: =9
             Y: =30
             ZIndex: =1
@@ -520,4 +520,46 @@ msftMasterData As screen:
         X: =761
         Y: =256
         ZIndex: =20
+
+    Gallery6 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =101
+        Items: |-
+            =Table({ID:4,Label:"Project Groups"},{ID:5,Label:"Cost Center"})
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: =170
+        Width: =646
+        X: =597
+        Y: =132
+        ZIndex: =21
+
+        Button3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =52
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(varTabSelected, ThisItem.ID)
+            PaddingLeft: =1
+            PaddingRight: =1
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            Size: =12
+            Text: =ThisItem.Label
+            X: =10
+            Y: =30
+            ZIndex: =1
 
