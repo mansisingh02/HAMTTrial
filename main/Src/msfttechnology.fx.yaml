@@ -1,7 +1,8 @@
 msfttechnology As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =Set(SelectedSkill, Param("SelectedSkill"))
+    OnVisible: |
+        =
     Width: =1366
 
     msft_TextInput_9 As text:
@@ -37,7 +38,7 @@ msfttechnology As screen:
         Height: =61
         LayoutMode: ="manual"
         Width: =302
-        X: =107
+        X: =98
         Y: =199
         ZIndex: =3
 
@@ -177,62 +178,6 @@ msfttechnology As screen:
             X: =95
             Y: =20
             ZIndex: =12
-
-    "'Column - Header 4' As groupContainer.manualLayoutContainer":
-        Height: =112
-        LayoutMode: ="manual"
-        Width: =300
-        X: =107
-        Y: =260
-        ZIndex: =13
-
-        ReactJs As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =16
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: =
-            Width: =55
-            X: =16
-            Y: =48
-            ZIndex: =14
-
-    "'Column - Header 5' As groupContainer.manualLayoutContainer":
-        Height: =112
-        LayoutMode: ="manual"
-        Width: =150
-        X: =409
-        Y: =260
-        ZIndex: =15
-
-        "'UI Framework' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =20
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="UI Framework"
-            Width: =100
-            X: =32.5
-            Y: =45
-            ZIndex: =16
 
     "'Column - Header 13' As groupContainer.manualLayoutContainer":
         Height: =112
@@ -406,7 +351,7 @@ msfttechnology As screen:
     navBarHorizontal_8 As navBarHorizontal:
         ZIndex: =31
 
-    Label3 As label:
+    SkillLabel As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -416,9 +361,23 @@ msfttechnology As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =13
-        Text: |-
-            =Label3.Text = "Selected Skill: " & SelectedSkill
-        X: =310
-        Y: =551
-        ZIndex: =32
+        Text: =Text(Gallery1_2.Selected.'Skill Name')
+        X: =107
+        Y: =282
+        ZIndex: =34
+
+    CategoryLabel As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =Text(Gallery1_2.Selected.Capability)
+        X: =440
+        Y: =282
+        ZIndex: =35
 
