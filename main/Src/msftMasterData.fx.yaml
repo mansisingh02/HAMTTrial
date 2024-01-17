@@ -614,9 +614,29 @@ msftMasterData As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="Cost C"
-        X: =100
-        Y: =288
+        Text: ="Cost Center Code"
+        Visible: =varTabSelected=4
+        X: =99
+        Y: =279
         ZIndex: =23
+
+    Label10_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Cost Center Name"
+        Visible: =varTabSelected=4
+        Width: =158
+        X: =743
+        Y: =279
+        ZIndex: =24
 
