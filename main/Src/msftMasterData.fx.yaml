@@ -184,6 +184,15 @@ msftMasterData As screen:
              )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |
+            =Navigate(
+                msfttechnology,
+                ScreenTransition.Fade,
+                {
+                    SelectedSkill: Gallery1_2.Selected.'Skill Name',
+                    SelectedCategory: Gallery1_2.Selected.Capability
+                }
+            )
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=3
