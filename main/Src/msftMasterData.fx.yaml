@@ -1,10 +1,10 @@
 msftMasterData As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    "Gallery14 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+    "Gallery17 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =449
+        Height: =381
         Items: ='Project Parent Group'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -13,18 +13,16 @@ msftMasterData As screen:
                 msftgroup,
                 ScreenTransition.Fade,
                 {
-                    SelectedGroup: Gallery14.Selected.'Group Name'
+                    SelectedGroup: LookUp(Gallery17.AllItems, 'Group Name' = Gallery17.Selected.'Group Name')
                 }
             )
         TemplatePadding: =0
         TemplateSize: =60
-        Visible: =varTabSelected=5
-        Width: =457
-        X: =100
+        X: =103
         Y: =319
         ZIndex: =1
 
-        Title10 As label:
+        Title14 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -39,10 +37,10 @@ msftMasterData As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle9.Size * 1.8)) / 2
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle13.Size * 1.8)) / 2
             ZIndex: =1
 
-        Subtitle9 As label:
+        Subtitle13 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -56,12 +54,12 @@ msftMasterData As screen:
             Size: =12
             Text: =ThisItem.'Group Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =Title10.Width
-            X: =Title10.X
+            Width: =Title14.Width
+            X: =Title14.X
             Y: =19
             ZIndex: =2
 
-        NextArrow8 As icon.ChevronRight:
+        NextArrow11 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(166, 166, 166, 1)
@@ -69,7 +67,7 @@ msftMasterData As screen:
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =60
+            Height: =50
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -84,10 +82,11 @@ msftMasterData As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
-            X: =387
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =3
 
-        Separator9 As rectangle:
+        Separator12 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(255, 255, 255, 1)
             Height: =8
@@ -96,10 +95,10 @@ msftMasterData As screen:
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =4
 
-        Rectangle9 As rectangle:
+        Rectangle12 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =
+            Height: =Parent.TemplateHeight - Separator12.Height
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
@@ -257,7 +256,7 @@ msftMasterData As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftnewcategory, ScreenTransition.Fade )
+        OnSelect: =Navigate(msftnewgroup, ScreenTransition.Fade )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -463,70 +462,6 @@ msftMasterData As screen:
         Y: =248
         ZIndex: =14
 
-    Gallery2 As gallery.galleryVertical:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =395
-        Items: =Discipline
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        NavigationStep: =0
-        OnSelect: |+
-            =Navigate(
-                msftdiscipline,
-                ScreenTransition.Fade,
-                {
-                    SelectedDiscipline:Gallery2.Selected.'Discipline Name',
-                    SelectedDescription:Gallery2.Selected.Description
-                }
-            )
-            
-            
-            
-            
-        TemplatePadding: =0
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Visible: =varTabSelected=2
-        Width: =1022
-        X: =114
-        Y: =308
-        ZIndex: =16
-
-        Label5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =50
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Title
-            X: =40
-            Y: =40
-            ZIndex: =1
-
-        Label5_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =138
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Description
-            Width: =358
-            X: =656
-            Y: =40
-            ZIndex: =2
-
     Label2_10 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -726,6 +661,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
+        Height: =49
         Size: =13
         Text: ="Group Name"
         Visible: =varTabSelected=5
