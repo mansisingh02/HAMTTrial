@@ -253,7 +253,7 @@ msftMasterData As screen:
         Fill: =RGBA(0, 51, 142, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
-        Height: =48
+        Height: =42
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -270,12 +270,12 @@ msftMasterData As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="ADD TECHNOLOGY"
+        Text: ="ADD GROUP"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=3
-        Width: =253
-        X: =1087
-        Y: =240
+        Visible: =varTabSelected=5
+        Width: =206
+        X: =1076
+        Y: =268
         ZIndex: =7
 
     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -732,4 +732,39 @@ msftMasterData As screen:
         X: =114
         Y: =270
         ZIndex: =25
+
+    msft_Button_18 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftnewgroup, ScreenTransition.Fade )
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="ADD TECHNOLOGY"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelected=3
+        Width: =253
+        X: =1076
+        Y: =243
+        ZIndex: =26
 
