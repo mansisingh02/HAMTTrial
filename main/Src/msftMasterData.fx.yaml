@@ -131,7 +131,7 @@ msftMasterData As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="ADD CAPABILITY"
+        Text: ="ADD DISCIPLINE"
         VerticalAlign: =VerticalAlign.Top
         Visible: =varTabSelected=2
         Width: =231
@@ -397,11 +397,11 @@ msftMasterData As screen:
         NavigationStep: =0
         OnSelect: |+
             =Navigate(
-                msftcapability,
-                ScreenTransition.None,
+                msftdiscipline,
+                ScreenTransition.Fade,
                 {
-                    CapabilityName: ThisItem.Name ?? "",
-                    CapabilityDescription: ThisItem. ?? ""
+                    SelectedDiscipline:Gallery2.Selected.'Capability Name',
+                    SelectedDescription:Gallery2.Selected.Description
                 }
             )
             
