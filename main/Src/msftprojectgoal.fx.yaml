@@ -132,46 +132,18 @@ msftprojectgoal As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            Height: =16
+            Height: =22
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Size: =10.5
+            Size: =11
             Text: =Text(Gallery28.Selected.Goal)
             Width: =104
-            X: =16
+            X: =10
             Y: =16
             ZIndex: =10
-
-    "'Column - Header 5_2' As groupContainer.manualLayoutContainer":
-        Height: =116
-        LayoutMode: ="manual"
-        Width: =431
-        X: =311
-        Y: =250
-        ZIndex: =11
-
-        "'Analyzing raw data to find trends and answer questions. It involves many techniques and goals that can vary across industries._1' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =72
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Analyzing raw data to find trends and answer questions. It involves many techniques and goals that can vary across industries."
-            Width: =336
-            X: =16
-            Y: =4
-            ZIndex: =12
 
     Edit_2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -226,8 +198,8 @@ msftprojectgoal As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1220
-        X: =97
-        Y: =390
+        X: =108
+        Y: =405
         ZIndex: =15
 
     Category_1 As label:
@@ -270,4 +242,28 @@ msftprojectgoal As screen:
         X: =780
         Y: =201
         ZIndex: =22
+
+    Label16 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =123
+        Size: =11
+        Text: |+
+            =Text(
+                LookUp(
+                    'Project Goals',
+                    Goal = Gallery28.Selected.Goal
+                ).Description
+            )
+            
+        Width: =270
+        X: =311
+        Y: =249
+        ZIndex: =23
 
