@@ -32,39 +32,6 @@ msftgroup As screen:
         Y: =149
         ZIndex: =1
 
-    msft_Button_30 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =37
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="New Category"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =191
-        X: =1126
-        Y: =149
-        ZIndex: =2
-
     "'Report Header_4' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
@@ -88,7 +55,7 @@ msftgroup As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Category"
+            Text: ="Group"
             Width: =61
             X: =16
             Y: =16
@@ -97,8 +64,8 @@ msftgroup As screen:
     "'Category Header_3' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
-        Width: =816
-        X: =299
+        Width: =198
+        X: =403
         Y: =201
         ZIndex: =5
 
@@ -118,10 +85,37 @@ msftgroup As screen:
             PaddingTop: =0
             Size: =10.5
             Text: ="Description"
-            Width: =76
+            Width: =98
             X: =16
             Y: =16
             ZIndex: =6
+
+        "'Category Header_4' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =198
+            ZIndex: =7
+
+            "'Category Label_4' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =16
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Description"
+                Width: =98
+                X: =16
+                Y: =16
+                ZIndex: =6
 
     "'Action Header_3' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -151,62 +145,6 @@ msftgroup As screen:
             X: =79
             Y: =16
             ZIndex: =8
-
-    "'Column - Header 4_3' As groupContainer.manualLayoutContainer":
-        Height: =48
-        LayoutMode: ="manual"
-        Width: =200
-        X: =97
-        Y: =250
-        ZIndex: =9
-
-        "'Data Analytics_3' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =16
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Data Analytics"
-            Width: =91
-            X: =16
-            Y: =16
-            ZIndex: =10
-
-    "'Column - Header 5_3' As groupContainer.manualLayoutContainer":
-        Height: =48
-        LayoutMode: ="manual"
-        Width: =816
-        X: =299
-        Y: =250
-        ZIndex: =11
-
-        "'Analyzing raw data to find trends and answer questions. It involves many techniques and goals that can vary across industries._2' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =16
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Analyzing raw data to find trends and answer questions. It involves many techniques and goals that can vary across industries."
-            Width: =759
-            X: =16
-            Y: =16
-            ZIndex: =12
 
     Edit_4 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -262,7 +200,7 @@ msftgroup As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1220
         X: =97
-        Y: =310
+        Y: =471
         ZIndex: =15
 
     Category_2 As label:
@@ -273,46 +211,96 @@ msftgroup As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
-        Height: =24
+        Height: =36
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="Category"
-        Width: =203
-        X: =89.6015625
-        Y: =88.7509765625
+        Text: =Text(Gallery14.Selected.'Group Name')
+        Width: =467
+        X: =97
+        Y: =99
         ZIndex: =16
 
-    "'Group 12_8' As groupContainer.manualLayoutContainer":
-        Height: =768
-        LayoutMode: ="manual"
-        Width: =1366
+    navBarVertical_11 As navBarVertical:
         ZIndex: =17
 
-        "'Rectangle 31_8' As rectangle":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(187, 187, 187, 1)
-            FocusedBorderThickness: =4
-            Height: =768
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =70
-            ZIndex: =18
+    navBarHorizontal_11 As navBarHorizontal:
+        ZIndex: =18
 
-        "'Rectangle 32_8' As rectangle":
+    "'Category Header_6' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =198
+        X: =760
+        Y: =201
+        ZIndex: =19
+
+        "'Category Label_6' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(187, 187, 187, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            Height: =60
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =1296.49914550781
-            X: =69.50085449219
-            ZIndex: =19
+            FontWeight: =FontWeight.Bold
+            Height: =16
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Projects Active"
+            Width: =129
+            X: =16
+            Y: =16
+            ZIndex: =6
+
+    grouplabel As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =Text(Gallery14.Selected.'Group Name')
+        Width: =251
+        X: =111
+        Y: =245
+        ZIndex: =20
+
+    descriptionlabel As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="Text"
+        X: =414
+        Y: =245
+        ZIndex: =21
+
+    projectsactivelabel As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: ="Text"
+        X: =772
+        Y: =245
+        ZIndex: =22
 
