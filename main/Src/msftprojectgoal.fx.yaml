@@ -1,36 +1,7 @@
-msftcategory As screen:
+msftprojectgoal As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1366
-
-    msft_TextInput_11 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(166, 166, 166, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        HintText: ="Search"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingBottom: =9
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =12.75
-        Width: =250
-        X: =108
-        Y: =161
-        ZIndex: =1
 
     "'Report Header_3' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -55,7 +26,7 @@ msftcategory As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Category"
+            Text: ="Goal"
             Width: =79
             X: =16
             Y: =16
@@ -64,8 +35,8 @@ msftcategory As screen:
     "'Category Header_2' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
-        Width: =816
-        X: =299
+        Width: =336
+        X: =311
         Y: =201
         ZIndex: =5
 
@@ -89,6 +60,33 @@ msftcategory As screen:
             X: =15
             Y: =15
             ZIndex: =6
+
+        "'Category Header_7' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =336
+            ZIndex: =7
+
+            "'Category Label_4' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =19
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Description"
+                Width: =101
+                X: =15
+                Y: =15
+                ZIndex: =6
 
     "'Action Header_2' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -141,7 +139,7 @@ msftcategory As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Data Analytics"
+            Text: =Text(Gallery28.Selected.Goal)
             Width: =104
             X: =16
             Y: =16
@@ -151,7 +149,7 @@ msftcategory As screen:
         Height: =116
         LayoutMode: ="manual"
         Width: =431
-        X: =299
+        X: =311
         Y: =250
         ZIndex: =11
 
@@ -246,7 +244,7 @@ msftcategory As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="Category"
+        Text: =Text(Gallery28.Selected.Goal)
         Width: =203
         X: =108
         Y: =114
@@ -257,4 +255,19 @@ msftcategory As screen:
 
     navBarHorizontal_13 As navBarHorizontal:
         ZIndex: =21
+
+    Label15 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Size: =10.5
+        Text: ="Projects Listed"
+        X: =780
+        Y: =201
+        ZIndex: =22
 
