@@ -18,6 +18,7 @@ msftMasterData As screen:
             )
         TemplatePadding: =0
         TemplateSize: =60
+        Visible: =varTabSelected=5
         X: =103
         Y: =319
         ZIndex: =1
@@ -703,4 +704,33 @@ msftMasterData As screen:
         X: =1076
         Y: =243
         ZIndex: =26
+
+    Gallery23 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =390
+        Items: ='Project Type'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =280
+        Visible: =varTabSelected=6
+        X: =132
+        Y: =319
+        ZIndex: =27
+
+        Label13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Title
+            X: =40
+            Y: =40
+            ZIndex: =1
 
