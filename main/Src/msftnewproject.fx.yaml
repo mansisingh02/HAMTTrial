@@ -73,7 +73,7 @@ msftnewproject As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =38
-        HintText: ="Enter Project Name"
+        HintText: ="Enter Project Name*"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -798,6 +798,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct(Capabilities,Capability)
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
