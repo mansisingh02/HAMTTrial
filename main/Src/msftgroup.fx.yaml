@@ -263,7 +263,13 @@ msftgroup As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: ="Text"
+        Text: |-
+            =Text(
+                LookUp(
+                    'Project Parent Group',
+                    'Group Name' = Gallery17.Selected.'Group Name'
+                ).Description
+            )
         X: =453
         Y: =245
         ZIndex: =21
