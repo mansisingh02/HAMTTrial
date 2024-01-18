@@ -142,7 +142,7 @@
                   "charLength": 18,
                   "charOffset": 107,
                   "snippet": {
-                    "text": ".'Capability Name'"
+                    "text": ".'Discipline Name'"
                   }
                 }
               },
@@ -155,7 +155,7 @@
           ],
           "message": {
             "arguments": [
-              "Capability Name"
+              "Discipline Name"
             ],
             "id": "issue"
           },
@@ -182,7 +182,7 @@
                   "charLength": 192,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Navigate(\n    msftdiscipline,\n    ScreenTransition.Fade,\n    {\n        SelectedDiscipline:Gallery2.Selected.'Capability Name',\n        SelectedDescription:Gallery2.Selected.Description\n    }\n)"
+                    "text": "Navigate(\n    msftdiscipline,\n    ScreenTransition.Fade,\n    {\n        SelectedDiscipline:Gallery2.Selected.'Discipline Name',\n        SelectedDescription:Gallery2.Selected.Description\n    }\n)"
                   }
                 }
               },
@@ -6590,6 +6590,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery11.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery11.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 5
         },
         {
           "locations": [
