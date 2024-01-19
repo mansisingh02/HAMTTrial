@@ -38,8 +38,8 @@ msftprojecttype As screen:
         Height: =61
         LayoutMode: ="manual"
         Width: =302
-        X: =98
-        Y: =199
+        X: =91
+        Y: =204
         ZIndex: =3
 
         "'Report Label_8' As label":
@@ -63,41 +63,12 @@ msftprojecttype As screen:
             Y: =25
             ZIndex: =4
 
-    "'Category Header_1' As groupContainer.manualLayoutContainer":
-        Height: =48
-        LayoutMode: ="manual"
-        Width: =152
-        X: =409
-        Y: =211
-        ZIndex: =5
-
-        "'Category Label_1' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =16
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Category"
-            Width: =72
-            X: =35
-            Y: =15
-            ZIndex: =6
-
     "'Report Header_9' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =274
-        X: =561
-        Y: =211
+        X: =410
+        Y: =216
         ZIndex: =7
 
         "'Report Label_9' As label":
@@ -117,16 +88,15 @@ msftprojecttype As screen:
             Size: =10.5
             Text: ="Description"
             Width: =86
-            X: =16
-            Y: =20
+            Y: =16
             ZIndex: =8
 
     "'Description Header_2' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =244
-        X: =837
-        Y: =211
+        X: =734
+        Y: =217
         ZIndex: =9
 
         "'Description Label_2' As label":
@@ -144,7 +114,7 @@ msftprojecttype As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Skilled Caregivers"
+            Text: ="Projects Running"
             Width: =126
             X: =65
             Y: =20
@@ -182,8 +152,8 @@ msftprojecttype As screen:
     "'Column - Header 13_1' As groupContainer.manualLayoutContainer":
         Height: =112
         LayoutMode: ="manual"
-        Width: =274
-        X: =561
+        Width: =324
+        X: =410
         Y: =260
         ZIndex: =17
 
@@ -206,7 +176,7 @@ msftprojecttype As screen:
                     Skills_1,
                     'Skill Name' = Gallery1_2.Selected.'Skill Name'
                 ).Description
-            Width: =253
+            Width: =304
             X: =16
             Y: =5
             ZIndex: =18
@@ -215,8 +185,8 @@ msftprojecttype As screen:
         Height: =112
         LayoutMode: ="manual"
         Width: =244
-        X: =837
-        Y: =260
+        X: =734
+        Y: =264
         ZIndex: =19
 
         "'47_1' As label":
@@ -312,16 +282,16 @@ msftprojecttype As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         FontWeight: =FontWeight.Semibold
-        Height: =29
+        Height: =37
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: =Text(Gallery1_2.Selected.'Skill Name')
-        Width: =350
+        Text: =Text(Gallery4.Selected.'Project Type')
+        Width: =355
         X: =107
-        Y: =112
+        Y: =104
         ZIndex: =25
 
     "'Rectangle 31_7' As rectangle":
@@ -365,25 +335,10 @@ msftprojecttype As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: =Text(Gallery1_2.Selected.'Skill Name')
+        Text: =Text(Gallery4.Selected.'Project Type')
         X: =107
         Y: =282
         ZIndex: =34
-
-    CategoryLabel_1 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =11
-        Text: =Text(Gallery1_2.Selected.Discipline)
-        X: =440
-        Y: =282
-        ZIndex: =35
 
     msft_Button_39 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
