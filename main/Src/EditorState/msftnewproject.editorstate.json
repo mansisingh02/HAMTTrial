@@ -7115,7 +7115,14 @@
         "Visible",
         "DisplayMode",
         "OnSelect",
-        "OnChange",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(\n    !IsBlank(msft_Dropdown_27.Selected) &&\n    msft_DatePicker_4.SelectedDate >= LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'Start Date' &&\n    msft_DatePicker_5.SelectedDate <= LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'End Date',\n    // Dates are outside the group's date range\n    Notify(\"Selected dates are outside the Group's Date Range\", NotificationType.Error)\n)",
+          "InvariantPropertyName": "OnChange",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "TabIndex",
         "minimumWidth",
         "minimumHeight",
