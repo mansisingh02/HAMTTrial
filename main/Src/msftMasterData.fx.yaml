@@ -416,7 +416,7 @@ msftMasterData As screen:
     "Gallery31 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =420
+        Height: =425
         Items: =Capabilities
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -431,8 +431,8 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=8
-        X: =121
-        Y: =348
+        X: =97
+        Y: =342
         ZIndex: =1
 
         Title27 As label:
@@ -1263,8 +1263,8 @@ msftMasterData As screen:
         Size: =13
         Text: ="Capability Name"
         Visible: =varTabSelected=8
-        X: =132
-        Y: =268
+        X: =97
+        Y: =285
         ZIndex: =33
 
     msft_Button_38 As button:
@@ -1435,7 +1435,7 @@ msftMasterData As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        HintText: ="Search Project Type"
+        HintText: ="Search Project Goals"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1456,4 +1456,35 @@ msftMasterData As screen:
         X: =100
         Y: =245
         ZIndex: =39
+
+    search_8 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Capabilities"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=8
+        Width: =214
+        X: =97
+        Y: =243
+        ZIndex: =40
 
