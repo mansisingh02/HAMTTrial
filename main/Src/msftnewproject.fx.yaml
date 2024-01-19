@@ -135,6 +135,20 @@ msftnewproject As screen:
         Height: =38
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
+        OnChange: |+
+            =
+            
+            If(
+                DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")) &&
+                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")),
+                // Dates are within the range
+                // You can add additional logic here if needed
+                Notify("Selected dates are within the group's date range", NotificationType.Success),
+                // Dates are outside the group's date range
+                Notify("Selected dates are outside the group's date range", NotificationType.Error)
+            )
+            
+            
         PaddingBottom: =9
         PaddingRight: =8
         PaddingTop: =8
