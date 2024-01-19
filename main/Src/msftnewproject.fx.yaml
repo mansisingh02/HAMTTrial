@@ -139,8 +139,8 @@ msftnewproject As screen:
             =
             
             If(
-                DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")) &&
-                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")),
+                DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
+                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'End Date', "dd/mm/yyyy")),
                 // Dates are within the range
                 // You can add additional logic here if needed
                 Notify("Selected dates are within the group's date range", NotificationType.Success),
