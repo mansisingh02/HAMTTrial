@@ -319,7 +319,7 @@ msftMasterData As screen:
     "Gallery31 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =441
+        Height: =420
         Items: =Capabilities
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -335,7 +335,7 @@ msftMasterData As screen:
         TemplateSize: =55
         Visible: =varTabSelected=8
         X: =121
-        Y: =313
+        Y: =348
         ZIndex: =1
 
         Title27 As label:
@@ -1199,4 +1199,39 @@ msftMasterData As screen:
         X: =132
         Y: =268
         ZIndex: =33
+
+    msft_Button_38 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =46
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftnewcategory2, ScreenTransition.Fade )
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="ADD CAPABILITY"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelected=8
+        Width: =236
+        X: =1050
+        Y: =243
+        ZIndex: =34
 
