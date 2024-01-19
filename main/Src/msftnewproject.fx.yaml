@@ -135,6 +135,14 @@ msftnewproject As screen:
         Height: =38
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
+        OnChange: |-
+            =If(
+                !IsBlank(msft_Dropdown_27.Selected) &&
+                msft_DatePicker_4.SelectedDate >= LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'Start Date' &&
+                msft_DatePicker_5.SelectedDate <= LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).'End Date',
+                // Dates are outside the group's date range
+                Notify("Selected dates are outside the Group's Date Range", NotificationType.Error)
+            )
         PaddingBottom: =9
         PaddingRight: =8
         PaddingTop: =8
