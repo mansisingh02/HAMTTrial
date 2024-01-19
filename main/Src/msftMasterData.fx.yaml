@@ -10,6 +10,7 @@ msftMasterData As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =60
+        Visible: =varTabSelected=6
         Width: =1200
         X: =100
         Y: =332
@@ -326,8 +327,8 @@ msftMasterData As screen:
         TemplateSize: =60
         Visible: =varTabSelected=7
         Width: =1156
-        X: =121
-        Y: =336
+        X: =105
+        Y: =356
         ZIndex: =1
 
         Title23 As label:
@@ -1168,8 +1169,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Project Goals"
         Visible: =varTabSelected=7
-        X: =114
-        Y: =273
+        X: =100
+        Y: =302
         ZIndex: =30
 
     msft_Button_24 As button:
@@ -1424,4 +1425,35 @@ msftMasterData As screen:
         X: =99
         Y: =244
         ZIndex: =38
+
+    search_7 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Type"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=7
+        Width: =214
+        X: =100
+        Y: =245
+        ZIndex: =39
 
