@@ -8,6 +8,14 @@ msftMasterData As screen:
         Items: ='Project Type'
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Navigate(
+                msftprojecttype,
+                ScreenTransition.Fade,
+                {
+                    SelectedGroup: LookUp(Gallery4.AllItems, 'Project Type' = Gallery4.Selected.'Project Type')
+                }
+            )
         TemplatePadding: =0
         TemplateSize: =60
         Visible: =varTabSelected=6
