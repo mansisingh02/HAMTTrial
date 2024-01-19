@@ -136,17 +136,29 @@ msftnewproject As screen:
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
         OnChange: |+
-            =
-            
-            If(
-                DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")) &&
-                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")),
-                // Dates are within the range
-                // You can add additional logic here if needed
-                Notify("Selected dates are within the group's date range", NotificationType.Success),
-                // Dates are outside the group's date range
-                Notify("Selected dates are outside the group's date range", NotificationType.Error)
+            =If(
+                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")),
+                If(
+                    DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")),
+                    // Dates are within the range and end date is not before start date
+                    // You can add additional logic here if needed
+                    Notify("Selected dates are within the group's date range", NotificationType.Success),
+                    If(
+                        DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")),
+                        // Start date is before the group's start date
+                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
+                        // Dates are outside the group's date range
+                        Notify("End date is outside the group's date range. Please check your selections.", NotificationType.Error)
+                    )
+                ),
+                // End date is before start date
+                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
             )
+            
+            
+            
             
             
         PaddingBottom: =9
@@ -170,6 +182,27 @@ msftnewproject As screen:
         Height: =41
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
+        OnChange: |
+            =If(
+                DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")),
+                If(
+                    DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_5.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).EndDate, "dd/mm/yyyy")),
+                    // Dates are within the range and end date is not before start date
+                    // You can add additional logic here if needed
+                    Notify("Selected dates are within the group's date range", NotificationType.Success),
+                    If(
+                        DateValue(Text(msft_DatePicker_4.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_27.Selected.Value).StartDate, "dd/mm/yyyy")),
+                        // Start date is before the group's start date
+                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
+                        // Dates are outside the group's date range
+                        Notify("End date is before start date or outside the group's date range. Please check your selections.", NotificationType.Error)
+                    )
+                ),
+                // End date is before start date
+                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
+            )
         PaddingBottom: =9
         PaddingRight: =8
         PaddingTop: =8
