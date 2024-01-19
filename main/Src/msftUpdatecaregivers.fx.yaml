@@ -39,26 +39,6 @@ msftUpdatecaregivers As screen:
         Y: =82
         ZIndex: =2
 
-    msft_Label_8 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="My Projects"
-        Width: =142
-        X: =553
-        Y: =189
-        ZIndex: =3
-
     msft_Label_10 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -151,78 +131,6 @@ msftUpdatecaregivers As screen:
             X: =153
             Y: =4
             ZIndex: =2
-
-        Label9_1 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.'Employee Status'.Value
-            Width: =221
-            X: =377
-            Y: =4
-            ZIndex: =3
-
-        Label9_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.Designation
-            Width: =221
-            X: =601
-            Y: =4
-            ZIndex: =4
-
-        Label9_3 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.Level.Value
-            Width: =152
-            X: =826
-            Y: =4
-            ZIndex: =5
-
-        Label9_4 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =12
-            Text: =ThisItem.'Caregiver Email'
-            Width: =244
-            X: =982
-            Y: =4
-            ZIndex: =6
 
     Gallery7 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -796,6 +704,51 @@ msftUpdatecaregivers As screen:
         X: =318
         Y: =189
         ZIndex: =46
+
+    Gallery7_2 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =102
+        Items: |-
+            =Table({ID:4,Label:"Projects"},{ID:5,Label:"Certifications"})
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =205
+        Width: =418
+        X: =708
+        Y: =247
+        ZIndex: =47
+
+        Button2_2 As button:
+            AutoDisableOnSelect: =false
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =61
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(varTabSelected, ThisItem.ID)
+            PaddingLeft: =1
+            PaddingRight: =1
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(0, 38, 106, 100)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            Size: =15
+            Text: =ThisItem.Label
+            Width: =194
+            X: =9
+            Y: =30
+            ZIndex: =1
 
     Group7_3 As group:
         Height: =5
