@@ -200,7 +200,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Filter(Skills_1, Capability = skillCategory_2.Selected.Value)
+            Items: =Filter(Skills_1, Discipline = skillCategory_2.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -232,7 +232,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Distinct(Skills_1,Capability)
+            Items: =Distinct(Skills_1,Discipline)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -454,7 +454,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Filter(Skills_1, Capability = skillCategory_3.Selected.Value)
+            Items: =Filter(Skills_1, Discipline = skillCategory_3.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -486,7 +486,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Distinct(Skills_1,Capability)
+            Items: =Distinct(Skills_1,Discipline)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -877,7 +877,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Filter(Skills_1, Capability = skillCategory_5.Selected.Value)
+            Items: =Filter(Skills_1, Discipline = skillCategory_5.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -909,7 +909,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Distinct(Skills_1,Capability)
+            Items: =Distinct(Skills_1,Discipline)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12

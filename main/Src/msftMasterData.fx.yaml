@@ -19,8 +19,8 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =52
         Visible: =varTabSelected=2
-        Width: =1082
-        X: =153
+        Width: =1132
+        X: =103
         Y: =336
         ZIndex: =1
 
@@ -126,7 +126,7 @@ msftMasterData As screen:
         Visible: =varTabSelected=5
         Width: =1174
         X: =103
-        Y: =319
+        Y: =360
         ZIndex: =1
 
         Title14 As label:
@@ -230,8 +230,8 @@ msftMasterData As screen:
         TemplateSize: =60
         Visible: =varTabSelected=7
         Width: =1156
-        X: =121
-        Y: =336
+        X: =105
+        Y: =356
         ZIndex: =1
 
         Title23 As label:
@@ -319,7 +319,7 @@ msftMasterData As screen:
     "Gallery31 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =420
+        Height: =425
         Items: =Capabilities
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -334,8 +334,8 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=8
-        X: =121
-        Y: =348
+        X: =97
+        Y: =342
         ZIndex: =1
 
         Title27 As label:
@@ -449,8 +449,113 @@ msftMasterData As screen:
         Visible: =varTabSelected=2
         Width: =214
         X: =100
-        Y: =248
+        Y: =241
         ZIndex: =1
+
+    "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =436
+        Items: ='Project Type'
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Navigate(
+                msftprojecttype,
+                ScreenTransition.Fade,
+                {
+                    SelectedGroup: LookUp(Gallery4.AllItems, 'Project Type' = Gallery4.Selected.'Project Type')
+                }
+            )
+        TemplatePadding: =0
+        TemplateSize: =60
+        Visible: =varTabSelected=6
+        Width: =1200
+        X: =100
+        Y: =332
+        ZIndex: =1
+
+        Title9 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 86
+            X: =16
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle6.Size * 1.8)) / 2
+            ZIndex: =1
+
+        Subtitle6 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =12
+            Text: =ThisItem.'Project Type'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Title9.Width
+            X: =Title9.X
+            Y: =19
+            ZIndex: =2
+
+        NextArrow4 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =50
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Tooltip: ="View item details"
+            Width: =50
+            X: =Parent.TemplateWidth - Self.Width - 12
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =3
+
+        Separator6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =8
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =4
+
+        Rectangle5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =Parent.TemplateHeight - Separator6.Height
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =5
 
     "'Update Caregivers_1' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -601,7 +706,7 @@ msftMasterData As screen:
         Height: =381
         Items: |-
             =Filter(Skills_1,  StartsWith('Skill Name',TextInput1_1.Text) && 
-            (Capability = capabilitydpdwn.Selected.Value || capabilitydpdwn.Selected.Value=Blank())
+            (Discipline = capabilitydpdwn.Selected.Value || capabilitydpdwn.Selected.Value=Blank())
              )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -611,7 +716,7 @@ msftMasterData As screen:
                 ScreenTransition.Fade,
                 {
                     SelectedSkill: Gallery1_2.Selected.'Skill Name',
-                    SelectedCategory: Gallery1_2.Selected.Capability
+                    SelectedCategory: Gallery1_2.Selected.Discipline
                 }
             )
         TemplatePadding: =0
@@ -679,7 +784,7 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.Capability
+            Text: =ThisItem.Discipline
             VerticalAlign: =VerticalAlign.Top
             Width: =178
             X: =721
@@ -703,7 +808,7 @@ msftMasterData As screen:
         HoverBorderColor: =Color
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Skills_1,Capability)
+        Items: =Distinct(Skills_1,Discipline)
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5
@@ -793,7 +898,7 @@ msftMasterData As screen:
         Size: =12
         Text: ="Discipline Name"
         Visible: =varTabSelected=2
-        X: =153
+        X: =100
         Y: =296
         ZIndex: =17
 
@@ -811,7 +916,7 @@ msftMasterData As screen:
         Text: ="Certification Name"
         Visible: =varTabSelected=1
         X: =98
-        Y: =256
+        Y: =273
         ZIndex: =19
 
     Label2_13 As label:
@@ -830,7 +935,7 @@ msftMasterData As screen:
             =varTabSelected=1
         Width: =220
         X: =761
-        Y: =256
+        Y: =279
         ZIndex: =20
 
     Gallery6 As gallery.galleryHorizontal:
@@ -969,7 +1074,7 @@ msftMasterData As screen:
         Text: ="Group Name"
         Visible: =varTabSelected=5
         X: =114
-        Y: =270
+        Y: =308
         ZIndex: =25
 
     msft_Button_18 As button:
@@ -1006,36 +1111,6 @@ msftMasterData As screen:
         X: =1076
         Y: =243
         ZIndex: =26
-
-    Gallery23 As gallery.variableTemplateHeightGallery:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =390
-        Items: ='Project Type'
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        ShowScrollbar: =false
-        TemplateSize: =385
-        Visible: =varTabSelected=6
-        X: =132
-        Y: =319
-        ZIndex: =27
-
-        Label13 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.Title
-            X: =40
-            Y: =40
-            ZIndex: =1
 
     msft_Button_22 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1085,8 +1160,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Project Type"
         Visible: =varTabSelected=6
-        X: =138
-        Y: =268
+        X: =97
+        Y: =292
         ZIndex: =29
 
     Label2_15 As label:
@@ -1102,8 +1177,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Project Goals"
         Visible: =varTabSelected=7
-        X: =114
-        Y: =273
+        X: =100
+        Y: =302
         ZIndex: =30
 
     msft_Button_24 As button:
@@ -1196,8 +1271,8 @@ msftMasterData As screen:
         Size: =13
         Text: ="Capability Name"
         Visible: =varTabSelected=8
-        X: =132
-        Y: =268
+        X: =97
+        Y: =285
         ZIndex: =33
 
     msft_Button_38 As button:
@@ -1234,4 +1309,190 @@ msftMasterData As screen:
         X: =1050
         Y: =243
         ZIndex: =34
+
+    search_3 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Certification"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=1
+        Width: =214
+        X: =100
+        Y: =228
+        ZIndex: =35
+
+    search_4 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Cost Center "
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=4
+        Width: =214
+        X: =98
+        Y: =239
+        ZIndex: =36
+
+    search_5 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Groups "
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=5
+        Width: =214
+        X: =98
+        Y: =239
+        ZIndex: =37
+
+    search_6 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Type"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=6
+        Width: =214
+        X: =99
+        Y: =244
+        ZIndex: =38
+
+    search_7 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Goals"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=7
+        Width: =214
+        X: =100
+        Y: =245
+        ZIndex: =39
+
+    search_8 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Project Capabilities"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Visible: =varTabSelected=8
+        Width: =214
+        X: =97
+        Y: =243
+        ZIndex: =40
 
