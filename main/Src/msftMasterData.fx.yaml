@@ -115,7 +115,7 @@ msftMasterData As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
             =Navigate(
-                msftcapability,
+                msftdiscipline,
                 ScreenTransition.Fade,
                 {
                     SelectedGroup: LookUp(Gallery33.AllItems, Discipline = Gallery33.Selected.Discipline)
