@@ -284,7 +284,10 @@ msftnewproject As screen:
                Defaults('Project'),
                {
                   'Project Name': msft_TextInput_13.Text,
-                  'Description': msft_TextInput_16.Text
+                  'Description': msft_TextInput_16.Text,
+                  'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, "mm/dd/yyyy")),
+                  'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, "mm/dd/yyyy")),
+                  'Primary Owner': msft_Dropdown_20.Selected
                }
             );
             
