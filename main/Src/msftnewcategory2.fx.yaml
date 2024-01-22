@@ -162,11 +162,11 @@ msftnewcategory2 As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =Patch(
-               'Capabilities',
+               Capabilities,
                Defaults(Capabilities),
                {
-                  'Capability': msft_TextInput_4.Text,
-                  'Description': msft_TextInput_5.Text
+                  Capability: msft_TextInput_4.Text,
+                  Description: msft_TextInput_5.Text
                }
             );
             
