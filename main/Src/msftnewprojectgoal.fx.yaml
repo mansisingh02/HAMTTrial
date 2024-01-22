@@ -160,6 +160,20 @@ msftnewprojectgoal As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(
+               'Project Goals',
+               Defaults('Project Goals'),
+               {
+                  Goal: msft_TextInput_21.Text,
+                  Description: msft_TextInput_22.Text
+               }
+            );
+            
+            Refresh('Project Type');
+            
+            Reset(msft_TextInput_21);
+            Reset(msft_TextInput_22);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
