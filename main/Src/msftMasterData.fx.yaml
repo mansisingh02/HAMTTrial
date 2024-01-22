@@ -424,7 +424,7 @@ msftMasterData As screen:
     "Gallery31 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =425
+        Height: =411
         Items: =Capabilities
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -439,8 +439,9 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=8
+        Width: =1185
         X: =97
-        Y: =342
+        Y: =356
         ZIndex: =1
 
         Title27 As label:
@@ -1195,7 +1196,7 @@ msftMasterData As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftnewprojecttype, ScreenTransition.Fade )
+        OnSelect: =Navigate(msftnewprojectgoal, ScreenTransition.Fade )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -1272,7 +1273,7 @@ msftMasterData As screen:
         Text: ="Capability Name"
         Visible: =varTabSelected=8
         X: =97
-        Y: =285
+        Y: =302
         ZIndex: =33
 
     msft_Button_38 As button:
