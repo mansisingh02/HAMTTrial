@@ -1038,7 +1038,7 @@ msftMasterData As screen:
         Text: ="Cost Center Code"
         Visible: =varTabSelected=4
         X: =99
-        Y: =279
+        Y: =290
         ZIndex: =23
 
     Label10_1 As label:
@@ -1055,8 +1055,8 @@ msftMasterData As screen:
         Text: ="Cost Center Name"
         Visible: =varTabSelected=4
         Width: =158
-        X: =743
-        Y: =279
+        X: =740
+        Y: =290
         ZIndex: =24
 
     Label10_2 As label:
@@ -1091,7 +1091,7 @@ msftMasterData As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftnewgroup, ScreenTransition.Fade )
+        OnSelect: =Navigate(msftnewcategory, ScreenTransition.Fade )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -1108,7 +1108,7 @@ msftMasterData As screen:
         VerticalAlign: =VerticalAlign.Top
         Visible: =varTabSelected=3
         Width: =253
-        X: =1076
+        X: =1052
         Y: =243
         ZIndex: =26
 
@@ -1219,13 +1219,13 @@ msftMasterData As screen:
     Gallery29 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =138
+        Height: =70
         Items: |-
             =Table({ID:8,Label:"Project Capabilities"})
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =12
-        TemplateSize: =204
+        TemplateSize: =164
         Width: =176
         X: =1124
         Y: =156
