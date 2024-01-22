@@ -160,6 +160,20 @@ msftnewprojecttype As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(
+               'Project Type',
+               Defaults('Project Type'),
+               {
+                  'Project Type': msft_TextInput_19.Text,
+                  'Description': msft_TextInput_20.Text
+               }
+            );
+            
+            Refresh('Project Type');
+            
+            Reset(msft_TextInput_19);
+            Reset(msft_TextInput_20);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
