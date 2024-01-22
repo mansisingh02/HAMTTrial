@@ -280,15 +280,15 @@ msftnewproject As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =Patch(
-               'Project',
-               Defaults('Project'),
+               Project,
+               Defaults(Project),
                {
                   'Project Name': msft_TextInput_13.Text,
-                  'Description': msft_TextInput_16.Text
+                  Description: msft_TextInput_16.Text
                }
             );
             
-            Refresh('Project');
+            Refresh(Project);
             
             Reset(msft_TextInput_13);
             Reset(msft_TextInput_16);
