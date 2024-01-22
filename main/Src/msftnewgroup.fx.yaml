@@ -51,7 +51,7 @@ msftnewgroup As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        HintText: ="Enter Category "
+        HintText: ="Enter Group Name"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -160,6 +160,24 @@ msftnewgroup As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(
+               'Project Parent Group',
+               Defaults('Project Parent Group'),
+               {
+                  'Group Name': msft_TextInput_6.Text,
+                  'Description': msft_TextInput_7.Text,
+                  'Start Date': DateValue(Text(DatePicker1.SelectedDate, "mm/dd/yyyy")),
+                  'End Date': DateValue(Text(DatePicker1_1.SelectedDate, "mm/dd/yyyy"))
+               }
+            );
+            
+            Refresh('Project Parent Group');
+            
+            Reset(msft_TextInput_6);
+            Reset(msft_TextInput_7);
+            Reset(DatePicker1);
+            Reset(DatePicker1_1);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
