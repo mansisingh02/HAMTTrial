@@ -2,7 +2,7 @@ msftnewproject As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =ClearCollect(StatusChoices, Choices('Project'.Status));
+        =ClearCollect(StatusChoices, Choices(Project.Status));
             Label5.Text = "StatusChoices: " & Concat(StatusChoices, Value & ", ").Result
         
     Width: =1366
