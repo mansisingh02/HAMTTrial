@@ -152,6 +152,8 @@ msftUpdatecaregivers As screen:
                 =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#CDCDCD"))
             BorderStyle: =If(varTabSelected = ThisItem.ID, BorderStyle.None, BorderStyle.Solid)
             BorderThickness: =1
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#FFFFFF"), ColorValue("#00338E"))
             DisabledBorderColor: =RGBA(255, 255, 255, 1)
             DisabledColor: =RGBA(255, 255, 255, 1)
             DisabledFill: =RGBA(255, 255, 255, 1)
@@ -163,7 +165,8 @@ msftUpdatecaregivers As screen:
             Height: =55
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#00338E"))
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             PaddingLeft: =1
             PaddingRight: =1
@@ -216,20 +219,25 @@ msftUpdatecaregivers As screen:
 
         Button2_2 As button:
             AutoDisableOnSelect: =false
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
+            BorderColor: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#CDCDCD"))
+            BorderStyle: =If(varTabSelected = ThisItem.ID, BorderStyle.None, BorderStyle.Solid)
+            BorderThickness: =1
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#FFFFFF"), ColorValue("#00338E"))
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#FFFFFF"))
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =55
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverFill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#00338E"))
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             PaddingLeft: =1
             PaddingRight: =1
@@ -242,7 +250,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.Label
             Width: =164
             X: =6
-            Y: =28
+            Y: =26
             ZIndex: =1
 
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
