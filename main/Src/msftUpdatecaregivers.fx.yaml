@@ -179,48 +179,6 @@ msftUpdatecaregivers As screen:
             Y: =30
             ZIndex: =1
 
-    Icon1_4 As icon.HorizontalLine:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =0
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.HorizontalLine
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =varTabSelected=1
-        Width: =1134
-        X: =110
-        Y: =536
-        ZIndex: =30
-
-    Icon1_5 As icon.HorizontalLine:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =0
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.HorizontalLine
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Visible: =varTabSelected=1
-        Width: =1134
-        X: =128
-        Y: =556
-        ZIndex: =33
-
     msft_Label_9 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -507,7 +465,10 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =28
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Set(varSelectedColumn,"Beginner Skill 1");
+                Set(varSelectedTable,"Beginner");
+                Navigate(msftUpdateSkill_Caregiver,ScreenTransition.Fade)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -671,13 +632,19 @@ msftUpdatecaregivers As screen:
         Y: =219
         ZIndex: =51
 
-    "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =54
+
+    "Gallery5_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =258
         Items: |-
-            =
-            Filter(
+            =Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1",
@@ -729,17 +696,17 @@ msftUpdatecaregivers As screen:
         TemplatePadding: =0
         TemplateSize: =258
         Visible: =varTabSelected=2
-        Width: =862
-        X: =98
-        Y: =510
-        ZIndex: =52
+        Width: =818
+        X: =109
+        Y: =496
+        ZIndex: =55
 
-        Title2_17 As label:
+        Title2_16 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =37
+            Height: =28
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -748,12 +715,31 @@ msftUpdatecaregivers As screen:
             Text: |
                 =ThisItem.'Intermediate 1'.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =297
-            X: =25
-            Y: =5
+            Width: =263
+            X: =30
+            Y: =16
+            ZIndex: =2
+
+        Title2_33 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: |
+                =ThisItem.'Intermediate 2'.'Skill Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =49
             ZIndex: =7
 
-        Title2_19 As label:
+        Title2_35 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -772,7 +758,7 @@ msftUpdatecaregivers As screen:
             Y: =77
             ZIndex: =8
 
-        Title2_18 As label:
+        Title2_34 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -791,7 +777,7 @@ msftUpdatecaregivers As screen:
             Y: =105
             ZIndex: =9
 
-        Title2_20 As label:
+        Title2_36 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -810,7 +796,7 @@ msftUpdatecaregivers As screen:
             Y: =133
             ZIndex: =10
 
-        Title2_21 As label:
+        Title2_37 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -829,7 +815,7 @@ msftUpdatecaregivers As screen:
             Y: =189
             ZIndex: =11
 
-        Title2_22 As label:
+        Title2_38 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -848,7 +834,7 @@ msftUpdatecaregivers As screen:
             Y: =161
             ZIndex: =12
 
-        Title2_23 As label:
+        Title2_39 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -867,32 +853,167 @@ msftUpdatecaregivers As screen:
             Y: =220
             ZIndex: =13
 
-        Title2_24 As label:
-            Color: =RGBA(50, 49, 48, 1)
+        Title2_17 As label:
+            Color: =RGBA(0, 108, 191, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
+            Height: =28
+            OnSelect: |-
+                =Set(varSelectedColumn,"Beginner Skill 1");
+                Set(varSelectedTable,"Beginner");
+                Navigate(msftUpdateSkill_Caregiver,ScreenTransition.Fade)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_16.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =16
+            ZIndex: =14
+
+        Title2_18 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: |
-                =ThisItem.'Intermediate 2'.'Skill Name'
+            Text: =If(Title2_33.Text=Blank(),"","Edit")
+            Underline: =true
             VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =30
-            Y: =30
-            ZIndex: =14
+            Width: =85
+            X: =733
+            Y: =46
+            ZIndex: =15
 
-    "Gallery5_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        Title2_19 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_35.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =76
+            ZIndex: =16
+
+        Title2_20 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_34.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =106
+            ZIndex: =17
+
+        Title2_21 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_39.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =230
+            ZIndex: =18
+
+        Title2_22 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_38.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =166
+            ZIndex: =19
+
+        Title2_23 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_37.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =196
+            ZIndex: =20
+
+        Title2_24 As label:
+            Color: =RGBA(0, 108, 191, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =If(Title2_36.Text=Blank(),"","Edit")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Width: =85
+            X: =733
+            Y: =136
+            ZIndex: =21
+
+    "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =258
         Items: |-
-            =
-            Filter(
+            =Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1",
@@ -942,33 +1063,33 @@ msftUpdatecaregivers As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
         TemplatePadding: =0
-        TemplateSize: =258
+        TemplateSize: =250
         Visible: =varTabSelected=3
-        Width: =862
-        X: =118
-        Y: =510
-        ZIndex: =53
+        Width: =818
+        X: =109
+        Y: =492
+        ZIndex: =56
 
-        Title2_25 As label:
+        Title2_41 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =37
+            Height: =23
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Text: |
-                =ThisItem.'Advanced 1'.'Skill Name'
+                =ThisItem.'Advanced 2'.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =297
-            X: =25
-            Y: =5
+            Width: =227
+            X: =40
+            Y: =49
             ZIndex: =7
 
-        Title2_27 As label:
+        Title2_43 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -983,11 +1104,11 @@ msftUpdatecaregivers As screen:
                 =ThisItem.'Advanced 3'.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =227
-            X: =25
-            Y: =82
+            X: =40
+            Y: =77
             ZIndex: =8
 
-        Title2_26 As label:
+        Title2_42 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -1006,7 +1127,7 @@ msftUpdatecaregivers As screen:
             Y: =105
             ZIndex: =9
 
-        Title2_28 As label:
+        Title2_44 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -1025,7 +1146,7 @@ msftUpdatecaregivers As screen:
             Y: =133
             ZIndex: =10
 
-        Title2_29 As label:
+        Title2_45 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -1044,7 +1165,7 @@ msftUpdatecaregivers As screen:
             Y: =189
             ZIndex: =11
 
-        Title2_30 As label:
+        Title2_46 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -1060,10 +1181,10 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =161
+            Y: =173
             ZIndex: =12
 
-        Title2_32 As label:
+        Title2_47 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
@@ -1082,33 +1203,33 @@ msftUpdatecaregivers As screen:
             Y: =220
             ZIndex: =13
 
-        Title2_31 As label:
-            Color: =RGBA(50, 49, 48, 1)
+        Title2_40 As label:
+            Color: =RGBA(0, 108, 191, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
+            Height: =28
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
-            Text: |
-                =ThisItem.'Advanced 2'.'Skill Name'
+            Text: =If(Title2_44.Text=Blank(),"","Edit")
+            Underline: =true
             VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =30
-            Y: =30
-            ZIndex: =14
+            Width: =85
+            X: =733
+            Y: =136
+            ZIndex: =21
 
-    Group1 As group:
+    Group3 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =54
+        ZIndex: =67
 
-        msft_Dropdown_13 As dropdown:
+        skillName_1 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -1120,11 +1241,10 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Filter(Skills_1, Discipline = skillCategory_2.Selected.Value)
+            Items: =Filter(Skills_1, Discipline = skillCategory_7.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -1132,15 +1252,16 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
             Size: =12.75
-            Visible: =varTabSelected=2
-            Width: =258
-            X: =366
-            Y: =411
-            ZIndex: =14
+            Visible: =varTabSelected=1
+            Width: =322
+            X: =396
+            Y: =421
+            ZIndex: =57
 
-        skillCategory_2 As dropdown:
+        skillCategory_7 As dropdown:
             AllowEmptySelection: =true
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -1153,7 +1274,6 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
@@ -1168,47 +1288,13 @@ msftUpdatecaregivers As screen:
             SelectionColor: =RGBA(0, 0, 0, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
             Size: =12.75
-            Visible: =varTabSelected=2
-            Width: =258
-            X: =97
-            Y: =411
-            ZIndex: =15
+            Visible: =varTabSelected=1
+            Width: =260
+            X: =126
+            Y: =421
+            ZIndex: =58
 
-        msft_Button_16 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FontWeight: =FontWeight.Bold
-            Height: =41
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PaddingBottom: =7
-            PaddingLeft: =32
-            PaddingRight: =32
-            PaddingTop: =6
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="Add"
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =varTabSelected=2
-            Width: =120
-            X: =940
-            Y: =408
-            ZIndex: =16
-
-        msft_Label_21 As label:
+        msft_Label_37 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1222,13 +1308,13 @@ msftUpdatecaregivers As screen:
             PaddingTop: =8
             Size: =12.75
             Text: ="Skill "
-            Visible: =varTabSelected=2
+            Visible: =varTabSelected=1
             Width: =36
-            X: =366
-            Y: =388
-            ZIndex: =17
+            X: =396
+            Y: =398
+            ZIndex: =59
 
-        msft_Label_27 As label:
+        msft_Label_38 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1242,13 +1328,13 @@ msftUpdatecaregivers As screen:
             PaddingTop: =8
             Size: =12.75
             Text: ="Comments"
-            Visible: =varTabSelected=2
+            Visible: =varTabSelected=1
             Width: =108
-            X: =635
-            Y: =388
-            ZIndex: =18
+            X: =738
+            Y: =398
+            ZIndex: =60
 
-        msft_TextInput_14 As text:
+        comment_1 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(166, 166, 166, 1)
@@ -1257,7 +1343,6 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
-            Height: =41
             HintText: ="Comments"
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -1273,20 +1358,20 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =12.75
-            Visible: =varTabSelected=2
-            Width: =258
-            X: =634
-            Y: =411
-            ZIndex: =19
+            Visible: =varTabSelected=1
+            Width: =359
+            X: =737
+            Y: =421
+            ZIndex: =61
 
-        Icon1_2 As icon.HorizontalLine:
+        Icon1_12 As icon.HorizontalLine:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =65
+            Height: =0
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -1294,32 +1379,13 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =varTabSelected=2
-            Width: =1141
-            X: =225
-            Y: =347
-            ZIndex: =20
+            Visible: =varTabSelected=1
+            Width: =1150
+            X: =126
+            Y: =521
+            ZIndex: =62
 
-        Label5_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =41
-            Size: =13
-            Text: ="INTERMEDIATE"
-            Visible: =varTabSelected=2
-            Width: =163
-            X: =90
-            Y: =347
-            ZIndex: =21
-
-        msft_Label_20 As label:
+        msft_Label_39 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1333,20 +1399,20 @@ msftUpdatecaregivers As screen:
             PaddingTop: =8
             Size: =12.75
             Text: ="Skill Category"
-            Visible: =varTabSelected=2
-            Width: =127
-            X: =97
-            Y: =388
-            ZIndex: =22
+            Visible: =varTabSelected=1
+            Width: =128
+            X: =126
+            Y: =398
+            ZIndex: =63
 
-        Icon1_3 As icon.HorizontalLine:
+        Icon1_13 As icon.HorizontalLine:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =65
+            Height: =0
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -1354,184 +1420,40 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =varTabSelected=2
-            Width: =1141
-            X: =115
-            Y: =535
-            ZIndex: =23
-
-        msft_Dropdown_14 As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Filter(Skills_1, Discipline = skillCategory_3.Selected.Value)
-            PaddingBottom: =8
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionFill: =RGBA(255, 255, 255, 1)
-            Size: =12.75
             Visible: =varTabSelected=1
-            Width: =232
-            X: =342
-            Y: =421
-            ZIndex: =24
+            Width: =1150
+            X: =144
+            Y: =541
+            ZIndex: =64
 
-        skillCategory_3 As dropdown:
-            AllowEmptySelection: =true
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Distinct(Skills_1,Discipline)
-            PaddingBottom: =8
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionColor: =RGBA(0, 0, 0, 1)
-            SelectionFill: =RGBA(255, 255, 255, 1)
-            Size: =12.75
-            Visible: =varTabSelected=1
-            Width: =219
-            X: =102
-            Y: =420
-            ZIndex: =25
-
-        msft_Button_17 As button:
+        Button8 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
+            Fill: =RGBA(0, 84, 148, 1)
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FontWeight: =FontWeight.Bold
-            Height: =41
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PaddingBottom: =7
-            PaddingLeft: =32
-            PaddingRight: =32
-            PaddingTop: =6
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =3
-            RadiusBottomRight: =3
-            RadiusTopLeft: =3
-            RadiusTopRight: =3
-            Size: =15
-            Text: ="ADD"
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =varTabSelected=1
-            Width: =120
-            X: =876
-            Y: =421
-            ZIndex: =26
-
-        msft_Label_25 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =20
-            PaddingBottom: =9
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =8
-            Size: =10.75
-            Text: ="Skill "
-            Visible: =varTabSelected=1
-            Width: =36
-            X: =342
-            Y: =396
-            ZIndex: =27
-
-        msft_Label_28 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =18
-            PaddingBottom: =9
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =8
-            Size: =10.75
-            Text: ="Comments"
-            Visible: =varTabSelected=1
-            Width: =108
-            X: =596
-            Y: =396
-            ZIndex: =28
-
-        msft_TextInput_15 As text:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            BorderThickness: =2
-            Color: =RGBA(166, 166, 166, 1)
-            Default: =
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =4
-            Height: =41
-            HintText: ="Comments"
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PaddingBottom: =9
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
-            Size: =10.75
+            Size: =15
+            Text: ="Add"
             Visible: =varTabSelected=1
-            Width: =242
-            X: =595
+            Width: =162
+            X: =1130
             Y: =421
-            ZIndex: =29
+            ZIndex: =65
 
-        Label5_3 As label:
+        Label7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1540,37 +1462,22 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =41
             Size: =13
             Text: ="BEGINNER"
             Visible: =varTabSelected=1
-            Width: =163
-            X: =95
-            Y: =356
-            ZIndex: =31
+            Width: =152
+            X: =109
+            Y: =357
+            ZIndex: =66
 
-        msft_Label_24 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =20
-            PaddingBottom: =9
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =8
-            Size: =10.75
-            Text: ="Skill Category"
-            Visible: =varTabSelected=1
-            Width: =127
-            X: =102
-            Y: =396
-            ZIndex: =32
+    Group3_1 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =77
 
-        msft_Dropdown_17 As dropdown:
+        skillName_2 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -1582,11 +1489,10 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Filter(Skills_1, Discipline = skillCategory_5.Selected.Value)
+            Items: =Filter(Skills_1, Discipline = skillCategory_8.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -1594,15 +1500,16 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
             Size: =12.75
-            Visible: =varTabSelected=3
-            Width: =258
-            X: =366
-            Y: =411
-            ZIndex: =34
+            Visible: =varTabSelected=2
+            Width: =322
+            X: =396
+            Y: =421
+            ZIndex: =67
 
-        skillCategory_5 As dropdown:
+        skillCategory_8 As dropdown:
             AllowEmptySelection: =true
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -1615,7 +1522,254 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =41
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            Items: =Distinct(Skills_1,Discipline)
+            PaddingBottom: =8
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =12.75
+            Visible: =varTabSelected=2
+            Width: =260
+            X: =126
+            Y: =421
+            ZIndex: =68
+
+        msft_Label_40 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =20
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Skill "
+            Visible: =varTabSelected=2
+            Width: =36
+            X: =396
+            Y: =398
+            ZIndex: =69
+
+        msft_Label_41 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =18
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Comments"
+            Visible: =varTabSelected=2
+            Width: =108
+            X: =738
+            Y: =398
+            ZIndex: =70
+
+        comment_2 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(166, 166, 166, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            HintText: ="Comments"
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingBottom: =9
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =12.75
+            Visible: =varTabSelected=2
+            Width: =359
+            X: =737
+            Y: =421
+            ZIndex: =71
+
+        Icon1_14 As icon.HorizontalLine:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =0
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.HorizontalLine
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =varTabSelected=2
+            Width: =1150
+            X: =126
+            Y: =521
+            ZIndex: =72
+
+        msft_Label_42 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =20
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Skill Category"
+            Visible: =varTabSelected=2
+            Width: =128
+            X: =126
+            Y: =398
+            ZIndex: =73
+
+        Icon1_15 As icon.HorizontalLine:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(0, 120, 212, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =0
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.HorizontalLine
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =varTabSelected=2
+            Width: =1150
+            X: =144
+            Y: =541
+            ZIndex: =74
+
+        Button8_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 84, 148, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Add"
+            Visible: =varTabSelected=2
+            Width: =162
+            X: =1130
+            Y: =421
+            ZIndex: =75
+
+        Label7_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="INTERMEDIATE"
+            Visible: =varTabSelected=2
+            Width: =152
+            X: =109
+            Y: =357
+            ZIndex: =76
+
+    Group3_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =87
+
+        skillName_3 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            Items: =Filter(Skills_1, Discipline = skillCategory_9.Selected.Value)
+            PaddingBottom: =8
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =12.75
+            Visible: =varTabSelected=3
+            Width: =322
+            X: =396
+            Y: =421
+            ZIndex: =77
+
+        skillCategory_9 As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
@@ -1631,46 +1785,12 @@ msftUpdatecaregivers As screen:
             SelectionFill: =RGBA(255, 255, 255, 1)
             Size: =12.75
             Visible: =varTabSelected=3
-            Width: =258
-            X: =97
-            Y: =411
-            ZIndex: =35
+            Width: =260
+            X: =126
+            Y: =421
+            ZIndex: =78
 
-        msft_Button_19 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FontWeight: =FontWeight.Bold
-            Height: =41
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            PaddingBottom: =7
-            PaddingLeft: =32
-            PaddingRight: =32
-            PaddingTop: =6
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="Add"
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =varTabSelected=3
-            Width: =120
-            X: =940
-            Y: =408
-            ZIndex: =36
-
-        msft_Label_32 As label:
+        msft_Label_43 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1686,11 +1806,11 @@ msftUpdatecaregivers As screen:
             Text: ="Skill "
             Visible: =varTabSelected=3
             Width: =36
-            X: =366
-            Y: =388
-            ZIndex: =37
+            X: =396
+            Y: =398
+            ZIndex: =79
 
-        msft_Label_33 As label:
+        msft_Label_44 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1706,11 +1826,11 @@ msftUpdatecaregivers As screen:
             Text: ="Comments"
             Visible: =varTabSelected=3
             Width: =108
-            X: =635
-            Y: =388
-            ZIndex: =38
+            X: =738
+            Y: =398
+            ZIndex: =80
 
-        msft_TextInput_17 As text:
+        comment_3 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(166, 166, 166, 1)
@@ -1719,7 +1839,6 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
-            Height: =41
             HintText: ="Comments"
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -1736,19 +1855,19 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =0
             Size: =12.75
             Visible: =varTabSelected=3
-            Width: =258
-            X: =634
-            Y: =411
-            ZIndex: =39
+            Width: =359
+            X: =737
+            Y: =421
+            ZIndex: =81
 
-        Icon1_8 As icon.HorizontalLine:
+        Icon1_16 As icon.HorizontalLine:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =65
+            Height: =0
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -1757,31 +1876,12 @@ msftUpdatecaregivers As screen:
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varTabSelected=3
-            Width: =1141
-            X: =97
-            Y: =347
-            ZIndex: =40
+            Width: =1150
+            X: =126
+            Y: =521
+            ZIndex: =82
 
-        Label5_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =41
-            Size: =13
-            Text: ="ADVANCED"
-            Visible: =varTabSelected=3
-            Width: =163
-            X: =90
-            Y: =347
-            ZIndex: =41
-
-        msft_Label_31 As label:
+        msft_Label_45 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -1796,19 +1896,19 @@ msftUpdatecaregivers As screen:
             Size: =12.75
             Text: ="Skill Category"
             Visible: =varTabSelected=3
-            Width: =127
-            X: =97
-            Y: =388
-            ZIndex: =42
+            Width: =128
+            X: =126
+            Y: =398
+            ZIndex: =83
 
-        Icon1_9 As icon.HorizontalLine:
+        Icon1_17 As icon.HorizontalLine:
             BorderColor: =RGBA(166, 166, 166, 1)
             Color: =RGBA(0, 120, 212, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =65
+            Height: =0
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -1817,8 +1917,52 @@ msftUpdatecaregivers As screen:
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =varTabSelected=3
-            Width: =1141
-            X: =115
-            Y: =535
-            ZIndex: =43
+            Width: =1150
+            X: =144
+            Y: =541
+            ZIndex: =84
+
+        Button8_2 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 84, 148, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Add"
+            Visible: =varTabSelected=3
+            Width: =162
+            X: =1130
+            Y: =421
+            ZIndex: =85
+
+        Label7_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="ADVANCED"
+            Visible: =varTabSelected=3
+            Width: =152
+            X: =109
+            Y: =357
+            ZIndex: =86
 
