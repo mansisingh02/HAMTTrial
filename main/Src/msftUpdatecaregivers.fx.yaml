@@ -136,16 +136,16 @@ msftUpdatecaregivers As screen:
     Gallery7 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =101
+        Height: =98
         Items: |-
             =Table({ID:1,Label:"Beginner Skills"},{ID:2,Label:"Intermediate Skills"},{ID:3,Label:"Advanced Skills"})
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =205
-        Width: =618
+        TemplateSize: =170
+        Width: =518
         X: =90
-        Y: =247
+        Y: =274
         ZIndex: =13
 
         Button2 As button:
@@ -159,7 +159,7 @@ msftUpdatecaregivers As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =61
+            Height: =51
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -171,9 +171,9 @@ msftUpdatecaregivers As screen:
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =10.75
             Text: =ThisItem.Label
-            Width: =194
+            Width: =164
             X: =9
             Y: =30
             ZIndex: =1
@@ -709,16 +709,16 @@ msftUpdatecaregivers As screen:
     Gallery7_2 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =102
+        Height: =99
         Items: |-
             =Table({ID:4,Label:"Project Allocation"},{ID:5,Label:"Certifications"})
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplatePadding: =0
-        TemplateSize: =205
-        Width: =425
-        X: =708
-        Y: =247
+        TemplateSize: =170
+        Width: =386
+        X: =600
+        Y: =274
         ZIndex: =47
 
         Button2_2 As button:
@@ -732,7 +732,7 @@ msftUpdatecaregivers As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =61
+            Height: =51
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -744,9 +744,9 @@ msftUpdatecaregivers As screen:
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
-            Size: =15
+            Size: =10.75
             Text: =ThisItem.Label
-            Width: =194
+            Width: =164
             X: =9
             Y: =30
             ZIndex: =1
