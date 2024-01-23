@@ -99,27 +99,27 @@ msftcaregivers As screen:
         Height: =450
         Items: |-
             =If(
-                 8 * varPageNumber<=Value(rowCount.Text),
+                 12 * varPageNumber<=Value(rowCount.Text),
                     LastN(
                         FirstN(
                             hiddenGallery.AllItems,
-                            8 * varPageNumber
+                            12 * varPageNumber
                         ),
-                        8
+                        12
                     ),
                 LastN(
                     FirstN(
                         hiddenGallery.AllItems,
-                        8 * varPageNumber
+                        12 * varPageNumber
                     ),
-                    8 - (8* varPageNumber - Value(rowCount.Text))
+                    12 - (12* varPageNumber - Value(rowCount.Text))
                     )
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         Selectable: =false
         TemplatePadding: =0
-        TemplateSize: =55
+        TemplateSize: =35
         Width: =1194
         X: =123
         Y: =256
@@ -158,7 +158,7 @@ msftcaregivers As screen:
             Text: =ThisItem.'Caregiver Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =162
-            Y: =14
+            Y: =8
             ZIndex: =3
 
         Separator1 As rectangle:
@@ -186,7 +186,7 @@ msftcaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =298
             X: =281
-            Y: =14
+            Y: =6
             ZIndex: =6
 
         Subtitle1_2 As label:
@@ -205,7 +205,7 @@ msftcaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =259
             X: =698
-            Y: =14
+            Y: =6
             ZIndex: =7
 
         Subtitle1_3 As label:
@@ -351,7 +351,7 @@ msftcaregivers As screen:
         FontWeight: =FontWeight.Semibold
         Height: =30
         Size: =13
-        Text: ="Page  " &varPageNumber & "  of " & "  " & RoundUp(Value((rowCount.Text)/8),0) & "+"
+        Text: ="Page  " &varPageNumber & "  of " & "  " & RoundUp(Value((rowCount.Text)/12),0) & "+"
         Width: =146
         X: =1066
         Y: =713
