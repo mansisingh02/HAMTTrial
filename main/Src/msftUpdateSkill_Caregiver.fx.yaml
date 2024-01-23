@@ -48,7 +48,7 @@ msftUpdateSkill_Caregiver As screen:
         Y: =20
         ZIndex: =14
 
-        msft_Dropdown_34 As dropdown:
+        skillName As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
@@ -71,6 +71,7 @@ msftUpdateSkill_Caregiver As screen:
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
             Size: =12.75
             Width: =318
@@ -148,7 +149,7 @@ msftUpdateSkill_Caregiver As screen:
             Y: =255
             ZIndex: =8
 
-        msft_TextInput_18 As text:
+        comment As text:
             BorderColor: =RGBA(166, 166, 166, 1)
             BorderThickness: =2
             Color: =RGBA(166, 166, 166, 1)
@@ -248,6 +249,7 @@ msftUpdateSkill_Caregiver As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
