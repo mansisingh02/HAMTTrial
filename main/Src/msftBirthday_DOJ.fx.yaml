@@ -1,0 +1,348 @@
+msftBirthday_DOJ As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    "Gallery1_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(149, 149, 149, 1)
+        DelayItemLoading: =true
+        Height: =489
+        Items: =Filter(Caregivers_1, Text(Month(Today()) &"/"& Day(Today() &"/" )) in 'Date of Joining')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Selectable: =false
+        TemplatePadding: =0
+        TemplateSize: =55
+        Visible: =varTabSelected_B=2
+        Width: =1234
+        X: =108
+        Y: =243
+        ZIndex: =1
+
+        Title1_1 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1_4.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1_4 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Caregiver Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =162
+            Y: =14
+            ZIndex: =3
+
+        Separator1_1 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Subtitle1_5 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Core Leader'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =298
+            X: =281
+            Y: =14
+            ZIndex: =6
+
+        Subtitle1_6 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Caregiver Email'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =259
+            X: =698
+            Y: =14
+            ZIndex: =7
+
+        Subtitle1_7 As label:
+            Color: =RGBA(0, 94, 146, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Navigate(msftUpdatecaregivers)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =If(Lower(ThisItem.'Caregiver Email')=Lower(User().Email),"Update","")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =If(ThisItem.'Caregiver Name'=User().FullName,true,false)
+            Width: =75
+            X: =1077
+            Y: =14
+            ZIndex: =8
+
+    navBarVertical_19 As navBarVertical:
+        ZIndex: =2
+
+    navBarHorizontal_19 As navBarHorizontal:
+        ZIndex: =3
+
+    Gallery7_3 As gallery.galleryHorizontal:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =99
+        Items: |-
+            =Table({ID:1,Label:"Birthdays"},{ID:2,Label:"Work Anniversaries"})
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =170
+        Width: =386
+        X: =108
+        Y: =132
+        ZIndex: =5
+
+        Button2_3 As button:
+            AutoDisableOnSelect: =false
+            BorderColor: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#CDCDCD"))
+            BorderStyle: =If(varTabSelected = ThisItem.ID, BorderStyle.None, BorderStyle.Solid)
+            BorderThickness: =1
+            Color: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#FFFFFF"), ColorValue("#00338E"))
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#FFFFFF"))
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =55
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#00338E"))
+            OnSelect: =Set(varTabSelected_B, ThisItem.ID)
+            PaddingLeft: =1
+            PaddingRight: =1
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(0, 38, 106, 100)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            Size: =10.75
+            Text: =ThisItem.Label
+            Width: =164
+            ZIndex: =1
+
+    Label12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Caregiver Name"
+        X: =108
+        Y: =201
+        ZIndex: =6
+
+    Label12_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Core Leader Name"
+        Width: =174
+        X: =381
+        Y: =201
+        ZIndex: =7
+
+    Label12_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.Lato
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Email"
+        Width: =174
+        X: =798
+        Y: =201
+        ZIndex: =8
+
+    "Gallery1_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(149, 149, 149, 1)
+        DelayItemLoading: =true
+        Height: =489
+        Items: =Filter(Caregivers_1, Text(Month(Today()) &"/"& Day(Today() &"/" )) in 'Birth Date')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        Selectable: =false
+        TemplatePadding: =0
+        TemplateSize: =55
+        Visible: =varTabSelected_B=1
+        Width: =1234
+        X: =108
+        Y: =243
+        ZIndex: =9
+
+        Title1_3 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1_10.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1_10 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Caregiver Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =162
+            Y: =14
+            ZIndex: =3
+
+        Separator1_3 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Subtitle1_11 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Core Leader'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =298
+            X: =281
+            Y: =14
+            ZIndex: =6
+
+        Subtitle1_12 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Caregiver Email'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =259
+            X: =698
+            Y: =14
+            ZIndex: =7
+
+        Subtitle1_13 As label:
+            Color: =RGBA(0, 94, 146, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =21
+            OnSelect: =Navigate(msftUpdatecaregivers)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =If(Lower(ThisItem.'Caregiver Email')=Lower(User().Email),"Update","")
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =If(ThisItem.'Caregiver Name'=User().FullName,true,false)
+            Width: =75
+            X: =1077
+            Y: =14
+            ZIndex: =8
+
