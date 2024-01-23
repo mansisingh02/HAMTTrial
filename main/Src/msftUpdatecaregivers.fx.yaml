@@ -1,5 +1,4 @@
 msftUpdatecaregivers As screen:
-    Fill: =RGBA(255, 255, 255, 0)
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: =
@@ -145,21 +144,23 @@ msftUpdatecaregivers As screen:
         TemplateSize: =170
         Width: =518
         X: =88
-        Y: =274
+        Y: =271
         ZIndex: =13
 
         Button2 As button:
-            AutoDisableOnSelect: =false
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderThickness: =0
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
+            BorderColor: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#CDCDCD"))
+            BorderStyle: =If(varTabSelected = ThisItem.ID, BorderStyle.None, BorderStyle.Solid)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: |-
+                =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#FFFFFF"))
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =51
+            Height: =55
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -167,7 +168,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =1
             PaddingRight: =1
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(0, 38, 106, 100)
+            PressedColor: =RGBA(255,255,255,1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
@@ -258,6 +259,7 @@ msftUpdatecaregivers As screen:
         Button2_2 As button:
             AutoDisableOnSelect: =false
             BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
             BorderThickness: =0
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -266,7 +268,7 @@ msftUpdatecaregivers As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =51
+            Height: =55
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -281,8 +283,8 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Text: =ThisItem.Label
             Width: =164
-            X: =9
-            Y: =30
+            X: =6
+            Y: =28
             ZIndex: =1
 
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
