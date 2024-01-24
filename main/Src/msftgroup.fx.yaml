@@ -1,6 +1,7 @@
 msftgroup As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(ProjectCount, CountRows(FilteredProjectsGroup));
     Width: =1366
 
     "'Report Header_4' As groupContainer.manualLayoutContainer":
@@ -240,7 +241,7 @@ msftgroup As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: ="Text"
+        Text: =Text(TempCount)
         X: =766
         Y: =259
         ZIndex: =22
