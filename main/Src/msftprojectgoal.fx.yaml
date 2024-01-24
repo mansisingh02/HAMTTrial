@@ -1,6 +1,20 @@
 msftprojectgoal As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =Set(ProjectCount, CountRows(FilteredProjects))
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     Width: =1366
 
     "'Report Header_3' As groupContainer.manualLayoutContainer":
@@ -139,7 +153,10 @@ msftprojectgoal As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =Text(Gallery28.Selected.Goal)
+            Text: |+
+                =Text(Gallery28.Selected.Goal, "[$-en-US]General Number")
+                
+                
             Width: =104
             X: =10
             Y: =16
@@ -319,4 +336,19 @@ msftprojectgoal As screen:
         X: =1187
         Y: =690
         ZIndex: =25
+
+    Label11 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =Text(TempCount)
+        X: =780
+        Y: =261
+        ZIndex: =27
 
