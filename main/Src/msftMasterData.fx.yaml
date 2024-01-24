@@ -471,11 +471,35 @@ msftMasterData As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |
-            =Navigate(
+            =UpdateContext({TempCount: 0});
+            
+            ClearCollect(
+                SelectedCapabilities,
+                Gallery31.Selected.Capability
+            );
+            
+            ClearCollect(
+                FilteredProjectsCapability,
+                Filter(
+                    Project,
+                    CountRows(
+                        Filter(
+                            Capability.Value,
+                            Value in SelectedCapabilities.Value
+                        )
+                    ) > 0
+                )
+            );
+            
+            UpdateContext({TempCount: CountRows(FilteredProjectsCapability)});
+            
+            Navigate(
                 msftcapability,
                 ScreenTransition.Fade,
                 {
-                    SelectedGroup: LookUp(Gallery31.AllItems, Capability = Gallery31.Selected.Capability)
+                    SelectedGroup: LookUp(Gallery31.AllItems, CountRows(FilteredProjectsCapability) > 0),
+                    FilteredProjectsCapability: FilteredProjectsCapability,
+                    TempCount: TempCount
                 }
             )
         TemplatePadding: =0
