@@ -111,10 +111,9 @@ msftgroup As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =10.5
-        Text: ="Edit"
-        Underline: =true
-        Width: =29
-        X: =1158
+        Text: ="EDIT"
+        Width: =40
+        X: =1172
         Y: =268
         ZIndex: =13
 
@@ -127,14 +126,20 @@ msftgroup As screen:
         FocusedBorderThickness: =4
         Height: =16
         LineHeight: =1.142857
+        OnSelect: |+
+            =If(
+               Confirm("Are you sure you want to delete this item?"),
+               RemoveIf('Project Parent Group', 'Group Name' = Gallery17.Selected.'Group Name');
+               Navigate(msftMasterData)
+            )
+            
         PaddingBottom: =0
         PaddingLeft: =0
         PaddingRight: =0
         PaddingTop: =0
         Size: =10.5
-        Text: ="Delete"
-        Underline: =true
-        Width: =44
+        Text: ="DELETE"
+        Width: =52
         X: =1224
         Y: =268
         ZIndex: =14
