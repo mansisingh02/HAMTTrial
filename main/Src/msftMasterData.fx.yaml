@@ -16,7 +16,7 @@ msftMasterData As screen:
                 Switch(
                     Value(varTabSelected),
                     2, Discipline,
-        	        3, 'Skills_1',
+        	        3, Skills_1,
         	        5, 'Project Parent Group',
         	        6, 'Project Type',
         	        7, 'Project Goals',
@@ -54,7 +54,7 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Title
+            Text: =ThisItem.'Title of Certification'
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - 86
             X: =16

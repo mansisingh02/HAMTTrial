@@ -1541,12 +1541,12 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =33
         Size: =10.75
-        Text: |
+        Text: |+
             =If(
-              IsBlank(SelectedOwner) || IsBlank(SelectedDiscipline) || SelectedAllocation = 0,
-              "",
-              "" & SelectedOwner.Value
+              IsBlank(SelectedDiscipline) || SelectedAllocation = 0,
+              " " & SelectedOwner.Value
             )
+            
         Width: =188
         X: =564
         Y: =281
@@ -1564,7 +1564,7 @@ msftnewproject As screen:
         Height: =33
         Size: =10.75
         Text: ="Please choose a discipline."
-        Visible: =IsBlank(SelectedDiscipline)
+        Visible: =IsBlank(SelectedDiscipline) || SelectedAllocation = 0
         Width: =196
         X: =774
         Y: =281
@@ -1582,7 +1582,7 @@ msftnewproject As screen:
         Height: =35
         Size: =10.75
         Text: ="Please select allocation percentage."
-        Visible: =SelectedAllocation = 0
+        Visible: =IsBlank(SelectedDiscipline) || SelectedAllocation = 0
         Width: =237
         X: =985
         Y: =281
