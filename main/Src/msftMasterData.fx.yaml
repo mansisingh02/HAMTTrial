@@ -1,6 +1,6 @@
 msftMasterData As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |+
+    OnVisible: |-
         =If(
             varConfirmDelete,
             Remove('Project Parent Group', Gallery17.Selected);
@@ -12,14 +12,6 @@ msftMasterData As screen:
             Refresh('Project Parent Group');
             Set(varConfirmDelete, false)
         )
-        
-        
-        
-        
-        
-        
-        
-        
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
