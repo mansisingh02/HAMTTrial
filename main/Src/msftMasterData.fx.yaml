@@ -221,7 +221,7 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =405
-        Items: =Discipline
+        Items: =Sort(Discipline, Discipline)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |-
@@ -235,8 +235,8 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =53
         Visible: =varTabSelected=2
-        Width: =1132
-        X: =103
+        Width: =1138
+        X: =97
         Y: =349
         ZIndex: =1
 
@@ -326,7 +326,16 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =381
-        Items: ='Project Parent Group'
+        Items: |+
+            =Sort(
+                'Project Parent Group',
+                If(
+                    'Group Name' = "Others",
+                    "ZZZZZZ",
+                    'Group Name'
+                )
+            )
+            
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |
@@ -354,7 +363,7 @@ msftMasterData As screen:
         TemplateSize: =60
         Visible: =varTabSelected=5
         Width: =1174
-        X: =103
+        X: =87
         Y: =360
         ZIndex: =1
 
@@ -1254,8 +1263,8 @@ msftMasterData As screen:
         Size: =13
         Text: ="Group Name"
         Visible: =varTabSelected=5
-        X: =114
-        Y: =321
+        X: =97
+        Y: =309
         ZIndex: =25
 
     msft_Button_18 As button:
@@ -1440,7 +1449,8 @@ msftMasterData As screen:
             Size: =10.75
             Text: =ThisItem.Label
             Width: =140
-            X: =8
+            X: =9
+            Y: =1
             ZIndex: =1
 
     Label10_3 As label:
