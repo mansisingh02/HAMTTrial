@@ -18,7 +18,7 @@ msftUpdateSkill_Caregiver As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1249
         X: =98
-        Y: =216
+        Y: =226
         ZIndex: =3
 
     "'Update Caregivers_2' As label":
@@ -249,7 +249,8 @@ msftUpdateSkill_Caregiver As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =
+        OnSelect: |-
+            =Patch(Beginner,Gallery5.Selected, { 'Certification for Beginner Skill 3': ""})
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
