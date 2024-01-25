@@ -1,4 +1,4 @@
-Screen1 As screen:
+msftconfirmationscreen As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =Set(varConfirmDelete, false);
@@ -35,7 +35,7 @@ Screen1 As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Set(varConfirmDelete, true); Back()
+        OnSelect: =Set(varConfirmDelete, true); Navigate(msftMasterData)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
