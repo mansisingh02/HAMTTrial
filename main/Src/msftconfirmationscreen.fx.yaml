@@ -4,6 +4,20 @@ msftconfirmationscreen As screen:
         =Set(varConfirmDelete, false);
         Set(varItemToDelete, "")
 
+    Rectangle2 As rectangle:
+        BorderColor: =RGBA(179, 179, 179, 1)
+        BorderThickness: =4
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =317
+        HoverFill: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =477
+        X: =427
+        Y: =222
+        ZIndex: =1
+
     Label25 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -19,7 +33,7 @@ msftconfirmationscreen As screen:
         Width: =359
         X: =486
         Y: =312
-        ZIndex: =1
+        ZIndex: =2
 
     msft_Button_16 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -53,7 +67,7 @@ msftconfirmationscreen As screen:
         Width: =130
         X: =516
         Y: =381
-        ZIndex: =2
+        ZIndex: =3
 
     msft_Button_17 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -87,5 +101,5 @@ msftconfirmationscreen As screen:
         Width: =130
         X: =669
         Y: =381
-        ZIndex: =3
+        ZIndex: =4
 
