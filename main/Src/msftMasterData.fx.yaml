@@ -30,15 +30,16 @@ msftMasterData As screen:
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =438
+        Height: =421
         Items: =Certifications
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =40
+        Visible: =varTabSelected=1
         Width: =955
         X: =97
-        Y: =319
+        Y: =336
         ZIndex: =1
 
         Title7 As label:
@@ -231,7 +232,7 @@ msftMasterData As screen:
                 }
             )
         TemplatePadding: =0
-        TemplateSize: =52
+        TemplateSize: =53
         Visible: =varTabSelected=2
         Width: =1132
         X: =103
@@ -261,7 +262,7 @@ msftMasterData As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =32
+            Height: =29
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
