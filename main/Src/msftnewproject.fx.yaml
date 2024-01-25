@@ -2,10 +2,26 @@ msftnewproject As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =ClearCollect(StatusChoices, Choices(Project.Status));
-            Label5.Text = "StatusChoices: " & Concat(StatusChoices, Value & ", ").Result
+        =Set(SelectedDiscipline, "");
+        Set(SelectedAllocation, 0);
+        
         
     Width: =1366
+
+    Rectangle3_2 As rectangle:
+        BorderColor: =RGBA(237, 237, 237, 1)
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 252, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =214
+        HoverFill: =RGBA(255, 252, 255, 1)
+        OnSelect: =varTabSelected=1
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =776
+        X: =553
+        Y: =473
+        ZIndex: =1
 
     "'Rectangle 31_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -17,7 +33,7 @@ msftnewproject As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =70
-        ZIndex: =27
+        ZIndex: =2
 
     "'Rectangle 32_3' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -30,22 +46,7 @@ msftnewproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1296.49914550781
         X: =66
-        ZIndex: =28
-
-    Rectangle3_2 As rectangle:
-        BorderColor: =RGBA(237, 237, 237, 1)
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(255, 252, 255, 1)
-        FocusedBorderThickness: =4
-        Height: =560
-        HoverFill: =RGBA(255, 252, 255, 1)
-        OnSelect: =varTabSelected=1
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =776
-        X: =553
-        Y: =134
-        ZIndex: =29
+        ZIndex: =3
 
     "'New Project_2' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -65,7 +66,7 @@ msftnewproject As screen:
         Width: =203
         X: =95
         Y: =98
-        ZIndex: =30
+        ZIndex: =4
 
     msft_TextInput_13 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -95,7 +96,7 @@ msftnewproject As screen:
         Width: =202
         X: =95
         Y: =160
-        ZIndex: =31
+        ZIndex: =5
 
     msft_TextInput_16 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -126,7 +127,7 @@ msftnewproject As screen:
         Width: =441
         X: =95
         Y: =549
-        ZIndex: =35
+        ZIndex: =6
 
     msft_DatePicker_4 As datepicker:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -173,7 +174,7 @@ msftnewproject As screen:
         Width: =202
         X: =95
         Y: =483
-        ZIndex: =36
+        ZIndex: =7
 
     msft_DatePicker_5 As datepicker:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -215,7 +216,7 @@ msftnewproject As screen:
         Width: =203
         X: =333
         Y: =483
-        ZIndex: =37
+        ZIndex: =8
 
     msft_Button_27 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -265,7 +266,7 @@ msftnewproject As screen:
         Width: =143
         X: =86
         Y: =702
-        ZIndex: =44
+        ZIndex: =9
 
     msft_Button_28 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -317,7 +318,7 @@ msftnewproject As screen:
         Width: =226
         X: =1103
         Y: =702
-        ZIndex: =45
+        ZIndex: =10
 
     Label3_4 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -332,7 +333,7 @@ msftnewproject As screen:
         Text: ="Start Date"
         X: =95
         Y: =443
-        ZIndex: =48
+        ZIndex: =11
 
     Label3_5 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -347,13 +348,13 @@ msftnewproject As screen:
         Text: ="End Date"
         X: =332
         Y: =443
-        ZIndex: =49
+        ZIndex: =12
 
     navBarVertical_7 As navBarVertical:
-        ZIndex: =50
+        ZIndex: =13
 
     navBarHorizontal_7 As navBarHorizontal:
-        ZIndex: =51
+        ZIndex: =14
 
     msft_Dropdown_23 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -382,7 +383,7 @@ msftnewproject As screen:
         Width: =191
         X: =566
         Y: =226
-        ZIndex: =53
+        ZIndex: =15
 
     msft_Button_29 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -416,7 +417,7 @@ msftnewproject As screen:
         Width: =112
         X: =1204
         Y: =226
-        ZIndex: =56
+        ZIndex: =16
 
     Label3_13 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -431,7 +432,7 @@ msftnewproject As screen:
         Text: ="Caregiver Name"
         X: =564
         Y: =181
-        ZIndex: =57
+        ZIndex: =17
 
     Label3_14 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -446,7 +447,7 @@ msftnewproject As screen:
         Text: ="Discipline"
         X: =774
         Y: =182
-        ZIndex: =58
+        ZIndex: =18
 
     Label3_15 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -462,7 +463,7 @@ msftnewproject As screen:
         Width: =161
         X: =985
         Y: =181
-        ZIndex: =59
+        ZIndex: =19
 
     Label6_9 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -477,7 +478,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =673
         Y: =175
-        ZIndex: =60
+        ZIndex: =20
 
     Label6_10 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -492,7 +493,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =841
         Y: =175
-        ZIndex: =61
+        ZIndex: =21
 
     Label6_11 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -507,7 +508,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =1114
         Y: =172
-        ZIndex: =62
+        ZIndex: =22
 
     Team_2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -527,7 +528,7 @@ msftnewproject As screen:
         Width: =234
         X: =569
         Y: =134
-        ZIndex: =63
+        ZIndex: =23
 
     msft_Dropdown_21 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -557,7 +558,7 @@ msftnewproject As screen:
         Width: =203
         X: =333
         Y: =321
-        ZIndex: =65
+        ZIndex: =24
 
     msft_Dropdown_22 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -576,6 +577,8 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
+        OnChange: |
+            =Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value)
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -587,7 +590,7 @@ msftnewproject As screen:
         Width: =196
         X: =774
         Y: =226
-        ZIndex: =66
+        ZIndex: =25
 
     Label3_16 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -600,9 +603,9 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Select Capability"
-        X: =95
+        X: =91
         Y: =360
-        ZIndex: =67
+        ZIndex: =26
 
     Label3_17 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -615,9 +618,9 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Primary Owner"
-        X: =95
+        X: =91
         Y: =281
-        ZIndex: =68
+        ZIndex: =27
 
     Label3_18 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -632,7 +635,7 @@ msftnewproject As screen:
         Text: ="Project Category"
         X: =330
         Y: =281
-        ZIndex: =69
+        ZIndex: =28
 
     Label6_12 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -647,7 +650,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =208
         Y: =360
-        ZIndex: =70
+        ZIndex: =29
 
     msft_Dropdown_19 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -680,7 +683,7 @@ msftnewproject As screen:
         Width: =202
         X: =95
         Y: =240
-        ZIndex: =71
+        ZIndex: =30
 
     Label3_19 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -693,9 +696,9 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Status"
-        X: =95
+        X: =91
         Y: =200
-        ZIndex: =73
+        ZIndex: =31
 
     Label6_13 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -712,7 +715,7 @@ msftnewproject As screen:
         Width: =163
         X: =137
         Y: =198
-        ZIndex: =74
+        ZIndex: =32
 
     msft_Dropdown_27 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -743,7 +746,7 @@ msftnewproject As screen:
         Width: =207
         X: =329
         Y: =160
-        ZIndex: =75
+        ZIndex: =33
 
     Label3_20 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -758,7 +761,7 @@ msftnewproject As screen:
         Text: ="Group"
         X: =330
         Y: =120
-        ZIndex: =76
+        ZIndex: =34
 
     msft_Dropdown_20 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -781,7 +784,7 @@ msftnewproject As screen:
             =Distinct(
                 Filter(
                     Caregivers_1,
-                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2"
+                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2" || Level.Value="5P"
                 ),
                 'Caregiver Name'
             ).Value
@@ -795,6 +798,8 @@ msftnewproject As screen:
             
             
             
+        OnChange: |
+            =Set(SelectedOwner, msft_Dropdown_20.Selected);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -806,7 +811,7 @@ msftnewproject As screen:
         Width: =202
         X: =95
         Y: =321
-        ZIndex: =77
+        ZIndex: =35
 
     msft_Dropdown_24 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -837,7 +842,7 @@ msftnewproject As screen:
         Width: =203
         X: =333
         Y: =240
-        ZIndex: =78
+        ZIndex: =36
 
     Label3_23 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -852,7 +857,7 @@ msftnewproject As screen:
         Text: ="Cost Center Name"
         X: =330
         Y: =200
-        ZIndex: =79
+        ZIndex: =37
 
     msft_Dropdown_25 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -870,6 +875,8 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Sequence(40, 5, 5)
+        OnChange: |
+            =Set(SelectedAllocation, msft_Dropdown_25.Selected.Value)
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -881,7 +888,7 @@ msftnewproject As screen:
         Width: =199
         X: =985
         Y: =226
-        ZIndex: =81
+        ZIndex: =38
 
     msft_Dropdown_33 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -918,7 +925,7 @@ msftnewproject As screen:
         Width: =203
         X: =333
         Y: =399
-        ZIndex: =82
+        ZIndex: =39
 
     Label3_26 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -935,7 +942,7 @@ msftnewproject As screen:
         Width: =184
         X: =330
         Y: =358
-        ZIndex: =83
+        ZIndex: =40
 
     Label6_15 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -950,7 +957,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =161
         Y: =440
-        ZIndex: =84
+        ZIndex: =41
 
     Label6_16 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -965,7 +972,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =394
         Y: =437
-        ZIndex: =85
+        ZIndex: =42
 
     Label6_17 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -980,7 +987,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =199
         Y: =281
-        ZIndex: =86
+        ZIndex: =43
 
     Label6_18 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -995,7 +1002,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =442
         Y: =281
-        ZIndex: =87
+        ZIndex: =44
 
     Label6_19 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1010,7 +1017,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =415
         Y: =355
-        ZIndex: =88
+        ZIndex: =45
 
     Label6_33 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1025,7 +1032,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =452
         Y: =198
-        ZIndex: =89
+        ZIndex: =46
 
     Label3_29 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1040,7 +1047,7 @@ msftnewproject As screen:
         Text: ="In Flight PI"
         X: =93
         Y: =615
-        ZIndex: =90
+        ZIndex: =47
 
     Label3_30 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1057,7 +1064,7 @@ msftnewproject As screen:
         Width: =184
         X: =373
         Y: =612
-        ZIndex: =91
+        ZIndex: =48
 
     msft_TextInput_15 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1087,7 +1094,7 @@ msftnewproject As screen:
         Width: =149
         X: =98
         Y: =655
-        ZIndex: =92
+        ZIndex: =49
 
     msft_TextInput_17 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1117,7 +1124,7 @@ msftnewproject As screen:
         Width: =163
         X: =373
         Y: =653
-        ZIndex: =93
+        ZIndex: =50
 
     Label3_31 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1134,7 +1141,7 @@ msftnewproject As screen:
         Width: =184
         X: =276
         Y: =612
-        ZIndex: =94
+        ZIndex: =51
 
     Label6_38 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1149,7 +1156,7 @@ msftnewproject As screen:
         Text: ="*"
         X: =328
         Y: =612
-        ZIndex: =95
+        ZIndex: =52
 
     Toggle1_1 As toggleSwitch:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1170,7 +1177,7 @@ msftnewproject As screen:
         TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         X: =281
         Y: =659
-        ZIndex: =96
+        ZIndex: =53
 
     Icon1_1 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1190,7 +1197,7 @@ msftnewproject As screen:
         Width: =13
         X: =284
         Y: =134
-        ZIndex: =98
+        ZIndex: =54
 
     Icon1_2 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1210,7 +1217,7 @@ msftnewproject As screen:
         Width: =13
         X: =523
         Y: =133
-        ZIndex: =99
+        ZIndex: =55
 
     Icon1_3 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1230,7 +1237,7 @@ msftnewproject As screen:
         Width: =13
         X: =284
         Y: =212
-        ZIndex: =100
+        ZIndex: =56
 
     Icon1_4 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1250,7 +1257,7 @@ msftnewproject As screen:
         Width: =13
         X: =523
         Y: =212
-        ZIndex: =101
+        ZIndex: =57
 
     Icon1_5 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1270,7 +1277,7 @@ msftnewproject As screen:
         Width: =13
         X: =285
         Y: =294
-        ZIndex: =102
+        ZIndex: =58
 
     Icon1_6 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1290,7 +1297,7 @@ msftnewproject As screen:
         Width: =13
         X: =523
         Y: =294
-        ZIndex: =103
+        ZIndex: =59
 
     Icon1_7 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1310,7 +1317,7 @@ msftnewproject As screen:
         Width: =13
         X: =285
         Y: =371
-        ZIndex: =104
+        ZIndex: =60
 
     Icon1_8 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1330,7 +1337,7 @@ msftnewproject As screen:
         Width: =13
         X: =523
         Y: =371
-        ZIndex: =105
+        ZIndex: =61
 
     Icon1_9 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1350,7 +1357,7 @@ msftnewproject As screen:
         Width: =13
         X: =284
         Y: =453
-        ZIndex: =106
+        ZIndex: =62
 
     Icon1_18 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1370,7 +1377,7 @@ msftnewproject As screen:
         Width: =13
         X: =523
         Y: =455
-        ZIndex: =107
+        ZIndex: =63
 
     Icon1_19 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1390,7 +1397,7 @@ msftnewproject As screen:
         Width: =13
         X: =232
         Y: =627
-        ZIndex: =108
+        ZIndex: =64
 
     Icon1_20 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1410,7 +1417,7 @@ msftnewproject As screen:
         Width: =13
         X: =341
         Y: =627
-        ZIndex: =109
+        ZIndex: =65
 
     Icon1_21 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1430,7 +1437,7 @@ msftnewproject As screen:
         Width: =13
         X: =510
         Y: =627
-        ZIndex: =110
+        ZIndex: =66
 
     Icon1_22 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1450,7 +1457,7 @@ msftnewproject As screen:
         Width: =13
         X: =744
         Y: =196
-        ZIndex: =111
+        ZIndex: =67
 
     Icon1_23 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1470,7 +1477,7 @@ msftnewproject As screen:
         Width: =13
         X: =956
         Y: =195
-        ZIndex: =112
+        ZIndex: =68
 
     Icon1_25 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1490,7 +1497,7 @@ msftnewproject As screen:
         Width: =13
         X: =1168
         Y: =195
-        ZIndex: =114
+        ZIndex: =69
 
     ComboBox1 As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1521,5 +1528,63 @@ msftnewproject As screen:
         Width: =202
         X: =95
         Y: =397
-        ZIndex: =115
+        ZIndex: =70
+
+    Label13 As label:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Size: =10.75
+        Text: |
+            =If(
+              IsBlank(SelectedOwner) || IsBlank(SelectedDiscipline) || SelectedAllocation = 0,
+              "",
+              "" & SelectedOwner.Value
+            )
+        Width: =188
+        X: =564
+        Y: =281
+        ZIndex: =71
+
+    Label13_1 As label:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Size: =10.75
+        Text: ="Please choose a discipline."
+        Visible: =IsBlank(SelectedDiscipline)
+        Width: =196
+        X: =774
+        Y: =281
+        ZIndex: =72
+
+    Label13_2 As label:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =35
+        Size: =10.75
+        Text: ="Please select allocation percentage."
+        Visible: =SelectedAllocation = 0
+        Width: =237
+        X: =985
+        Y: =281
+        ZIndex: =73
 
