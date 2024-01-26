@@ -740,7 +740,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_6.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =164
+            Y: =166
             ZIndex: =27
 
         Title2_54 As label:
@@ -763,7 +763,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_5.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =189
+            Y: =197
             ZIndex: =28
 
     txtCaregiverID As label:
@@ -1467,10 +1467,30 @@ msftUpdatecaregivers As screen:
                             Title2_3.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
                             'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 4': comment_1.Text}
-                            ));
+                            ),
+                            
+                            Title2_4.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 5': comment_1.Text}
+                            ),
+                
+                            Title2_6.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 6': comment_1.Text}),
+                
+                            Title2_5.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 7': comment_1.Text}),
+                            
+                            Title2_7.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 7': comment_1.Text})
+                            
+                            );
                 
                 
-                skillCategory_7.SelectedText=
+                Reset([@skillCategory_7]);
+                Reset(comment_1)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
