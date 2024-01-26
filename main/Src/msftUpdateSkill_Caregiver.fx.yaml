@@ -178,26 +178,6 @@ msftUpdateSkill_Caregiver As screen:
             Y: =278
             ZIndex: =9
 
-        Icon1_10 As icon.HorizontalLine:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =0
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.HorizontalLine
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =1134
-            X: =125
-            Y: =378
-            ZIndex: =10
-
         msft_Label_36 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -217,26 +197,6 @@ msftUpdateSkill_Caregiver As screen:
             Y: =255
             ZIndex: =12
 
-        Icon1_11 As icon.HorizontalLine:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(0, 120, 212, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =0
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.HorizontalLine
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =1134
-            X: =143
-            Y: =398
-            ZIndex: =13
-
     Button4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -250,7 +210,12 @@ msftUpdateSkill_Caregiver As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Beginner,Gallery5.Selected, { 'Certification for Beginner Skill 3': ""})
+            =If(varSelectedColumn="B1",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}}),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}}));
+            Navigate('Update Caregivers');
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

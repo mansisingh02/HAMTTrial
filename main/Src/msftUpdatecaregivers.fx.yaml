@@ -291,7 +291,7 @@ msftUpdatecaregivers As screen:
         OnSelect: =
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =789
+        TemplateSize: =264
         Visible: =varTabSelected=1
         Width: =910
         X: =109
@@ -457,10 +457,8 @@ msftUpdatecaregivers As screen:
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
             Height: =28
             OnSelect: |-
-                =Set(varSelectedColumn,"Beginner Skill 1");
-                Set(varSelectedTable,"Beginner");
+                =Set(varSelectedColumn,"B1");
                 Navigate(msftUpdateSkill_Caregiver,ScreenTransition.Fade);
-                Set(itemToDelete, Gallery5.Selected.'Beginner Skill 1');
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -1454,10 +1452,25 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
+            OnSelect: |
+                =If(Title2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Certification for Beginner Skill 1':comment_1.Text}),
+                            Title2_1.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Certification for Beginner Skill 2':comment_1.Text}
+                            ),
+                            Title2_2.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 3': comment_1.Text}),
+                            
+                            Title2_3.Text=Blank(),Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 4': comment_1.Text}
+                            ));
+                
+                
+                skillCategory_7.SelectedText=
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
