@@ -212,10 +212,15 @@ msftUpdateSkill_Caregiver As screen:
         OnSelect: |-
             =If(varSelectedColumn="B1",Patch(Beginner,  LookUp(
                         Beginner,
-                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}}),Patch(Beginner,  LookUp(
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 1': comment.Text}), 
+                        
+                        varSelectedColumn="B2",Patch(Beginner,  LookUp(
                         Beginner,
-                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}}));
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 2': comment.Text})
+            
+                        );
             Navigate('Update Caregivers');
+            Set(varSelectedColumn,Blank());
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
