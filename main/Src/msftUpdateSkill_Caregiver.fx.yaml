@@ -209,18 +209,43 @@ msftUpdateSkill_Caregiver As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
+        OnSelect: |
             =If(varSelectedColumn="B1",Patch(Beginner,  LookUp(
                         Beginner,
                         'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 1': comment.Text}), 
                         
                         varSelectedColumn="B2",Patch(Beginner,  LookUp(
                         Beginner,
-                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 2': comment.Text})
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 2': comment.Text}),
+            
+                         varSelectedColumn="B3",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 3': comment.Text}),
+            
+                         varSelectedColumn="B4",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 4': comment.Text}),
+            
+                         varSelectedColumn="B5",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 5': comment.Text}),
+            
+                         varSelectedColumn="B6",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 6': comment.Text}),
+            
+                         varSelectedColumn="B7",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 7': comment.Text}),
+            
+                         varSelectedColumn="B8",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName.Selected.'Skill ID' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 8': comment.Text})
             
                         );
-            Navigate('Update Caregivers');
             Set(varSelectedColumn,Blank());
+            Reset([@skillCategory_6]);
+            Navigate('Update Caregivers');
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
