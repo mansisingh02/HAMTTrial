@@ -1521,7 +1521,9 @@ msftUpdatecaregivers As screen:
                             
                             Title2_7.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 8': comment_1.Text})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 8': comment_1.Text}),
+                
+                            Notify("You have entered the maximum number of skills!")
                             
                             );
                 
