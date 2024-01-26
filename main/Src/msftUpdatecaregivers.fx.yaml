@@ -614,7 +614,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -637,7 +637,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': Blank(), 'Description for Beginner Skill 1': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -660,7 +660,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': Blank(), 'Description for Beginner Skill 3': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -683,7 +683,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -706,7 +706,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -729,7 +729,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -752,7 +752,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank()})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
@@ -765,6 +765,29 @@ msftUpdatecaregivers As screen:
             X: =790
             Y: =197
             ZIndex: =28
+
+        Title2_60 As label:
+            Color: =RGBA(221, 79, 14, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =29
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: ="Delete"
+            Underline: =true
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =If(Title2_7.Text=Blank(),false,true)
+            Width: =65
+            X: =790
+            Y: =230
+            ZIndex: =29
 
     txtCaregiverID As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1455,36 +1478,36 @@ msftUpdatecaregivers As screen:
             OnSelect: |
                 =If(Title2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Certification for Beginner Skill 1':comment_1.Text}),
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 1':comment_1.Text}),
                             Title2_1.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Certification for Beginner Skill 2':comment_1.Text}
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 2':comment_1.Text}
                             ),
                             Title2_2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 3': comment_1.Text}),
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 3': comment_1.Text}),
                             
                             Title2_3.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 4': comment_1.Text}
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 4': comment_1.Text}
                             ),
                             
                             Title2_4.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 5': comment_1.Text}
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 5': comment_1.Text}
                             ),
                 
                             Title2_6.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 6': comment_1.Text}),
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 6': comment_1.Text}),
                 
                             Title2_5.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 7': comment_1.Text}),
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 7': comment_1.Text}),
                             
                             Title2_7.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Certification for Beginner Skill 7': comment_1.Text})
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 8': comment_1.Text})
                             
                             );
                 
