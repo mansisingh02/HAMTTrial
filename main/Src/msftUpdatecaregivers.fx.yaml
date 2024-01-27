@@ -1822,7 +1822,47 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =
+            OnSelect: |
+                =If(Title2.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Description for Intermediate Skill 1':comment_1.Text}),
+                            Title2_1.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID}, 'Description for Intermediate Skill 2':comment_1.Text}
+                            ),
+                            Title2_2.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 3': comment_1.Text}),
+                            
+                            Title2_3.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 4': comment_1.Text}
+                            ),
+                            
+                            Title2_4.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 5': comment_1.Text}
+                            ),
+                
+                            Title2_6.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 6': comment_1.Text}),
+                
+                            Title2_5.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 7': comment_1.Text}),
+                            
+                            Title2_7.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: skillName_1.Selected.'Skill ID' , Id: skillName_1.Selected.ID},'Description for Intermediate Skill 8': comment_1.Text}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            );
+                
+                
+                Reset([@skillCategory_7]);
+                Reset(comment_1)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
