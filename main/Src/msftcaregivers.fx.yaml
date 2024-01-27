@@ -308,12 +308,56 @@ msftcaregivers As screen:
         DelayItemLoading: =true
         Height: =67
         Items: |-
-            =Filter(Caregivers_1,  StartsWith('Caregiver Name',search.Text) && 
-            (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank()) && 
-             (StartsWith(Designation,searchDesignation.Selected.Value) || searchDesignation.Selected.Value=Blank())
-              &&
-             ('Caregiver Class'.Value = searchClass.Selected.Value || searchClass.Selected.Value=Blank())
-             )
+            =Filter(
+                AddColumns(
+                    AddColumns(
+                    Advanced,
+                    "Advanced 1",
+                    LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 1'].Value
+                        ),
+                        "Advanced 2",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 2'].Value
+                        ),
+                        "Advanced 3",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 3'].Value
+                        ),
+                        "Advanced 4",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 4'].Value
+                        ),
+                        "Advanced 5",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 5'].Value
+                        ),
+                        "Advanced 6",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 6'].Value
+                        ),
+                        "Advanced 7",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 7'].Value
+                        ),
+                        "Advanced 8",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 8'].Value
+                        )
+                        ), "Main",
+                        LookUp(
+                            Caregivers_1,
+                            'Caregiver ID'= 
+                        
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
