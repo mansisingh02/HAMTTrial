@@ -4,8 +4,8 @@ msftnewproject As screen:
     OnVisible: |+
         =Set(SelectedDiscipline, "");
         Set(SelectedAllocation, 0);
-        Set(ShowDisciplinePrompt, !IsBlank(SelectedOwner));
-        Set(ShowAllocationPrompt, !IsBlank(SelectedOwner));
+        Set(ShowDisciplinePrompt, false);
+        Set(ShowAllocationPrompt, false);
         Set(ShowButtons, false);
         
         
@@ -803,8 +803,10 @@ msftnewproject As screen:
             
             
             
-        OnChange: |
+        OnChange: |-
             =Set(SelectedOwner, msft_Dropdown_20.Selected);
+            Set(ShowDisciplinePrompt, !IsBlank(SelectedOwner));
+            Set(ShowAllocationPrompt, !IsBlank(SelectedOwner));
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
