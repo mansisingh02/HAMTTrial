@@ -50,7 +50,7 @@ msftedittechnology As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =16
+            Height: =28
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -58,9 +58,9 @@ msftedittechnology As screen:
             PaddingTop: =0
             Size: =10.5
             Text: ="Category"
-            Width: =72
+            Width: =82
             X: =35
-            Y: =15
+            Y: =5
             ZIndex: =6
 
     "'Report Header_16' As groupContainer.manualLayoutContainer":
@@ -79,7 +79,7 @@ msftedittechnology As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =13
+            Height: =31
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -88,41 +88,9 @@ msftedittechnology As screen:
             Size: =10.5
             Text: ="Description"
             Width: =86
-            X: =84
-            Y: =16
+            X: =81
+            Y: =3
             ZIndex: =8
-
-    "'Column - Header 13_4' As groupContainer.manualLayoutContainer":
-        Height: =112
-        LayoutMode: ="manual"
-        Width: =274
-        X: =561
-        Y: =260
-        ZIndex: =17
-
-        "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._4' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =89
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: |-
-                =LookUp(
-                    Skills_1,
-                    'Skill Name' = Gallery1_2.Selected.'Skill Name'
-                ).Description
-            Width: =253
-            X: =16
-            Y: =5
-            ZIndex: =18
 
     Category_9 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -224,6 +192,9 @@ msftedittechnology As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': Dropdown1.Selected.Value, 'Discipline': Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
+            Navigate(msftMasterData, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -295,4 +266,65 @@ msftedittechnology As screen:
         X: =107
         Y: =260
         ZIndex: =41
+
+    Dropdown1_1 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        Default: ="SelectedTechnology.Discipline"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Font: =Font.'Segoe UI'
+        Height: =41
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: |
+            =Distinct(Skills_1, Discipline)
+        PaddingBottom: =5
+        PaddingLeft: =12
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        Size: =13
+        Width: =220
+        X: =391
+        Y: =259
+        ZIndex: =42
+
+    TextInput2_8 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =SelectedTechnology.Description
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =136
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =222
+        X: =642
+        Y: =260
+        ZIndex: =43
 
