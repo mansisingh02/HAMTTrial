@@ -4,6 +4,10 @@ msftnewproject As screen:
     OnVisible: |+
         =Set(SelectedDiscipline, "");
         Set(SelectedAllocation, 0);
+        Set(ShowDisciplinePrompt, true);
+        Set(ShowAllocationPrompt, true);
+        Set(ShowButtons, false);
+        
         
         
     Width: =1366
@@ -577,8 +581,9 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |
-            =Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value)
+        OnChange: |-
+            =Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+            Set(ShowDisciplinePrompt, false);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -876,7 +881,12 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Sequence(40, 5, 5)
         OnChange: |
-            =Set(SelectedAllocation, msft_Dropdown_25.Selected.Value)
+            =Set(SelectedAllocation, msft_Dropdown_25.Selected.Value);
+            Set(ShowAllocationPrompt, false);
+            If(
+               !IsBlank(SelectedDiscipline) && SelectedAllocation <> 0,
+               Set(ShowButtons, true)
+            );
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -1541,12 +1551,8 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =33
         Size: =10.75
-        Text: |+
-            =If(
-              IsBlank(SelectedDiscipline) || SelectedAllocation = 0,
-              " " & SelectedOwner.Value
-            )
-            
+        Text: |
+            =If(!IsBlank(SelectedOwner), " " & SelectedOwner.Value, "")
         Width: =188
         X: =564
         Y: =281
@@ -1563,8 +1569,7 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =33
         Size: =10.75
-        Text: ="Please choose a discipline."
-        Visible: =IsBlank(SelectedDiscipline) || SelectedAllocation = 0
+        Text: =If(ShowDisciplinePrompt, "Select a discipline", "")
         Width: =196
         X: =774
         Y: =281
@@ -1581,10 +1586,105 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =35
         Size: =10.75
-        Text: ="Please select allocation percentage."
-        Visible: =IsBlank(SelectedDiscipline) || SelectedAllocation = 0
-        Width: =237
+        Text: =If(ShowAllocationPrompt, "Select primary owner percentage", "")
+        Width: =196
         X: =985
         Y: =281
         ZIndex: =73
+
+    msft_Button_57 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =34
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        PaddingBottom: =7
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10
+        Text: ="DELETE"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =ShowButtons
+        Width: =79
+        X: =1237
+        Y: =278
+        ZIndex: =75
+
+    msft_Button_59 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =34
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        PaddingBottom: =7
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10
+        Text: ="EDIT"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =ShowButtons
+        Width: =79
+        X: =1146
+        Y: =278
+        ZIndex: =77
+
+    Label9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =10.75
+        Text: =If(!IsBlank(SelectedDiscipline), " " & SelectedDiscipline, "")
+        X: =774
+        Y: =277
+        ZIndex: =78
+
+    Label14 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =10.75
+        Text: =If(SelectedAllocation <> 0, " " & Text(SelectedAllocation, "0%"), "")
+        X: =985
+        Y: =277
+        ZIndex: =79
 

@@ -193,7 +193,7 @@ msftedittechnology As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': Dropdown1.Selected.Value, 'Discipline': Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
+            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': Dropdown1.Selected.Value, Discipline: Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
