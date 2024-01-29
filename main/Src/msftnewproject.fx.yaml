@@ -12,7 +12,7 @@ msftnewproject As screen:
         Set(SelectedCaregiver, "");
         Set(SelectedCaregiverDiscipline, "");
         Set(SelectedCaregiverPercentage, 0);
-        
+        ClearCollect(CaregiverData, [])
         
         
         
@@ -243,7 +243,7 @@ msftnewproject As screen:
         Height: =42
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
         OnSelect: |-
             =Reset(msft_Dropdown_27);
             Reset(msft_Dropdown_19);
@@ -383,10 +383,20 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Caregivers_1,'Caregiver Name')
-        OnChange: |
+        OnChange: |-
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
-            Reset(msft_Dropdown_23);
-            Set(PrimaryOwnerMode, false);
+                Reset(msft_Dropdown_23);
+                Set(PrimaryOwnerMode, false);
+            
+                // Update the collection based on PrimaryOwnerMode
+                Collect(
+                    CaregiverData,
+                    {
+                        Caregiver: SelectedCaregiver,
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    }
+                );
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -592,16 +602,37 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |+
-            =If(PrimaryOwnerMode,
-                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, false);
-                Reset(msft_Dropdown_22),
-                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, false);
-                Reset(msft_Dropdown_22)
-            );
+        OnChange: |-
+            = If(
+                    PrimaryOwnerMode,
+                    Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+                    Set(ShowDisciplinePrompt, false);
+                    Reset(msft_Dropdown_22),
+                    Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+                    Set(ShowDisciplinePrompt, false);
+                    Reset(msft_Dropdown_22)
+                );
             
+                // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
+                If(
+                PrimaryOwnerMode,
+                UpdateIf(
+                    CaregiverData,
+                    Caregiver = SelectedCaregiver,
+                    {
+                        Discipline: SelectedDiscipline,
+                        AllocationPercentage: SelectedAllocation
+                    }
+                ),
+                UpdateIf(
+                    CaregiverData,
+                    Caregiver = SelectedCaregiver,
+                    {
+                        Discipline: SelectedCaregiverDiscipline,
+                        AllocationPercentage: SelectedCaregiverPercentage
+                    }
+                )
+            );
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -918,6 +949,24 @@ msftnewproject As screen:
                 );
                 Reset(msft_Dropdown_25)
             );
+            If(PrimaryOwnerMode,
+                    Collect(
+                        CaregiverData,
+                        {
+                            Caregiver: SelectedCaregiver,
+                            Discipline: SelectedDiscipline,
+                            AllocationPercentage: SelectedAllocation
+                        }
+                    ),
+                    Collect(
+                        CaregiverData,
+                        {
+                            Caregiver: SelectedCaregiver,
+                            Discipline: SelectedCaregiverDiscipline,
+                            AllocationPercentage: SelectedCaregiverPercentage
+                        }
+                    )
+                );
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -1842,4 +1891,79 @@ msftnewproject As screen:
         X: =1237
         Y: =321
         ZIndex: =84
+
+    Gallery2 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =375
+        Items: =CaregiverData
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =280
+        Width: =735
+        X: =565
+        Y: =310
+        ZIndex: =85
+
+        Label19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.Caregiver
+            X: =4
+            Y: =52
+            ZIndex: =1
+
+        Label19_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |-
+                =Text(
+                    If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
+                )
+            X: =214
+            Y: =52
+            ZIndex: =2
+
+        Label19_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |-
+                =Text(
+                    If(
+                        SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage = 0,
+                        "Select the Caregiver Percentage",
+                        If(
+                            SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage <> 0,
+                            Text(SelectedCaregiverPercentage, "0%"),
+                            ""
+                        )
+                    )
+                )
+            X: =428
+            Y: =52
+            ZIndex: =3
 
