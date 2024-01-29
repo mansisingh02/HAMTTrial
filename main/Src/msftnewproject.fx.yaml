@@ -383,20 +383,36 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Caregivers_1,'Caregiver Name')
-        OnChange: |-
+        OnChange: |+
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
-                Reset(msft_Dropdown_23);
-                Set(PrimaryOwnerMode, false);
+            Reset(msft_Dropdown_23);
+            Set(PrimaryOwnerMode, false);
             
-                // Update the collection based on PrimaryOwnerMode
+            // Check if the caregiver already exists in the collection
+            If(
+                !IsEmpty(Filter(CaregiverData, Caregiver = SelectedCaregiver)),
+                // Update the existing record
+                UpdateIf(
+                    CaregiverData,
+                    Caregiver = SelectedCaregiver,
+                    {
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    }
+                ),
+                // Add a new record if the caregiver doesn't exist
                 Collect(
                     CaregiverData,
                     {
                         Caregiver: SelectedCaregiver,
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
-                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, ""),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
                     }
-                );
+                )
+            );
+            
+            
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -602,19 +618,20 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |-
-            = If(
-                    PrimaryOwnerMode,
-                    Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
-                    Set(ShowDisciplinePrompt, false);
-                    Reset(msft_Dropdown_22),
-                    Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-                    Set(ShowDisciplinePrompt, false);
-                    Reset(msft_Dropdown_22)
-                );
+        OnChange: |+
+            =If(
+                PrimaryOwnerMode,
+                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Reset(msft_Dropdown_22),
             
-                // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
-                If(
+                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Reset(msft_Dropdown_22)
+            );
+            
+            // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
+            If(
                 PrimaryOwnerMode,
                 UpdateIf(
                     CaregiverData,
@@ -626,13 +643,15 @@ msftnewproject As screen:
                 ),
                 UpdateIf(
                     CaregiverData,
-                    Caregiver = SelectedCaregiver,
+                    Caregiver = SelectedCaregiverDiscipline,
                     {
                         Discipline: SelectedCaregiverDiscipline,
                         AllocationPercentage: SelectedCaregiverPercentage
                     }
                 )
             );
+            
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -932,41 +951,33 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Sequence(40, 5, 5)
-        OnChange: |
-            =If(PrimaryOwnerMode,
+        OnChange: |+
+            =If(
+                PrimaryOwnerMode,
                 Set(SelectedAllocation, msft_Dropdown_25.Selected.Value);
                 Set(ShowDisciplinePrompt, false);
                 Set(ShowAllocationPrompt, false);
                 If(!IsBlank(SelectedDiscipline) && SelectedAllocation <> 0,
                     Set(ShowButtons, true)
-                );
-                Reset(msft_Dropdown_25),
+                ),
                 Set(SelectedCaregiverPercentage, msft_Dropdown_25.Selected.Value);
                 Set(ShowDisciplinePrompt, false);
                 Set(ShowAllocationPrompt, false);
                 If(!IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0,
                     Set(ShowButtons, true)
-                );
-                Reset(msft_Dropdown_25)
+                )
             );
-            If(PrimaryOwnerMode,
-                    Collect(
-                        CaregiverData,
-                        {
-                            Caregiver: SelectedCaregiver,
-                            Discipline: SelectedDiscipline,
-                            AllocationPercentage: SelectedAllocation
-                        }
-                    ),
-                    Collect(
-                        CaregiverData,
-                        {
-                            Caregiver: SelectedCaregiver,
-                            Discipline: SelectedCaregiverDiscipline,
-                            AllocationPercentage: SelectedCaregiverPercentage
-                        }
-                    )
-                );
+            
+            // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
+            UpdateIf(
+                CaregiverData,
+                Caregiver = SelectedCaregiver,
+                {
+                    Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                    AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                }
+            );
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
