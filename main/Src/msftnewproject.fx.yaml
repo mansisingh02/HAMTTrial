@@ -637,15 +637,31 @@ msftnewproject As screen:
                 )
             );
             
-            // Update the collection based on PrimaryOwnerMode and the most recent caregiver
-            UpdateIf(
-                CaregiverData,
-                Caregiver = First(RecentCaregiver).Caregiver,
-                {
-                    Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
-                    AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
-                }
+            // Check if the selected caregiver exists in the collection
+            If(
+                !IsEmpty(Filter(CaregiverData, Caregiver = First(RecentCaregiver).Caregiver)),
+                // If the caregiver exists, update its values
+                Patch(
+                    CaregiverData,
+                    First(RecentCaregiver),
+                    {
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    }
+                ),
+                // If the caregiver doesn't exist, add a new record
+                Collect(
+                    CaregiverData,
+                    {
+                        Caregiver: First(RecentCaregiver).Caregiver,
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    }
+                )
             );
+            
+            
+            
             
             
             
