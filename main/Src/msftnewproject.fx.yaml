@@ -12,7 +12,6 @@ msftnewproject As screen:
         Set(SelectedCaregiver, "");
         Set(SelectedCaregiverDiscipline, "");
         Set(SelectedCaregiverPercentage, 0);
-        Set(CaregiverSelected, false);
         
         
         
@@ -388,7 +387,6 @@ msftnewproject As screen:
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
             Reset(msft_Dropdown_23);
             Set(PrimaryOwnerMode, false);
-            Set(CaregiverSelected, true);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -600,7 +598,7 @@ msftnewproject As screen:
                 Set(ShowDisciplinePrompt, false);
                 Reset(msft_Dropdown_22),
                 Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, CaregiverSelected && IsBlank(SelectedCaregiverDiscipline));
+                Set(ShowDisciplinePrompt, false);
                 Reset(msft_Dropdown_22)
             );
             
@@ -1749,7 +1747,6 @@ msftnewproject As screen:
         Height: =45
         Size: =10.75
         Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
-        Visible: =CaregiverSelected && IsBlank(SelectedCaregiverDiscipline)
         Width: =182
         X: =779
         Y: =318
