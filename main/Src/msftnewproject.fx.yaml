@@ -1727,10 +1727,10 @@ msftnewproject As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Size: =13
+        Size: =10.75
         Text: =SelectedCaregiver
         Width: =190
-        X: =567
+        X: =569
         Y: =321
         ZIndex: =80
 
@@ -1744,11 +1744,11 @@ msftnewproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =45
-        Size: =13
+        Size: =10.75
         Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
         Width: =182
-        X: =787
-        Y: =321
+        X: =779
+        Y: =318
         ZIndex: =81
 
     Label18 As label:
@@ -1761,18 +1761,18 @@ msftnewproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        Size: =13
+        Size: =10.75
         Text: |-
             =If(
                 SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage = 0, 
                 "Select the Caregiver Percentage", 
                 If(SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage <> 0, 
-                    " " & SelectedCaregiverDiscipline & " " & Text(SelectedCaregiverPercentage, "0%"), 
+                    Text(SelectedCaregiverPercentage, "0%"),
                     ""
                 )
             )
         Width: =185
-        X: =996
+        X: =988
         Y: =321
         ZIndex: =82
 
