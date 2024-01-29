@@ -7,6 +7,8 @@ msftnewproject As screen:
         Set(ShowDisciplinePrompt, false);
         Set(ShowAllocationPrompt, false);
         Set(ShowButtons, false);
+        
+        
         Set(SelectedCaregiver, "");
         Set(SelectedCaregiverDiscipline, "");
         Set(SelectedCaregiverPercentage, 0);
@@ -383,6 +385,7 @@ msftnewproject As screen:
         OnChange: |-
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
             Reset(msft_Dropdown_23);
+            Set(PrimaryOwnerMode, false);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -589,11 +592,14 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
         OnChange: |+
-            =Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
-            Set(ShowDisciplinePrompt, false);
-            Reset(msft_Dropdown_22);
-            Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-            Reset(msft_Dropdown_22);
+            =If(PrimaryOwnerMode,
+                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Reset(msft_Dropdown_22),
+                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Reset(msft_Dropdown_22)
+            );
             
         PaddingBottom: =8
         PaddingLeft: =12
@@ -818,6 +824,7 @@ msftnewproject As screen:
             =Set(SelectedOwner, msft_Dropdown_20.Selected);
             Set(ShowDisciplinePrompt, !IsBlank(SelectedOwner));
             Set(ShowAllocationPrompt, !IsBlank(SelectedOwner));
+            Set(PrimaryOwnerMode, true);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -894,14 +901,22 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Sequence(40, 5, 5)
         OnChange: |
-            =Set(SelectedAllocation, msft_Dropdown_25.Selected.Value);
-            Set(ShowAllocationPrompt, false);
-            If(
-               !IsBlank(SelectedDiscipline) && SelectedAllocation <> 0,
-               Set(ShowButtons, true)
+            =If(PrimaryOwnerMode,
+                Set(SelectedAllocation, msft_Dropdown_25.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Set(ShowAllocationPrompt, false);
+                If(!IsBlank(SelectedDiscipline) && SelectedAllocation <> 0,
+                    Set(ShowButtons, true)
+                );
+                Reset(msft_Dropdown_25),
+                Set(SelectedCaregiverPercentage, msft_Dropdown_25.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Set(ShowAllocationPrompt, false);
+                If(!IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0,
+                    Set(ShowButtons, true)
+                );
+                Reset(msft_Dropdown_25)
             );
-            Set(SelectedCaregiverPercentage, msft_Dropdown_25.Selected.Value);
-            Reset(msft_Dropdown_25);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -1752,7 +1767,7 @@ msftnewproject As screen:
                 SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage = 0, 
                 "Select the Caregiver Percentage", 
                 If(SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage <> 0, 
-                    "Discipline: " & SelectedCaregiverDiscipline & "\nPercentage: " & Text(SelectedCaregiverPercentage, "0%"), 
+                    " " & SelectedCaregiverDiscipline & " " & Text(SelectedCaregiverPercentage, "0%"), 
                     ""
                 )
             )
