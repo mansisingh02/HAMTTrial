@@ -1745,7 +1745,7 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =45
         Size: =13
-        Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", "")
+        Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
         Width: =182
         X: =787
         Y: =321
