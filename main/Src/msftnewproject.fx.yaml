@@ -623,31 +623,34 @@ msftnewproject As screen:
             =Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
             Set(ShowDisciplinePrompt, false);
             Reset(msft_Dropdown_22);
-             
+            
+            // Check if the caregiver already exists in the collection
+            If(
+                !IsEmpty(Filter(CaregiverData, Caregiver = TempSelectedCaregiver)),
+                // Update the existing record
+                UpdateIf(
+                    CaregiverData,
+                    Caregiver = TempSelectedCaregiver,
+                    {
+                        Discipline: If(PrimaryOwnerMode, Text(SelectedCaregiverDiscipline), Discipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, Value(SelectedAllocation), Value(SelectedCaregiverPercentage))
+                    }
+                ),
+                // Add a new record if the caregiver doesn't exist
+                Collect(
+                    CaregiverData,
+                    {
+                        Caregiver: TempSelectedCaregiver,
+                        Discipline: If(PrimaryOwnerMode, Text(SelectedCaregiverDiscipline), ""),
+                        AllocationPercentage: If(PrimaryOwnerMode, Value(SelectedAllocation), 0)
+                    }
+                )
+            );
+            
+            // Clear and re-populate the SelectedCaregiverData collection
             ClearCollect(
                 SelectedCaregiverData,
                 Filter(CaregiverData, Caregiver = TempSelectedCaregiver)
-            );
-             
-            // Declare variables to store updated values
-            Set(
-                UpdatedDiscipline,
-                If(PrimaryOwnerMode, Text(SelectedCaregiverDiscipline), LookUp(CaregiverData, Caregiver = TempSelectedCaregiver).Discipline)
-            );
-             
-            Set(
-                UpdatedAllocationPercentage,
-                If(PrimaryOwnerMode, Value(SelectedAllocation), Value(SelectedCaregiverPercentage))
-            );
-             
-            // Update the specific record for the selected caregiver
-            Patch(
-                CaregiverData,
-                LookUp(CaregiverData, Caregiver = TempSelectedCaregiver),
-                {
-                    Discipline: UpdatedDiscipline,
-                    AllocationPercentage: UpdatedAllocationPercentage
-                }
             );
         PaddingBottom: =8
         PaddingLeft: =12
