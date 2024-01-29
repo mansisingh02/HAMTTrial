@@ -621,35 +621,38 @@ msftnewproject As screen:
         OnChange: |+
             =If(
                 PrimaryOwnerMode,
-                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, false);
-                Reset(msft_Dropdown_22),
-            
-                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, false);
-                Reset(msft_Dropdown_22)
+                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value),
+                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value)
             );
             
-            // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
-            If(
-                PrimaryOwnerMode,
-                UpdateIf(
+            Set(ShowDisciplinePrompt, false);
+            Reset(msft_Dropdown_22);
+            
+            // Get the most recently added caregiver in the collection
+            ClearCollect(
+                RecentCaregiver,
+                LastN(
                     CaregiverData,
-                    Caregiver = SelectedCaregiver,
-                    {
-                        Discipline: SelectedDiscipline,
-                        AllocationPercentage: SelectedAllocation
-                    }
-                ),
-                UpdateIf(
-                    CaregiverData,
-                    Caregiver = SelectedCaregiverDiscipline,
-                    {
-                        Discipline: SelectedCaregiverDiscipline,
-                        AllocationPercentage: SelectedCaregiverPercentage
-                    }
+                    1
                 )
             );
+            
+            // Update the collection based on PrimaryOwnerMode and the most recent caregiver
+            UpdateIf(
+                CaregiverData,
+                Caregiver = First(RecentCaregiver).Caregiver,
+                {
+                    Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                    AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                }
+            );
+            
+            
+            
+            
+            
+            
+            
             
             
         PaddingBottom: =8
