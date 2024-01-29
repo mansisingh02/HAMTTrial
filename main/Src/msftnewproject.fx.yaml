@@ -1749,6 +1749,7 @@ msftnewproject As screen:
         Height: =45
         Size: =10.75
         Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
+        Visible: =CaregiverSelected && IsBlank(SelectedCaregiverDiscipline)
         Width: =182
         X: =779
         Y: =318
