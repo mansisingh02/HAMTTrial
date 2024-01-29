@@ -7,6 +7,10 @@ msftnewproject As screen:
         Set(ShowDisciplinePrompt, false);
         Set(ShowAllocationPrompt, false);
         Set(ShowButtons, false);
+        Set(SelectedCaregiver, "");
+        Set(SelectedCaregiverDiscipline, "");
+        Set(SelectedCaregiverPercentage, 0);
+        
         
         
         
@@ -376,6 +380,9 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Caregivers_1,'Caregiver Name')
+        OnChange: |-
+            =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
+            Reset(msft_Dropdown_23);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -581,9 +588,13 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |-
+        OnChange: |+
             =Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
             Set(ShowDisciplinePrompt, false);
+            Reset(msft_Dropdown_22);
+            Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+            Reset(msft_Dropdown_22);
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -889,6 +900,8 @@ msftnewproject As screen:
                !IsBlank(SelectedDiscipline) && SelectedAllocation <> 0,
                Set(ShowButtons, true)
             );
+            Set(SelectedCaregiverPercentage, msft_Dropdown_25.Selected.Value);
+            Reset(msft_Dropdown_25);
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -1689,4 +1702,62 @@ msftnewproject As screen:
         X: =985
         Y: =277
         ZIndex: =79
+
+    Label5 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =SelectedCaregiver
+        Width: =190
+        X: =567
+        Y: =321
+        ZIndex: =80
+
+    Label17 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =45
+        Size: =13
+        Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", "")
+        Width: =182
+        X: =787
+        Y: =321
+        ZIndex: =81
+
+    Label18 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =42
+        Size: =13
+        Text: |-
+            =If(
+                SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage = 0, 
+                "Select the Caregiver Percentage", 
+                If(SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage <> 0, 
+                    "Discipline: " & SelectedCaregiverDiscipline & "\nPercentage: " & Text(SelectedCaregiverPercentage, "0%"), 
+                    ""
+                )
+            )
+        Width: =185
+        X: =996
+        Y: =321
+        ZIndex: =82
 
