@@ -25,13 +25,13 @@ msftnewproject As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =214
+        Height: =75
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =776
         X: =553
-        Y: =473
+        Y: =612
         ZIndex: =1
 
     "'Rectangle 31_3' As rectangle":
@@ -383,7 +383,7 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Caregivers_1,'Caregiver Name')
-        OnChange: |-
+        OnChange: |
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
             Reset(msft_Dropdown_23);
             Set(PrimaryOwnerMode, false);
