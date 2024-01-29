@@ -600,7 +600,7 @@ msftnewproject As screen:
                 Set(ShowDisciplinePrompt, false);
                 Reset(msft_Dropdown_22),
                 Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-                Set(ShowDisciplinePrompt, false);
+                Set(ShowDisciplinePrompt, CaregiverSelected && IsBlank(SelectedCaregiverDiscipline));
                 Reset(msft_Dropdown_22)
             );
             
