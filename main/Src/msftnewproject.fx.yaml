@@ -385,16 +385,17 @@ msftnewproject As screen:
         Items: =Distinct(Caregivers_1,'Caregiver Name')
         OnChange: |+
             =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
+            Set(TempSelectedCaregiver, SelectedCaregiver); 
             Reset(msft_Dropdown_23);
             Set(PrimaryOwnerMode, false);
             
             // Check if the caregiver already exists in the collection
             If(
-                !IsEmpty(Filter(CaregiverData, Caregiver = SelectedCaregiver)),
+                !IsEmpty(Filter(CaregiverData, Caregiver = TempSelectedCaregiver)),
                 // Update the existing record
                 UpdateIf(
                     CaregiverData,
-                    Caregiver = SelectedCaregiver,
+                    Caregiver = TempSelectedCaregiver,
                     {
                         Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
@@ -404,7 +405,7 @@ msftnewproject As screen:
                 Collect(
                     CaregiverData,
                     {
-                        Caregiver: SelectedCaregiver,
+                        Caregiver: TempSelectedCaregiver,
                         Discipline: If(PrimaryOwnerMode, SelectedDiscipline, ""),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
                     }
@@ -619,33 +620,25 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
         OnChange: |+
-            =If(
-                PrimaryOwnerMode,
-                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value),
-                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value)
-            );
-            
+            =Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
             Set(ShowDisciplinePrompt, false);
             Reset(msft_Dropdown_22);
             
-            // Get the most recently added caregiver in the collection
+            // Look up the selected caregiver in the collection
             ClearCollect(
-                RecentCaregiver,
-                LastN(
-                    CaregiverData,
-                    1
-                )
+                SelectedCaregiverData,
+                Filter(CaregiverData, Caregiver = TempSelectedCaregiver)
             );
             
             // Check if the selected caregiver exists in the collection
             If(
-                !IsEmpty(Filter(CaregiverData, Caregiver = First(RecentCaregiver).Caregiver)),
-                // If the caregiver exists, update its values
-                Patch(
+                !IsEmpty(SelectedCaregiverData),
+                // If the caregiver exists, update its discipline value
+                UpdateIf(
                     CaregiverData,
-                    First(RecentCaregiver),
+                    Caregiver = TempSelectedCaregiver,
                     {
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        Discipline: If(PrimaryOwnerMode, SelectedCaregiverDiscipline, SelectedCaregiverDiscipline),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
                     }
                 ),
@@ -653,23 +646,12 @@ msftnewproject As screen:
                 Collect(
                     CaregiverData,
                     {
-                        Caregiver: First(RecentCaregiver).Caregiver,
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
-                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                        Caregiver: TempSelectedCaregiver,
+                        Discipline: If(PrimaryOwnerMode, SelectedCaregiverDiscipline, ""),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
                     }
                 )
             );
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
             
         PaddingBottom: =8
         PaddingLeft: =12
