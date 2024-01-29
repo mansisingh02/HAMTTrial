@@ -1803,7 +1803,7 @@ msftnewproject As screen:
         Size: =10
         Text: ="EDIT"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =!PrimaryOwnerMode && !IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0
+        Visible: =!IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0
         Width: =79
         X: =1146
         Y: =321
@@ -1836,7 +1836,7 @@ msftnewproject As screen:
         Size: =10
         Text: ="DELETE"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =!PrimaryOwnerMode && !IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0
+        Visible: =!IsBlank(SelectedCaregiverDiscipline) && SelectedCaregiverPercentage <> 0
         Width: =79
         X: =1237
         Y: =321
