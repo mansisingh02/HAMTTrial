@@ -638,7 +638,7 @@ msftnewproject As screen:
                     CaregiverData,
                     Caregiver = TempSelectedCaregiver,
                     {
-                        Discipline: If(PrimaryOwnerMode, SelectedCaregiverDiscipline, SelectedCaregiverDiscipline),
+                        Discipline: If(PrimaryOwnerMode, SelectedCaregiverDiscipline, First(SelectedCaregiverData).Discipline),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
                     }
                 ),
@@ -652,6 +652,8 @@ msftnewproject As screen:
                     }
                 )
             );
+            
+            
             
         PaddingBottom: =8
         PaddingLeft: =12
