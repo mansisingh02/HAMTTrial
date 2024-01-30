@@ -236,6 +236,8 @@ msftprojectgoal As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Navigate(msftprojectgoallists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
         Size: =13
         Text: =Text(TempCount)
         X: =780
@@ -330,7 +332,7 @@ msftprojectgoal As screen:
         Text: ="CANCEL"
         VerticalAlign: =VerticalAlign.Top
         Width: =143
-        X: =117
-        Y: =693
+        X: =75
+        Y: =694
         ZIndex: =30
 
