@@ -195,10 +195,10 @@ msftcaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =If(Lower(ThisItem.'Caregiver Email')=Lower(User().Email),"Update","")
+            Text: ="Update"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
-            Visible: =If(ThisItem.'Caregiver Name'=User().FullName,true,false)
+            Visible: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(ThisItem.'Caregiver Email')="madhavi.b@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email)  ,true,false)
             Width: =75
             X: =1077
             Y: =14
@@ -296,7 +296,7 @@ msftcaregivers As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
         Image: =rightArrow
-        OnSelect: =Set(varPageNumber,varPageNumber+1)
+        OnSelect: =Set(varPageNumber,(varPageNumber+1))
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =32
@@ -334,10 +334,12 @@ msftcaregivers As screen:
         DelayItemLoading: =true
         Height: =67
         Items: |-
-            =AddColumns(
+            =Filter(AddColumns(
                 Caregivers_1,
                     "CareGiver",
-                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
+                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
+                    StartsWith('Caregiver Name',search.Text)
+                    )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -376,7 +378,7 @@ msftcaregivers As screen:
         Height: =30
         Size: =13
         Text: ="Page  " &varPageNumber & "  of " & "  " & RoundUp(Value((rowCount.Text)/12),0) & "+"
-        Width: =146
+        Width: =158
         X: =1066
         Y: =713
         ZIndex: =43
