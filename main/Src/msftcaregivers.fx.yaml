@@ -3,14 +3,16 @@ msftcaregivers As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =Set(varPageNumber,1);
-        ClearCollect(
-        combinedData,
-        AddColumns(
+        Collect(
+            combinedData,
+            AddColumns(
             Caregivers_1,
-            "CareGiver",
-            LookUp(
-                Beginner,
-                'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
+                "CareGiver",
+                LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
+                AddColumns(
+            Caregivers_1,
+                "CareGiver1",
+                LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
         )
     Width: =1366
 
@@ -206,10 +208,58 @@ msftcaregivers As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
             Height: =35
-            Items: =LookUp(Skills_1, 'Skill ID' = ThisItem.CareGiver.'Beginner Skill 1'.Value)
+            Items: |-
+                =Filter(AddColumns(
+                        Intermediate,
+                        "Intermediate 1",
+                        LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 1'.Value
+                            ),
+                            "Intermediate 2",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 2'.Value
+                            ),
+                            "Intermediate 3",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 3'.Value
+                            ),
+                            "Intermediate 4",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 4'.Value
+                            ),
+                            "Intermediate 5",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 5'.Value
+                            ),
+                            "Intermediate 6",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 6'.Value
+                            ),
+                            "Intermediate 7",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 7'.Value
+                            ),
+                            "Intermediate 8",
+                            LookUp(
+                            Skills_1,
+                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 8'.Value
+                            )
+                            ),
+                            'Caregiver ID'=ThisItem.'Caregiver ID'
+                
+                )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
-            TemplateSize: =28
+            ShowScrollbar: =false
+            TemplateSize: =33
+            Width: =646
             X: =190
             ZIndex: =9
 
@@ -222,11 +272,13 @@ msftcaregivers As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =26
+                Height: =12
                 OnSelect: =Select(Parent)
-                Size: =13
-                Text: =ThisItem.'Skill Name'
+                Size: =9
+                Text: =ThisItem.'Intermediate 1'.'Skill Name' & ", " & ThisItem.'Intermediate 2'.'Skill Name' & ", " & ThisItem.'Intermediate 3'.'Skill Name'& ", " & ThisItem.'Intermediate 4'.'Skill Name' 
+                Width: =522
                 X: =40
+                Y: =10
                 ZIndex: =1
 
     navBar_2 As navBarVertical:
@@ -308,10 +360,10 @@ msftcaregivers As screen:
         DelayItemLoading: =true
         Height: =67
         Items: |-
-            =AddColumns(
-               Caregivers_1,
+            = AddColumns(
+                Caregivers_1,
                 "CareGiver",
-                LookUp(Beginner, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']) )
+                LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -366,8 +418,8 @@ msftcaregivers As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Designation"
-        X: =395
+        Text: ="Skills"
+        X: =363
         Y: =205
         ZIndex: =44
 
