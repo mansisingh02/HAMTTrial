@@ -198,7 +198,7 @@ msftgroup As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        OnSelect: |
+        OnSelect: |-
             =Navigate(msftgrouplists, ScreenTransition.Fade, { FilteredProjectsGroup: FilteredProjectsGroup })
         Size: =11
         Text: =Text(TempCount)
