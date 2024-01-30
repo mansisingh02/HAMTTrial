@@ -332,128 +332,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 338,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftnewproject",
-                "type": "msftnewproject.msft_Button_28"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Value"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 351,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "Patch(\n   Project,\n   Defaults(Project),\n   {\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      Status: msft_Dropdown_19.Selected.Value\n   }\n)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftnewproject",
-                "type": "msftnewproject.msft_Button_28"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 305,
-                  "charOffset": 44,
-                  "snippet": {
-                    "text": "{\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      Status: msft_Dropdown_19.Selected.Value\n   }"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftnewproject",
-                "type": "msftnewproject.msft_Button_28"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Status",
-              "Record",
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftnewproject.msft_Dropdown_19.Items"
                 }
               ],
@@ -463,10 +341,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 13,
+                  "charLength": 25,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "StatusChoices"
+                    "text": "Distinct(Project, Status)"
                   }
                 }
               },
@@ -479,15 +357,15 @@
           ],
           "message": {
             "arguments": [
-              "StatusChoices"
+              "Table"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleId": "app-ErrIncompatibleRulePropSchema-SameKind",
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -527,7 +405,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -567,7 +445,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -647,7 +525,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 4
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -17150,28 +17028,18 @@
               }
             },
             {
-              "id": "app-ErrInvalidArgs-Func",
+              "id": "app-ErrIncompatibleRulePropSchema-SameKind",
               "messageStrings": {
                 "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
+                  "text": "Expected a different collection record structure."
                 }
               },
               "properties": {
                 "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrTypeError-Arg-Expected-Found",
-              "messageStrings": {
-                "issue": {
-                  "text": "The type of this argument '{0}' does not match the expected type '{1}'. Found type '{2}'."
-                }
-              },
-              "properties": {
-                "componentType": "app",
+                "howToFix": [
+                  "Specify a different collection.",
+                  "Change the structure of the collection being returned to match the expected structure."
+                ],
                 "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
@@ -17192,6 +17060,20 @@
                   "Try moving your data to a different data source."
                 ],
                 "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
