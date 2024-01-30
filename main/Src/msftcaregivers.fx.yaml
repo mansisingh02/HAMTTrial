@@ -129,7 +129,6 @@ msftcaregivers As screen:
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        Selectable: =false
         TemplatePadding: =0
         TemplateSize: =35
         Width: =1194
@@ -360,10 +359,10 @@ msftcaregivers As screen:
         DelayItemLoading: =true
         Height: =67
         Items: |-
-            = AddColumns(
+            =AddColumns(
                 Caregivers_1,
-                "CareGiver",
-                LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
+                    "CareGiver",
+                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
