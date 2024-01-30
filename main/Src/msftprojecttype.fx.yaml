@@ -212,10 +212,12 @@ msftprojecttype As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =34
         Size: =11
         Text: =Text(Gallery4.Selected.'Project Type')
+        Width: =166
         X: =107
-        Y: =282
+        Y: =288
         ZIndex: =34
 
     Button5_6 As button:
@@ -309,4 +311,23 @@ msftprojecttype As screen:
         X: =91
         Y: =693
         ZIndex: =41
+
+    Label11_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =34
+        OnSelect: |-
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
+        Size: =13
+        Text: =Text(TempCount)
+        Width: =98
+        X: =848
+        Y: =288
+        ZIndex: =42
 
