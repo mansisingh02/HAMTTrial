@@ -620,38 +620,36 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
         OnChange: |-
-            =Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
-            Set(ShowDisciplinePrompt, false);
-            Reset(msft_Dropdown_22);
+            =If(
+                    PrimaryOwnerMode,
+                    Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+                    Set(ShowDisciplinePrompt, false);
+                    Reset(msft_Dropdown_22),
+                    Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+                    Set(ShowDisciplinePrompt, false);
+                    Reset(msft_Dropdown_22)
+                );
             
-            // Check if the caregiver already exists in the collection
-            If(
-                !IsEmpty(Filter(CaregiverData, Caregiver = TempSelectedCaregiver)),
-                // Update the existing record
+                // Update the collection based on PrimaryOwnerMode and SelectedCaregiver
+                If(
+                PrimaryOwnerMode,
                 UpdateIf(
-                    CaregiverData,
-                    Caregiver = TempSelectedCaregiver,
+                    Filter(CaregiverData, Caregiver = SelectedCaregiver),
+                    true,
                     {
-                        Discipline: If(PrimaryOwnerMode, Text(SelectedCaregiverDiscipline), Discipline),
-                        AllocationPercentage: If(PrimaryOwnerMode, Value(SelectedAllocation), Value(SelectedCaregiverPercentage))
+                        Discipline: SelectedDiscipline,
+                        AllocationPercentage: SelectedAllocation
                     }
                 ),
-                // Add a new record if the caregiver doesn't exist
-                Collect(
-                    CaregiverData,
+                UpdateIf(
+                    Filter(CaregiverData, Caregiver = SelectedCaregiver),
+                    true,
                     {
-                        Caregiver: TempSelectedCaregiver,
-                        Discipline: If(PrimaryOwnerMode, Text(SelectedCaregiverDiscipline), ""),
-                        AllocationPercentage: If(PrimaryOwnerMode, Value(SelectedAllocation), 0)
+                        Discipline: SelectedCaregiverDiscipline,
+                        AllocationPercentage: SelectedCaregiverPercentage
                     }
                 )
-            );
-            
-            // Clear and re-populate the SelectedCaregiverData collection
-            ClearCollect(
-                SelectedCaregiverData,
-                Filter(CaregiverData, Caregiver = TempSelectedCaregiver)
-            );
+            ); 
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
