@@ -885,20 +885,42 @@ msftMasterData As screen:
             ClearCollect(
                 FilteredTechnology,
                 Filter(
-                    Caregivers_1,
-                    'Discipline for Primary Project'.Value = Gallery33.Selected.Discipline ||
-                    'Discipline for Secondary Project'.Value = Gallery33.Selected.Discipline ||
-                    Gallery33.Selected.Discipline in 'Discipline for Tertiary Project'.Value
+                    'Caregiver Skills',
+                    'Beginner Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 8'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 9'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 8'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 8'.Value = Gallery1_2.Selected.'Skill Name'
                 )
             );
             UpdateContext({TempCount: CountRows(FilteredTechnology)});
             
             Navigate(
-                msftdiscipline,
+                msfttechnology,
                 ScreenTransition.Fade,
                 {
-                    SelectedDiscipline: Gallery33.Selected.Discipline,
-                    FilteredDiscipline: FilteredTechnology,
+                    SelectedTechnology: Gallery1_2.Selected.'Skill Name',
+                    FilteredTechnology: FilteredTechnology,
                     TempCount: TempCount
                 }
             )
