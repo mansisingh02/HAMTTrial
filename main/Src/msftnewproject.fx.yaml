@@ -620,35 +620,33 @@ msftnewproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
         OnChange: |
-            =Set(SelectedCaregiver, msft_Dropdown_23.Selected.Value);
-            Set(TempSelectedCaregiver, SelectedCaregiver);
-            Reset(msft_Dropdown_23);
-            Set(PrimaryOwnerMode, false);
+            =If(
+                PrimaryOwnerMode,
+                Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false);
+                Reset(msft_Dropdown_22),
+                Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
+                Set(ShowDisciplinePrompt, false)
+            );
             
-            // Reset discipline for the new caregiver selection
-            Set(SelectedCaregiverDiscipline, "");
-            
-            // Check if the caregiver already exists in the collection
+            // Check if a caregiver is selected
             If(
-                !IsEmpty(Filter(CaregiverData, Caregiver = TempSelectedCaregiver)),
-                // Update the existing record
-                UpdateIf(
-                    CaregiverData,
-                    Caregiver = TempSelectedCaregiver,
-                    {
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
-                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
-                    }
-                ),
-                // Add a new record if the caregiver doesn't exist
-                Collect(
-                    CaregiverData,
-                    {
-                        Caregiver: TempSelectedCaregiver,
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, ""),
-                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
-                    }
+                !IsBlank(TempSelectedCaregiver),
+                // Reset discipline dropdown only if a discipline is selected
+                If(
+                    !IsBlank(SelectedCaregiverDiscipline),
+                    Reset(msft_Dropdown_22)
                 )
+            );
+            
+            // Check if the caregiver-discipline combination already exists in the collection
+            UpdateIf(
+                CaregiverData,
+                Caregiver = TempSelectedCaregiver && Discipline = SelectedCaregiverDiscipline,
+                {
+                    // AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    // If needed, you can update AllocationPercentage here, or leave it as per your requirements
+                }
             );
         PaddingBottom: =8
         PaddingLeft: =12
