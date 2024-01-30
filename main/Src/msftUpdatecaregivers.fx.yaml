@@ -239,8 +239,54 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =1000
-        Items: |-
-            =Filter(
+        Items: |
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+                AddColumns(
+                    Beginner,
+                    "Beginner 1",
+                    LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 1'].Value
+                        ),
+                        "Beginner 2",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 2'].Value
+                        ),
+                        "Beginner 3",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 3'].Value
+                        ),
+                        "Beginner 4",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 4'].Value
+                        ),
+                        "Beginner 5",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 5'].Value
+                        ),
+                        "Beginner 6",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 6'].Value
+                        ),
+                        "Beginner 7",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 7'].Value
+                        ),
+                        "Beginner 8",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 8'].Value
+                        )
+                        ),
+                        'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
+            ),
+            Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1",
@@ -285,7 +331,7 @@ msftUpdatecaregivers As screen:
                         )
                         ),
                         'Caregiver ID'=txtCaregiverID.Text
-            )
+            ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -2153,8 +2199,54 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =273
-        Items: |-
-            =Filter(
+        Items: |
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+                AddColumns(
+                    Intermediate,
+                    "Intermediate 1",
+                    LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 1'].Value
+                        ),
+                        "Intermediate 2",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 2'].Value
+                        ),
+                        "Intermediate 3",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 3'].Value
+                        ),
+                        "Intermediate 4",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 4'].Value
+                        ),
+                        "Intermediate 5",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 5'].Value
+                        ),
+                        "Intermediate 6",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 6'].Value
+                        ),
+                        "Intermediate 7",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 7'].Value
+                        ),
+                        "Intermediate 8",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Intermediate[@'Intermediate Skill 8'].Value
+                        )
+                        ),
+                        'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
+            ),
+            Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1",
@@ -2199,7 +2291,7 @@ msftUpdatecaregivers As screen:
                         )
                         ),
                         'Caregiver ID'=txtCaregiverID.Text
-            )
+            ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -2720,8 +2812,54 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =768
-        Items: |-
-            =Filter(
+        Items: |
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+                AddColumns(
+                    Advanced,
+                    "Advanced 1",
+                    LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 1'].Value
+                        ),
+                        "Advanced 2",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 2'].Value
+                        ),
+                        "Advanced 3",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 3'].Value
+                        ),
+                        "Advanced 4",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 4'].Value
+                        ),
+                        "Advanced 5",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 5'].Value
+                        ),
+                        "Advanced 6",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 6'].Value
+                        ),
+                        "Advanced 7",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 7'].Value
+                        ),
+                        "Advanced 8",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Advanced[@'Advanced Skill 8'].Value
+                        )
+                        ),
+                        'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
+            ),
+            Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1",
@@ -2766,7 +2904,7 @@ msftUpdatecaregivers As screen:
                         )
                         ),
                         'Caregiver ID'=txtCaregiverID.Text
-            )
+            ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =

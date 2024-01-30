@@ -129,6 +129,7 @@ msftcaregivers As screen:
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =Navigate(msftUpdatecaregivers)
         TemplatePadding: =0
         TemplateSize: =35
         Width: =1194
@@ -224,33 +225,7 @@ msftcaregivers As screen:
                             LookUp(
                             Skills_1,
                             'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 3'.Value
-                            ),
-                            "Intermediate 4",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 4'.Value
-                            ),
-                            "Intermediate 5",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 5'.Value
-                            ),
-                            "Intermediate 6",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 6'.Value
-                            ),
-                            "Intermediate 7",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 7'.Value
-                            ),
-                            "Intermediate 8",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 8'.Value
-                            )
-                            ),
+                )),
                             'Caregiver ID'=ThisItem.'Caregiver ID'
                 
                 )
@@ -274,7 +249,7 @@ msftcaregivers As screen:
                 Height: =15
                 OnSelect: =Select(Parent)
                 Size: =9
-                Text: =ThisItem.'Intermediate 1'.'Skill Name' & ", " & ThisItem.'Intermediate 2'.'Skill Name' & ", " & ThisItem.'Intermediate 3'.'Skill Name'& ", " & ThisItem.'Intermediate 4'.'Skill Name' 
+                Text: =ThisItem.'Intermediate 1'.'Skill Name' & If(ThisItem.'Intermediate 1'.'Skill Name'=Blank(),"", ", ") & ThisItem.'Intermediate 2'.'Skill Name' & If(ThisItem.'Intermediate 2'.'Skill Name'=Blank(),"", ", ") & ThisItem.'Intermediate 3'.'Skill Name'
                 Width: =522
                 X: =32
                 Y: =4
