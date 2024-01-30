@@ -397,7 +397,7 @@ msftnewproject As screen:
                     CaregiverData,
                     Caregiver = TempSelectedCaregiver,
                     {
-                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        Discipline:If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
                     }
                 ),
@@ -406,7 +406,7 @@ msftnewproject As screen:
                     CaregiverData,
                     {
                         Caregiver: TempSelectedCaregiver,
-                        Discipline: "",
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, ""),
                         AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
                     }
                 )
@@ -619,7 +619,7 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |
+        OnChange: |+
             =If(
                 PrimaryOwnerMode,
                 Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
@@ -628,14 +628,15 @@ msftnewproject As screen:
                 Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
                 Set(ShowDisciplinePrompt, false)
             );
-            
+             
             // Check if the caregiver-discipline combination already exists in the collection
             If(
                 !IsBlank(TempSelectedCaregiver),
                 // Reset discipline dropdown only if a discipline is selected
                 If(
                     !IsBlank(SelectedCaregiverDiscipline),
-                    // Update the selected caregiver with the chosen discipline
+                    // Find the record in the collection that matches the selected caregiver
+                    // Update only the first matching record (if there are duplicates)
                     UpdateIf(
                         CaregiverData,
                         Caregiver = TempSelectedCaregiver,
@@ -645,9 +646,12 @@ msftnewproject As screen:
                         }
                     );
                     Reset(msft_Dropdown_22);
-                    Set(SelectedCaregiverPercentage, 0)
+                    Set(SelectedCaregiverPercentage, 0);
+                    Set(SelectedCaregiverDiscipline, "")
                 )
             );
+            
+            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -739,7 +743,7 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: |+
-            =StatusChoices
+            =Distinct(Project, Status)
             
         PaddingBottom: =8
         PaddingLeft: =12
