@@ -48,7 +48,7 @@ msftdiscipline As screen:
         Size: =18
         Text: =Text(Gallery33.Selected.Discipline)
         Width: =274
-        X: =107
+        X: =117
         Y: =121
         ZIndex: =16
 
@@ -207,6 +207,8 @@ msftdiscipline As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        OnSelect: |-
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredDiscipline: FilteredDiscipline })
         Size: =13
         Text: =Text(TempCount)
         X: =780
