@@ -135,24 +135,6 @@ msftcaregivers As screen:
         Y: =256
         ZIndex: =33
 
-        Title1 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 173
-            X: =103
-            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1.Size * 1.8)) / 2
-            ZIndex: =2
-
         Subtitle1 As label:
             Color: =RGBA(51, 51, 51, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -179,25 +161,6 @@ msftcaregivers As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =5
-
-        Subtitle1_1 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =ThisItem.CareGiver.'Beginner Skill 1'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =295
-            X: =281
-            Y: =6
-            ZIndex: =6
 
         Subtitle1_2 As label:
             Color: =RGBA(51, 51, 51, 1)
@@ -238,6 +201,33 @@ msftcaregivers As screen:
             X: =1077
             Y: =14
             ZIndex: =8
+
+        Gallery9 As gallery.galleryVertical:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =35
+            Items: =LookUp(Skills_1, 'Skill ID' = ThisItem.CareGiver.'Beginner Skill 1'.Value)
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            TemplateSize: =28
+            X: =190
+            ZIndex: =9
+
+            Label20 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =26
+                OnSelect: =Select(Parent)
+                Size: =13
+                Text: =ThisItem.'Skill Name'
+                X: =40
+                ZIndex: =1
 
     navBar_2 As navBarVertical:
         dasboardNav: =msftDashboard
@@ -321,7 +311,7 @@ msftcaregivers As screen:
             =AddColumns(
                Caregivers_1,
                 "CareGiver",
-                LookUp(Beginner, 'Caregiver ID' = Beginner[@'Caregiver ID']) )
+                LookUp(Beginner, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']) )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
