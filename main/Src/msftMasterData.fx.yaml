@@ -31,7 +31,7 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =397
-        Items: =Certifications
+        Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
@@ -1532,37 +1532,6 @@ msftMasterData As screen:
         Y: =243
         ZIndex: =34
 
-    search_3 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(166, 166, 166, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        HintText: ="Search Certification"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingBottom: =9
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Reset: =
-        Size: =10
-        Visible: =varTabSelected=1
-        Width: =214
-        X: =100
-        Y: =256
-        ZIndex: =35
-
     search_4 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
@@ -1740,9 +1709,9 @@ msftMasterData As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =12
-        Visible: =varTabSelected=2
+        Visible: =varTabSelected=1
         Width: =270
-        X: =97
-        Y: =246
+        X: =100
+        Y: =244
         ZIndex: =42
 
