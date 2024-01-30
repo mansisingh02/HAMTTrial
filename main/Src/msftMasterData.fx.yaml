@@ -222,7 +222,7 @@ msftMasterData As screen:
         DelayItemLoading: =true
         Height: =405
         Items: |+
-            =Sort(Discipline, Discipline)
+            =Sort(Filter(Discipline, TextInput1_2.Text in Lower(Trim(Discipline))),Discipline, SortOrder.Ascending)
             
             
             
@@ -1714,4 +1714,32 @@ msftMasterData As screen:
         X: =100
         Y: =244
         ZIndex: =42
+
+    TextInput1_2 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(153, 153, 153, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =42
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Visible: =varTabSelected=2
+        Width: =270
+        X: =100
+        Y: =246
+        ZIndex: =43
 
