@@ -635,8 +635,7 @@ msftnewproject As screen:
                 // Reset discipline dropdown only if a discipline is selected
                 If(
                     !IsBlank(SelectedCaregiverDiscipline),
-                    // Find the record in the collection that matches the selected caregiver
-                    // Update only the first matching record (if there are duplicates)
+                    // Update the selected caregiver with the chosen discipline
                     UpdateIf(
                         CaregiverData,
                         Caregiver = TempSelectedCaregiver,
@@ -646,11 +645,9 @@ msftnewproject As screen:
                         }
                     );
                     Reset(msft_Dropdown_22);
-                    Set(SelectedCaregiverPercentage, 0);
-                    Set(SelectedCaregiverDiscipline, "")
+                    Set(SelectedCaregiverPercentage, 0)
                 )
             );
-            
             
         PaddingBottom: =8
         PaddingLeft: =12
