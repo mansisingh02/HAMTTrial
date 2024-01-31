@@ -124,7 +124,7 @@ msftproject As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 FontWeight: =FontWeight.Bold
-                Height: =17
+                Height: =22
                 LineHeight: =1.142857
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -133,8 +133,8 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Description"
                 Width: =89
-                X: =16
-                Y: =14
+                X: =12
+                Y: =12
                 ZIndex: =9
 
         "'Category Header_5' As groupContainer.manualLayoutContainer":
@@ -180,7 +180,7 @@ msftproject As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 FontWeight: =FontWeight.Bold
-                Height: =14
+                Height: =19
                 LineHeight: =1.142857
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -189,8 +189,8 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Primary Owner"
                 Width: =107
-                X: =17.5
-                Y: =18
+                X: =12
+                Y: =14
                 ZIndex: =13
 
         "'Refreshed On Header' As groupContainer.manualLayoutContainer":
@@ -236,17 +236,17 @@ msftproject As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 FontWeight: =FontWeight.Bold
-                Height: =12
+                Height: =17
                 LineHeight: =1.142857
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
                 Size: =10.5
-                Text: ="Tech Stack"
+                Text: ="Capability"
                 Width: =83
-                X: =15.5
-                Y: =18
+                X: =17
+                Y: =15
                 ZIndex: =17
 
         "'Owner Header' As groupContainer.manualLayoutContainer":
@@ -488,7 +488,7 @@ msftproject As screen:
             Font: =Font.'Segoe UI'
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10.75
             Text: =ThisItem.'Project Name'
             Width: =135
             Y: =20
@@ -505,8 +505,8 @@ msftproject As screen:
             Font: =Font.'Segoe UI'
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Description'
+            Size: =10.75
+            Text: =ThisItem.Description
             Width: =119
             X: =286
             Y: =20
@@ -523,7 +523,7 @@ msftproject As screen:
             Font: =Font.'Segoe UI'
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =10.75
             Text: =ThisItem.'Project ID'
             Width: =135
             X: =151
@@ -541,12 +541,52 @@ msftproject As screen:
             Font: =Font.'Segoe UI'
             Height: =32
             OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Project Type'
+            Size: =10.75
+            Text: =ThisItem.'Project Type'.Value
             Width: =119
             X: =405
             Y: =20
             ZIndex: =5
+
+        Label24_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =10.75
+            Text: =ThisItem.'Primary Owner'.DisplayName
+            Width: =134
+            X: =524
+            Y: =20
+            ZIndex: =7
+
+        Label24_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =10.75
+            Text: |-
+                =Concat(
+                    ForAll(Gallery16.Selected.Capability.Value, Value & ", "),
+                    Result
+                )
+            Width: =134
+            X: =749
+            Y: =20
+            ZIndex: =8
 
     "'Report Header_19' As groupContainer.manualLayoutContainer":
         Height: =48
