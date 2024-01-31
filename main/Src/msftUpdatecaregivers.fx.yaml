@@ -1,7 +1,8 @@
 msftUpdatecaregivers As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =
+    OnVisible: |
+        =Collect(CG,(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', 'CCC'=Caregivers_1[@'Cost Center Code'].Value))));
     Width: =1366
 
     Rectangle3 As rectangle:
@@ -89,7 +90,7 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: =Filter(Caregivers_1,  'Caregiver Email'=User().Email)
+        Items: =Filter(Caregivers_1,   StartsWith('Caregiver Email',Lower(User().Email)))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
@@ -111,8 +112,26 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.'Pillar Name'
+            X: =8
             Y: =4
             ZIndex: =1
+
+        Label8_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =
+            X: =208
+            Y: =4
+            ZIndex: =2
 
     Gallery7 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -240,7 +259,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =1000
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+            =If(txtCaregiverID.Text="801263" ,Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1",
@@ -2200,7 +2219,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =273
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+            =If(txtCaregiverID.Text="801263"  ,Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1",
@@ -2813,7 +2832,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =768
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
+            =If(txtCaregiverID.Text="801263" ,Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1",
