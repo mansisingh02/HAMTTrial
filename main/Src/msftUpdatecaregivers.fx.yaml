@@ -89,7 +89,7 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: =Filter(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', 'CCC'=Caregivers_1[@'Cost Center Code'].Value)),  'Caregiver Email'=User().Email )
+        Items: =Filter(Filter(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', CCC=Caregivers_1[@'Cost Center Code'].Value)),  'Caregiver Email'=User().Email ), StartsWith('Caregiver Email',Lower(User().Email)))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
@@ -111,7 +111,7 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.'Pillar Name'
-            X: =17
+            X: =8
             Y: =4
             ZIndex: =1
 
@@ -127,7 +127,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =ThisItem.CostCenter.'Cost Center Name'
+            Text: =
             X: =208
             Y: =4
             ZIndex: =2

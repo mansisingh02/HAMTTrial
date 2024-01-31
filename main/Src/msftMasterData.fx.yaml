@@ -1747,7 +1747,7 @@ msftMasterData As screen:
         BorderColor: =RGBA(149, 149, 149, 1)
         DelayItemLoading: =true
         Height: =381
-        Items: =Filter('Cost Center', StartsWith('Cost Center Name',search_4.Text) || StartsWith('CCC',search_4.Text))
+        Items: =Filter('Cost Center', StartsWith('Cost Center Name',search_4.Text) || StartsWith(CCC,search_4.Text))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |
@@ -1832,7 +1832,7 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.'CCC'
+            Text: =ThisItem.CCC
             VerticalAlign: =VerticalAlign.Top
             Width: =592
             X: =18
