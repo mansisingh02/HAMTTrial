@@ -1,4 +1,4 @@
-navBarVertical As CanvasComponent:
+navBarVertical_admin As CanvasComponent:
     caregiversNav: =App.ActiveScreen
     dasboardNav: =App.ActiveScreen
     Fill: =RGBA(0, 51, 142, 1)
@@ -25,7 +25,7 @@ navBarVertical As CanvasComponent:
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
             =Set(gblSelected,1);
-            Navigate(navBarVertical.dasboardNav)
+            Navigate(navBarVertical_admin.dasboardNav)
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =
         Width: =75
@@ -46,8 +46,8 @@ navBarVertical As CanvasComponent:
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
             =Set(gblSelected,2);
-            Navigate(navBarVertical.projectNav)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Navigate(navBarVertical_admin.projectNav)
+        PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
         Y: =175
@@ -67,8 +67,8 @@ navBarVertical As CanvasComponent:
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
             =Set(gblSelected,3);
-            Navigate(navBarVertical.caregiversNav);
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Navigate(navBarVertical_admin.caregiversNav);
+        PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
         Y: =275
@@ -89,8 +89,8 @@ navBarVertical As CanvasComponent:
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
             =Set(gblSelected,4);
-            Navigate(navBarVertical.masterDataNav);
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Navigate(navBarVertical_admin.masterDataNav);
+        PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
         Y: =375

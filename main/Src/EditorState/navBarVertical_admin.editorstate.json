@@ -212,11 +212,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
@@ -253,6 +248,11 @@
         {
           "Category": "Design",
           "PropertyName": "Transparency",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -308,7 +308,14 @@
         },
         "BorderColor",
         "DisabledBorderColor",
-        "PressedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PressedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "HoverBorderColor",
         "FocusedBorderColor",
         "BorderStyle",
@@ -384,11 +391,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "DisabledFill",
           "RuleProviderType": "Unknown"
         },
@@ -493,6 +495,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
@@ -545,7 +552,14 @@
         },
         "BorderColor",
         "DisabledBorderColor",
-        "PressedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PressedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "HoverBorderColor",
         "FocusedBorderColor",
         "BorderStyle",
@@ -621,11 +635,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "DisabledFill",
           "RuleProviderType": "Unknown"
         },
@@ -730,6 +739,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
@@ -782,7 +796,14 @@
         },
         "BorderColor",
         "DisabledBorderColor",
-        "PressedBorderColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "PressedBorderColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "HoverBorderColor",
         "FocusedBorderColor",
         "BorderStyle",
@@ -859,11 +880,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "DisabledFill",
           "RuleProviderType": "Unknown"
         },
@@ -973,6 +989,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Design",
+          "PropertyName": "Fill",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
           "RuleProviderType": "Unknown"
@@ -981,7 +1002,7 @@
       "StyleName": "defaultImageStyle",
       "Type": "ControlInfo"
     },
-    "navBarVertical": {
+    "navBarVertical_admin": {
       "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
@@ -1017,19 +1038,14 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "navBarVertical",
+      "Name": "navBarVertical_admin",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
-          "PropertyName": "dasboardNav",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "projectNav",
+          "PropertyName": "masterDataNav",
           "RuleProviderType": "System"
         },
         {
@@ -1039,43 +1055,48 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "masterDataNav",
+          "PropertyName": "projectNav",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "dasboardNav",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
           "RuleProviderType": "System"
         },
         {
           "Category": "Design",
           "PropertyName": "Fill",
           "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "navBarVertical"
+  "TopParentName": "navBarVertical_admin"
 }
