@@ -1,6 +1,7 @@
 msfteditproject As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(varSelectedItem, Param("SelectedItem"))
     Width: =1366
 
     Rectangle3_1 As rectangle:
@@ -42,7 +43,7 @@ msfteditproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
-        Default: =
+        Default: =varSelectedItem['Project Name']
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
