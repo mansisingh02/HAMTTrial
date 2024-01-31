@@ -619,7 +619,7 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Skills_1,Discipline)
-        OnChange: |+
+        OnChange: |
             =If(
                 PrimaryOwnerMode,
                 Set(SelectedDiscipline, msft_Dropdown_22.Selected.Value);
@@ -628,7 +628,6 @@ msftnewproject As screen:
                 Set(SelectedCaregiverDiscipline, msft_Dropdown_22.Selected.Value);
                 Set(ShowDisciplinePrompt, false)
             );
-             
             // Check if the caregiver-discipline combination already exists in the collection
             If(
                 !IsBlank(TempSelectedCaregiver),
@@ -648,7 +647,6 @@ msftnewproject As screen:
                     Set(SelectedCaregiverPercentage, 0)
                 )
             );
-            
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -1940,7 +1938,7 @@ msftnewproject As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =13
-            Text: |-
+            Text: |
                 =Text(
                     If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
                 )
