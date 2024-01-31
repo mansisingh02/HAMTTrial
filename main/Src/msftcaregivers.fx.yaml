@@ -7,11 +7,11 @@ msftcaregivers As screen:
             combinedData,
             AddColumns(
             Caregivers_1,
-                "CareGiver",
+                "Intermediate",
                 LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
-                AddColumns(
+            AddColumns(
             Caregivers_1,
-                "CareGiver1",
+                "Advanced",
                 LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
         )
     Width: =1366
@@ -286,7 +286,7 @@ msftcaregivers As screen:
             =Filter(AddColumns(
                 Caregivers_1,
                     "CareGiver",
-                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
+                    LookUp(combinedData, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
                     StartsWith('Caregiver Name',search.Text)
                     )
         Layout: =Layout.Vertical
