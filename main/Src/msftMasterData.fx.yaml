@@ -1743,3 +1743,127 @@ msftMasterData As screen:
         Y: =246
         ZIndex: =43
 
+    "Gallery1_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(149, 149, 149, 1)
+        DelayItemLoading: =true
+        Height: =381
+        Items: =Filter('Cost Center',StartsWith('Cost Center Name',search_4.Text) || StartsWith('CCC',search_4.Text))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |
+            =UpdateContext({TempCount: 0});
+            ClearCollect(
+                FilteredTechnology,
+                Filter(
+                    'Caregiver Skills',
+                    'Beginner Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 8'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Beginner Skill 9'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Intermediate Skill 8'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
+                    'Advanced Skill 8'.Value = Gallery1_4.Selected.'Skill Name'
+                )
+            );
+            UpdateContext({TempCount: CountRows(FilteredTechnology)});
+            
+            Navigate(
+                msfttechnology,
+                ScreenTransition.Fade,
+                {
+                    SelectedTechnology: Gallery1_4.Selected.'Skill Name',
+                    FilteredTechnology: FilteredTechnology,
+                    TempCount: TempCount
+                }
+            )
+        TemplatePadding: =0
+        TemplateSize: =55
+        Visible: =varTabSelected=4
+        Width: =1116
+        X: =103
+        Y: =348
+        ZIndex: =44
+
+        Title1_4 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Text: =ThisItem.Title
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - 173
+            X: =103
+            Y: =(Parent.TemplateHeight - (Self.Size * 1.8 + Subtitle1_14.Size * 1.8)) / 2
+            ZIndex: =2
+
+        Subtitle1_14 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'CCC'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =592
+            X: =18
+            Y: =14
+            ZIndex: =3
+
+        Separator1_4 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
+
+        Subtitle1_15 As label:
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =28
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Cost Center Name'
+            VerticalAlign: =VerticalAlign.Top
+            Width: =258
+            X: =641
+            Y: =14
+            ZIndex: =6
+
