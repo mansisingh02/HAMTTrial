@@ -886,7 +886,7 @@ msftMasterData As screen:
             ClearCollect(
                 FilteredBeginnerSkills,
                 Filter(
-                    'Beginner',
+                    Beginner,
                     'Beginner Skill 1'.Value in Skills_1.'Skill ID' &&
                     First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 1'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
                     'Beginner Skill 2'.Value in Skills_1.'Skill ID' &&
@@ -911,7 +911,7 @@ msftMasterData As screen:
             ClearCollect(
                 FilteredIntermediateSkills,
                 Filter(
-                    'Intermediate',
+                    Intermediate,
                     'Intermediate Skill 1'.Value in Skills_1.'Skill ID' &&
                     First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 1'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
                     'Intermediate Skill 2'.Value in Skills_1.'Skill ID' &&
