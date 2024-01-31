@@ -259,7 +259,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =1000
         Items: |
-            =If(txtCaregiverID.Text="801263" ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" ,Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1",
@@ -2219,7 +2219,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =273
         Items: |
-            =If(txtCaregiverID.Text="801263"  ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958"   ,Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1",
@@ -2832,7 +2832,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =768
         Items: |
-            =If(txtCaregiverID.Text="801263" ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="801263",Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1",
