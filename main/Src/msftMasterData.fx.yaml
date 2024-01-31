@@ -880,50 +880,94 @@ msftMasterData As screen:
              )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |
+        OnSelect: |+
             =UpdateContext({TempCount: 0});
+            
             ClearCollect(
-                FilteredTechnology,
+                FilteredBeginnerSkills,
                 Filter(
-                    'Caregiver Skills',
-                    'Beginner Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 8'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Beginner Skill 9'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Intermediate Skill 8'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 1'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 2'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 3'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 4'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 5'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 6'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 7'.Value = Gallery1_2.Selected.'Skill Name' ||
-                    'Advanced Skill 8'.Value = Gallery1_2.Selected.'Skill Name'
+                    'Beginner',
+                    'Beginner Skill 1'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 1'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 2'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 2'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 3'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 3'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 4'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 4'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 5'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 5'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 6'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 6'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 7'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 7'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 8'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 8'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Beginner Skill 9'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Beginner Skill 9'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name'
                 )
             );
-            UpdateContext({TempCount: CountRows(FilteredTechnology)});
+            
+            ClearCollect(
+                FilteredIntermediateSkills,
+                Filter(
+                    'Intermediate',
+                    'Intermediate Skill 1'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 1'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 2'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 2'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 3'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 3'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 4'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 4'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 5'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 5'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 6'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 6'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 7'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 7'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Intermediate Skill 8'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Intermediate Skill 8'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name'
+                )
+            );
+            
+            ClearCollect(
+                FilteredAdvancedSkills,
+                Filter(
+                    Advanced,
+                    'Advanced Skill 1'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 1'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 2'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 2'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 3'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 3'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 4'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 4'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 5'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 5'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 6'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 6'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 7'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 7'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name' ||
+                    'Advanced Skill 8'.Value in Skills_1.'Skill ID' &&
+                    First(Filter(Skills_1, 'Skill ID' = 'Advanced Skill 8'.Value)).'Skill Name' = Gallery1_2.Selected.'Skill Name'
+                )
+            );
+            
+            UpdateContext({TempCount: CountRows(FilteredBeginnerSkills) + CountRows(FilteredIntermediateSkills) + CountRows(FilteredAdvancedSkills)});
             
             Navigate(
                 msfttechnology,
                 ScreenTransition.Fade,
                 {
                     SelectedTechnology: Gallery1_2.Selected.'Skill Name',
-                    FilteredTechnology: FilteredTechnology,
+                    FilteredBeginnerSkills: FilteredBeginnerSkills,
+                    FilteredIntermediateSkills: FilteredIntermediateSkills,
+                    FilteredAdvancedSkills: FilteredAdvancedSkills,
                     TempCount: TempCount
                 }
             )
+            
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=3
