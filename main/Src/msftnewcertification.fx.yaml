@@ -1,4 +1,4 @@
-msftnewcategory_1 As screen:
+msftnewcertification As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     Width: =1366
@@ -154,6 +154,21 @@ msftnewcategory_1 As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Patch(
+               Certifications,
+               Defaults(Certifications),
+               {
+                  'Certification Name': msft_TextInput_2.Text,
+                  'Validity Period (in Years)':  msft_TextInput_18
+               }
+            );
+            
+            Refresh(Certifications);
+            
+            Reset(msft_TextInput_2);
+            Reset(msft_TextInput_18);
+            Navigate(msftMasterData);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
