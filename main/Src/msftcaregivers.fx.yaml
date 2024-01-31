@@ -204,57 +204,6 @@ msftcaregivers As screen:
             Y: =14
             ZIndex: =8
 
-        Gallery9 As gallery.galleryVertical:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            Height: =35
-            Items: |-
-                =Filter(AddColumns(
-                        Intermediate,
-                        "Intermediate 1",
-                        LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 1'.Value
-                            ),
-                            "Intermediate 2",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 2'.Value
-                            ),
-                            "Intermediate 3",
-                            LookUp(
-                            Skills_1,
-                            'Skill ID' = ThisItem.CareGiver.'Intermediate Skill 3'.Value
-                )),
-                            'Caregiver ID'=ThisItem.'Caregiver ID'
-                
-                )
-            Layout: =Layout.Vertical
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplateSize: =33
-            Width: =646
-            X: =190
-            ZIndex: =9
-
-            Label20 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =15
-                OnSelect: =Select(Parent)
-                Size: =9
-                Text: =ThisItem.'Intermediate 1'.'Skill Name' & If(ThisItem.'Intermediate 1'.'Skill Name'=Blank(),"", ", ") & ThisItem.'Intermediate 2'.'Skill Name' & If(ThisItem.'Intermediate 2'.'Skill Name'=Blank(),"", ", ") & ThisItem.'Intermediate 3'.'Skill Name'
-                Width: =522
-                X: =32
-                Y: =4
-                ZIndex: =1
-
     navBar_2 As navBarVertical_admin:
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData

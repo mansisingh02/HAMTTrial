@@ -60,12 +60,6 @@ msftUpdatecaregivers As screen:
         Y: =189
         ZIndex: =4
 
-    navBarVertical_1 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        dasboardNav: =msftDashboard
-        masterDataNav: =msftMasterData
-        ZIndex: =6
-
     navBarHorizontal_1 As navBarHorizontal:
         ZIndex: =7
 
@@ -1570,36 +1564,36 @@ msftUpdatecaregivers As screen:
             OnSelect: |
                 =If(Title2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 1':comment_1.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 1': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 1':comment_1.Text}),
                             Title2_1.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 2':comment_1.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 2': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID}, 'Description for Beginner Skill 2':comment_1.Text}
                             ),
                             Title2_2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 3': comment_1.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 3': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 3': comment_1.Text}),
                             
                             Title2_3.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 4': comment_1.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 4': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 4': comment_1.Text}
                             ),
                             
                             Title2_4.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 5': comment_1.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 5': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 5': comment_1.Text}
                             ),
                 
                             Title2_6.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 6': comment_1.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 6': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 6': comment_1.Text}),
                 
                             Title2_5.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 7': comment_1.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 7': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 7': comment_1.Text}),
                             
                             Title2_7.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 8': comment_1.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 8': { Value: skillName_1.Selected.'Skill Name' , Id: skillName_1.Selected.ID},'Description for Beginner Skill 8': comment_1.Text}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -1821,36 +1815,36 @@ msftUpdatecaregivers As screen:
             OnSelect: |
                 =If(Title2_64.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 1':comment_2.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 1': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 1':comment_2.Text}),
                             Title2_81.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 2':comment_2.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 2': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 2':comment_2.Text}
                             ),
                             Title2_83.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 3': comment_2.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 3': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 3': comment_2.Text}),
                             
                             Title2_82.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 4': comment_2.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 4': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 4': comment_2.Text}
                             ),
                             
                             Title2_84.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 5': comment_2.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 5': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 5': comment_2.Text}
                             ),
                 
                             Title2_86.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 6': comment_2.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 6': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 6': comment_2.Text}),
                 
                             Title2_85.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 7': comment_2.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 7': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 7': comment_2.Text}),
                             
                             Title2_87.Text=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 8': comment_2.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 8': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 8': comment_2.Text}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -3165,36 +3159,36 @@ msftUpdatecaregivers As screen:
             OnSelect: |
                 =If(Title2_96.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 1': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID}, 'Description for Advanced Skill 1':comment_3.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 1': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID}, 'Description for Advanced Skill 1':comment_3.Text}),
                             Title2_113.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 2': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID}, 'Description for Advanced Skill 2':comment_3.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 2': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID}, 'Description for Advanced Skill 2':comment_3.Text}
                             ),
                             Title2_115.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 3': comment_3.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 3': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 3': comment_3.Text}),
                             
                             Title2_114.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 4': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 4': comment_3.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 4': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 4': comment_3.Text}
                             ),
                             
                             Title2_116.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 5': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 5': comment_3.Text}
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 5': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 5': comment_3.Text}
                             ),
                 
                             Title2_118.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 6': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 6': comment_3.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 6': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 6': comment_3.Text}),
                 
                             Title2_117.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 7': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 7': comment_3.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 7': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 7': comment_3.Text}),
                             
                             Title2_119.Text=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Advanced Skill 8': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 8': comment_3.Text}),
+                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 8': { Value: skillName_3.Selected.'Skill Name' , Id: skillName_3.Selected.ID},'Description for Advanced Skill 8': comment_3.Text}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -3235,4 +3229,7 @@ msftUpdatecaregivers As screen:
             X: =97
             Y: =356
             ZIndex: =117
+
+    navBarVertical_admin_1 As navBarVertical_admin:
+        ZIndex: =118
 
