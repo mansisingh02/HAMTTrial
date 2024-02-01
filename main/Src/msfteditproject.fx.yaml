@@ -1,7 +1,11 @@
 msfteditproject As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =Set(varSelectedItem, Param("SelectedItem"))
+    OnVisible: |-
+        = Set(
+                inProductionValue, 
+                LookUp(Project, 'Project Name' = Gallery16.Selected.'Project Name').'In Production'.Value
+            )
     Width: =1366
 
     Rectangle3_1 As rectangle:
@@ -126,6 +130,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
+        Default: =Gallery16.Selected.'Project Type'.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -133,7 +138,7 @@ msfteditproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Project Category"]
+        Items: =Distinct('Project Type','Project Type')
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -151,7 +156,7 @@ msfteditproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(237, 237, 237, 1)
-        Default: =
+        Default: =Gallery16.Selected.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -577,7 +582,7 @@ msfteditproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: ="Project Category"
+        Text: ="Project Type"
         X: =322
         Y: =283
         ZIndex: =31
@@ -686,8 +691,8 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="*"
-        X: =437
-        Y: =289
+        X: =407
+        Y: =278
         ZIndex: =38
 
     Label6_5 As label:
@@ -791,6 +796,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
+        Default: =Gallery16.Selected.Goal.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -798,13 +804,7 @@ msfteditproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |-
-            =["Digitalize",
-            "Deconstruct",
-            "Data Science",
-            "Delivery of Care",
-            "Diagnostics",
-            "Diversify"]
+        Items: =Distinct('Project Goals',Goal)
         OnChange: =Set(varSelectedValue, msft_Dropdown_29.Selected.Value)
         PaddingBottom: =8
         PaddingLeft: =12
@@ -845,6 +845,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
+        Default: =Gallery16.Selected.'Cost Center Name'.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1133,7 +1134,7 @@ msfteditproject As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         Color: =RGBA(51, 51, 51, 1)
-        Default: =true
+        Default: =inProductionValue = "Yes"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         FalseFill: =RGBA(102, 102, 102, 1)
         FalseHoverFill: =RGBA(33, 33, 33, 1)
@@ -1141,6 +1142,18 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         HandleFill: =RGBA(255, 255, 255, 1)
         HoverBorderColor: =RGBA(0, 0, 0, 0)
+        OnCheck: |-
+            =Patch(
+                        Project, 
+                        Gallery16.Selected, 
+                        { 'In Production': { Value: "Yes" } }
+                     )
+        OnUncheck: |-
+            =Patch(
+                          Project, 
+                          Gallery16.Selected, 
+                          { 'In Production': { Value: "No" } }
+                       )
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         ShowLabel: =false
         Size: =13
