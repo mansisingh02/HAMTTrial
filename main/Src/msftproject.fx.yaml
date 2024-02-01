@@ -1,0 +1,790 @@
+msftproject As screen:
+    Height: =768
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Width: =1366
+
+    msft_Dropdown_16 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =["Category"]
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =250
+        X: =331
+        Y: =149
+        ZIndex: =2
+
+    msft_ComboBox_5 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(166, 166, 166, 1)
+        DefaultSelectedItems: =[]
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =["Find items"]
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =Search(["Find items"],msft_ComboBox_5.SearchText,"Value")
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =250
+        X: =610
+        Y: =149
+        ZIndex: =3
+
+    "'Table Headers Container' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =1220
+        X: =97
+        Y: =201
+        ZIndex: =5
+
+        "'Report Header_6' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =128
+            ZIndex: =6
+
+            "'Report Label_18' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =13
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Project Name"
+                Width: =102
+                X: =12
+                Y: =16
+                ZIndex: =8
+
+            "'Report Header_18' As groupContainer.manualLayoutContainer":
+                Height: =32
+                LayoutMode: ="manual"
+                Width: =128
+                Y: =16
+                ZIndex: =9
+
+        "'Report Header_7' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =97
+            X: =240
+            ZIndex: =8
+
+            "'Report Label_7' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =22
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Description"
+                Width: =89
+                X: =4
+                Y: =12
+                ZIndex: =9
+
+        "'Category Header_5' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =70
+            X: =412
+            ZIndex: =10
+
+            "'Category Label_5' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =17
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Type"
+                Width: =101
+                Y: =15
+                ZIndex: =11
+
+        "'Description Header_1' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =128
+            X: =550
+            ZIndex: =12
+
+            "'Description Label_1' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =19
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Primary Owner"
+                Width: =112
+                X: =16
+                Y: =16
+                ZIndex: =13
+
+        "'Refreshed On Header' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =89
+            X: =666
+            ZIndex: =14
+
+            "'Refreshed On Label' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =16
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Team Size"
+                Width: =78
+                X: =18.5
+                Y: =17
+                ZIndex: =15
+
+        "'Refreshed On Header_1' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =100
+            X: =758
+            ZIndex: =16
+
+            "'Refreshed On Label_1' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =17
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Capability"
+                Width: =83
+                X: =17
+                Y: =15
+                ZIndex: =17
+
+        "'Owner Header' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =96
+            X: =860
+            ZIndex: =18
+
+            "'Owner Label' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =31
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Start Date"
+                Width: =81
+                X: =12.5
+                ZIndex: =19
+
+        "'Favourite Header' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =85
+            X: =1037
+            ZIndex: =20
+
+            "'Favourite Label' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =16
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Status"
+                Width: =45
+                X: =30
+                Y: =16
+                ZIndex: =21
+
+        "'Action Header_4' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =128
+            X: =1092
+            ZIndex: =22
+
+            "'Action Label_4' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =16
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="Action"
+                Width: =46
+                X: =82
+                Y: =16
+                ZIndex: =23
+
+        "'Owner Label_1' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =24
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="End Date"
+            Width: =81
+            X: =875
+            Y: =24
+            ZIndex: =23
+
+        "'Report Header_20' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =85
+            X: =326
+            ZIndex: =24
+
+            "'Report Label_20' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =19
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="CC Name"
+                Width: =71
+                X: =8
+                Y: =15
+                ZIndex: =9
+
+    Projects_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =31
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: ="Projects"
+        Width: =203
+        X: =102
+        Y: =104
+        ZIndex: =45
+
+    "'Rectangle 31_9' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(187, 187, 187, 1)
+        FocusedBorderThickness: =4
+        Height: =768
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =70
+        ZIndex: =47
+
+    "'Rectangle 32_9' As rectangle":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(187, 187, 187, 1)
+        FocusedBorderThickness: =4
+        Height: =60
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =1296.49914550781
+        X: =70
+        ZIndex: =48
+
+    Component2_1 As navBarHorizontal:
+        ZIndex: =50
+
+    search_1 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Search Projects"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Reset: =
+        Size: =10
+        Width: =203
+        X: =102
+        Y: =149
+        ZIndex: =51
+
+    msft_Button_13 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftnewproject, ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="NEW PROJECT"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =204
+        X: =1112
+        Y: =149
+        ZIndex: =52
+
+    Gallery16 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =444
+        Items: =Project
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =52
+        Width: =1262
+        X: =97
+        Y: =280
+        ZIndex: =53
+
+        Label12 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =32
+            OnSelect: =Select(Parent)
+            Size: =10.75
+            Text: =ThisItem.Title
+            Width: =125
+            Y: =20
+            ZIndex: =1
+
+        Label24 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Project Name'
+            Width: =135
+            ZIndex: =2
+
+        Label24_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.Description
+            Width: =71
+            X: =243
+            ZIndex: =3
+
+        Label24_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Project ID'
+            Width: =65
+            X: =135
+            ZIndex: =4
+
+        Label24_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Project Type'.Value
+            Width: =63
+            X: =402
+            ZIndex: =5
+
+        Label24_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Primary Owner'.Value
+            Width: =108
+            X: =559
+            ZIndex: =7
+
+        Label24_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.Goal.Value
+            Width: =102
+            X: =959
+            ZIndex: =9
+
+        Label24_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.Status.Value
+            Width: =94
+            X: =1061
+            ZIndex: =10
+
+        Button5_12 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Navigate(msfteditproject, ScreenTransition.Fade)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.5
+            Text: ="EDIT"
+            Width: =70
+            X: =1155
+            Y: =13
+            ZIndex: =11
+
+        Label24_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Group Name'.Value
+            Width: =76
+            X: =481
+            ZIndex: =12
+
+        Label24_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Cost Center Name'.Value
+            Width: =63
+            X: =326
+            ZIndex: =13
+
+    "'Report Header_19' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =121
+        X: =239
+        Y: =200
+        ZIndex: =54
+
+        "'Report Label_19' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =17
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Project ID"
+            Width: =89
+            X: =5
+            Y: =15
+            ZIndex: =9
+
+    "'Refreshed On Header_2' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =99
+        X: =1045
+        Y: =201
+        ZIndex: =55
+
+        "'Refreshed On Label_2' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =11
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Goals"
+            Width: =56
+            X: =18
+            Y: =20
+            ZIndex: =17
+
+    "'Category Header_12' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =70
+        X: =581
+        Y: =201
+        ZIndex: =56
+
+        "'Category Label_11' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =17
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Group"
+            Width: =62
+            X: =8
+            Y: =16
+            ZIndex: =11
+

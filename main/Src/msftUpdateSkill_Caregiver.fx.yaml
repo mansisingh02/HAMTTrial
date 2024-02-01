@@ -1,0 +1,326 @@
+msftUpdateSkill_Caregiver As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    navBarHorizontal_18 As navBarHorizontal:
+        ZIndex: =2
+
+    Rectangle3_3 As rectangle:
+        BorderColor: =RGBA(237, 237, 237, 1)
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 252, 255, 1)
+        FocusedBorderThickness: =4
+        Height: =152
+        HoverFill: =RGBA(255, 252, 255, 1)
+        OnSelect: =varTabSelected=1
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =1249
+        X: =98
+        Y: =226
+        ZIndex: =3
+
+    "'Update Caregivers_2' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: ="Update Skill"
+        Width: =230
+        X: =108
+        Y: =122
+        ZIndex: =14
+
+    Group7_4 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =14
+
+        skillName As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            Items: =Filter(Skills_1, Discipline = skillCategory_6.Selected.Value)
+            PaddingBottom: =8
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =12.75
+            Width: =318
+            X: =392
+            Y: =278
+            ZIndex: =4
+
+        skillCategory_6 As dropdown:
+            AllowEmptySelection: =true
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            Items: =Distinct(Skills_1,Discipline)
+            PaddingBottom: =8
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =12.75
+            Width: =256
+            X: =125
+            Y: =278
+            ZIndex: =5
+
+        msft_Label_34 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =20
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Skill "
+            Width: =36
+            X: =392
+            Y: =255
+            ZIndex: =7
+
+        msft_Label_35 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =18
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Comments"
+            Width: =107
+            X: =730
+            Y: =255
+            ZIndex: =8
+
+        comment As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(166, 166, 166, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            HintText: ="Comments"
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PaddingBottom: =9
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =12.75
+            Width: =512
+            X: =729
+            Y: =278
+            ZIndex: =9
+
+        msft_Label_36 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =20
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12.75
+            Text: ="Skill Category"
+            Width: =126
+            X: =125
+            Y: =255
+            ZIndex: =12
+
+    Button4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =If(varSelectedColumn="B1",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 1': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 1': comment.Text}), 
+                        
+                        varSelectedColumn="B2",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 2': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 2': comment.Text}),
+            
+                         varSelectedColumn="B3",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 3': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 3': comment.Text}),
+            
+                         varSelectedColumn="B4",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 4': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 4': comment.Text}),
+            
+                         varSelectedColumn="B5",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 5': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 5': comment.Text}),
+            
+                         varSelectedColumn="B6",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 6': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 6': comment.Text}),
+            
+                         varSelectedColumn="B7",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 7': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 7': comment.Text}),
+            
+                         varSelectedColumn="B8",Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Beginner Skill 8': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 8': comment.Text}),
+            
+                        varSelectedColumn="I1",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 1': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 1': comment.Text}), 
+                        
+                        varSelectedColumn="I2",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 2': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 2': comment.Text}),
+            
+                         varSelectedColumn="I3",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 3': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 3': comment.Text}),
+            
+                         varSelectedColumn="I4",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 4': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 4': comment.Text}),
+            
+                         varSelectedColumn="I5",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 5': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 5': comment.Text}),
+            
+                         varSelectedColumn="I6",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 6': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 6': comment.Text}),
+            
+                         varSelectedColumn="I7",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 7': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 7': comment.Text}),
+            
+                         varSelectedColumn="I8",Patch(Intermediate,  LookUp(
+                        Intermediate,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Intermediate Skill 8': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Intermediate Skill 8': comment.Text}),
+            
+            
+                        varSelectedColumn="A1",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 1': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 1': comment.Text}), 
+                        
+                        varSelectedColumn="A2",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 2': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 2': comment.Text}),
+            
+                         varSelectedColumn="A3",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 3': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 3': comment.Text}),
+            
+                         varSelectedColumn="A4",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 4': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 4': comment.Text}),
+            
+                         varSelectedColumn="A5",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 5': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 5': comment.Text}),
+            
+                         varSelectedColumn="A6",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 6': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 6': comment.Text}),
+            
+                         varSelectedColumn="A7",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 7': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 7': comment.Text}),
+            
+                         varSelectedColumn="A8",Patch(Advanced,  LookUp(
+                        Advanced,
+                        'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 8': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Advanced Skill 8': comment.Text})
+            
+            
+            
+                        );
+            Set(varSelectedColumn,Blank());
+            Reset([@skillCategory_6]);
+            Navigate('Update Caregivers');
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =15
+        Text: ="UPDATE"
+        X: =1147
+        Y: =400
+        ZIndex: =15
+
