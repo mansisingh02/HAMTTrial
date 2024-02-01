@@ -152,7 +152,7 @@ msftcaregivers As screen:
             Text: =ThisItem.'Caregiver Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =162
-            Y: =8
+            Y: =11
             ZIndex: =3
 
         Separator1 As rectangle:
@@ -201,7 +201,7 @@ msftcaregivers As screen:
             Visible: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(ThisItem.'Caregiver Email')="madhavi.b@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email)  ,true,false)
             Width: =75
             X: =1077
-            Y: =14
+            Y: =11
             ZIndex: =8
 
         Label28 As label:
