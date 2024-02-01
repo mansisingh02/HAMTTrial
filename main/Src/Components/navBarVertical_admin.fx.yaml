@@ -16,7 +16,7 @@ navBarVertical_admin As CanvasComponent:
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =If(gblSelected=2,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        Fill: =If(gblSelected=3,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -24,7 +24,7 @@ navBarVertical_admin As CanvasComponent:
         Image: =Projects_2
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
-            =Set(gblSelected,2);
+            =Set(gblSelected,3);
             Navigate(navBarVertical_admin.projectNav)
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -38,7 +38,7 @@ navBarVertical_admin As CanvasComponent:
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: =If(gblSelected=3,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
+        Fill: =If(gblSelected=2,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -46,7 +46,7 @@ navBarVertical_admin As CanvasComponent:
         Image: =caregivers
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
-            =Set(gblSelected,3);
+            =Set(gblSelected,2);
             Navigate(navBarVertical_admin.caregiversNav);
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -76,21 +76,25 @@ navBarVertical_admin As CanvasComponent:
         Y: =315
         ZIndex: =4
 
-    Image2 As image:
+    Image5_11 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
+        Fill: =If(gblSelected=1,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 38, 106, 1)
         Image: =dashboard
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        ImagePosition: =ImagePosition.Fill
+        OnSelect: |-
+            =Set(gblSelected,1);
+            Navigate(navBarVertical_admin.dasboardNav);
+        PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
-        X: =40
         Y: =75
         ZIndex: =5
 
