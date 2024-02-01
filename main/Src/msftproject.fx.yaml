@@ -112,8 +112,8 @@ msftproject As screen:
         "'Report Header_7' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =121
-            X: =282
+            Width: =97
+            X: =240
             ZIndex: =8
 
             "'Report Label_7' As label":
@@ -141,7 +141,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =70
-            X: =406
+            X: =412
             ZIndex: =10
 
             "'Category Label_5' As label":
@@ -161,8 +161,7 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Type"
                 Width: =101
-                X: =17
-                Y: =16
+                Y: =15
                 ZIndex: =11
 
         "'Description Header_1' As groupContainer.manualLayoutContainer":
@@ -300,7 +299,7 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Status"
                 Width: =45
-                X: =36
+                X: =30
                 Y: =16
                 ZIndex: =21
 
@@ -352,6 +351,34 @@ msftproject As screen:
             X: =875
             Y: =24
             ZIndex: =23
+
+        "'Report Header_20' As groupContainer.manualLayoutContainer":
+            Height: =48
+            LayoutMode: ="manual"
+            Width: =85
+            X: =326
+            ZIndex: =24
+
+            "'Report Label_20' As label":
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =19
+                LineHeight: =1.142857
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =10.5
+                Text: ="CC Name"
+                Width: =71
+                X: =8
+                Y: =15
+                ZIndex: =9
 
     Projects_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -474,10 +501,10 @@ msftproject As screen:
         Items: =Project
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =58
+        TemplateSize: =52
         Width: =1262
         X: =97
-        Y: =260
+        Y: =280
         ZIndex: =53
 
         Label12 As label:
@@ -506,12 +533,11 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.'Project Name'
             Width: =135
-            Y: =13
             ZIndex: =2
 
         Label24_1 As label:
@@ -523,13 +549,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.Description
-            Width: =115
-            X: =278
-            Y: =13
+            Width: =71
+            X: =243
             ZIndex: =3
 
         Label24_2 As label:
@@ -541,13 +566,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.'Project ID'
             Width: =65
-            X: =151
-            Y: =13
+            X: =135
             ZIndex: =4
 
         Label24_3 As label:
@@ -559,13 +583,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.'Project Type'.Value
-            Width: =70
+            Width: =63
             X: =402
-            Y: =13
             ZIndex: =5
 
         Label24_5 As label:
@@ -577,43 +600,13 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.'Primary Owner'.DisplayName
-            Width: =134
-            X: =571
-            Y: =13
+            Width: =108
+            X: =559
             ZIndex: =7
-
-        Label24_6 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =32
-            OnSelect: =Select(Parent)
-            Size: =10.75
-            Text: |+
-                =Concatenate(
-                    ForAll(
-                        Gallery16.Selected.Capability.Value,
-                        LookUp(Capabilities, [@Capability] = Value).Capability & ", "
-                    ),
-                    ""
-                )
-                
-                
-                
-                
-            Width: =134
-            X: =749
-            Y: =20
-            ZIndex: =8
 
         Label24_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -624,13 +617,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.Goal.Value
-            Width: =119
+            Width: =102
             X: =959
-            Y: =13
             ZIndex: =9
 
         Label24_7 As label:
@@ -642,13 +634,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =32
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.Status.Value
-            Width: =112
+            Width: =94
             X: =1061
-            Y: =13
             ZIndex: =10
 
         Button5_12 As button:
@@ -664,8 +655,7 @@ msftproject As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |-
-                =Navigate(msfteditproject, ScreenTransition.Fade, { SelectedItem: Gallery16.Selected })
+            OnSelect: =Navigate(msfteditproject, ScreenTransition.Fade)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -689,13 +679,30 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =58
+            Height: =52
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =9
             Text: =ThisItem.'Group Name'.Value
-            Width: =90
+            Width: =76
             X: =481
             ZIndex: =12
+
+        Label24_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Cost Center Name'.Value
+            Width: =63
+            X: =326
+            ZIndex: =13
 
     "'Report Header_19' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -751,8 +758,8 @@ msftproject As screen:
             Size: =10.5
             Text: ="Goals"
             Width: =56
-            X: =23
-            Y: =17
+            X: =18
+            Y: =20
             ZIndex: =17
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":

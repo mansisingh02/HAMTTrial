@@ -33,7 +33,7 @@ msfteditproject As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="Edit Project"
+        Text: ="Edit"
         Width: =203
         X: =98
         Y: =102
@@ -43,7 +43,7 @@ msfteditproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
-        Default: =varSelectedItem['Project Name']
+        Default: =Gallery16.Selected.'Project Name'
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -193,14 +193,14 @@ msfteditproject As screen:
             =If(
                 DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")),
                 If(
-                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).StartDate, "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).EndDate, "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).EndDate, "dd/mm/yyyy")),
+                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
                     // Dates are within the range and end date is not before start date
                     // You can add additional logic here if needed
                     Notify("Selected dates are within the group's date range", NotificationType.Success),
                     If(
-                        DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).StartDate, "dd/mm/yyyy")),
+                        DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
                         // Start date is before the group's start date
                         Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
                         // Dates are outside the group's date range
@@ -240,14 +240,14 @@ msfteditproject As screen:
             =If(
                 DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")),
                 If(
-                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).StartDate, "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).EndDate, "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).EndDate, "dd/mm/yyyy")),
+                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_3.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
                     // Dates are within the range and end date is not before start date
                     // You can add additional logic here if needed
                     Notify("Selected dates are within the group's date range", NotificationType.Success),
                     If(
-                        DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).StartDate, "dd/mm/yyyy")),
+                        DateValue(Text(msft_DatePicker_2.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
                         // Start date is before the group's start date
                         Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
                         // Dates are outside the group's date range
@@ -762,6 +762,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
+        Default: =Gallery16.Selected.Status.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -960,7 +961,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
-        Default: ="Parent Project"
+        Default: =Gallery16.Selected.'Group Name'.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1487,4 +1488,24 @@ msfteditproject As screen:
         X: =99
         Y: =405
         ZIndex: =81
+
+    "'New Project_9' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: =Gallery16.Selected.'Project Name'
+        Width: =203
+        X: =154
+        Y: =102
+        ZIndex: =82
 
