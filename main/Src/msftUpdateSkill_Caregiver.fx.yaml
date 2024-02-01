@@ -1,9 +1,6 @@
 msftUpdateSkill_Caregiver As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
-    navBarHorizontal_18 As navBarHorizontal:
-        ZIndex: =2
-
     Rectangle3_3 As rectangle:
         BorderColor: =RGBA(237, 237, 237, 1)
         BorderThickness: =2
@@ -323,4 +320,14 @@ msftUpdateSkill_Caregiver As screen:
         X: =1147
         Y: =400
         ZIndex: =15
+
+    navBarVertical_admin_30 As navBarVertical_admin:
+        caregiversNav: =msftcaregivers
+        dasboardNav: =msftDashboard
+        masterDataNav: =msftMasterData
+        projectNav: =msftproject
+        ZIndex: =16
+
+    navBarHorizontal_18 As navBarHorizontal:
+        ZIndex: =17
 
