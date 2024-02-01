@@ -129,7 +129,7 @@ msftcaregivers As screen:
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate(msftUpdatecaregivers)
+        OnSelect: =
         TemplatePadding: =0
         TemplateSize: =35
         Width: =1194
@@ -203,6 +203,23 @@ msftcaregivers As screen:
             X: =1077
             Y: =14
             ZIndex: =8
+
+        Label28 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ")  & ThisItem.Intermediatee.'Intermediate Skill 1'.Value & If(ThisItem.Intermediatee.'Intermediate Skill 1'.Value=Blank(), "", ", ") & ThisItem.Intermediatee.'Intermediate Skill 2'.Value
+            Width: =276
+            X: =179
+            ZIndex: =9
 
     navBar_2 As navBarVertical_admin:
         dasboardNav: =msftDashboard
@@ -283,10 +300,13 @@ msftcaregivers As screen:
         DelayItemLoading: =true
         Height: =67
         Items: |-
-            =Filter(AddColumns(
+            =Filter(
+                AddColumns(
                 Caregivers_1,
-                    "CareGiver",
-                    LookUp(combinedData, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
+                    "Intermediatee",
+                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
+                    "Advancedd",
+                    LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
                     StartsWith('Caregiver Name',search.Text)
                     )
         Layout: =Layout.Vertical
@@ -359,8 +379,8 @@ msftcaregivers As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Caregiver type"
-        X: =814
+        Text: ="Projects"
+        X: =727
         Y: =205
         ZIndex: =45
 
