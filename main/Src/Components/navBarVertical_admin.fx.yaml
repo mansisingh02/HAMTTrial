@@ -89,7 +89,7 @@ navBarVertical_admin As CanvasComponent:
         HoverFill: =RGBA(0, 38, 106, 1)
         Image: =dashboard
         ImagePosition: =ImagePosition.Fill
-        OnSelect: |-
+        OnSelect: |
             =Set(gblSelected,1);
             Navigate(navBarVertical_admin.dasboardNav);
         PressedBorderColor: =RGBA(0, 60, 106, 1)
