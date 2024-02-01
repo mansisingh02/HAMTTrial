@@ -1,4 +1,32 @@
 {
+  "36480150-b53f-4790-91b3-fe6e7b525cf7": {
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "uploadFile"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
+    },
+    "dependents": [],
+    "id": "36480150-b53f-4790-91b3-fe6e7b525cf7"
+  },
   "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a": {
     "appActions": [
       "providers/PowerPlatform.Governance/Operations/Read"
@@ -76,7 +104,9 @@
       "Cost Center"
     ],
     "dependencies": {},
-    "dependents": [],
+    "dependents": [
+      "36480150-b53f-4790-91b3-fe6e7b525cf7"
+    ],
     "id": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
   }
 }
