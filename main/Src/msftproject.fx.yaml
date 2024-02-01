@@ -24,7 +24,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Cost Center Name","Project Type","]
+        Items: =["Cost Center Name","Project Type","Primary Owner","Group","Goals"]
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -35,43 +35,9 @@ msftproject As screen:
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12.75
         Width: =250
-        X: =331
+        X: =347
         Y: =149
         ZIndex: =2
-
-    msft_ComboBox_5 As combobox:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(166, 166, 166, 1)
-        DefaultSelectedItems: =[]
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Value"]
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Find items"]
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Value"]
-        SearchItems: =Search(["Find items"],msft_ComboBox_5.SearchText,"Value")
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =12.75
-        Width: =250
-        X: =610
-        Y: =149
-        ZIndex: =3
 
     "'Table Headers Container' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -873,4 +839,46 @@ msftproject As screen:
         X: =102
         Y: =149
         ZIndex: =60
+
+    Button6 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =Set(SelectedCategory, msft_Dropdown_16.Selected.Value);
+            
+            // Define a variable to store the sorted data
+            Set(SortedData, Project);
+            
+            // Check the selected category and apply sorting accordingly
+            If(SelectedCategory = "Project Type",
+                Set(SortedData, SortByColumns(SortedData, "Project Type", If(SortDescending, Descending, Ascending)))
+                // Replace "ProjectType" with the actual column name
+            );
+            
+            // Clear and collect the sorted data
+            ClearCollect(SortedGalleryItems, SortedData);
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="SORT"
+        Width: =90
+        X: =610
+        Y: =149
+        ZIndex: =61
 
