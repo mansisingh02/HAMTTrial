@@ -5,7 +5,8 @@ msftproject As screen:
         = Set(
                 selectedCapabilities,
                 Filter(Capabilities, Capability in Gallery16.Selected.Capability.Value)
-            )
+            );
+        Set(PageTeamSize, Param("TeamSize"));
     Width: =1366
 
     msft_Dropdown_16 As dropdown:
@@ -23,7 +24,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =["Category"]
+        Items: =["Cost Center Name","Project Type","]
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -430,36 +431,6 @@ msftproject As screen:
         X: =70
         ZIndex: =48
 
-    search_1 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(166, 166, 166, 1)
-        Default: =
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        HintText: ="Search Projects"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PaddingBottom: =9
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Reset: =
-        Size: =10
-        Width: =203
-        X: =102
-        Y: =149
-        ZIndex: =51
-
     msft_Button_13 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -489,15 +460,15 @@ msftproject As screen:
         Text: ="NEW PROJECT"
         VerticalAlign: =VerticalAlign.Top
         Width: =204
-        X: =1112
-        Y: =149
+        X: =1125
+        Y: =147
         ZIndex: =52
 
     Gallery16 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =444
-        Items: =Project
+        Items: =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =52
@@ -752,6 +723,7 @@ msftproject As screen:
             Size: =9
             Text: |+
                 =
+                Concatenate(Concat(LookUp(Capabilities, Capability in ThisItem.Capability).Capability, ", "))
                 
                 
                 
@@ -855,4 +827,50 @@ msftproject As screen:
 
     navBarHorizontal_30 As navBarHorizontal:
         ZIndex: =58
+
+    Label31 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =33
+        Size: =9
+        Text: |
+            =Text(PageTeamSize)
+        Width: =31
+        X: =797
+        Y: =294
+        ZIndex: =59
+
+    TextInput1_8 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(153, 153, 153, 1)
+        Default: =""
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        HintText: ="Enter Project Name"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =12
+        Visible: =varTabSelected=1
+        Width: =217
+        X: =102
+        Y: =149
+        ZIndex: =60
 

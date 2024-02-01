@@ -296,6 +296,38 @@ msfteditproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: =Distinct(Caregivers_1,'Caregiver Name')
+        OnChange: |
+            =Set(SelectedCaregiver, msft_Dropdown_12.Selected.Value);
+            Set(TempSelectedCaregiver, SelectedCaregiver); 
+            Reset(msft_Dropdown_12);
+            Set(PrimaryOwnerMode, false);
+            
+            // Check if the caregiver already exists in the collection
+            If(
+                !IsEmpty(Filter(CaregiverData, Caregiver = TempSelectedCaregiver)),
+                // Update the existing record
+                UpdateIf(
+                    CaregiverData,
+                    Caregiver = TempSelectedCaregiver,
+                    {
+                        Discipline:If(PrimaryOwnerMode, SelectedDiscipline, SelectedCaregiverDiscipline),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, SelectedCaregiverPercentage)
+                    }
+                ),
+                // Add a new record if the caregiver doesn't exist
+                Collect(
+                    CaregiverData,
+                    {
+                        Caregiver: TempSelectedCaregiver,
+                        Discipline: If(PrimaryOwnerMode, SelectedDiscipline, ""),
+                        AllocationPercentage: If(PrimaryOwnerMode, SelectedAllocation, 0)
+                    }
+                )
+            );
+            Set(GlobalDistinctCount, 0);
+            ClearCollect(DistinctCaregivers, Distinct(CaregiverData, Caregiver));
+            Set(TempCgCount, CountRows(DistinctCaregivers));
+            Navigate(msftproject, ScreenTransition.Fade, { TeamSize: GlobalDistinctCount });
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
