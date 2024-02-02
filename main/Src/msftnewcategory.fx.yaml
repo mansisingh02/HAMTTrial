@@ -257,21 +257,6 @@ msftnewcategory As screen:
         Y: =158
         ZIndex: =16
 
-    Label6_22 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(168, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =11
-        Text: ="*"
-        X: =183
-        Y: =269
-        ZIndex: =17
-
     Icon1_40 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(0, 120, 212, 1)
@@ -287,9 +272,10 @@ msftnewcategory As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Title of the Skill you wish to add (Eg. ReactJS, SQL)"
         Width: =13
         X: =381
-        Y: =178
+        Y: =172
         ZIndex: =18
 
     Icon1_41 As icon.Help:
@@ -307,6 +293,7 @@ msftnewcategory As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The Job Description for which you wish to add this skillset"
         Width: =13
         X: =717
         Y: =174
