@@ -5750,6 +5750,47 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftnewdiscipline.msft_Button_42.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftnewdiscipline.msft_Button_42.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 31,
+                  "charOffset": 242,
+                  "snippet": {
+                    "text": "{ SelectedTab: varTabSelected }"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftnewdiscipline",
+                "type": "msftnewdiscipline.msft_Button_42"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text",
+              "Record"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftnewproject.msft_Button_27.OnSelect"
                 }
               ],
@@ -5823,7 +5864,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropSchema-SameKind",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6105,7 +6146,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6226,7 +6267,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6267,7 +6308,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 9
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -21734,36 +21775,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.vartabselected"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.vartabselected",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "vartabselected",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msfteditdiscipline.Capability_1.Text"
                 }
               ],
@@ -23868,6 +23879,20 @@
               }
             },
             {
+              "id": "app-ErrBadType-ExpectedType-ProvidedType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
               "id": "app-ErrIncompatibleRulePropSchema-SameKind",
               "messageStrings": {
                 "issue": {
@@ -23890,20 +23915,6 @@
               "messageStrings": {
                 "issue": {
                   "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrBadType-ExpectedType-ProvidedType",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
                 }
               },
               "properties": {
@@ -24047,7 +24058,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftMasterData\" is 317, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftMasterData\" is 307, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
