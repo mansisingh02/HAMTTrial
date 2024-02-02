@@ -372,7 +372,7 @@ msfttechnology As screen:
         Font: =Font.'Segoe UI'
         Height: =34
         Size: =13
-        Text: =CountRows(Gallery9.AllItems) + CountRows(Gallery9.AllItems)
+        Text: =CountRows(Gallery9.AllItems) + CountRows(Gallery9_1.AllItems) + CountRows(Gallery9_2.AllItems)
         Width: =45
         X: =936
         Y: =288
@@ -381,13 +381,42 @@ msfttechnology As screen:
     Gallery9 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =169
+        Height: =124
         Items: =Filter(Beginner,'Beginner Skill 1'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 2'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 3'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 4'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 5'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 6'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 7'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 8'.Value=Gallery1_2.Selected.'Skill Name')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Width: =203
+        Visible: =false
+        Width: =143
         X: =154
-        Y: =460
+        Y: =504
         ZIndex: =44
+
+    Gallery9_1 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =124
+        Items: =Filter(Intermediate,'Intermediate Skill 1'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 2'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 3'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 4'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 5'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 6'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 7'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 8'.Value=Gallery1_2.Selected.'Skill Name')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =143
+        X: =315
+        Y: =504
+        ZIndex: =45
+
+    Gallery9_2 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =124
+        Items: =Filter(Intermediate,'Intermediate Skill 1'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 2'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 3'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 4'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 5'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 6'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 7'.Value=Gallery1_2.Selected.'Skill Name' || 'Intermediate Skill 8'.Value=Gallery1_2.Selected.'Skill Name')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =143
+        X: =335
+        Y: =524
+        ZIndex: =46
 
