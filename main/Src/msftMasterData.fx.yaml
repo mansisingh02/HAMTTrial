@@ -1680,47 +1680,31 @@ msftMasterData As screen:
         Items: =Filter('Cost Center', StartsWith('Cost Center Name',TextInput1_7.Text) || StartsWith(CCC,TextInput1_7.Text))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |
+        OnSelect: |-
             =UpdateContext({TempCount: 0});
             ClearCollect(
-                FilteredTechnology,
+                FilteredCostCenters_Project,
                 Filter(
-                    'Caregiver Skills',
-                    'Beginner Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 8'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Beginner Skill 9'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Intermediate Skill 8'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 1'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 2'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 3'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 4'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 5'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 6'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 7'.Value = Gallery1_4.Selected.'Skill Name' ||
-                    'Advanced Skill 8'.Value = Gallery1_4.Selected.'Skill Name'
+                    Project,
+                    'Cost Center Name'.Value = Gallery1_4.Selected.'Cost Center Name'
                 )
             );
-            UpdateContext({TempCount: CountRows(FilteredTechnology)});
+            UpdateContext({TempCount: CountRows(FilteredCostCenters_Project)});
+            ClearCollect(
+                FilteredCostCenters_Caregiver,
+                Filter(
+                    Caregivers_1,
+                    'Cost Center Name'.Value = Gallery1_4.Selected.'Cost Center Name'
+                )
+            );
+            UpdateContext({TempCountCaregiver: CountRows(FilteredCostCenters_Caregiver)});
             
             Navigate(
-                msfttechnology,
+                msftprojecttype,
                 ScreenTransition.Fade,
                 {
-                    SelectedTechnology: Gallery1_4.Selected.'Skill Name',
-                    FilteredTechnology: FilteredTechnology,
+                    SelectedGroup: LookUp(Gallery1_4.AllItems, 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name'),
+                    FilteredCostCenters: FilteredCostCenters,
                     TempCount: TempCount
                 }
             )
