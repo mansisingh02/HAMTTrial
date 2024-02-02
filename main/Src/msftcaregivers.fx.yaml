@@ -556,7 +556,6 @@ msftcaregivers As screen:
         OnSelect: |-
             =uploadFile.Run({file: { contentBytes : Last(attachCard.Attachments).Value, name : Last(attachCard.Attachments).Name}});
             Reset(attachCard)
-            Set(fileName,Last(attachCard.Attachments).Name);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
