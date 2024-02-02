@@ -2,7 +2,9 @@ msfttechnology As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
-        =
+        =ClearCollect(FilteredBeginnerSkills, {});
+        ClearCollect(FilteredIntermediateSkills, {});
+        ClearCollect(FilteredAdvancedSkills, {});
     Width: =1366
 
     "'Report Header' As groupContainer.manualLayoutContainer":
@@ -182,34 +184,6 @@ msfttechnology As screen:
             Y: =5
             ZIndex: =18
 
-    "'Column - Header 6' As groupContainer.manualLayoutContainer":
-        Height: =112
-        LayoutMode: ="manual"
-        Width: =244
-        X: =837
-        Y: =260
-        ZIndex: =19
-
-        "'47' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =16
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="47"
-            Width: =19
-            X: =114.5
-            Y: =48
-            ZIndex: =20
-
     Category As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -386,4 +360,21 @@ msfttechnology As screen:
 
     navBarHorizontal_8 As navBarHorizontal:
         ZIndex: =42
+
+    Label32 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =34
+        Size: =13
+        Text: =Text(TempCounter)
+        Width: =45
+        X: =936
+        Y: =288
+        ZIndex: =43
 

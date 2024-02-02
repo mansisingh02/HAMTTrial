@@ -921,9 +921,7 @@ msftMasterData As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |+
-            =UpdateContext({TempCount: 0});
-            
-            ClearCollect(
+            =ClearCollect(
                 FilteredBeginnerSkills,
                 Filter(
                     Beginner,
@@ -994,17 +992,18 @@ msftMasterData As screen:
                 )
             );
             
-            UpdateContext({TempCount: CountRows(FilteredBeginnerSkills) + CountRows(FilteredIntermediateSkills) + CountRows(FilteredAdvancedSkills)});
+            Set(
+                TempCounter, 
+                CountRows(FilteredBeginnerSkills) + CountRows(FilteredIntermediateSkills) + CountRows(FilteredAdvancedSkills)
+            );
+            
+            UpdateContext({TempCounter: 0});
             
             Navigate(
                 msfttechnology,
                 ScreenTransition.Fade,
                 {
-                    SelectedTechnology: Gallery1_2.Selected.'Skill Name',
-                    FilteredBeginnerSkills: FilteredBeginnerSkills,
-                    FilteredIntermediateSkills: FilteredIntermediateSkills,
-                    FilteredAdvancedSkills: FilteredAdvancedSkills,
-                    TempCount: TempCount
+                    TempCounter: TempCounter
                 }
             )
             
