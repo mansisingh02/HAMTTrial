@@ -1,6 +1,7 @@
 msftnewdiscipline As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =popuptwo
     Width: =1366
 
     "'New Category_4' As label":
@@ -131,7 +132,7 @@ msftnewdiscipline As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =70
-        ZIndex: =9
+        ZIndex: =6
 
     "'Rectangle 32_11' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -144,7 +145,7 @@ msftnewdiscipline As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1296.49914550781
         X: =69.50085449219
-        ZIndex: =10
+        ZIndex: =7
 
     msft_Button_42 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -192,7 +193,7 @@ msftnewdiscipline As screen:
         Width: =130
         X: =1204
         Y: =693
-        ZIndex: =11
+        ZIndex: =8
 
     msft_Button_41 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -227,7 +228,7 @@ msftnewdiscipline As screen:
         Width: =143
         X: =89
         Y: =693
-        ZIndex: =12
+        ZIndex: =9
 
     Label6_35 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -242,7 +243,7 @@ msftnewdiscipline As screen:
         Text: ="*"
         X: =206
         Y: =157
-        ZIndex: =15
+        ZIndex: =10
 
     Label6_36 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -257,7 +258,7 @@ msftnewdiscipline As screen:
         Text: ="*"
         X: =497
         Y: =157
-        ZIndex: =16
+        ZIndex: =11
 
     Icon1_43 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -271,21 +272,106 @@ msftnewdiscipline As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Help
+        OnSelect: =Set(popuptwo,true)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =13
         X: =343
         Y: =171
-        ZIndex: =17
+        ZIndex: =12
 
     navBarVertical_admin_4 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData
         projectNav: =msftproject
-        ZIndex: =18
+        ZIndex: =13
 
     navBarHorizontal_17 As navBarHorizontal:
-        ZIndex: =19
+        ZIndex: =14
+
+    Rectangle6_2 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 0.5)
+        FocusedBorderThickness: =4
+        Height: =768
+        HoverFill: =RGBA(230, 230, 230, 0.5)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =popuptwo=true
+        Width: =1366
+        ZIndex: =15
+
+    Group2_3 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =23
+
+        Rectangle4_3 As rectangle:
+            BorderColor: =RGBA(179, 179, 179, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =150
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =popuptwo
+            Width: =312
+            X: =91
+            Y: =268
+            ZIndex: =16
+
+        Label32_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =71
+            Size: =10.75
+            Text: ="Enter the New Discipline Name, (this can be the Job Description e.g. UI/UX, Data Analytics Engineer)"
+            Visible: =popuptwo
+            Width: =312
+            X: =91
+            Y: =268
+            ZIndex: =17
+
+        Button7_3 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(popuptwo,false)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10
+            Text: ="OK, GOT IT!"
+            Visible: =popuptwo
+            Width: =97
+            X: =199
+            Y: =353
+            ZIndex: =18
 

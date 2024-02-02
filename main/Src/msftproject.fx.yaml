@@ -834,7 +834,6 @@ msftproject As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =12
-        Visible: =varTabSelected=1
         Width: =217
         X: =102
         Y: =149
@@ -862,8 +861,7 @@ msftproject As screen:
             
             // Check the selected category and apply sorting accordingly
             If(SelectedCategory = "Project Type",
-                Set(SortedData, SortByColumns(SortedData, "Project Type", If(SortDescending, Descending, Ascending)))
-                // Replace "ProjectType" with the actual column name
+                Set(SortedData, SortByColumns(SortedData, "[Project Type]", If(SortDescending, Descending, Ascending)))
             );
             
             // Clear and collect the sorted data
