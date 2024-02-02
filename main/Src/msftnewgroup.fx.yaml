@@ -161,25 +161,29 @@ msftnewgroup As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Patch(
-               'Project Parent Group',
-               Defaults('Project Parent Group'),
-               {
-                  'Group Name': msft_TextInput_6.Text,
-                  Description: msft_TextInput_7.Text,
-                  'Start Date': DateValue(Text(DatePicker1.SelectedDate, "mm/dd/yyyy")),
-                  'End Date': DateValue(Text(DatePicker1_1.SelectedDate, "mm/dd/yyyy"))
-               }
-            );
-            
-            Refresh('Project Parent Group');
-            
-            Reset(msft_TextInput_6);
-            Reset(msft_TextInput_7);
-            Reset(DatePicker1);
-            Reset(DatePicker1_1);
-            Navigate(msftMasterData);
+        OnSelect: |
+            =If(
+                IsBlank(msft_TextInput_6.Text) || IsBlank(DatePicker1.SelectedDate) || IsBlank(DatePicker1_1.SelectedDate),
+                // Show an error message for any blank fields
+                Notify("Please fill in all fields before saving.", NotificationType.Error),
+                // If no fields are blank, proceed with patching the data
+                Patch(
+                    'Project Parent Group',
+                    Defaults('Project Parent Group'),
+                    {
+                        'Group Name': msft_TextInput_6.Text,
+                        Description: msft_TextInput_7.Text,
+                        'Start Date': DateValue(Text(DatePicker1.SelectedDate, "mm/dd/yyyy")),
+                        'End Date': DateValue(Text(DatePicker1_1.SelectedDate, "mm/dd/yyyy"))
+                    }
+                );
+                Refresh('Project Parent Group');
+                Reset(msft_TextInput_6);
+                Reset(msft_TextInput_7);
+                Reset(DatePicker1);
+                Reset(DatePicker1_1);
+                Navigate(msftMasterData)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -370,21 +374,6 @@ msftnewgroup As screen:
         X: =177
         Y: =365
         ZIndex: =16
-
-    Label6_28 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(168, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =11
-        Text: ="*"
-        X: =497
-        Y: =157
-        ZIndex: =17
 
     Icon1_44 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
