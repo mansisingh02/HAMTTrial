@@ -372,9 +372,22 @@ msfttechnology As screen:
         Font: =Font.'Segoe UI'
         Height: =34
         Size: =13
-        Text: =Text(TempCounter)
+        Text: =CountRows(Gallery9.AllItems) + CountRows(Gallery9.AllItems)
         Width: =45
         X: =936
         Y: =288
         ZIndex: =43
+
+    Gallery9 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =169
+        Items: =Filter(Beginner,'Beginner Skill 1'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 2'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 3'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 4'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 5'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 6'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 7'.Value=Gallery1_2.Selected.'Skill Name' || 'Beginner Skill 8'.Value=Gallery1_2.Selected.'Skill Name')
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Width: =203
+        X: =154
+        Y: =460
+        ZIndex: =44
 
