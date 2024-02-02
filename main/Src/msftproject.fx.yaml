@@ -7,6 +7,8 @@ msftproject As screen:
                 Filter(Capabilities, Capability in Gallery16.Selected.Capability.Value)
             );
         Set(PageTeamSize, Param("TeamSize"));
+        Set(SelectedColumn, "");
+        Set(SelectedValue, "");
     Width: =1366
 
     msft_Dropdown_16 As dropdown:
@@ -688,8 +690,11 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: |+
-                =
-                Concatenate(Concat(LookUp(Capabilities, Capability in ThisItem.Capability).Capability, ", "))
+                =Concatenate(
+                    LookUp(Capabilities, ID = ThisItem.Capability).Capability,
+                    ", "
+                )
+                
                 
                 
                 
@@ -854,18 +859,8 @@ msftproject As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =Set(SelectedCategory, msft_Dropdown_16.Selected.Value);
-            
-            // Define a variable to store the sorted data
-            Set(SortedData, Project);
-            
-            // Check the selected category and apply sorting accordingly
-            If(SelectedCategory = "Project Type",
-                Set(SortedData, SortByColumns(SortedData, "[Project Type]", If(SortDescending, Descending, Ascending)))
-            );
-            
-            // Clear and collect the sorted data
-            ClearCollect(SortedGalleryItems, SortedData);
+            =Set(SelectedColumn, Dropdown1.Selected.Value); // Replace Dropdown1 with the actual name of your dropdown
+            Set(SelectedValue, ""); // Clear the selected value initially
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -876,7 +871,37 @@ msftproject As screen:
         Size: =15
         Text: ="SORT"
         Width: =90
-        X: =610
+        X: =606
         Y: =149
         ZIndex: =61
+
+    msft_Dropdown_17 As dropdown:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct(Filter(Project, ColumnName = SelectedColumn), ColumnName)
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12.75
+        Width: =250
+        X: =710
+        Y: =150
+        ZIndex: =62
 
