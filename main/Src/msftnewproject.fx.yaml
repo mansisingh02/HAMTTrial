@@ -637,7 +637,7 @@ msftnewproject As screen:
                             AllocationPercentage: SelectedCaregiverPercentage
                         }
                     );
-                    //Reset(msft_Dropdown_22);
+                    Reset(msft_Dropdown_22);
                     Set(SelectedCaregiverPercentage, 0)
                 )
             );
@@ -1845,10 +1845,7 @@ msftnewproject As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =13
-            Text: |
-                =Text(
-                    If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
-                )
+            Text: =ThisItem.Discipline
             X: =214
             Y: =52
             ZIndex: =2
