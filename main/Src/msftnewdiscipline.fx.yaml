@@ -245,21 +245,6 @@ msftnewdiscipline As screen:
         Y: =157
         ZIndex: =10
 
-    Label6_36 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(168, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =11
-        Text: ="*"
-        X: =497
-        Y: =157
-        ZIndex: =11
-
     Icon1_43 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(0, 120, 212, 1)
@@ -272,10 +257,10 @@ msftnewdiscipline As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Help
-        OnSelect: =Set(popuptwo,true)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Name of the discipline you wish to add (This can be a Job Description for e.g. Data Analytics Engineer/UX)"
         Width: =13
         X: =343
         Y: =171
