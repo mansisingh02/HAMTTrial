@@ -161,21 +161,25 @@ msftnewcategory2 As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Patch(
-               Capabilities,
-               Defaults(Capabilities),
-               {
-                  Capability: msft_TextInput_4.Text,
-                  Description: msft_TextInput_5.Text
-               }
-            );
-            
-            Refresh(Capabilities);
-            
-            Reset(msft_TextInput_5);
-            Reset(msft_TextInput_4);
-            Navigate(msftMasterData);
+        OnSelect: |
+            =If(
+                IsBlank(msft_TextInput_4.Text),
+                // Show an error message for Capability being blank
+                Notify("Capability cannot be blank. Please fill in the field.", NotificationType.Error),
+                // If Capability is not blank, proceed with patching the data
+                Patch(
+                    Capabilities,
+                    Defaults(Capabilities),
+                    {
+                        Capability: msft_TextInput_4.Text,
+                        Description: msft_TextInput_5.Text
+                    }
+                );
+                Refresh(Capabilities);
+                Reset(msft_TextInput_5);
+                Reset(msft_TextInput_4);
+                Navigate(msftMasterData)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
