@@ -694,7 +694,7 @@ msftnewproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: ="Project Category"
+        Text: ="Project Type"
         X: =330
         Y: =281
         ZIndex: =28
@@ -1090,7 +1090,7 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =13
         Text: ="*"
-        X: =442
+        X: =417
         Y: =281
         ZIndex: =44
 
@@ -1134,7 +1134,7 @@ msftnewproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: ="In Flight PI"
+        Text: ="In Flight Version"
         X: =93
         Y: =615
         ZIndex: =47
@@ -1150,7 +1150,7 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =45
         Size: =11
-        Text: ="In Prod PI"
+        Text: ="In Prod Version"
         Width: =184
         X: =373
         Y: =612
@@ -1166,7 +1166,7 @@ msftnewproject As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =37
-        HintText: ="In Flight PI"
+        HintText: ="In Flight Version"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1196,7 +1196,7 @@ msftnewproject As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Height: =38
-        HintText: ="In Prod PI"
+        HintText: ="In Prod Version"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1269,26 +1269,6 @@ msftnewproject As screen:
         Y: =659
         ZIndex: =53
 
-    Icon1_1 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =13
-        X: =284
-        Y: =134
-        ZIndex: =54
-
     Icon1_2 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
         Color: =RGBA(0, 120, 212, 1)
@@ -1304,6 +1284,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The parent group in which your project can be classified. The Start and End dates for the Project have to lie within the Group's start and end dates."
         Width: =13
         X: =523
         Y: =133
@@ -1324,30 +1305,11 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Present running status of the project"
         Width: =13
         X: =284
         Y: =212
         ZIndex: =56
-
-    Icon1_4 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =13
-        X: =523
-        Y: =212
-        ZIndex: =57
 
     Icon1_5 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1364,6 +1326,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The authority to which the project can be assigned. This can be a 4P/5P/M2/M3/M4/M5/E1/E2"
         Width: =13
         X: =285
         Y: =294
@@ -1384,6 +1347,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The business category under which the project can be classfied"
         Width: =13
         X: =523
         Y: =294
@@ -1404,6 +1368,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The technical classifications accustomed for the project, can be one or more"
         Width: =13
         X: =285
         Y: =371
@@ -1424,50 +1389,11 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The envisioned goal in which the project lies"
         Width: =13
         X: =523
         Y: =371
         ZIndex: =61
-
-    Icon1_9 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =13
-        X: =284
-        Y: =453
-        ZIndex: =62
-
-    Icon1_18 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =13
-        X: =523
-        Y: =455
-        ZIndex: =63
 
     Icon1_19 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1484,6 +1410,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The release versions/notes if the project is underway"
         Width: =13
         X: =232
         Y: =627
@@ -1504,6 +1431,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="If in production, toggle to true, else false"
         Width: =13
         X: =341
         Y: =627
@@ -1524,30 +1452,11 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="The release notes/version while in Production"
         Width: =13
         X: =510
         Y: =627
         ZIndex: =66
-
-    Icon1_22 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =13
-        X: =744
-        Y: =196
-        ZIndex: =67
 
     Icon1_23 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1564,6 +1473,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Discipline (job description) under which the caregiver can be classified for this project"
         Width: =13
         X: =956
         Y: =195
@@ -1584,6 +1494,7 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Amount of bandwidth of a caregiver allocated to a project. Can be more than 100% when totalled"
         Width: =13
         X: =1168
         Y: =195
