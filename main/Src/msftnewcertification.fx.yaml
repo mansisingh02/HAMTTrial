@@ -1,9 +1,7 @@
 msftnewcertification As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =Set(popup,false);
-        Set(popuptwo,false)
+    OnVisible: =
     Width: =1366
 
     "'New Technology_1' As label":
@@ -124,9 +122,10 @@ msftnewcertification As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Enter the full name of the certification"
         Width: =13
         X: =381
-        Y: =178
+        Y: =171
         ZIndex: =6
 
     Icon1_48 As icon.Help:
@@ -141,10 +140,11 @@ msftnewcertification As screen:
         HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Help
-        OnSelect: =Set(popup, true)
+        OnSelect: =
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Validity/Expiration Period of the Certificaten(if any)"
         Width: =13
         X: =717
         Y: =174
@@ -189,154 +189,4 @@ msftnewcertification As screen:
 
     navBarHorizontal_31 As navBarHorizontal:
         ZIndex: =10
-
-    Rectangle6_1 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(230, 230, 230, 0.5)
-        FocusedBorderThickness: =4
-        Height: =768
-        HoverFill: =RGBA(230, 230, 230, 0.5)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: |-
-            =popuptwo=true ||
-            popup=true
-        Width: =1366
-        ZIndex: =11
-
-    Group2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =20
-
-        Rectangle4 As rectangle:
-            BorderColor: =RGBA(179, 179, 179, 1)
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =118
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =popup
-            Width: =312
-            X: =592
-            Y: =268
-            ZIndex: =12
-
-        Label32 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =10.75
-            Text: ="The Validity Period Duration of your certification (if any)"
-            Visible: =popup
-            Width: =285
-            X: =619
-            Y: =279
-            ZIndex: =13
-
-        Button7 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =Set(popup,false)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =10
-            Text: ="OK, GOT IT!"
-            Visible: =popup
-            Width: =97
-            X: =707
-            Y: =330
-            ZIndex: =14
-
-    Group2_1 As group:
-        Height: =5
-        Width: =5
-        X: =20
-        Y: =20
-        ZIndex: =23
-
-        Rectangle4_1 As rectangle:
-            BorderColor: =RGBA(179, 179, 179, 1)
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =118
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =popuptwo
-            Width: =312
-            X: =231
-            Y: =268
-            ZIndex: =15
-
-        Label32_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =10.75
-            Text: ="Enter the Certification/Training Course Name"
-            Visible: =popuptwo
-            Width: =285
-            X: =258
-            Y: =279
-            ZIndex: =16
-
-        Button7_1 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =Set(popuptwo,false)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =10
-            Text: ="OK, GOT IT!"
-            Visible: =popuptwo
-            Width: =97
-            X: =346
-            Y: =330
-            ZIndex: =17
 
