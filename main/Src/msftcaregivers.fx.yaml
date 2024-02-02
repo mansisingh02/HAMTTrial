@@ -500,42 +500,6 @@ msftcaregivers As screen:
         projectNav: =msftproject
         ZIndex: =50
 
-    attachCard As attachments:
-        BorderColor: =
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 60, 106, 1)
-        DisabledColor: =RGBA(0, 60, 106, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =106
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        IsInDataCard: =true
-        ItemColor: =RGBA(0, 0, 0, 1)
-        ItemFill: =RGBA(0, 120, 212, 1)
-        ItemHoverColor: =RGBA(51, 51, 51, 1)
-        ItemHoverFill: =RGBA(212, 212, 212, 1)
-        Items: =
-        ItemSpacing: =12
-        NoAttachmentsColor: =RGBA(166, 166, 166, 1)
-        NoAttachmentsText: =
-        OnAddFile: =
-        PaddingBottom: =5
-        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Tooltip: =
-        Width: =128
-        X: =954
-        Y: =59
-        ZIndex: =54
-
     navBarHorizontal_29 As navBarHorizontal:
         ZIndex: =55
 
@@ -553,9 +517,7 @@ msftcaregivers As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =uploadFile.Run({file: { contentBytes : Last(attachCard.Attachments).Value, name : Last(attachCard.Attachments).Name}});
-            Reset(attachCard)
+        OnSelect: =Navigate(msftUploadData)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32

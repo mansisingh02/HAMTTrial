@@ -637,7 +637,7 @@ msftnewproject As screen:
                             AllocationPercentage: SelectedCaregiverPercentage
                         }
                     );
-                    Reset(msft_Dropdown_22);
+                    //Reset(msft_Dropdown_22);
                     Set(SelectedCaregiverPercentage, 0)
                 )
             );
@@ -1704,7 +1704,9 @@ msftnewproject As screen:
         Font: =Font.'Segoe UI'
         Height: =45
         Size: =10.75
-        Text: =If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
+        Text: |-
+            =//If(IsBlank(SelectedCaregiverDiscipline), "Select a Discipline", SelectedCaregiverDiscipline)
+            msft_Dropdown_22.Selected.Value
         Width: =182
         X: =779
         Y: =318
@@ -1804,14 +1806,14 @@ msftnewproject As screen:
     Gallery2 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =375
+        Height: =325
         Items: =CaregiverData
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =280
+        TemplateSize: =230
         Width: =735
         X: =565
-        Y: =310
+        Y: =360
         ZIndex: =85
 
         Label19 As label:
