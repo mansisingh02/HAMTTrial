@@ -1859,18 +1859,7 @@ msftnewproject As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =13
-            Text: |-
-                =Text(
-                    If(
-                        SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage = 0,
-                        "Select the Caregiver Percentage",
-                        If(
-                            SelectedCaregiverDiscipline <> "" && SelectedCaregiverPercentage <> 0,
-                            Text(SelectedCaregiverPercentage, "0%"),
-                            ""
-                        )
-                    )
-                )
+            Text: =ThisItem.AllocationPercentage
             X: =428
             Y: =52
             ZIndex: =3
