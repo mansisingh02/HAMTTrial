@@ -946,50 +946,6 @@ msftMasterData As screen:
                 )
             );*/
              
-                AddColumns(
-                    Beginner,
-                    "Beginner 1",
-                    LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 1'].Value
-                        ),
-                        "Beginner 2",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 2'].Value
-                        ),
-                        "Beginner 3",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 3'].Value
-                        ),
-                        "Beginner 4",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 4'].Value
-                        ),
-                        "Beginner 5",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 5'].Value
-                        ),
-                        "Beginner 6",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 6'].Value
-                        ),
-                        "Beginner 7",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 7'].Value
-                        ),
-                        "Beginner 8",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 8'].Value
-                        )
-                        );
-            
             ClearCollect(
                 FilteredIntermediateSkills,
                 Filter(
@@ -2030,4 +1986,91 @@ msftMasterData As screen:
 
     navBarHorizontal_5 As navBarHorizontal:
         ZIndex: =52
+
+    Gallery13 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =92
+        Items: |-
+            =AddColumns(
+                    Beginner,
+                    "Beginner 1",
+                    LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 1'].Value
+                        ),
+                        "Beginner 2",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 2'].Value
+                        ),
+                        "Beginner 3",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 3'].Value
+                        ),
+                        "Beginner 4",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 4'].Value
+                        ),
+                        "Beginner 5",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 5'].Value
+                        ),
+                        "Beginner 6",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 6'].Value
+                        ),
+                        "Beginner 7",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 7'].Value
+                        ),
+                        "Beginner 8",
+                        LookUp(
+                        Skills_1,
+                        'Skill ID' = Beginner[@'Beginner Skill 8'].Value
+                        )
+                        )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =72
+        Width: =280
+        X: =308
+        Y: =64
+        ZIndex: =53
+
+        Label33 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+    Label34 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =Gallery13.AllItemsCount
+        X: =651
+        Y: =99
+        ZIndex: =54
 
