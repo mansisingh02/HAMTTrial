@@ -1975,50 +1975,7 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =92
-        Items: |-
-            =AddColumns(
-                    Beginner,
-                    "Beginner 1",
-                    LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 1'].Value
-                        ),
-                        "Beginner 2",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 2'].Value
-                        ),
-                        "Beginner 3",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 3'].Value
-                        ),
-                        "Beginner 4",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 4'].Value
-                        ),
-                        "Beginner 5",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 5'].Value
-                        ),
-                        "Beginner 6",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 6'].Value
-                        ),
-                        "Beginner 7",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 7'].Value
-                        ),
-                        "Beginner 8",
-                        LookUp(
-                        Skills_1,
-                        'Skill ID' = Beginner[@'Beginner Skill 8'].Value
-                        )
-                        )
+        Items: =Filter(Beginner,'Beginner Skill 1'.Value=Gallery1_2.Selected.'Skill Name')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =72
