@@ -735,7 +735,14 @@ msftnewproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: |+
-            =Distinct(Project, Status)
+            =ClearCollect(
+                StatusChoices,
+                Choices(Project.Status).Value
+            );
+            
+            StatusChoices
+            
+            
             
         PaddingBottom: =8
         PaddingLeft: =12
