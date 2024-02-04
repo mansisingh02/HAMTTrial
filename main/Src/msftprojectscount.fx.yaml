@@ -118,20 +118,21 @@ msftprojectscount As screen:
         Y: =111
         ZIndex: =34
 
-    Gallery13 As gallery.variableTemplateHeightGallery:
+    Gallery19 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =430
-        Items: |
-            =FilteredCostCenters_Project
+        Height: =435
+        Items: =FilteredCostCenters_Project
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =422
+        TemplateSize: =84
+        Width: =1172
+        WrapCount: =3
         X: =108
         Y: =249
         ZIndex: =35
 
-        Label36 As label:
+        Label38 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -143,7 +144,6 @@ msftprojectscount As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Project Name'
-            X: =3
-            Y: =6
+            Y: =39
             ZIndex: =1
 
