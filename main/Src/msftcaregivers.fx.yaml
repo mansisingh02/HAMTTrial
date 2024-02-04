@@ -20,7 +20,7 @@ msftcaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
-        Default: =
+        Default: =searchVar
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -61,10 +61,11 @@ msftcaregivers As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
-            =searchClass.Selected.Value=Blank();
-            searchLevel.Selected.Value=Blank();
-            searchDesignation.Selected.Value=Blank();
-            Reset(search);
+            =//searchClass.Selected.Value=Blank();
+            Reset([@searchLevel]);
+            //searchDesignation.Selected.Value=Blank();
+            Set(searchVar,"");
+            Reset(search)
             
         PaddingBottom: =7
         PaddingLeft: =32
@@ -221,6 +222,23 @@ msftcaregivers As screen:
             X: =179
             ZIndex: =9
 
+        Label28_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =ThisItem.'Primary Allocation'.Value
+            Width: =377
+            X: =580
+            ZIndex: =10
+
     Label2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -299,7 +317,7 @@ msftcaregivers As screen:
                     LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
                     "Advancedd",
                     LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
-                    StartsWith('Caregiver Name',search.Text)
+                    StartsWith('Caregiver Name',search.Text) && (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank()) 
                     )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -393,40 +411,6 @@ msftcaregivers As screen:
         Y: =205
         ZIndex: =46
 
-    searchDesignation As dropdown:
-        AllowEmptySelection: =true
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Default: ="Search Designation"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FontWeight: =FontWeight.Lighter
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Caregivers_1,Designation)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Reset: =
-        SelectionColor: =RGBA(0, 0, 0, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =12
-        Width: =268
-        X: =304
-        Y: =149
-        ZIndex: =47
-
     searchLevel As dropdown:
         AllowEmptySelection: =true
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -436,7 +420,7 @@ msftcaregivers As screen:
         ChevronFill: =RGBA(51, 51, 51, 1)
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Default: ="Search Level"
+        Default: ="Select Level"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -455,43 +439,10 @@ msftcaregivers As screen:
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12
-        Width: =99
-        X: =590
+        Width: =237
+        X: =363
         Y: =149
         ZIndex: =48
-
-    searchClass As dropdown:
-        AllowEmptySelection: =true
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Default: ="Search Level"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Caregivers_1,'Caregiver Class'.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Reset: =
-        SelectionColor: =RGBA(0, 0, 0, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =12
-        Width: =126
-        X: =706
-        Y: =149
-        ZIndex: =49
 
     navBarVertical_admin_27 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
@@ -536,4 +487,20 @@ msftcaregivers As screen:
         X: =1082
         Y: =119
         ZIndex: =56
+
+    Label33 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =10
+        Text: ="Select Level"
+        Visible: =If(searchLevel.Selected.Value=Blank(),true,false)
+        X: =373
+        Y: =149
+        ZIndex: =57
 
