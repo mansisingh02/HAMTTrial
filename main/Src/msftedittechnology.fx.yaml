@@ -160,10 +160,10 @@ msftedittechnology As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
         Size: =15
         Text: ="CANCEL"
         VerticalAlign: =VerticalAlign.Top
@@ -187,7 +187,7 @@ msftedittechnology As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': Dropdown1.Selected.Value, Discipline: Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
+            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': TextInput2_9, Discipline: Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
@@ -227,39 +227,6 @@ msftedittechnology As screen:
         X: =107
         Y: =117
         ZIndex: =40
-
-    Dropdown1 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: ="SelectedTechnology.'Skill Name'"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |
-            =Distinct(Skills_1, 'Skill Name')
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        Size: =13
-        Width: =246
-        X: =107
-        Y: =260
-        ZIndex: =41
 
     Dropdown1_1 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -331,4 +298,30 @@ msftedittechnology As screen:
 
     navBarHorizontal_24 As navBarHorizontal:
         ZIndex: =45
+
+    TextInput2_9 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =SelectedTechnology.'Skill Name'
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =222
+        X: =107
+        Y: =260
+        ZIndex: =46
 
