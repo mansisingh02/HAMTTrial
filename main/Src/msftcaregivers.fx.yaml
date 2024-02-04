@@ -143,7 +143,7 @@ msftcaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =21
+            Height: =24
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -152,7 +152,7 @@ msftcaregivers As screen:
             Size: =11
             Text: =ThisItem.'Caregiver Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =162
+            Width: =307
             Y: =11
             ZIndex: =3
 
@@ -219,7 +219,7 @@ msftcaregivers As screen:
             Size: =9
             Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ")  & ThisItem.Intermediatee.'Intermediate Skill 1'.Value & If(ThisItem.Intermediatee.'Intermediate Skill 1'.Value=Blank(), "", ", ") & ThisItem.Intermediatee.'Intermediate Skill 2'.Value
             Width: =377
-            X: =179
+            X: =307
             ZIndex: =9
 
         Label28_1 As label:
@@ -317,8 +317,9 @@ msftcaregivers As screen:
                     LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
                     "Advancedd",
                     LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
-                    StartsWith('Caregiver Name',search.Text) && (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank()) 
-                    )
+                    StartsWith('Caregiver Name',search.Text) && (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank())  && 
+                    If(User().Email="madhavi.b@providence.org", 'Core Leader' = "Madhavi B",If (Checkbox1.Value= true, 'Core Leader'=Gallery13.Selected.'Core Leader', Checkbox1.Value=false)
+                    ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -374,7 +375,7 @@ msftcaregivers As screen:
         FontWeight: =FontWeight.Bold
         Size: =12
         Text: ="Skills"
-        X: =363
+        X: =450
         Y: =205
         ZIndex: =44
 
@@ -390,7 +391,7 @@ msftcaregivers As screen:
         FontWeight: =FontWeight.Bold
         Size: =12
         Text: ="Projects"
-        X: =727
+        X: =867
         Y: =205
         ZIndex: =45
 
@@ -511,6 +512,7 @@ msftcaregivers As screen:
         CheckboxBorderColor: =RGBA(102, 102, 102, 1)
         CheckmarkFill: =RGBA(0, 120, 212, 1)
         Color: =RGBA(51, 51, 51, 1)
+        Default: =true
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
@@ -528,4 +530,18 @@ msftcaregivers As screen:
         X: =669
         Y: =149
         ZIndex: =58
+
+    Gallery13 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =62
+        Items: =Filter(Caregivers_1, 'Caregiver Email'=User().Email)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =434
+        X: =547
+        Y: =706
+        ZIndex: =59
 
