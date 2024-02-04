@@ -14,46 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_27.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewproject.msft_Button_27.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 16,
-                  "charOffset": 256,
-                  "snippet": {
-                    "text": "msft_Dropdown_26"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftnewproject",
-                "type": "msftnewproject.msft_Button_27"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "msft_Dropdown_26"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftnewproject.msft_Dropdown_19.Items"
                 }
               ],
@@ -87,7 +47,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropSchema-SameKind",
-          "ruleIndex": 1
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -127,7 +87,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -164,7 +124,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -204,7 +164,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -315,7 +275,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleCtxtVariableTypes",
-          "ruleIndex": 3
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -355,7 +315,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -436,7 +396,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -517,7 +477,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -597,7 +557,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -674,7 +634,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -876,7 +836,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -916,7 +876,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -956,7 +916,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1133,7 +1093,1127 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 1922,
+                  "charOffset": 193,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Skill1.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 173,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 374,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "BeginnerSkill2.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 354,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 555,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "BeginnerSkill3.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 535,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 736,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "BeginnerSkill4.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 716,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 917,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Beginner_x0020_Skill_x0020_5.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 897,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1098,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "BeginnerSkill6.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1078,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1279,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Beginner_x0020_Skill_x0020_7.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1259,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1460,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Beginner_x0020_Skill_x0020_8.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1440,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1641,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Beginner_x0020_Skill_x0020_9.Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 1621,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 105,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 128,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 250,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 431,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 612,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 793,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 974,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1155,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1336,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 1517,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2.galleryTemplate1_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.galleryTemplate1_2.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 1918,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1173,7 +2253,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 1898,
+                  "charOffset": 1894,
                   "snippet": {
                     "text": "="
                   }
@@ -1213,7 +2293,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 2111,
+                  "charOffset": 2107,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1253,7 +2333,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2087,
+                  "charOffset": 2083,
                   "snippet": {
                     "text": "="
                   }
@@ -1293,7 +2373,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 2300,
+                  "charOffset": 2296,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1333,7 +2413,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2276,
+                  "charOffset": 2272,
                   "snippet": {
                     "text": "="
                   }
@@ -1373,7 +2453,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 2489,
+                  "charOffset": 2485,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1413,7 +2493,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2465,
+                  "charOffset": 2461,
                   "snippet": {
                     "text": "="
                   }
@@ -1453,7 +2533,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 2678,
+                  "charOffset": 2674,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1493,7 +2573,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2654,
+                  "charOffset": 2650,
                   "snippet": {
                     "text": "="
                   }
@@ -1533,7 +2613,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 2867,
+                  "charOffset": 2863,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1573,7 +2653,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 2843,
+                  "charOffset": 2839,
                   "snippet": {
                     "text": "="
                   }
@@ -1613,7 +2693,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 3056,
+                  "charOffset": 3052,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1653,7 +2733,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3032,
+                  "charOffset": 3028,
                   "snippet": {
                     "text": "="
                   }
@@ -1693,7 +2773,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 3245,
+                  "charOffset": 3241,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -1733,7 +2813,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3221,
+                  "charOffset": 3217,
                   "snippet": {
                     "text": "="
                   }
@@ -1773,7 +2853,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1830,
+                  "charOffset": 1826,
                   "snippet": {
                     "text": "in"
                   }
@@ -1796,7 +2876,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -1813,7 +2893,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1853,
+                  "charOffset": 1849,
                   "snippet": {
                     "text": "&&"
                   }
@@ -1853,7 +2933,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 1979,
+                  "charOffset": 1975,
                   "snippet": {
                     "text": "||"
                   }
@@ -1893,7 +2973,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2168,
+                  "charOffset": 2164,
                   "snippet": {
                     "text": "||"
                   }
@@ -1933,7 +3013,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2357,
+                  "charOffset": 2353,
                   "snippet": {
                     "text": "||"
                   }
@@ -1973,7 +3053,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2546,
+                  "charOffset": 2542,
                   "snippet": {
                     "text": "||"
                   }
@@ -2013,7 +3093,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2735,
+                  "charOffset": 2731,
                   "snippet": {
                     "text": "||"
                   }
@@ -2053,7 +3133,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 2924,
+                  "charOffset": 2920,
                   "snippet": {
                     "text": "||"
                   }
@@ -2093,7 +3173,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3113,
+                  "charOffset": 3109,
                   "snippet": {
                     "text": "||"
                   }
@@ -2133,7 +3213,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 3505,
+                  "charOffset": 3501,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2173,7 +3253,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3485,
+                  "charOffset": 3481,
                   "snippet": {
                     "text": "="
                   }
@@ -2213,7 +3293,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 3686,
+                  "charOffset": 3682,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2253,7 +3333,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3666,
+                  "charOffset": 3662,
                   "snippet": {
                     "text": "="
                   }
@@ -2293,7 +3373,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 3867,
+                  "charOffset": 3863,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2333,7 +3413,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 3847,
+                  "charOffset": 3843,
                   "snippet": {
                     "text": "="
                   }
@@ -2373,7 +3453,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 4048,
+                  "charOffset": 4044,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2413,7 +3493,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 4028,
+                  "charOffset": 4024,
                   "snippet": {
                     "text": "="
                   }
@@ -2453,7 +3533,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 4229,
+                  "charOffset": 4225,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2493,7 +3573,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 4209,
+                  "charOffset": 4205,
                   "snippet": {
                     "text": "="
                   }
@@ -2533,7 +3613,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 4410,
+                  "charOffset": 4406,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2573,7 +3653,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 4390,
+                  "charOffset": 4386,
                   "snippet": {
                     "text": "="
                   }
@@ -2613,7 +3693,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 4591,
+                  "charOffset": 4587,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2653,7 +3733,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 4571,
+                  "charOffset": 4567,
                   "snippet": {
                     "text": "="
                   }
@@ -2693,7 +3773,7 @@
                 },
                 "region": {
                   "charLength": 6,
-                  "charOffset": 4772,
+                  "charOffset": 4768,
                   "snippet": {
                     "text": ".Value"
                   }
@@ -2733,7 +3813,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 4752,
+                  "charOffset": 4748,
                   "snippet": {
                     "text": "="
                   }
@@ -2773,7 +3853,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3417,
+                  "charOffset": 3413,
                   "snippet": {
                     "text": "in"
                   }
@@ -2796,7 +3876,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 2
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -2813,7 +3893,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3440,
+                  "charOffset": 3436,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2853,7 +3933,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3562,
+                  "charOffset": 3558,
                   "snippet": {
                     "text": "||"
                   }
@@ -2893,7 +3973,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3743,
+                  "charOffset": 3739,
                   "snippet": {
                     "text": "||"
                   }
@@ -2933,7 +4013,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 3924,
+                  "charOffset": 3920,
                   "snippet": {
                     "text": "||"
                   }
@@ -2973,7 +4053,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4105,
+                  "charOffset": 4101,
                   "snippet": {
                     "text": "||"
                   }
@@ -3013,7 +4093,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4286,
+                  "charOffset": 4282,
                   "snippet": {
                     "text": "||"
                   }
@@ -3053,7 +4133,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4467,
+                  "charOffset": 4463,
                   "snippet": {
                     "text": "||"
                   }
@@ -3093,7 +4173,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 4648,
+                  "charOffset": 4644,
                   "snippet": {
                     "text": "||"
                   }
@@ -21303,23 +22383,6 @@
           "name": "PowerApps app checker",
           "rules": [
             {
-              "id": "app-ErrInvalidName",
-              "messageStrings": {
-                "issue": {
-                  "text": "Name isn't valid. '{0}' isn't recognized."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or correct the reference to the name that isn't valid."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrIncompatibleRulePropSchema-SameKind",
               "messageStrings": {
                 "issue": {
@@ -21368,6 +22431,23 @@
                 "componentType": "app",
                 "howToFix": [
                   "Look at places where you use a context variable and make sure that the type (e.g., text, number, date, record, table) is compatible."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
