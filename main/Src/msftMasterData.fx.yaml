@@ -1701,7 +1701,7 @@ msftMasterData As screen:
                 FilteredCostCenters_Caregiver,
                 Filter(
                     Caregivers_1,
-                    'Cost Center Code'.Value = LookUp('Cost Center', 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name').'Cost Center Number'
+                    'Cost Center Code'.Value = LookUp('Cost Center', 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name').CostCenterNumber
                 )
             );
             
