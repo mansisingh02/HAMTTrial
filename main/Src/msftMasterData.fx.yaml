@@ -26,7 +26,9 @@ msftMasterData As screen:
             Notify("Deletion completed", NotificationType.Success);
             Set(varConfirmDelete, false)
         );
-        Set(vartabselected, 1)
+        Set(varTabSelected, 1);
+        Set(varConfirmDelete, false);
+        Notify("Screen is loading", NotificationType.Information)
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
