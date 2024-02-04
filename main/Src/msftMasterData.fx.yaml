@@ -1685,8 +1685,10 @@ msftMasterData As screen:
         Items: =Filter('Cost Center', StartsWith('Cost Center Name',TextInput1_7.Text) || StartsWith(CCC,TextInput1_7.Text))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
-            =UpdateContext({TempCount: 0});
+        OnSelect: |
+            =UpdateContext({TempCountCaregiver: 0});
+            UpdateContext({TempCountProject: 0});
+            
             ClearCollect(
                 FilteredCostCenters_Project,
                 Filter(
@@ -1694,23 +1696,27 @@ msftMasterData As screen:
                     'Cost Center Name'.Value = Gallery1_4.Selected.'Cost Center Name'
                 )
             );
-            UpdateContext({TempCount: CountRows(FilteredCostCenters_Project)});
+            
             ClearCollect(
                 FilteredCostCenters_Caregiver,
                 Filter(
                     Caregivers_1,
-                    'Cost Center Name'.Value = Gallery1_4.Selected.'Cost Center Name'
+                    'Cost Center Code'.Value = LookUp('Cost Center', 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name').'Cost Center Number'
                 )
             );
+            
             UpdateContext({TempCountCaregiver: CountRows(FilteredCostCenters_Caregiver)});
+            UpdateContext({TempCountProject: CountRows(FilteredCostCenters_Project)});
             
             Navigate(
-                msftprojecttype,
+                msftcostcenter,
                 ScreenTransition.Fade,
                 {
-                    SelectedGroup: LookUp(Gallery1_4.AllItems, 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name'),
-                    FilteredCostCenters: FilteredCostCenters,
-                    TempCount: TempCount
+                    SelectedCostCenter: LookUp(Gallery1_4.AllItems, 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name'),
+                    FilteredCostCenters_Caregiver: FilteredCostCenters_Caregiver,
+                    FilteredCostCenters_Project: FilteredCostCenters_Project,
+                    TempCountCaregiver: TempCountCaregiver,
+                    TempCountProject: TempCountProject
                 }
             )
         TemplatePadding: =0

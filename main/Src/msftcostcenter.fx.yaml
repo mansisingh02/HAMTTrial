@@ -2,7 +2,10 @@ msftcostcenter As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =Set(ProjectCount, CountRows(FilteredProjects))
+        =UpdateContext({
+            CountProjects: CountRows(FilteredCostCenters_Project),
+            CountCaregivers: CountRows(FilteredCostCenters_Caregiver)
+        })
         
         
         
@@ -151,4 +154,34 @@ msftcostcenter As screen:
         X: =462
         Y: =111
         ZIndex: =34
+
+    Label34 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =CountProjects
+        X: =393
+        Y: =260
+        ZIndex: =35
+
+    Label34_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =CountCaregivers
+        X: =108
+        Y: =260
+        ZIndex: =36
 
