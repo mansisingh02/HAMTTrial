@@ -17,6 +17,7 @@ msftDashboard As screen:
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData
         projectNav: =msftproject
+        Visible: =If(Lower(User().Email)="rama.ghodke@providence.org",true,false)
         ZIndex: =5
 
     navBarHorizontal_4 As navBarHorizontal:
