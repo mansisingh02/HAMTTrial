@@ -34,7 +34,7 @@ msftUpdatecaregivers As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="My Profile"
+        Text: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Update Skills","My Profile")
         Width: =230
         X: =98
         Y: =82
@@ -56,8 +56,8 @@ msftUpdatecaregivers As screen:
         Size: =10.5
         Text: ="Department"
         Width: =92
-        X: =134
-        Y: =189
+        X: =144
+        Y: =190
         ZIndex: =4
 
     Label4 As label:
@@ -71,7 +71,7 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Lato Black'
         Height: =35
         Size: =13
-        Text: ="Hello, " & User().FullName
+        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Hello Admin", "Hello, " & User().FullName)
         Width: =182
         X: =99
         Y: =135
@@ -81,7 +81,9 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: =Filter(Caregivers_1,   StartsWith('Caregiver Email',Lower(User().Email)))
+        Items: |-
+            =Filter(Caregivers_1, If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  
+            StartsWith('Caregiver Email',Lower(User().Email))))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
@@ -119,10 +121,29 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =
+            Text: =ThisItem.'Cost Center Code'.Value
+            Width: =232
             X: =208
             Y: =4
             ZIndex: =2
+
+        Label8_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",ThisItem.'Caregiver Name',"")
+            Width: =232
+            X: =464
+            Y: =4
+            ZIndex: =3
 
     Gallery7 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -190,7 +211,7 @@ msftUpdatecaregivers As screen:
         Size: =10.5
         Text: ="Cost Center Name"
         Width: =142
-        X: =318
+        X: =360
         Y: =189
         ZIndex: =46
 
@@ -250,7 +271,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =1000
         Items: |
-            =If(txtCaregiverID.Text="801263"  ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939"  ,Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1", 'Beginner Skill 1',
@@ -1888,7 +1909,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =273
         Items: |
-            =If(txtCaregiverID.Text="801263"  ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939"  ,Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1", 'Intermediate Skill 1',
@@ -2434,7 +2455,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =768
         Items: |
-            =If(txtCaregiverID.Text="801263"  ,Filter(
+            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939",Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1", 'Advanced Skill 1',
@@ -3236,4 +3257,59 @@ msftUpdatecaregivers As screen:
 
     navBarHorizontal_1 As navBarHorizontal:
         ZIndex: =119
+
+    msft_Button_58 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+        OnSelect: =Navigate(msftcaregivers,ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =6
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="CANCEL"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =143
+        X: =1019
+        Y: =704
+        ZIndex: =120
+
+    msft_Label_19 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =14
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Caregiver Name","")
+        Width: =142
+        X: =623
+        Y: =190
+        ZIndex: =121
 

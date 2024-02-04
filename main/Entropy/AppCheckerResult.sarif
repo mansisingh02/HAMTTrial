@@ -1079,6 +1079,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 277,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "If( Lower(User().Email)=\"rama.ghodke@providence.org\" || Lower(User().Email)=\"madhavi.b@providence.org\" || Lower(User().Email)=\"mansi.singh@providence.org\", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  \r\nStartsWith('Caregiver Email',Lower(User().Email)))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftMasterData.Gallery8.Items"
                 }
               ],
@@ -20319,6 +20359,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_19.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_19.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.msft_Label_19"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.ProjectCount"
                 }
               ],
@@ -21938,6 +22008,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftMasterData"
                 }
               ],
@@ -22975,7 +23075,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftUpdatecaregivers\" is 1082, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftUpdatecaregivers\" is 1089, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
