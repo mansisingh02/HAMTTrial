@@ -2,8 +2,12 @@ msftcaregiverscount As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =ClearCollect(FilteredCaregiversCollection, FilteredCaregivers);
-        Set(FilteredCaregivers, FilteredCaregiversCollection)
+        =// OnVisible property of msftcaregiverscount screen
+        Set(SelectedCostCenterName, Gallery1_4.Selected.'Cost Center Name');
+        Set(SelectedCostCenterCode, LookUp('Cost Center', 'Cost Center Name' = SelectedCostCenterName).'Cost Center Number');
+        ClearCollect(FilteredCaregivers, Filter(Caregivers_1, 'Cost Center Code'.Value = SelectedCostCenterCode));
+        
+        
         
         
         
@@ -132,16 +136,33 @@ msftcaregiverscount As screen:
         Y: =111
         ZIndex: =34
 
-    Gallery13_1 As gallery.variableTemplateHeightGallery:
+    Gallery18 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =430
-        Items: |
-            =FilteredCaregivers
+        Height: =409
+        Items: =FilteredCostCenters_Caregiver
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =422
-        X: =109
-        Y: =254
+        TemplateSize: =56
+        Width: =1106
+        WrapCount: =3
+        X: =120
+        Y: =261
         ZIndex: =35
+
+        Label37 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            X: =40
+            Y: =40
+            ZIndex: =1
 

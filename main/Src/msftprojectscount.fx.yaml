@@ -1,20 +1,7 @@
 msftprojectscount As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |+
-        =ClearCollect(FilteredProjectsCollection, FilteredProjects);
-        Set(FilteredProjects, FilteredProjectsCollection)
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    OnVisible: =ClearCollect(FilteredProjectsCollection, FilteredProjects);
     Width: =1366
 
     "'Report Header_23' As groupContainer.manualLayoutContainer":
@@ -135,11 +122,28 @@ msftprojectscount As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =430
-        Items: =FilteredProjects
+        Items: |
+            =FilteredCostCenters_Project
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =422
         X: =108
         Y: =249
         ZIndex: =35
+
+        Label36 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Project Name'
+            X: =3
+            Y: =6
+            ZIndex: =1
 

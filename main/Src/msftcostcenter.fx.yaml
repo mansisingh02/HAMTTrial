@@ -198,15 +198,8 @@ msftcostcenter As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =
-            Navigate(
-                msftcaregiverscount, 
-                ScreenTransition.Fade,
-                {
-                    FilteredCaregivers: Filter(Caregivers_1, 'Cost Center Code'.Value = LookUp('Cost Center', 'Cost Center Name' = Gallery1_4.Selected.'Cost Center Name').'Cost Center Number')
-                }
-            )
+        OnSelect: |
+            =Navigate(msftcaregiverscount, ScreenTransition.Fade, { FilteredCostCenters_Caregiver: FilteredCostCenters_Caregiver })
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -234,15 +227,9 @@ msftcostcenter As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
-            =
-            Navigate(
-                msftprojectscount, 
-                ScreenTransition.Fade,
-                {
-                    FilteredProjects: Filter(Project, 'Cost Center Name'.Value = Gallery1_4.Selected.'Cost Center Name')
-                }
-            )
+        OnSelect: |+
+            =Navigate(msftprojectscount, ScreenTransition.Fade, { FilteredCostCenters_Project: FilteredCostCenters_Project })
+            
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
