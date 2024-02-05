@@ -1,0 +1,898 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://msmanaged-na.azure-apim.net/apim/powerbi" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="PowerBI" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Power BI">Power BI is a suite of business analytics tools to analyze data and share insights. Connect to get easy access to the data in your Power BI dashboards, reports and datasets.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://msmanaged-na.azure-apim.net/apim/powerbi" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <untypedObject name="QueryExecutionResults_firstTableRows_def_items_def" />
+      <array typeRef="QueryExecutionResults_firstTableRows_def_items_def" name="QueryExecutionResults_firstTableRows_def" />
+      <object name="QueryExecutionResults">
+        <property name="firstTableRows" typeRef="QueryExecutionResults_firstTableRows_def" />
+      </object>
+      <string name="QuerySpecification_query_def" />
+      <boolean name="QuerySpecification_serializerSettings_def_includeNulls_def" />
+      <object name="QuerySpecification_serializerSettings_def">
+        <property name="includeNulls" type="boolean" />
+      </object>
+      <string name="QuerySpecification_impersonatedUserName_def" />
+      <object name="QuerySpecification">
+        <property name="query" type="string" />
+        <property name="serializerSettings" typeRef="QuerySpecification_serializerSettings_def" />
+        <property name="impersonatedUserName" type="string" />
+      </object>
+      <string name="CreateScorecardRequest_name_def" />
+      <string name="CreateScorecardRequest_description_def" />
+      <object name="CreateScorecardRequest">
+        <property name="name" type="string" />
+        <property name="description" type="string" />
+      </object>
+      <string name="CreatedScorecard_id_def" />
+      <object name="CreatedScorecard">
+        <property name="id" type="string" />
+      </object>
+      <array typeRef="ListedScorecard" name="ListedScorecards_value_def" />
+      <object name="ListedScorecards">
+        <property name="value" typeRef="ListedScorecards_value_def" />
+      </object>
+      <string name="ListedScorecard_id_def" />
+      <string name="ListedScorecard_name_def" />
+      <string name="ListedScorecard_contact_def" />
+      <object name="ListedScorecard">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="contact" type="string" />
+      </object>
+      <array typeRef="FetchedGoal" name="FetchedGoals_value_def" />
+      <object name="FetchedGoals">
+        <property name="value" typeRef="FetchedGoals_value_def" />
+      </object>
+      <string name="CreateGoalRequest_name_def" />
+      <string name="CreateGoalRequest_owner_def" />
+      <string name="CreateGoalRequest_value_def" />
+      <string name="CreateGoalRequest_target_def" />
+      <string name="CreateGoalRequest_status_def" />
+      <string name="CreateGoalRequest_startDate_def" />
+      <string name="CreateGoalRequest_completionDate_def" />
+      <string name="CreateGoalRequest_note_def" />
+      <string name="CreateGoalRequest_parentId_def" />
+      <object name="CreateGoalRequest">
+        <property name="name" type="string" />
+        <property name="owner" type="string" />
+        <property name="value" type="string" />
+        <property name="target" type="string" />
+        <property name="status" type="string" />
+        <property name="startDate" type="string" />
+        <property name="completionDate" type="string" />
+        <property name="note" type="string" />
+        <property name="parentId" type="string" />
+      </object>
+      <string name="UpdateGoalRequest_name_def" />
+      <string name="UpdateGoalRequest_owner_def" />
+      <number name="UpdateGoalRequest_value_def" />
+      <number name="UpdateGoalRequest_target_def" />
+      <string name="UpdateGoalRequest_status_def" />
+      <string name="UpdateGoalRequest_startDate_def" />
+      <string name="UpdateGoalRequest_completionDate_def" />
+      <object name="UpdateGoalRequest">
+        <property name="name" type="string" />
+        <property name="owner" type="string" />
+        <property name="value" type="number" />
+        <property name="target" type="number" />
+        <property name="status" type="string" />
+        <property name="startDate" type="string" />
+        <property name="completionDate" type="string" />
+      </object>
+      <string name="FetchedGoal_id_def" />
+      <string name="FetchedGoal_name_def" />
+      <string name="FetchedGoal_owner_def" />
+      <string name="FetchedGoal_startDate_def" />
+      <string name="FetchedGoal_completionDate_def" />
+      <string name="FetchedGoal_parentId_def" />
+      <number name="FetchedGoal_currentValue_def" />
+      <string name="FetchedGoal_currentValueTimestamp_def" />
+      <number name="FetchedGoal_targetValue_def" />
+      <string name="FetchedGoal_targetValueTimestamp_def" />
+      <string name="FetchedGoal_status_def" />
+      <string name="FetchedGoal_statusTimestamp_def" />
+      <string name="FetchedGoal_cycle_def" />
+      <string name="FetchedGoal_cyclePeriod_def" />
+      <object name="FetchedGoal">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="owner" type="string" />
+        <property name="startDate" type="string" />
+        <property name="completionDate" type="string" />
+        <property name="parentId" type="string" />
+        <property name="currentValue" type="number" />
+        <property name="currentValueTimestamp" type="string" />
+        <property name="targetValue" type="number" />
+        <property name="targetValueTimestamp" type="string" />
+        <property name="status" type="string" />
+        <property name="statusTimestamp" type="string" />
+        <property name="cycle" type="string" />
+        <property name="cyclePeriod" type="string" />
+      </object>
+      <string name="GoalChanged_id_def" />
+      <string name="GoalChanged_oldName_def" />
+      <string name="GoalChanged_oldOwner_def" />
+      <string name="GoalChanged_oldStartDate_def" />
+      <string name="GoalChanged_oldCompletionDate_def" />
+      <string name="GoalChanged_oldParentId_def" />
+      <number name="GoalChanged_oldCurrentValue_def" />
+      <number name="GoalChanged_oldTargetValue_def" />
+      <string name="GoalChanged_oldStatus_def" />
+      <string name="GoalChanged_oldCycle_def" />
+      <string name="GoalChanged_oldCyclePeriod_def" />
+      <string name="GoalChanged_newName_def" />
+      <string name="GoalChanged_newOwner_def" />
+      <string name="GoalChanged_newStartDate_def" />
+      <string name="GoalChanged_newCompletionDate_def" />
+      <string name="GoalChanged_newParentId_def" />
+      <number name="GoalChanged_newCurrentValue_def" />
+      <number name="GoalChanged_newTargetValue_def" />
+      <string name="GoalChanged_newStatus_def" />
+      <string name="GoalChanged_newCycle_def" />
+      <string name="GoalChanged_newCyclePeriod_def" />
+      <string name="GoalChanged_changeList_def" />
+      <object name="GoalChanged">
+        <property name="id" type="string" />
+        <property name="oldName" type="string" />
+        <property name="oldOwner" type="string" />
+        <property name="oldStartDate" type="string" />
+        <property name="oldCompletionDate" type="string" />
+        <property name="oldParentId" type="string" />
+        <property name="oldCurrentValue" type="number" />
+        <property name="oldTargetValue" type="number" />
+        <property name="oldStatus" type="string" />
+        <property name="oldCycle" type="string" />
+        <property name="oldCyclePeriod" type="string" />
+        <property name="newName" type="string" />
+        <property name="newOwner" type="string" />
+        <property name="newStartDate" type="string" />
+        <property name="newCompletionDate" type="string" />
+        <property name="newParentId" type="string" />
+        <property name="newCurrentValue" type="number" />
+        <property name="newTargetValue" type="number" />
+        <property name="newStatus" type="string" />
+        <property name="newCycle" type="string" />
+        <property name="newCyclePeriod" type="string" />
+        <property name="changeList" type="string" />
+      </object>
+      <string name="GoalStatusChanged_id_def" />
+      <string name="GoalStatusChanged_oldStatus_def" />
+      <string name="GoalStatusChanged_newStatus_def" />
+      <object name="GoalStatusChanged">
+        <property name="id" type="string" />
+        <property name="oldStatus" type="string" />
+        <property name="newStatus" type="string" />
+      </object>
+      <string name="GoalValueChanged_id_def" />
+      <number name="GoalValueChanged_oldCurrentValue_def" />
+      <number name="GoalValueChanged_newCurrentValue_def" />
+      <object name="GoalValueChanged">
+        <property name="id" type="string" />
+        <property name="oldCurrentValue" type="number" />
+        <property name="newCurrentValue" type="number" />
+      </object>
+      <array typeRef="GoalRefreshIssue" name="GoalRefreshIssues_issues_def" />
+      <object name="GoalRefreshIssues">
+        <property name="issues" typeRef="GoalRefreshIssues_issues_def" />
+      </object>
+      <string name="GoalRefreshIssue_connectionType_def" />
+      <string name="GoalRefreshIssue_timestamp_def" />
+      <string name="GoalRefreshIssue_message_def" />
+      <object name="GoalRefreshIssue">
+        <property name="connectionType" type="string" />
+        <property name="timestamp" type="string" />
+        <property name="message" type="string" />
+      </object>
+      <string name="GoalsAssigned_assignedGoals_def_items_def_id_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_scorecardId_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_name_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_owner_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_lastModifiedBy_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_startDate_def" />
+      <string name="GoalsAssigned_assignedGoals_def_items_def_completionDate_def" />
+      <object name="GoalsAssigned_assignedGoals_def_items_def">
+        <property name="id" type="string" />
+        <property name="scorecardId" type="string" />
+        <property name="name" type="string" />
+        <property name="owner" type="string" />
+        <property name="lastModifiedBy" type="string" />
+        <property name="startDate" type="string" />
+        <property name="completionDate" type="string" />
+      </object>
+      <array typeRef="GoalsAssigned_assignedGoals_def_items_def" name="GoalsAssigned_assignedGoals_def" />
+      <object name="GoalsAssigned">
+        <property name="assignedGoals" typeRef="GoalsAssigned_assignedGoals_def" />
+      </object>
+      <string name="GoalValueOrNoteUpserted_values_def_items_def_timestamp_def" />
+      <number name="GoalValueOrNoteUpserted_values_def_items_def_value_def" />
+      <string name="GoalValueOrNoteUpserted_values_def_items_def_status_def" />
+      <object name="GoalValueOrNoteUpserted_values_def_items_def">
+        <property name="timestamp" type="string" />
+        <property name="value" type="number" />
+        <property name="status" type="string" />
+      </object>
+      <array typeRef="GoalValueOrNoteUpserted_values_def_items_def" name="GoalValueOrNoteUpserted_values_def" />
+      <string name="GoalValueOrNoteUpserted_notes_def_items_def_valueTimestamp_def" />
+      <string name="GoalValueOrNoteUpserted_notes_def_items_def_body_def" />
+      <string name="GoalValueOrNoteUpserted_notes_def_items_def_createdTime_def" />
+      <object name="GoalValueOrNoteUpserted_notes_def_items_def">
+        <property name="valueTimestamp" type="string" />
+        <property name="body" type="string" />
+        <property name="createdTime" type="string" />
+      </object>
+      <array typeRef="GoalValueOrNoteUpserted_notes_def_items_def" name="GoalValueOrNoteUpserted_notes_def" />
+      <object name="GoalValueOrNoteUpserted">
+        <property name="values" typeRef="GoalValueOrNoteUpserted_values_def" />
+        <property name="notes" typeRef="GoalValueOrNoteUpserted_notes_def" />
+      </object>
+      <string name="GoalValueCheckinRequest_timestamp_def" />
+      <number name="GoalValueCheckinRequest_value_def" />
+      <string name="GoalValueCheckinRequest_status_def" />
+      <string name="GoalValueCheckinRequest_note_def" />
+      <object name="GoalValueCheckinRequest">
+        <property name="timestamp" type="string" />
+        <property name="value" type="number" />
+        <property name="status" type="string" />
+        <property name="note" type="string" />
+      </object>
+      <number name="GoalValueCheckinUpdateRequest_value_def" />
+      <string name="GoalValueCheckinUpdateRequest_status_def" />
+      <object name="GoalValueCheckinUpdateRequest">
+        <property name="value" type="number" />
+        <property name="status" type="string" />
+      </object>
+      <string name="GoalNotes_items_def_body_def" />
+      <string name="GoalNotes_items_def_createdTime_def" />
+      <object name="GoalNotes_items_def">
+        <property name="body" type="string" />
+        <property name="createdTime" type="string" />
+      </object>
+      <array typeRef="GoalNotes_items_def" name="GoalNotes" />
+      <string name="EvaluatedAlert_alertTitle_def" />
+      <number name="EvaluatedAlert_alertThreshold_def" />
+      <boolean name="EvaluatedAlert_isAlertTriggered_def" />
+      <string name="EvaluatedAlert_tileUrl_def" />
+      <untypedObject name="EvaluatedAlert_tileValue_def" />
+      <object name="EvaluatedAlert">
+        <property name="alertTitle" type="string" />
+        <property name="alertThreshold" type="number" />
+        <property name="isAlertTriggered" type="boolean" />
+        <property name="tileUrl" type="string" />
+        <property name="tileValue" typeRef="EvaluatedAlert_tileValue_def" />
+      </object>
+      <string name="Alert_alertId_def" />
+      <string name="Alert_alertTitle_def" />
+      <string name="Alert_groupId_def" />
+      <object name="Alert">
+        <property name="alertId" type="string" />
+        <property name="alertTitle" type="string" />
+        <property name="groupId" type="string" />
+      </object>
+      <string name="Groups_value_def_items_def_id_def" />
+      <string name="Groups_value_def_items_def_name_def" />
+      <object name="Groups_value_def_items_def">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="Groups_value_def_items_def" name="Groups_value_def" />
+      <object name="Groups">
+        <property name="value" typeRef="Groups_value_def" />
+      </object>
+      <string name="Datasets_value_def_items_def_id_def" />
+      <string name="Datasets_value_def_items_def_name_def" />
+      <boolean name="Datasets_value_def_items_def_addRowsAPIEnabled_def" />
+      <object name="Datasets_value_def_items_def">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="addRowsAPIEnabled" type="boolean" />
+      </object>
+      <array typeRef="Datasets_value_def_items_def" name="Datasets_value_def" />
+      <object name="Datasets">
+        <property name="value" typeRef="Datasets_value_def" />
+      </object>
+      <untypedObject name="Reports" />
+      <string name="Tables_value_def_items_def_name_def" />
+      <object name="Tables_value_def_items_def">
+        <property name="name" type="string" />
+      </object>
+      <array typeRef="Tables_value_def_items_def" name="Tables_value_def" />
+      <object name="Tables">
+        <property name="value" typeRef="Tables_value_def" />
+      </object>
+      <untypedObject name="Payload" />
+      <string name="ExportPayloadPowerBIReport_format_def" />
+      <array typeRef="ExportFilter" name="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_reportLevelFilters_def" />
+      <array typeRef="ExportReportPage" name="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_pages_def" />
+      <array typeRef="EffectiveIdentity" name="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_identities_def" />
+      <object name="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def">
+        <property name="settings" typeRef="ExportReportSettings" />
+        <property name="defaultBookmark" typeRef="PageBookmark" />
+        <property name="reportLevelFilters" typeRef="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_reportLevelFilters_def" />
+        <property name="pages" typeRef="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_pages_def" />
+        <property name="identities" typeRef="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def_identities_def" />
+      </object>
+      <object name="ExportPayloadPowerBIReport">
+        <property name="format" type="string" />
+        <property name="PowerBIReportExportConfiguration" typeRef="ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def" />
+      </object>
+      <string name="ExportPayloadPaginatedReport_format_def" />
+      <array typeRef="EffectiveIdentity" name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_identities_def" />
+      <string name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_formatSettings_def_mapValues_def" />
+      <mapObject name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_formatSettings_def">
+        <values type="string" />
+      </mapObject>
+      <string name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def_items_def_name_def" />
+      <string name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def_items_def_value_def" />
+      <object name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def_items_def">
+        <property name="name" type="string" />
+        <property name="value" type="string" />
+      </object>
+      <array typeRef="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def_items_def" name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def" />
+      <object name="ExportPayloadPaginatedReport_paginatedReportConfiguration_def">
+        <property name="identities" typeRef="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_identities_def" />
+        <property name="formatSettings" typeRef="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_formatSettings_def" />
+        <property name="parameterValues" typeRef="ExportPayloadPaginatedReport_paginatedReportConfiguration_def_parameterValues_def" />
+      </object>
+      <object name="ExportPayloadPaginatedReport">
+        <property name="format" type="string" />
+        <property name="paginatedReportConfiguration" typeRef="ExportPayloadPaginatedReport_paginatedReportConfiguration_def" />
+      </object>
+      <string name="ExportReportSettings_locale_def" />
+      <boolean name="ExportReportSettings_includeHiddenPages_def" />
+      <object name="ExportReportSettings">
+        <property name="locale" type="string" />
+        <property name="includeHiddenPages" type="boolean" />
+      </object>
+      <string name="PageBookmark_name_def" />
+      <string name="PageBookmark_state_def" />
+      <object name="PageBookmark">
+        <property name="name" type="string" />
+        <property name="state" type="string" />
+      </object>
+      <string name="ExportFilter_filter_def" />
+      <object name="ExportFilter">
+        <property name="filter" type="string" />
+      </object>
+      <string name="ExportReportPage_pageName_def" />
+      <string name="ExportReportPage_visualName_def" />
+      <object name="ExportReportPage">
+        <property name="pageName" type="string" />
+        <property name="visualName" type="string" />
+        <property name="bookmark" typeRef="PageBookmark" />
+      </object>
+      <string name="EffectiveIdentity_username_def" />
+      <string name="EffectiveIdentity_datasets_def_items_def" />
+      <array type="string" name="EffectiveIdentity_datasets_def" />
+      <string name="EffectiveIdentity_roles_def_items_def" />
+      <array type="string" name="EffectiveIdentity_roles_def" />
+      <string name="EffectiveIdentity_customData_def" />
+      <string name="EffectiveIdentity_reports_def_items_def" />
+      <array type="string" name="EffectiveIdentity_reports_def" />
+      <object name="EffectiveIdentity">
+        <property name="username" type="string" />
+        <property name="datasets" typeRef="EffectiveIdentity_datasets_def" />
+        <property name="roles" typeRef="EffectiveIdentity_roles_def" />
+        <property name="customData" type="string" />
+        <property name="identityBlob" typeRef="IdentityBlob" />
+        <property name="reports" typeRef="EffectiveIdentity_reports_def" />
+      </object>
+      <string name="IdentityBlob_value_def" />
+      <object name="IdentityBlob">
+        <property name="value" type="string" />
+      </object>
+      <untypedObject name="Columns_schema_def" />
+      <object name="Columns">
+        <property name="schema" typeRef="Columns_schema_def" />
+      </object>
+      <untypedObject name="DynamicPowerBiButtonClickedTriggerResult" />
+      <untypedObject name="PowerBiButtonClickedOutputs_PowerBiInputs_def" />
+      <object name="PowerBiButtonClickedOutputs">
+        <property name="PowerBiInputs" typeRef="PowerBiButtonClickedOutputs_PowerBiInputs_def" />
+      </object>
+      <string name="CreateGoal_responses_200_def_id_def" />
+      <object name="CreateGoal_responses_200_def">
+        <property name="id" type="string" />
+      </object>
+      <untypedObject name="ExecuteDatasetQueriesJson_param_Specification_def" />
+      <untypedObject name="ExecuteDatasetQueriesJson_responses_200_def" />
+      <string name="GoalValueCheckinNote_param_note_def" />
+      <string name="GetGoalCheckins_responses_200_def_value_def_items_def_timestamp_def" />
+      <number name="GetGoalCheckins_responses_200_def_value_def_items_def_value_def" />
+      <string name="GetGoalCheckins_responses_200_def_value_def_items_def_status_def" />
+      <object name="GetGoalCheckins_responses_200_def_value_def_items_def">
+        <property name="timestamp" type="string" />
+        <property name="value" type="number" />
+        <property name="status" type="string" />
+        <property name="notes" typeRef="GoalNotes" />
+      </object>
+      <array typeRef="GetGoalCheckins_responses_200_def_value_def_items_def" name="GetGoalCheckins_responses_200_def_value_def" />
+      <object name="GetGoalCheckins_responses_200_def">
+        <property name="value" typeRef="GetGoalCheckins_responses_200_def_value_def" />
+      </object>
+      <string name="GetGoalCheckin_responses_200_def_timestamp_def" />
+      <number name="GetGoalCheckin_responses_200_def_value_def" />
+      <string name="GetGoalCheckin_responses_200_def_status_def" />
+      <object name="GetGoalCheckin_responses_200_def">
+        <property name="timestamp" type="string" />
+        <property name="value" type="number" />
+        <property name="status" type="string" />
+        <property name="notes" typeRef="GoalNotes" />
+      </object>
+      <string name="InitiateExportToFileForPbiReports_responses_200_def" />
+      <string name="InitiateExportToFileForPaginatedReports_responses_200_def" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://msmanaged-na.azure-apim.net/apim/powerbi">
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetScorecards" actionName="GetScorecards" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Get scorecards&#xA;Gets a list of Power BI scorecards in the specified workspace." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ListedScorecards" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateScorecard" actionName="CreateScorecard" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Create a scorecard&#xA;Creates a scorecard for Power BI goals." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="name" path="/name" type="xs:string" required="true" />
+            <param style="plain" name="description" path="/description" type="xs:string" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:CreatedScorecard" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards({scorecardId})/goals">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetMultipleGoals" actionName="GetMultipleGoals" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Get multiple goals&#xA;Get a list of Power BI goals in the specified scorecard." />
+        <request>
+          <param style="query" name="$expand" type="xs:string" required="true" fixed="aggregations">
+            <doc title="Expand goal properties" />
+          </param>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:FetchedGoals" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards({scorecardId})/goals">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateGoal" actionName="CreateGoal" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Create a goal&#xA;Creates a Power BI goal on the specified scorecard." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="name" path="/name" type="xs:string" required="true" />
+            <param style="plain" name="owner" path="/owner" type="xs:string" />
+            <param style="plain" name="value" path="/value" type="xs:string" />
+            <param style="plain" name="target" path="/target" type="xs:string" />
+            <param style="plain" name="status" path="/status" type="xs:string" default="Not started">
+              <option value="Not started" />
+              <option value="On track" />
+              <option value="At risk" />
+              <option value="Behind" />
+              <option value="Overdue" />
+              <option value="Completed" />
+            </param>
+            <param style="plain" name="startDate" path="/startDate" type="xs:string" />
+            <param style="plain" name="completionDate" path="/completionDate" type="xs:string" />
+            <param style="plain" name="note" path="/note" type="xs:string" />
+            <param style="plain" name="parentId" path="/parentId" type="xs:string" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:CreateGoal_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetGoal" actionName="GetGoal" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Get a goal&#xA;Gets the specified Power BI goal on a scorecard." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <param style="query" name="$expand" type="xs:string" required="true" fixed="aggregations">
+            <doc title="Expand goal properties" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:FetchedGoal" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myOrg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <method siena:requiresAuthentication="true" name="PATCH" id="UpdateGoal" actionName="UpdateGoal" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Update a goal&#xA;Updates the Power BI goal's state." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="name" path="/name" type="xs:string" />
+            <param style="plain" name="owner" path="/owner" type="xs:string" />
+            <param style="plain" name="value" path="/value" type="xs:double" />
+            <param style="plain" name="target" path="/target" type="xs:double" />
+            <param style="plain" name="status" path="/status" type="xs:string" default="Leave unchanged">
+              <option value="Leave unchanged" />
+              <option value="Not started" />
+              <option value="On track" />
+              <option value="At risk" />
+              <option value="Behind" />
+              <option value="Overdue" />
+              <option value="Completed" />
+            </param>
+            <param style="plain" name="startDate" path="/startDate" type="xs:string" />
+            <param style="plain" name="completionDate" path="/completionDate" type="xs:string" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/datasets/{datasetid}/executeQueries">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="datasetid" type="xs:string" required="true">
+        <doc title="The unique identifier of the dataset." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ExecuteDatasetQuery" actionName="ExecuteDatasetQuery" visibility="important" siena:isDeprecated="false">
+        <doc title="Run a query against a dataset&#xA;Use the Power BI REST API to run a query." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="query" path="/query" type="xs:string" required="true" />
+            <param style="plain" name="serializerSettings" path="/serializerSettings" type="service:QuerySpecification_serializerSettings_def" />
+            <param style="plain" name="impersonatedUserName" path="/impersonatedUserName" type="xs:string" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:QueryExecutionResults" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/internalFlowActionOverloadAsJson/v1.0/myorg/groups/{groupid}/datasets/{datasetid}/executeQueries">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="datasetid" type="xs:string" required="true">
+        <doc title="The unique identifier of the dataset." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ExecuteDatasetQueriesJson" actionName="ExecuteDatasetQueriesJson" visibility="important" siena:isDeprecated="false">
+        <doc title="Run a json query against a dataset&#xA;Use the Power BI REST API to run a query in json format." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="Specification" path="" type="service:ExecuteDatasetQueriesJson_param_Specification_def" required="true">
+              <doc title="The json text of the query. Can be multiline text." />
+            </param>
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ExecuteDatasetQueriesJson_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/datasets/{datasetid}/tables/{tablename}/rows">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="datasetid" type="xs:string" required="true">
+        <doc title="The unique identifier of the dataset." />
+      </param>
+      <param style="template" name="tablename" type="xs:string" required="true">
+        <doc title="The name of the table." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="AddRows" actionName="AddRows" visibility="important" siena:isDeprecated="false">
+        <doc title="Add rows to a dataset&#xA;Use Power BI REST API to add rows to a dataset." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="Payload" path="" type="service:Payload" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})/goalValues({goalCheckin})/notes">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <param style="template" name="goalCheckin" type="xs:string" required="true">
+        <doc title="Example: 2021-07-21" />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="GoalValueCheckinNote" actionName="GoalValueCheckinNote" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Add a note to a check-in&#xA;Appends a new note to a check-in of a Power BI goal." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="note" path="" type="xs:string" required="true">
+              <doc title="Can be multiline text" />
+            </param>
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})/goalValues">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="GoalValueCheckin" actionName="GoalValueCheckin" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Create a check-in&#xA;Creates a Power BI goal check-in." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="timestamp" path="/timestamp" type="xs:string" required="true" />
+            <param style="plain" name="value" path="/value" type="xs:double" />
+            <param style="plain" name="status" path="/status" type="xs:string" default="Leave unchanged">
+              <option value="Leave unchanged" />
+              <option value="Not started" />
+              <option value="On track" />
+              <option value="At risk" />
+              <option value="Behind" />
+              <option value="Overdue" />
+              <option value="Completed" />
+            </param>
+            <param style="plain" name="note" path="/note" type="xs:string" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})/goalValues">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetGoalCheckins" actionName="GetGoalCheckins" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Get goal check-ins&#xA;Get all check-ins on a Power BI goal." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <param style="query" name="$expand" type="xs:string" required="true" fixed="notes">
+            <doc title="Expand goal check-in properties" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetGoalCheckins_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})/goalValues({goalCheckin})">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <param style="template" name="goalCheckin" type="xs:string" required="true">
+        <doc title="Example: 2021-07-21" />
+      </param>
+      <method siena:requiresAuthentication="true" name="PATCH" id="UpdateGoalCheckin" actionName="UpdateGoalCheckin" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Update a check-in&#xA;Updates a Power BI goal check-in." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <representation mediaType="application/json">
+            <param style="plain" name="value" path="/value" type="xs:double" />
+            <param style="plain" name="status" path="/status" type="xs:string" default="Leave unchanged">
+              <option value="Leave unchanged" />
+              <option value="Not started" />
+              <option value="On track" />
+              <option value="At risk" />
+              <option value="Behind" />
+              <option value="Overdue" />
+              <option value="Completed" />
+            </param>
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/internalScorecards({scorecardId})/goals({goalId})/goalValues({goalCheckin})">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="scorecardId" type="xs:string" required="true">
+        <doc title="The unique identifier of the scorecard." />
+      </param>
+      <param style="template" name="goalId" type="xs:string" required="true">
+        <doc title="The unique identifier of the goal." />
+      </param>
+      <param style="template" name="goalCheckin" type="xs:string" required="true">
+        <doc title="Example: 2021-07-21" />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetGoalCheckin" actionName="GetGoalCheckin" visibility="important" siena:isDeprecated="false" siena:status="Preview">
+        <doc title="Get a goal check-in&#xA;Get a check-in on a Power BI goal." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+          <param style="query" name="$expand" type="xs:string" required="true" fixed="notes">
+            <doc title="Expand goal check-in properties" />
+          </param>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:GetGoalCheckin_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/datasets/{datasetid}/refreshes">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="datasetid" type="xs:string" required="true">
+        <doc title="The unique identifier of the dataset." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="RefreshDataset" actionName="RefreshDataset" visibility="important" siena:isDeprecated="false">
+        <doc title="Refresh a dataset&#xA;Use Power BI REST API to refresh a powerbi dataset." />
+        <request>
+          <param style="query" name="pbi_source" type="xs:string" default="powerAutomate">
+            <doc title="Source of the call for tracing" />
+          </param>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/reports/{reportid}/ExportTo">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="reportid" type="xs:string" required="true">
+        <doc title="The unique identifier of a pbi report." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="InitiateExportToFileForPbiReports" actionName="InitiateExportToFileForPbiReports" visibility="important" siena:isDeprecated="false">
+        <doc title="Export To File for Power BI Reports&#xA;Use Power BI Rest API to inititate export for Power BI reports" />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="format" path="/format" type="xs:string" required="true" default="PDF">
+              <doc title="Export Format" />
+              <option value="PDF" />
+              <option value="PPTX" />
+              <option value="PNG" />
+            </param>
+            <param style="plain" name="PowerBIReportExportConfiguration" path="/PowerBIReportExportConfiguration" type="service:ExportPayloadPowerBIReport_PowerBIReportExportConfiguration_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/octet-stream" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/myorg/groups/{groupid}/reports/{reportid}/ExportToPaginatedReports">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupid" type="xs:string" required="true">
+        <doc title="The unique identifier of the workspace." />
+      </param>
+      <param style="template" name="reportid" type="xs:string" required="true">
+        <doc title="The unique identifier of a paginated report." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="InitiateExportToFileForPaginatedReports" actionName="InitiateExportToFileForPaginatedReports" visibility="important" siena:isDeprecated="false">
+        <doc title="Export To File for Paginated Reports&#xA;Use Power BI Rest API to inititate export for paginated reports" />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="format" path="/format" type="xs:string" required="true" default="PDF">
+              <doc title="Export Format" />
+              <option value="PDF" />
+              <option value="CSV" />
+              <option value="DOCX" />
+              <option value="IMAGE" />
+              <option value="MHTML" />
+              <option value="PPTX" />
+              <option value="XLSX" />
+              <option value="XML" />
+              <option value="ACCESSIBLEPDF" />
+            </param>
+            <param style="plain" name="paginatedReportConfiguration" path="/paginatedReportConfiguration" type="service:ExportPayloadPaginatedReport_paginatedReportConfiguration_def" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/octet-stream" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_powerbi" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>
