@@ -3742,7 +3742,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 484,
+                  "charOffset": 622,
                   "snippet": {
                     "text": ","
                   }
@@ -3779,7 +3779,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 490,
+                  "charOffset": 628,
                   "snippet": {
                     "text": "}"
                   }
@@ -3979,10 +3979,50 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 493,
+                  "charLength": 6,
+                  "charOffset": 516,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msftnewproject",
+                "type": "msftnewproject.msft_Button_28"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Value"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftnewproject.msft_Button_28.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 631,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Patch(\n   Project,\n   Defaults(Project),\n   {\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      'Group Name': msft_Dropdown_27.Value,\n      'Cost Center Name': msft_Dropdown_24.Value,\n      'Primary Owner': msft_Dropdown_20.Value,\n      'Project Type': msft_Dropdown_21.Value,\n\n   }\n)"
+                    "text": "Patch(\n   Project,\n   Defaults(Project),\n   {\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      'Group Name': msft_Dropdown_27.Value,\n      'Cost Center Name': msft_Dropdown_24.Value,\n      'Primary Owner': msft_Dropdown_20.Value,\n      'Project Type': msft_Dropdown_21.Value,\n      'Goal': msft_Dropdown_33.Value,\n      'In Flight Version': msft_TextInput_15.Text,\n      'In Prod Version': msft_TextInput_17.Text,\n\n   }\n)"
                   }
                 }
               },
@@ -4019,10 +4059,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 447,
+                  "charLength": 585,
                   "charOffset": 44,
                   "snippet": {
-                    "text": "{\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      'Group Name': msft_Dropdown_27.Value,\n      'Cost Center Name': msft_Dropdown_24.Value,\n      'Primary Owner': msft_Dropdown_20.Value,\n      'Project Type': msft_Dropdown_21.Value,\n\n   }"
+                    "text": "{\n      'Project Name': msft_TextInput_13.Text,\n      Description: msft_TextInput_16.Text,\n      'Start Date': DateValue(Text(msft_DatePicker_4.SelectedDate, \"mm/dd/yyyy\")),\n      'End Date': DateValue(Text(msft_DatePicker_5.SelectedDate, \"mm/dd/yyyy\")),\n      'Group Name': msft_Dropdown_27.Value,\n      'Cost Center Name': msft_Dropdown_24.Value,\n      'Primary Owner': msft_Dropdown_20.Value,\n      'Project Type': msft_Dropdown_21.Value,\n      'Goal': msft_Dropdown_33.Value,\n      'In Flight Version': msft_TextInput_15.Text,\n      'In Prod Version': msft_TextInput_17.Text,\n\n   }"
                   }
                 }
               },
