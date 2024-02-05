@@ -690,11 +690,10 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: |+
-                =Concatenate(
+                =/*Concatenate(
                     LookUp(Capabilities, ID = ThisItem.Capability).Capability,
                     ", "
-                )
-                
+                );*/
                 
                 
                 
