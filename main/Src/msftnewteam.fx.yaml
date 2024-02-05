@@ -76,7 +76,44 @@ msftnewteam As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+        OnSelect: |+
+            =If(
+                !IsBlank(SelectedCaregiver), // Check if a caregiver is selected
+                If(
+                    SelectedCaregiverPercentage > 50, // Check if the percentage is greater than 50%
+                    // Update primary project details in Caregivers_1 list
+                    Patch(
+                        Caregivers_1,
+                        First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
+                        {
+                            'Primary Project': Project.Selected.'Project ID',
+                            'Allocation % for Primary Project': SelectedCaregiverPercentage,
+                            'Discipline for Primary Project': SelectedDiscipline
+                        }
+                    ),
+                    // Update secondary project details in Caregivers_1 list
+                    Patch(
+                        Caregivers_1,
+                        First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
+                        {
+                            'Secondary Project': Project.Selected.ID, // Replace YourProjectList with your actual project list name
+                            'Allocation % for Secondary Project': SelectedCaregiverPercentage,
+                            'Discipline for Secondary Project': SelectedDiscipline // Assuming SelectedDiscipline is available in your context
+                        }
+                    )
+                )
+            );
+            
+            // Clear the selected caregiver, percentage, and discipline after updating
+            Reset(msft_Dropdown_31);
+            Reset(msft_Dropdown_35); // Assuming this dropdown represents Discipline
+            Set(SelectedCaregiverPercentage, 0);
+            Set(SelectedDiscipline, ""); // Assuming SelectedDiscipline is available in your context
+            
+            // Add any other actions you want to perform after updating
+            // For example, navigate to another screen
+            Navigate(msftproject);
+            
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
