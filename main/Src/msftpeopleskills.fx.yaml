@@ -1,0 +1,350 @@
+msftpeopleskills As screen:
+    Height: =768
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =UpdateContext({
+            CountProjects: CountRows(FilteredCostCenters_Project),
+            CountCaregivers: CountRows(FilteredCostCenters_Caregiver)
+        })
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    Width: =1366
+
+    "'Report Header_24' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =200
+        X: =97
+        Y: =201
+        ZIndex: =3
+
+        "'Report Label_24' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =29
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Beginner Level"
+            Width: =182
+            X: =16
+            Y: =12
+            ZIndex: =4
+
+    Category_20 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: ="Caregivers having"
+        Width: =385
+        X: =108
+        Y: =111
+        ZIndex: =16
+
+    msft_Button_70 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =6
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="CANCEL"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =143
+        X: =97
+        Y: =699
+        ZIndex: =30
+
+    navBarVertical_admin_36 As navBarVertical_admin:
+        caregiversNav: =msftcaregivers
+        dasboardNav: =msftDashboard
+        masterDataNav: =msftMasterData
+        projectNav: =msftproject
+        ZIndex: =31
+
+    navBarHorizontal_36 As navBarHorizontal:
+        ZIndex: =32
+
+    Category_21 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: =Gallery1_2.Selected.'Skill Name'
+        Width: =221
+        X: =322
+        Y: =111
+        ZIndex: =34
+
+    Label34_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =CountRows(Gallery9.AllItems)
+        X: =108
+        Y: =260
+        ZIndex: =36
+
+    Button9_2 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Navigate(msftpeoplewithskillsbeginner, ScreenTransition.Fade); 
+            Set(SelectedCaregiversBeginner, Filter(Caregivers_1, 'Caregiver ID' in Gallery9.Selected.'Caregiver ID'))
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10.75
+        Text: ="VIEW CAREGIVERS"
+        Width: =141
+        X: =117
+        Y: =316
+        ZIndex: =37
+
+    Category_22 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: ="as a skill"
+        Width: =385
+        X: =540
+        Y: =111
+        ZIndex: =39
+
+    "'Report Header_25' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =200
+        X: =290
+        Y: =201
+        ZIndex: =40
+
+        "'Report Label_25' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =29
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Intermediate Level"
+            Width: =182
+            X: =16
+            Y: =12
+            ZIndex: =4
+
+    Button9_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =Navigate(msftpeoplewithskillsintermediate, ScreenTransition.Fade); 
+            Set(SelectedCaregiversIntermediate, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_1.Selected.'Caregiver ID'))
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10.75
+        Text: ="VIEW CAREGIVERS"
+        Width: =141
+        X: =310
+        Y: =316
+        ZIndex: =42
+
+    "'Report Header_26' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =200
+        X: =493
+        Y: =201
+        ZIndex: =43
+
+        "'Report Label_26' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =29
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Advanced Level"
+            Width: =182
+            X: =16
+            Y: =12
+            ZIndex: =4
+
+    Button9_4 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =Navigate(msftpeoplewithskillsadvanced, ScreenTransition.Fade); 
+            Set(SelectedCaregiversAdvanced, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_2.Selected.'Caregiver ID'))
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10.75
+        Text: ="VIEW CAREGIVERS"
+        Width: =141
+        X: =513
+        Y: =316
+        ZIndex: =45
+
+    Label34_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =CountRows(Gallery9_1.AllItems)
+        X: =305
+        Y: =260
+        ZIndex: =46
+
+    Label34_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =41
+        Size: =13
+        Text: =CountRows(Gallery9_1.AllItems)
+        X: =508
+        Y: =259
+        ZIndex: =47
+
