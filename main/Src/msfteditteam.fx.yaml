@@ -170,6 +170,7 @@ msfteditteam As screen:
             'Tertiary Project'.Value =Gallery16.Selected.'Project ID' )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =
         TemplatePadding: =0
         TemplateSize: =104
         Width: =1157
@@ -219,7 +220,7 @@ msfteditteam As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Distinct(Skills_1,Discipline)
+            Items: =Distinct(Skills_1,'Skill Name')
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
@@ -307,7 +308,14 @@ msfteditteam As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =
+            OnSelect: |-
+                =Patch(Caregivers_1,ThisItem,
+                //If(ThisItem.'Primary Project '.Value=Gallery16.Selected.'Project ID',
+                  //  
+                  {
+                        'Allocation % for Primary Project': msft_Dropdown_39.Selected.Value/100
+                        }
+                )
             PaddingBottom: =7
             PaddingLeft: =32
             PaddingRight: =32
@@ -378,4 +386,35 @@ msfteditteam As screen:
             X: =94
             Y: =37
             ZIndex: =15
+
+        discipline_4 As dropdown:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            ChevronBackground: =RGBA(255, 255, 255, 1)
+            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronFill: =RGBA(51, 51, 51, 1)
+            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(212, 212, 212, 1)
+            Items: =Distinct(Skills_1, Discipline)
+            PaddingBottom: =8
+            PaddingLeft: =12
+            PaddingRight: =12
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            SelectionColor: =RGBA(0, 0, 0, 1)
+            SelectionFill: =RGBA(255, 255, 255, 1)
+            Size: =12.75
+            Width: =318
+            X: =154
+            Y: =1
+            ZIndex: =16
 
