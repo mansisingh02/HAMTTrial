@@ -271,7 +271,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =1000
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939"  ,Filter(
+            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org" ,Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1", 'Beginner Skill 1',
@@ -1909,7 +1909,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =273
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939"  ,Filter(
+            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org"  ,Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1", 'Intermediate Skill 1',
@@ -2455,7 +2455,8 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =768
         Items: |
-            =If(txtCaregiverID.Text="801263" || txtCaregiverID.Text="800958" || txtCaregiverID.Text="800939",Filter(
+            =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",
+            Filter(
                 AddColumns(
                     Advanced,
                     "Advanced 1", 'Advanced Skill 1',

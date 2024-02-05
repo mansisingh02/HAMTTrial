@@ -1,17 +1,32 @@
 {
-  "2087c545-07a2-4412-8791-fc099543f2c5": {
+  "489129e9-0231-4cb4-a2d5-07eb9d9b3bcd": {
     "connectionRef": {
-      "displayName": "Excel Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1658/1.0.1658.3452/excelonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
+        }
+      }
     },
     "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "ae69394b-09f7-4226-bdd1-b172ff767edb"
+    "dataSources": [
+      "uploadFile"
     ],
-    "id": "2087c545-07a2-4412-8791-fc099543f2c5"
+    "dependencies": {
+      "shared_excelonlinebusiness": "ea650aae-b066-489b-bded-4f7f8c599893",
+      "shared_sharepointonline": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
+    },
+    "dependents": [],
+    "id": "489129e9-0231-4cb4-a2d5-07eb9d9b3bcd"
   },
   "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a": {
     "appActions": [
@@ -91,49 +106,22 @@
     ],
     "dependencies": {},
     "dependents": [
-      "ae69394b-09f7-4226-bdd1-b172ff767edb"
+      "489129e9-0231-4cb4-a2d5-07eb9d9b3bcd"
     ],
     "id": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
   },
-  "ae69394b-09f7-4226-bdd1-b172ff767edb": {
+  "ea650aae-b066-489b-bded-4f7f8c599893": {
     "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1664/1.0.1664.3477/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "2087c545-07a2-4412-8791-fc099543f2c5": {
-          "value": "shared_excelonlinebusiness"
-        },
-        "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a": {
-          "value": "shared_sharepointonline"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
-        }
-      },
-      "parameterHintsV2": {
-        "shared_excelonlinebusiness": {
-          "value": "2087c545-07a2-4412-8791-fc099543f2c5"
-        },
-        "shared_sharepointonline": {
-          "value": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
-        },
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "e3d5d068-7805-4d8e-a374-54b3f642f52e"
-        }
-      }
+      "displayName": "Excel Online (Business)",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1658/1.0.1658.3452/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
     },
     "datasets": {},
-    "dataSources": [
-      "uploadFile"
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "489129e9-0231-4cb4-a2d5-07eb9d9b3bcd"
     ],
-    "dependencies": {
-      "shared_excelonlinebusiness": "2087c545-07a2-4412-8791-fc099543f2c5",
-      "shared_sharepointonline": "ac5e3fa2-316b-4d7d-9cd1-ba57171d3f8a"
-    },
-    "dependents": [],
-    "id": "ae69394b-09f7-4226-bdd1-b172ff767edb"
+    "id": "ea650aae-b066-489b-bded-4f7f8c599893"
   }
 }

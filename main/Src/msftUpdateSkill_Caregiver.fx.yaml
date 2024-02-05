@@ -328,6 +328,12 @@ msftUpdateSkill_Caregiver As screen:
         projectNav: =msftproject
         ZIndex: =16
 
-    navBarHorizontal_18 As navBarHorizontal:
+    navBarVertical_cg_2 As navBarVertical_cg:
+        Visible: |-
+            =If(//Lower(User().Email)="rama.ghodke@providence.org" || 
+            Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
         ZIndex: =17
+
+    navBarHorizontal_18 As navBarHorizontal:
+        ZIndex: =18
 

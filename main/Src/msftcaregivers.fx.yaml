@@ -234,9 +234,9 @@ msftcaregivers As screen:
             Height: =35
             OnSelect: =Select(Parent)
             Size: =9
-            Text: =ThisItem.'Primary Allocation'.Value
-            Width: =377
-            X: =580
+            Text: =ThisItem.Project1.'Project Name' & Char(10) & ThisItem.Project2.'Project Name'
+            Width: =222
+            X: =716
             ZIndex: =10
 
     Label2 As label:
@@ -316,7 +316,13 @@ msftcaregivers As screen:
                     "Intermediatee",
                     LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
                     "Advancedd",
-                    LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID'])),
+                    LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
+                    "Project1",
+                    LookUp(Project, 'Project ID'= Caregivers_1[@'Primary Project '].Value),
+                    "Project2",
+                    LookUp(Project, 'Project ID'= Caregivers_1[@'Secondary Project'].Value)
+                    
+                    ),
                     StartsWith('Caregiver Name',search.Text) && (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank())  && 
                     If(User().Email="madhavi.b@providence.org", 'Core Leader' = "Madhavi B",If (Checkbox1.Value= true, 'Core Leader'=Gallery13.Selected.'Core Leader', Checkbox1.Value=false)
                     ))
@@ -452,9 +458,6 @@ msftcaregivers As screen:
         projectNav: =msftproject
         ZIndex: =50
 
-    navBarHorizontal_29 As navBarHorizontal:
-        ZIndex: =55
-
     msft_Button_48 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -544,4 +547,13 @@ msftcaregivers As screen:
         X: =547
         Y: =706
         ZIndex: =59
+
+    navBarVertical_cg_1 As navBarVertical_cg:
+        Visible: |-
+            =If(//Lower(User().Email)="rama.ghodke@providence.org" || 
+            Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
+        ZIndex: =60
+
+    navBarHorizontal_29 As navBarHorizontal:
+        ZIndex: =61
 

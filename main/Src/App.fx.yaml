@@ -1,6 +1,7 @@
 App As appinfo:
     BackEnabled: =false
-    StartScreen: =msftDashboard
+    OnStart: =
+    StartScreen: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", msftDashboard, msftUpdatecaregivers)
     Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
