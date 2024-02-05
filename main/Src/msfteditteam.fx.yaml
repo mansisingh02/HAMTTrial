@@ -22,7 +22,7 @@ msfteditteam As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =523
+        Height: =543
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
@@ -164,16 +164,16 @@ msfteditteam As screen:
     "Gallery21 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =551
+        Height: =495
         Items: |-
-            =Filter(Caregivers_1,'Primary Project '.Value=Gallery16.Selected.'Project ID' || 'Secondary Project'.Value=Gallery16.Selected.'Project ID' || 
-            'Tertiary Project'. =Gallery16.Selected.'Project ID')
+            =Filter(Caregivers_1,'Primary Project '.Value=Gallery16.Selected.'Project ID'  || 'Secondary Project'.Value=Gallery16.Selected.'Project ID' || 
+            'Tertiary Project'.Value =Gallery16.Selected.'Project ID' )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplatePadding: =0
         TemplateSize: =104
-        Width: =1192
-        X: =104
+        Width: =1157
+        X: =49
         Y: =193
         ZIndex: =86
 
@@ -307,7 +307,7 @@ msfteditteam As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+            OnSelect: =
             PaddingBottom: =7
             PaddingLeft: =32
             PaddingRight: =32
