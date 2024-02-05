@@ -164,7 +164,7 @@ msftpeopleskills As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =Navigate(msftpeoplewithskillsbeginner, ScreenTransition.Fade); 
-            Set(SelectedCaregivers, Filter(Caregivers_1, 'Caregiver ID' in Gallery9.Selected.'Caregiver ID')
+            Set(SelectedCaregiversBeginner, Filter(Caregivers_1, 'Caregiver ID' in Gallery9.Selected.'Caregiver ID'))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -242,7 +242,8 @@ msftpeopleskills As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =Navigate(msftcaregiverscount, ScreenTransition.Fade, { FilteredCostCenters_Caregiver: FilteredCostCenters_Caregiver })
+            =Navigate(msftpeoplewithskillsintermediate, ScreenTransition.Fade); 
+            Set(SelectedCaregiversIntermediate, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_1.Selected.'Caregiver ID'))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -300,7 +301,8 @@ msftpeopleskills As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =Navigate(msftcaregiverscount, ScreenTransition.Fade, { FilteredCostCenters_Caregiver: FilteredCostCenters_Caregiver })
+            =Navigate(msftpeoplewithskillsadvanced, ScreenTransition.Fade); 
+            Set(SelectedCaregiversAdvanced, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_2.Selected.'Caregiver ID'))
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

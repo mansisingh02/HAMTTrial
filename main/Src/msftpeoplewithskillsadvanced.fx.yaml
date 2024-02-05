@@ -1,4 +1,4 @@
-msftpeoplewithskillsbeginner As screen:
+msftpeoplewithskillsadvanced As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
@@ -22,7 +22,7 @@ msftpeoplewithskillsbeginner As screen:
         
     Width: =1366
 
-    "'Report Header_27' As groupContainer.manualLayoutContainer":
+    "'Report Header_29' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =200
@@ -30,7 +30,7 @@ msftpeoplewithskillsbeginner As screen:
         Y: =201
         ZIndex: =3
 
-        "'Report Label_27' As label":
+        "'Report Label_29' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -51,7 +51,7 @@ msftpeoplewithskillsbeginner As screen:
             Y: =12
             ZIndex: =4
 
-    Category_23 As label:
+    Category_29 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         Color: =RGBA(51, 51, 51, 1)
@@ -71,7 +71,7 @@ msftpeoplewithskillsbeginner As screen:
         Y: =111
         ZIndex: =16
 
-    msft_Button_71 As button:
+    msft_Button_73 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =0
@@ -106,17 +106,17 @@ msftpeoplewithskillsbeginner As screen:
         Y: =699
         ZIndex: =30
 
-    navBarVertical_admin_37 As navBarVertical_admin:
+    navBarVertical_admin_39 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData
         projectNav: =msftproject
         ZIndex: =31
 
-    navBarHorizontal_37 As navBarHorizontal:
+    navBarHorizontal_39 As navBarHorizontal:
         ZIndex: =32
 
-    Category_24 As label:
+    Category_31 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         Color: =RGBA(51, 51, 51, 1)
@@ -136,11 +136,11 @@ msftpeoplewithskillsbeginner As screen:
         Y: =111
         ZIndex: =34
 
-    Gallery18_1 As gallery.galleryVertical:
+    Gallery18_3 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =415
-        Items: =SelectedCaregiversBeginner
+        Items: =SelectedCaregiversAdvanced
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =45
@@ -150,7 +150,7 @@ msftpeoplewithskillsbeginner As screen:
         Y: =265
         ZIndex: =35
 
-        Label37_1 As label:
+        Label37_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -159,14 +159,14 @@ msftpeoplewithskillsbeginner As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =49
+            Height: =45
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Caregiver Name'
             X: =6
             ZIndex: =1
 
-    Category_25 As label:
+    Category_30 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         Color: =RGBA(51, 51, 51, 1)
@@ -180,7 +180,7 @@ msftpeoplewithskillsbeginner As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="beginner skills"
+        Text: ="advanced skills"
         Width: =385
         X: =624
         Y: =111
