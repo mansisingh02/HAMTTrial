@@ -553,7 +553,7 @@ msftcaregivers As screen:
         caregiversNav: =msftcaregivers
         myAccountNav: =msftUpdatecaregivers
         Visible: |-
-            =If(//Lower(User().Email)="rama.ghodke@providence.org" || 
+            =If(Lower(User().Email)="rama.ghodke@providence.org" || 
             Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
         ZIndex: =60
 
