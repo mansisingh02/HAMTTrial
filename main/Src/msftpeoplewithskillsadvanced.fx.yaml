@@ -22,6 +22,36 @@ msftpeoplewithskillsadvanced As screen:
         
     Width: =1366
 
+    Gallery18_3 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =415
+        Items: =SelectedCaregiversAdvanced
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =280
+        Width: =1256
+        X: =108
+        Y: =265
+        ZIndex: =1
+
+        Label5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =36
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            Width: =261
+            Y: =3
+            ZIndex: =1
+
     "'Report Header_29' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
@@ -86,7 +116,7 @@ msftpeoplewithskillsadvanced As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftcostcenter,ScreenTransition.Fade)
+        OnSelect: =Navigate(msftpeopleskills,ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -135,36 +165,6 @@ msftpeoplewithskillsadvanced As screen:
         X: =402
         Y: =111
         ZIndex: =34
-
-    Gallery18_3 As gallery.galleryVertical:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =415
-        Items: =SelectedCaregiversAdvanced
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =45
-        Width: =1268
-        WrapCount: =3
-        X: =97
-        Y: =265
-        ZIndex: =35
-
-        Label37_3 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =45
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Caregiver Name'
-            X: =6
-            ZIndex: =1
 
     Category_30 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
