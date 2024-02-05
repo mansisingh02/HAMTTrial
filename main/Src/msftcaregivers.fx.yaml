@@ -549,6 +549,8 @@ msftcaregivers As screen:
         ZIndex: =59
 
     navBarVertical_cg_1 As navBarVertical_cg:
+        caregiversNav: =msftcaregivers
+        myAccountNav: =msftUpdatecaregivers
         Visible: |-
             =If(//Lower(User().Email)="rama.ghodke@providence.org" || 
             Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
