@@ -1,7 +1,7 @@
 msftproject As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
+    OnVisible: |
         = Set(
                 selectedCapabilities,
                 Filter(Capabilities, Capability in Gallery16.Selected.Capability.Value)
@@ -87,8 +87,8 @@ msftproject As screen:
         "'Report Header_7' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =97
-            X: =240
+            Width: =185
+            X: =151
             ZIndex: =8
 
             "'Report Label_7' As label":
@@ -127,7 +127,7 @@ msftproject As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 FontWeight: =FontWeight.Bold
-                Height: =17
+                Height: =18
                 LineHeight: =1.142857
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -135,7 +135,8 @@ msftproject As screen:
                 PaddingTop: =0
                 Size: =10.5
                 Text: ="Type"
-                Width: =101
+                Width: =65
+                X: =5
                 Y: =15
                 ZIndex: =11
 
@@ -143,7 +144,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =128
-            X: =550
+            X: =555
             ZIndex: =12
 
             "'Description Label_1' As label":
@@ -170,8 +171,8 @@ msftproject As screen:
         "'Refreshed On Header' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =89
-            X: =666
+            Width: =92
+            X: =678
             ZIndex: =14
 
             "'Refreshed On Label' As label":
@@ -191,7 +192,7 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Team Size"
                 Width: =78
-                X: =18.5
+                X: =11
                 Y: =17
                 ZIndex: =15
 
@@ -442,8 +443,8 @@ msftproject As screen:
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =55
         Width: =1262
-        X: =104
-        Y: =261
+        X: =102
+        Y: =248
         ZIndex: =53
 
         Label12 As label:
@@ -492,26 +493,9 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.Description
-            Width: =91
-            X: =234
+            Width: =179
+            X: =145
             ZIndex: =3
-
-        Label24_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =52
-            OnSelect: =Select(Parent)
-            Size: =9
-            Text: =ThisItem.'Project ID'
-            Width: =65
-            X: =135
-            ZIndex: =4
 
         Label24_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -544,7 +528,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Primary Owner'.Value
             Width: =108
-            X: =559
+            X: =574
             ZIndex: =7
 
         Label24_4 As label:
@@ -622,8 +606,8 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Group Name'.Value
-            Width: =76
-            X: =481
+            Width: =98
+            X: =476
             ZIndex: =12
 
         Label24_6 As label:
@@ -695,39 +679,14 @@ msftproject As screen:
                     LookUp(Capabilities, ID = ThisItem.Capability).Capability,
                     ", "
                 );*/
-                Concat(ThisItem.Capability,ThisRecord.Value)
-            Width: =74
+                If(
+                    CountRows(ThisItem.Capability) > 1,
+                    Concat(ThisItem.Capability, ThisRecord.Value & ", "),
+                    Concat(ThisItem.Capability, ThisRecord.Value)
+                )
+            Width: =88
             X: =772
             ZIndex: =16
-
-    "'Report Header_19' As groupContainer.manualLayoutContainer":
-        Height: =48
-        LayoutMode: ="manual"
-        Width: =121
-        X: =239
-        Y: =200
-        ZIndex: =54
-
-        "'Report Label_19' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =28
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Project ID"
-            Width: =89
-            X: =5
-            Y: =11
-            ZIndex: =9
 
     "'Refreshed On Header_2' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -774,7 +733,7 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =17
+            Height: =16
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -782,9 +741,9 @@ msftproject As screen:
             PaddingTop: =0
             Size: =10.5
             Text: ="Group"
-            Width: =62
-            X: =8
-            Y: =16
+            Width: =50
+            X: =5
+            Y: =15
             ZIndex: =11
 
     navBarVertical_admin_28 As navBarVertical_admin:
@@ -889,7 +848,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project,Goals.Value)
+        Items: =Distinct(Project,Goal.Value)
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
