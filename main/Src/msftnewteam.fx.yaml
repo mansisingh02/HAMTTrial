@@ -416,7 +416,7 @@ msftnewteam As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Discipline,Discipline)
+        Items: =Distinct(Discipline,DisciplineName)
         OnChange: |
             =If(
                 PrimaryOwnerMode,
