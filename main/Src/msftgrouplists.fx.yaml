@@ -118,6 +118,14 @@ msftgrouplists As screen:
         Items: =FilteredProjectsGroup
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Navigate(
+                msftproject,
+                ScreenTransition.Fade,
+                {
+                    SelectedProjectGroupCreation: Gallery17.Selected.'Group Name'
+                }
+            )
         TemplateSize: =280
         Width: =942
         X: =100

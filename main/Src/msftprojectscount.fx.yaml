@@ -125,6 +125,14 @@ msftprojectscount As screen:
         Items: =FilteredCostCenters_Project
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: |-
+            =Navigate(
+                msftproject,
+                ScreenTransition.Fade,
+                {
+                    SelectedProjectCostCenter: Gallery1_4.Selected.'Cost Center Name'
+                }
+            )
         TemplateSize: =84
         Width: =1172
         WrapCount: =3

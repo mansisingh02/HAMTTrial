@@ -415,6 +415,12 @@ msftproject As screen:
              )
              &&
                 ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
+            &&
+                (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
+                &&
+                ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
+                &&
+                ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
              )
             
             
