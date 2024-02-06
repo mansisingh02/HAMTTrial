@@ -11,7 +11,7 @@ msftprojecttype As screen:
         Width: =302
         X: =91
         Y: =204
-        ZIndex: =3
+        ZIndex: =1
 
         "'Report Label_8' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -40,7 +40,7 @@ msftprojecttype As screen:
         Width: =274
         X: =410
         Y: =216
-        ZIndex: =7
+        ZIndex: =2
 
         "'Report Label_9' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -68,7 +68,7 @@ msftprojecttype As screen:
         Width: =244
         X: =734
         Y: =217
-        ZIndex: =9
+        ZIndex: =3
 
         "'Description Label_2' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -97,7 +97,7 @@ msftprojecttype As screen:
         Width: =244
         X: =1083
         Y: =211
-        ZIndex: =11
+        ZIndex: =4
 
         "'Action Label_6' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -138,7 +138,7 @@ msftprojecttype As screen:
         Width: =355
         X: =107
         Y: =120
-        ZIndex: =25
+        ZIndex: =5
 
     "'Rectangle 31_7' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -150,7 +150,7 @@ msftprojecttype As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =70
-        ZIndex: =27
+        ZIndex: =6
 
     "'Rectangle 32_7' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -163,7 +163,7 @@ msftprojecttype As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1296.49914550781
         X: =69.50085449219
-        ZIndex: =28
+        ZIndex: =7
 
     SkillLabel_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -180,7 +180,7 @@ msftprojecttype As screen:
         Width: =166
         X: =107
         Y: =288
-        ZIndex: =34
+        ZIndex: =8
 
     Button5_6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -208,7 +208,7 @@ msftprojecttype As screen:
         Width: =70
         X: =1215
         Y: =288
-        ZIndex: =39
+        ZIndex: =9
 
     Button5_7 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -237,7 +237,7 @@ msftprojecttype As screen:
         Width: =70
         X: =1127
         Y: =288
-        ZIndex: =40
+        ZIndex: =10
 
     msft_Button_36 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -272,36 +272,17 @@ msftprojecttype As screen:
         Width: =143
         X: =91
         Y: =693
-        ZIndex: =41
-
-    Label11_2 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =34
-        OnSelect: |-
-            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
-        Size: =10.75
-        Text: =Text(TempCount)
-        Width: =98
-        X: =848
-        Y: =288
-        ZIndex: =42
+        ZIndex: =11
 
     navBarVertical_admin_14 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData
         projectNav: =msftproject
-        ZIndex: =43
+        ZIndex: =12
 
     navBarHorizontal_16 As navBarHorizontal:
-        ZIndex: =44
+        ZIndex: =13
 
     Label13 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -323,5 +304,54 @@ msftprojecttype As screen:
         Width: =355
         X: =410
         Y: =288
-        ZIndex: =45
+        ZIndex: =14
+
+    Button5_18 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =52
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |-
+            =Navigate(msftcapabilitylists, ScreenTransition.Fade, { FilteredProjectsGroup: FilteredProjectsGroup })
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =10.5
+        Text: ="VIEW PROJECTS LISTED"
+        Width: =231
+        X: =740
+        Y: =270
+        ZIndex: =15
+
+    Label11_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =34
+        OnSelect: |-
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
+        Size: =10.75
+        Text: ="("&Text(TempCount)&")"
+        Width: =98
+        X: =928
+        Y: =278
+        ZIndex: =16
 
