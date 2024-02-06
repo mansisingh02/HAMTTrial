@@ -320,7 +320,7 @@ msftprojecttype As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Navigate(msftcapabilitylists, ScreenTransition.Fade, { FilteredProjectsGroup: FilteredProjectsGroup })
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
