@@ -80,27 +80,35 @@ msftnewteam As screen:
             =
             If(
                 !IsBlank(SelectedCaregiver),
-                If(
-                    SelectedCaregiverPercentage > 50,
-                    Patch(
-                        Caregivers_1,
-                        First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
-                        {
-                            'Primary Project': Project.Selected.'Project ID',
-                            'Allocation % for Primary Project': SelectedCaregiverPercentage,
-                            'Discipline for Primary Project': msft_Dropdown_35.Selected.Value
-                        }
-                    ),
-                    Patch(
-                        Caregivers_1,
-                        First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
-                        {
-                            'Secondary Project': Project.Selected.'Project ID',
-                            'Allocation % for Secondary Project': SelectedCaregiverPercentage,
-                            'Discipline for Secondary Project': SelectedCaregiverDiscipline
-                        }
-                    )
-                )
+               // If(
+                 //   SelectedCaregiverPercentage > 50,
+                    Patch(Caregivers_1, 
+            First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)),
+            If(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
+              {
+                    'Primary Project ':{ Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Primary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Primary Project': { Value : ComboBox2_1.Selected.Value , Id : ComboBox5_1.Selected.ID } 
+              },
+              First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
+              {
+                    'Secondary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Secondary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Secondary Project': { Value :ComboBox2_1.Selected.Value , Id :ComboBox5_1.Selected.ID } },
+                    
+             First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Tertiary Project'.Value=Blank(),
+              {
+                    'Tertiary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Tertiary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Tertiary Project': { Value : ComboBox2_1.Selected.Value , Id : ComboBox5_1.Selected.ID } }
+              
+            )
+            );
+            Reset(ComboBox2_1);
+            Reset(ComboBox5_1);
+            Reset(msft_Dropdown_41);
+            Navigate(msfteditteam)
+                //)
             );
             
             Reset(msft_Dropdown_31);
