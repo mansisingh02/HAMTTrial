@@ -106,13 +106,15 @@ msftprojecttypelists As screen:
     Gallery12 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =246
+        Height: =360
         Items: =FilteredProjectsType
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =280
+        OnSelect: =Navigate(msftproject)
+        TemplateSize: =75
+        Width: =1246
         X: =107
-        Y: =207
+        Y: =252
         ZIndex: =43
 
         Label22 As label:
@@ -124,11 +126,13 @@ msftprojecttypelists As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =33
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Project Name'
+            Width: =590
             X: =12
-            Y: =39
+            Y: =44
             ZIndex: =1
 
     Label27_3 As label:
