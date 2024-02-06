@@ -282,7 +282,7 @@ msfteditteam As screen:
                 If(ThisItem.'Primary Project '.Value=Gallery16.Selected.'Project ID',
                   {
                         'Allocation % for Primary Project': msft_Dropdown_39.Selected.Value/100,
-                        'Discipline for Primary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.Value } 
+                        'Discipline for Primary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } 
                   },
                   ThisItem.'Secondary Project'.Value=Gallery16.Selected.'Project ID',
                   {
@@ -451,7 +451,7 @@ msfteditteam As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+        OnSelect: =Navigate(msftnewMember,ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
