@@ -438,7 +438,17 @@ msftproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =484
-        Items: =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')))
+        Items: |-
+            =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')) &&
+            (('Cost Center Name'.Value = msft_Dropdown_16.Selected.Value || msft_Dropdown_16.Selected.Value=Blank()) &&
+            ('Project Type'.Value = msft_Dropdown_26.Selected.Value || msft_Dropdown_26.Selected.Value=Blank())
+             &&
+            ('Goal'.Value = msft_Dropdown_34.Selected.Value || msft_Dropdown_34.Selected.Value=Blank())
+             ))
+            
+            
+            
+             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =55
