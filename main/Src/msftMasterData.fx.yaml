@@ -155,7 +155,7 @@ msftMasterData As screen:
         DelayItemLoading: =true
         Height: =405
         Items: |+
-            =Sort(Filter(Discipline, TextInput1_2.Text in Lower(Trim(Discipline))),Discipline, SortOrder.Ascending)
+            =Sort(Filter(Discipline, TextInput1_2.Text in Lower(Trim(DisciplineName))),DisciplineName, SortOrder.Ascending)
             
             
             
@@ -171,9 +171,9 @@ msftMasterData As screen:
                 FilteredDiscipline,
                 Filter(
                     Caregivers_1,
-                    'Discipline for Primary Project'.Value = Gallery33.Selected.Discipline ||
-                    'Discipline for Secondary Project'.Value = Gallery33.Selected.Discipline ||
-                    Gallery33.Selected.Discipline in 'Discipline for Tertiary Project'.Value
+                    'Discipline for Primary Project'.Value = Gallery33.Selected.DisciplineName ||
+                    'Discipline for Secondary Project'.Value = Gallery33.Selected.DisciplineName ||
+                    Gallery33.Selected.DisciplineName in 'Discipline for Tertiary Project'.Value
                 )
             );
             UpdateContext({TempCount: CountRows(FilteredDiscipline)});
@@ -182,7 +182,7 @@ msftMasterData As screen:
                 msftdiscipline,
                 ScreenTransition.Fade,
                 {
-                    SelectedDiscipline: Gallery33.Selected.Discipline,
+                    SelectedDiscipline: Gallery33.Selected.DisciplineName,
                     FilteredDiscipline: FilteredDiscipline,
                     TempCount: TempCount
                 }
@@ -225,7 +225,7 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =ThisItem.Discipline
+            Text: =ThisItem.DisciplineName
             VerticalAlign: =VerticalAlign.Top
             Width: =Title29.Width
             X: =Title29.X

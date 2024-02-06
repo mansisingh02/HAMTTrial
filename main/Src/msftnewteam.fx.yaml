@@ -77,41 +77,37 @@ msftnewteam As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
-            =If(
-                !IsBlank(SelectedCaregiver), // Check if a caregiver is selected
+            =
+            If(
+                !IsBlank(SelectedCaregiver),
                 If(
-                    SelectedCaregiverPercentage > 50, // Check if the percentage is greater than 50%
-                    // Update primary project details in Caregivers_1 list
+                    SelectedCaregiverPercentage > 50,
                     Patch(
                         Caregivers_1,
                         First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
                         {
                             'Primary Project': Project.Selected.'Project ID',
                             'Allocation % for Primary Project': SelectedCaregiverPercentage,
-                            'Discipline for Primary Project': SelectedDiscipline
+                            'Discipline for Primary Project': msft_Dropdown_35.Selected.Value
                         }
                     ),
-                    // Update secondary project details in Caregivers_1 list
                     Patch(
                         Caregivers_1,
                         First(Filter(Caregivers_1, 'Caregiver Name' = SelectedCaregiver)),
                         {
-                            'Secondary Project': Project.Selected.ID, // Replace YourProjectList with your actual project list name
+                            'Secondary Project': Project.Selected.'Project ID',
                             'Allocation % for Secondary Project': SelectedCaregiverPercentage,
-                            'Discipline for Secondary Project': SelectedDiscipline // Assuming SelectedDiscipline is available in your context
+                            'Discipline for Secondary Project': SelectedCaregiverDiscipline
                         }
                     )
                 )
             );
             
-            // Clear the selected caregiver, percentage, and discipline after updating
             Reset(msft_Dropdown_31);
-            Reset(msft_Dropdown_35); // Assuming this dropdown represents Discipline
+            Reset(msft_Dropdown_35);
             Set(SelectedCaregiverPercentage, 0);
-            Set(SelectedDiscipline, ""); // Assuming SelectedDiscipline is available in your context
+            Set(SelectedCaregiverDiscipline, "");
             
-            // Add any other actions you want to perform after updating
-            // For example, navigate to another screen
             Navigate(msftproject);
             
         PaddingBottom: =7
@@ -420,7 +416,7 @@ msftnewteam As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Skills_1,Discipline)
+        Items: =Distinct(Discipline,Discipline)
         OnChange: |
             =If(
                 PrimaryOwnerMode,
