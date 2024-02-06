@@ -413,14 +413,15 @@ msftproject As screen:
              &&
             (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
              )
-             &&
+             &&(
                 ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
-            &&
+            ||
                 (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
-                &&
+                ||
                 ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
-                &&
+                ||
                 ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
+             )
              )
             
             
