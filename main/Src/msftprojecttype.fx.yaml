@@ -50,7 +50,7 @@ msftprojecttype As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =13
+            Height: =28
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -59,7 +59,7 @@ msftprojecttype As screen:
             Size: =10.5
             Text: ="Description"
             Width: =86
-            Y: =16
+            Y: =8
             ZIndex: =8
 
     "'Description Header_2' As groupContainer.manualLayoutContainer":
@@ -119,38 +119,6 @@ msftprojecttype As screen:
             X: =95
             Y: =20
             ZIndex: =12
-
-    "'Column - Header 13_1' As groupContainer.manualLayoutContainer":
-        Height: =112
-        LayoutMode: ="manual"
-        Width: =324
-        X: =410
-        Y: =260
-        ZIndex: =17
-
-        "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._2' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =89
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: |-
-                =LookUp(
-                    Skills_1,
-                    'Skill Name' = Gallery1_2.Selected.'Skill Name'
-                ).Description
-            Width: =304
-            X: =16
-            Y: =5
-            ZIndex: =18
 
     Category_4 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -318,7 +286,7 @@ msftprojecttype As screen:
         Height: =34
         OnSelect: |-
             =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
-        Size: =13
+        Size: =10.75
         Text: =Text(TempCount)
         Width: =98
         X: =848
@@ -334,4 +302,26 @@ msftprojecttype As screen:
 
     navBarHorizontal_16 As navBarHorizontal:
         ZIndex: =44
+
+    Label13 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =247
+        Overflow: =Overflow.Scroll
+        Size: =10.75
+        Text: |-
+            =LookUp(
+                'Project Type',
+                'Project Type' = Gallery4.Selected.'Project Type'
+            ).Description
+        Width: =355
+        X: =410
+        Y: =288
+        ZIndex: =45
 
