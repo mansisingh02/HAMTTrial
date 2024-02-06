@@ -3583,10 +3583,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 108,
+                  "charLength": 106,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Patch(Capabilities, SelectedCapabilities, { Capability: TextInput2_2.Text, Description: TextInput2_3.Text })"
+                    "text": "Patch(Capabilities, SelectedCapabilities, { Capability: TextInput2.Text, Description: TextInput2_1.Text })"
                   }
                 }
               },
@@ -22463,6 +22463,36 @@
                 "member": "Text",
                 "module": "msfteditprojectgoal",
                 "type": "msfteditprojectgoal.Category_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msfteditprojectgoal.Label16_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msfteditprojectgoal.Label16_3.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "msfteditprojectgoal",
+                "type": "msfteditprojectgoal.Label16_3"
               }
             }
           ],
