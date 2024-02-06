@@ -137,29 +137,33 @@ msftnewMember As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |
+        OnSelect: |-
             =Patch(Caregivers_1, 
             First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)),
             If(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Primary Project '.Value=Blank(),
               {
-                    'Primary Project ': Gallery16.Selected.'Project ID',
-                    'Allocation % for Primary Project': msft_Dropdown_39.Selected.Value/100,
-                    'Discipline for Primary Project': { Value : msft_Dropdown_37.Selected.Value , Id : msft_Dropdown_37.Selected.Value } 
+                    'Primary Project ':{ Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Primary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Primary Project': { Value : ComboBox2_1.Selected.Value , Id : ComboBox5_1.Selected.ID } 
               },
               First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Primary Project '.Value=Blank(),
               {
-                    'Secondary Project': Gallery16.Selected.'Project ID',
-                    'Allocation % for Secondary Project': msft_Dropdown_39.Selected.Value/100,
-                    'Discipline for Secondary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } },
+                    'Secondary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Secondary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Secondary Project': { Value :ComboBox2_1.Selected.Value , Id :ComboBox5_1.Selected.ID } },
                     
              First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Tertiary Project'.Value=Blank(),
               {
-                    'Primary Project ': Gallery16.Selected.'Project ID',
-                    'Allocation % for Tertiary Project': msft_Dropdown_39.Selected.Value/100,
-                    'Discipline for Tertiary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } }
+                    'Tertiary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
+                    'Allocation % for Tertiary Project': msft_Dropdown_41.Selected.Value/100,
+                    'Discipline for Tertiary Project': { Value : ComboBox2_1.Selected.Value , Id : ComboBox5_1.Selected.ID } }
               
             )
-            )
+            );
+            Reset(ComboBox2_1);
+            Reset(ComboBox5_1);
+            Reset(msft_Dropdown_41);
+            Navigate(msfteditteam)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -270,37 +274,6 @@ msftnewMember As screen:
         Y: =179
         ZIndex: =93
 
-    msft_Dropdown_37 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(116, 116, 116, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =39
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Discipline,DisciplineName)
-        OnChange: =
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Width: =196
-        X: =305
-        Y: =233
-        ZIndex: =95
-
     msft_Dropdown_41 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -372,4 +345,74 @@ msftnewMember As screen:
         X: =699
         Y: =202
         ZIndex: =98
+
+    ComboBox2_1 As combobox:
+        BorderColor: =RGBA(116, 116, 116, 1)
+        BorderThickness: =1
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(0, 0, 0, 0)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        IsSearchable: =false
+        Items: =Distinct(Discipline,DisciplineName)
+        OnChange: =
+        OnSelect: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =201
+        X: =302
+        Y: =233
+        ZIndex: =99
+
+    ComboBox5_1 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultSelectedItems: =Filter(Discipline, DisciplineName = ComboBox2_1.Selected.Value)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["ComplianceAssetId"]
+        Font: =Font.'Segoe UI'
+        Height: =42
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        IsSearchable: =false
+        Items: =Filter(Discipline, DisciplineName = ComboBox2_1.Selected.Value)
+        OnSelect: =
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["ComplianceAssetId"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        Size: =13
+        Visible: =false
+        Width: =50
+        X: =360
+        Y: =102
+        ZIndex: =100
 
