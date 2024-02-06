@@ -11,45 +11,13 @@ msftproject As screen:
         Set(SelectedValue, "");
     Width: =1366
 
-    msft_Dropdown_16 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: ="Select a Cost Center"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project,'Cost Center Name'.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =10.75
-        Width: =174
-        X: =337
-        Y: =149
-        ZIndex: =2
-
     "'Table Headers Container' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =1220
         X: =97
         Y: =201
-        ZIndex: =5
+        ZIndex: =2
 
         "'Report Header_6' As groupContainer.manualLayoutContainer":
             Height: =48
@@ -374,7 +342,7 @@ msftproject As screen:
         Width: =203
         X: =102
         Y: =104
-        ZIndex: =45
+        ZIndex: =3
 
     "'Rectangle 31_9' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -386,7 +354,7 @@ msftproject As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =70
-        ZIndex: =47
+        ZIndex: =4
 
     "'Rectangle 32_9' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -399,7 +367,7 @@ msftproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1296.49914550781
         X: =70
-        ZIndex: =48
+        ZIndex: =5
 
     msft_Button_13 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -432,20 +400,30 @@ msftproject As screen:
         Width: =204
         X: =1125
         Y: =147
-        ZIndex: =52
+        ZIndex: =6
 
     Gallery16 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =484
-        Items: =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')))
+        Items: |-
+            =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')) &&
+            (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
+            ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
+             &&
+            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
+             ))
+            
+            
+            
+             
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =55
         Width: =1262
         X: =102
         Y: =248
-        ZIndex: =53
+        ZIndex: =7
 
         Label12 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -696,7 +674,7 @@ msftproject As screen:
         Width: =99
         X: =1045
         Y: =201
-        ZIndex: =55
+        ZIndex: =8
 
         "'Refreshed On Label_2' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -725,7 +703,7 @@ msftproject As screen:
         Width: =70
         X: =581
         Y: =201
-        ZIndex: =56
+        ZIndex: =9
 
         "'Category Label_11' As label":
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -753,10 +731,10 @@ msftproject As screen:
         dasboardNav: =msftDashboard
         masterDataNav: =msftMasterData
         projectNav: =msftproject
-        ZIndex: =57
+        ZIndex: =10
 
     navBarHorizontal_30 As navBarHorizontal:
-        ZIndex: =58
+        ZIndex: =11
 
     Label31 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -774,7 +752,7 @@ msftproject As screen:
         Width: =31
         X: =797
         Y: =294
-        ZIndex: =59
+        ZIndex: =12
 
     TextInput1_8 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -801,69 +779,40 @@ msftproject As screen:
         Width: =217
         X: =102
         Y: =149
-        ZIndex: =60
+        ZIndex: =13
 
-    msft_Dropdown_26 As dropdown:
+    ComboBox3 As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =39
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project,'Project Type'.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
+        IsSearchable: =false
+        Items: =Distinct(Project,'Cost Center Name'.Value)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =10.75
-        Width: =174
-        X: =529
-        Y: =149
-        ZIndex: =62
-
-    msft_Dropdown_34 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project,Goal.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Size: =10.75
-        Width: =174
-        X: =725
-        Y: =149
-        ZIndex: =63
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 51, 142, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =180
+        X: =339
+        Y: =150
+        ZIndex: =16
 
     Label36 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -876,9 +825,42 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Cost Center Name"
-        X: =330
-        Y: =117
-        ZIndex: =64
+        X: =332
+        Y: =121
+        ZIndex: =17
+
+    ComboBox3_1 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =39
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        IsSearchable: =false
+        Items: =Distinct(Project,'Project Type'.Value)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 51, 142, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =180
+        X: =535
+        Y: =150
+        ZIndex: =18
 
     Label36_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -891,9 +873,42 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Project Type"
-        X: =522
-        Y: =117
-        ZIndex: =65
+        X: =530
+        Y: =121
+        ZIndex: =19
+
+    ComboBox3_2 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =39
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        IsSearchable: =false
+        Items: =Distinct(Project,Goal.Value)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 51, 142, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =180
+        X: =732
+        Y: =150
+        ZIndex: =20
 
     Label36_2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -906,7 +921,7 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Project Goals"
-        X: =718
-        Y: =117
-        ZIndex: =66
+        X: =729
+        Y: =121
+        ZIndex: =21
 
