@@ -110,7 +110,14 @@ msftprojecttypelists As screen:
         Items: =FilteredProjectsType
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Navigate(msftproject)
+        OnSelect: |
+            =Navigate(
+                msftproject,
+                ScreenTransition.Fade,
+                {
+                    SelectedProjectType: Gallery4.Selected.'Project Type'
+                }
+            )
         TemplateSize: =75
         Width: =1246
         X: =107

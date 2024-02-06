@@ -412,7 +412,17 @@ msftproject As screen:
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
             (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
-             ))
+             )
+             &&(
+                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
+            ||
+                (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
+                ||
+                ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
+                ||
+                ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
+             )
+             )
             
             
             
@@ -798,7 +808,7 @@ msftproject As screen:
         Height: =39
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         IsSearchable: =false
         Items: =Distinct(Project,'Cost Center Name'.Value)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -808,7 +818,7 @@ msftproject As screen:
         SearchItems: =[]
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =13
+        Size: =10.75
         Width: =180
         X: =339
         Y: =150
@@ -840,7 +850,7 @@ msftproject As screen:
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         Height: =39
@@ -849,14 +859,14 @@ msftproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         IsSearchable: =false
         Items: =Distinct(Project,'Project Type'.Value)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
         SearchItems: =[]
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =13
+        Size: =10.75
         Width: =180
         X: =535
         Y: =150
@@ -888,23 +898,23 @@ msftproject As screen:
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         Height: =39
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         IsSearchable: =false
         Items: =Distinct(Project,Goal.Value)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
         SearchItems: =[]
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =13
+        Size: =10.75
         Width: =180
         X: =732
         Y: =150
