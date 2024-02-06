@@ -45,7 +45,7 @@ msfteditdiscipline As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: =Text(Gallery33.Selected.Discipline)
+        Text: =Text(Gallery33.Selected.DisciplineName)
         Width: =274
         X: =158
         Y: =121
@@ -205,7 +205,7 @@ msfteditdiscipline As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: |
-            =Distinct(Discipline, Discipline)
+            =Distinct(Discipline, DisciplineName)
         PaddingBottom: =5
         PaddingLeft: =12
         PaddingRight: =5

@@ -46,7 +46,7 @@ msftdiscipline As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: =Text(Gallery33.Selected.Discipline)
+        Text: =Text(Gallery33.Selected.DisciplineName)
         Width: =274
         X: =117
         Y: =121
@@ -62,7 +62,7 @@ msftdiscipline As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =11
-        Text: =Text(Gallery33.Selected.Discipline)
+        Text: =Text(Gallery33.Selected.DisciplineName)
         Width: =193
         X: =117
         Y: =276
@@ -106,7 +106,7 @@ msftdiscipline As screen:
         Text: |-
             =LookUp(
                 Discipline,
-                Discipline = Gallery33.Selected.Discipline
+                DisciplineName = Gallery33.Selected.DisciplineName
             ).Description
         Width: =253
         X: =432
