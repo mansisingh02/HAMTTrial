@@ -1,8 +1,10 @@
 msftcaregivers As screen:
     Height: =768
+    LoadingSpinner: =LoadingSpinner.Data
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
+    OnVisible: |
         =Set(varPageNumber,1);
+        Set(loaderVisible, true);
         Collect(
             combinedData,
             AddColumns(
@@ -130,7 +132,7 @@ msftcaregivers As screen:
                 )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =
+        OnSelect: =Set(loaderVisible,false)
         TemplatePadding: =0
         TemplateSize: =35
         Width: =1194
