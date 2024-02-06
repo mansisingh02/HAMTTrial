@@ -71,10 +71,10 @@ msftcaregiverdiscipline As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
         Size: =15
         Text: ="CANCEL"
         VerticalAlign: =VerticalAlign.Top
@@ -150,10 +150,12 @@ msftcaregiverdiscipline As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =28
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Caregiver Name'
+            Width: =385
             X: =4
-            Y: =8
+            Y: =20
             ZIndex: =1
 
