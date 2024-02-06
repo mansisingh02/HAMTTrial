@@ -411,10 +411,9 @@ msftproject As screen:
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
-            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
-             )
+            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank()))
              &&(
-                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
+                ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
             ||
                 (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
                 ||
@@ -835,7 +834,7 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Cost Center Name"
-        X: =332
+        X: =335
         Y: =121
         ZIndex: =17
 
@@ -883,7 +882,7 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Project Type"
-        X: =530
+        X: =532
         Y: =121
         ZIndex: =19
 
