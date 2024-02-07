@@ -3,14 +3,17 @@ msftDashboard As screen:
 
     Container2 As groupContainer.horizontalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
-        Height: =708
+        Height: =Parent.Height
         LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =75
+        PaddingTop: =60
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =1366
-        Y: =60
+        Width: =Parent.Width
+        X: =
+        Y: =
         ZIndex: =10
 
         PowerBI2 As powerbi:
