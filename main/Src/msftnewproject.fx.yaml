@@ -474,7 +474,8 @@ msftnewproject As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
+        SelectionColor: =RGBA(0, 0, 0, 1)
+        SelectionFill: =RGBA(230, 230, 230, 1)
         Width: =202
         X: =242
         Y: =331
@@ -557,59 +558,6 @@ msftnewproject As screen:
         X: =512
         Y: =211
         ZIndex: =34
-
-    msft_Dropdown_20 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(116, 116, 116, 1)
-        Default: ="Primary Owner"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |+
-            =Distinct(
-                Filter(
-                    Caregivers_1,
-                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2" || Level.Value="5P"
-                ),
-                'Caregiver Name'
-            ).Value
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-        OnChange: |-
-            =Set(SelectedOwner, msft_Dropdown_20.Selected);
-            Set(ShowDisciplinePrompt, !IsBlank(SelectedOwner));
-            Set(ShowAllocationPrompt, !IsBlank(SelectedOwner));
-            Set(PrimaryOwnerMode, true);
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Width: =202
-        X: =242
-        Y: =412
-        ZIndex: =35
 
     msft_Dropdown_24 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1169,4 +1117,71 @@ msftnewproject As screen:
 
     navBarHorizontal_7 As navBarHorizontal:
         ZIndex: =88
+
+    msft_Dropdown_20 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =38
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: |+
+            =Distinct(
+                Filter(
+                    Caregivers_1,
+                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2" || Level.Value="5P"
+                ),
+                'Caregiver Name'
+            ).Value
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: |-
+            =Search(Distinct(
+                Filter(
+                    Caregivers_1,
+                    Level.Value="4P" || Level.Value="M2" || Level.Value="M3" || Level.Value="M4" || Level.Value="M5" || Level.Value="E1" || Level.Value="E2" || Level.Value="5P"
+                ),
+                'Caregiver Name'
+            ).Value
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            ,msft_Dropdown_20.SearchText,"Value")
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =203
+        X: =242
+        Y: =414
+        ZIndex: =89
 

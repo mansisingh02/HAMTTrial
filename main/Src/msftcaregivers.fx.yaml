@@ -49,13 +49,13 @@ msftcaregivers As screen:
         ZIndex: =1
 
     msft_Button_25 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
+        BorderColor: =RGBA(0, 84, 148, 1)
+        BorderThickness: =1
+        Color: =RGBA(0, 51, 142, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 142, 1)
+        Fill: =RGBA(0, 0, 0, 0)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
         Height: =30
@@ -81,11 +81,11 @@ msftcaregivers As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10
-        Text: ="RESET"
+        Text: ="Reset"
         VerticalAlign: =VerticalAlign.Top
         Width: =112
-        X: =1205
-        Y: =118
+        X: =852
+        Y: =143
         ZIndex: =7
 
     Caregivers As label:
@@ -433,6 +433,7 @@ msftcaregivers As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =32
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
@@ -448,8 +449,8 @@ msftcaregivers As screen:
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Size: =12
-        Width: =237
-        X: =363
+        Width: =152
+        X: =310
         Y: =149
         ZIndex: =48
 
@@ -469,7 +470,7 @@ msftcaregivers As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 51, 142, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
+        FontWeight: =FontWeight.Semibold
         Height: =31
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -487,29 +488,13 @@ msftcaregivers As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10
-        Text: ="UPLOAD"
+        Text: ="Upload"
         VerticalAlign: =VerticalAlign.Top
         Visible: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", true, false)
         Width: =128
-        X: =1066
-        Y: =118
+        X: =1176
+        Y: =97
         ZIndex: =56
-
-    Label33 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =10
-        Text: ="Select Level"
-        Visible: =If(searchLevel.Selected.Value=Blank(),true,false)
-        X: =373
-        Y: =149
-        ZIndex: =57
 
     Checkbox1 As checkbox:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -518,7 +503,6 @@ msftcaregivers As screen:
         CheckboxBorderColor: =RGBA(102, 102, 102, 1)
         CheckmarkFill: =RGBA(0, 120, 212, 1)
         Color: =RGBA(51, 51, 51, 1)
-        Default: =true
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
@@ -531,10 +515,10 @@ msftcaregivers As screen:
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Size: =13
-        Text: ="Show my Organization"
+        Text: ="My org"
         Width: =268
-        X: =669
-        Y: =149
+        X: =675
+        Y: =145
         ZIndex: =58
 
     Gallery13 As gallery.galleryVertical:
@@ -561,4 +545,38 @@ msftcaregivers As screen:
 
     navBarHorizontal_29 As navBarHorizontal:
         ZIndex: =61
+
+    searchLevel_1 As dropdown:
+        AllowEmptySelection: =true
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(51, 51, 51, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Default: ="Select Level"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =32
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct(Caregivers_1,Level.Value)
+        PaddingBottom: =8
+        PaddingLeft: =12
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Reset: =
+        SelectionColor: =RGBA(0, 0, 0, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        Size: =12
+        Width: =152
+        X: =489
+        Y: =149
+        ZIndex: =62
 
