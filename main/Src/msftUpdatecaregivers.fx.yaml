@@ -1618,8 +1618,8 @@ msftUpdatecaregivers As screen:
             Text: ="BEGINNER"
             Visible: =varTabSelected=1
             Width: =152
-            X: =99
-            Y: =357
+            X: =102
+            Y: =356
             ZIndex: =66
 
     Group3_1 As group:
@@ -3291,8 +3291,8 @@ msftUpdatecaregivers As screen:
         Text: ="Cancel"
         VerticalAlign: =VerticalAlign.Top
         Width: =114
-        X: =996
-        Y: =717
+        X: =986
+        Y: =704
         ZIndex: =120
 
     msft_Label_19 As label:
@@ -3436,16 +3436,16 @@ msftUpdatecaregivers As screen:
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         Height: =30
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =Distinct(Skills_1,Discipline)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
         SearchItems: =Search(Distinct(Skills_1,Discipline),skillCategory_7.SearchText,"Value")
-        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =10.75
         Width: =183
@@ -3454,31 +3454,31 @@ msftUpdatecaregivers As screen:
         ZIndex: =125
 
     skillName_1 As combobox:
-        BorderColor: =RGBA(179, 179, 179, 1)
+        BorderColor: =RGBA(204, 204, 204, 1)
         BorderThickness: =1
         ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronDisabledBackground: =RGBA(204, 204, 204, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
         ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverBackground: =RGBA(179, 179, 179, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayFields: =["SkillName"]
         Font: =Font.'Segoe UI'
         Height: =30
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =Filter(Skills_1, Discipline = skillCategory_7.Selected.Value)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["SkillName"]
         SearchItems: =Search(Filter(Skills_1, Discipline = skillCategory_7.Selected.Value),skillName_1.SearchText,"SkillName")
-        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =10.75
         Width: =192
