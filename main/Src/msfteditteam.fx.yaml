@@ -166,8 +166,8 @@ msfteditteam As screen:
         DelayItemLoading: =true
         Height: =495
         Items: |-
-            =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.'ID')  || 'Secondary Project'.Value=Text(Gallery16.Selected.'ID') || 
-            'Tertiary Project'.Value =Text(Gallery16.Selected.'ID') )
+            =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.ID)  || 'Secondary Project'.Value=Text(Gallery16.Selected.ID) || 
+            'Tertiary Project'.Value =Text(Gallery16.Selected.ID) )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
