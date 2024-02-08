@@ -292,7 +292,7 @@ msftnewproject As screen:
                   'Group Name': {Value: msft_Dropdown_27.Selected.Value , Id: First(Filter('Project Parent Group', 'Group Name'=msft_Dropdown_27.Selected.Value)).ID },
                   'Cost Center Name': {Value: msft_Dropdown_24.Selected.Value , Id: First(Filter('Cost Center', 'Cost Center Name'=msft_Dropdown_24.Selected.Value)).ID },
                   'Primary Owner': {Value: msft_Dropdown_20.Selected.Value , Id: First(Filter(Caregivers_1, 'Caregiver Name'=msft_Dropdown_20.Selected.Value)).ID },
-                  'Project Type': {Value: msft_Dropdown_21.Selected.Value , Id: First(Filter('Project Parent Group', 'Group Name'=msft_Dropdown_21.Selected.Value)).ID },
+                  'Project Type': {Value: msft_Dropdown_21.Selected.Value , Id: First(Filter('Project Type', 'Project Type'=msft_Dropdown_21.Selected.Value)).ID },
                    Goal: {Value: msft_Dropdown_33.Selected.Value , Id: First(Filter('Project Goals', Goal=msft_Dropdown_33.Selected.Value)).ID },
                   'In Flight Version': msft_TextInput_15.Text,
                   'In Prod Version': msft_TextInput_17.Text,      
@@ -461,11 +461,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |+
-            =Distinct(Project,Status.Value)
-            
-            
-            
+        Items: =["Active","Inactive","On Hold","Discontinued"]
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
