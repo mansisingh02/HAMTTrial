@@ -256,7 +256,7 @@ msftnewproject As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =15
-        Text: ="RESET"
+        Text: ="Reset"
         VerticalAlign: =VerticalAlign.Top
         Width: =143
         X: =86
@@ -283,7 +283,7 @@ msftnewproject As screen:
                Project,
                Defaults(Project),
                {
-                   //'In Production': Toggle1_1.Value,
+                   'In Production':If(Toggle1_1.Value=true,{Value: "Yes"},{Value: "No"}),
                    Capability: ForAll(ComboBox1.SelectedItems,{ Value: ComboBox1.Selected.Value, Id: First(Filter(Capabilities, Capability=ComboBox1.Selected.Value)).ID}),
                   'Project Name': msft_TextInput_13.Text,
                    Description: msft_TextInput_16.Text,
@@ -295,9 +295,8 @@ msftnewproject As screen:
                   'Project Type': {Value: msft_Dropdown_21.Selected.Value , Id: First(Filter('Project Parent Group', 'Group Name'=msft_Dropdown_21.Selected.Value)).ID },
                    Goal: {Value: msft_Dropdown_33.Selected.Value , Id: First(Filter('Project Goals', Goal=msft_Dropdown_33.Selected.Value)).ID },
                   'In Flight Version': msft_TextInput_15.Text,
-                  'In Prod Version': msft_TextInput_17.Text
-                  
-                  //'Status': "rgdfg"
+                  'In Prod Version': msft_TextInput_17.Text,      
+                  'Status': {Value: msft_Dropdown_19.Selected.Value}
                }
             );
             
@@ -318,7 +317,7 @@ msftnewproject As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="CONTINUE TO CREATE TEAM"
+        Text: ="Continue to create team"
         VerticalAlign: =VerticalAlign.Top
         Width: =346
         X: =983
@@ -371,7 +370,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project, 'Project Type'.Value)
+        Items: =Distinct('Project Type', 'Project Type')
         PaddingBottom: =8
         PaddingLeft: =12
         PaddingRight: =12
@@ -621,7 +620,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Project, Goal.Value)
+        Items: =Distinct('Project Goals', Goal)
         OnChange: =Set(varSelectedValue, msft_Dropdown_33.Selected.Value)
         PaddingBottom: =8
         PaddingLeft: =12
