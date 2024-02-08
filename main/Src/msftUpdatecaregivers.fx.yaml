@@ -1469,10 +1469,10 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =RGBA(0, 120, 212, 1)
             PressedColor: =RGBA(51, 51, 51, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
             Size: =10
             Visible: =varTabSelected=1
             Width: =657
@@ -3446,6 +3446,7 @@ msftUpdatecaregivers As screen:
         SearchFields: =["Value"]
         SearchItems: =Search(Distinct(Skills_1,Discipline),skillCategory_7.SearchText,"Value")
         SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
         Size: =10.75
         Width: =183
         X: =118
@@ -3465,7 +3466,7 @@ msftUpdatecaregivers As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Capability"]
+        DisplayFields: =["SkillName"]
         Font: =Font.'Segoe UI'
         Height: =30
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -3475,8 +3476,8 @@ msftUpdatecaregivers As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Capability"]
-        SearchItems: =Search(Filter(Skills_1, Discipline = skillCategory_7.Selected.Value),skillName_1.SearchText,"Capability")
+        SearchFields: =["SkillName"]
+        SearchItems: =Search(Filter(Skills_1, Discipline = skillCategory_7.Selected.Value),skillName_1.SearchText,"SkillName")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =10.75
