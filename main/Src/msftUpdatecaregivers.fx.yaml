@@ -2722,7 +2722,7 @@ msftUpdatecaregivers As screen:
             Text: ="ADVANCED"
             Visible: =varTabSelected=3
             Width: =152
-            X: =102
+            X: =100
             Y: =356
             ZIndex: =117
 
@@ -3109,7 +3109,7 @@ msftUpdatecaregivers As screen:
             Text: ="Skill "
             Visible: =varTabSelected=3
             Width: =36
-            X: =322
+            X: =318
             Y: =393
             ZIndex: =136
 
@@ -3129,7 +3129,7 @@ msftUpdatecaregivers As screen:
             Text: ="Comments"
             Visible: =varTabSelected=3
             Width: =108
-            X: =112
+            X: =108
             Y: =466
             ZIndex: =137
 
@@ -3160,7 +3160,7 @@ msftUpdatecaregivers As screen:
             Size: =10
             Visible: =varTabSelected=3
             Width: =657
-            X: =112
+            X: =108
             Y: =484
             ZIndex: =138
 
@@ -3180,7 +3180,7 @@ msftUpdatecaregivers As screen:
             Text: ="Skill Category"
             Visible: =varTabSelected=3
             Width: =128
-            X: =112
+            X: =108
             Y: =393
             ZIndex: =139
 
@@ -3214,7 +3214,7 @@ msftUpdatecaregivers As screen:
         Size: =10.75
         Visible: =varTabSelected=3
         Width: =183
-        X: =112
+        X: =108
         Y: =417
         ZIndex: =141
 
@@ -3248,7 +3248,28 @@ msftUpdatecaregivers As screen:
         Size: =10.75
         Visible: =varTabSelected=3
         Width: =192
-        X: =323
-        Y: =415
+        X: =321
+        Y: =417
         ZIndex: =142
+
+    Icon1 As icon.Help:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 51, 142, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =14
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 142, 51, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Help
+        OnSelect: =Set(showSkillPopup, true)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =18
+        X: =488
+        Y: =392
+        ZIndex: =143
 
