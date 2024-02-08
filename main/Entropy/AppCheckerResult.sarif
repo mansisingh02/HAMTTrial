@@ -4210,6 +4210,46 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 276,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "If( Lower(User().Email)=\"rama.ghodke@providence.org\" || Lower(User().Email)=\"madhavi.b@providence.org\" || Lower(User().Email)=\"mansi.singh@providence.org\", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  \nStartsWith('Caregiver Email',Lower(User().Email)))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftUpdatecaregivers.skillName_3.SearchItems"
                 }
               ],
@@ -4276,46 +4316,6 @@
           "message": {
             "arguments": [
               "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 276,
-                  "charOffset": 21,
-                  "snippet": {
-                    "text": "If( Lower(User().Email)=\"rama.ghodke@providence.org\" || Lower(User().Email)=\"madhavi.b@providence.org\" || Lower(User().Email)=\"mansi.singh@providence.org\", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  \nStartsWith('Caregiver Email',Lower(User().Email)))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "If"
             ],
             "id": "issue"
           },
@@ -15430,19 +15430,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_3.AccessibleLabel"
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_47.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_3.AccessibleLabel",
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_47.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.skillName_3"
+                "type": "msftUpdatecaregivers.msft_Label_47"
               }
             }
           ],
@@ -15452,38 +15452,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.skillName_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -15503,66 +15473,6 @@
                 "member": "AccessibleLabel",
                 "module": "msftUpdatecaregivers",
                 "type": "msftUpdatecaregivers.skillCategory_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_9.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_9.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.skillCategory_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_8.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_8.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.skillCategory_8"
               }
             }
           ],
@@ -16000,19 +15910,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_51.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_46.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_51.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_46.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.msft_Label_51"
+                "type": "msftUpdatecaregivers.msft_Label_46"
               }
             }
           ],
@@ -16024,6 +15934,96 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_9.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_9.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.skillCategory_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.comment_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.comment_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.comment_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.skillName_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -16090,19 +16090,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_46.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_46.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillName_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.skillName_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_51.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_51.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.msft_Label_46"
+                "type": "msftUpdatecaregivers.msft_Label_51"
               }
             }
           ],
@@ -16120,19 +16150,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_50.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_50.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.skillCategory_8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.msft_Label_50"
+                "type": "msftUpdatecaregivers.skillCategory_8"
               }
             }
           ],
@@ -16142,38 +16172,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_47.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_47.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.msft_Label_47"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -16210,19 +16210,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.comment_2.AccessibleLabel"
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_50.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.comment_2.AccessibleLabel",
+                  "fullyQualifiedName": "msftUpdatecaregivers.msft_Label_50.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.comment_2"
+                "type": "msftUpdatecaregivers.msft_Label_50"
               }
             }
           ],
@@ -16232,8 +16232,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
         },
         {
           "locations": [
