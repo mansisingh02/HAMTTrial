@@ -3732,163 +3732,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 12,
-                  "snippet": {
-                    "text": "SelectedOwner"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftnewteam",
-                "type": "msftnewteam.Label13_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SelectedOwner"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 22,
-                  "charOffset": 4,
-                  "snippet": {
-                    "text": "IsBlank(SelectedOwner)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftnewteam",
-                "type": "msftnewteam.Label13_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "IsBlank"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 34,
-                  "snippet": {
-                    "text": "SelectedOwner"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftnewteam",
-                "type": "msftnewteam.Label13_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "SelectedOwner"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.Label13_3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 6,
-                  "charOffset": 47,
-                  "snippet": {
-                    "text": ".Value"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftnewteam",
-                "type": "msftnewteam.Label13_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftpeopleskills.Button9_2.OnSelect"
                 }
               ],
@@ -4316,6 +4159,166 @@
           "message": {
             "arguments": [
               "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 284,
+                  "snippet": {
+                    "text": "Text('ID')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.hiddenGallery"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 294,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.hiddenGallery"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 382,
+                  "snippet": {
+                    "text": "Text('ID')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.hiddenGallery"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Text"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.hiddenGallery.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 392,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.hiddenGallery"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
             ],
             "id": "issue"
           },
@@ -12250,36 +12253,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftnewteam.msft_Dropdown_31.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.msft_Dropdown_31.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftnewteam",
-                "type": "msftnewteam.msft_Dropdown_31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftnewteam.msft_Dropdown_35.AccessibleLabel"
                 }
               ],
@@ -12400,19 +12373,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftnewteam.Rectangle3_6.AccessibleLabel"
+                  "fullyQualifiedName": "msftnewteam.msft_Dropdown_31.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftnewteam.Rectangle3_6.AccessibleLabel",
+                  "fullyQualifiedName": "msftnewteam.msft_Dropdown_31.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftnewteam",
-                "type": "msftnewteam.Rectangle3_6"
+                "type": "msftnewteam.msft_Dropdown_31"
               }
             }
           ],
@@ -12424,36 +12397,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftnewteam.Rectangle3_6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftnewteam.Rectangle3_6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftnewteam",
-                "type": "msftnewteam.Rectangle3_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
         },
         {
           "locations": [
@@ -21670,6 +21613,96 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.SelectedCaregiver"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.SelectedCaregiver",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedCaregiver",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.SelectedCaregiverDiscipline"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.SelectedCaregiverDiscipline",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedCaregiverDiscipline",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.SelectedCaregiverPercentage"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.SelectedCaregiverPercentage",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "SelectedCaregiverPercentage",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.selectedCapabilities"
                 }
               ],
@@ -22822,6 +22855,36 @@
                 "member": "Text",
                 "module": "msftcapability",
                 "type": "msftcapability.'Data Analytics_3'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftnewteam.Gallery2_1.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftnewteam.Gallery2_1.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftnewteam",
+                "type": "msftnewteam.Gallery2_1"
               }
             }
           ],
@@ -24098,36 +24161,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftcaregivers.search.DelayOutput"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftcaregivers.search.DelayOutput",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DelayOutput",
-                "module": "msftcaregivers",
-                "type": "msftcaregivers.search"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-TextInputIsNotDelayOutput",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftcaregiverscount.Category_16.Text"
                 }
               ],
@@ -24566,23 +24599,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftMasterData\" is 326, which exceeds the maximum threshold recommended (300)."
-              }
-            },
-            {
-              "id": "app-TextInputIsNotDelayOutput",
-              "messageStrings": {
-                "issue": {
-                  "text": "Inefficient text input"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Enable the DelayOutput property of the text input control."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "When a text input control has many controls that depend on its value, typing into that input can slow down the app. Setting DelayOutput to true prevents this problem by only updating dependent controls when typing stops."
               }
             }
           ],
