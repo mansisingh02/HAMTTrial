@@ -33,15 +33,15 @@ msftpopup As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =ClearCollect(
-                  FoundSkills,
-                  Filter(
+            =// OnSelect property of the Submit button in the popup screen
+            ClearCollect(
+                FoundSkills,
+                Filter(
                     Skills_1,
-                    Lower('Skill Name') = Lower(txtSkillName.Text)
-                  )
-                );
-                Set(showSkillPopup, false);
-                Set(showSkills, true)
+                    StartsWith(txtSkillName.Text, Title)
+                )
+            );
+            Navigate(msftUpdatecaregivers, ScreenTransition.Fade);
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -61,16 +61,18 @@ msftpopup As screen:
         Y: =385
         ZIndex: =3
 
-    TextInput3 As text:
+    txtSkillName As text:
+        Align: =Align.Center
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
-        Default: ="Enter the skill name you are searching for"
+        Default: =""
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        HintText: ="Enter the value you are searching for"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -82,7 +84,7 @@ msftpopup As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =10.75
-        X: =493
+        X: =505
         Y: =327
         ZIndex: =5
 
