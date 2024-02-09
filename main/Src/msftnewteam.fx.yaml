@@ -127,7 +127,7 @@ msftnewteam As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
+        OnSelect: |
             =Patch(Caregivers_1, 
             First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)),
             If(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
@@ -150,6 +150,11 @@ msftnewteam As screen:
               
             )
             );
+            
+            Refresh(Caregivers_1);
+            Reset(msft_Dropdown_35);
+            Reset(msft_Dropdown_40);
+            Reset(msft_Dropdown_31)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32

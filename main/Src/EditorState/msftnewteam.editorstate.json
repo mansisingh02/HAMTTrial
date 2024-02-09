@@ -808,7 +808,7 @@
       "MetaDataIDKey": "",
       "Name": "Label13_4",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 26,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1105,7 +1105,7 @@
       "MetaDataIDKey": "",
       "Name": "Label13_5",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 27,
+      "ParentIndex": 26,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1651,7 +1651,7 @@
       "MetaDataIDKey": "",
       "Name": "Label17_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 28,
+      "ParentIndex": 27,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4586,7 +4586,14 @@
     "msft_Button_78": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Patch(Caregivers_1, \nFirst(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)),\nIf(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),\n  {\n        'Primary Project ':{ Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },\n        'Allocation % for Primary Project': msft_Dropdown_40.Selected.Value/100,\n        'Discipline for Primary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID}\n  },\n  First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),\n  {\n        'Secondary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },\n        'Allocation % for Secondary Project': msft_Dropdown_40.Selected.Value/100,\n        'Discipline for Secondary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID} },\n        \n First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Tertiary Project'.Value=Blank(),\n  {\n        'Tertiary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },\n        'Allocation % for Tertiary Project': msft_Dropdown_40.Selected.Value/100,\n        'Discipline for Tertiary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID} }\n  \n)\n);",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "AutoDisableOnSelect",
         {
           "AFDDataSourceName": "",
@@ -6170,7 +6177,7 @@
       "MetaDataIDKey": "",
       "Name": "msft_Button_82",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 29,
+      "ParentIndex": 28,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6522,7 +6529,7 @@
       "MetaDataIDKey": "",
       "Name": "msft_Dropdown_31",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 6,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -320,9 +320,9 @@ msftcaregivers As screen:
                     "Advancedd",
                     LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
                     "Project1",
-                    LookUp(Project, Text('ID')= Caregivers_1[@'Primary Project '].Value),
+                    LookUp(Project, Text(ID)= Caregivers_1[@'Primary Project '].Value),
                     "Project2",
-                    LookUp(Project, Text('ID')= Caregivers_1[@'Secondary Project'].Value)
+                    LookUp(Project, Text(ID)= Caregivers_1[@'Secondary Project'].Value)
                     
                     ),
                     StartsWith('Caregiver Name',search.Text) && (Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank())  && 
