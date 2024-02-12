@@ -539,7 +539,7 @@ msftnewteam As screen:
     Gallery2_1 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =378
+        Height: =360
         Items: |-
             =Filter(Caregivers_1,'Primary Project '.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID)  || 'Secondary Project'.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID) || 
             'Tertiary Project'.Value =Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID))
@@ -548,7 +548,7 @@ msftnewteam As screen:
         TemplateSize: =30
         Width: =1229
         X: =100
-        Y: =294
+        Y: =312
         ZIndex: =107
 
         Label19_3 As label:
@@ -584,7 +584,7 @@ msftnewteam As screen:
                 =If(ThisItem.'Primary Project '.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Primary Project'.Value,
                 ThisItem.'Secondary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Secondary Project'.Value,
                 ThisItem.'Tertiary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Tertiary Project'.Value)
-            X: =278
+            X: =321
             ZIndex: =2
 
         Label19_5 As label:
@@ -603,7 +603,7 @@ msftnewteam As screen:
                 =If(ThisItem.'Primary Project '.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % for Primary Project'*100,
                 ThisItem.'Secondary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % for Secondary Project'*100,
                 ThisItem.'Tertiary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % of Tertiary Project'*100)
-            X: =641
+            X: =734
             ZIndex: =3
 
         msft_Button_81 As button:
