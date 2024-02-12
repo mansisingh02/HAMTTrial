@@ -32,13 +32,16 @@ msftpopup As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Filter(
-                Skills_1,
-                Or(
-                    Search(Lower('Skill Name'), Lower(ComboBoxSkill.SearchText), 1) <> -1
-                )
-            )
+        OnSelect: |
+            =Set(
+                SelectedSkillsName,
+                ComboBoxSkill.Selected.Value
+            );
+            Set(
+                SelectedCategory,
+                LookUp(Skills_1, 'Skill Name' = ComboBoxSkill.Selected.Value, Discipline)
+            );
+            Navigate(msftUpdatecaregivers, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
