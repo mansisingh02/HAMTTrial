@@ -32,19 +32,13 @@ msftpopup As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |+
-            =Set(
-                FoundSkillCategory,
-                LookUp(Skills_1, Lower('Skill Name') = Lower(txtSkillName.Text), Discipline)
-            );
-            Set(
-                FoundSkill,
-                txtSkillName.Text
-            );
-            Navigate(msftUpdatecaregivers, ScreenTransition.Fade)
-            
-            
-            
+        OnSelect: |-
+            =Filter(
+                Skills_1,
+                Or(
+                    Search(Lower('Skill Name'), Lower(ComboBoxSkill.SearchText), 1) <> -1
+                )
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -76,20 +70,30 @@ msftpopup As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Capability"]
+        DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
         Items: |+
-            =Filter(Skills_1, Search(ToLower('Skill Name'), ToLower(ComboBoxSkill.SearchText)) <> -1)
+            =Distinct(Skills_1, 'Skill Name')
+            
+            
+            
             
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Capability"]
-        SearchItems: =Search(ComboBoxSample,ComboBoxSkill.SearchText,"Value1")
+        SearchFields: =["Value"]
+        SearchItems: |-
+            =Search(Distinct(Skills_1, 'Skill Name')
+            
+            
+            
+            
+            ,ComboBoxSkill.SearchText,"Value")
         SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
         Size: =13
         X: =501
         Y: =301
