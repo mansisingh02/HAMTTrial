@@ -1,26 +1,13 @@
 msftUpdatecaregivers As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |
+    OnVisible: |+
         =Collect(CG,(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', CCC=Caregivers_1[@'Cost Center Code'].Value))));
-        If(
-            CountRows(FoundSkills) > 0,
-            ClearCollect(
-                FoundSkillsCollection,
-                FoundSkills
-            );
-            Collect(
-                skillCategory_8,
-                Distinct(FoundSkillsCollection, Discipline)
-            );
-            Collect(
-                skill_8,
-                Filter(
-                    FoundSkillsCollection,
-                    Discipline = skillCategory_8.Selected.Value
-                )
-            )
-        );
+        UpdateContext({
+            SelectedSkillCategory: LookUp(skillCategory_8.SelectedItems, Value = FoundSkillCategory),
+            SelectedSkill: LookUp(Skills_1, 'Skill ID' = skillName_2.Selected.'Skill ID').'Skill Name'
+        });
+        
     Width: =1366
 
     Rectangle3 As rectangle:
