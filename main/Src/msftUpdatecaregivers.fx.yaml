@@ -5,7 +5,9 @@ msftUpdatecaregivers As screen:
         =Collect(CG,(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', CCC=Caregivers_1[@'Cost Center Code'].Value))));
         UpdateContext({
             SelectedSkillCategory: LookUp(skillCategory_8.SelectedItems, Value = SelectedCategory),
-            SelectedSkillName: LookUp(skillName_2.Selected.'Skill Name', Value = SelectedSkillsName)
+            SelectedSkillName: LookUp(Skills_1, 'Skill Name' = SelectedSkillsName, 'Skill Name')
+        
+        
         })
     Width: =1366
 
@@ -19,7 +21,7 @@ msftUpdatecaregivers As screen:
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =840
+        Width: =843
         X: =97
         Y: =356
         ZIndex: =1
@@ -3032,6 +3034,7 @@ msftUpdatecaregivers As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
+        Default: =SelectedSkillCategory
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
