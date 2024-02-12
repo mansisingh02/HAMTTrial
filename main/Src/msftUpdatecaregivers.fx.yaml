@@ -1,13 +1,12 @@
 msftUpdatecaregivers As screen:
     Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |+
+    OnVisible: |-
         =Collect(CG,(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', CCC=Caregivers_1[@'Cost Center Code'].Value))));
         UpdateContext({
-            SelectedSkillCategory: LookUp(skillCategory_8.SelectedItems, Value = FoundSkillCategory),
-            SelectedSkill: LookUp(Skills_1, 'Skill ID' = skillName_2.Selected.'Skill ID').'Skill Name'
-        });
-        
+            SelectedSkillCategory: LookUp(skillCategory_8.SelectedItems, Value = SelectedCategory),
+            SelectedSkillName: LookUp(skillName_2.Selected.'Skill Name', Value = SelectedSkillsName)
+        })
     Width: =1366
 
     Rectangle3 As rectangle:
@@ -3294,4 +3293,36 @@ msftUpdatecaregivers As screen:
         X: =403
         Y: =391
         ZIndex: =144
+
+    Label7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =13
+        Text: =SelectedSkillName
+        X: =1047
+        Y: =358
+        ZIndex: =145
+
+    Label33 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =69
+        Size: =13
+        Text: =SelectedCategory
+        Width: =230
+        X: =1047
+        Y: =392
+        ZIndex: =146
 
