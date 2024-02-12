@@ -134,19 +134,19 @@ msftnewteam As screen:
               {
                     'Primary Project ':{ Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
                     'Allocation % for Primary Project': msft_Dropdown_40.Selected.Value/100,
-                    'Discipline for Primary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID}
+                    'Discipline for Primary Project':  { Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID}
               },
               First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
               {
                     'Secondary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
                     'Allocation % for Secondary Project': msft_Dropdown_40.Selected.Value/100,
-                    'Discipline for Secondary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID} },
+                    'Discipline for Secondary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID} },
                     
              First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Tertiary Project'.Value=Blank(),
               {
                     'Tertiary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
                     'Allocation % for Tertiary Project': msft_Dropdown_40.Selected.Value/100,
-                    'Discipline for Tertiary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Capabilities,Capability= msft_Dropdown_35.Selected.Value)).ID} }
+                    'Discipline for Tertiary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID} }
               
             )
             );
@@ -541,7 +541,7 @@ msftnewteam As screen:
         Height: =392
         Items: |-
             =Filter(Caregivers_1,'Primary Project '.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID)  || 'Secondary Project'.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID) || 
-            'Tertiary Project'.Value =Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID) )
+            'Tertiary Project'.Value =Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =30
