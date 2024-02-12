@@ -580,7 +580,7 @@ msftnewteam As screen:
             Height: =30
             OnSelect: =Select(Parent)
             Size: =10.75
-            Text: =
+            Text: =If(ThisItem.'Primary Project '.Value=First(Filter(Project,'Project Name'=msft_TextInput_13.Text).ID),"")
             X: =278
             ZIndex: =2
 
@@ -695,4 +695,39 @@ msftnewteam As screen:
         X: =96
         Y: =232
         ZIndex: =109
+
+    msft_Button_87 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftproject)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="Back to Projects"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =230
+        X: =1086
+        Y: =688
+        ZIndex: =110
 
