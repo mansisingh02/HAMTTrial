@@ -132,19 +132,19 @@ msftnewteam As screen:
             First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)),
             If(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
               {
-                    'Primary Project ':{ Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
+                    'Primary Project ':{ Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID },
                     'Allocation % for Primary Project': msft_Dropdown_40.Selected.Value/100,
                     'Discipline for Primary Project':  { Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID}
               },
               First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Primary Project '.Value=Blank(),
               {
-                    'Secondary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
+                    'Secondary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID },
                     'Allocation % for Secondary Project': msft_Dropdown_40.Selected.Value/100,
                     'Discipline for Secondary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID} },
                     
              First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_31.Selected.Value)).'Tertiary Project'.Value=Blank(),
               {
-                    'Tertiary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : Gallery16.Selected.ID },
+                    'Tertiary Project': { Value : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID , Id : First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID },
                     'Allocation % for Tertiary Project': msft_Dropdown_40.Selected.Value/100,
                     'Discipline for Tertiary Project':  {Value : msft_Dropdown_35.Selected.Value, Id: First(Filter(Discipline,DisciplineName= msft_Dropdown_35.Selected.Value)).ID} }
               
