@@ -4,11 +4,9 @@ msftUpdatecaregivers As screen:
     OnVisible: |-
         =Collect(CG,(AddColumns(Caregivers_1,"CostCenter", LookUp('Cost Center', CCC=Caregivers_1[@'Cost Center Code'].Value))));
         UpdateContext({
-            SelectedSkillCategory: LookUp(skillCategory_8.SelectedItems, Value = SelectedCategory),
-            SelectedSkillName: LookUp(Skills_1, 'Skill Name' = SelectedSkillsName, 'Skill Name')
-        
-        
-        })
+            SelectedSkillCategory: First(Filter(Discipline, DisciplineName = SelectedCategory)),
+            SelectedSkillName: First(Filter(Skills_1, 'Skill Name' = SelectedSkillsName)).'Skill Name'
+        });
     Width: =1366
 
     Rectangle3 As rectangle:
@@ -3034,7 +3032,17 @@ msftUpdatecaregivers As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
-        Default: =SelectedSkillCategory
+        Default: |+
+            =SelectedSkillCategory
+            
+            
+        DefaultSelectedItems: |-
+            =First(
+                Filter(
+                    Skills_1,
+                    Discipline = SelectedCategory
+                )
+            )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -3069,6 +3077,13 @@ msftUpdatecaregivers As screen:
         ChevronHoverBackground: =RGBA(179, 179, 179, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
+        DefaultSelectedItems: |-
+            =First(
+                Filter(
+                    Skills_1,
+                    'Skill Name' = SelectedSkillsName
+                )
+            )
         DisabledBorderColor: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(255, 255, 255, 1)
@@ -3307,7 +3322,7 @@ msftUpdatecaregivers As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Size: =13
-        Text: =SelectedSkillName
+        Text: =SelectedSkillsName
         X: =1047
         Y: =358
         ZIndex: =145
@@ -3328,4 +3343,21 @@ msftUpdatecaregivers As screen:
         X: =1047
         Y: =392
         ZIndex: =146
+
+    Label39 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =42
+        Size: =13
+        Text: =First(Discipline).DisciplineName
+        Width: =230
+        X: =1047
+        Y: =461
+        ZIndex: =147
 
