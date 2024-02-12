@@ -35,7 +35,7 @@ msftpopup As screen:
         OnSelect: |+
             =Set(
                 FoundSkillCategory,
-                LookUp(Skills_1, Lower('Skill Name') = Lower(txtSkillName.Text), 'Discipline')
+                LookUp(Skills_1, Lower('Skill Name') = Lower(txtSkillName.Text), Discipline)
             );
             Set(
                 FoundSkill,
@@ -76,6 +76,7 @@ msftpopup As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Capability"]
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -86,6 +87,7 @@ msftpopup As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Capability"]
         SearchItems: =Search(ComboBoxSample,ComboBoxSkill.SearchText,"Value1")
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =13
