@@ -539,7 +539,7 @@ msftnewteam As screen:
     Gallery2_1 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =392
+        Height: =360
         Items: |-
             =Filter(Caregivers_1,'Primary Project '.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID)  || 'Secondary Project'.Value=Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID) || 
             'Tertiary Project'.Value =Text(First(Filter(Project,'Project Name'=msft_TextInput_13.Text)).ID))
@@ -548,7 +548,7 @@ msftnewteam As screen:
         TemplateSize: =30
         Width: =1229
         X: =100
-        Y: =281
+        Y: =312
         ZIndex: =107
 
         Label19_3 As label:
@@ -562,7 +562,7 @@ msftnewteam As screen:
             Font: =Font.'Segoe UI'
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =10.75
+            Size: =12
             Text: =ThisItem.'Caregiver Name'
             Width: =192
             X: =11
@@ -577,11 +577,15 @@ msftnewteam As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =30
+            Height: =29
             OnSelect: =Select(Parent)
-            Size: =10.75
-            Text: =
-            X: =278
+            Size: =12
+            Text: |-
+                =If(ThisItem.'Primary Project '.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Primary Project'.Value,
+                ThisItem.'Secondary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Secondary Project'.Value,
+                ThisItem.'Tertiary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Discipline for Tertiary Project'.Value)
+            Width: =230
+            X: =321
             ZIndex: =2
 
         Label19_5 As label:
@@ -595,9 +599,12 @@ msftnewteam As screen:
             Font: =Font.'Segoe UI'
             Height: =30
             OnSelect: =Select(Parent)
-            Size: =10.75
-            Text: =
-            X: =428
+            Size: =12
+            Text: |-
+                =If(ThisItem.'Primary Project '.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % for Primary Project'*100,
+                ThisItem.'Secondary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % for Secondary Project'*100,
+                ThisItem.'Tertiary Project'.Id=(First(Filter(Project,'Project Name'=msft_TextInput_13.Text))).ID,ThisItem.'Allocation % of Tertiary Project'*100)
+            X: =734
             ZIndex: =3
 
         msft_Button_81 As button:
@@ -631,6 +638,15 @@ msftnewteam As screen:
             Width: =79
             X: =589
             ZIndex: =4
+
+        Separator1_1 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =5
 
     msft_Button_82 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -695,4 +711,73 @@ msftnewteam As screen:
         X: =96
         Y: =232
         ZIndex: =109
+
+    msft_Button_87 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =44
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: =Navigate(msftproject)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="Back to Projects"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =230
+        X: =1086
+        Y: =688
+        ZIndex: =110
+
+    Label7_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =41
+        Size: =12
+        Text: ="Discipline"
+        Width: =85
+        X: =416
+        Y: =276
+        ZIndex: =112
+
+    Label7_4 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =45
+        Size: =12
+        Text: ="Allocation Percentage"
+        Width: =179
+        X: =774
+        Y: =279
+        ZIndex: =113
 
