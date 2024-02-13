@@ -1,0 +1,105 @@
+msftDashboardupdate As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =ClearCollect(
+            GroupedData,
+            AddColumns(
+                Distinct(Caregivers_1, Level),
+                
+            )
+        )
+        
+        
+        
+        
+        
+        
+        
+
+    Container3_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =11
+
+        navBarVertical_admin_44 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboardupdate
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container1_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =12
+
+        navBarHorizontal_44 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
+
+    CompositePieChart2 As group:
+        Height: =5
+        Width: =5
+        X: =747
+        Y: =184
+        ZIndex: =13
+
+        Title3 As label:
+            Align: =Align.Center
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            Height: =25
+            Text: ="Chart Title"
+            Width: =400
+            X: =732
+            Y: =182
+            ZIndex: =14
+
+        PieChart2 As pieChart:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            Items: =Distinct(Caregivers_1,'Cost Center Code')
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =15
+            X: =732
+            Y: =212
+            ZIndex: =15
+
+        Legend2 As legend:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Font: =Font.'Segoe UI'
+            Height: =200
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            ItemColorSet: =PieChart2.ItemColorSet
+            Items: =PieChart2.SeriesLabels
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            Size: =16
+            Width: =400
+            X: =732
+            Y: =526
+            ZIndex: =16
+
