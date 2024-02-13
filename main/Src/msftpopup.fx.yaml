@@ -129,53 +129,7 @@ msftpopup As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         OnSelect: |+
-            =// Find the current user's core leader
-            Set(
-                CoreLeader,
-                LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
-            );
-            
-            // Output the value of CoreLeader for debugging
-            Notify("Core Leader: " & CoreLeader, NotificationType.Information);
-            
-            // Find the email address of the core leader
-            Set(
-                CoreLeaderEmail,
-                LookUp(Caregivers_1, 'Caregiver Name' = CoreLeader).'Caregiver Email'
-            );
-            
-            // Output the value of CoreLeaderEmail for debugging
-            Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
-            
-            // Find the email address of the admin
-            Set(
-                AdminEmail,
-                "madhavi.b@providence.org"
-            );
-            
-            // Send email to the admin
-            If(
-                !IsBlank(AdminEmail),
-                Office365Outlook.SendEmailV2(
-                    AdminEmail,
-                    "Request for New Skill",
-                    "Hi Admin,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
-                );
-                Notify("Email sent successfully to admin.", NotificationType.Success)
-            );
-            
-            // Send email to the core leader if CoreLeaderEmail is not blank
-            If(
-                !IsBlank(CoreLeaderEmail),
-                Office365Outlook.SendEmailV2(
-                    CoreLeaderEmail,
-                    "Request for New Skill",
-                    "Hi Core Leader,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
-                );
-                Notify("Email sent successfully to core leader.", NotificationType.Success),
-                Notify("Error: Core leader email address not found", NotificationType.Error)
-            )
-            
+            =Navigate(msftgetnewskill, ScreenTransition.Fade)
             
             
             

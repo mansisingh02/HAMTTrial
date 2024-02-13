@@ -1,4 +1,4 @@
-Screen1 As screen:
+msftgetnewskill As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
 
     Rectangle2_2 As rectangle:
@@ -19,7 +19,7 @@ Screen1 As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
-        Default: ="Text input"
+        Default: =""
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -86,24 +86,32 @@ Screen1 As screen:
                 "mansi.singh@providence.org"
             );
             
-            // Send email to the admin
             If(
                 !IsBlank(AdminEmail),
                 Office365Outlook.SendEmailV2(
                     AdminEmail,
-                    "Request for New Skill",
-                    "Hi Admin,\n\nI am requesting the addition of a new skill (" & NewSkillInput & ") to the system.\n\nThank you,\n" & User().FullName
+                    "Request for Addition of a New Skill",
+                    "Hi Admin,<br>" &
+                    "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
+                    "Request you to kindly approve the same.<br>" &
+                    "Thank you,<br>" & 
+                    User().FullName
                 );
                 Notify("Email sent successfully to admin.", NotificationType.Success)
             );
+            
             
             // Send email to the core leader if CoreLeaderEmail is not blank
             /*If(
                 !IsBlank(CoreLeaderEmail),
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
-                    "Request for New Skill",
-                    "Hi Core Leader,\n\nI am requesting the addition of a new skill (" & NewSkillInput & ") to the system.\n\nThank you,\n" & User().FullName
+                    "Request for Addition of a New Skill",
+                    "Hi Admin,<br>" &
+                    "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
+                    "Request you to kindly approve the same.<br>" &
+                    "Thank you,<br>" & 
+                    User().FullName
                 );
                 Notify("Email sent successfully to core leader.", NotificationType.Success),
                 Notify("Error: Core leader email address not found", NotificationType.Error)
