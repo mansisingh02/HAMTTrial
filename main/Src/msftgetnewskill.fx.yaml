@@ -69,8 +69,8 @@ msftgetnewskill As screen:
             );
             
             Set(
-                UserLevel,
-                LookUp(Caregivers_1, 'Caregiver Email' = User().Email).Level
+                UserRecord,
+                LookUp(Caregivers_1, 'Caregiver Email' = User().Email)
             );
             
             // Output the value of CoreLeader for debugging
@@ -89,6 +89,10 @@ msftgetnewskill As screen:
             Set(
                 AdminEmail,
                 "mansi.singh@providence.org"
+            );
+            Set(
+                UserLevel,
+                UserRecord.Level.Value
             );
             
             If(
