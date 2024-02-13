@@ -56,13 +56,11 @@ msftgetnewskill As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
-            =// Store the value from the text input in a variable
-            Set(
+            =Set(
                 NewSkillInput,
                 SkillsTextInput.Text
             );
             
-            // Find the current user's core leader
             Set(
                 CoreLeader,
                 LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
@@ -73,22 +71,19 @@ msftgetnewskill As screen:
                 LookUp(Caregivers_1, 'Caregiver Email' = User().Email)
             );
             
-            // Output the value of CoreLeader for debugging
             Notify("Core Leader: " & CoreLeader, NotificationType.Information);
             
-            // Find the email address of the core leader
             Set(
                 CoreLeaderEmail,
                 LookUp(Caregivers_1, 'Caregiver Name' = CoreLeader).'Caregiver Email'
             );
             
-            // Output the value of CoreLeaderEmail for debugging
+            
             Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
             
-            // Find the email address of the admin
             Set(
                 AdminEmail,
-                "mansi.singh@providence.org"
+                "madhavi.b@providence.org"
             );
             Set(
                 UserLevel,
@@ -110,7 +105,6 @@ msftgetnewskill As screen:
                 );
                 Notify("Email sent successfully to admin.", NotificationType.Success)
             ),
-                // Else case for different user level
                 If(
                     !IsBlank(AdminEmail),
                     Office365Outlook.SendEmailV2(
@@ -125,8 +119,7 @@ msftgetnewskill As screen:
                 )
             );
             
-            // Send email to the core leader if CoreLeaderEmail is not blank
-            /*If(
+            If(
                 !IsBlank(CoreLeaderEmail),
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
@@ -139,7 +132,7 @@ msftgetnewskill As screen:
                 );
                 Notify("Email sent successfully to core leader.", NotificationType.Success),
                 Notify("Error: Core leader email address not found", NotificationType.Error)
-            )*/
+            )
             
             
         PaddingBottom: =7
