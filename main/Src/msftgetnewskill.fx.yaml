@@ -68,6 +68,11 @@ msftgetnewskill As screen:
                 LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
             );
             
+            Set(
+                UserLevel,
+                LookUp(Caregivers_1, 'Caregiver Email' = User().Email).Level
+            );
+            
             // Output the value of CoreLeader for debugging
             Notify("Core Leader: " & CoreLeader, NotificationType.Information);
             
@@ -87,6 +92,8 @@ msftgetnewskill As screen:
             );
             
             If(
+                UserLevel = "1I" || UserLevel = "1P" || UserLevel = "2P" || UserLevel = "3P" || UserLevel = "4P",
+            If(
                 !IsBlank(AdminEmail),
                 Office365Outlook.SendEmailV2(
                     AdminEmail,
@@ -98,6 +105,7 @@ msftgetnewskill As screen:
                     User().FullName
                 );
                 Notify("Email sent successfully to admin.", NotificationType.Success)
+            )
             );
             
             
