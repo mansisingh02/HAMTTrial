@@ -578,6 +578,7 @@ msftproject As screen:
             RadiusTopRight: =4
             Size: =10.5
             Text: ="Edit"
+            Visible: =If(ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2', true, false)
             Width: =70
             X: =1155
             Y: =13
@@ -934,4 +935,18 @@ msftproject As screen:
         X: =729
         Y: =121
         ZIndex: =21
+
+    Gallery2 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =41
+        Items: =Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Visible: =false
+        Width: =95
+        X: =1257
+        Y: =61
+        ZIndex: =22
 
