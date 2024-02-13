@@ -4333,6 +4333,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftcaregivers.Gallery13.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Gallery13.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 24,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "Lower('Caregiver Email')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Gallery13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Lower"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Gallery13.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Gallery13.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 45,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Gallery13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "navBarVertical_admin.Image5_11.AccessibleLabel"
                 }
               ],
@@ -20833,19 +20913,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftcaregivers.searchLevel.AccessibleLabel"
+                  "fullyQualifiedName": "msftcaregivers.searchLevel_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftcaregivers.searchLevel.AccessibleLabel",
+                  "fullyQualifiedName": "msftcaregivers.searchLevel_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftcaregivers",
-                "type": "msftcaregivers.searchLevel"
+                "type": "msftcaregivers.searchLevel_1"
               }
             }
           ],
@@ -20863,19 +20943,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftcaregivers.searchLevel_1.AccessibleLabel"
+                  "fullyQualifiedName": "msftcaregivers.Toggle2.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftcaregivers.searchLevel_1.AccessibleLabel",
+                  "fullyQualifiedName": "msftcaregivers.Toggle2.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftcaregivers",
-                "type": "msftcaregivers.searchLevel_1"
+                "type": "msftcaregivers.Toggle2"
               }
             }
           ],
@@ -21577,6 +21657,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.searchLevel.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.searchLevel.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.searchLevel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
