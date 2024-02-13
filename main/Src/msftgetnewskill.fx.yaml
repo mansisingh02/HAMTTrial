@@ -102,16 +102,28 @@ msftgetnewskill As screen:
                 Office365Outlook.SendEmailV2(
                     AdminEmail,
                     "Request for Addition of a New Skill",
-                    "Hi Admin,<br>" &
+                    "Hi Madhavi,<br>" &
                     "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
                     "Request you to kindly approve the same.<br>" &
                     "Thank you,<br>" & 
                     User().FullName
                 );
                 Notify("Email sent successfully to admin.", NotificationType.Success)
-            )
+            ),
+                // Else case for different user level
+                If(
+                    !IsBlank(AdminEmail),
+                    Office365Outlook.SendEmailV2(
+                        AdminEmail,
+                        "Adding a New Skill",
+                        "Hi Madhavi,<br>" &
+                        "I am adding this skill (" & NewSkillInput & ") to the already existing list of skills. Please take note.<br>" &
+                        "Thank you,<br>" & 
+                        User().FullName
+                    );
+                    Notify("Email sent successfully to admin.", NotificationType.Success)
+                )
             );
-            
             
             // Send email to the core leader if CoreLeaderEmail is not blank
             /*If(
@@ -119,7 +131,7 @@ msftgetnewskill As screen:
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
                     "Request for Addition of a New Skill",
-                    "Hi Admin,<br>" &
+                    "Hi Madhavi,<br>" &
                     "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
                     "Request you to kindly approve the same.<br>" &
                     "Thank you,<br>" & 
