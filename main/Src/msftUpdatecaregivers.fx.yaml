@@ -3434,8 +3434,8 @@ msftUpdatecaregivers As screen:
             Text: ="Add"
             Visible: =varTabSelected=5
             Width: =76
-            X: =321
-            Y: =514
+            X: =832
+            Y: =517
             ZIndex: =148
 
         Label7_5 As label:
@@ -3504,37 +3504,6 @@ msftUpdatecaregivers As screen:
             Y: =493
             ZIndex: =152
 
-        comment_4 As text:
-            BorderColor: =RGBA(179, 179, 179, 1)
-            Color: =RGBA(166, 166, 166, 1)
-            Default: =
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            HintText: ="Validity Period"
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Mode: =TextMode.MultiLine
-            PaddingBottom: =9
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =RGBA(0, 120, 212, 1)
-            PressedColor: =RGBA(51, 51, 51, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            RadiusBottomLeft: =3
-            RadiusBottomRight: =3
-            RadiusTopLeft: =3
-            RadiusTopRight: =3
-            Size: =10
-            Visible: =varTabSelected=5
-            Width: =183
-            X: =114
-            Y: =511
-            ZIndex: =153
-
         msft_Label_54 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -3574,12 +3543,28 @@ msftUpdatecaregivers As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =Distinct(Skills_1,Discipline)
+        IsSearchable: =false
+        Items: =Distinct(Certifications,'Certification Name')
+        OnChange: |-
+            =UpdateContext({
+                SelectedCertification: skillCategory_10.Selected
+            });
+            
+            ClearCollect(
+                CertificationDetails,
+                Filter(Certifications, 'Certification Name' = SelectedCertification.Value)
+            );
+            
+            // Set the validity period in years
+            Set(
+                ValidityPeriodInYears,
+                First(CertificationDetails).'Validity Period (in Years)'
+            );
         PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Skills_1,Discipline),skillCategory_10.SearchText,"Value")
+        SearchItems: =[]
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =10.75
@@ -3589,37 +3574,167 @@ msftUpdatecaregivers As screen:
         Y: =451
         ZIndex: =156
 
-    skillName_4 As combobox:
-        BorderColor: =RGBA(204, 204, 204, 1)
+    Label34 As label:
+        BorderColor: =RGBA(230, 230, 230, 1)
         BorderThickness: =1
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(204, 204, 204, 1)
-        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(179, 179, 179, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(116, 116, 116, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(255, 255, 255, 1)
-        DisplayFields: =["SkillName"]
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =37
+        Size: =10.75
+        Text: =ValidityPeriodInYears
+        Width: =185
+        X: =112
+        Y: =514
+        ZIndex: =158
+
+    TextInput3 As text:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        Default: ="Text input"
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =30
-        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =Filter(Skills_1, Discipline = skillCategory_10.Selected.Value)
-        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["SkillName"]
-        SearchItems: =Search(Filter(Skills_1, Discipline = skillCategory_10.Selected.Value),skillName_4.SearchText,"SkillName")
-        SelectionFill: =RGBA(0, 51, 142, 1)
-        SelectMultiple: =false
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
         Size: =10.75
-        Visible: =varTabSelected=5
-        Width: =192
-        X: =320
+        Width: =205
+        X: =326
         Y: =451
-        ZIndex: =157
+        ZIndex: =159
+
+    msft_DatePicker_6 As datepicker:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultDate: =Gallery16.Selected.'Start Date'
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =38
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(0, 51, 142, 1)
+        OnChange: |+
+            =If(
+                DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")),
+                If(
+                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
+                    // Dates are within the range and end date is not before start date
+                    // You can add additional logic here if needed
+                    Notify("Selected dates are within the group's date range", NotificationType.Success),
+                    If(
+                        DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
+                        // Start date is before the group's start date
+                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
+                        // Dates are outside the group's date range
+                        Notify("End date is outside the group's date range. Please check your selections.", NotificationType.Error)
+                    )
+                ),
+                // End date is before start date
+                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
+            )
+            
+            
+            
+            
+            
+        PaddingBottom: =9
+        PaddingRight: =8
+        PaddingTop: =8
+        SelectedDateFill: =RGBA(0, 120, 212, 1)
+        Size: =11
+        Width: =203
+        X: =329
+        Y: =513
+        ZIndex: =160
+
+    msft_DatePicker_7 As datepicker:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
+        CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultDate: =Gallery16.Selected.'End Date'
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(116, 116, 116, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =38
+        HoverDateFill: =RGBA(200, 200, 200, 1)
+        IconBackground: =RGBA(0, 51, 142, 1)
+        OnChange: |-
+            =If(
+                DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")),
+                If(
+                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
+                    DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
+                    // Dates are within the range and end date is not before start date
+                    // You can add additional logic here if needed
+                    Notify("Selected dates are within the group's date range", NotificationType.Success),
+                    If(
+                        DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
+                        // Start date is before the group's start date
+                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
+                        // Dates are outside the group's date range
+                        Notify("End date is outside the group's date range. Please check your selections.", NotificationType.Error)
+                    )
+                ),
+                // End date is before start date
+                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
+            )
+        PaddingBottom: =9
+        PaddingRight: =8
+        PaddingTop: =8
+        SelectedDateFill: =RGBA(0, 120, 212, 1)
+        Size: =11
+        Width: =202
+        X: =557
+        Y: =513
+        ZIndex: =161
+
+    Label3_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =9
+        Text: ="Start Date"
+        X: =321
+        Y: =478
+        ZIndex: =162
+
+    Label3_6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =9
+        Text: ="End Date"
+        X: =550
+        Y: =478
+        ZIndex: =163
 
