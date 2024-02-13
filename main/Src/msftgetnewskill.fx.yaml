@@ -56,13 +56,11 @@ msftgetnewskill As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
-            =// Store the value from the text input in a variable
-            Set(
+            =Set(
                 NewSkillInput,
                 SkillsTextInput.Text
             );
             
-            // Find the current user's core leader
             Set(
                 CoreLeader,
                 LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
@@ -73,22 +71,19 @@ msftgetnewskill As screen:
                 LookUp(Caregivers_1, 'Caregiver Email' = User().Email)
             );
             
-            // Output the value of CoreLeader for debugging
             Notify("Core Leader: " & CoreLeader, NotificationType.Information);
             
-            // Find the email address of the core leader
             Set(
                 CoreLeaderEmail,
                 LookUp(Caregivers_1, 'Caregiver Name' = CoreLeader).'Caregiver Email'
             );
             
-            // Output the value of CoreLeaderEmail for debugging
+            
             Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
             
-            // Find the email address of the admin
             Set(
                 AdminEmail,
-                "mansi.singh@providence.org"
+                "madhavi.b@providence.org"
             );
             Set(
                 UserLevel,
@@ -102,24 +97,34 @@ msftgetnewskill As screen:
                 Office365Outlook.SendEmailV2(
                     AdminEmail,
                     "Request for Addition of a New Skill",
-                    "Hi Admin,<br>" &
+                    "Hi Madhavi,<br>" &
                     "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
                     "Request you to kindly approve the same.<br>" &
                     "Thank you,<br>" & 
                     User().FullName
                 );
                 Notify("Email sent successfully to admin.", NotificationType.Success)
-            )
+            ),
+                If(
+                    !IsBlank(AdminEmail),
+                    Office365Outlook.SendEmailV2(
+                        AdminEmail,
+                        "Adding a New Skill",
+                        "Hi Madhavi,<br>" &
+                        "I am adding this skill (" & NewSkillInput & ") to the already existing list of skills. Please take note.<br>" &
+                        "Thank you,<br>" & 
+                        User().FullName
+                    );
+                    Notify("Email sent successfully to admin.", NotificationType.Success)
+                )
             );
             
-            
-            // Send email to the core leader if CoreLeaderEmail is not blank
-            /*If(
+            If(
                 !IsBlank(CoreLeaderEmail),
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
                     "Request for Addition of a New Skill",
-                    "Hi Admin,<br>" &
+                    "Hi Madhavi,<br>" &
                     "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
                     "Request you to kindly approve the same.<br>" &
                     "Thank you,<br>" & 
@@ -127,7 +132,7 @@ msftgetnewskill As screen:
                 );
                 Notify("Email sent successfully to core leader.", NotificationType.Success),
                 Notify("Error: Core leader email address not found", NotificationType.Error)
-            )*/
+            )
             
             
         PaddingBottom: =7
