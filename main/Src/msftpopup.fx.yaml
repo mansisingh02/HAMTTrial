@@ -154,22 +154,28 @@ msftpopup As screen:
             );
             
             // Send email to the admin
-            Office365Outlook.SendEmailV2(
-                AdminEmail,
-                "Request for New Skill",
-                "Hi Admin,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
+            If(
+                !IsBlank(AdminEmail),
+                Office365Outlook.SendEmailV2(
+                    AdminEmail,
+                    "Request for New Skill",
+                    "Hi Admin,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
+                );
+                Notify("Email sent successfully to admin.", NotificationType.Success)
             );
             
             // Send email to the core leader if CoreLeaderEmail is not blank
             If(
-                IsBlank(CoreLeaderEmail),
-                Notify("Error: Core leader email address not found", NotificationType.Error),
+                !IsBlank(CoreLeaderEmail),
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
                     "Request for New Skill",
                     "Hi Core Leader,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
-                )
+                );
+                Notify("Email sent successfully to core leader.", NotificationType.Success),
+                Notify("Error: Core leader email address not found", NotificationType.Error)
             )
+            
             
             
             
