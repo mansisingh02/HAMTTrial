@@ -132,7 +132,7 @@ msftpopup As screen:
             =// Find the current user's core leader
             Set(
                 CoreLeader,
-                LookUp(Caregivers_1, 'Caregiver Name' = User().FullName).'Core Leader'
+                LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
             );
             
             // Output the value of CoreLeader for debugging
@@ -147,6 +147,19 @@ msftpopup As screen:
             // Output the value of CoreLeaderEmail for debugging
             Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
             
+            // Find the email address of the admin
+            Set(
+                AdminEmail,
+                "madhavi.b@providence.org"
+            );
+            
+            // Send email to the admin
+            Office365Outlook.SendEmailV2(
+                AdminEmail,
+                "Request for New Skill",
+                "Hi Admin,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
+            );
+            
             // Send email to the core leader if CoreLeaderEmail is not blank
             If(
                 IsBlank(CoreLeaderEmail),
@@ -157,6 +170,7 @@ msftpopup As screen:
                     "Hi Core Leader,\n\nI am requesting the addition of a new skill (" & SelectedSkillsName & ") to the system.\n\nThank you,\n" & User().FullName
                 )
             )
+            
             
             
         Size: =10.75
