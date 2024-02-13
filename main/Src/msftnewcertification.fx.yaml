@@ -200,7 +200,7 @@ msftnewcertification As screen:
         Fill: =RGBA(0, 51, 142, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
-        Height: =48
+        Height: =42
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -214,13 +214,15 @@ msftnewcertification As screen:
                     Certifications,
                     Defaults(Certifications),
                     {
-                        'Certification Name': msft_TextInput_4.Text,
-                        'Validity Period (in Years)': msft_TextInput_3
+                        'Certification Name': msft_TextInput_4,
+                        'Validity Period (in Years)': msft_TextInput_3,
+                        'Certification Code': msft_TextInput_18
                     }
                 );
                 Refresh(Capabilities);
                 Reset(msft_TextInput_3);
                 Reset(msft_TextInput_4);
+                Reset(msft_TextInput_18);
                 Navigate(msftMasterData)
             )
         PaddingBottom: =7
@@ -235,9 +237,9 @@ msftnewcertification As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="SAVE"
+        Text: ="Save"
         VerticalAlign: =VerticalAlign.Top
-        Width: =130
+        Width: =128
         X: =1196
         Y: =693
         ZIndex: =11
@@ -270,10 +272,95 @@ msftnewcertification As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="CANCEL"
+        Text: ="Cancel"
         VerticalAlign: =VerticalAlign.Top
         Width: =143
         X: =107
         Y: =693
         ZIndex: =12
+
+    msft_Label_20 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =11
+        Text: ="Certification Code"
+        Width: =143
+        X: =104
+        Y: =287
+        ZIndex: =13
+
+    msft_TextInput_18 As text:
+        BorderColor: =RGBA(219, 219, 219, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HintText: ="Enter Certification Code"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =11
+        Width: =300
+        X: =104
+        Y: =329
+        ZIndex: =14
+
+    Label6_46 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(168, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =11
+        Text: ="*"
+        X: =224
+        Y: =275
+        ZIndex: =15
+
+    Icon1_49 As icon.Help:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =20
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Help
+        OnSelect: =Set(popuptwo,true)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Enter the full name of the certification"
+        Width: =13
+        X: =385
+        Y: =288
+        ZIndex: =16
 
