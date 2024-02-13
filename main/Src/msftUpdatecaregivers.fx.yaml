@@ -3382,47 +3382,16 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |
-                =If(Title2_96.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 1': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID}, 'Description for Advanced Skill 1':comment_4.Text}),
-                            Title2_113.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 2': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID}, 'Description for Advanced Skill 2':comment_4.Text}
-                            ),
-                            Title2_115.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 3': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 3': comment_4.Text}),
-                            
-                            Title2_114.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 4': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 4': comment_4.Text}
-                            ),
-                            
-                            Title2_116.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 5': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 5': comment_4.Text}
-                            ),
-                
-                            Title2_118.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 6': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 6': comment_4.Text}),
-                
-                            Title2_117.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 7': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 7': comment_4.Text}),
-                            
-                            Title2_119.Text=Blank(),Patch(Advanced,  LookUp(
-                            Advanced,
-                            'Caregiver ID' = txtCaregiverID.Text) , {'Advanced Skill 8': { Value: skillName_4.Selected.'Skill Name' , Id: skillName_4.Selected.ID},'Description for Advanced Skill 8': comment_4.Text}),
-                
-                            Notify("You have entered the maximum number of skills!")
-                            
-                            );
-                
-                
-                Reset([@skillCategory_10]);
-                Reset(comment_4)
+            OnSelect: |-
+                =Patch(
+                    'Caregiver Certifications', 
+                    LookUp('Caregiver Certifications', 'Caregiver ID'=txtCaregiverID.Text),
+                    {
+                        'Certification 1':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
+                        'Start Date of Certification 1': msft_DatePicker_6.SelectedDate,
+                        'End Date of Certification 1': msft_DatePicker_7.SelectedDate
+                    }
+                )
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -3524,7 +3493,7 @@ msftUpdatecaregivers As screen:
             Y: =427
             ZIndex: =154
 
-    skillCategory_10 As combobox:
+    certificationNameDropdown As combobox:
         BorderColor: =RGBA(204, 204, 204, 1)
         BorderThickness: =1
         ChevronBackground: =RGBA(255, 255, 255, 1)
@@ -3547,7 +3516,7 @@ msftUpdatecaregivers As screen:
         Items: =Distinct(Certifications,'Certification Name')
         OnChange: |-
             =UpdateContext({
-                SelectedCertification: skillCategory_10.Selected
+                SelectedCertification: certificationNameDropdown.Selected
             });
             
             ClearCollect(
@@ -3737,4 +3706,66 @@ msftUpdatecaregivers As screen:
         X: =550
         Y: =478
         ZIndex: =163
+
+    Gallery23 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =170
+        Items: =Filter('Caregiver Certifications','Caregiver ID'=txtCaregiverID.Text)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =165
+        Width: =1009
+        X: =98
+        Y: =590
+        ZIndex: =164
+
+        Label42 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Certification 1'.Value
+            Width: =479
+            Y: =4
+            ZIndex: =1
+
+        Label43 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =650
+            Y: =4
+            ZIndex: =2
+
+        Label43_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'End Date of Certification 1'
+            X: =830
+            Y: =4
+            ZIndex: =3
 
