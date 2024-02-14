@@ -15,7 +15,7 @@ msftUpdatecaregivers As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =213
+        Height: =207
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
@@ -313,24 +313,6 @@ msftUpdatecaregivers As screen:
         Y: =576
         ZIndex: =50
 
-        Title2 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Text: =ThisItem.'Beginner 1'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =263
-            X: =40
-            Y: =16
-            ZIndex: =2
-
         Title2_1 As label:
             Color: =RGBA(50, 49, 48, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -342,11 +324,12 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =ThisItem.'Beginner 2'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =49
+            Y: =29
             ZIndex: =7
 
         Title2_2 As label:
@@ -360,12 +343,13 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: |
                 =ThisItem.'Beginner 3'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =77
+            Y: =58
             ZIndex: =8
 
         Title2_3 As label:
@@ -379,12 +363,13 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: |
                 =ThisItem.'Beginner 4'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =105
+            Y: =87
             ZIndex: =9
 
         Title2_4 As label:
@@ -398,12 +383,13 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: |
                 =ThisItem.'Beginner 5'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =133
+            Y: =116
             ZIndex: =10
 
         Title2_5 As label:
@@ -435,12 +421,13 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: |
                 =ThisItem.'Beginner 6'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =161
+            Y: =146
             ZIndex: =12
 
         Title2_7 As label:
@@ -497,6 +484,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: =If(Title2_1.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -518,6 +506,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: =If(Title2_2.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -539,6 +528,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: =If(Title2_3.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -581,6 +571,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =If(Title2_6.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -623,6 +614,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: =If(Title2_4.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -668,6 +660,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -691,6 +684,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -714,6 +708,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -737,6 +732,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =12
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -760,6 +756,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -1380,6 +1377,24 @@ msftUpdatecaregivers As screen:
                 X: =790
                 Y: =230
                 ZIndex: =29
+
+        Title2_25 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Beginner 1'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            ZIndex: =31
 
     txtCaregiverID_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
