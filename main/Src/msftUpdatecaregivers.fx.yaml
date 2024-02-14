@@ -7,6 +7,7 @@ msftUpdatecaregivers As screen:
             SelectedSkillCategory: First(Filter(Discipline, DisciplineName = SelectedCategory)),
             SelectedSkillName: First(Filter(Skills_1, 'Skill Name' = SelectedSkillsName)).'Skill Name'
         });
+        Set(varTabSelected,1)
     Width: =1366
 
     Rectangle3 As rectangle:
@@ -85,8 +86,8 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: |-
-            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=User().Email, 
+        Items: |
+            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Blank(), 
             StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -2808,6 +2809,7 @@ msftUpdatecaregivers As screen:
         ZIndex: =122
 
     navBarHorizontal_1 As navBarHorizontal:
+        Width: =1366
         ZIndex: =123
 
     Gallery3_1 As gallery.galleryHorizontal:
