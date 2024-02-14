@@ -3384,7 +3384,7 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(
                     'Caregiver Certifications', 
-                    LookUp('Caregiver Certifications', 'Caregiver ID'=txtCaregiverID_1.Text),
+                    LookUp('Caregiver Certifications', 'Caregiver ID'=First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'),
                     {
                         'Certification 1':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
                         'Start Date of Certification 1': msft_DatePicker_6.SelectedDate,
@@ -3597,32 +3597,7 @@ msftUpdatecaregivers As screen:
         Height: =38
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
-        OnChange: |+
-            =If(
-                DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")),
-                If(
-                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
-                    // Dates are within the range and end date is not before start date
-                    // You can add additional logic here if needed
-                    Notify("Selected dates are within the group's date range", NotificationType.Success),
-                    If(
-                        DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
-                        // Start date is before the group's start date
-                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
-                        // Dates are outside the group's date range
-                        Notify("End date is outside the group's date range. Please check your selections.", NotificationType.Error)
-                    )
-                ),
-                // End date is before start date
-                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
-            )
-            
-            
-            
-            
-            
+        OnChange: =
         PaddingBottom: =9
         PaddingRight: =8
         PaddingTop: =8
@@ -3645,27 +3620,7 @@ msftUpdatecaregivers As screen:
         Height: =38
         HoverDateFill: =RGBA(200, 200, 200, 1)
         IconBackground: =RGBA(0, 51, 142, 1)
-        OnChange: |-
-            =If(
-                DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")),
-                If(
-                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) >= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")) &&
-                    DateValue(Text(msft_DatePicker_7.SelectedDate, "dd/mm/yyyy")) <= DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'End Date', "dd/mm/yyyy")),
-                    // Dates are within the range and end date is not before start date
-                    // You can add additional logic here if needed
-                    Notify("Selected dates are within the group's date range", NotificationType.Success),
-                    If(
-                        DateValue(Text(msft_DatePicker_6.SelectedDate, "dd/mm/yyyy")) < DateValue(Text(LookUp('Project Parent Group', 'Group Name' = msft_Dropdown_32.Selected.Value).'Start Date', "dd/mm/yyyy")),
-                        // Start date is before the group's start date
-                        Notify("Start date cannot be before the group's start date. Please check your selections.", NotificationType.Error),
-                        // Dates are outside the group's date range
-                        Notify("End date is outside the group's date range. Please check your selections.", NotificationType.Error)
-                    )
-                ),
-                // End date is before start date
-                Notify("End date cannot be before the start date. Please check your selections.", NotificationType.Error)
-            )
+        OnChange: =
         PaddingBottom: =9
         PaddingRight: =8
         PaddingTop: =8
@@ -3714,12 +3669,13 @@ msftUpdatecaregivers As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =165
-        Width: =1009
+        Visible: =varTabSelected=5
+        Width: =1080
         X: =98
         Y: =590
         ZIndex: =164
 
-        Label42 As label:
+        certi1 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3733,7 +3689,6 @@ msftUpdatecaregivers As screen:
             Size: =10
             Text: =ThisItem.'Certification 1'.Value
             Width: =479
-            Y: =4
             ZIndex: =1
 
         Label43 As label:
@@ -3748,7 +3703,7 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'Start Date of Certification 1'
-            X: =650
+            X: =648
             Y: =4
             ZIndex: =2
 
@@ -3764,9 +3719,295 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =10
             Text: =ThisItem.'End Date of Certification 1'
-            X: =830
+            X: =828
             Y: =4
             ZIndex: =3
+
+        certi2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Certification 1'.Value
+            Width: =479
+            Y: =28
+            ZIndex: =4
+
+        Label43_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =648
+            Y: =34
+            ZIndex: =5
+
+        Label43_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =828
+            Y: =34
+            ZIndex: =6
+
+        certi3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Certification 1'.Value
+            Width: =479
+            Y: =56
+            ZIndex: =7
+
+        Label43_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =648
+            Y: =64
+            ZIndex: =8
+
+        Label43_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =828
+            Y: =64
+            ZIndex: =9
+
+        certi5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Certification 1'.Value
+            Width: =479
+            Y: =114
+            ZIndex: =10
+
+        Label43_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =648
+            Y: =125
+            ZIndex: =11
+
+        Label43_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =828
+            Y: =125
+            ZIndex: =12
+
+        certi4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Certification 1'.Value
+            Width: =479
+            Y: =84
+            ZIndex: =13
+
+        Label43_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =648
+            Y: =94
+            ZIndex: =14
+
+        Label43_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: =ThisItem.'Start Date of Certification 1'
+            X: =830
+            Y: =94
+            ZIndex: =15
+
+        Label43_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(172, 62, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =44
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Delete"
+            Underline: =true
+            X: =920
+            ZIndex: =16
+
+        Label43_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(172, 62, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Delete"
+            Underline: =true
+            X: =920
+            Y: =33
+            ZIndex: =17
+
+        Label43_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(172, 62, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Delete"
+            Underline: =true
+            X: =920
+            Y: =63
+            ZIndex: =18
+
+        Label43_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(172, 62, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Delete"
+            Underline: =true
+            X: =920
+            Y: =93
+            ZIndex: =19
+
+        Label43_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(172, 62, 11, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            OnSelect: =Select(Parent)
+            Size: =10
+            Text: ="Delete"
+            Underline: =true
+            X: =920
+            Y: =125
+            ZIndex: =20
 
     txtCaregiverID As label:
         BorderColor: =RGBA(0, 0, 0, 0)
