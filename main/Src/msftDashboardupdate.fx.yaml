@@ -1,13 +1,39 @@
 msftDashboardupdate As screen:
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =ClearCollect(
-            GroupedData,
+        =// Retrieve data from SharePoint lists
+        ClearCollect(
+            CaregiversData,
+            Caregivers_1
+        );
+        
+        // Initialize dictionary to store counts for each level
+        ClearCollect(
+            LevelCounts,
             AddColumns(
-                Distinct(Caregivers_1, Level),
-                
+                Distinct(CaregiversData, Level), // Get unique values from the "Level" column
+                "LevelName",
+                ThisRecord.Value // Use the "Level" directly as the name
             )
-        )
+        );
+        
+        // Iterate through each level and count caregivers
+        ForAll(
+            LevelCounts,
+            {
+                LevelName: ThisRecord.LevelName,
+                CaregiverCount: CountIf(CaregiversData, Level = ThisRecord.Level) // Count caregivers where the "Level" matches
+            }
+        );
+        
+        // Use LevelCounts to create pie chart or any other visualization
+        
+        
+        
+        
+        
+        
+        
         
         
         
