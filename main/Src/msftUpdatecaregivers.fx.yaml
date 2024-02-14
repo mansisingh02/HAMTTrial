@@ -86,7 +86,7 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =76
-        Items: |-
+        Items: |
             =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=User().Email, 
             StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
         LoadingSpinner: =LoadingSpinner.Data
