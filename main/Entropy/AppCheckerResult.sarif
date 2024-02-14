@@ -4300,10 +4300,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 172,
+                  "charLength": 167,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If(Gallery1.Selected.'Caregiver Email'=User().Email, \nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') )"
+                    "text": "If(Gallery1.Selected.'Caregiver Email'=Blank(), \nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') )"
                   }
                 }
               },
