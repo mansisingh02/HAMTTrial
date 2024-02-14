@@ -7,13 +7,18 @@ msftDashboardupdate As screen:
             Caregivers_1
         );
         
+        Set(
+            LevelColumnName,
+            "Level"
+        );
+        
         // Initialize dictionary to store counts for each level
         ClearCollect(
             LevelCounts,
             AddColumns(
                 Distinct(CaregiversData, Level), // Get unique values from the "Level" column
                 "LevelName",
-                ThisRecord.Value // Use the "Level" directly as the name
+                LevelColumnName
             )
         );
         
@@ -25,8 +30,6 @@ msftDashboardupdate As screen:
                 CaregiverCount: CountIf(CaregiversData,Level = ThisRecord.Level) // Count caregivers where the "Level" matches
             }
         );
-        
-        // Use LevelCounts to create pie chart or any other visualization
         
         
         
@@ -102,7 +105,18 @@ msftDashboardupdate As screen:
             Font: =Font.'Segoe UI'
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-            Items: =LevelCounts
+            Items: |-
+                =AddColumns(
+                GroupBy(
+                'Caregivers_1';
+                "PillarNewName";
+                "Employee"
+                );
+                "TotalDuration";
+                Sum(
+                Employee;
+                'Duration'
+                )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =15
             X: =544
