@@ -1,4 +1,5 @@
 msftMasterData As screen:
+    Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |-
         =If(
@@ -33,6 +34,7 @@ msftMasterData As screen:
             Notify("Screen is loading", NotificationType.Information);
         );
         Set(loaderVisible, false);
+    Width: =1366
 
     "Gallery28 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -882,7 +884,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Discipline"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=2
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=2, true, false)
         Width: =207
         X: =1080
         Y: =248
@@ -917,7 +919,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Group"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=5
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=5, true, false)
         Width: =206
         X: =1076
         Y: =268
@@ -1419,7 +1421,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Technology"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=3
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=3, true, false)
         Width: =234
         X: =1052
         Y: =243
@@ -1454,7 +1456,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Project Type"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=6
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=6, true, false)
         Width: =253
         X: =1024
         Y: =268
@@ -1523,7 +1525,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Project Goal"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=7
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=7, true, false)
         Width: =273
         X: =1004
         Y: =272
@@ -1623,7 +1625,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Capability"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=8
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=8, true, false)
         Width: =236
         X: =1050
         Y: =243
@@ -1976,7 +1978,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Certification"
         VerticalAlign: =VerticalAlign.Top
-        Visible: =varTabSelected=1
+        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=1, true, false)
         Width: =257
         X: =1025
         Y: =236
@@ -1990,6 +1992,7 @@ msftMasterData As screen:
         ZIndex: =41
 
     navBarHorizontal_5 As navBarHorizontal:
+        Width: =1366
         ZIndex: =42
 
     Label9 As label:
