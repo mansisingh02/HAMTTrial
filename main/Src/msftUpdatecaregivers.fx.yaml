@@ -87,7 +87,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =76
         Items: |
-            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Blank(), 
+            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Lower(User().Email), 
             StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -1409,6 +1409,7 @@ msftUpdatecaregivers As screen:
         Height: =31
         Size: =13
         Text: =First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'
+        Visible: =false
         Width: =102
         X: =633
         Y: =81
@@ -3846,28 +3847,11 @@ msftUpdatecaregivers As screen:
         Height: =31
         Size: =13
         Text: =Gallery3.Selected.'Caregiver ID'
+        Visible: =false
         Width: =102
         X: =531
         Y: =84
         ZIndex: =165
-
-    Label7_5 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Size: =13
-        Text: ="CERTIFICATIONS"
-        Visible: =varTabSelected=5
-        Width: =152
-        X: =114
-        Y: =376
-        ZIndex: =166
 
     Group2 As group:
         Height: =5
