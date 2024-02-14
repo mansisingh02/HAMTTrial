@@ -4697,10 +4697,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 276,
+                  "charLength": 172,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If( Lower(User().Email)=\"rama.ghodke@providence.org\" || Lower(User().Email)=\"madhavi.b@providence.org\" || Lower(User().Email)=\"mansi.singh@providence.org\", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  \nStartsWith('Caregiver Email',Lower(User().Email)))"
+                    "text": "If(Gallery1.Selected.'Caregiver Email'=User().Email, \nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') )"
                   }
                 }
               },
@@ -4874,86 +4874,6 @@
           "message": {
             "arguments": [
               "Search"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Button8_3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Button8_3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 120,
-                  "snippet": {
-                    "text": "Lower('Caregiver Email')"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Button8_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Lower"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Button8_3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Button8_3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 144,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Button8_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
             ],
             "id": "issue"
           },
@@ -22722,6 +22642,156 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_10.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_10.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery23.Label43_10"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_11.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_11.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery23.Label43_11"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_12.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_12.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery23.Label43_12"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_13.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_13.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery23.Label43_13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_14.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.Label43_14.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery23.Label43_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
         },
         {
           "locations": [

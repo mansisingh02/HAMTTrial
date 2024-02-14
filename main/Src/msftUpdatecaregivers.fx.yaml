@@ -86,8 +86,8 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =76
         Items: |-
-            =Filter(Caregivers_1, If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org", StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ,  
-            StartsWith('Caregiver Email',Lower(User().Email))))
+            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=User().Email, 
+            StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
@@ -1394,8 +1394,8 @@ msftUpdatecaregivers As screen:
         Size: =13
         Text: =First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'
         Width: =102
-        X: =537
-        Y: =219
+        X: =633
+        Y: =81
         ZIndex: =51
 
     Group1 As group:
@@ -3384,12 +3384,43 @@ msftUpdatecaregivers As screen:
             OnSelect: |-
                 =Patch(
                     'Caregiver Certifications', 
-                    LookUp('Caregiver Certifications', 'Caregiver ID'=First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'),
+                    LookUp('Caregiver Certifications', 'Caregiver ID'=Gallery3.Selected.'Caregiver ID'),
+                
+                    If(certi1.Text=Blank(),
                     {
                         'Certification 1':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
                         'Start Date of Certification 1': msft_DatePicker_6.SelectedDate,
                         'End Date of Certification 1': msft_DatePicker_7.SelectedDate
+                    },
+                    certi2.Text=Blank(),
+                    {
+                        'Certification 2':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
+                        'Start Date of Certification 2': msft_DatePicker_6.SelectedDate,
+                        'End Date of Certification 2': msft_DatePicker_7.SelectedDate
+                    },
+                
+                    certi3.Text=Blank(),
+                    {
+                        'Certification 3':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
+                        'Start Date of Certification 3': msft_DatePicker_6.SelectedDate,
+                        'End Date of Certification 3': msft_DatePicker_7.SelectedDate
+                    },
+                
+                    certi4.Text=Blank(),
+                    {
+                        'Certification 4':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
+                        'Start Date of Certification 4': msft_DatePicker_6.SelectedDate,
+                        'End Date of Certification 4': msft_DatePicker_7.SelectedDate
+                    },
+                
+                    certi5.Text=Blank(),
+                    {
+                        'Certification 5':{Value: certificationNameDropdown.Selected.Value, Id: First(Filter(Certifications,'Certification Name'=certificationNameDropdown.Selected.Value)).ID },
+                        'Start Date of Certification 5': msft_DatePicker_6.SelectedDate,
+                        'End Date of Certification 5': msft_DatePicker_7.SelectedDate
                     }
+                )
+                
                 )
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -3735,7 +3766,7 @@ msftUpdatecaregivers As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Certification 1'.Value
+            Text: =ThisItem.'Certification 2'.Value
             Width: =479
             Y: =28
             ZIndex: =4
@@ -3751,7 +3782,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 2'
             X: =648
             Y: =34
             ZIndex: =5
@@ -3767,7 +3798,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 2'
             X: =828
             Y: =34
             ZIndex: =6
@@ -3784,7 +3815,7 @@ msftUpdatecaregivers As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Certification 1'.Value
+            Text: =ThisItem.'Certification 3'.Value
             Width: =479
             Y: =56
             ZIndex: =7
@@ -3800,7 +3831,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 3'
             X: =648
             Y: =64
             ZIndex: =8
@@ -3816,7 +3847,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 3'
             X: =828
             Y: =64
             ZIndex: =9
@@ -3833,7 +3864,7 @@ msftUpdatecaregivers As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Certification 1'.Value
+            Text: =ThisItem.'Certification 5'.Value
             Width: =479
             Y: =114
             ZIndex: =10
@@ -3849,7 +3880,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 5'
             X: =648
             Y: =125
             ZIndex: =11
@@ -3865,7 +3896,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 5'
             X: =828
             Y: =125
             ZIndex: =12
@@ -3882,7 +3913,7 @@ msftUpdatecaregivers As screen:
             Height: =43
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Certification 1'.Value
+            Text: =ThisItem.'Certification 4'.Value
             Width: =479
             Y: =84
             ZIndex: =13
@@ -3898,7 +3929,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 4'
             X: =648
             Y: =94
             ZIndex: =14
@@ -3914,7 +3945,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =10
-            Text: =ThisItem.'Start Date of Certification 1'
+            Text: =ThisItem.'Start Date of Certification 4'
             X: =830
             Y: =94
             ZIndex: =15
@@ -3930,10 +3961,18 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             Height: =44
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Patch('Caregiver Certifications',  LookUp(
+                            'Caregiver Certifications',
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
+                        'Certification 1': Blank(),
+                        'Start Date of Certification 1': Blank(),
+                        'End Date of Certification 1': Blank()
+                    })
             Size: =10
             Text: ="Delete"
             Underline: =true
+            Visible: =If(ThisItem.'Certification 1'.Value=Blank(),false, true)
             X: =920
             ZIndex: =16
 
@@ -3947,10 +3986,18 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Patch('Caregiver Certifications',  LookUp(
+                            'Caregiver Certifications',
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
+                        'Certification 2': Blank(),
+                        'Start Date of Certification 2': Blank(),
+                        'End Date of Certification 2': Blank()
+                    })
             Size: =10
             Text: ="Delete"
             Underline: =true
+            Visible: =If(ThisItem.'Certification 2'.Value=Blank(),false, true)
             X: =920
             Y: =33
             ZIndex: =17
@@ -3965,10 +4012,18 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Patch('Caregiver Certifications',  LookUp(
+                            'Caregiver Certifications',
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
+                        'Certification 3': Blank(),
+                        'Start Date of Certification 3': Blank(),
+                        'End Date of Certification 3': Blank()
+                    })
             Size: =10
             Text: ="Delete"
             Underline: =true
+            Visible: =If(ThisItem.'Certification 3'.Value=Blank(),false, true)
             X: =920
             Y: =63
             ZIndex: =18
@@ -3983,10 +4038,18 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Patch('Caregiver Certifications',  LookUp(
+                            'Caregiver Certifications',
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
+                        'Certification 4': Blank(),
+                        'Start Date of Certification 4': Blank(),
+                        'End Date of Certification 4': Blank()
+                    })
             Size: =10
             Text: ="Delete"
             Underline: =true
+            Visible: =If(ThisItem.'Certification 4'.Value=Blank(),false, true)
             X: =920
             Y: =93
             ZIndex: =19
@@ -4001,10 +4064,18 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
-            OnSelect: =Select(Parent)
+            OnSelect: |-
+                =Patch('Caregiver Certifications',  LookUp(
+                            'Caregiver Certifications',
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
+                        'Certification 5': Blank(),
+                        'Start Date of Certification 5': Blank(),
+                        'End Date of Certification 5': Blank()
+                    })
             Size: =10
             Text: ="Delete"
             Underline: =true
+            Visible: =If(ThisItem.'Certification 5'.Value=Blank(),false, true)
             X: =920
             Y: =125
             ZIndex: =20
