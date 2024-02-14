@@ -1392,8 +1392,7 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Segoe UI'
         Height: =31
         Size: =13
-        Text: =Gallery3.Selected.'Caregiver ID'
-        Visible: =false
+        Text: =First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'
         Width: =102
         X: =537
         Y: =219
@@ -3780,8 +3779,7 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Segoe UI'
         Height: =31
         Size: =13
-        Text: =First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'
-        Visible: =false
+        Text: =Gallery3.Selected.'Caregiver ID'
         Width: =102
         X: =531
         Y: =84
