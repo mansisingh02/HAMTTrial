@@ -3402,8 +3402,8 @@ msftUpdatecaregivers As screen:
             Text: ="Certification Code"
             Visible: =varTabSelected=5
             Width: =122
-            X: =324
-            Y: =424
+            X: =557
+            Y: =416
             ZIndex: =151
 
         msft_Label_53 As label:
@@ -3851,6 +3851,24 @@ msftUpdatecaregivers As screen:
         Y: =84
         ZIndex: =165
 
+    Label7_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="CERTIFICATIONS"
+        Visible: =varTabSelected=5
+        Width: =152
+        X: =114
+        Y: =376
+        ZIndex: =166
+
     Group2 As group:
         Height: =5
         Width: =5
@@ -3949,8 +3967,8 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =varTabSelected=5
             Width: =205
-            X: =326
-            Y: =451
+            X: =555
+            Y: =446
             ZIndex: =159
 
         msft_DatePicker_6 As datepicker:
@@ -4032,4 +4050,44 @@ msftUpdatecaregivers As screen:
             X: =550
             Y: =478
             ZIndex: =163
+
+    Label19_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =18
+        Size: =6
+        Text: ="Can't find what you are looking for"
+        Visible: =varTabSelected=5
+        Width: =141
+        X: =240
+        Y: =427
+        ZIndex: =167
+
+    Icon1_1 As icon.Help:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 51, 142, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =14
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 142, 51, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Help
+        OnSelect: =Navigate(msftpopup, ScreenTransition.None)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =varTabSelected=5
+        Width: =18
+        X: =368
+        Y: =429
+        ZIndex: =168
 
