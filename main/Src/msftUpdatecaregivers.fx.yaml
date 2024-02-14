@@ -87,7 +87,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =76
         Items: |
-            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Blank(), 
+            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Lower(User().Email), 
             StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -1409,6 +1409,7 @@ msftUpdatecaregivers As screen:
         Height: =31
         Size: =13
         Text: =First(Filter(Caregivers_1,Lower('Caregiver Email')=Lower(User().Email))).'Caregiver ID'
+        Visible: =false
         Width: =102
         X: =633
         Y: =81
@@ -3846,6 +3847,7 @@ msftUpdatecaregivers As screen:
         Height: =31
         Size: =13
         Text: =Gallery3.Selected.'Caregiver ID'
+        Visible: =false
         Width: =102
         X: =531
         Y: =84
