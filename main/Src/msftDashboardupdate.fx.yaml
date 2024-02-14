@@ -108,14 +108,14 @@ msftDashboardupdate As screen:
             Items: |-
                 =AddColumns(
                 GroupBy(
-                'Caregivers_1';
+                Caregivers_1;
                 "PillarNewName";
                 "Employee"
                 );
                 "TotalDuration";
                 Sum(
                 Employee;
-                'Duration'
+                Duration
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =15
