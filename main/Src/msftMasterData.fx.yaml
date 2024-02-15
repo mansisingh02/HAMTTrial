@@ -660,7 +660,7 @@ msftMasterData As screen:
         Rectangle20 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator20.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
@@ -677,8 +677,9 @@ msftMasterData As screen:
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =402
+        Height: =409
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -773,6 +774,15 @@ msftMasterData As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =7
+
+        Separator5_4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =630
+            ZIndex: =8
 
     "'Update Caregivers_1' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -909,7 +919,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Group"
         VerticalAlign: =VerticalAlign.Top
-        Visible: = If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"  && varTabSelected=5, true, false)
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =206
         X: =1076
         Y: =268
@@ -917,8 +927,9 @@ msftMasterData As screen:
 
     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(149, 149, 149, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =381
+        Height: =404
         Items: |-
             =Filter(Skills_1,  StartsWith('Skill Name',TextInput1_1.Text) && 
             (Discipline = capabilitydpdwn.Selected.Value || capabilitydpdwn.Selected.Value=Blank())
@@ -1016,9 +1027,9 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=3
-        Width: =1116
+        Width: =1144
         X: =103
-        Y: =348
+        Y: =360
         ZIndex: =11
 
         Title1_2 As label:
@@ -1044,7 +1055,7 @@ msftMasterData As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -1054,8 +1065,9 @@ msftMasterData As screen:
             Text: |
                 =ThisItem.Discipline
             VerticalAlign: =VerticalAlign.Top
-            Width: =611
-            Y: =14
+            Width: =285
+            X: =30
+            Y: =19
             ZIndex: =3
 
         Separator1_2 As rectangle:
@@ -1082,8 +1094,8 @@ msftMasterData As screen:
             Text: =ThisItem.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =325
-            X: =721
-            Y: =14
+            X: =395
+            Y: =19
             ZIndex: =6
 
         Separator5_3 As rectangle:
@@ -1094,6 +1106,15 @@ msftMasterData As screen:
             Width: =1.5
             X: =390
             ZIndex: =7
+
+        Rectangle20_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =8
 
     capabilitydpdwn As dropdown:
         AllowEmptySelection: =true
@@ -1123,8 +1144,8 @@ msftMasterData As screen:
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =13
         Visible: =varTabSelected=3
-        X: =328
-        Y: =261
+        X: =105
+        Y: =272
         ZIndex: =12
 
     Label2_8 As label:
@@ -1141,7 +1162,7 @@ msftMasterData As screen:
         Text: ="Disciplines"
         Visible: =varTabSelected=3
         X: =110
-        Y: =315
+        Y: =319
         ZIndex: =13
 
     Label2_9 As label:
@@ -1157,8 +1178,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Skill Name"
         Visible: =varTabSelected=3
-        X: =815
-        Y: =302
+        X: =497
+        Y: =319
         ZIndex: =14
 
     TextInput1_1 As text:
@@ -1185,8 +1206,8 @@ msftMasterData As screen:
         Size: =12
         Visible: =varTabSelected=3
         Width: =214
-        X: =100
-        Y: =261
+        X: =462
+        Y: =272
         ZIndex: =15
 
     Label2_10 As label:
@@ -1219,8 +1240,8 @@ msftMasterData As screen:
         Size: =12
         Text: ="Certification Name"
         Visible: =varTabSelected=1
-        X: =98
-        Y: =298
+        X: =138
+        Y: =314
         ZIndex: =17
 
     Gallery6 As gallery.galleryHorizontal:
@@ -1985,11 +2006,13 @@ msftMasterData As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =29
         Size: =9
-        Text: ="Sort By"
+        Text: ="Sort by Discipline"
         Visible: =varTabSelected=3
-        X: =321
-        Y: =232
+        Width: =172
+        X: =105
+        Y: =243
         ZIndex: =43
 
     Image8 As image:
@@ -2141,7 +2164,7 @@ msftMasterData As screen:
         Size: =12
         Text: ="Certification Code"
         Visible: =varTabSelected=1
-        X: =801
-        Y: =298
+        X: =780
+        Y: =317
         ZIndex: =52
 
