@@ -865,46 +865,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 39,
-                  "snippet": {
-                    "text": "in"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery8"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftMasterData.Gallery33.Items"
                 }
               ],
@@ -1011,6 +971,206 @@
           "message": {
             "arguments": [
               "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery8.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery8.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 39,
+                  "snippet": {
+                    "text": "in"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 3,
+                  "charOffset": 85,
+                  "snippet": {
+                    "text": "CCC"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CCC"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 11
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 33,
+                  "charOffset": 74,
+                  "snippet": {
+                    "text": "StartsWith(CCC,TextInput1_7.Text)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "StartsWith"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 71,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery17.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery17.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 81,
+                  "charOffset": 38,
+                  "snippet": {
+                    "text": "If(\n        'Group Name' = \"Others\",\n        \"ZZZZZZ\",\n        'Group Name'\n    )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery17"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Sort"
             ],
             "id": "issue"
           },
@@ -4145,126 +4305,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 3,
-                  "charOffset": 85,
-                  "snippet": {
-                    "text": "CCC"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CCC"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 33,
-                  "charOffset": 74,
-                  "snippet": {
-                    "text": "StartsWith(CCC,TextInput1_7.Text)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "StartsWith"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_4.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 71,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery1_4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftMasterData.Gallery31.galleryTemplate32.OnSelect"
                 }
               ],
@@ -4331,46 +4371,6 @@
           "message": {
             "arguments": [
               "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery17.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery17.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 81,
-                  "charOffset": 38,
-                  "snippet": {
-                    "text": "If(\n        'Group Name' = \"Others\",\n        \"ZZZZZZ\",\n        'Group Name'\n    )"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery17"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Sort"
             ],
             "id": "issue"
           },
@@ -4625,126 +4625,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 66,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "CountIf(Caregivers_1, 'Secondary Project'.Value=Text(ThisItem.ID))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftproject",
-                "type": "msftproject.Gallery16.Label24_9"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CountIf"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 65,
-                  "charOffset": 67,
-                  "snippet": {
-                    "text": "CountIf(Caregivers_1, 'Primary Project '.Value=Text(ThisItem.ID))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftproject",
-                "type": "msftproject.Gallery16.Label24_9"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CountIf"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 65,
-                  "charOffset": 133,
-                  "snippet": {
-                    "text": "CountIf(Caregivers_1, 'Tertiary Project'.Value=Text(ThisItem.ID))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftproject",
-                "type": "msftproject.Gallery16.Label24_9"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "CountIf"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftproject.Gallery16.Items"
                 }
               ],
@@ -4859,6 +4739,126 @@
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 64,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "CountIf(Caregivers_1,'Primary Project '.Value=Text(ThisItem.ID))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "msftproject",
+                "type": "msftproject.Gallery16.Label24_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CountIf"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 65,
+                  "charOffset": 65,
+                  "snippet": {
+                    "text": "CountIf(Caregivers_1,'Secondary Project'.Value=Text(ThisItem.ID))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "msftproject",
+                "type": "msftproject.Gallery16.Label24_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CountIf"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.Gallery16.Label24_9.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 64,
+                  "charOffset": 131,
+                  "snippet": {
+                    "text": "CountIf(Caregivers_1,'Tertiary Project'.Value=Text(ThisItem.ID))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "msftproject",
+                "type": "msftproject.Gallery16.Label24_9"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "CountIf"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -9266,36 +9266,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.TextInput1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.TextInput1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftMasterData",
-                "type": "msftMasterData.TextInput1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftMasterData.capabilitydpdwn.AccessibleLabel"
                 }
               ],
@@ -9326,19 +9296,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.AccessibleLabel"
+                  "fullyQualifiedName": "msftMasterData.TextInput1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.AccessibleLabel",
+                  "fullyQualifiedName": "msftMasterData.TextInput1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftMasterData",
-                "type": "msftMasterData.Gallery8"
+                "type": "msftMasterData.TextInput1_1"
               }
             }
           ],
@@ -9350,36 +9320,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 14
         },
         {
           "locations": [
@@ -9446,19 +9386,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_2.AccessibleLabel"
+                  "fullyQualifiedName": "msftMasterData.Gallery8.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_2.AccessibleLabel",
+                  "fullyQualifiedName": "msftMasterData.Gallery8.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftMasterData",
-                "type": "msftMasterData.Gallery1_2"
+                "type": "msftMasterData.Gallery8"
               }
             }
           ],
@@ -9476,19 +9416,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_2.TabIndex"
+                  "fullyQualifiedName": "msftMasterData.Gallery8.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery1_2.TabIndex",
+                  "fullyQualifiedName": "msftMasterData.Gallery8.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftMasterData",
-                "type": "msftMasterData.Gallery1_2"
+                "type": "msftMasterData.Gallery8"
               }
             }
           ],
@@ -9566,66 +9506,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftMasterData.Gallery31.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery31.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery31.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery31.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery31"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftMasterData.Gallery17.AccessibleLabel"
                 }
               ],
@@ -9669,6 +9549,126 @@
                 "member": "TabIndex",
                 "module": "msftMasterData",
                 "type": "msftMasterData.Gallery17"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery1_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery1_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery31.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery31.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery31"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftMasterData.Gallery31.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftMasterData.Gallery31.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftMasterData",
+                "type": "msftMasterData.Gallery31"
               }
             }
           ],
@@ -15170,6 +15170,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.ComboBox3_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.ComboBox3_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftproject",
+                "type": "msftproject.ComboBox3_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 13
         },
         {
           "locations": [
