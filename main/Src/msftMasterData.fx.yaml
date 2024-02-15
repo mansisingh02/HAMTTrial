@@ -666,10 +666,19 @@ msftMasterData As screen:
             Width: =4
             ZIndex: =5
 
+        Separator5_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
+
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =425
+        Height: =402
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -679,7 +688,7 @@ msftMasterData As screen:
         Visible: =varTabSelected=1
         Width: =1106
         X: =97
-        Y: =332
+        Y: =355
         ZIndex: =6
 
         Title5 As label:
@@ -716,28 +725,9 @@ msftMasterData As screen:
             Text: =ThisItem.'Certification Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Title5.Width
-            X: =Title5.X
-            Y: =25
+            X: =15
+            Y: =15
             ZIndex: =2
-
-        Body3 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =41
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =ThisItem.'Validity Period (in Years)'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =168
-            X: =867
-            Y: =23
-            ZIndex: =3
 
         NextArrow5 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -766,19 +756,10 @@ msftMasterData As screen:
             Y: =10
             ZIndex: =4
 
-        Separator5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
         Rectangle7 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator5.Height
+            Height: =Parent.TemplateHeight 
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
@@ -792,15 +773,6 @@ msftMasterData As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =7
-
-        Separator5_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(179, 179, 179, 1)
-            Height: =48
-            OnSelect: =Select(Parent)
-            Width: =1.5
-            X: =429
-            ZIndex: =8
 
     "'Update Caregivers_1' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1079,7 +1051,8 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.'Skill Name'
+            Text: |
+                =ThisItem.Discipline
             VerticalAlign: =VerticalAlign.Top
             Width: =611
             Y: =14
@@ -1106,12 +1079,21 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.Discipline
+            Text: =ThisItem.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =178
+            Width: =325
             X: =721
             Y: =14
             ZIndex: =6
+
+        Separator5_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =390
+            ZIndex: =7
 
     capabilitydpdwn As dropdown:
         AllowEmptySelection: =true
@@ -1156,9 +1138,9 @@ msftMasterData As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Skills"
+        Text: ="Disciplines"
         Visible: =varTabSelected=3
-        X: =100
+        X: =110
         Y: =315
         ZIndex: =13
 
@@ -1173,7 +1155,7 @@ msftMasterData As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Categories"
+        Text: ="Skill Name"
         Visible: =varTabSelected=3
         X: =815
         Y: =302
@@ -1240,25 +1222,6 @@ msftMasterData As screen:
         X: =98
         Y: =298
         ZIndex: =17
-
-    Label2_13 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Lato Black'
-        FontWeight: =FontWeight.Bold
-        Size: =12
-        Text: ="Validity Time Period"
-        Visible: |
-            =varTabSelected=1
-        Width: =220
-        X: =878
-        Y: =292
-        ZIndex: =18
 
     Gallery6 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -2178,7 +2141,7 @@ msftMasterData As screen:
         Size: =12
         Text: ="Certification Code"
         Visible: =varTabSelected=1
-        X: =597
-        Y: =304
+        X: =801
+        Y: =298
         ZIndex: =52
 
