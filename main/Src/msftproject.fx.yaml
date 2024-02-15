@@ -85,7 +85,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =70
-            X: =412
+            X: =428
             ZIndex: =10
 
             "'Category Label_5' As label":
@@ -113,7 +113,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =128
-            X: =555
+            X: =595
             ZIndex: =12
 
             "'Description Label_1' As label":
@@ -141,7 +141,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =92
-            X: =678
+            X: =734
             ZIndex: =14
 
             "'Refreshed On Label' As label":
@@ -161,43 +161,15 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Team Size"
                 Width: =78
-                X: =11
-                Y: =17
+                X: =14
+                Y: =16
                 ZIndex: =15
-
-        "'Refreshed On Header_1' As groupContainer.manualLayoutContainer":
-            Height: =48
-            LayoutMode: ="manual"
-            Width: =100
-            X: =758
-            ZIndex: =16
-
-            "'Refreshed On Label_1' As label":
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                FontWeight: =FontWeight.Bold
-                Height: =17
-                LineHeight: =1.142857
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =10.5
-                Text: ="Capability"
-                Width: =83
-                X: =17
-                Y: =15
-                ZIndex: =17
 
         "'Owner Header' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =96
-            X: =860
+            Width: =104
+            X: =851
             ZIndex: =18
 
             "'Owner Label' As label":
@@ -217,7 +189,6 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Start Date"
                 Width: =81
-                X: =12.5
                 ZIndex: =19
 
         "'Favourite Header' As groupContainer.manualLayoutContainer":
@@ -293,7 +264,7 @@ msftproject As screen:
             Size: =10.5
             Text: ="End Date"
             Width: =81
-            X: =875
+            X: =851
             Y: =24
             ZIndex: =23
 
@@ -501,7 +472,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Project Type'.Value
             Width: =63
-            X: =402
+            X: =418
             ZIndex: =5
 
         Label24_5 As label:
@@ -518,7 +489,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Primary Owner'.Value
             Width: =108
-            X: =574
+            X: =598
             ZIndex: =7
 
         Label24_4 As label:
@@ -598,7 +569,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Group Name'.Value
             Width: =98
-            X: =476
+            X: =500
             ZIndex: =12
 
         Label24_6 As label:
@@ -614,7 +585,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Cost Center Name'.Value
-            Width: =63
+            Width: =78
             X: =326
             ZIndex: =13
 
@@ -632,7 +603,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Start Date'
             Width: =102
-            X: =860
+            X: =836
             ZIndex: =14
 
         Label20_1 As label:
@@ -648,36 +619,10 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'End Date'
-            Width: =102
-            X: =860
+            Width: =115
+            X: =836
             Y: =26
             ZIndex: =15
-
-        Label24_9 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =52
-            OnSelect: =Select(Parent)
-            Size: =9
-            Text: |
-                =/*Concatenate(
-                    LookUp(Capabilities, ID = ThisItem.Capability).Capability,
-                    ", "
-                );*/
-                If(
-                    CountRows(ThisItem.Capability) > 1,
-                    Concat(ThisItem.Capability, ThisRecord.Value & ", "),
-                    Concat(ThisItem.Capability, ThisRecord.Value)
-                )
-            Width: =88
-            X: =772
-            ZIndex: =16
 
     "'Refreshed On Header_2' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -704,7 +649,7 @@ msftproject As screen:
             Size: =10.5
             Text: ="Goals"
             Width: =56
-            X: =18
+            X: =26
             Y: =20
             ZIndex: =17
 
@@ -712,7 +657,7 @@ msftproject As screen:
         Height: =48
         LayoutMode: ="manual"
         Width: =70
-        X: =581
+        X: =605
         Y: =201
         ZIndex: =9
 
@@ -870,7 +815,7 @@ msftproject As screen:
         SelectMultiple: =false
         Size: =10.75
         Width: =180
-        X: =535
+        X: =528
         Y: =150
         ZIndex: =18
 
@@ -885,7 +830,7 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Project Type"
-        X: =532
+        X: =525
         Y: =121
         ZIndex: =19
 
@@ -918,8 +863,8 @@ msftproject As screen:
         SelectMultiple: =false
         Size: =10.75
         Width: =180
-        X: =732
-        Y: =150
+        X: =907
+        Y: =151
         ZIndex: =20
 
     Label36_2 As label:
@@ -933,7 +878,7 @@ msftproject As screen:
         Font: =Font.'Segoe UI'
         Size: =9
         Text: ="Project Goals"
-        X: =729
+        X: =904
         Y: =121
         ZIndex: =21
 
@@ -950,4 +895,52 @@ msftproject As screen:
         X: =1257
         Y: =61
         ZIndex: =22
+
+    ComboBox3_3 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =39
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        IsSearchable: =false
+        Items: =Distinct('Project Parent Group','Group Name')
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SearchFields: =["Value"]
+        SearchItems: =[]
+        SelectionFill: =RGBA(0, 51, 142, 1)
+        SelectMultiple: =false
+        Size: =10.75
+        Width: =180
+        X: =717
+        Y: =150
+        ZIndex: =23
+
+    Label36_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =9
+        Text: ="Project Group"
+        X: =713
+        Y: =121
+        ZIndex: =24
 
