@@ -3890,11 +3890,13 @@ msftUpdatecaregivers As screen:
                     CertificationDetails,
                     Filter(Certifications, 'Certification Name' = SelectedCertification.Value)
                 );
-                
-                // Set the validity period in years
                 Set(
                     ValidityPeriodInYears,
                     First(CertificationDetails).'Validity Period (in Years)'
+                );
+                Set(
+                    certificationCode,
+                    First(CertificationDetails).'Certification Code'
                 );
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -3967,7 +3969,12 @@ msftUpdatecaregivers As screen:
             Height: =37
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
-            OnChange: =
+            OnChange: |
+                =If(
+                    IsBlank(ValidityPeriodInYears),
+                    Set(EndDate, Date(2999, 1, 1)),  // Set end date to hypothetical value
+                    Set(EndDate, DateAdd(msft_DatePicker_6.SelectedDate, Value(ValidityPeriodInYears)* 365, "Day"))
+                )
             PaddingBottom: =9
             PaddingRight: =8
             PaddingTop: =8
@@ -4086,7 +4093,7 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Segoe UI'
         Height: =36
         Size: =10.75
-        Text: =ValidityPeriodInYears
+        Text: =certificationCode
         Visible: =varTabSelected=5
         Width: =231
         X: =386
