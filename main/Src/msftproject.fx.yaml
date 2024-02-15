@@ -595,7 +595,7 @@ msftproject As screen:
             Height: =52
             OnSelect: =Select(Parent)
             Size: =9
-            Text: =CountRows(Caregivers_1)+CountIf(Caregivers_1, 'Secondary Project'.Value=ThisItem.ID)
+            Text: =CountIf(Caregivers_1, 'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1, 'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1, 'Tertiary Project'.Value=Text(ThisItem.ID))
             Width: =62
             X: =782
             ZIndex: =17

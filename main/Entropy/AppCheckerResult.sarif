@@ -4634,10 +4634,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 23,
+                  "charLength": 66,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "CountRows(Caregivers_1)"
+                    "text": "CountIf(Caregivers_1, 'Secondary Project'.Value=Text(ThisItem.ID))"
                   }
                 }
               },
@@ -4650,7 +4650,7 @@
           ],
           "message": {
             "arguments": [
-              "CountRows"
+              "CountIf"
             ],
             "id": "issue"
           },
@@ -4674,10 +4674,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 71,
+                  "charLength": 65,
+                  "charOffset": 67,
                   "snippet": {
-                    "text": "="
+                    "text": "CountIf(Caregivers_1, 'Primary Project '.Value=Text(ThisItem.ID))"
                   }
                 }
               },
@@ -4690,16 +4690,15 @@
           ],
           "message": {
             "arguments": [
-              "Text",
-              "Number"
+              "CountIf"
             ],
             "id": "issue"
           },
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 0
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByService",
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -4715,10 +4714,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 60,
-                  "charOffset": 24,
+                  "charLength": 65,
+                  "charOffset": 133,
                   "snippet": {
-                    "text": "CountIf(Caregivers_1, 'Secondary Project'.Value=ThisItem.ID)"
+                    "text": "CountIf(Caregivers_1, 'Tertiary Project'.Value=Text(ThisItem.ID))"
                   }
                 }
               },
