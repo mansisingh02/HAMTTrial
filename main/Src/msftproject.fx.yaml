@@ -140,7 +140,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =92
-            X: =734
+            X: =812
             ZIndex: =14
 
             "'Refreshed On Label' As label":
@@ -160,8 +160,8 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Team Size"
                 Width: =78
-                X: =14
-                Y: =16
+                X: =9
+                Y: =12
                 ZIndex: =15
 
         "'Owner Header' As groupContainer.manualLayoutContainer":
@@ -412,11 +412,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =52
+            Height: =49
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Project Name'
-            Width: =135
+            Width: =160
+            Y: =3
             ZIndex: =2
 
         Label24_1 As label:
@@ -429,14 +430,13 @@ msftproject As screen:
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =51
+            Height: =54
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Description
-            Width: =212
-            X: =173
-            Y: =3
+            Width: =237
+            X: =160
             ZIndex: =3
 
         Label24_5 As label:
@@ -452,8 +452,8 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Primary Owner'.Value
-            Width: =108
-            X: =598
+            Width: =155
+            X: =651
             Y: =3
             ZIndex: =7
 
@@ -513,13 +513,12 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =52
+            Height: =55
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Group Name'.Value
-            Width: =98
-            X: =500
-            Y: =3
+            Width: =114
+            X: =526
             ZIndex: =12
 
         Label24_6 As label:
@@ -535,7 +534,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Cost Center Name'.Value
-            Width: =78
+            Width: =129
             X: =397
             Y: =3
             ZIndex: =13
@@ -553,7 +552,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Start Date'
-            Width: =102
+            Width: =121
             X: =926
             ZIndex: =14
 
@@ -570,7 +569,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'End Date'
-            Width: =115
+            Width: =122
             X: =926
             Y: =26
             ZIndex: =15
