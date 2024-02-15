@@ -3969,7 +3969,12 @@ msftUpdatecaregivers As screen:
             Height: =37
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
-            OnChange: =
+            OnChange: |
+                =If(
+                    IsBlank(ValidityPeriodInYears),
+                    Set(EndDate, Date(2999, 1, 1)),  // Set end date to hypothetical value
+                    Set(EndDate, DateAdd(msft_DatePicker_6.SelectedDate, Value(ValidityPeriodInYears)* 365, "Day"))
+                )
             PaddingBottom: =9
             PaddingRight: =8
             PaddingTop: =8
