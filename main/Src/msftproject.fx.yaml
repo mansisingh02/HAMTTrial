@@ -357,7 +357,7 @@ msftproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
         DelayItemLoading: =true
-        Height: =504
+        Height: =506
         Items: |-
             =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')) &&
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
@@ -380,8 +380,9 @@ msftproject As screen:
              
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
         TemplateSize: =55
-        Width: =1262
+        Width: =1227
         X: =102
         Y: =248
         ZIndex: =7
@@ -429,13 +430,13 @@ msftproject As screen:
             DisplayMode: =DisplayMode.View
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =52
+            Height: =51
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Description
-            Width: =189
-            X: =187
+            Width: =212
+            X: =173
             Y: =3
             ZIndex: =3
 
@@ -535,8 +536,8 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Size: =9
             Text: =ThisItem.'Cost Center Name'.Value
-            Width: =93
-            X: =418
+            Width: =130
+            X: =397
             Y: =3
             ZIndex: =13
 
@@ -600,6 +601,78 @@ msftproject As screen:
             Width: =62
             X: =832
             ZIndex: =17
+
+        Separator5_6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =160
+            ZIndex: =18
+
+        Separator5_7 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =396
+            ZIndex: =19
+
+        Separator5_8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =526
+            ZIndex: =20
+
+        Separator5_9 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =640
+            ZIndex: =21
+
+        Separator5_10 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =806
+            ZIndex: =22
+
+        Separator5_11 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =894
+            ZIndex: =23
+
+        Separator5_12 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =1014
+            ZIndex: =24
+
+        Separator5_13 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =1104
+            ZIndex: =25
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
         Height: =48
