@@ -452,7 +452,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Primary Owner'.Value
             Width: =108
-            X: =693
+            X: =653
             Y: =3
             ZIndex: =7
 
@@ -553,7 +553,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Start Date'
             Width: =102
-            X: =853
+            X: =863
             ZIndex: =14
 
         Label20_1 As label:
@@ -582,6 +582,23 @@ msftproject As screen:
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =16
+
+        Label24_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =CountIf(Caregivers_1, 'Primary Project '.Value=ThisItem.ID)+CountIf(Caregivers_1, 'Secondary Project'.Value=ThisItem.ID)
+            Width: =62
+            X: =782
+            ZIndex: =17
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -651,7 +668,7 @@ msftproject As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        HintText: ="Enter Project Name"
+        HintText: ="Search Project"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
