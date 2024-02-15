@@ -675,7 +675,7 @@ msftMasterData As screen:
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Set(loaderVisible, true);
         TemplatePadding: =0
-        TemplateSize: =64
+        TemplateSize: =52
         Visible: =varTabSelected=1
         Width: =1106
         X: =97
@@ -783,6 +783,24 @@ msftMasterData As screen:
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
+
+        Separator1_3 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =7
+
+        Separator5_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =48
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =429
+            ZIndex: =8
 
     "'Update Caregivers_1' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1642,7 +1660,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Certification Name"
+        HintText: ="Search Certificate"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -2146,4 +2164,21 @@ msftMasterData As screen:
         X: =639
         Y: =409
         ZIndex: =51
+
+    Label2_16 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Size: =12
+        Text: ="Certification Code"
+        Visible: =varTabSelected=1
+        X: =597
+        Y: =304
+        ZIndex: =52
 
