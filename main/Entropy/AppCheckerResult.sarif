@@ -14846,19 +14846,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Category Header_5'.'Report Label_20'.TabIndex"
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Report Header_20'.'Report Label_20'.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Category Header_5'.'Report Label_20'.TabIndex",
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Report Header_20'.'Report Label_20'.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftproject",
-                "type": "msftproject.'Table Headers Container'.'Category Header_5'.'Report Label_20'"
+                "type": "msftproject.'Table Headers Container'.'Report Header_20'.'Report Label_20'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Category Header_5'.'Category Label_5'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Category Header_5'.'Category Label_5'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftproject",
+                "type": "msftproject.'Table Headers Container'.'Category Header_5'.'Category Label_5'"
               }
             }
           ],
@@ -14919,6 +14949,36 @@
                 "member": "TabIndex",
                 "module": "msftproject",
                 "type": "msftproject.'Table Headers Container'.'Refreshed On Header'.'Refreshed On Label'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Refreshed On Header_1'.'Refreshed On Label_1'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.'Table Headers Container'.'Refreshed On Header_1'.'Refreshed On Label_1'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftproject",
+                "type": "msftproject.'Table Headers Container'.'Refreshed On Header_1'.'Refreshed On Label_1'"
               }
             }
           ],
@@ -15056,36 +15116,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftproject.ComboBox3_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftproject.ComboBox3_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftproject",
-                "type": "msftproject.ComboBox3_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftproject.'Category Header_12'.'Category Label_11'.TabIndex"
                 }
               ],
@@ -15099,6 +15129,36 @@
                 "member": "TabIndex",
                 "module": "msftproject",
                 "type": "msftproject.'Category Header_12'.'Category Label_11'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftproject.'Refreshed On Header_2'.'Refreshed On Label_2'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftproject.'Refreshed On Header_2'.'Refreshed On Label_2'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftproject",
+                "type": "msftproject.'Refreshed On Header_2'.'Refreshed On Label_2'"
               }
             }
           ],
@@ -26795,7 +26855,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftMasterData\" is 371, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"msftMasterData\" is 337, which exceeds the maximum threshold recommended (300)."
               }
             }
           ],
