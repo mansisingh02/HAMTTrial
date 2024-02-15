@@ -80,7 +80,7 @@ msftpopupcertification As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        HintText: ="Name of the certification you wish to add"
+        HintText: ="Name of the certification you wish to add *"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -133,7 +133,7 @@ msftpopupcertification As screen:
             
             Set(
                 dateofCertification,
-                DatePicker2
+                DatePicker2.SelectedDate
             );
             
             Set(
@@ -164,6 +164,12 @@ msftpopupcertification As screen:
                 UserLevel,
                 UserRecord.Level.Value
             );
+            If(
+                IsBlank(NewCertificationInput) || IsBlank(NewCertificationID) || IsBlank(NewCertificationCode) || IsBlank(dateofCertification),
+                Notify("Error: Fill in all compulsory fields.", NotificationType.Error),
+                If(
+                    dateofCertification > Now(),
+                    Notify("Error: Start date cannot be after the current date.", NotificationType.Error),
             
             If(
                 UserLevel = "1I" || UserLevel = "1P" || UserLevel = "2P" || UserLevel = "3P" || UserLevel = "4P",
@@ -204,7 +210,7 @@ msftpopupcertification As screen:
                 )
             );
             
-            /*If(
+            If(
                 !IsBlank(CoreLeaderEmail),
                 Office365Outlook.SendEmailV2(
                     CoreLeaderEmail,
@@ -222,7 +228,9 @@ msftpopupcertification As screen:
                 );
                 Notify("Email sent successfully to core leader.", NotificationType.Success),
                 Notify("Error: Core leader email address not found", NotificationType.Error)
-            )*/
+            )
+                )
+            )
             
             
         PaddingBottom: =7
@@ -254,7 +262,7 @@ msftpopupcertification As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        HintText: ="Certification ID of your certification"
+        HintText: ="Certification ID of your certification *"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -280,7 +288,7 @@ msftpopupcertification As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        HintText: ="Certification code of your certification"
+        HintText: ="Certification code of your certification *"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -352,7 +360,7 @@ msftpopupcertification As screen:
         Font: =Font.'Segoe UI'
         Height: =38
         Size: =10.75
-        Text: ="Choose the start date of your certification"
+        Text: ="Choose the start date of your certification *"
         Width: =311
         X: =505
         Y: =463
