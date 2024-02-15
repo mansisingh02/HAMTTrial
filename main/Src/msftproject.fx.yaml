@@ -655,6 +655,24 @@ msftproject As screen:
             X: =1104
             ZIndex: =25
 
+        Label24_9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =52
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: =CountIf(Caregivers_1,'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Tertiary Project'.Value=Text(ThisItem.ID))
+            Width: =89
+            X: =806
+            ZIndex: =26
+
     "'Category Header_12' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
