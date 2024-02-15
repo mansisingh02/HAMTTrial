@@ -152,11 +152,20 @@ msftMasterData As screen:
         Rectangle14 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator14.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
+
+        Separator1_7 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -273,11 +282,20 @@ msftMasterData As screen:
         Rectangle5 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator6.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
+
+        Separator1_6 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
 
     "Gallery17 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -401,16 +419,25 @@ msftMasterData As screen:
         Rectangle12 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator12.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
 
+        Separator1_5 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
+
     "Gallery31 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =411
+        Height: =361
         Items: =Sort(Capabilities, Capability)
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -452,7 +479,7 @@ msftMasterData As screen:
         Visible: =varTabSelected=8
         Width: =1185
         X: =97
-        Y: =356
+        Y: =367
         ZIndex: =4
 
         Title27 As label:
@@ -532,16 +559,26 @@ msftMasterData As screen:
         Rectangle18 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator18.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
 
+        Separator1_8 As rectangle:
+            BorderColor: =RGBA(149, 149, 149, 1)
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
+
     "Gallery33 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =405
+        Height: =414
         Items: |+
             =Sort(Filter(Discipline, TextInput1_2.Text in Lower(Trim(DisciplineName))),DisciplineName, SortOrder.Ascending)
             
@@ -579,7 +616,7 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =53
         Visible: =varTabSelected=2
-        Width: =1138
+        Width: =1116
         X: =97
         Y: =343
         ZIndex: =5
@@ -660,16 +697,26 @@ msftMasterData As screen:
         Rectangle20 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator20.Height
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =5
 
+        Separator5_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - Self.Height
+            ZIndex: =6
+
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =425
+        Height: =409
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -679,7 +726,7 @@ msftMasterData As screen:
         Visible: =varTabSelected=1
         Width: =1106
         X: =97
-        Y: =332
+        Y: =345
         ZIndex: =6
 
         Title5 As label:
@@ -716,28 +763,9 @@ msftMasterData As screen:
             Text: =ThisItem.'Certification Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =Title5.Width
-            X: =Title5.X
-            Y: =25
+            X: =15
+            Y: =15
             ZIndex: =2
-
-        Body3 As label:
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =41
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =ThisItem.'Validity Period (in Years)'
-            VerticalAlign: =VerticalAlign.Top
-            Width: =168
-            X: =867
-            Y: =23
-            ZIndex: =3
 
         NextArrow5 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
@@ -766,19 +794,10 @@ msftMasterData As screen:
             Y: =10
             ZIndex: =4
 
-        Separator5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =8
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =5
-
         Rectangle7 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =Parent.TemplateHeight - Separator5.Height
+            Height: =Parent.TemplateHeight 
             OnSelect: =Select(Parent)
             Visible: =ThisItem.IsSelected
             Width: =4
@@ -793,13 +812,13 @@ msftMasterData As screen:
             Y: =Parent.TemplateHeight - Self.Height
             ZIndex: =7
 
-        Separator5_1 As rectangle:
+        Separator5_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             Fill: =RGBA(179, 179, 179, 1)
-            Height: =48
+            Height: =Parent.TemplateHeight
             OnSelect: =Select(Parent)
             Width: =1.5
-            X: =429
+            X: =630
             ZIndex: =8
 
     "'Update Caregivers_1' As label":
@@ -937,7 +956,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Group"
         VerticalAlign: =VerticalAlign.Top
-        Visible: = If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"  && varTabSelected=5, true, false)
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =206
         X: =1076
         Y: =268
@@ -945,8 +964,9 @@ msftMasterData As screen:
 
     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(149, 149, 149, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =381
+        Height: =404
         Items: |-
             =Filter(Skills_1,  StartsWith('Skill Name',TextInput1_1.Text) && 
             (Discipline = capabilitydpdwn.Selected.Value || capabilitydpdwn.Selected.Value=Blank())
@@ -1044,9 +1064,9 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Visible: =varTabSelected=3
-        Width: =1116
+        Width: =1144
         X: =103
-        Y: =348
+        Y: =360
         ZIndex: =11
 
         Title1_2 As label:
@@ -1072,17 +1092,19 @@ msftMasterData As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.'Skill Name'
+            Text: |
+                =ThisItem.Discipline
             VerticalAlign: =VerticalAlign.Top
-            Width: =611
-            Y: =14
+            Width: =285
+            X: =30
+            Y: =19
             ZIndex: =3
 
         Separator1_2 As rectangle:
@@ -1106,12 +1128,30 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.Discipline
+            Text: =ThisItem.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
-            Width: =178
-            X: =721
-            Y: =14
+            Width: =325
+            X: =395
+            Y: =19
             ZIndex: =6
+
+        Separator5_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =390
+            ZIndex: =7
+
+        Rectangle20_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =8
 
     capabilitydpdwn As dropdown:
         AllowEmptySelection: =true
@@ -1141,8 +1181,8 @@ msftMasterData As screen:
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =13
         Visible: =varTabSelected=3
-        X: =328
-        Y: =261
+        X: =105
+        Y: =272
         ZIndex: =12
 
     Label2_8 As label:
@@ -1156,10 +1196,10 @@ msftMasterData As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Skills"
+        Text: ="Disciplines"
         Visible: =varTabSelected=3
-        X: =100
-        Y: =315
+        X: =110
+        Y: =319
         ZIndex: =13
 
     Label2_9 As label:
@@ -1173,10 +1213,10 @@ msftMasterData As screen:
         Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Size: =12
-        Text: ="Categories"
+        Text: ="Skill Name"
         Visible: =varTabSelected=3
-        X: =815
-        Y: =302
+        X: =497
+        Y: =319
         ZIndex: =14
 
     TextInput1_1 As text:
@@ -1203,8 +1243,8 @@ msftMasterData As screen:
         Size: =12
         Visible: =varTabSelected=3
         Width: =214
-        X: =100
-        Y: =261
+        X: =462
+        Y: =272
         ZIndex: =15
 
     Label2_10 As label:
@@ -1237,28 +1277,9 @@ msftMasterData As screen:
         Size: =12
         Text: ="Certification Name"
         Visible: =varTabSelected=1
-        X: =98
-        Y: =298
+        X: =138
+        Y: =314
         ZIndex: =17
-
-    Label2_13 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Lato Black'
-        FontWeight: =FontWeight.Bold
-        Size: =12
-        Text: ="Validity Time Period"
-        Visible: |
-            =varTabSelected=1
-        Width: =220
-        X: =878
-        Y: =292
-        ZIndex: =18
 
     Gallery6 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1368,8 +1389,9 @@ msftMasterData As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="Cost Center Code"
+        Text: ="Cost Center Name"
         Visible: =varTabSelected=4
+        Width: =178
         X: =99
         Y: =303
         ZIndex: =21
@@ -1385,7 +1407,7 @@ msftMasterData As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="Cost Center Name"
+        Text: ="Cost Center Code"
         Visible: =varTabSelected=4
         Width: =158
         X: =740
@@ -1709,8 +1731,9 @@ msftMasterData As screen:
 
     "Gallery1_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(149, 149, 149, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =381
+        Height: =400
         Items: =Filter('Cost Center', StartsWith('Cost Center Name',TextInput1_7.Text) || StartsWith(CCC,TextInput1_7.Text))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -1787,7 +1810,7 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.CCC
+            Text: =ThisItem.'Cost Center Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =592
             X: =18
@@ -1815,12 +1838,30 @@ msftMasterData As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =ThisItem.'Cost Center Name'
+            Text: =ThisItem.CCC
             VerticalAlign: =VerticalAlign.Top
             Width: =258
             X: =641
             Y: =14
             ZIndex: =6
+
+        Rectangle20_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =7
+
+        Separator5_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(179, 179, 179, 1)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            Width: =1.5
+            X: =530
+            ZIndex: =8
 
     TextInput1_3 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -1833,7 +1874,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Group Name"
+        HintText: ="Search Group"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1862,7 +1903,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Project Type"
+        HintText: ="Search Type"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1891,7 +1932,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Project Goals"
+        HintText: ="Search Goals"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -1949,7 +1990,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Cost Center Name"
+        HintText: ="Search Cost Center"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -2022,11 +2063,13 @@ msftMasterData As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =29
         Size: =9
-        Text: ="Sort By"
+        Text: ="Sort by Discipline"
         Visible: =varTabSelected=3
-        X: =321
-        Y: =232
+        Width: =172
+        X: =105
+        Y: =243
         ZIndex: =43
 
     Image8 As image:
@@ -2178,7 +2221,7 @@ msftMasterData As screen:
         Size: =12
         Text: ="Certification Code"
         Visible: =varTabSelected=1
-        X: =597
-        Y: =304
+        X: =780
+        Y: =317
         ZIndex: =52
 
