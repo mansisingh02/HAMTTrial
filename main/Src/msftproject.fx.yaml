@@ -56,8 +56,8 @@ msftproject As screen:
         "'Report Header_7' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =192
-            X: =143
+            Width: =180
+            X: =145
             ZIndex: =8
 
             "'Report Label_7' As label":
@@ -85,7 +85,7 @@ msftproject As screen:
             Height: =48
             LayoutMode: ="manual"
             Width: =70
-            X: =412
+            X: =432
             ZIndex: =10
 
             "'Report Label_20' As label":
@@ -105,14 +105,14 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="CC Name"
                 Width: =70
-                Y: =29
+                Y: =9
                 ZIndex: =1
 
         "'Description Header_1' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
             Width: =128
-            X: =625
+            X: =675
             ZIndex: =12
 
             "'Description Label_1' As label":
@@ -133,14 +133,14 @@ msftproject As screen:
                 Text: ="Primary Owner"
                 Width: =112
                 X: =16
-                Y: =16
+                Y: =9
                 ZIndex: =13
 
         "'Refreshed On Header' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
             Width: =92
-            X: =758
+            X: =808
             ZIndex: =14
 
             "'Refreshed On Label' As label":
@@ -160,15 +160,15 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Team Size"
                 Width: =78
-                X: =11
-                Y: =17
+                X: =14
+                Y: =9
                 ZIndex: =15
 
         "'Owner Header' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
-            Width: =96
-            X: =860
+            Width: =116
+            X: =890
             ZIndex: =18
 
             "'Owner Label' As label":
@@ -179,7 +179,7 @@ msftproject As screen:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FocusedBorderThickness: =4
                 FontWeight: =FontWeight.Bold
-                Height: =31
+                Height: =33
                 LineHeight: =1.142857
                 PaddingBottom: =0
                 PaddingLeft: =0
@@ -188,14 +188,14 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Start Date"
                 Width: =81
-                X: =12.5
+                X: =35
                 ZIndex: =19
 
         "'Favourite Header' As groupContainer.manualLayoutContainer":
             Height: =48
             LayoutMode: ="manual"
             Width: =85
-            X: =997
+            X: =1017
             ZIndex: =20
 
             "'Favourite Label' As label":
@@ -215,8 +215,8 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Status"
                 Width: =45
-                X: =15
-                Y: =18
+                X: =25
+                Y: =9
                 ZIndex: =21
 
         "'Action Header_4' As groupContainer.manualLayoutContainer":
@@ -244,7 +244,7 @@ msftproject As screen:
                 Text: ="Action"
                 Width: =46
                 X: =51
-                Y: =15
+                Y: =9
                 ZIndex: =23
 
         "'Owner Label_1' As label":
@@ -264,7 +264,7 @@ msftproject As screen:
             Size: =10.5
             Text: ="End Date"
             Width: =81
-            X: =875
+            X: =925
             Y: =24
             ZIndex: =23
 
@@ -355,8 +355,9 @@ msftproject As screen:
 
     Gallery16 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         DelayItemLoading: =true
-        Height: =484
+        Height: =504
         Items: |-
             =Filter(Project, TextInput1_8.Text in Lower(Trim('Project Name')) &&
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
@@ -452,7 +453,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Primary Owner'.Value
             Width: =108
-            X: =653
+            X: =673
             Y: =3
             ZIndex: =7
 
@@ -470,7 +471,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.Status.Value
             Width: =94
-            X: =1007
+            X: =1037
             Y: =3
             ZIndex: =10
 
@@ -553,7 +554,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'Start Date'
             Width: =102
-            X: =863
+            X: =923
             ZIndex: =14
 
         Label20_1 As label:
@@ -570,7 +571,7 @@ msftproject As screen:
             Size: =9
             Text: =ThisItem.'End Date'
             Width: =102
-            X: =860
+            X: =920
             Y: =26
             ZIndex: =15
 
@@ -597,7 +598,7 @@ msftproject As screen:
             Size: =9
             Text: =CountIf(Caregivers_1, 'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1, 'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1, 'Tertiary Project'.Value=Text(ThisItem.ID))
             Width: =62
-            X: =782
+            X: =832
             ZIndex: =17
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
@@ -626,7 +627,7 @@ msftproject As screen:
             Text: ="Group"
             Width: =50
             X: =5
-            Y: =15
+            Y: =9
             ZIndex: =11
 
     navBarVertical_admin_28 As navBarVertical_admin:
