@@ -776,7 +776,7 @@ msftproject As screen:
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         IsSearchable: =false
-        Items: =Distinct(Project,'Cost Center Name'.Value)
+        Items: =Distinct('Cost Center','Cost Center Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
@@ -809,7 +809,7 @@ msftproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
         ChevronFill: =RGBA(33, 33, 33, 1)
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
@@ -822,9 +822,9 @@ msftproject As screen:
         Height: =39
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         IsSearchable: =false
-        Items: =Distinct(Project,'Project Type'.Value)
+        Items: =Distinct('Project Type','Project Type')
         PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
@@ -870,7 +870,7 @@ msftproject As screen:
         Height: =39
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         IsSearchable: =false
         Items: =Distinct('Project Goals',Goal)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -919,7 +919,7 @@ msftproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
         ChevronFill: =RGBA(33, 33, 33, 1)
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
@@ -932,7 +932,7 @@ msftproject As screen:
         Height: =39
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         IsSearchable: =false
         Items: =Distinct('Project Parent Group','Group Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
