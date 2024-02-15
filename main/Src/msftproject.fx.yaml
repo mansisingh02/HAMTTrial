@@ -243,8 +243,8 @@ msftproject As screen:
                 Size: =10.5
                 Text: ="Action"
                 Width: =46
-                X: =82
-                Y: =16
+                X: =51
+                Y: =15
                 ZIndex: =23
 
         "'Owner Label_1' As label":
@@ -595,7 +595,7 @@ msftproject As screen:
             Height: =52
             OnSelect: =Select(Parent)
             Size: =9
-            Text: =CountIf(Caregivers_1, 'Primary Project '.Value=ThisItem.ID)+CountIf(Caregivers_1, 'Secondary Project'.Value=ThisItem.ID)
+            Text: =CountRows(Caregivers_1)+CountIf(Caregivers_1, 'Secondary Project'.Value=ThisItem.ID)
             Width: =62
             X: =782
             ZIndex: =17
