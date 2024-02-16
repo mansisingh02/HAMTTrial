@@ -578,7 +578,7 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =1
         DelayItemLoading: =true
-        Height: =414
+        Height: =425
         Items: |+
             =Sort(Filter(Discipline, TextInput1_2.Text in Lower(Trim(DisciplineName))),DisciplineName, SortOrder.Ascending)
             
@@ -616,7 +616,7 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =53
         Visible: =varTabSelected=2
-        Width: =1116
+        Width: =1190
         X: =97
         Y: =343
         ZIndex: =5
@@ -748,7 +748,7 @@ msftMasterData As screen:
         TemplatePadding: =0
         TemplateSize: =52
         Visible: =varTabSelected=1
-        Width: =1106
+        Width: =1237
         X: =97
         Y: =345
         ZIndex: =6
@@ -813,7 +813,8 @@ msftMasterData As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Tooltip: ="View item details"
             Width: =50
-            X: =1035
+            X: =1187
+            Y: =2
             ZIndex: =4
 
         Rectangle7 As rectangle:
@@ -1983,7 +1984,7 @@ msftMasterData As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =42
-        HintText: ="Enter Project Capabilities"
+        HintText: ="Search Project Capabilities"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
