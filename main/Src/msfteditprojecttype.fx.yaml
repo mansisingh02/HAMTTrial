@@ -28,8 +28,8 @@ msfteditprojecttype As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Technology"
-            Width: =85
+            Text: ="Project Type"
+            Width: =105
             X: =15
             Y: =25
             ZIndex: =4
@@ -38,8 +38,8 @@ msfteditprojecttype As screen:
         Height: =48
         LayoutMode: ="manual"
         Width: =274
-        X: =393
-        Y: =217
+        X: =580
+        Y: =210
         ZIndex: =7
 
         "'Report Label_14' As label":
@@ -122,7 +122,10 @@ msfteditprojecttype As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch('Project Type', SelectedProjectType, { 'Project Type': TextInput2_6.Text, Description: TextInput2_7.Text });
+            =If(
+                IsBlank(TextInput2_6.Text),
+                Notify("Project Type is required.", NotificationType.Error),
+                Patch('Project Type', SelectedProjectType, { 'Project Type': TextInput2_6.Text, Description: TextInput2_7.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
@@ -165,7 +168,6 @@ msfteditprojecttype As screen:
 
     TextInput2_6 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedProjectType.'Project Type'
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -184,14 +186,13 @@ msfteditprojecttype As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =252
+        Width: =373
         X: =107
         Y: =265
         ZIndex: =42
 
     TextInput2_7 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedProjectType.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -199,7 +200,7 @@ msfteditprojecttype As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =136
+        Height: =249
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -212,8 +213,8 @@ msfteditprojecttype As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
-        X: =393
+        Width: =427
+        X: =580
         Y: =265
         ZIndex: =43
 
