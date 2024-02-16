@@ -117,8 +117,12 @@ msfteditprojectgoal As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch('Project Goals', SelectedGoal, { Goal: TextInput2_4.Text, Description: TextInput2_5.Text });
+            =If(
+                IsBlank(TextInput2_4.Text),
+                Notify("Goal is required.", NotificationType.Error),
+                Patch('Project Goals', SelectedGoal, { Goal: TextInput2_4.Text, Description: TextInput2_5.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -160,7 +164,6 @@ msfteditprojectgoal As screen:
 
     TextInput2_4 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedGoal.Goal
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -186,7 +189,6 @@ msfteditprojectgoal As screen:
 
     TextInput2_5 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedGoal.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)

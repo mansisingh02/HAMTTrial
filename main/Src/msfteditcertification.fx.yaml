@@ -208,7 +208,7 @@ msfteditcertification As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(190, 71, 71, 0.9), -10%)
-        OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+        OnSelect: =Navigate(msftcertification,ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -323,6 +323,7 @@ msfteditcertification As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Format: =TextFormat.Number
         Height: =43
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -354,9 +355,22 @@ msfteditcertification As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Patch(Certifications, SelectedCertification, { 'Certification Name': TextInput2_11, 'Certification Code': TextInput2_13, 'Validity Period (in Years)':TextInput2_14,'Description': TextInput2_12});
-            Navigate(msftMasterData, ScreenTransition.Fade)
+        OnSelect: |
+            =If(
+                IsBlank(TextInput2_11.Text) || IsBlank(TextInput2_13.Text),
+                Notify("Certification Name and Certification Code are required.", NotificationType.Error),
+                Patch(
+                    Certifications,
+                    SelectedCertification,
+                    {
+                        'Certification Name': TextInput2_11,
+                        'Certification Code': TextInput2_13,
+                        'Validity Period (in Years)': TextInput2_14,
+                        'Description': TextInput2_12
+                    }
+                );
+                Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -369,7 +383,7 @@ msfteditcertification As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="SAVE"
+        Text: ="Save"
         VerticalAlign: =VerticalAlign.Top
         Width: =130
         X: =1163
