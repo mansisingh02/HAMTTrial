@@ -10,7 +10,7 @@ msftedittechnology As screen:
         LayoutMode: ="manual"
         Width: =302
         X: =109
-        Y: =148
+        Y: =172
         ZIndex: =48
 
         "'Report Label_15' As label":
@@ -38,8 +38,8 @@ msftedittechnology As screen:
         Height: =48
         LayoutMode: ="manual"
         Width: =152
-        X: =373
-        Y: =161
+        X: =499
+        Y: =173
         ZIndex: =49
 
         "'Category Label_1' As label":
@@ -57,18 +57,18 @@ msftedittechnology As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Category"
+            Text: ="Discipline"
             Width: =82
             X: =12
-            Y: =9
+            Y: =20
             ZIndex: =6
 
     "'Report Header_16' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =274
-        X: =581
-        Y: =161
+        X: =127
+        Y: =323
         ZIndex: =50
 
         "'Report Label_16' As label":
@@ -88,8 +88,8 @@ msftedittechnology As screen:
             Size: =10.5
             Text: ="Description"
             Width: =86
-            X: =81
-            Y: =3
+            X: =2
+            Y: =17
             ZIndex: =8
 
     Category_9 As label:
@@ -108,8 +108,8 @@ msftedittechnology As screen:
         Size: =18
         Text: =Text(Gallery1_2.Selected.'Skill Name')
         Width: =1129
-        X: =183
-        Y: =103
+        X: =177
+        Y: =121
         ZIndex: =51
 
     "'Rectangle 31_13' As rectangle":
@@ -152,8 +152,12 @@ msftedittechnology As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': TextInput2_9, Discipline: Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
+            =If(
+                IsBlank(TextInput2_9.Text) || IsBlank(Dropdown1_1.Selected.Value),
+                Notify("Skill Name and Discipline are required.", NotificationType.Error),
+                Patch(Skills_1, SelectedTechnology, { 'Skill Name': TextInput2_9, Discipline: Dropdown1_1.Selected.Value, Description: TextInput2_8.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -166,7 +170,7 @@ msftedittechnology As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="SAVE"
+        Text: ="Save"
         VerticalAlign: =VerticalAlign.Top
         Width: =130
         X: =1176
@@ -190,11 +194,12 @@ msftedittechnology As screen:
         Text: ="Edit "
         Width: =203
         X: =123
-        Y: =101
+        Y: =119
         ZIndex: =56
 
     Dropdown1_1 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =1
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
@@ -223,13 +228,12 @@ msftedittechnology As screen:
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =13
         Width: =220
-        X: =386
-        Y: =210
+        X: =513
+        Y: =222
         ZIndex: =57
 
     TextInput2_8 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedTechnology.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -237,10 +241,11 @@ msftedittechnology As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =136
+        Height: =204
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        Mode: =TextMode.MultiLine
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -249,9 +254,9 @@ msftedittechnology As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
-        X: =662
-        Y: =210
+        Width: =606
+        X: =127
+        Y: =371
         ZIndex: =58
 
     navBarVertical_admin_13 As navBarVertical_admin:
@@ -266,7 +271,6 @@ msftedittechnology As screen:
 
     TextInput2_9 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedTechnology.'Skill Name'
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -274,9 +278,11 @@ msftedittechnology As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =101
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        Mode: =TextMode.MultiLine
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -285,9 +291,9 @@ msftedittechnology As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
+        Width: =355
         X: =127
-        Y: =210
+        Y: =222
         ZIndex: =61
 
     msft_Button_89 As button:
