@@ -362,15 +362,16 @@ msftproject As screen:
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
-            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank()))
+            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
+            && ('Group Name'.Value = ComboBox3_3.Selected.Value || ComboBox3_3.Selected.Value=Blank()))
              &&(
-                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectGoal))
-            ||
                 (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
-                ||
+            /*||
                 ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
                 ||
                 ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
+                ||
+                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))*/
              )
              )
             
@@ -382,7 +383,7 @@ msftproject As screen:
         TemplatePadding: =0
         TemplateSize: =55
         Width: =1227
-        X: =102
+        X: =100
         Y: =248
         ZIndex: =7
 

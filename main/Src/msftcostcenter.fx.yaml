@@ -168,7 +168,7 @@ msftcostcenter As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |+
-            =Navigate(msftMasterData, ScreenTransition.Fade, { FilteredCostCenters_Project: FilteredCostCenters_Project })
+            =Navigate(msftprojectscount, ScreenTransition.Fade, { FilteredCostCenters_Project: FilteredCostCenters_Project })
             
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)

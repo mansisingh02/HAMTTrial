@@ -720,7 +720,9 @@ msftMasterData As screen:
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name' || 'Certification Code')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =Set(loaderVisible, true);
+        OnSelect: |-
+            =Set(loaderVisible, true);
+            Navigate(msftedit
         TemplatePadding: =0
         TemplateSize: =52
         Visible: =varTabSelected=1
