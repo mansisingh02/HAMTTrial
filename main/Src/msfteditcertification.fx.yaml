@@ -108,42 +108,6 @@ msfteditcertification As screen:
         X: =69.50085449219
         ZIndex: =53
 
-    msft_Button_57 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =48
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Patch(Certifications, SelectedCertification, { 'Certification Name': TextInput2_11.Text, 'Certification Code': TextInput2_13.Text, 'Validity Period (in Years)': TextInput2_14.Text, 'Description': TextInput2_12});
-            Navigate(msftMasterData, ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="SAVE"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =130
-        X: =1176
-        Y: =670
-        ZIndex: =55
-
     "'New Project_15' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
