@@ -414,46 +414,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msfteditprojecttype.msft_Button_51.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msfteditprojecttype.msft_Button_51.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charOffset": 267,
-                  "snippet": {
-                    "text": ""
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "msfteditprojecttype",
-                "type": "msfteditprojecttype.msft_Button_51"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Eof",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftDashboardupdate.OnVisible"
                 }
               ],
@@ -488,7 +448,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -525,7 +485,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -562,7 +522,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -599,7 +559,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -636,7 +596,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -673,7 +633,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -713,7 +673,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 4
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -750,7 +710,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -787,7 +747,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -945,7 +905,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1022,7 +982,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1059,7 +1019,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrOperatorExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -5573,7 +5533,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 5
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -28449,23 +28409,6 @@
               }
             },
             {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
               "messageStrings": {
                 "issue": {
@@ -28494,6 +28437,23 @@
                 "componentType": "app",
                 "howToFix": [
                   "Edit your formula so that it includes an operator between the operands."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters with an expected character."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",

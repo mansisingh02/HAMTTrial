@@ -127,6 +127,7 @@ msfteditprojecttype As screen:
                 Notify("Project Type is required.", NotificationType.Error),
                 Patch('Project Type', SelectedProjectType, { 'Project Type': TextInput2_6.Text, Description: TextInput2_7.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
