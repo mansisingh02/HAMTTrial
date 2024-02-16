@@ -36,7 +36,7 @@ msfteditgroup As screen:
         Height: =48
         LayoutMode: ="manual"
         Width: =198
-        X: =432
+        X: =597
         Y: =208
         ZIndex: =5
 
@@ -124,8 +124,12 @@ msfteditgroup As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
-            =Patch('Project Parent Group', SelectedGroup, { 'Group Name': TextInput2.Text, Description: TextInput2_1.Text });
+            =If(
+                IsBlank(TextInput2.Text),
+                Notify("Group Name is required.", NotificationType.Error),
+                Patch('Project Parent Group', SelectedGroup, { 'Group Name': TextInput2.Text, Description: TextInput2_1.Text });
             Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -167,7 +171,6 @@ msfteditgroup As screen:
 
     TextInput2 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedGroup.'Group Name'
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -175,6 +178,7 @@ msfteditgroup As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =44
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -186,14 +190,13 @@ msfteditgroup As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =252
+        Width: =434
         X: =112
-        Y: =256
+        Y: =252
         ZIndex: =28
 
     TextInput2_1 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         Default: =SelectedGroup.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -201,7 +204,7 @@ msfteditgroup As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =136
+        Height: =213
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -214,9 +217,9 @@ msfteditgroup As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
-        X: =447
-        Y: =256
+        Width: =434
+        X: =612
+        Y: =252
         ZIndex: =29
 
     msft_Button_63 As button:
