@@ -717,7 +717,7 @@ msftMasterData As screen:
         BorderThickness: =1
         DelayItemLoading: =true
         Height: =409
-        Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name')))
+        Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name' || 'Certification Code')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =Set(loaderVisible, true);
