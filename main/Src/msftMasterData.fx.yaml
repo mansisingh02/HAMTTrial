@@ -576,6 +576,7 @@ msftMasterData As screen:
 
     "Gallery33 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =1
         DelayItemLoading: =true
         Height: =425
@@ -714,9 +715,10 @@ msftMasterData As screen:
 
     "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =1
         DelayItemLoading: =true
-        Height: =409
+        Height: =423
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name' || 'Certification Code')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -746,7 +748,7 @@ msftMasterData As screen:
                 }
             )
         TemplatePadding: =0
-        TemplateSize: =52
+        TemplateSize: =62
         Visible: =varTabSelected=1
         Width: =1237
         X: =97
@@ -987,6 +989,7 @@ msftMasterData As screen:
 
     "Gallery1_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(149, 149, 149, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =1
         DelayItemLoading: =true
         Height: =404
@@ -1085,7 +1088,7 @@ msftMasterData As screen:
             )
             
         TemplatePadding: =0
-        TemplateSize: =55
+        TemplateSize: =40
         Visible: =varTabSelected=3
         Width: =1144
         X: =103
@@ -1127,7 +1130,7 @@ msftMasterData As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =285
             X: =30
-            Y: =19
+            Y: =10
             ZIndex: =3
 
         Separator1_2 As rectangle:
@@ -1154,8 +1157,8 @@ msftMasterData As screen:
             Text: =ThisItem.'Skill Name'
             VerticalAlign: =VerticalAlign.Top
             Width: =325
-            X: =402
-            Y: =19
+            X: =401
+            Y: =11
             ZIndex: =6
 
         Separator5_3 As rectangle:
@@ -1754,9 +1757,10 @@ msftMasterData As screen:
 
     "Gallery1_4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(149, 149, 149, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =1
         DelayItemLoading: =true
-        Height: =400
+        Height: =420
         Items: =Filter('Cost Center', StartsWith('Cost Center Name',TextInput1_7.Text) || StartsWith(CCC,TextInput1_7.Text))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -1796,9 +1800,9 @@ msftMasterData As screen:
                 }
             )
         TemplatePadding: =0
-        TemplateSize: =55
+        TemplateSize: =37
         Visible: =varTabSelected=4
-        Width: =1116
+        Width: =1184
         X: =103
         Y: =348
         ZIndex: =34
