@@ -171,7 +171,7 @@ msftcertification As screen:
             Size: =10.5
             Text: ="Action"
             Width: =46
-            X: =80
+            X: =73
             Y: =24
             ZIndex: =8
 
@@ -204,7 +204,7 @@ msftcertification As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Navigate(msfteditcertification, ScreenTransition.Fade, { SelectedGoal: Gallery28.Selected })
+            =Navigate(msfteditcertification, ScreenTransition.Fade, { SelectedCertification: Gallery8.Selected })
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -232,7 +232,7 @@ msftcertification As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Set(varItemToDelete, Gallery28.Selected.Goal); Navigate(msftconfirmationscreen)
+        OnSelect: =Set(varItemToDelete, Gallery8.Selected.'Certification Name'); Navigate(msftconfirmationscreen)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -271,7 +271,7 @@ msftcertification As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Navigate(msftcaregiverdiscipline, ScreenTransition.Fade, { FilteredDiscipline: FilteredDiscipline })
+            =Navigate(msftcaregiverscertification, ScreenTransition.Fade, { FilteredCertifications: FilteredCertifications })
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -341,7 +341,7 @@ msftcertification As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =14
+            Height: =24
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -350,7 +350,7 @@ msftcertification As screen:
             Size: =10.5
             Text: ="Description"
             Width: =165
-            Y: =16
+            Y: =9
             ZIndex: =4
 
     "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._3' As label":

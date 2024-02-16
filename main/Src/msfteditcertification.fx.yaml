@@ -8,7 +8,7 @@ msfteditcertification As screen:
     "'Report Header_32' As groupContainer.manualLayoutContainer":
         Height: =61
         LayoutMode: ="manual"
-        Width: =302
+        Width: =240
         X: =109
         Y: =148
         ZIndex: =48
@@ -21,54 +21,25 @@ msfteditcertification As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =20
+            Height: =21
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
             Size: =10.5
-            Text: ="Technology"
-            Width: =85
+            Text: ="Certification Name"
+            Width: =141
             X: =15
-            Y: =25
+            Y: =24
             ZIndex: =4
-
-    "'Category Header_17' As groupContainer.manualLayoutContainer":
-        Height: =48
-        LayoutMode: ="manual"
-        Width: =152
-        X: =373
-        Y: =161
-        ZIndex: =49
-
-        "'Category Label_5' As label":
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            FontWeight: =FontWeight.Bold
-            Height: =28
-            LineHeight: =1.142857
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =10.5
-            Text: ="Category"
-            Width: =82
-            X: =12
-            Y: =9
-            ZIndex: =6
 
     "'Report Header_33' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =274
-        X: =581
-        Y: =161
+        X: =511
+        Y: =268
         ZIndex: =50
 
         "'Report Label_32' As label":
@@ -106,9 +77,9 @@ msfteditcertification As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: =Text(Gallery1_2.Selected.'Skill Name')
+        Text: =Text(Gallery8.Selected.'Certification Name')
         Width: =1129
-        X: =183
+        X: =176
         Y: =103
         ZIndex: =51
 
@@ -152,7 +123,7 @@ msfteditcertification As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Skills_1, SelectedTechnology, { 'Skill Name': TextInput2_11, Discipline: Dropdown1_3.Selected.Value, Description: TextInput2_12.Text });
+            =Patch(Certifications, SelectedCertification, { 'Certification Name': TextInput2_11.Text, 'Certification Code': TextInput2_13.Text, 'Validity Period (in Years)': TextInput2_14.Text, 'Description': TextInput2_12});
             Navigate(msftMasterData, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
@@ -193,54 +164,21 @@ msfteditcertification As screen:
         Y: =101
         ZIndex: =56
 
-    Dropdown1_3 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: ="SelectedTechnology.Discipline"
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Font: =Font.'Segoe UI'
-        Height: =41
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: |
-            =Distinct(Skills_1, Discipline)
-        PaddingBottom: =5
-        PaddingLeft: =12
-        PaddingRight: =5
-        PaddingTop: =5
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        Size: =13
-        Width: =220
-        X: =386
-        Y: =210
-        ZIndex: =57
-
     TextInput2_12 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
-        Default: =SelectedTechnology.Description
+        Default: =SelectedCertification.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =136
+        Height: =207
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        Mode: =TextMode.MultiLine
         PressedBorderColor: =RGBA(0, 120, 212, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
@@ -249,9 +187,9 @@ msfteditcertification As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
-        X: =662
-        Y: =210
+        Width: =422
+        X: =594
+        Y: =309
         ZIndex: =58
 
     navBarVertical_admin_46 As navBarVertical_admin:
@@ -268,12 +206,13 @@ msfteditcertification As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
-        Default: =SelectedTechnology.'Skill Name'
+        Default: =SelectedCertification.'Certification Name'
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =43
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
@@ -285,9 +224,9 @@ msfteditcertification As screen:
         RadiusTopLeft: =0
         RadiusTopRight: =0
         Size: =13
-        Width: =222
-        X: =127
-        Y: =210
+        Width: =426
+        X: =123
+        Y: =209
         ZIndex: =61
 
     msft_Button_91 As button:
@@ -324,4 +263,116 @@ msfteditcertification As screen:
         X: =87
         Y: =678
         ZIndex: =62
+
+    "'Report Header_37' As groupContainer.manualLayoutContainer":
+        Height: =61
+        LayoutMode: ="manual"
+        Width: =240
+        X: =576
+        Y: =148
+        ZIndex: =63
+
+        "'Report Label_36' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =21
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Certification Code"
+            Width: =141
+            X: =15
+            Y: =24
+            ZIndex: =4
+
+    TextInput2_13 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =SelectedCertification.'Certification Code'
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =43
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =426
+        X: =590
+        Y: =209
+        ZIndex: =64
+
+    "'Report Header_38' As groupContainer.manualLayoutContainer":
+        Height: =61
+        LayoutMode: ="manual"
+        Width: =240
+        X: =110
+        Y: =248
+        ZIndex: =65
+
+        "'Report Label_37' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =21
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Validity Period (in Years)"
+            Width: =199
+            X: =15
+            Y: =24
+            ZIndex: =4
+
+    TextInput2_14 As text:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        Default: =SelectedCertification.'Validity Period (in Years)'
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =43
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =13
+        Width: =426
+        X: =124
+        Y: =309
+        ZIndex: =66
 
