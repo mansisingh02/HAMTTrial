@@ -327,10 +327,10 @@ msfteditproject As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
         Size: =15
         Text: ="Reset"
         VerticalAlign: =VerticalAlign.Top
@@ -528,9 +528,9 @@ msfteditproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         ChevronBackground: =RGBA(255, 255, 255, 1)
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
         ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
         Default: =Gallery16.Selected.Status.Value
@@ -540,7 +540,7 @@ msfteditproject As screen:
         Height: =38
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         Items: =["Active","Inactive","On Hold","Discontinued"]
         OnChange: =Set(varSelectedValue, msft_Dropdown_28.Selected.Value)
         PaddingBottom: =8
@@ -549,7 +549,8 @@ msfteditproject As screen:
         PaddingTop: =8
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SelectionColor: =RGBA(0, 51, 142, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =203
         X: =203
