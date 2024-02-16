@@ -366,12 +366,12 @@ msftproject As screen:
             && ('Group Name'.Value = ComboBox3_3.Selected.Value || ComboBox3_3.Selected.Value=Blank()))
              &&(
                 (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
-            /*||
+            ||
                 ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
                 ||
                 ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
                 ||
-                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))*/
+                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
              )
              )
             

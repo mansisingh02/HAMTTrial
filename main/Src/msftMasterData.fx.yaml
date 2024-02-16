@@ -47,19 +47,19 @@ msftMasterData As screen:
             =Set(loaderVisible, true);
             UpdateContext({TempCount: 0});
             ClearCollect(
-                FilteredProjects,
+                FilteredProjectsGoal,
                 Filter(
                     Project,
                     Goal.Value = Gallery28.Selected.Goal
                 )
             );
-            UpdateContext({TempCount: CountRows(FilteredProjects)});
+            UpdateContext({TempCount: CountRows(FilteredProjectsGoal)});
             Navigate(
                 msftprojectgoal,
                 ScreenTransition.Fade,
                 {
                     SelectedGoal: Gallery28.Selected.Goal,
-                    FilteredProjects: FilteredProjects,
+                    FilteredProjects: FilteredProjectsGoal,
                     TempCount: TempCount
                 }
             )
@@ -720,9 +720,31 @@ msftMasterData As screen:
         Items: =Filter(Certifications, TextInput1.Text in Lower(Trim('Certification Name' || 'Certification Code')))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: |-
+        OnSelect: |
             =Set(loaderVisible, true);
-            Navigate(msftedit
+            UpdateContext({TempCount: 0});
+            ClearCollect(
+                FilteredCertifications,
+                Filter(
+                    'Caregiver Certifications_1',
+                    'Certification 1'.Value = Gallery8.Selected.'Certification Name' ||
+                    'Certification 2'.Value = Gallery8.Selected.'Certification Name' ||
+                    'Certification 3'.Value = Gallery8.Selected.'Certification Name' ||
+                    'Certification 4'.Value = Gallery8.Selected.'Certification Name' ||
+                    'Certification 5'.Value = Gallery8.Selected.'Certification Name'
+                )
+            );
+            UpdateContext({TempCount: CountRows(FilteredCertifications)});
+            
+            Navigate(
+                msftcertification,
+                ScreenTransition.Fade,
+                {
+                    SelectedCertification: LookUp(Gallery8.AllItems, 'Certification Name' = Gallery8.Selected.'Certification Name'),
+                    FilteredCertifications: FilteredCertifications,
+                    TempCount: TempCount
+                }
+            )
         TemplatePadding: =0
         TemplateSize: =52
         Visible: =varTabSelected=1

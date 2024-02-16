@@ -319,7 +319,7 @@ msftprojecttype As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjectsType: FilteredProjectsType })
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -346,7 +346,7 @@ msftprojecttype As screen:
         FontWeight: =FontWeight.Semibold
         Height: =34
         OnSelect: |-
-            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjects: FilteredProjects })
+            =Navigate(msftprojecttypelists, ScreenTransition.Fade, { FilteredProjectsType: FilteredProjectsType })
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
         Width: =98
