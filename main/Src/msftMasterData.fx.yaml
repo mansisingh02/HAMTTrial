@@ -1521,7 +1521,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Project Type"
         VerticalAlign: =VerticalAlign.Top
-        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=6, true, false)
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=6, true, false)
         Width: =253
         X: =1024
         Y: =268
