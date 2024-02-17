@@ -1486,7 +1486,7 @@ msftMasterData As screen:
         Size: =15
         Text: ="Add Technology"
         VerticalAlign: =VerticalAlign.Top
-        Visible: = If(Lower(User().Email)="madhavi.b@providence.org" && varTabSelected=3, true, false)
+        Visible: =  If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=3, true, false)
         Width: =234
         X: =1052
         Y: =243
