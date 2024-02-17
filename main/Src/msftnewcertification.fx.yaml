@@ -216,13 +216,15 @@ msftnewcertification As screen:
                     {
                         'Certification Name': msft_TextInput_4,
                         'Validity Period (in Years)': msft_TextInput_3,
-                        'Certification Code': msft_TextInput_18
+                        'Certification Code': msft_TextInput_18,
+                        'Description': msft_TextInput_23
                     }
                 );
                 Refresh(Capabilities);
                 Reset(msft_TextInput_3);
                 Reset(msft_TextInput_4);
                 Reset(msft_TextInput_18);
+                Reset(msft_TextInput_23);
                 Navigate(msftMasterData)
             )
         PaddingBottom: =7
@@ -363,4 +365,76 @@ msftnewcertification As screen:
         X: =385
         Y: =288
         ZIndex: =16
+
+    msft_Label_21 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =28
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =11
+        Text: ="Description"
+        Width: =143
+        X: =433
+        Y: =287
+        ZIndex: =17
+
+    msft_TextInput_23 As text:
+        BorderColor: =RGBA(219, 219, 219, 1)
+        BorderThickness: =2
+        Color: =RGBA(166, 166, 166, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =170
+        HintText: ="Enter Description"
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Mode: =TextMode.MultiLine
+        PaddingBottom: =9
+        PaddingRight: =12
+        PaddingTop: =8
+        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedColor: =RGBA(51, 51, 51, 1)
+        PressedFill: =RGBA(255, 255, 255, 1)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Size: =11
+        Width: =300
+        X: =433
+        Y: =329
+        ZIndex: =18
+
+    Icon1_50 As icon.Help:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =20
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.Help
+        OnSelect: =Set(popuptwo,true)
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Tooltip: ="Enter the full name of the certification"
+        Width: =13
+        X: =714
+        Y: =288
+        ZIndex: =20
 
