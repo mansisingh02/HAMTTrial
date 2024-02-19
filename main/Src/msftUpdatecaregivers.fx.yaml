@@ -1557,7 +1557,7 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =140
         Items: |
-            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org"  ,Filter(
+            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org" ,Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1", 'Intermediate Skill 1',
