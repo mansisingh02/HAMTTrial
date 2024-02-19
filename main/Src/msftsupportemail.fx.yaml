@@ -6,17 +6,24 @@
             MyPeople,
             {
                 Email: "mansi.singh@providence.org",
-                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"})).Mail
+                UserData: If(
+                    !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"}), true, false)),
+                    LookUp(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"}), true, false).Mail,
+                    "User not found"
+                )
             },
             {
                 Email: "rama.ghodke@providence.org",
-                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"})).Mail
-            },
-            {
-                Email: "sunjoy.prabakaran@providence.org",
-                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "sunjoy.prabakaran@providence.org"})).Mail
+                UserData: If(
+                    !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"}), true, false)),
+                    LookUp(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"}), true, false).Mail,
+                    "User not found"
+                )
             }
         )
+        
+        
+        
         
         
         

@@ -5942,6 +5942,160 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 435,
+                  "snippet": {
+                    "text": ".Mail"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "msftsupportemail",
+                "type": "msftsupportemail"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 279,
+                  "charOffset": 201,
+                  "snippet": {
+                    "text": "If(\n            !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: \"mansi.singh@providence.org\"}), true, false)),\n            LookUp(Office365Users.SearchUser({top:1, searchTerm: \"mansi.singh@providence.org\"}), true, false).Mail,\n            \"User not found\"\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "msftsupportemail",
+                "type": "msftsupportemail"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 791,
+                  "snippet": {
+                    "text": ".Mail"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "msftsupportemail",
+                "type": "msftsupportemail"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftsupportemail.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 279,
+                  "charOffset": 557,
+                  "snippet": {
+                    "text": "If(\n            !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: \"rama.ghodke@providence.org\"}), true, false)),\n            LookUp(Office365Users.SearchUser({top:1, searchTerm: \"rama.ghodke@providence.org\"}), true, false).Mail,\n            \"User not found\"\n        )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "msftsupportemail",
+                "type": "msftsupportemail"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "navBarVertical_cg.Image5_6.AccessibleLabel"
                 }
               ],
