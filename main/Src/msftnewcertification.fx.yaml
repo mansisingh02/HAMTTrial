@@ -206,15 +206,16 @@ msftnewcertification As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |
             =If(
-                IsBlank(msft_TextInput_2.Text),
+                IsBlank(msft_TextInput_2.Text) || IsBlank(msft_TextInput_18.Text),
                 // Show an error message for Capability being blank
-                Notify("Certification cannot be blank. Please fill in the field.", NotificationType.Error),
+                Notify("Certification or certification code cannot be blank. Please fill in the mandatory fields.", NotificationType.Error),
                 // If Capability is not blank, proceed with patching the data
+            
                 Patch(
                     Certifications,
                     Defaults(Certifications),
                     {
-                        'Certification Name': msft_TextInput_4,
+                        'Certification Name': msft_TextInput_2,
                         'Validity Period (in Years)': msft_TextInput_3,
                         'Certification Code': msft_TextInput_18,
                         Description: msft_TextInput_23
