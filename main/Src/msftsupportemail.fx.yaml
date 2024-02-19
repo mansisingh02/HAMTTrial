@@ -1,7 +1,29 @@
 "msftsupportemail As screen.'tabletLayout_Email_ver3.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org" & "rama.ghodke@providence.org"}))) 
+    OnVisible: |+
+        =//Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
+        ClearCollect(
+            MyPeople,
+            {
+                Email: "mansi.singh@providence.org",
+                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"})).Mail
+            },
+            {
+                Email: "rama.ghodke@providence.org",
+                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"})).Mail
+            },
+            {
+                Email: "sunjoy.prabakaran@providence.org",
+                UserData: First(Office365Users.SearchUser({top:1, searchTerm: "sunjoy.prabakaran@providence.org"})).Mail
+            }
+        )
+        
+        
+        
+        
+        
+        
+        
 
     RectQuickActionBar3 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
