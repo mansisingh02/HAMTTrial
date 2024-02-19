@@ -44,7 +44,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "DisabledFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+            "InvariantPropertyName": "DisabledFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedFill",
           {
             "AFDDataSourceName": "",
@@ -67,7 +74,14 @@
           "HoverBorderColor",
           "FocusedBorderColor",
           "BorderStyle",
-          "DisplayMode",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "DisplayMode.Edit",
+            "InvariantPropertyName": "DisplayMode",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "ZIndex",
           "RadiusTopLeft",
           "RadiusTopRight",
@@ -84,6 +98,14 @@
             "AutoRuleBindingEnabled": false,
             "AutoRuleBindingString": "false",
             "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "AutoDisableOnSelect",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           }
@@ -148,7 +170,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "ColorValue(\"#00266A\")",
             "Property": "DisabledFill",
             "RuleProviderType": "Unknown"
           },
@@ -202,7 +224,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "DisplayMode.Edit",
+            "InvariantScript": "If(gblSelectedtest=1, DisplayMode.Disabled,DisplayMode.Edit)",
             "Property": "DisplayMode",
             "RuleProviderType": "Unknown"
           },
@@ -274,13 +296,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelected=1,ColorValue(\"#00266A\"),ColorValue(\"#00338E\"))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
+            "Category": "Design",
+            "InvariantScript": "false",
+            "Property": "AutoDisableOnSelect",
+            "RuleProviderType": "Unknown"
+          },
+          {
             "Category": "Behavior",
-            "InvariantScript": "Navigate(navBarVertical_admin.dasboardNav);\nSet(gblSelected,1);\n\n",
+            "InvariantScript": "Navigate(navBarVertical_admin.dasboardNav);\nSet(gblSelectedtest,1);\n\n",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -341,7 +369,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "DisabledFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+            "InvariantPropertyName": "DisabledFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedFill",
           {
             "AFDDataSourceName": "",
@@ -364,7 +399,14 @@
           "HoverBorderColor",
           "FocusedBorderColor",
           "BorderStyle",
-          "DisplayMode",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "DisplayMode.Edit",
+            "InvariantPropertyName": "DisplayMode",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "ZIndex",
           "RadiusTopLeft",
           "RadiusTopRight",
@@ -381,6 +423,14 @@
             "AutoRuleBindingEnabled": false,
             "AutoRuleBindingString": "false",
             "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "AutoDisableOnSelect",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           }
@@ -445,7 +495,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "ColorValue(\"#00266A\")",
             "Property": "DisabledFill",
             "RuleProviderType": "Unknown"
           },
@@ -499,7 +549,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "DisplayMode.Edit",
+            "InvariantScript": "If(gblSelectedtest=2, DisplayMode.Disabled,DisplayMode.Edit)",
             "Property": "DisplayMode",
             "RuleProviderType": "Unknown"
           },
@@ -571,13 +621,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelected=2,ColorValue(\"#00266A\"),ColorValue(\"#00338E\"))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
+            "Category": "Design",
+            "InvariantScript": "false",
+            "Property": "AutoDisableOnSelect",
+            "RuleProviderType": "Unknown"
+          },
+          {
             "Category": "Behavior",
-            "InvariantScript": "Set(gblSelected,2);\nNavigate(navBarVertical_admin.caregiversNav);",
+            "InvariantScript": "Set(gblSelectedtest,2);\nNavigate(navBarVertical_admin.caregiversNav);",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -638,7 +694,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "DisabledFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+            "InvariantPropertyName": "DisabledFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedFill",
           {
             "AFDDataSourceName": "",
@@ -661,7 +724,14 @@
           "HoverBorderColor",
           "FocusedBorderColor",
           "BorderStyle",
-          "DisplayMode",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "DisplayMode.Edit",
+            "InvariantPropertyName": "DisplayMode",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "ZIndex",
           "RadiusTopLeft",
           "RadiusTopRight",
@@ -678,6 +748,14 @@
             "AutoRuleBindingEnabled": false,
             "AutoRuleBindingString": "false",
             "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "AutoDisableOnSelect",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           }
@@ -742,7 +820,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "ColorValue(\"#00266A\")",
             "Property": "DisabledFill",
             "RuleProviderType": "Unknown"
           },
@@ -796,7 +874,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "DisplayMode.Edit",
+            "InvariantScript": "If(gblSelectedtest=3, DisplayMode.Disabled,DisplayMode.Edit)",
             "Property": "DisplayMode",
             "RuleProviderType": "Unknown"
           },
@@ -868,13 +946,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelected=3,ColorValue(\"#00266A\"),ColorValue(\"#00338E\"))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
+            "Category": "Design",
+            "InvariantScript": "false",
+            "Property": "AutoDisableOnSelect",
+            "RuleProviderType": "Unknown"
+          },
+          {
             "Category": "Behavior",
-            "InvariantScript": "Set(gblSelected,3);\nNavigate(navBarVertical_admin.projectNav)",
+            "InvariantScript": "Set(gblSelectedtest,3);\nNavigate(navBarVertical_admin.projectNav)",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -935,7 +1019,14 @@
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           },
-          "DisabledFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+            "InvariantPropertyName": "DisabledFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "PressedFill",
           {
             "AFDDataSourceName": "",
@@ -958,7 +1049,14 @@
           "HoverBorderColor",
           "FocusedBorderColor",
           "BorderStyle",
-          "DisplayMode",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "DisplayMode.Edit",
+            "InvariantPropertyName": "DisplayMode",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "ZIndex",
           "RadiusTopLeft",
           "RadiusTopRight",
@@ -976,6 +1074,14 @@
             "AutoRuleBindingEnabled": false,
             "AutoRuleBindingString": "false",
             "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "true",
+            "InvariantPropertyName": "AutoDisableOnSelect",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
           }
@@ -1040,7 +1146,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 0, 0, 0)",
+            "InvariantScript": "ColorValue(\"#00266A\")",
             "Property": "DisabledFill",
             "RuleProviderType": "Unknown"
           },
@@ -1094,7 +1200,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "DisplayMode.Edit",
+            "InvariantScript": "If(gblSelectedtest=4, DisplayMode.Disabled,DisplayMode.Edit)",
             "Property": "DisplayMode",
             "RuleProviderType": "Unknown"
           },
@@ -1172,13 +1278,19 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelected=4,ColorValue(\"#00266A\"),ColorValue(\"#00338E\"))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
           {
+            "Category": "Design",
+            "InvariantScript": "false",
+            "Property": "AutoDisableOnSelect",
+            "RuleProviderType": "Unknown"
+          },
+          {
             "Category": "Behavior",
-            "InvariantScript": "Set(gblSelected,4);\nNavigate(navBarVertical_admin.masterDataNav);",
+            "InvariantScript": "Set(gblSelectedtest,4);\nNavigate(navBarVertical_admin.masterDataNav);",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -1551,7 +1663,7 @@
       "caregiversNav",
       "masterDataNav"
     ],
-    "LastModifiedTimestamp": "638439480158208318",
+    "LastModifiedTimestamp": "638439505929454812",
     "Name": "navBarVertical_admin",
     "Rules": [
       {
@@ -1671,7 +1783,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638439480158208318",
+  "LastModifiedTimestamp": "638439505929454812",
   "Name": "8ae730d7ee9341c68951ab00b8cc853a",
   "OverridableProperties": {},
   "TemplateOriginalName": "0aacb1eb065c442095080747033d8c13",

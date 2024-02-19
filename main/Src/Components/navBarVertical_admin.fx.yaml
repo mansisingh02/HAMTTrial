@@ -11,13 +11,15 @@ navBarVertical_admin As CanvasComponent:
     ZIndex: =1
 
     Image5_8 As image:
+        AutoDisableOnSelect: =false
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: |-
-            =If(gblSelected=3,ColorValue("#00266A"),ColorValue("#00338E"))
+        DisabledFill: |-
+            =ColorValue("#00266A")
+        DisplayMode: =If(gblSelectedtest=3, DisplayMode.Disabled,DisplayMode.Edit)
+        Fill: =
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -25,7 +27,7 @@ navBarVertical_admin As CanvasComponent:
         Image: =Projects_2
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
-            =Set(gblSelected,3);
+            =Set(gblSelectedtest,3);
             Navigate(navBarVertical_admin.projectNav)
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -34,13 +36,15 @@ navBarVertical_admin As CanvasComponent:
         ZIndex: =2
 
     Image5_9 As image:
+        AutoDisableOnSelect: =false
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: |-
-            =If(gblSelected=2,ColorValue("#00266A"),ColorValue("#00338E"))
+        DisabledFill: |-
+            =ColorValue("#00266A")
+        DisplayMode: =If(gblSelectedtest=2, DisplayMode.Disabled,DisplayMode.Edit)
+        Fill: =
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -48,7 +52,7 @@ navBarVertical_admin As CanvasComponent:
         Image: =caregivers
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
-            =Set(gblSelected,2);
+            =Set(gblSelectedtest,2);
             Navigate(navBarVertical_admin.caregiversNav);
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -57,13 +61,15 @@ navBarVertical_admin As CanvasComponent:
         ZIndex: =3
 
     Image5_10 As image:
+        AutoDisableOnSelect: =false
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: |-
-            =If(gblSelected=4,ColorValue("#00266A"),ColorValue("#00338E"))
+        DisabledFill: |-
+            =ColorValue("#00266A")
+        DisplayMode: =If(gblSelectedtest=4, DisplayMode.Disabled,DisplayMode.Edit)
+        Fill: =
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -71,7 +77,7 @@ navBarVertical_admin As CanvasComponent:
         Image: =master_data
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
-            =Set(gblSelected,4);
+            =Set(gblSelectedtest,4);
             Navigate(navBarVertical_admin.masterDataNav);
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -80,13 +86,15 @@ navBarVertical_admin As CanvasComponent:
         ZIndex: =4
 
     Image5_11 As image:
+        AutoDisableOnSelect: =false
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        Fill: |-
-            =If(gblSelected=1,ColorValue("#00266A"),ColorValue("#00338E"))
+        DisabledFill: |-
+            =ColorValue("#00266A")
+        DisplayMode: =If(gblSelectedtest=1, DisplayMode.Disabled,DisplayMode.Edit)
+        Fill: =
         FocusedBorderThickness: =4
         Height: =80
         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -95,7 +103,7 @@ navBarVertical_admin As CanvasComponent:
         ImagePosition: =ImagePosition.Fill
         OnSelect: |+
             =Navigate(navBarVertical_admin.dasboardNav);
-            Set(gblSelected,1);
+            Set(gblSelectedtest,1);
             
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
