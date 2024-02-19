@@ -1,0 +1,63 @@
+msftsupportprompt As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Label46 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =72
+        Size: =22
+        Text: ="Can't find what you are looking for/have a query?"
+        Width: =690
+        X: =347
+        Y: =445
+        ZIndex: =1
+
+    Label47 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(0, 51, 142, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =45
+        OnSelect: =Navigate(msftsupportemail)
+        Size: =22
+        Text: ="Reach out to us on E-mail"
+        Underline: =true
+        Width: =345
+        X: =510
+        Y: =517
+        ZIndex: =2
+
+    navBarVertical_admin_50 As navBarVertical_admin:
+        ZIndex: =3
+
+    navBarHorizontal_50 As navBarHorizontal:
+        ZIndex: =4
+
+    Image5 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =255
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: =Search
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =248
+        X: =543
+        Y: =190
+        ZIndex: =5
+

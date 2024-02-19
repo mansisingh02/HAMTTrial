@@ -283,73 +283,20 @@ msftviewteam As screen:
             Y: =37
             ZIndex: =15
 
-        ComboBox2_2 As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["Value"]
-            DisplayMode: =DisplayMode.View
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            IsSearchable: =false
-            Items: =Distinct(Discipline,DisciplineName)
-            OnChange: =
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["Value"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            SelectMultiple: =false
-            Size: =13
-            Width: =251
-            X: =340
-            Y: =41
-            ZIndex: =16
-
-        ComboBox5_2 As combobox:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            DefaultSelectedItems: =Filter(Discipline, DisciplineName = ComboBox2_2.Selected.Value)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayFields: =["ComplianceAssetId"]
-            Font: =Font.'Segoe UI'
-            Height: =42
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            IsSearchable: =false
-            Items: =Filter(Discipline, DisciplineName = ComboBox2_2.Selected.Value)
-            OnSelect: =Select(Parent)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SearchFields: =["ComplianceAssetId"]
-            SearchItems: =[]
-            SelectionFill: =RGBA(0, 120, 212, 1)
-            Size: =13
-            Visible: =false
-            Width: =50
-            X: =285
-            Y: =37
-            ZIndex: =17
+    Label45 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =38
+        Size: =13
+        Text: ="Text"
+        Width: =241
+        X: =412
+        Y: =236
+        ZIndex: =87
 
