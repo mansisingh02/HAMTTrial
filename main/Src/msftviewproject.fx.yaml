@@ -738,11 +738,13 @@ msftviewproject As screen:
     Toggle1_2 As toggleSwitch:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(128, 128, 128, 1)
         Default: =inProductionValue = "Yes"
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisplayMode: =DisplayMode.View
         FalseFill: =RGBA(102, 102, 102, 1)
         FalseHoverFill: =RGBA(33, 33, 33, 1)
+        FalseText: ="No"
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         HandleFill: =RGBA(255, 255, 255, 1)
@@ -760,10 +762,10 @@ msftviewproject As screen:
                           { 'In Production': { Value: "No" } }
                        )
         PressedBorderColor: =RGBA(0, 0, 0, 0)
-        ShowLabel: =false
-        Size: =13
+        Size: =11
         TrueFill: =RGBA(0, 120, 212, 1)
         TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        TrueText: ="Yes"
         X: =955
         Y: =501
         ZIndex: =64
@@ -1062,6 +1064,7 @@ msftviewproject As screen:
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
         Height: =150
+        LineHeight: =1.8
         Overflow: =Overflow.Scroll
         Size: =11
         Text: |-
