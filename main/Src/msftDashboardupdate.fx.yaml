@@ -161,10 +161,10 @@ msftDashboardupdate As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =21
+            Height: =22
             Size: =12
             Text: ="Number of Caregivers in a Cost Center"
-            Width: =356
+            Width: =375
             X: =489
             Y: =166
             ZIndex: =18
@@ -176,7 +176,7 @@ msftDashboardupdate As screen:
             Color: =RGBA(51, 51, 51, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             Font: =Font.'Segoe UI'
-            Height: =343
+            Height: =352
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
             Items: |-
@@ -185,7 +185,7 @@ msftDashboardupdate As screen:
                         AddColumns(
                             'Caregivers_1',
                             "CostCenterValue",
-                            'Cost Center Code'.Value
+                            'Pillar Name'
                         ),
                         "CostCenterValue",
                         "Detail"
@@ -195,9 +195,9 @@ msftDashboardupdate As screen:
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =9
-            Width: =356
-            X: =500
-            Y: =193
+            Width: =375
+            X: =501
+            Y: =194
             ZIndex: =19
 
         Legend2_1 As legend:
@@ -209,14 +209,14 @@ msftDashboardupdate As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(220, 220, 220, 1)
             Font: =Font.'Segoe UI'
-            Height: =171
+            Height: =176
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             ItemColorSet: =PieChart2_1.ItemColorSet
             Items: =PieChart2_1.SeriesLabels
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Width: =356
+            Width: =375
             X: =489
-            Y: =521
+            Y: =530
             ZIndex: =20
 
     CompositePieChart2_2 As group:
@@ -234,7 +234,7 @@ msftDashboardupdate As screen:
             FontWeight: =FontWeight.Semibold
             Height: =21
             Size: =12
-            Text: ="Number of Caregivers at a Level"
+            Text: ="Caregivers by Core Leaders"
             Width: =356
             X: =91
             Y: =165
@@ -256,7 +256,7 @@ msftDashboardupdate As screen:
                         AddColumns(
                             'Caregivers_1',
                             "LevelValue",
-                            Level.Value
+                            'Core Leader'
                         ),
                         "LevelValue",
                         "Detail"
@@ -265,7 +265,7 @@ msftDashboardupdate As screen:
                     CountRows(ThisRecord.Detail)
                 )
             PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Size: =15
+            Size: =11
             Width: =356
             X: =117
             Y: =191
