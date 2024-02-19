@@ -76,7 +76,7 @@ msftviewproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(116, 116, 116, 1)
-        Default: ="Primary Owner"
+        Default: =Gallery16.Selected.'Primary Owner'.Value
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -638,7 +638,12 @@ msftviewproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
-        Default: =inFlightVersionValue
+        Default: |
+            =If(
+                Not(IsBlank(inFlightVersionValue)),
+                inFlightVersionValue,
+                Blank()
+            )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -675,7 +680,12 @@ msftviewproject As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
         Color: =RGBA(166, 166, 166, 1)
-        Default: =inProdVersionValue
+        Default: |-
+            =If(
+                Not(IsBlank(inProdVersionValue)),
+                inProdVersionValue,
+                Blank()
+            )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -705,7 +715,7 @@ msftviewproject As screen:
         Size: =11
         Width: =158
         X: =1055
-        Y: =492
+        Y: =496
         ZIndex: =61
 
     Label3_47 As label:
@@ -947,38 +957,6 @@ msftviewproject As screen:
         Y: =467
         ZIndex: =77
 
-    ComboBox1_2 As combobox:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Value"]
-        DisplayMode: =DisplayMode.View
-        Font: =Font.'Segoe UI'
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Capabilities,Capability)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Value"]
-        SearchItems: =Search(Distinct(Capabilities,Capability),ComboBox1_2.SearchText,"Value")
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        Size: =13
-        Width: =258
-        X: =141
-        Y: =510
-        ZIndex: =81
-
     "'New Project_17' As label":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -1073,4 +1051,26 @@ msftviewproject As screen:
         X: =770
         Y: =314
         ZIndex: =87
+
+    Label42 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =43
+        Size: =13
+        Text: |-
+            =If(
+                CountRows(ThisItem.Capability) > 1,
+                Concat(ThisItem.Capability, ThisRecord.Value & ", "),
+                Concat(ThisItem.Capability, ThisRecord.Value)
+            )
+        Width: =272
+        X: =149
+        Y: =510
+        ZIndex: =88
 
