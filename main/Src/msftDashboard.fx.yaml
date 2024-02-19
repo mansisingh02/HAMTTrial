@@ -268,7 +268,7 @@ msftDashboard As screen:
                 
                 
                 
-            Items: |-
+            Items: |+
                 =AddColumns(
                     GroupBy(
                         AddColumns(
@@ -282,6 +282,9 @@ msftDashboard As screen:
                     "Count",
                     CountRows(ThisRecord.Detail)
                 )
+                
+                
+                
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             Size: =9
             Width: =439
