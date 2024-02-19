@@ -184,7 +184,27 @@ msftnewcategory As screen:
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: =
+        OnSelect: |
+            =If(
+                IsBlank(msft_TextInput.Text) || IsBlank(msft_Dropdown.Selected),
+                // Show an error message for Discipline being blank
+                Notify("Skill Name or discipline cannot be blank. Please fill in the field.", NotificationType.Error),
+                // If Discipline is not blank, proceed with patching the data
+                Patch(
+                    Skills_1,
+                    Defaults(Skills_1),
+                    {
+                        'Skill Name': msft_TextInput.Text,
+                        Discipline: msft_Dropdown.Selected.Value,
+                        Description: msft_TextInput_1.Text
+                    }
+                );
+                Refresh(Skills_1);
+                Reset(msft_TextInput);
+                Reset(msft_TextInput_1);
+                Reset(msft_Dropdown);
+                Navigate(msftMasterData, ScreenTransition.Fade)
+            )
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32

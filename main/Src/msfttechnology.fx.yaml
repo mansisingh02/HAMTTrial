@@ -167,7 +167,7 @@ msfttechnology As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            Height: =189
+            Height: =180
             LineHeight: =1.142857
             Overflow: =Overflow.Scroll
             PaddingBottom: =0
@@ -180,9 +180,9 @@ msfttechnology As screen:
                     Skills_1,
                     'Skill Name' = Gallery1_2.Selected.'Skill Name'
                 ).Description
-            Width: =245
-            X: =15
-            Y: =23
+            Width: =220
+            X: =27
+            Y: =24
             ZIndex: =18
 
     Category As label:
@@ -244,7 +244,7 @@ msfttechnology As screen:
         Text: =Text(Gallery1_2.Selected.'Skill Name')
         Width: =293
         X: =107
-        Y: =270
+        Y: =257
         ZIndex: =10
 
     CategoryLabel As label:
@@ -261,7 +261,7 @@ msfttechnology As screen:
         Text: =Text(Gallery1_2.Selected.Discipline)
         Width: =190
         X: =400
-        Y: =288
+        Y: =274
         ZIndex: =11
 
     Button5_8 As button:
@@ -280,7 +280,7 @@ msfttechnology As screen:
         OnSelect: =Set(varItemToDelete, Gallery1_2.Selected.'Skill Name'); Navigate(msftconfirmationscreen)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -30%)
         RadiusBottomLeft: =4
         RadiusBottomRight: =4
         RadiusTopLeft: =4
@@ -342,7 +342,7 @@ msfttechnology As screen:
         PaddingTop: =6
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
         RadiusTopLeft: =5
