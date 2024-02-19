@@ -1763,7 +1763,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(Title2_64.Text=Blank(),false,true)
             Width: =57
-            X: =733
+            X: =718
             Y: =16
             ZIndex: =14
 
@@ -1784,8 +1784,8 @@ msftUpdatecaregivers As screen:
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
-            X: =733
-            Y: =46
+            X: =718
+            Y: =41
             ZIndex: =15
 
         Title2_75 As label:
@@ -1805,8 +1805,8 @@ msftUpdatecaregivers As screen:
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
-            X: =733
-            Y: =76
+            X: =718
+            Y: =71
             ZIndex: =16
 
         Title2_76 As label:
@@ -1933,8 +1933,8 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(Title2_64.Text=Blank(),false,true)
             Width: =65
-            X: =774
-            Y: =17
+            X: =764
+            Y: =16
             ZIndex: =22
 
         Title2_67 As label:
@@ -1956,8 +1956,8 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(Title2_81.Text=Blank(),false,true)
             Width: =65
-            X: =774
-            Y: =46
+            X: =764
+            Y: =41
             ZIndex: =23
 
         Title2_68 As label:
@@ -1979,8 +1979,8 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(Title2_83.Text=Blank(),false,true)
             Width: =65
-            X: =790
-            Y: =77
+            X: =765
+            Y: =72
             ZIndex: =24
 
         Title2_69 As label:
@@ -2824,7 +2824,9 @@ msftUpdatecaregivers As screen:
                 "Project1",
                     LookUp(Project, 'Project ID'= Caregivers_1[@'Primary Project '].Value),
                     "Project2",
-                    LookUp(Project, 'Project ID'= Caregivers_1[@'Secondary Project'].Value)
+                    LookUp(Project, 'Project ID'= Caregivers_1[@'Secondary Project'].Value),
+                    "Project3",
+                    LookUp(Project, 'Project ID'= Caregivers_1[@'Tertiary Project'].Value)
                     ),
                     If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",'Caregiver ID'= Gallery1.Selected.'Caregiver ID', 'Caregiver ID'= txtCaregiverID_1.Text))
                     
