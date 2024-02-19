@@ -1,26 +1,7 @@
 "msftsupportemail As screen.'tabletLayout_Email_ver3.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =//Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
-        ClearCollect(
-            MyPeople,
-            {
-                Email: "mansi.singh@providence.org",
-                UserData: If(
-                    !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"}), true, false)),
-                    LookUp(Office365Users.SearchUser({top:1, searchTerm: "mansi.singh@providence.org"}), true, false).Mail,
-                    "User not found"
-                )
-            },
-            {
-                Email: "rama.ghodke@providence.org",
-                UserData: If(
-                    !IsBlank(LookUp(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"}), true, false)),
-                    LookUp(Office365Users.SearchUser({top:1, searchTerm: "rama.ghodke@providence.org"}), true, false).Mail,
-                    "User not found"
-                )
-            }
-        )
+        =Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
         
         
         
