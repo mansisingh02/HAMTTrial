@@ -1056,17 +1056,18 @@ msftviewproject As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(128, 128, 128, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =43
+        Height: =150
+        Overflow: =Overflow.Scroll
         Size: =11
         Text: |-
             =If(
                 CountRows(Gallery16.Selected.Capability) > 1,
-                Concat(Gallery16.Selected.Capability, ThisRecord.Value & ", "),
+                Concat(Gallery16.Selected.Capability, ThisRecord.Value & Char(10)),
                 Concat(Gallery16.Selected.Capability, ThisRecord.Value)
             )
         Width: =285
