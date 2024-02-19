@@ -92,9 +92,9 @@ msftDashboardupdate As screen:
             FontWeight: =FontWeight.Semibold
             Height: =21
             Size: =12
-            Text: ="Number of Caregivers at a Level"
+            Text: ="Caregivers by Level"
             Width: =356
-            X: =911
+            X: =918
             Y: =166
             ZIndex: =14
 
@@ -107,7 +107,9 @@ msftDashboardupdate As screen:
             Font: =Font.'Segoe UI'
             Height: =343
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            ItemColorSet: |+
+                =[RGBA(0, 51, 142, 1), RGBA(0, 40, 120, 1), RGBA(0, 45, 130, 1), RGBA(0, 55, 150, 1), RGBA(20, 70, 180, 1), RGBA(40, 85, 200, 1), RGBA(60, 100, 220, 1), RGBA(80, 115, 240, 1), RGBA(100, 130, 255, 1), RGBA(120, 145, 255, 1), RGBA(140, 160, 255, 1)]
+                
             Items: |-
                 =AddColumns(
                     GroupBy(
@@ -163,9 +165,9 @@ msftDashboardupdate As screen:
             FontWeight: =FontWeight.Semibold
             Height: =22
             Size: =12
-            Text: ="Number of Caregivers in a Cost Center"
+            Text: ="Caregivers by Pillar"
             Width: =375
-            X: =489
+            X: =503
             Y: =166
             ZIndex: =18
 
@@ -178,7 +180,8 @@ msftDashboardupdate As screen:
             Font: =Font.'Segoe UI'
             Height: =352
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            ItemColorSet: |
+                =[RGBA(0, 51, 142, 1), RGBA(0, 40, 120, 1), RGBA(0, 45, 130, 1), RGBA(0, 55, 150, 1), RGBA(20, 70, 180, 1), RGBA(40, 85, 200, 1), RGBA(60, 100, 220, 1), RGBA(80, 115, 240, 1), RGBA(100, 130, 255, 1), RGBA(120, 145, 255, 1), RGBA(140, 160, 255, 1)]
             Items: |-
                 =AddColumns(
                     GroupBy(
@@ -249,7 +252,22 @@ msftDashboardupdate As screen:
             Font: =Font.'Segoe UI'
             Height: =343
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+            ItemColorSet: |+
+                =[
+                    RGBA(0, 51, 142, 1), RGBA(0, 44, 128, 1), RGBA(0, 37, 114, 1), RGBA(0, 30, 100, 1),
+                    RGBA(0, 23, 86, 1), RGBA(0, 16, 72, 1), RGBA(0, 9, 58, 1), RGBA(0, 2, 44, 1),
+                    RGBA(10, 25, 93, 1), RGBA(20, 38, 129, 1), RGBA(30, 51, 165, 1), RGBA(40, 64, 201, 1),
+                    RGBA(50, 77, 237, 1), RGBA(60, 90, 255, 1), RGBA(70, 103, 255, 1), RGBA(80, 116, 255, 1),
+                    RGBA(90, 129, 255, 1), RGBA(100, 142, 255, 1), RGBA(110, 155, 255, 1), RGBA(120, 168, 255, 1),
+                    RGBA(130, 181, 255, 1), RGBA(140, 194, 255, 1), RGBA(150, 207, 255, 1), RGBA(160, 220, 255, 1),
+                    RGBA(170, 233, 255, 1), RGBA(180, 246, 255, 1), RGBA(190, 249, 255, 1), RGBA(200, 252, 255, 1),
+                    RGBA(210, 255, 255, 1), RGBA(220, 255, 255, 1), RGBA(230, 255, 255, 1), RGBA(240, 255, 255, 1),
+                    RGBA(250, 255, 255, 1)
+                ]
+                
+                
+                
+                
             Items: |-
                 =AddColumns(
                     GroupBy(
