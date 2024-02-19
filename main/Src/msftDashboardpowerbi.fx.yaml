@@ -1,0 +1,64 @@
+msftDashboardpowerbi As screen:
+    Height: =768
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Width: =1366
+
+    Container2 As groupContainer.horizontalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =75
+        PaddingTop: =60
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        X: =
+        Y: =
+        ZIndex: =10
+
+        PowerBI2 As powerbi:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DashboardId: ="288cdaa3-a451-4945-8d3d-006ec3b93f25"
+            Height: =Parent.Height
+            TileUrl: |-
+                ="https://app.powerbi.com/embed?dashboardId=288cdaa3-a451-4945-8d3d-006ec3b93f25&tileId=6fd287aa-e4a4-4da9-8152-17175eba2b69&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly9XQUJJLVdFU1QtVVMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQiLCJlbWJlZEZlYXR1cmVzIjp7InVzYWdlTWV0cmljc1ZOZXh0Ijp0cnVlLCJkaXNhYmxlQW5ndWxhckpTQm9vdHN0cmFwVGlsZUVtYmVkIjp0cnVlfX0%3d"
+            Width: =Parent.Width
+            WorkspaceId: ="__my-workspace"
+            X: =75
+            Y: =
+            ZIndex: =1
+
+    Container3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =11
+
+        navBarVertical_admin_1 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboardpowerbi
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =12
+
+        navBarHorizontal_4 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
+
