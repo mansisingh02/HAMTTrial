@@ -221,7 +221,9 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =35
+            LineHeight: =2
             OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ")  & ThisItem.Intermediatee.'Intermediate Skill 1'.Value & If(ThisItem.Intermediatee.'Intermediate Skill 1'.Value=Blank(), "", ", ") & ThisItem.Intermediatee.'Intermediate Skill 2'.Value
             Width: =377
@@ -238,6 +240,7 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Height: =35
+            LineHeight: =2
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =9
