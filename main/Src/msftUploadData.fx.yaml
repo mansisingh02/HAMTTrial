@@ -12,18 +12,20 @@ msftUploadData As screen:
 
     attachCard_1 As attachments:
         BorderColor: =RGBA(0, 0, 0, 1)
+        BorderStyle: =BorderStyle.None
         BorderThickness: =1
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 60, 106, 1)
-        DisabledColor: =RGBA(0, 60, 106, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(255, 255, 255, 1)
         DisplayMode: =
+        DropTargetBackgroundColor: =RGBA(190, 211, 247, 1)
         DropTargetBorderStyle: =BorderStyle.None
         FocusedBorderThickness: =1
         Font: =Font.'Segoe UI'
-        Height: =259
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        Height: =145
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
         IsInDataCard: =true
         ItemColor: =RGBA(0, 0, 0, 1)
         ItemFill: =RGBA(0, 120, 212, 1)
@@ -43,9 +45,9 @@ msftUploadData As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Tooltip: =
-        Width: =396
-        X: =156
-        Y: =168
+        Width: =321
+        X: =699
+        Y: =258
         ZIndex: =3
 
     msft_Button_50 As button:
@@ -58,6 +60,7 @@ msftUploadData As screen:
         Fill: =RGBA(0, 51, 142, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
+        Height: =42
         HoverBorderColor: =RGBA(0, 60, 106, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -73,16 +76,16 @@ msftUploadData As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
         Size: =15
         Text: ="Upload"
         VerticalAlign: =VerticalAlign.Top
         Width: =143
-        X: =571
-        Y: =464
+        X: =699
+        Y: =450
         ZIndex: =4
 
     Button7 As button:
@@ -90,9 +93,10 @@ msftUploadData As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(184, 0, 0, 1)
+        Fill: =RGBA(190, 71, 71, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
+        Height: =42
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
@@ -102,13 +106,32 @@ msftUploadData As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
         Size: =15
         Text: ="Cancel"
-        X: =750
-        Y: =464
+        Width: =142
+        X: =880
+        Y: =450
         ZIndex: =5
+
+    Image2 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =420
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='Search (1)'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =413
+        X: =206
+        Y: =182
+        ZIndex: =6
 
