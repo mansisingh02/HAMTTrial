@@ -27,7 +27,11 @@ msftMasterData As screen:
             Notify("Deletion completed", NotificationType.Success);
             Set(varConfirmDelete, false)
         );
-        Set(varTabSelected, 1);
+        If(
+            IsBlank(varTabSelected),
+            1,
+            varTabSelected
+        );
         Set(loaderVisible, false);
     Width: =1366
 
