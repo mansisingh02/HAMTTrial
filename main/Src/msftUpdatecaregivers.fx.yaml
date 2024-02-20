@@ -950,6 +950,7 @@ msftUpdatecaregivers As screen:
         dasboardNav: =msftDashboardpowerbi
         masterDataNav: =msftMasterData
         projectNav: =msftproject
+        supportNav: =msftsupportemail
         ZIndex: =118
 
     Group3_2 As group:
@@ -2018,7 +2019,7 @@ msftUpdatecaregivers As screen:
             FontWeight: =FontWeight.Bold
             Height: =44
             OnSelect: |-
-                =Patch('Caregiver Certifications',  LookUp(
+                =Patch('Caregiver Certifications_1',  LookUp(
                             'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 1': Blank(),
@@ -2043,8 +2044,8 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             OnSelect: |-
-                =Patch('Caregiver Certifications',  LookUp(
-                            'Caregiver Certifications',
+                =Patch('Caregiver Certifications_1',  LookUp(
+                            'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 2': Blank(),
                         'Start Date of Certification 2': Blank(),
@@ -2069,8 +2070,8 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             OnSelect: |-
-                =Patch('Caregiver Certifications',  LookUp(
-                            'Caregiver Certifications',
+                =Patch('Caregiver Certifications_1',  LookUp(
+                            'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 3': Blank(),
                         'Start Date of Certification 3': Blank(),
@@ -2095,8 +2096,8 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             OnSelect: |-
-                =Patch('Caregiver Certifications',  LookUp(
-                            'Caregiver Certifications',
+                =Patch('Caregiver Certifications_1',  LookUp(
+                            'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 4': Blank(),
                         'Start Date of Certification 4': Blank(),
@@ -2121,8 +2122,8 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Bold
             OnSelect: |-
-                =Patch('Caregiver Certifications',  LookUp(
-                            'Caregiver Certifications',
+                =Patch('Caregiver Certifications_1',  LookUp(
+                            'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 5': Blank(),
                         'Start Date of Certification 5': Blank(),
