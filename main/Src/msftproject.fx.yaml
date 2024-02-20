@@ -693,7 +693,7 @@ msftproject As screen:
             OnSelect: =Navigate(msftviewproject, ScreenTransition.Fade)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(0, 51, 142, 1), 0%)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -702,8 +702,8 @@ msftproject As screen:
             Text: ="View"
             Visible: =If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org" ||ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2', true, false)
             Width: =70
-            X: =1049
-            Y: =13
+            X: =1065
+            Y: =12
             ZIndex: =27
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
