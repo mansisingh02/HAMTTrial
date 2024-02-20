@@ -1,7 +1,7 @@
 "msftsupportemail As screen.'tabletLayout_Email_ver3.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"})) 
+        =Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
         
         
         
