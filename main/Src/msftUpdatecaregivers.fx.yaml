@@ -873,38 +873,38 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |
-                =If(Title2_16.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Beginner Skill 1':comment_2.Text}),
-                            Title2_18.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Beginner Skill 2':comment_2.Text}
+                =If(Title2_16.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 1':comment_2.Text}),
+                            Title2_18.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Intermediate Skill 2':comment_2.Text}
                             ),
-                            Title2_20.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 3': comment_2.Text}),
+                            Title2_20.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 3': comment_2.Text}),
                             
-                            Title2_22.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 4': comment_2.Text}
+                            Title2_22.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 4': comment_2.Text}
                             ),
                             
-                            Title2_24.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 5': comment_2.Text}
+                            Title2_24.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 5': comment_2.Text}
                             ),
                 
-                            Title2_26.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 6': comment_2.Text}),
+                            Title2_26.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 6': comment_2.Text}),
                 
-                            Title2_28.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 7': comment_2.Text}),
+                            Title2_28.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 7': comment_2.Text}),
                             
-                            Title2_30.Text=Blank(),Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 8': comment_2.Text}),
+                            Title2_30.Text=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Intermediate Skill 8': comment_2.Text}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
