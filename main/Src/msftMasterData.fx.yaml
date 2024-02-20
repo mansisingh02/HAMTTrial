@@ -36,7 +36,9 @@ msftMasterData As screen:
         If(
             !varTabSelected,
             Set(varTabSelected, 1);
+            Notify("varTabSelected was not set. Setting it to 1.", NotificationType.Information)
         );
+        
         Set(loaderVisible, false);
     Width: =1366
 
