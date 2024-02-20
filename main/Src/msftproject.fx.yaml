@@ -478,6 +478,7 @@ msftproject As screen:
 
         Button5_12 As button:
             BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =1
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -676,7 +677,7 @@ msftproject As screen:
 
         Button5_22 As button:
             BorderColor: =RGBA(0, 51, 142, 1)
-            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
             Color: =RGBA(0, 51, 142, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -687,8 +688,8 @@ msftproject As screen:
             FontWeight: =FontWeight.Semibold
             Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(0, 51, 142, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 51, 142, 1)
             OnSelect: =Navigate(msftviewproject, ScreenTransition.Fade)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -701,8 +702,8 @@ msftproject As screen:
             Text: ="View"
             Visible: =If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org" ||ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2', true, false)
             Width: =70
-            X: =1065
-            Y: =12
+            X: =1049
+            Y: =13
             ZIndex: =27
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
