@@ -1,7 +1,7 @@
 App As appinfo:
     BackEnabled: =false
     OnStart: |
-        =If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org", msftDashboardpowerbi, msftUpdatecaregivers);
+        =If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org", msftDashboardpowerbi, msftUpdatecaregivers);
         Set(gblSelected,1);
     StartScreen: =If(Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org", msftDashboardpowerbi, msftUpdatecaregivers)
     Theme: =PowerAppsTheme

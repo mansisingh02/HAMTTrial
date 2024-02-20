@@ -357,7 +357,8 @@ msftcaregivers As screen:
             
                     &&
             
-                    If(User().Email="madhavi.b@providence.org", 'Core Leader' = "Madhavi B",If (Toggle2.Value= true, 'Core Leader'=Gallery13.Selected.'Core Leader' && ('Core Leader'=Gallery13.Selected.'Caregiver Name' || 'Core Leader'=Gallery13.Selected.'Caregiver Name 2') , Toggle2.Value=false)
+                    If(Toggle2.Value= true, 'Core Leader'=Gallery13.Selected.'Core Leader' 
+                    || ('Core Leader'=Gallery13.Selected.'Caregiver Name' || 'Core Leader'=Gallery13.Selected.'Caregiver Name 2'), Toggle2.Value=false 
                     ))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
@@ -454,6 +455,7 @@ msftcaregivers As screen:
     navBarVertical_admin_27 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
         dasboardNav: =msftDashboardpowerbi
+        Fill: =RGBA(0,51,142,1)
         masterDataNav: =msftMasterData
         projectNav: =msftproject
         ZIndex: =50
@@ -496,16 +498,32 @@ msftcaregivers As screen:
     Gallery13 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =62
+        Height: =74
         Items: =Filter(Caregivers_1, Lower('Caregiver Email')=Lower(User().Email))
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Visible: =false
+        TemplateSize: =40
         Width: =434
         X: =547
-        Y: =706
+        Y: =666
         ZIndex: =59
+
+        Label48 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =62
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Email'
+            Width: =170
+            X: =40
+            ZIndex: =1
 
     navBarVertical_cg_1 As navBarVertical_cg:
         caregiversNav: =msftcaregivers
