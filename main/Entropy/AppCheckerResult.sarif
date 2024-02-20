@@ -4939,10 +4939,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 475,
+                  "charLength": 564,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If( First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\"),\nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
+                    "text": "If( First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\"),\nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
                   }
                 }
               },
@@ -19030,6 +19030,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.AccessibleLabel"
                 }
               ],
@@ -19060,19 +19090,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_98"
               }
             }
           ],
@@ -19120,19 +19150,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_98"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_97"
               }
             }
           ],
@@ -19180,19 +19210,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_97"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_99"
               }
             }
           ],
@@ -19240,19 +19270,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_99"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_106"
               }
             }
           ],
@@ -19300,19 +19330,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_106"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_107"
               }
             }
           ],
@@ -19360,19 +19390,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_107"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_100"
               }
             }
           ],
@@ -19420,19 +19450,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_100"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_108"
               }
             }
           ],
@@ -19480,19 +19510,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_108"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_101"
               }
             }
           ],
@@ -19540,19 +19570,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_101"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_112"
               }
             }
           ],
@@ -19600,19 +19630,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_112"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_102"
               }
             }
           ],
@@ -19660,19 +19690,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_102"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_110"
               }
             }
           ],
@@ -19720,19 +19750,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_110"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_103"
               }
             }
           ],
@@ -19780,19 +19810,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_103"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_111"
               }
             }
           ],
@@ -19840,19 +19870,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_111"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_104"
               }
             }
           ],
@@ -19900,19 +19930,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_104"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_109"
               }
             }
           ],
@@ -19960,19 +19990,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_109"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_105"
               }
             }
           ],
@@ -20014,36 +20044,6 @@
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
           "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_105"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
         },
         {
           "locations": [
@@ -28898,36 +28898,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftUpdatecaregivers.msft_DatePicker_6.DefaultDate"
                 }
               ],
@@ -28941,66 +28911,6 @@
                 "member": "DefaultDate",
                 "module": "msftUpdatecaregivers",
                 "type": "msftUpdatecaregivers.msft_DatePicker_6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5"
               }
             }
           ],
