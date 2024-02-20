@@ -376,6 +376,11 @@ msfteditteam As screen:
             ChevronHoverBackground: =RGBA(212, 212, 212, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
+            Default: |-
+                =If(ThisItem.'Primary Project '.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Primary Project'.Value)),
+                ThisItem.'Secondary Project'.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Secondary Project'.Value)),
+                ThisItem.'Tertiary Project'.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Tertiary Project'.Value))
+                )
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)

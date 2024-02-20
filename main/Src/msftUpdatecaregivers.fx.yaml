@@ -1752,7 +1752,7 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =170
-        Items: =Filter('Caregiver Certifications','Caregiver ID'=txtCaregiverID_1.Text)
+        Items: =Filter('Caregiver Certifications_1','Caregiver ID'=Gallery3.Selected.'Caregiver ID')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =165
@@ -2019,7 +2019,7 @@ msftUpdatecaregivers As screen:
             Height: =44
             OnSelect: |-
                 =Patch('Caregiver Certifications',  LookUp(
-                            'Caregiver Certifications',
+                            'Caregiver Certifications_1',
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {
                         'Certification 1': Blank(),
                         'Start Date of Certification 1': Blank(),
