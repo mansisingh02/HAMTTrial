@@ -477,7 +477,8 @@ msftproject As screen:
             ZIndex: =10
 
         Button5_12 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =1
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -487,12 +488,12 @@ msftproject As screen:
             FontWeight: =FontWeight.Semibold
             Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), 0%)
             OnSelect: =Navigate(msfteditproject, ScreenTransition.Fade)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), 2%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(0, 51, 142, 1), 10%)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
@@ -676,7 +677,7 @@ msftproject As screen:
 
         Button5_22 As button:
             BorderColor: =RGBA(0, 51, 142, 1)
-            BorderStyle: =BorderStyle.None
+            BorderThickness: =1
             Color: =RGBA(0, 51, 142, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -687,12 +688,12 @@ msftproject As screen:
             FontWeight: =FontWeight.Semibold
             Height: =28
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(0, 51, 142, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =RGBA(0, 51, 142, 1)
             OnSelect: =Navigate(msftviewproject, ScreenTransition.Fade)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =ColorFade(RGBA(0, 51, 142, 1), 0%)
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
