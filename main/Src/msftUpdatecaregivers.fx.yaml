@@ -16,7 +16,7 @@ msftUpdatecaregivers As screen:
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 252, 255, 1)
         FocusedBorderThickness: =4
-        Height: =207
+        Height: =186
         HoverFill: =RGBA(255, 252, 255, 1)
         OnSelect: =varTabSelected=1
         PressedFill: =RGBA(0, 120, 212, 1)
@@ -275,7 +275,7 @@ msftUpdatecaregivers As screen:
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =224
+        Height: =226
         Items: |-
             =Filter(
                 AddColumns(
@@ -295,11 +295,11 @@ msftUpdatecaregivers As screen:
         OnSelect: =
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =224
+        TemplateSize: =226
         Visible: =varTabSelected=1
         Width: =900
-        X: =79
-        Y: =544
+        X: =96
+        Y: =542
         ZIndex: =50
 
         Title2_1 As label:
@@ -437,7 +437,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =201
+            Y: =197
             ZIndex: =13
 
         Title2_8 As label:
@@ -453,6 +453,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =If(Title2.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -503,7 +504,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =76
+            Y: =57
             ZIndex: =16
 
         Title2_11 As label:
@@ -525,7 +526,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =106
+            Y: =85
             ZIndex: =17
 
         Title2_12 As label:
@@ -533,7 +534,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
+            Height: =19
             OnSelect: |-
                 =Set(varSelectedColumn,"B8");
                 Navigate(msftUpdateSkill_Caregiver);
@@ -547,7 +548,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =230
+            Y: =197
             ZIndex: =18
 
         Title2_13 As label:
@@ -564,12 +565,12 @@ msftUpdatecaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =If(Title2_6.Text=Blank(),"","Edit")
+            Text: =If(Title2_5.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =166
+            Y: =169
             ZIndex: =19
 
         Title2_14 As label:
@@ -586,12 +587,12 @@ msftUpdatecaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =11
-            Text: =If(Title2_5.Text=Blank(),"","Edit")
+            Text: =If(Title2_4.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =196
+            Y: =113
             ZIndex: =20
 
         Title2_15 As label:
@@ -608,12 +609,12 @@ msftUpdatecaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =If(Title2_4.Text=Blank(),"","Edit")
+            Text: =If(Title2_6.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =136
+            Y: =141
             ZIndex: =21
 
         Title2_48 As label:
@@ -684,7 +685,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_2.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =77
+            Y: =57
             ZIndex: =24
 
         Title2_51 As label:
@@ -708,7 +709,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_3.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =106
+            Y: =86
             ZIndex: =25
 
         Title2_52 As label:
@@ -732,7 +733,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_4.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =136
+            Y: =115
             ZIndex: =26
 
         Title2_53 As label:
@@ -756,7 +757,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_6.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =166
+            Y: =144
             ZIndex: =27
 
         Title2_54 As label:
@@ -780,7 +781,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_5.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =197
+            Y: =173
             ZIndex: =28
 
         Title2_60 As label:
@@ -803,8 +804,8 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =If(Title2_7.Text=Blank(),false,true)
             Width: =65
-            X: =790
-            Y: =230
+            X: =792
+            Y: =197
             ZIndex: =29
 
         "Gallery5_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -4158,7 +4159,7 @@ msftUpdatecaregivers As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =75
+        Height: =48
         HintText: ="Comments"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -4258,4 +4259,72 @@ msftUpdatecaregivers As screen:
         X: =100
         Y: =354
         ZIndex: =177
+
+    Button8_3 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnSelect: |
+            =(If(Title2.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Beginner Skill 1':comment_2.Text}),
+                        Title2_1.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 2': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID}, 'Description for Beginner Skill 2':comment_2.Text}
+                        ),
+                        Title2_2.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 3': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 3': comment_2.Text}),
+                        
+                        Title2_3.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 4': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 4': comment_2.Text}
+                        ),
+                        
+                        Title2_4.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 5': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 5': comment_2.Text}
+                        ),
+            
+                        Title2_6.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 6': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 6': comment_2.Text}),
+            
+                        Title2_5.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 7': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 7': comment_2.Text}),
+                        
+                        Title2_7.Text=Blank(),Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 8': { Value: skillName_2.Selected.'Skill Name' , Id: skillName_2.Selected.ID},'Description for Beginner Skill 8': comment_2.Text}),
+            
+                        Notify("You have entered the maximum number of skills!")
+                        
+                        ));
+            
+            Reset([@skillCategory_8]);
+            Reset(comment_2)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =10.75
+        Text: ="Add"
+        Visible: =varTabSelected=1
+        Width: =67
+        X: =806
+        Y: =489
+        ZIndex: =178
 
