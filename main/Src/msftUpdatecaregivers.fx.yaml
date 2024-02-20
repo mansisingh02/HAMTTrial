@@ -87,8 +87,8 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =76
         Items: |
-            =Filter(Caregivers_1, If(Gallery1.Selected.'Caregiver Email'=Lower(User().Email), 
-            StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email') ))
+            =Filter(Caregivers_1, If( First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="2P")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="3P") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="4P") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1l"),
+            StartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email')))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
@@ -275,9 +275,9 @@ msftUpdatecaregivers As screen:
     "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =171
-        Items: |
-            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org" ,Filter(
+        Height: =224
+        Items: |-
+            =Filter(
                 AddColumns(
                     Beginner,
                     "Beginner 1", 'Beginner Skill 1',
@@ -288,31 +288,18 @@ msftUpdatecaregivers As screen:
                     "Beginner 6", 'Beginner Skill 6',
                     "Beginner 7", 'Beginner Skill 7',
                     "Beginner 8", 'Beginner Skill 8'),
-                    'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
-            ),
-            Filter(
-                AddColumns(
-                    Beginner,
-                    "Beginner 1", 'Beginner Skill 1',
-                    "Beginner 2", 'Beginner Skill 2',
-                    "Beginner 3", 'Beginner Skill 3',
-                    "Beginner 4", 'Beginner Skill 4',
-                    "Beginner 5", 'Beginner Skill 5',
-                    "Beginner 6", 'Beginner Skill 6',
-                    "Beginner 7", 'Beginner Skill 7',
-                    "Beginner 8", 'Beginner Skill 8'),
-                    'Caregiver ID'=txtCaregiverID_1.Text
-            ))
+                    'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =171
+        TemplateSize: =224
         Visible: =varTabSelected=1
         Width: =900
-        X: =100
-        Y: =576
+        X: =79
+        Y: =544
         ZIndex: =50
 
         Title2_1 As label:
@@ -351,7 +338,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =58
+            Y: =57
             ZIndex: =8
 
         Title2_3 As label:
@@ -371,7 +358,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =87
+            Y: =85
             ZIndex: =9
 
         Title2_4 As label:
@@ -391,7 +378,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =116
+            Y: =113
             ZIndex: =10
 
         Title2_5 As label:
@@ -405,11 +392,12 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =ThisItem.'Beginner 7'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =189
+            Y: =169
             ZIndex: =11
 
         Title2_6 As label:
@@ -429,7 +417,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =146
+            Y: =141
             ZIndex: =12
 
         Title2_7 As label:
@@ -443,12 +431,13 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: |
                 =ThisItem.'Beginner 8'.Value
             VerticalAlign: =VerticalAlign.Top
             Width: =227
             X: =40
-            Y: =220
+            Y: =201
             ZIndex: =13
 
         Title2_8 As label:
@@ -492,7 +481,7 @@ msftUpdatecaregivers As screen:
             VerticalAlign: =VerticalAlign.Top
             Width: =85
             X: =733
-            Y: =46
+            Y: =29
             ZIndex: =15
 
         Title2_10 As label:
@@ -552,6 +541,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =If(Title2_7.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -595,6 +585,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: =If(Title2_5.Text=Blank(),"","Edit")
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -669,7 +660,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_1.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =43
+            Y: =28
             ZIndex: =23
 
         Title2_50 As label:
@@ -782,6 +773,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -805,6 +797,7 @@ msftUpdatecaregivers As screen:
             PaddingLeft: =0
             PaddingRight: =0
             PaddingTop: =0
+            Size: =11
             Text: ="Delete"
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
@@ -1556,8 +1549,8 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =140
-        Items: |
-            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org" ,Filter(
+        Items: |-
+            =Filter(
                 AddColumns(
                     Intermediate,
                     "Intermediate 1", 'Intermediate Skill 1',
@@ -1568,21 +1561,8 @@ msftUpdatecaregivers As screen:
                     "Intermediate 6", 'Intermediate Skill 6',
                     "Intermediate 7", 'Intermediate Skill 7',
                     "Intermediate 8", 'Intermediate Skill 8'),
-                    'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
-            ),
-            Filter(
-                AddColumns(
-                    Intermediate,
-                    "Intermediate 1", 'Intermediate Skill 1',
-                    "Intermediate 2", 'Intermediate Skill 2',
-                    "Intermediate 3", 'Intermediate Skill 3',
-                    "Intermediate 4", 'Intermediate Skill 4',
-                    "Intermediate 5", 'Intermediate Skill 5',
-                    "Intermediate 6", 'Intermediate Skill 6',
-                    "Intermediate 7", 'Intermediate Skill 7',
-                    "Intermediate 8", 'Intermediate Skill 8'),
-                    'Caregiver ID'=txtCaregiverID_1.Text
-            ))
+                    'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
@@ -2101,9 +2081,9 @@ msftUpdatecaregivers As screen:
     "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =22
-        Items: |
-            =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",
+        Height: =184
+        Items: |-
+            =
             Filter(
                 AddColumns(
                     Advanced,
@@ -2115,31 +2095,18 @@ msftUpdatecaregivers As screen:
                     "Advanced 6", 'Advanced Skill 6',
                     "Advanced 7", 'Advanced Skill 7',
                     "Advanced 8", 'Advanced Skill 8'),
-                    'Caregiver ID'=Gallery1.Selected.'Caregiver ID'
-            ),
-            Filter(
-                AddColumns(
-                    Advanced,
-                    "Advanced 1", 'Advanced Skill 1',
-                    "Advanced 2", 'Advanced Skill 2',
-                    "Advanced 3", 'Advanced Skill 3',
-                    "Advanced 4", 'Advanced Skill 4',
-                    "Advanced 5", 'Advanced Skill 5',
-                    "Advanced 6", 'Advanced Skill 6',
-                    "Advanced 7", 'Advanced Skill 7',
-                    "Advanced 8", 'Advanced Skill 8'),
-                    'Caregiver ID'=txtCaregiverID_1.Text
-            ))
+                    'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: =
         ShowNavigation: =true
         TemplatePadding: =0
-        TemplateSize: =22
+        TemplateSize: =39
         Visible: =varTabSelected=3
         Width: =910
         X: =109
-        Y: =478
+        Y: =576
         ZIndex: =109
 
         Title2_96 As label:
@@ -2467,7 +2434,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =7
+            Height: =24
             OnSelect: |-
                 =Patch(Advanced,  LookUp(
                             Advanced,
@@ -4210,7 +4177,7 @@ msftUpdatecaregivers As screen:
         Size: =10
         Visible: =varTabSelected=1
         Width: =663
-        X: =120
+        X: =123
         Y: =481
         ZIndex: =173
 
