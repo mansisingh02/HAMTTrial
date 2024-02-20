@@ -76,7 +76,7 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Lato Black'
         Height: =35
         Size: =13
-        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Hello Admin", "Hello, " & User().FullName)
+        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Hello, " & User().FullName, "Hello, " & User().FullName)
         Width: =282
         X: =99
         Y: =135
