@@ -94,6 +94,47 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftDashboard.OnVisible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftDashboard.OnVisible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 556,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnVisible",
+                "module": "msftDashboard",
+                "type": "msftDashboard"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Record"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msfteditcapability.TextInput2_2.Default"
                 }
               ],
@@ -128,7 +169,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
-          "ruleIndex": 1
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -168,7 +209,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -209,7 +250,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
-          "ruleIndex": 3
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -249,7 +290,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrNeedRecord-Arg",
-          "ruleIndex": 4
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -286,7 +327,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -326,7 +367,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 6
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -366,7 +407,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -407,7 +448,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrCannotCoerce-SourceType-TargetType",
-          "ruleIndex": 8
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -447,7 +488,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -487,7 +528,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -527,7 +568,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -567,7 +608,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -607,7 +648,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -647,7 +688,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -687,46 +728,6 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftMasterData.Gallery8.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 78,
-                  "snippet": {
-                    "text": "||"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftMasterData",
-                "type": "msftMasterData.Gallery8"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Filter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
           "ruleIndex": 10
         },
         {
@@ -767,7 +768,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -807,7 +808,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -847,7 +848,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -887,7 +888,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -924,7 +925,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -964,7 +965,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1001,7 +1002,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrFunctionExpectsSelectableControl",
-          "ruleIndex": 12
+          "ruleIndex": 13
         },
         {
           "locations": [
@@ -1041,7 +1042,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1081,7 +1082,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1121,7 +1122,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1161,7 +1162,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1201,7 +1202,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1241,7 +1242,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1281,7 +1282,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1321,7 +1322,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1361,7 +1362,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1401,7 +1402,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1441,7 +1442,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1481,7 +1482,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1521,7 +1522,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1561,7 +1562,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1601,7 +1602,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1641,7 +1642,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1681,7 +1682,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1721,7 +1722,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -1761,7 +1762,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1801,7 +1802,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -1841,7 +1842,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1881,7 +1882,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1921,7 +1922,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -1961,7 +1962,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2001,7 +2002,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2041,7 +2042,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2081,7 +2082,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2121,7 +2122,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2161,7 +2162,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2201,7 +2202,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2241,7 +2242,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2281,7 +2282,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2321,7 +2322,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2361,7 +2362,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2401,7 +2402,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2441,7 +2442,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2481,7 +2482,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2521,7 +2522,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2561,7 +2562,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2601,7 +2602,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2641,7 +2642,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2681,7 +2682,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2721,7 +2722,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2761,7 +2762,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -2801,7 +2802,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2841,7 +2842,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -2881,7 +2882,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2921,7 +2922,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -2961,7 +2962,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3001,7 +3002,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3041,7 +3042,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3081,7 +3082,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3121,7 +3122,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3161,7 +3162,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3201,7 +3202,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3241,7 +3242,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3281,7 +3282,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3321,7 +3322,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3361,7 +3362,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3401,7 +3402,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3441,7 +3442,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3481,7 +3482,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3521,7 +3522,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3561,7 +3562,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3601,7 +3602,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3641,7 +3642,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3681,7 +3682,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3721,7 +3722,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3761,7 +3762,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 11
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -3801,7 +3802,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3841,7 +3842,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -3881,7 +3882,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3921,7 +3922,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -3961,7 +3962,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4001,7 +4002,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4041,7 +4042,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4081,7 +4082,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4121,7 +4122,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4161,7 +4162,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4201,7 +4202,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4241,7 +4242,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4281,7 +4282,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4321,7 +4322,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4361,7 +4362,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4401,7 +4402,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4441,7 +4442,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4481,7 +4482,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4521,7 +4522,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-InOpRhs",
-          "ruleIndex": 9
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -4561,7 +4562,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4601,7 +4602,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4761,7 +4762,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 7
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4801,7 +4802,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -4842,7 +4843,7 @@
             "level": "Medium"
           },
           "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 13
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -4882,7 +4883,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4922,7 +4923,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -4962,7 +4963,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5002,7 +5003,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5042,7 +5043,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5082,7 +5083,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5122,7 +5123,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5162,7 +5163,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5202,7 +5203,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5242,7 +5243,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5282,7 +5283,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5322,7 +5323,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5362,7 +5363,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -5402,7 +5403,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 10
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -19719,19 +19720,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_14"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_15"
               }
             }
           ],
@@ -19749,19 +19750,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_14"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_15"
               }
             }
           ],
@@ -19839,19 +19840,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_15"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_13"
               }
             }
           ],
@@ -19869,19 +19870,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_15.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_15"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_13"
               }
             }
           ],
@@ -19959,19 +19960,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_13"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_14"
               }
             }
           ],
@@ -19989,19 +19990,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_13.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5.Title2_14.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5.Title2_13"
+                "type": "msftUpdatecaregivers.Gallery5.Title2_14"
               }
             }
           ],
@@ -20199,19 +20200,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1"
+                "type": "msftUpdatecaregivers.Gallery5_3"
               }
             }
           ],
@@ -20229,19 +20230,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1"
+                "type": "msftUpdatecaregivers.Gallery5_3"
               }
             }
           ],
@@ -20259,19 +20260,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_17.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_65.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_17.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_65.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_17"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_65"
               }
             }
           ],
@@ -20289,19 +20290,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_17.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_65.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_17.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_65.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_17"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_65"
               }
             }
           ],
@@ -20319,19 +20320,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_55.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_66.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_55.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_66.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_55"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_66"
               }
             }
           ],
@@ -20349,19 +20350,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_55.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_66.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_55.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_66.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_55"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_66"
               }
             }
           ],
@@ -20379,19 +20380,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_56.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_74.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_56.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_74.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_56"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_74"
               }
             }
           ],
@@ -20409,19 +20410,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_56.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_74.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_56.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_74.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_56"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_74"
               }
             }
           ],
@@ -20439,19 +20440,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_19.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_67.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_19.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_67.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_19"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_67"
               }
             }
           ],
@@ -20469,19 +20470,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_19.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_67.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_19.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_67.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_19"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_67"
               }
             }
           ],
@@ -20499,19 +20500,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_21.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_75.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_21.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_75.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_21"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_75"
               }
             }
           ],
@@ -20529,19 +20530,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_21.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_75.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_21.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_75.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_21"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_75"
               }
             }
           ],
@@ -20559,19 +20560,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_57.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_68.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_57.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_68.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_57"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_68"
               }
             }
           ],
@@ -20589,19 +20590,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_57.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_68.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_57.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_68.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_57"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_68"
               }
             }
           ],
@@ -20619,19 +20620,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_23.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_76.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_23.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_76.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_23"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_76"
               }
             }
           ],
@@ -20649,19 +20650,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_23.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_76.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_23.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_76.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_23"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_76"
               }
             }
           ],
@@ -20679,19 +20680,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_58.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_69.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_58.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_69.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_58"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_69"
               }
             }
           ],
@@ -20709,19 +20710,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_58.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_69.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_58.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_69.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_58"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_69"
               }
             }
           ],
@@ -20739,19 +20740,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_29.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_80.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_29.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_80.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_29"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_80"
               }
             }
           ],
@@ -20769,19 +20770,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_29.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_80.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_29.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_80.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_29"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_80"
               }
             }
           ],
@@ -20799,19 +20800,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_59.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_70.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_59.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_70.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_59"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_70"
               }
             }
           ],
@@ -20829,19 +20830,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_59.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_70.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_59.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_70.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_59"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_70"
               }
             }
           ],
@@ -20859,19 +20860,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_25.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_78.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_25.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_78.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_25"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_78"
               }
             }
           ],
@@ -20889,19 +20890,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_25.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_78.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_25.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_78.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_25"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_78"
               }
             }
           ],
@@ -20919,19 +20920,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_61.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_71.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_61.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_71.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_61"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_71"
               }
             }
           ],
@@ -20949,19 +20950,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_61.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_71.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_61.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_71.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_61"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_71"
               }
             }
           ],
@@ -20979,19 +20980,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_27.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_79.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_27.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_79.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_27"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_79"
               }
             }
           ],
@@ -21009,19 +21010,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_27.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_79.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_27.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_79.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_27"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_79"
               }
             }
           ],
@@ -21039,19 +21040,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_62.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_72.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_62.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_72.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_62"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_72"
               }
             }
           ],
@@ -21069,19 +21070,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_62.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_72.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_62.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_72.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_62"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_72"
               }
             }
           ],
@@ -21099,19 +21100,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_31.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_77.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_31.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_77.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_31"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_77"
               }
             }
           ],
@@ -21129,19 +21130,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_31.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_77.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_31.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_77.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_31"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_77"
               }
             }
           ],
@@ -21159,19 +21160,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_63.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_73.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_63.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_73.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_63"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_73"
               }
             }
           ],
@@ -21189,19 +21190,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_63.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_73.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.Title2_63.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_3.Title2_73.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1.Title2_63"
+                "type": "msftUpdatecaregivers.Gallery5_3.Title2_73"
               }
             }
           ],
@@ -21279,19 +21280,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_68.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_68.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_68"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_98"
               }
             }
           ],
@@ -21309,19 +21310,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_68.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_68.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_98.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_68"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_98"
               }
             }
           ],
@@ -21339,19 +21340,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_41.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_41.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_41"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_97"
               }
             }
           ],
@@ -21369,19 +21370,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_41.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_41.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_97.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_41"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_97"
               }
             }
           ],
@@ -21399,19 +21400,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_67.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_67.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_67"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_99"
               }
             }
           ],
@@ -21429,19 +21430,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_67.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_67.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_99.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_67"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_99"
               }
             }
           ],
@@ -21459,19 +21460,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_39.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_39.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_39"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_106"
               }
             }
           ],
@@ -21489,19 +21490,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_39.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_39.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_106.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_39"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_106"
               }
             }
           ],
@@ -21519,19 +21520,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_66.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_66.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_66"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_107"
               }
             }
           ],
@@ -21549,19 +21550,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_66.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_66.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_107.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_66"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_107"
               }
             }
           ],
@@ -21579,19 +21580,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_37.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_37.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_37"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_100"
               }
             }
           ],
@@ -21609,19 +21610,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_37.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_37.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_100.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_37"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_100"
               }
             }
           ],
@@ -21639,19 +21640,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_35.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_35.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_35"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_108"
               }
             }
           ],
@@ -21669,19 +21670,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_35.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_35.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_108.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_35"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_108"
               }
             }
           ],
@@ -21699,19 +21700,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_65.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_65.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_65"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_101"
               }
             }
           ],
@@ -21729,19 +21730,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_65.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_65.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_101.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_65"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_101"
               }
             }
           ],
@@ -21759,19 +21760,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_33.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_33.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_33"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_112"
               }
             }
           ],
@@ -21789,19 +21790,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_33.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_33.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_112.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_33"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_112"
               }
             }
           ],
@@ -21819,19 +21820,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_64.FocusedBorderThickness"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_64.FocusedBorderThickness",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_64"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_102"
               }
             }
           ],
@@ -21849,19 +21850,379 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_64.TabIndex"
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_64.TabIndex",
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_102.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_64"
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_102"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_110"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_110.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_110"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_103"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_103.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_103"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_111"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_111.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_111"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_104"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_104.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_104"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_109"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_109.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_109"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_105"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_105.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_2.Title2_105"
               }
             }
           ],
@@ -24532,366 +24893,6 @@
                 "member": "TabIndex",
                 "module": "msftcertification",
                 "type": "msftcertification.Label11_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_43.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_43.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_43"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_43.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_43.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_43"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_69.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_69.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_69"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_69.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_69.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_69"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_45.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_45.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_45.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_45.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_45"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_70.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_70.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_70"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_70.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_70.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_70"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_47.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_47.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_47"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_47.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_47.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_47"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_71.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_71.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_71"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 17
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_71.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_2.Title2_71.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_2.Title2_71"
               }
             }
           ],
@@ -28588,6 +28589,24 @@
               }
             },
             {
+              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
+                  "If you’re comparing records or tables, the field or column types must match exactly."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
               "id": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
               "messageStrings": {
                 "issue": {
@@ -28779,24 +28798,6 @@
               "properties": {
                 "componentType": "app",
                 "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrIncompatibleTypesForEquality-Left-Right",
-              "messageStrings": {
-                "issue": {
-                  "text": "Incompatible types for comparison. These types can't be compared: {0}, {1}."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
-                  "If you’re comparing records or tables, the field or column types must match exactly."
-                ],
-                "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
