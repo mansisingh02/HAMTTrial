@@ -27,7 +27,7 @@ msftDashboard As screen:
             LevelCounts,
             {
                 LevelName: ThisRecord.LevelName,
-                CaregiverCount: CountIf(CaregiversData,Level = ThisRecord.Level) // Count caregivers where the "Level" matches
+                CaregiverCount: CountIf(CaregiversData,Level.Value = ThisRecord.Level.Value) // Count caregivers where the "Level" matches
             }
         );
         
