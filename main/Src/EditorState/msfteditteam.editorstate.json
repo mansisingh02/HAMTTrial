@@ -76,22 +76,6 @@
           "InvariantPropertyName": "OnChange",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "If(ThisItem.'Primary Project '.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Primary Project'.Value)),\nThisItem.'Secondary Project'.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Secondary Project'.Value)),\nThisItem.'Tertiary Project'.Value=Text(Gallery16.Selected.ID),First(Filter(Discipline, DisciplineName=ThisItem.'Discipline for Tertiary Project'.Value))\n)",
-          "InvariantPropertyName": "Default",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "DefaultSelectedItems",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -108,11 +92,6 @@
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
-        {
-          "Category": "Data",
-          "PropertyName": "Default",
-          "RuleProviderType": "Unknown"
-        },
         {
           "Category": "Data",
           "PropertyName": "NavigateFields",
@@ -146,11 +125,6 @@
         {
           "Category": "Data",
           "PropertyName": "SelectMultiple",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Data",
-          "PropertyName": "DefaultSelectedItems",
           "RuleProviderType": "Unknown"
         },
         {
