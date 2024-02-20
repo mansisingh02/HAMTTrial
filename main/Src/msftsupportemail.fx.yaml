@@ -1,7 +1,7 @@
 "msftsupportemail As screen.'tabletLayout_Email_ver3.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =Collect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
+        =ClearCollect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
         
         
         
@@ -400,4 +400,39 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =4
+
+    msft_Button_99 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 0.9), -10%)
+        OnSelect: =Navigate(msftsupportprompt,ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =6
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="Go Back"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =155
+        X: =22
+        Y: =700
+        ZIndex: =14
 
