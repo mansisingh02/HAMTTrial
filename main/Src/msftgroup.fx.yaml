@@ -71,6 +71,7 @@ msftgroup As screen:
     "'Action Header_3' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =200
         X: =1111
         Y: =208
@@ -243,6 +244,7 @@ msftgroup As screen:
         RadiusTopRight: =4
         Size: =10.5
         Text: ="Delete"
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =70
         X: =1217
         Y: =262
@@ -273,6 +275,7 @@ msftgroup As screen:
         RadiusTopRight: =4
         Size: =10.5
         Text: ="Edit"
+        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =70
         X: =1132
         Y: =262
