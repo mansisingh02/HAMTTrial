@@ -43,69 +43,6 @@ msftUpdateSkill_Caregiver As screen:
         Y: =20
         ZIndex: =14
 
-        skillName As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(193, 212, 245, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(128, 128, 128, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Filter(Skills_1, Discipline = skillCategory_6.Selected.Value)
-            PaddingBottom: =8
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionFill: =RGBA(0, 51, 142, 1)
-            Size: =12.75
-            Width: =318
-            X: =392
-            Y: =278
-            ZIndex: =4
-
-        skillCategory_6 As dropdown:
-            AllowEmptySelection: =true
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(193, 212, 245, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(128, 128, 128, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Font: =Font.'Segoe UI'
-            HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(255, 255, 255, 1)
-            Items: =Distinct(Skills_1,Discipline)
-            PaddingBottom: =8
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 51, 142, 1)
-            SelectionFill: =RGBA(0, 51, 142, 1)
-            Size: =12.75
-            Width: =256
-            X: =125
-            Y: =278
-            ZIndex: =5
-
         msft_Label_34 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -375,4 +312,99 @@ msftUpdateSkill_Caregiver As screen:
         X: =1204
         Y: =400
         ZIndex: =19
+
+    ComboBox4 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Distinct(Skills_1,Discipline)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Skills_1,Discipline),ComboBox4.SearchText,"Value")
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =256
+        X: =125
+        Y: =278
+        ZIndex: =20
+
+    ComboBox7 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DefaultSelectedItems: |
+            =If(
+                varTabSelected = 2,
+                Switch(
+                    varSelectedColumn,
+                    "B1", {Value: Title2_16.Text},
+                    "B1", {Value: Title2.Text},
+                    "B2", {Value: Title2_18.Text},
+                    "B3", {Value: Title2_20.Text},
+                    "B4", {Value: Title2_22.Text},
+                    "B7", {Value: Title2_24.Text},
+                    "B5", {Value: Title2_26.Text},
+                    // Provide a default value if none of the above cases match
+                    {Value: "Default Value"}
+                ),
+                If(
+                    varTabSelected = 1,
+                    Switch(
+                        varSelectedColumn,
+                        "B1", {Value: Title2.Text},
+                        // Provide a default value if none of the above cases match
+                        {Value: "Default Value"}
+                    ),
+                    // Else condition when varTabSelected is neither 1 nor 2
+                    // You can add further conditions or default logic here
+                    // For example:
+                    Switch(
+                        varSelectedColumn,
+                        "B1", {Value: Title2.Text},
+                        // Provide a default value if none of the above cases match
+                        {Value: "Default Value"}
+                    )
+                )
+            )
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Capability"]
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(212, 212, 212, 1)
+        Items: =Filter(Skills_1, Discipline = ComboBox4.Selected.Value)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        SearchFields: =["Capability"]
+        SearchItems: =Search(Filter(Skills_1, Discipline = ComboBox4.Selected.Value),ComboBox7.SearchText,"Capability")
+        SelectionFill: =RGBA(0, 120, 212, 1)
+        Size: =13
+        Width: =301
+        X: =395
+        Y: =278
+        ZIndex: =21
 
