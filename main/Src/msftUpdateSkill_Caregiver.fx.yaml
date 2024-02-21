@@ -149,7 +149,7 @@ msftUpdateSkill_Caregiver As screen:
         OnSelect: |
             =If(varSelectedColumn="B1",Patch(Beginner,  LookUp(
                         Beginner,
-                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: skillName.Selected.'Skill Name' , Id: skillName.Selected.ID}, 'Description for Beginner Skill 1': comment.Text}), 
+                        'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Beginner Skill 1': { Value: ComboBox7.Selected.'Skill Name' , Id: ComboBox7.Selected.ID}, 'Description for Beginner Skill 1': comment.Text}), 
                         
                         varSelectedColumn="B2",Patch(Beginner,  LookUp(
                         Beginner,
@@ -248,7 +248,7 @@ msftUpdateSkill_Caregiver As screen:
             
                         );
             Set(varSelectedColumn,Blank());
-            Reset([@skillCategory_6]);
+            Reset([@ComboBox4]);
             Navigate('Update Caregivers');
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -384,17 +384,20 @@ msftUpdateSkill_Caregiver As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Capability"]
+        DisplayFields: =["SkillName"]
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =Filter(Skills_1, Discipline = ComboBox4.Selected.Value)
+        Items: |
+            =Filter(Skills_1, Discipline = ComboBox4.Selected.Value).'Skill Name'
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Capability"]
-        SearchItems: =Search(Filter(Skills_1, Discipline = ComboBox4.Selected.Value),ComboBox7.SearchText,"Capability")
+        SearchFields: =["SkillName"]
+        SearchItems: |-
+            =Search(Filter(Skills_1, Discipline = ComboBox4.Selected.Value).'Skill Name'
+            ,ComboBox7.SearchText,"SkillName")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =13
