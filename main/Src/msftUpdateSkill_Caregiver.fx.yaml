@@ -49,15 +49,16 @@ msftUpdateSkill_Caregiver As screen:
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
             ChevronDisabledFill: =RGBA(166, 166, 166, 1)
             ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverBackground: =RGBA(193, 212, 245, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(128, 128, 128, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            Font: =Font.'Segoe UI'
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             Items: =Filter(Skills_1, Discipline = skillCategory_6.Selected.Value)
             PaddingBottom: =8
             PaddingLeft: =12
@@ -66,8 +67,7 @@ msftUpdateSkill_Caregiver As screen:
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionColor: =RGBA(0, 0, 0, 1)
-            SelectionFill: =RGBA(255, 255, 255, 1)
+            SelectionFill: =RGBA(0, 51, 142, 1)
             Size: =12.75
             Width: =318
             X: =392
@@ -81,25 +81,25 @@ msftUpdateSkill_Caregiver As screen:
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
             ChevronDisabledFill: =RGBA(166, 166, 166, 1)
             ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+            ChevronHoverBackground: =RGBA(193, 212, 245, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
+            Color: =RGBA(128, 128, 128, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
             HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             Items: =Distinct(Skills_1,Discipline)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
             PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionColor: =RGBA(0, 0, 0, 1)
-            SelectionFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(0, 51, 142, 1)
+            SelectionFill: =RGBA(0, 51, 142, 1)
             Size: =12.75
             Width: =256
             X: =125
@@ -113,6 +113,7 @@ msftUpdateSkill_Caregiver As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =20
             PaddingBottom: =9
             PaddingLeft: =0
@@ -132,6 +133,7 @@ msftUpdateSkill_Caregiver As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =18
             PaddingBottom: =9
             PaddingLeft: =0
@@ -153,6 +155,7 @@ msftUpdateSkill_Caregiver As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             HintText: ="Comments"
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -180,6 +183,7 @@ msftUpdateSkill_Caregiver As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
             Height: =20
             PaddingBottom: =9
             PaddingLeft: =0
@@ -194,6 +198,7 @@ msftUpdateSkill_Caregiver As screen:
 
     Button4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -317,7 +322,8 @@ msftUpdateSkill_Caregiver As screen:
         RadiusTopRight: =4
         Size: =15
         Text: ="Update"
-        X: =1147
+        Width: =142
+        X: =1044
         Y: =400
         ZIndex: =15
 
@@ -336,4 +342,37 @@ msftUpdateSkill_Caregiver As screen:
 
     navBarHorizontal_18 As navBarHorizontal:
         ZIndex: =18
+
+    msft_Button_100 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(151, 0, 0, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+        OnSelect: =Navigate(msftUpdatecaregivers,ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =7
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =14.5
+        Text: ="Go Back"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =141
+        X: =1204
+        Y: =400
+        ZIndex: =19
 
