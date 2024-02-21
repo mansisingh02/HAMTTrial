@@ -154,7 +154,7 @@ msfteditproject As screen:
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =102
+        Height: =139
         HintText: ="Enter Description"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -171,7 +171,7 @@ msfteditproject As screen:
         RadiusTopLeft: =3
         RadiusTopRight: =3
         Size: =11
-        Width: =433
+        Width: =445
         X: =788
         Y: =326
         ZIndex: =7
@@ -261,7 +261,7 @@ msfteditproject As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =11
         Width: =202
-        X: =1016
+        X: =1028
         Y: =266
         ZIndex: =9
 
@@ -400,7 +400,7 @@ msfteditproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="End Date"
-        X: =1009
+        X: =1021
         Y: =224
         ZIndex: =25
 
@@ -744,7 +744,7 @@ msfteditproject As screen:
         Size: =11
         Text: ="In Flight Version"
         X: =791
-        Y: =457
+        Y: =473
         ZIndex: =56
 
     Label3_27 As label:
@@ -760,8 +760,8 @@ msfteditproject As screen:
         Size: =11
         Text: ="In Prod Version"
         Width: =184
-        X: =1075
-        Y: =454
+        X: =1071
+        Y: =470
         ZIndex: =59
 
     msft_TextInput_11 As text:
@@ -796,8 +796,8 @@ msfteditproject As screen:
         RadiusTopRight: =3
         Size: =11
         Width: =149
-        X: =791
-        Y: =497
+        X: =792
+        Y: =510
         ZIndex: =60
 
     msft_TextInput_14 As text:
@@ -833,7 +833,7 @@ msfteditproject As screen:
         Size: =11
         Width: =158
         X: =1075
-        Y: =492
+        Y: =510
         ZIndex: =61
 
     Label3_28 As label:
@@ -850,7 +850,7 @@ msfteditproject As screen:
         Text: ="In Prod"
         Width: =184
         X: =975
-        Y: =458
+        Y: =470
         ZIndex: =62
 
     Label6_37 As label:
@@ -865,7 +865,7 @@ msfteditproject As screen:
         Size: =11
         Text: ="*"
         X: =1022
-        Y: =452
+        Y: =468
         ZIndex: =63
 
     Toggle1 As toggleSwitch:
@@ -898,7 +898,7 @@ msfteditproject As screen:
         TrueFill: =RGBA(0, 120, 212, 1)
         TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         X: =975
-        Y: =501
+        Y: =512
         ZIndex: =64
 
     Icon1_24 As icon.Help:
@@ -1045,7 +1045,7 @@ msfteditproject As screen:
         Tooltip: ="The release versions/notes if the project is underway"
         Width: =13
         X: =925
-        Y: =464
+        Y: =482
         ZIndex: =75
 
     Icon1_35 As icon.Help:
@@ -1066,7 +1066,7 @@ msfteditproject As screen:
         Tooltip: ="If in production, toggle to true, else false"
         Width: =13
         X: =1038
-        Y: =464
+        Y: =484
         ZIndex: =76
 
     Icon1_36 As icon.Help:
@@ -1087,7 +1087,7 @@ msfteditproject As screen:
         Tooltip: ="The release notes/version while in Production"
         Width: =13
         X: =1221
-        Y: =464
+        Y: =480
         ZIndex: =77
 
     ComboBox1_1 As combobox:
@@ -1098,7 +1098,7 @@ msfteditproject As screen:
         ChevronFill: =RGBA(33, 33, 33, 1)
         ChevronHoverBackground: =RGBA(255, 255, 255, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =RGBA(128, 128, 128, 1)
         Default: =Gallery16.Selected.Capability
         DefaultSelectedItems: =Gallery16.Selected.Capability
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -1107,13 +1107,13 @@ msfteditproject As screen:
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Items: =Distinct(Capabilities,Capability)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
         SearchItems: =Search(Distinct(Capabilities,Capability),ComboBox1_1.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
