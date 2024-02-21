@@ -61,8 +61,8 @@ msftUpdatecaregivers As screen:
         Size: =10.5
         Text: ="Pillar Name"
         Width: =92
-        X: =160
-        Y: =190
+        X: =644
+        Y: =191
         ZIndex: =4
 
     Label4 As label:
@@ -109,7 +109,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =ThisItem.'Pillar Name'
+            Text: =ThisItem.'Caregiver Name'
             Width: =206
             Y: =4
             ZIndex: =1
@@ -144,7 +144,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",ThisItem.'Caregiver Name',"")
+            Text: =ThisItem.'Pillar Name'
             Width: =232
             X: =464
             Y: =4
@@ -909,8 +909,8 @@ msftUpdatecaregivers As screen:
         Size: =10.5
         Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Caregiver Name","")
         Width: =142
-        X: =623
-        Y: =190
+        X: =147
+        Y: =189
         ZIndex: =121
 
     navBarVertical_cg_3 As navBarVertical_cg:
