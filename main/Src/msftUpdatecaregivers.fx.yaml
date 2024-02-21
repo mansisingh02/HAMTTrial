@@ -927,7 +927,7 @@ msftUpdatecaregivers As screen:
     Gallery3_1 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =116
+        Height: =172
         Items: |-
             =Filter(
                 AddColumns(
@@ -939,7 +939,7 @@ msftUpdatecaregivers As screen:
                     "Project3",
                     LookUp(Project, 'Project ID'= Caregivers_1[@'Tertiary Project'].Value)
                     ),
-                    If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",'Caregiver ID'= Gallery1.Selected.'Caregiver ID', 'Caregiver ID'= txtCaregiverID_1.Text))
+               'Caregiver ID'= Gallery3.Selected.'Caregiver ID')
                     
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -979,7 +979,7 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             OnSelect: =Select(Parent)
             Size: =12
-            Text: =ThisItem.'Allocation % for Primary Project' * 100 & "%"
+            Text: =If(ThisItem.'Allocation % for Primary Project'=Blank(),"",ThisItem.'Allocation % for Primary Project' * 100 & "%")
             Width: =232
             X: =507
             ZIndex: =2
@@ -1019,6 +1019,60 @@ msftUpdatecaregivers As screen:
             X: =507
             Y: =52
             ZIndex: =4
+
+        Label8_7 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.Project3.'Project Name'
+            Width: =320
+            X: =19
+            Y: =103
+            ZIndex: =5
+
+        Label8_8 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =If(ThisItem.'Allocation % of Tertiary Project'=Blank(),"",ThisItem.'Allocation % of Tertiary Project' * 100 & "%")
+            Width: =232
+            X: =507
+            Y: =80
+            ZIndex: =6
+
+        Label8_9 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =If(ThisItem.'Allocation % for Secondary Project'=Blank(),"",ThisItem.'Allocation % for Secondary Project' * 100 & "%")
+            Width: =232
+            X: =507
+            Y: =40
+            ZIndex: =7
 
     Label7 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
