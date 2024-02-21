@@ -862,10 +862,11 @@ msftUpdatecaregivers As screen:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(168, 27, 27, 1)
+        Fill: =RGBA(255, 255, 255, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
         Height: =30
@@ -885,7 +886,7 @@ msftUpdatecaregivers As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10.75
-        Text: ="Go Back"
+        Text: ="Cancel"
         VerticalAlign: =VerticalAlign.Top
         Width: =127
         X: =954
@@ -3029,7 +3030,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =183
             X: =121
-            Y: =652
+            Y: =646
             ZIndex: =125
 
         skillName_4 As combobox:
@@ -3069,8 +3070,8 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =varTabSelected=1
             Width: =192
-            X: =338
-            Y: =652
+            X: =321
+            Y: =647
             ZIndex: =172
 
         comment_4 As text:
@@ -3081,7 +3082,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
-            Height: =48
+            Height: =30
             HintText: ="Comments"
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -3099,9 +3100,9 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =10
             Visible: =varTabSelected=1
-            Width: =663
-            X: =126
-            Y: =713
+            Width: =314
+            X: =529
+            Y: =647
             ZIndex: =173
 
         msft_Label_56 As label:
@@ -3121,7 +3122,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =128
             X: =123
-            Y: =630
+            Y: =624
             ZIndex: =174
 
         msft_Label_57 As label:
@@ -3140,8 +3141,8 @@ msftUpdatecaregivers As screen:
             Text: ="Comments"
             Visible: =varTabSelected=1
             Width: =108
-            X: =125
-            Y: =695
+            X: =533
+            Y: =625
             ZIndex: =175
 
         msft_Label_58 As label:
@@ -3161,7 +3162,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =36
             X: =338
-            Y: =631
+            Y: =625
             ZIndex: =176
 
         Label7_6 As label:
@@ -3174,12 +3175,13 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
+            Height: =35
             Size: =13
-            Text: ="BEGINNER"
+            Text: ="ADD A NEW BEGINNER SKILL"
             Visible: =varTabSelected=1
-            Width: =152
+            Width: =256
             X: =103
-            Y: =593
+            Y: =586
             ZIndex: =177
 
         Button8_3 As button:
@@ -3246,8 +3248,8 @@ msftUpdatecaregivers As screen:
             Text: ="Add"
             Visible: =varTabSelected=1
             Width: =67
-            X: =809
-            Y: =721
+            X: =868
+            Y: =647
             ZIndex: =178
 
     Icon1_9 As icon.Help:
@@ -3268,8 +3270,8 @@ msftUpdatecaregivers As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =varTabSelected=1
         Width: =18
-        X: =523
-        Y: =616
+        X: =513
+        Y: =620
         ZIndex: =193
 
     BeginnerGroup_1 As group:
