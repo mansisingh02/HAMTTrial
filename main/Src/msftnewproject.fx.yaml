@@ -103,7 +103,7 @@ msftnewproject As screen:
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
-        Height: =66
+        Height: =113
         HintText: ="Enter Description"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -122,7 +122,7 @@ msftnewproject As screen:
         Size: =11
         Width: =441
         X: =767
-        Y: =346
+        Y: =331
         ZIndex: =6
 
     msft_DatePicker_4 As datepicker:
@@ -169,7 +169,7 @@ msftnewproject As screen:
         Size: =11
         Width: =202
         X: =767
-        Y: =280
+        Y: =248
         ZIndex: =7
 
     msft_DatePicker_5 As datepicker:
@@ -211,7 +211,7 @@ msftnewproject As screen:
         Size: =11
         Width: =203
         X: =1005
-        Y: =280
+        Y: =248
         ZIndex: =8
 
     msft_Button_27 As button:
@@ -336,7 +336,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="Start Date"
         X: =767
-        Y: =240
+        Y: =208
         ZIndex: =11
 
     Label3_5 As label:
@@ -351,7 +351,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="End Date"
         X: =1004
-        Y: =240
+        Y: =208
         ZIndex: =12
 
     msft_Dropdown_21 As dropdown:
@@ -659,7 +659,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="*"
         X: =833
-        Y: =237
+        Y: =205
         ZIndex: =41
 
     Label6_16 As label:
@@ -674,7 +674,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="*"
         X: =1066
-        Y: =234
+        Y: =202
         ZIndex: =42
 
     Label6_17 As label:
@@ -749,7 +749,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="In Flight Version"
         X: =765
-        Y: =412
+        Y: =447
         ZIndex: =47
 
     Label3_30 As label:
@@ -766,7 +766,7 @@ msftnewproject As screen:
         Text: ="In Prod Version"
         Width: =184
         X: =1045
-        Y: =409
+        Y: =444
         ZIndex: =48
 
     msft_TextInput_15 As text:
@@ -796,7 +796,7 @@ msftnewproject As screen:
         Size: =11
         Width: =149
         X: =770
-        Y: =452
+        Y: =487
         ZIndex: =49
 
     msft_TextInput_17 As text:
@@ -826,7 +826,7 @@ msftnewproject As screen:
         Size: =11
         Width: =163
         X: =1045
-        Y: =450
+        Y: =485
         ZIndex: =50
 
     Label3_31 As label:
@@ -843,7 +843,7 @@ msftnewproject As screen:
         Text: ="In Prod"
         Width: =184
         X: =948
-        Y: =409
+        Y: =444
         ZIndex: =51
 
     Label6_38 As label:
@@ -858,7 +858,7 @@ msftnewproject As screen:
         Size: =11
         Text: ="*"
         X: =1000
-        Y: =409
+        Y: =444
         ZIndex: =52
 
     Toggle1_1 As toggleSwitch:
@@ -876,10 +876,10 @@ msftnewproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         ShowLabel: =false
         Size: =13
-        TrueFill: =RGBA(0, 120, 212, 1)
+        TrueFill: =RGBA(0, 51, 142, 1)
         TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         X: =953
-        Y: =456
+        Y: =491
         ZIndex: =53
 
     Icon1_2 As icon.Help:
@@ -1026,7 +1026,7 @@ msftnewproject As screen:
         Tooltip: ="The release versions/notes if the project is underway"
         Width: =13
         X: =904
-        Y: =424
+        Y: =459
         ZIndex: =64
 
     Icon1_20 As icon.Help:
@@ -1047,7 +1047,7 @@ msftnewproject As screen:
         Tooltip: ="If in production, toggle to true, else false"
         Width: =13
         X: =1013
-        Y: =424
+        Y: =459
         ZIndex: =65
 
     Icon1_21 As icon.Help:
@@ -1068,7 +1068,7 @@ msftnewproject As screen:
         Tooltip: ="The release notes/version while in Production"
         Width: =13
         X: =1182
-        Y: =424
+        Y: =459
         ZIndex: =66
 
     ComboBox1 As combobox:
@@ -1213,4 +1213,19 @@ msftnewproject As screen:
         X: =87
         Y: =702
         ZIndex: =90
+
+    Label3_53 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =11
+        Text: ="Description"
+        X: =767
+        Y: =291
+        ZIndex: =91
 
