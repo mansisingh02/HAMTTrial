@@ -365,7 +365,6 @@ msftUpdateSkill_Caregiver As screen:
                     "B4", {Value: Title2_22.Text},
                     "B7", {Value: Title2_24.Text},
                     "B5", {Value: Title2_26.Text},
-                    // Provide a default value if none of the above cases match
                     {Value: "Default Value"}
                 ),
                 If(
@@ -373,16 +372,11 @@ msftUpdateSkill_Caregiver As screen:
                     Switch(
                         varSelectedColumn,
                         "B1", {Value: Title2.Text},
-                        // Provide a default value if none of the above cases match
                         {Value: "Default Value"}
                     ),
-                    // Else condition when varTabSelected is neither 1 nor 2
-                    // You can add further conditions or default logic here
-                    // For example:
                     Switch(
                         varSelectedColumn,
-                        "B1", {Value: Title2.Text},
-                        // Provide a default value if none of the above cases match
+                        "B1", {Value: Title2_32.Text},
                         {Value: "Default Value"}
                     )
                 )
