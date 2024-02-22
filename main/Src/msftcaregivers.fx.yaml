@@ -208,7 +208,7 @@ msftcaregivers As screen:
                  Lower(User().Email)="mansi.singh@providence.org",true,false)
             Width: =75
             X: =1077
-            Y: =11
+            Y: =6
             ZIndex: =8
 
         Label28 As label:
@@ -246,8 +246,8 @@ msftcaregivers As screen:
             Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Project1.'Project Name'
-            Width: =222
-            X: =716
+            Width: =240
+            X: =698
             ZIndex: =10
 
         projectDot As group:
@@ -319,18 +319,19 @@ msftcaregivers As screen:
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
-                Color: =RGBA(51, 51, 51, 1)
+                Color: =RGBA(0, 51, 142, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =23
                 OnSelect: =Set(showSkills,true)
-                Size: =13
-                Text: ="..."
-                Width: =31
-                X: =667
-                Y: =3
+                Size: =6
+                Text: ="Detailed View..."
+                Width: =68
+                X: =618
+                Y: =6
                 ZIndex: =14
 
     Label2 As label:
@@ -517,7 +518,7 @@ msftcaregivers As screen:
         FontWeight: =FontWeight.Bold
         Size: =12
         Text: ="Projects"
-        X: =867
+        X: =882
         Y: =205
         ZIndex: =12
 
