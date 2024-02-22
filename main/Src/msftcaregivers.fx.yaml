@@ -225,7 +225,8 @@ msftcaregivers As screen:
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =9
-            Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ")  & ThisItem.Intermediatee.'Intermediate Skill 1'.Value & If(ThisItem.Intermediatee.'Intermediate Skill 1'.Value=Blank(), "", ", ") & ThisItem.Intermediatee.'Intermediate Skill 2'.Value
+            Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(),"", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 4'.Value & If(ThisItem.Advancedd.'Advanced Skill 4'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 5'.Value 
+            VerticalAlign: =VerticalAlign.Top
             Width: =377
             X: =307
             ZIndex: =9
@@ -289,6 +290,47 @@ msftcaregivers As screen:
                 X: =878
                 Y: =4
                 ZIndex: =12
+
+        skillsDot As group:
+            Height: =5
+            Width: =5
+            X: =-838
+            Y: =7
+            ZIndex: =15
+
+            Rectangle6_1 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(204, 204, 204, 1)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =Set(showProjects,true)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =19
+                X: =667
+                Y: =7
+                ZIndex: =13
+
+            Label50_1 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =23
+                OnSelect: =Set(showProjects,true)
+                Size: =13
+                Text: ="..."
+                Width: =31
+                X: =667
+                Y: =3
+                ZIndex: =14
 
     Label2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
