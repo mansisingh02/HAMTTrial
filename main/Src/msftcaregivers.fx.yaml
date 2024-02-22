@@ -87,7 +87,7 @@ msftcaregivers As screen:
         Width: =112
         X: =876
         Y: =149
-        ZIndex: =7
+        ZIndex: =2
 
     Caregivers As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -107,7 +107,7 @@ msftcaregivers As screen:
         Width: =203
         X: =97
         Y: =97
-        ZIndex: =29
+        ZIndex: =3
 
     "Gallery1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(0, 42, 74, 1)
@@ -139,7 +139,7 @@ msftcaregivers As screen:
         Width: =1194
         X: =123
         Y: =256
-        ZIndex: =33
+        ZIndex: =4
 
         Subtitle1 As label:
             Color: =RGBA(51, 51, 51, 1)
@@ -304,7 +304,7 @@ msftcaregivers As screen:
         Text: ="Caregiver"
         X: =123
         Y: =205
-        ZIndex: =37
+        ZIndex: =5
 
     Image3 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -329,7 +329,7 @@ msftcaregivers As screen:
         Width: =32
         X: =1224
         Y: =717
-        ZIndex: =39
+        ZIndex: =6
 
     Image4 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -354,7 +354,7 @@ msftcaregivers As screen:
         Width: =30
         X: =1006
         Y: =717
-        ZIndex: =40
+        ZIndex: =7
 
     hiddenGallery As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -408,7 +408,7 @@ msftcaregivers As screen:
         Visible: =false
         X: =87
         Y: =684
-        ZIndex: =41
+        ZIndex: =8
 
     rowCount As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -424,7 +424,7 @@ msftcaregivers As screen:
         Visible: =false
         X: =87
         Y: =721
-        ZIndex: =42
+        ZIndex: =9
 
     Label1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -442,7 +442,7 @@ msftcaregivers As screen:
         Width: =158
         X: =1066
         Y: =713
-        ZIndex: =43
+        ZIndex: =10
 
     Label2_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -458,7 +458,7 @@ msftcaregivers As screen:
         Text: ="Skills"
         X: =450
         Y: =205
-        ZIndex: =44
+        ZIndex: =11
 
     Label2_2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -474,7 +474,7 @@ msftcaregivers As screen:
         Text: ="Projects"
         X: =867
         Y: =205
-        ZIndex: =45
+        ZIndex: =12
 
     Label2_3 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -491,7 +491,7 @@ msftcaregivers As screen:
         Width: =112
         X: =1194
         Y: =205
-        ZIndex: =46
+        ZIndex: =13
 
     navBarVertical_admin_27 As navBarVertical_admin:
         caregiversNav: =msftcaregivers
@@ -499,7 +499,7 @@ msftcaregivers As screen:
         Fill: =RGBA(0,51,142,1)
         masterDataNav: =msftMasterData
         projectNav: =msftproject
-        ZIndex: =50
+        ZIndex: =14
 
     msft_Button_48 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -534,7 +534,7 @@ msftcaregivers As screen:
         Width: =128
         X: =1176
         Y: =97
-        ZIndex: =56
+        ZIndex: =15
 
     Gallery13 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -548,7 +548,7 @@ msftcaregivers As screen:
         Width: =434
         X: =547
         Y: =666
-        ZIndex: =59
+        ZIndex: =16
 
         Label48 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -573,10 +573,10 @@ msftcaregivers As screen:
         Visible: |-
             =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="sunjoy.prabakaran@providence.org" ||
             Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
-        ZIndex: =60
+        ZIndex: =17
 
     navBarHorizontal_29 As navBarHorizontal:
-        ZIndex: =61
+        ZIndex: =18
 
     searchLevel As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -608,7 +608,7 @@ msftcaregivers As screen:
         Width: =190
         X: =300
         Y: =149
-        ZIndex: =63
+        ZIndex: =19
 
     searchLevel_1 As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -640,7 +640,7 @@ msftcaregivers As screen:
         Width: =190
         X: =499
         Y: =150
-        ZIndex: =64
+        ZIndex: =20
 
     Toggle2 As toggleSwitch:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -662,14 +662,30 @@ msftcaregivers As screen:
         Width: =116
         X: =720
         Y: =154
-        ZIndex: =65
+        ZIndex: =21
 
-    ProjectPopUp As group:
+    projectPopUp As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =74
+        ZIndex: =31
+
+        Rectangle8 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 0.9)
+            Fill: =RGBA(255, 255, 255, 0.9)
+            FocusedBorderThickness: =4
+            Height: =708
+            HoverFill: =RGBA(255, 255, 255, 0.9)
+            PressedFill: =RGBA(255, 255, 255, 0.9)
+            Visible: =If(showProjects=true,true,false)
+            Width: =1291
+            X: =75
+            Y: =60
+            ZIndex: =22
 
         Rectangle4 As rectangle:
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -682,9 +698,9 @@ msftcaregivers As screen:
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =If(showProjects=true,true,false)
             Width: =602
-            X: =309
-            Y: =296
-            ZIndex: =66
+            X: =375
+            Y: =293
+            ZIndex: =23
 
         Label28_2 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -702,9 +718,9 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project1.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =222
-            X: =367
-            Y: =359
-            ZIndex: =67
+            X: =433
+            Y: =356
+            ZIndex: =24
 
         Label28_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -722,9 +738,9 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project1.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =222
-            X: =367
-            Y: =424
-            ZIndex: =68
+            X: =433
+            Y: =421
+            ZIndex: =25
 
         Label28_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -742,9 +758,9 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project1.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =222
-            X: =367
-            Y: =496
-            ZIndex: =69
+            X: =433
+            Y: =493
+            ZIndex: =26
 
         Label28_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -762,9 +778,9 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =689
-            Y: =359
-            ZIndex: =70
+            X: =755
+            Y: =356
+            ZIndex: =27
 
         Label28_6 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -782,9 +798,9 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =692
-            Y: =424
-            ZIndex: =71
+            X: =758
+            Y: =421
+            ZIndex: =28
 
         Label28_7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -802,9 +818,9 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =692
-            Y: =489
-            ZIndex: =72
+            X: =758
+            Y: =486
+            ZIndex: =29
 
         Icon1 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -824,7 +840,7 @@ msftcaregivers As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(showProjects=true,true,false)
             Width: =35
-            X: =867
-            Y: =304
-            ZIndex: =73
+            X: =933
+            Y: =301
+            ZIndex: =30
 
