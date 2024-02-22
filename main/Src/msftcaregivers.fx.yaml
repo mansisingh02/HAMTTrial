@@ -955,7 +955,7 @@ msftcaregivers As screen:
             DelayItemLoading: =true
             Height: =98
             Items: |-
-                =Table({ID:1,Label:"Beginner Skills"},{ID:2,Label:"Intermediate Skills"},{ID:3,Label:"Advanced Skills"})
+                =Table({IDD:1,Labell:"Beginner Skills"},{IDD:2,Labell:"Intermediate Skills"},{IDD:3,Labell:"Advanced Skills"})
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
@@ -968,16 +968,16 @@ msftcaregivers As screen:
 
             Button2_3 As button:
                 BorderColor: |-
-                    =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#CDCDCD"))
-                BorderStyle: =If(varTabSelected = ThisItem.ID, BorderStyle.None, BorderStyle.Solid)
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#CDCDCD"))
+                BorderStyle: =If(varTabSkills_Caregivers = ThisItem.IDD, BorderStyle.None, BorderStyle.Solid)
                 BorderThickness: =1
                 Color: |-
-                    =If(varTabSelected = ThisItem.ID, ColorValue("#FFFFFF"), ColorValue("#00338E"))
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#FFFFFF"), ColorValue("#00338E"))
                 DisabledBorderColor: =RGBA(255, 255, 255, 1)
                 DisabledColor: =RGBA(255, 255, 255, 1)
                 DisabledFill: =RGBA(255, 255, 255, 1)
                 Fill: |-
-                    =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#FFFFFF"))
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#FFFFFF"))
                 FocusedBorderColor: =ColorFade(Self.Fill, -75%)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
@@ -985,8 +985,8 @@ msftcaregivers As screen:
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: |-
-                    =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#00338E"))
-                OnSelect: =Set(varTabSkills_Caregivers, ThisItem.ID)
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#00338E"))
+                OnSelect: =Set(varTabSkills_Caregivers, ThisItem.IDD)
                 PaddingBottom: =0
                 PaddingLeft: =0
                 PaddingRight: =0
@@ -997,7 +997,7 @@ msftcaregivers As screen:
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 Size: =9
-                Text: =ThisItem.Label
+                Text: =ThisItem.Labell
                 Width: =148
                 X: =12
                 Y: =40
@@ -1007,12 +1007,12 @@ msftcaregivers As screen:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Height: =275
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =If(showSkills=true,true,false)
             Width: =493
             X: =396
@@ -1029,8 +1029,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 1'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =415
             Y: =395
@@ -1046,8 +1046,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 2'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =416
             Y: =424
@@ -1063,8 +1063,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 3'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =419
             Y: =453
@@ -1080,8 +1080,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 4'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =420
             Y: =482
@@ -1097,8 +1097,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 5'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =417
             Y: =511
@@ -1114,8 +1114,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 7'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =422
             Y: =573
@@ -1131,8 +1131,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 6'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =418
             Y: =540
@@ -1148,11 +1148,11 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 8'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =415
-            Y: =616
+            X: =417
+            Y: =605
             ZIndex: =49
 
         Label51_15 As label:
@@ -1165,8 +1165,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =416
             Y: =391
@@ -1182,8 +1182,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =417
             Y: =420
@@ -1199,8 +1199,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 3'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =420
             Y: =449
@@ -1216,8 +1216,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 4'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =421
             Y: =478
@@ -1233,8 +1233,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =418
             Y: =507
@@ -1250,8 +1250,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 7'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =423
             Y: =569
@@ -1267,8 +1267,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 6'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =419
             Y: =536
@@ -1284,8 +1284,8 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 8'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =416
             Y: =612
@@ -1302,9 +1302,9 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
-            X: =416
+            X: =422
             Y: =391
             ZIndex: =58
 
@@ -1319,10 +1319,10 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =417
-            Y: =420
+            Y: =421
             ZIndex: =59
 
         Label51_21 As label:
@@ -1335,11 +1335,11 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Height: =34
             Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true,true,false)
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 3'.Value
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =420
-            Y: =449
+            Y: =451
             ZIndex: =60
 
         Label51_20 As label:
@@ -1353,10 +1353,10 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =421
-            Y: =478
+            Y: =481
             ZIndex: =61
 
         Label51_19 As label:
@@ -1370,10 +1370,10 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =418
-            Y: =507
+            Y: =511
             ZIndex: =62
 
         Label51_18 As label:
@@ -1387,10 +1387,10 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =423
-            Y: =569
+            Y: =571
             ZIndex: =63
 
         Label51_17 As label:
@@ -1404,10 +1404,10 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =419
-            Y: =536
+            Y: =541
             ZIndex: =64
 
         Label51_16 As label:
@@ -1421,9 +1421,9 @@ msftcaregivers As screen:
             Height: =34
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
-            Visible: =If(showSkills=true,true,false)
+            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
-            X: =416
-            Y: =612
+            X: =420
+            Y: =597
             ZIndex: =65
 
