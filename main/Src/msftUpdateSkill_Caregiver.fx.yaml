@@ -272,9 +272,7 @@ msftUpdateSkill_Caregiver As screen:
         ZIndex: =16
 
     navBarVertical_cg_2 As navBarVertical_cg:
-        Visible: |-
-            =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="sunjoy.prabakaran@providence.org" ||
-            Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="mansi.singh@providence.org", false, true)
+        Visible: =If(First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"1P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"3P" || Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="mansi.singh@providence.org",false,true)
         ZIndex: =17
 
     navBarHorizontal_18 As navBarHorizontal:
