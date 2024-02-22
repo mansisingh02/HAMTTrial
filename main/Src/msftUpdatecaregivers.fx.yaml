@@ -188,9 +188,9 @@ msftUpdatecaregivers As screen:
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             PaddingLeft: =1
             PaddingRight: =1
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =RGBA(0, 51, 142, 1)
             PressedColor: =RGBA(255,255,255,1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 51, 142, 1)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             Size: =10.75
@@ -906,7 +906,7 @@ msftUpdatecaregivers As screen:
         PaddingRight: =0
         PaddingTop: =8
         Size: =10.5
-        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Caregiver Name","")
+        Text: ="Caregiver Name"
         Width: =142
         X: =147
         Y: =189
