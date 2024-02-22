@@ -249,39 +249,46 @@ msftcaregivers As screen:
             X: =716
             ZIndex: =10
 
-        Rectangle6 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(204, 204, 204, 1)
-            FocusedBorderThickness: =4
-            Height: =20
-            HoverFill: =RGBA(0, 120, 212, 1)
-            OnSelect: =Select(Parent)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Width: =19
-            X: =878
-            Y: =8
-            ZIndex: =11
+        projectDot As group:
+            Height: =5
+            Width: =5
+            X: =40
+            Y: =35
+            ZIndex: =13
 
-        Label50 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =23
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: ="..."
-            Width: =31
-            X: =878
-            Y: =4
-            ZIndex: =12
+            Rectangle6 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(204, 204, 204, 1)
+                FocusedBorderThickness: =4
+                Height: =20
+                HoverFill: =RGBA(0, 120, 212, 1)
+                OnSelect: =Set(showProjects,true)
+                PressedFill: =RGBA(0, 120, 212, 1)
+                Width: =19
+                X: =878
+                Y: =8
+                ZIndex: =11
+
+            Label50 As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(51, 51, 51, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =23
+                OnSelect: =Set(showProjects,true)
+                Size: =13
+                Text: ="..."
+                Width: =31
+                X: =878
+                Y: =4
+                ZIndex: =12
 
     Label2 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -673,7 +680,7 @@ msftcaregivers As screen:
             Height: =302
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =602
             X: =309
             Y: =296
@@ -693,7 +700,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =Gallery1.Selected.Project1.'Project Name' 
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =222
             X: =367
             Y: =359
@@ -713,7 +720,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =Gallery1.Selected.Project1.'Project Name' 
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =222
             X: =367
             Y: =424
@@ -733,7 +740,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =Gallery1.Selected.Project1.'Project Name' 
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =222
             X: =367
             Y: =496
@@ -753,7 +760,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =72
             X: =689
             Y: =359
@@ -773,7 +780,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =72
             X: =692
             Y: =424
@@ -793,7 +800,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =72
             X: =692
             Y: =489
@@ -811,10 +818,11 @@ msftcaregivers As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
+            OnSelect: =Set(showProjects,false)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =false
+            Visible: =If(showProjects=true,true,false)
             Width: =35
             X: =867
             Y: =304
