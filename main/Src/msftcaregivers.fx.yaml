@@ -735,7 +735,7 @@ msftcaregivers As screen:
             LineHeight: =2
             OnSelect: =
             Size: =12
-            Text: =Gallery1.Selected.Project1.'Project Name' 
+            Text: =Gallery1.Selected.Project2.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =222
             X: =433
@@ -755,7 +755,7 @@ msftcaregivers As screen:
             LineHeight: =2
             OnSelect: =
             Size: =12
-            Text: =Gallery1.Selected.Project1.'Project Name' 
+            Text: =Gallery1.Selected.Project3.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =222
             X: =433
@@ -795,7 +795,7 @@ msftcaregivers As screen:
             LineHeight: =2
             OnSelect: =
             Size: =12
-            Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
+            Text: =If(Gallery1.Selected.Project2.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Secondary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
             X: =758
@@ -815,7 +815,7 @@ msftcaregivers As screen:
             LineHeight: =2
             OnSelect: =
             Size: =12
-            Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
+            Text: =If(Gallery1.Selected.Project3.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % of Tertiary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
             X: =758
