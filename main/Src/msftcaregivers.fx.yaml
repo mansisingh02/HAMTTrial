@@ -307,7 +307,7 @@ msftcaregivers As screen:
                 FocusedBorderThickness: =4
                 Height: =20
                 HoverFill: =RGBA(0, 120, 212, 1)
-                OnSelect: =Set(showProjects,true)
+                OnSelect: =Set(showSkills,true)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 Width: =19
                 X: =667
@@ -324,7 +324,7 @@ msftcaregivers As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =23
-                OnSelect: =Set(showProjects,true)
+                OnSelect: =Set(showSkills,true)
                 Size: =13
                 Text: ="..."
                 Width: =31
@@ -885,4 +885,184 @@ msftcaregivers As screen:
             X: =933
             Y: =301
             ZIndex: =30
+
+    skillsPopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =40
+
+        Rectangle8_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 0.9)
+            Fill: =RGBA(255, 255, 255, 0.9)
+            FocusedBorderThickness: =4
+            Height: =708
+            HoverFill: =RGBA(255, 255, 255, 0.9)
+            PressedFill: =RGBA(255, 255, 255, 0.9)
+            Visible: =If(showSkills=true,true,false)
+            Width: =1291
+            X: =75
+            Y: =60
+            ZIndex: =31
+
+        Rectangle4_1 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =302
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =If(showSkills=true,true,false)
+            Width: =602
+            X: =375
+            Y: =293
+            ZIndex: =32
+
+        Label28_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =Gallery1.Selected.Project1.'Project Name' 
+            Visible: =If(showSkills=true,true,false)
+            Width: =222
+            X: =433
+            Y: =356
+            ZIndex: =33
+
+        Label28_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =Gallery1.Selected.Project2.'Project Name' 
+            Visible: =If(showSkills=true,true,false)
+            Width: =222
+            X: =433
+            Y: =421
+            ZIndex: =34
+
+        Label28_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =Gallery1.Selected.Project3.'Project Name' 
+            Visible: =If(showSkills=true,true,false)
+            Width: =222
+            X: =433
+            Y: =493
+            ZIndex: =35
+
+        Label28_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
+            Visible: =If(showSkills=true,true,false)
+            Width: =72
+            X: =755
+            Y: =356
+            ZIndex: =36
+
+        Label28_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =If(Gallery1.Selected.Project2.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Secondary Project'*100 & "%")
+            Visible: =If(showSkills=true,true,false)
+            Width: =72
+            X: =758
+            Y: =421
+            ZIndex: =37
+
+        Label28_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =35
+            LineHeight: =2
+            OnSelect: =
+            Size: =12
+            Text: =If(Gallery1.Selected.Project3.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % of Tertiary Project'*100 & "%")
+            Visible: =If(showSkills=true,true,false)
+            Width: =72
+            X: =758
+            Y: =486
+            ZIndex: =38
+
+        Icon1_11 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            Color: =RGBA(179, 179, 179, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =35
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(showSkills,false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(showSkills=true,true,false)
+            Width: =35
+            X: =933
+            Y: =301
+            ZIndex: =39
 
