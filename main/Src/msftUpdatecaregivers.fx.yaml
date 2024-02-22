@@ -876,7 +876,7 @@ msftUpdatecaregivers As screen:
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
-        PaddingTop: =6
+        PaddingTop: =7
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -888,8 +888,8 @@ msftUpdatecaregivers As screen:
         Text: ="Go Back"
         VerticalAlign: =VerticalAlign.Top
         Width: =127
-        X: =894
-        Y: =713
+        X: =1007
+        Y: =716
         ZIndex: =120
 
     msft_Label_19 As label:
@@ -1126,15 +1126,15 @@ msftUpdatecaregivers As screen:
     Gallery23 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =170
+        Height: =188
         Items: =Filter('Caregiver Certifications_1','Caregiver ID'=Gallery3.Selected.'Caregiver ID')
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =165
+        TemplateSize: =183
         Visible: =varTabSelected=5
-        Width: =1080
-        X: =98
-        Y: =590
+        Width: =827
+        X: =107
+        Y: =375
         ZIndex: =164
 
         certi1 As label:
@@ -1551,7 +1551,7 @@ msftUpdatecaregivers As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             DisplayFields: =["Value"]
             Font: =Font.'Segoe UI'
-            Height: =30
+            Height: =31
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
@@ -1583,9 +1583,9 @@ msftUpdatecaregivers As screen:
             SelectMultiple: =false
             Size: =10.75
             Visible: =varTabSelected=5
-            Width: =183
-            X: =114
-            Y: =435
+            Width: =219
+            X: =105
+            Y: =645
             ZIndex: =156
 
         Label34 As label:
@@ -1597,13 +1597,13 @@ msftUpdatecaregivers As screen:
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =36
+            Height: =29
             Size: =10.75
             Text: =ValidityPeriodInYears
             Visible: =varTabSelected=5
-            Width: =220
-            X: =648
-            Y: =419
+            Width: =236
+            X: =621
+            Y: =648
             ZIndex: =158
 
         TextInput3 As text:
@@ -1615,7 +1615,7 @@ msftUpdatecaregivers As screen:
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =28
+            Height: =34
             HintText: ="Enter ID"
             HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
@@ -1630,8 +1630,8 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =varTabSelected=5
             Width: =219
-            X: =109
-            Y: =492
+            X: =105
+            Y: =704
             ZIndex: =159
 
         msft_DatePicker_6 As datepicker:
@@ -1643,7 +1643,7 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(219, 219, 219, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =28
+            Height: =34
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
             OnChange: |+
@@ -1660,9 +1660,9 @@ msftUpdatecaregivers As screen:
             SelectedDateFill: =RGBA(0, 120, 212, 1)
             Size: =11
             Visible: =varTabSelected=5
-            Width: =229
-            X: =382
-            Y: =492
+            Width: =238
+            X: =355
+            Y: =704
             ZIndex: =160
 
         msft_DatePicker_7 As datepicker:
@@ -1674,7 +1674,7 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(116, 116, 116, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =29
+            Height: =34
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
             OnChange: =
@@ -1684,9 +1684,9 @@ msftUpdatecaregivers As screen:
             SelectedDateFill: =RGBA(0, 120, 212, 1)
             Size: =11
             Visible: =varTabSelected=5
-            Width: =220
-            X: =644
-            Y: =492
+            Width: =235
+            X: =621
+            Y: =704
             ZIndex: =161
 
         Label3_3 As label:
@@ -1701,8 +1701,8 @@ msftUpdatecaregivers As screen:
             Size: =9
             Text: ="Start Date"
             Visible: =varTabSelected=5
-            X: =380
-            Y: =452
+            X: =350
+            Y: =674
             ZIndex: =162
 
         Label3_6 As label:
@@ -1717,8 +1717,8 @@ msftUpdatecaregivers As screen:
             Size: =9
             Text: ="End Date"
             Visible: =varTabSelected=5
-            X: =644
-            Y: =453
+            X: =615
+            Y: =676
             ZIndex: =163
 
     Label19_1 As label:
@@ -1735,8 +1735,8 @@ msftUpdatecaregivers As screen:
         Text: ="Can't find what you are looking for"
         Visible: =varTabSelected=5
         Width: =155
-        X: =209
-        Y: =415
+        X: =206
+        Y: =626
         ZIndex: =167
 
     Icon1_1 As icon.Help:
@@ -1757,8 +1757,8 @@ msftUpdatecaregivers As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Visible: =varTabSelected=5
         Width: =18
-        X: =342
-        Y: =416
+        X: =332
+        Y: =628
         ZIndex: =168
 
     Label34_1 As label:
@@ -1770,13 +1770,13 @@ msftUpdatecaregivers As screen:
         Fill: =RGBA(255, 255, 255, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =36
+        Height: =28
         Size: =10.75
         Text: =certificationCode
         Visible: =varTabSelected=5
-        Width: =231
-        X: =379
-        Y: =419
+        Width: =240
+        X: =354
+        Y: =649
         ZIndex: =169
 
     msft_Label_55 As label:
@@ -1795,8 +1795,8 @@ msftUpdatecaregivers As screen:
         Text: ="Certification Code"
         Visible: =varTabSelected=5
         Width: =122
-        X: =382
-        Y: =395
+        X: =353
+        Y: =626
         ZIndex: =170
 
     Label7_5 As label:
@@ -1810,11 +1810,11 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="CERTIFICATIONS"
+        Text: ="ADD A NEW CERTIFICATION"
         Visible: =varTabSelected=5
-        Width: =152
-        X: =105
-        Y: =369
+        Width: =254
+        X: =99
+        Y: =584
         ZIndex: =171
 
     "Gallery5_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -2432,8 +2432,8 @@ msftUpdatecaregivers As screen:
         Text: ="Add"
         Visible: =varTabSelected=5
         Width: =67
-        X: =873
-        Y: =492
+        X: =875
+        Y: =704
         ZIndex: =181
 
     "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -3889,4 +3889,44 @@ msftUpdatecaregivers As screen:
             X: =871
             Y: =644
             ZIndex: =204
+
+    msft_Label_65 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =23
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =8
+        Text: ="Validity Period (in Years)"
+        Visible: =varTabSelected=5
+        Width: =122
+        X: =621
+        Y: =624
+        ZIndex: =205
+
+    msft_Label_66 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Height: =23
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =8
+        Text: ="Certification Name"
+        Visible: =varTabSelected=5
+        Width: =122
+        X: =103
+        Y: =625
+        ZIndex: =206
 
