@@ -624,10 +624,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 564,
+                  "charLength": 678,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If( First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\"),\nStartsWith('Caregiver Email',Lower(User().Email)), StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
+                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
                   }
                 }
               },
