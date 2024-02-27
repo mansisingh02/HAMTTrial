@@ -1,5 +1,4 @@
 msftnewMember As screen:
-    Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
         = Set(
@@ -14,7 +13,6 @@ msftnewMember As screen:
                 inProdVersionValue, 
                 LookUp(Project, 'Project Name' = Gallery16.Selected.'Project Name').'In Prod Version'
             )
-    Width: =1366
 
     "'New Project_14' As label":
         BorderColor: =RGBA(0, 0, 0, 0)

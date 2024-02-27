@@ -1,5 +1,4 @@
 msfteditteam As screen:
-    Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
         = Set(
@@ -14,7 +13,6 @@ msfteditteam As screen:
                 inProdVersionValue, 
                 LookUp(Project, 'Project Name' = Gallery16.Selected.'Project Name').'In Prod Version'
             )
-    Width: =1366
 
     Rectangle3_4 As rectangle:
         BorderColor: =RGBA(237, 237, 237, 1)

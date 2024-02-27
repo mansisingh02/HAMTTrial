@@ -1,5 +1,4 @@
 msftproject As screen:
-    Height: =768
     LoadingSpinner: =LoadingSpinner.Data
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
@@ -10,7 +9,6 @@ msftproject As screen:
         Set(PageTeamSize, Param("TeamSize"));
         Set(SelectedColumn, "");
         Set(SelectedValue, "");
-    Width: =1366
 
     "'Table Headers Container' As groupContainer.manualLayoutContainer":
         Height: =48

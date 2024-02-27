@@ -1,11 +1,9 @@
 msfttechnology As screen:
-    Height: =768
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |
         =ClearCollect(FilteredBeginnerSkills, {});
         ClearCollect(FilteredIntermediateSkills, {});
         ClearCollect(FilteredAdvancedSkills, {});
-    Width: =
 
     "'Report Header' As groupContainer.manualLayoutContainer":
         Height: =61
