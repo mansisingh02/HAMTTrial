@@ -1451,6 +1451,7 @@ msftcaregivers As screen:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(varCg,true,false)
         Width: =75
         ZIndex: =68
 
@@ -1458,7 +1459,7 @@ msftcaregivers As screen:
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Visible: =If(varCg,true,false)
+            Visible: =true
 
     Container_Horizontal_44 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
