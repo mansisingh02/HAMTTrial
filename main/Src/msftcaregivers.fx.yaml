@@ -1458,20 +1458,7 @@ msftcaregivers As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Container_Admin_43 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
+    navBarVertical_admin_2 As navBarVertical_admin:
         Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
         ZIndex: =70
-
-        navBarVertical_admin_45 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
 
