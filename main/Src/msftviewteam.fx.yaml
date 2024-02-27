@@ -151,15 +151,6 @@ msftviewteam As screen:
         Y: =102
         ZIndex: =82
 
-    navBarVertical_admin_49 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        ZIndex: =83
-
-    navBarHorizontal_49 As navBarHorizontal:
-        ZIndex: =84
-
     "Gallery21_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
@@ -298,4 +289,48 @@ msftviewteam As screen:
         X: =412
         Y: =236
         ZIndex: =87
+
+    Container_Admin_12 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =88
+
+        navBarVertical_admin_62 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_PrimaryOwner_4 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =89
+
+        navBarVertical_PrimaryOwner_6 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
+
+    Container_Horizontal_13 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =90
+
+        navBarHorizontal_62 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
 

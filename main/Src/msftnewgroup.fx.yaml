@@ -396,15 +396,6 @@ msftnewgroup As screen:
         Y: =174
         ZIndex: =18
 
-    navBarVertical_admin_5 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        ZIndex: =19
-
-    navBarHorizontal_10 As navBarHorizontal:
-        ZIndex: =20
-
     Rectangle6_3 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -418,6 +409,37 @@ msftnewgroup As screen:
         Visible: =popuptwo=true
         Width: =1366
         ZIndex: =21
+
+    Container_Admin_5 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =25
+
+        navBarVertical_admin_55 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_Horizontal_5 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =26
+
+        navBarHorizontal_55 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
 
     Group2_4 As group:
         Height: =5

@@ -276,15 +276,6 @@ msftprojecttype As screen:
         Y: =696
         ZIndex: =11
 
-    navBarVertical_admin_14 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        ZIndex: =12
-
-    navBarHorizontal_16 As navBarHorizontal:
-        ZIndex: =13
-
     Label13 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -355,4 +346,48 @@ msftprojecttype As screen:
         X: =930
         Y: =279
         ZIndex: =16
+
+    Container_Admin_21 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =17
+
+        navBarVertical_admin_71 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_PrimaryOwner_13 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =18
+
+        navBarVertical_PrimaryOwner_15 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
+
+    Container_Horizontal_22 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =19
+
+        navBarHorizontal_71 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
 

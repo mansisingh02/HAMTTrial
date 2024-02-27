@@ -2067,15 +2067,6 @@ msftMasterData As screen:
         Y: =236
         ZIndex: =40
 
-    navBarVertical_admin_29 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        ZIndex: =41
-
-    navBarHorizontal_5 As navBarHorizontal:
-        ZIndex: =42
-
     Label9 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -2248,4 +2239,61 @@ msftMasterData As screen:
         X: =727
         Y: =356
         ZIndex: =53
+
+    Container_Admin_45 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =54
+
+        navBarVertical_admin_95 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_PrimaryOwner_37 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =55
+
+        navBarVertical_PrimaryOwner_39 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
+
+    Container_Caregiver_3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =56
+
+        navBarVertical_cg_7 As navBarVertical_cg:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
+
+    Container_Horizontal_46 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =57
+
+        navBarHorizontal_95 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
 

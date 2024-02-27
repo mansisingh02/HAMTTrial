@@ -540,13 +540,6 @@ msftcaregivers As screen:
         Y: =205
         ZIndex: =13
 
-    navBarVertical_admin_27 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        Fill: =RGBA(0,51,142,1)
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        ZIndex: =14
-
     msft_Button_48 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -618,9 +611,6 @@ msftcaregivers As screen:
         myAccountNav: =msftUpdatecaregivers
         Visible: =If(First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"1P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"3P" || Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="mansi.singh@providence.org",false,true)
         ZIndex: =17
-
-    navBarHorizontal_29 As navBarHorizontal:
-        ZIndex: =18
 
     searchLevel As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -887,6 +877,23 @@ msftcaregivers As screen:
             X: =933
             Y: =301
             ZIndex: =30
+
+    Container_Admin_43 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =66
+
+        navBarVertical_admin_93 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     SkillsPopUp As group:
         Height: =5
@@ -1424,4 +1431,44 @@ msftcaregivers As screen:
             X: =420
             Y: =597
             ZIndex: =65
+
+    Container_PrimaryOwner_35 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =67
+
+        navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
+
+    Container_Caregiver_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =68
+
+        navBarVertical_cg_5 As navBarVertical_cg:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
+
+    Container_Horizontal_44 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =69
+
+        navBarHorizontal_93 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
 
