@@ -6,7 +6,7 @@ App As appinfo:
         Set(varPrimaryOwner,true), Set(adminOrcoreLeader,true))
     StartScreen: |-
         =If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" && (Lower(User().Email)<>"mansi.singh@providence.org"))) || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="3P",msftUpdatecaregivers,
-        ((First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name')).ID>0 ) || First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name 2')).ID>0 && First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="4P"),
+        ((First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name')).ID>0  || First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name 2')).ID>0 ) && First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="4P"),
         msftUpdatecaregivers, msftDashboard)
     Theme: =PowerAppsTheme
 
