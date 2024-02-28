@@ -3901,6 +3901,7 @@ msftUpdatecaregivers As screen:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(adminOrcoreLeader,true,false)
         Width: =75
         ZIndex: =207
 
@@ -3922,6 +3923,7 @@ msftUpdatecaregivers As screen:
         ZIndex: =208
 
         navBarVertical_PrimaryOwner_36 As navBarVertical_PrimaryOwner:
+            Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Visible: =If(varPrimaryOwner,true,false)
