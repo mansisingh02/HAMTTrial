@@ -1444,6 +1444,7 @@ msftcaregivers As screen:
 
     navBarVertical_admin_2 As navBarVertical_admin:
         Height: =Parent.Height
+        Visible: =If(adminOrcoreLeader,true,false)
         ZIndex: =70
 
     Container_Horizontal_44 As groupContainer.verticalAutoLayoutContainer:
