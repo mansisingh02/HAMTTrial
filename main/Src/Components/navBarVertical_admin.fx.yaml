@@ -104,6 +104,7 @@ navBarVertical_admin As CanvasComponent:
         ZIndex: =5
 
     Label49 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -112,9 +113,29 @@ navBarVertical_admin As CanvasComponent:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =43
         OnSelect: =Navigate(navBarVertical_admin.supportNav);
-        Size: =13
+        Size: =9
         Text: ="Support"
-        Y: =415
+        Width: =75
+        Y: =448
         ZIndex: =6
+
+    Image13 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =43
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='MicrosoftTeams-image (12)'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =75
+        X: =60
+        Y: =414
+        ZIndex: =8
 
