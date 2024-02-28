@@ -2,10 +2,8 @@ App As appinfo:
     BackEnabled: =false
     OnStart: |
         =If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" && (Lower(User().Email)<>"mansi.singh@providence.org"))) || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="3P",Set(varCg,true),
-        /*((First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name')).ID<>Blank()  || First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name 2')).ID<>Blank()) */
-         First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="4P"
-        
-        
+        ((First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name')).ID<>Blank()  || First(Filter(Project,'Primary Owner'.Value=First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).'Caregiver Name 2')).ID<>Blank()) &&
+         First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="4P")
         ,
         Set(varPrimaryOwner,true),
         Set(adminOrcoreLeader,true))
