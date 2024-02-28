@@ -704,7 +704,7 @@ msftproject As screen:
             RadiusTopRight: =4
             Size: =10.5
             Text: ="Edit"
-            Visible: =If(adminOrcoreLeader=true || (ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2'), true, false,true,false)
+            Visible: =If((Lower(User().Email="rama.ghodke@providence.org")) || (Lower(User().Email="mansi.singh@providence.org")) || (Lower(User().Email="madhavi.b@providence.org")) || (Lower(User().Email="madhavi.bandiathmakur@providence.org")) || (ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2'), true, false)
             Width: =70
             X: =1135
             Y: =12
