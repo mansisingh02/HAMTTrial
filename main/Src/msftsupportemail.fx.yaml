@@ -11,8 +11,6 @@
         
         
         
-        
-        
 
     RectQuickActionBar3 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -50,7 +48,8 @@
             Office365Outlook.SendEmail(_emailRecipientString, TextEmailSubject2.Text, TextEmailMessage2.Text, {Importance:"Normal"});           
             Reset(TextEmailSubject2);           
             Reset(TextEmailMessage2);           
-            Clear(MyPeople)
+            Clear(MyPeople);
+            Navigate(msftsupportprompt);
         PaddingBottom: =14
         PaddingLeft: =14
         PaddingRight: =14

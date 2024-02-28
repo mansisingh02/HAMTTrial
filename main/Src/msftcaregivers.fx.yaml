@@ -1430,7 +1430,6 @@ msftcaregivers As screen:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =If(varCg,true,false)
         Width: =75
         ZIndex: =68
 
@@ -1438,7 +1437,7 @@ msftcaregivers As screen:
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Visible: =true
+            Visible: =If(varCg,true,false)
 
     navBarVertical_admin_2 As navBarVertical_admin:
         Height: =Parent.Height
