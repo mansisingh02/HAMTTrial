@@ -403,7 +403,15 @@
           "PaddingTop",
           "PaddingRight",
           "PaddingBottom",
-          "PaddingLeft"
+          "PaddingLeft",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "false",
+            "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          }
         ],
         "ControlUniqueId": "1598",
         "HasDynamicProperties": false,
@@ -593,6 +601,12 @@
             "Category": "Design",
             "InvariantScript": "0",
             "Property": "PaddingLeft",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Behavior",
+            "InvariantScript": "Navigate(navBarVertical_cg.supportNav)",
+            "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -875,7 +889,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelectedCG=1,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1165,7 +1179,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "If(gblSelectedCG=2,RGBA(0, 38, 106, 1),RGBA(0, 51, 142, 1))",
+            "InvariantScript": "",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1214,7 +1228,14 @@
       "X",
       "Y",
       "ZIndex",
-      "supportNav",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "supportNav",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "projectNav",
       {
         "AFDDataSourceName": "",
@@ -1234,12 +1255,12 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638446960172947004",
+    "LastModifiedTimestamp": "638446962082165093",
     "Name": "navBarVertical_cg",
     "Rules": [
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "msftsupportprompt",
         "Property": "supportNav",
         "RuleProviderType": "System"
       },
@@ -1369,7 +1390,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638446960172947004",
+  "LastModifiedTimestamp": "638446962082165093",
   "Name": "0aacb1eb065c442095080747033d8c13",
   "OverridableProperties": {},
   "TemplateOriginalName": "d8d0600eb50240e7988dae5ff84131d3",

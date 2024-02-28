@@ -403,7 +403,15 @@
           "PaddingTop",
           "PaddingRight",
           "PaddingBottom",
-          "PaddingLeft"
+          "PaddingLeft",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "false",
+            "InvariantPropertyName": "OnSelect",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          }
         ],
         "ControlUniqueId": "1600",
         "HasDynamicProperties": false,
@@ -593,6 +601,12 @@
             "Category": "Design",
             "InvariantScript": "0",
             "Property": "PaddingLeft",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Behavior",
+            "InvariantScript": "Navigate(navBarVertical_PrimaryOwner.supportNav)",
+            "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
         ],
@@ -1483,13 +1497,20 @@
       "X",
       "Y",
       "ZIndex",
-      "supportNav",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "supportNav",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "projectNav",
       "caregiversNav",
       "masterDataNav",
       "myAccountNav"
     ],
-    "LastModifiedTimestamp": "638446960456789109",
+    "LastModifiedTimestamp": "638446962520210587",
     "Name": "navBarVertical_PrimaryOwner",
     "Rules": [
       {
@@ -1518,7 +1539,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "msftsupportprompt",
         "Property": "supportNav",
         "RuleProviderType": "System"
       },
@@ -1624,7 +1645,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638446960456789109",
+  "LastModifiedTimestamp": "638446962520210587",
   "Name": "3650ccfc06f44234b46cf8cee496c95c",
   "OverridableProperties": {},
   "TemplateOriginalName": "0aacb1eb065c442095080747033d8c13",
