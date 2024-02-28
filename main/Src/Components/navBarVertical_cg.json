@@ -933,11 +933,25 @@
       "ZIndex",
       "dasboardNav",
       "projectNav",
-      "caregiversNav",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "caregiversNav",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       "masterDataNav",
-      "myAccountNav"
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "App.ActiveScreen",
+        "InvariantPropertyName": "myAccountNav",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      }
     ],
-    "LastModifiedTimestamp": "638446933812458625",
+    "LastModifiedTimestamp": "638446954889101052",
     "Name": "navBarVertical_cg",
     "Rules": [
       {
@@ -954,7 +968,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "msftcaregivers",
         "Property": "caregiversNav",
         "RuleProviderType": "System"
       },
@@ -966,7 +980,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
+        "InvariantScript": "msftUpdatecaregivers",
         "Property": "myAccountNav",
         "RuleProviderType": "System"
       },
@@ -1072,7 +1086,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638446933812458625",
+  "LastModifiedTimestamp": "638446954889101052",
   "Name": "0aacb1eb065c442095080747033d8c13",
   "OverridableProperties": {},
   "TemplateOriginalName": "d8d0600eb50240e7988dae5ff84131d3",

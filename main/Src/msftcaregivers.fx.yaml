@@ -605,8 +605,6 @@ msftcaregivers As screen:
             ZIndex: =1
 
     navBarVertical_cg_1 As navBarVertical_cg:
-        caregiversNav: =msftcaregivers
-        myAccountNav: =msftUpdatecaregivers
         Visible: =If(First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"1P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value<>"3P" || Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="mansi.singh@providence.org",false,true)
         ZIndex: =17
 
