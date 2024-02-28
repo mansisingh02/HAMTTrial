@@ -74,40 +74,49 @@ navBarVertical_PrimaryOwner As CanvasComponent:
         Y: =299
         ZIndex: =9
 
-    Label49_2 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
+    Container5 As groupContainer.manualLayoutContainer:
         BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =43
-        OnSelect: =
-        Size: =9
-        Text: ="Support"
+        DropShadow: =
+        Height: =89
         Width: =75
-        Y: =425
-        ZIndex: =10
+        X: =40
+        Y: =378
+        ZIndex: =12
 
-    Image7_1 As image:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =63
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: ='MicrosoftTeams-image (12)'
-        OnSelect: =Navigate(navBarVertical_PrimaryOwner.supportNav)
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =12
-        Y: =380
-        ZIndex: =11
+        Label49_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =43
+            OnSelect: =
+            Size: =9
+            Text: ="Support"
+            Width: =75
+            Y: =46
+            ZIndex: =1
+
+        Image7_1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =63
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: ='MicrosoftTeams-image (12)'
+            OnSelect: =Navigate(navBarVertical_PrimaryOwner.supportNav)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =50
+            X: =12
+            Y: =1
+            ZIndex: =2
 
