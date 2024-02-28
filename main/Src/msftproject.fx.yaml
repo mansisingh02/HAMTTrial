@@ -457,7 +457,7 @@ msftproject As screen:
             Width: =165
             X: =641
             Y: =3
-            ZIndex: =7
+            ZIndex: =4
 
         Label24_7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -475,37 +475,7 @@ msftproject As screen:
             Width: =94
             X: =1037
             Y: =3
-            ZIndex: =10
-
-        Button5_12 As button:
-            BorderColor: =RGBA(0, 51, 142, 1)
-            BorderThickness: =1
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 142, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =28
-            HoverBorderColor: =RGBA(0, 51, 142, 1)
-            HoverColor: =RGBA(0, 51, 142, 1)
-            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), 0%)
-            OnSelect: =Navigate(msfteditproject, ScreenTransition.Fade)
-            PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), 2%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 51, 142, 1), 10%)
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Size: =10.5
-            Text: ="Edit"
-            Visible: =If(adminOrcoreLeader=true || (ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2'), true, false,true,false)
-            Width: =70
-            X: =1135
-            Y: =12
-            ZIndex: =11
+            ZIndex: =5
 
         Label24_8 As label:
             Align: =Align.Center
@@ -523,7 +493,7 @@ msftproject As screen:
             Text: =ThisItem.'Group Name'.Value
             Width: =114
             X: =526
-            ZIndex: =12
+            ZIndex: =6
 
         Label24_6 As label:
             Align: =Align.Center
@@ -542,7 +512,7 @@ msftproject As screen:
             Width: =129
             X: =397
             Y: =3
-            ZIndex: =13
+            ZIndex: =7
 
         Label20 As label:
             Align: =Align.Center
@@ -560,7 +530,7 @@ msftproject As screen:
             Text: =ThisItem.'Start Date'
             Width: =119
             X: =895
-            ZIndex: =14
+            ZIndex: =8
 
         Label20_1 As label:
             Align: =Align.Center
@@ -579,7 +549,7 @@ msftproject As screen:
             Width: =120
             X: =894
             Y: =28
-            ZIndex: =15
+            ZIndex: =9
 
         Separator1_9 As rectangle:
             BorderColor: =RGBA(149, 149, 149, 1)
@@ -588,7 +558,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - Self.Height
-            ZIndex: =16
+            ZIndex: =10
 
         Separator5_6 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -597,7 +567,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =160
-            ZIndex: =18
+            ZIndex: =11
 
         Separator5_7 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -606,7 +576,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =396
-            ZIndex: =19
+            ZIndex: =12
 
         Separator5_8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -615,7 +585,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =526
-            ZIndex: =20
+            ZIndex: =13
 
         Separator5_9 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -624,7 +594,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =640
-            ZIndex: =21
+            ZIndex: =14
 
         Separator5_10 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -633,7 +603,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =806
-            ZIndex: =22
+            ZIndex: =15
 
         Separator5_11 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -642,7 +612,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =894
-            ZIndex: =23
+            ZIndex: =16
 
         Separator5_12 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -651,7 +621,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =1014
-            ZIndex: =24
+            ZIndex: =17
 
         Separator5_13 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -660,7 +630,7 @@ msftproject As screen:
             OnSelect: =Select(Parent)
             Width: =1.5
             X: =1104
-            ZIndex: =25
+            ZIndex: =18
 
         Label24_9 As label:
             Align: =Align.Center
@@ -678,7 +648,7 @@ msftproject As screen:
             Text: =CountIf(Caregivers_1,'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Tertiary Project'.Value=Text(ThisItem.ID))
             Width: =89
             X: =806
-            ZIndex: =26
+            ZIndex: =19
 
         Button5_22 As button:
             BorderColor: =RGBA(0, 51, 142, 1)
@@ -708,7 +678,37 @@ msftproject As screen:
             Width: =70
             X: =1135
             Y: =12
-            ZIndex: =27
+            ZIndex: =20
+
+        Button5_12 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =1
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =28
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =ColorFade(RGBA(255, 255, 255, 1), 0%)
+            OnSelect: =Navigate(msfteditproject, ScreenTransition.Fade)
+            PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), 2%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 51, 142, 1), 10%)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.5
+            Text: ="Edit"
+            Visible: =If(adminOrcoreLeader=true || (ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name' || ThisItem.'Primary Owner'.Value=Gallery2.Selected.'Caregiver Name 2'), true, false,true,false)
+            Width: =70
+            X: =1135
+            Y: =12
+            ZIndex: =21
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
         Height: =48
