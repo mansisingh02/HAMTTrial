@@ -1613,11 +1613,31 @@ msftUpdatecaregivers As screen:
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
             OnChange: |+
-                =If(
+                =/*If(
                     IsBlank(ValidityPeriodInYears),
                     Set(EndDate, Date(2999, 1, 1)),  // Set end date to hypothetical value
                     Set(EndDate, DateAdd(msft_DatePicker_6.SelectedDate, Value(ValidityPeriodInYears) * 365, 1))
+                )*/
+                /*If(
+                    IsBlank(ValidityPeriodInYears),
+                    Set(EndDate, Date(2999, 1, 1)),  // Set end date to hypothetical value
+                    Set(EndDate, Date(Year(msft_DatePicker_6.SelectedDate) + Value(ValidityPeriodInYears), 1, 1))
+                )*/
+                If(
+                    IsBlank(ValidityPeriodInYears),
+                    Set(EndDate, Date(2999, 1, 1)),  // Set end date to hypothetical value
+                    Set(
+                        EndDate,
+                        Date(
+                            Year(msft_DatePicker_6.SelectedDate) + Value(ValidityPeriodInYears),
+                            Month(msft_DatePicker_6.SelectedDate),
+                            Day(msft_DatePicker_6.SelectedDate)
+                        )
+                    )
                 )
+                
+                
+                
                 
                 
             PaddingBottom: =9
@@ -1640,6 +1660,7 @@ msftUpdatecaregivers As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(116, 116, 116, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
+            DisplayMode: =DisplayMode.Disabled
             Height: =34
             HoverDateFill: =RGBA(200, 200, 200, 1)
             IconBackground: =RGBA(0, 51, 142, 1)
