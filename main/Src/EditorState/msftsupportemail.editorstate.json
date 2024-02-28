@@ -508,7 +508,14 @@
         "HoverBorderColor",
         "FocusedBorderColor",
         "ZIndex",
-        "OnSelect",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "/*Create semicolon separated list of people to email, send the email, reset subject & message fields*/           \nSet(_emailRecipientString, Concat(MyPeople, Mail & \";\"));           \nOffice365Outlook.SendEmail(_emailRecipientString, TextEmailSubject2.Text, TextEmailMessage2.Text, {Importance:\"Normal\"});           \nReset(TextEmailSubject2);           \nReset(TextEmailMessage2);           \nClear(MyPeople)",
+          "InvariantPropertyName": "OnSelect",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "PaddingLeft",
         "PaddingRight",
         "PaddingTop",
