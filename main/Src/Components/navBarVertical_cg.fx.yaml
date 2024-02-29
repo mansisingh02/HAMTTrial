@@ -30,7 +30,7 @@ navBarVertical_cg As CanvasComponent:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
         Y: =113
-        ZIndex: =3
+        ZIndex: =1
 
     Image5_7 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -51,25 +51,34 @@ navBarVertical_cg As CanvasComponent:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
         Y: =208
-        ZIndex: =6
+        ZIndex: =2
 
-    Label49_1 As label:
-        Align: =Align.Center
+    Button6 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
+        DisabledColor: =
+        DisabledFill: =
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderColor: =
+        FocusedBorderThickness: =
         Font: =Font.'Segoe UI'
-        Height: =43
-        OnSelect: =
-        Size: =9
-        Text: ="Support"
-        Width: =75
-        Y: =360
-        ZIndex: =7
+        FontWeight: =FontWeight.Semibold
+        Height: =90
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 38, 106, 1)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: =""
+        X: =40
+        Y: =308
+        ZIndex: =3
 
     Image7 As image:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -87,6 +96,24 @@ navBarVertical_cg As CanvasComponent:
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =50
         X: =12
-        Y: =308
-        ZIndex: =8
+        Y: =318
+        ZIndex: =4
+
+    Label49_1 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =34
+        OnSelect: =
+        Size: =9
+        Text: ="Support"
+        Width: =75
+        Y: =364
+        ZIndex: =5
 
