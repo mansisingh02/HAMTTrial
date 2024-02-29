@@ -267,6 +267,7 @@ msftcaregivers As screen:
                 HoverFill: =RGBA(0, 120, 212, 1)
                 OnSelect: =Set(showProjects,true)
                 PressedFill: =RGBA(0, 120, 212, 1)
+                Visible: =If(Label28_1.Text=Blank(),false,true)
                 Width: =19
                 X: =926
                 Y: =7
@@ -286,6 +287,7 @@ msftcaregivers As screen:
                 OnSelect: =Set(showProjects,true)
                 Size: =6
                 Text: ="View More..."
+                Visible: =If(Label28_1.Text=Blank(),false,true)
                 Width: =112
                 X: =926
                 Y: =6
@@ -309,6 +311,7 @@ msftcaregivers As screen:
                 HoverFill: =RGBA(0, 120, 212, 1)
                 OnSelect: =Set(showSkills,true)
                 PressedFill: =RGBA(0, 120, 212, 1)
+                Visible: =If(Label28.Text="",false,true)
                 Width: =19
                 X: =667
                 Y: =7
@@ -328,6 +331,7 @@ msftcaregivers As screen:
                 OnSelect: =Set(showSkills,true)
                 Size: =6
                 Text: ="Detailed View..."
+                Visible: =If(Label28.Text="",false,true)
                 Width: =68
                 X: =618
                 Y: =6
