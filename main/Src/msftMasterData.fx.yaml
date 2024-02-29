@@ -2241,20 +2241,6 @@ msftMasterData As screen:
         Y: =356
         ZIndex: =53
 
-    Container_Admin_45 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =54
-
-        navBarVertical_admin_95 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
-
     Container_PrimaryOwner_37 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -2281,13 +2267,31 @@ msftMasterData As screen:
             LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
 
+    Container_admin_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =58
+
+        navBarVertical_admin_4 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
     Container_Horizontal_46 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =60
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =57
+        ZIndex: =59
 
         navBarHorizontal_95 As navBarHorizontal:
             Height: =Parent.Height

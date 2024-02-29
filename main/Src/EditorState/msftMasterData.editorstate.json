@@ -1707,7 +1707,7 @@
       "StyleName": "defaultDropdownStyle",
       "Type": "ControlInfo"
     },
-    "Container_Admin_45": {
+    "Container_admin_1": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -1771,9 +1771,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Container_Admin_45",
+      "Name": "Container_admin_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1962,7 +1962,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Caregiver_3",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2148,7 +2148,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Horizontal_46",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2337,7 +2337,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_PrimaryOwner_37",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13051,7 +13051,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "navBarVertical_admin_95": {
+    "navBarVertical_admin_4": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -13074,10 +13074,38 @@
         "X",
         "Y",
         "ZIndex",
-        "dasboardNav",
-        "projectNav",
-        "caregiversNav",
-        "masterDataNav",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "msftDashboardpowerbi",
+          "InvariantPropertyName": "dasboardNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "projectNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "caregiversNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "masterDataNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Visible",
         {
           "AFDDataSourceName": "",
@@ -13140,7 +13168,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "navBarVertical_admin_95",
+      "Name": "navBarVertical_admin_4",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -13148,22 +13176,22 @@
         {
           "Category": "Data",
           "PropertyName": "masterDataNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "caregiversNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "projectNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "dasboardNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
