@@ -305,7 +305,7 @@ msfteditproject As screen:
         HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
         OnSelect: |
             =Reset(msft_Dropdown_28);
-            Reset(msft_Dropdown_29);
+            Reset(ComboBox1_2);
             Reset(msft_Dropdown_30);
             Reset(msft_Dropdown_32);
             Reset(ComboBox1_1);
@@ -333,7 +333,7 @@ msfteditproject As screen:
         Text: ="Reset"
         VerticalAlign: =VerticalAlign.Top
         Width: =143
-        X: =254
+        X: =798
         Y: =702
         ZIndex: =20
 
@@ -365,10 +365,10 @@ msfteditproject As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =15
-        Text: ="Continue to edit team"
+        Text: ="Save and Continue to edit team"
         VerticalAlign: =VerticalAlign.Top
-        Width: =320
-        X: =1009
+        Width: =391
+        X: =941
         Y: =702
         ZIndex: =21
 
@@ -553,38 +553,6 @@ msfteditproject As screen:
         X: =203
         Y: =348
         ZIndex: =44
-
-    msft_Dropdown_29 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(187, 210, 250, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(116, 116, 116, 1)
-        Default: =Gallery16.Selected.Goal.Value
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =Distinct('Project Goals',Goal)
-        OnChange: =Set(varSelectedValue, msft_Dropdown_29.Selected.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(0, 51, 142, 1)
-        Width: =202
-        X: =504
-        Y: =510
-        ZIndex: =45
 
     Label3_21 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1229,4 +1197,37 @@ msfteditproject As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    ComboBox1_2 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(255, 255, 255, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(187, 210, 250, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(128, 128, 128, 1)
+        Default: =Gallery16.Selected.Goal
+        DefaultSelectedItems: =Gallery16.Selected.Capability
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        Height: =38
+        HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
+        HoverColor: =RGBA(51, 51, 51, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
+        Items: =Distinct('Project Goals',Goal)
+        PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct('Project Goals',Goal),ComboBox1_2.SearchText,"Value")
+        SelectionFill: =RGBA(0, 51, 142, 1)
+        Size: =13
+        Width: =202
+        X: =504
+        Y: =510
+        ZIndex: =90
 
