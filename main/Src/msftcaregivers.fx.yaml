@@ -1444,7 +1444,11 @@ msftcaregivers As screen:
             Visible: =If(varCg,true,false)
 
     navBarVertical_admin_2 As navBarVertical_admin:
+        caregiversNav: =msftcaregivers
+        dasboardNav: =msftDashboard
         Height: =Parent.Height
+        masterDataNav: =msftMasterData
+        projectNav: =msftproject
         Visible: =If(adminOrcoreLeader,true,false)
         ZIndex: =70
 
