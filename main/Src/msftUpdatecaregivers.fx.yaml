@@ -1880,7 +1880,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             Font: =Font.'Segoe UI'
             FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
+            Height: =25
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -1890,9 +1890,9 @@ msftUpdatecaregivers As screen:
             Text: |
                 =ThisItem.'Intermediate 4'.Value
             VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =85
+            Width: =517
+            X: =36
+            Y: =90
             ZIndex: =9
 
         Title2_24 As label:
@@ -1973,28 +1973,6 @@ msftUpdatecaregivers As screen:
             X: =40
             Y: =197
             ZIndex: =13
-
-        Title2_23 As label:
-            Color: =RGBA(0, 51, 142, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B4");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_22.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =85
-            ZIndex: =17
 
         Title2_31 As label:
             Color: =RGBA(0, 108, 191, 1)
@@ -2083,30 +2061,6 @@ msftUpdatecaregivers As screen:
             X: =733
             Y: =141
             ZIndex: =21
-
-        Title2_58 As label:
-            Color: =RGBA(190, 71, 71, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_22.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =86
-            ZIndex: =25
 
         Title2_59 As label:
             Color: =RGBA(190, 71, 71, 1)
@@ -2413,6 +2367,70 @@ msftUpdatecaregivers As screen:
             X: =781
             Y: =63
             ZIndex: =37
+
+        Button10_8 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Set(varSelectedColumn,"B4");
+                Navigate(msftUpdateSkill_Caregiver);
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(Title2_22.Text=Blank(),"","Edit")
+            Width: =68
+            X: =707
+            Y: =90
+            ZIndex: =38
+
+        Button10_9 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(Title2_22.Text=Blank(),false,true)
+            Width: =68
+            X: =781
+            Y: =90
+            ZIndex: =39
 
     Button8_4 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
