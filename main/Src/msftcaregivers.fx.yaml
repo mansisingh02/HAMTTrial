@@ -185,30 +185,6 @@ msftcaregivers As screen:
             Y: =6
             ZIndex: =7
 
-        Subtitle1_3 As label:
-            Color: =RGBA(0, 51, 142, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =21
-            OnSelect: =Navigate(msftUpdatecaregivers)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Update"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: |-
-                =If(Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email) ||
-                (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name' || (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name 2' ||
-                 Lower(User().Email)="mansi.singh@providence.org",true,false)
-            Width: =75
-            X: =1077
-            Y: =8
-            ZIndex: =8
-
         Label28 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
@@ -293,6 +269,38 @@ msftcaregivers As screen:
                 Y: =6
                 ZIndex: =12
 
+        Button8 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =19
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Navigate(msftUpdatecaregivers)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =9
+            Text: ="Update"
+            Visible: |-
+                =If(Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email) ||
+                (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name' || (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name 2' ||
+                 Lower(User().Email)="mansi.singh@providence.org",true,false)
+            Width: =71
+            X: =1063
+            Y: =8
+            ZIndex: =15
+
         skillsDot As group:
             Height: =5
             Width: =5
@@ -327,14 +335,14 @@ msftcaregivers As screen:
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =23
+                Height: =21
                 OnSelect: =Set(showSkills,true)
                 Size: =6
-                Text: ="Detailed View..."
+                Text: ="View Other Skills..."
                 Visible: =If(Label28.Text="",false,true)
-                Width: =68
+                Width: =80
                 X: =618
-                Y: =6
+                Y: =8
                 ZIndex: =14
 
     Label2 As label:
