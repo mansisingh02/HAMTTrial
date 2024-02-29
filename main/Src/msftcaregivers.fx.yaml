@@ -441,7 +441,7 @@ msftcaregivers As screen:
                     ) &&
             
                     (('Primary Project '.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank()) ||
-                    ('Secondary Allocation'.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank())  ||
+                    ('Secondary Project'.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank())  ||
                     ('Tertiary Project'.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank())
                      )
             
