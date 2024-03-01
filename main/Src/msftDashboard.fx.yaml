@@ -76,78 +76,19 @@ msftDashboard As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    CompositePieChart2 As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =13
-
-        Title12 As label:
-            Align: =Align.Center
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
-            Height: =15
-            Size: =12
-            Text: ="Caregivers by Level"
-            Width: =356
-            X: =997
-            Y: =384
-            ZIndex: =14
-
-        PieChart2 As pieChart:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            Font: =Font.'Segoe UI'
-            Height: =244
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            ItemColorSet: |+
-                =[RGBA(0, 51, 142, 1), RGBA(0, 40, 120, 1), RGBA(0, 45, 130, 1), RGBA(0, 55, 150, 1), RGBA(20, 70, 180, 1), RGBA(40, 85, 200, 1), RGBA(60, 100, 220, 1), RGBA(80, 115, 240, 1), RGBA(100, 130, 255, 1), RGBA(120, 145, 255, 1), RGBA(140, 160, 255, 1)]
-                
-            Items: |-
-                =AddColumns(
-                    GroupBy(
-                        AddColumns(
-                            Caregivers_1,
-                            "LevelValue",
-                            Level.Value
-                        ),
-                        "LevelValue",
-                        "Detail"
-                    ),
-                    "Count",
-                    CountRows(ThisRecord.Detail)
-                )
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Size: =15
-            Width: =388
-            X: =978
-            Y: =402
-            ZIndex: =15
-
-        Legend2 As legend:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(220, 220, 220, 1)
-            Font: =Font.'Segoe UI'
-            Height: =122
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            ItemColorSet: =PieChart2.ItemColorSet
-            Items: =PieChart2.SeriesLabels
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            Width: =356
-            X: =990
-            Y: =646
-            ZIndex: =16
+    Title12 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =26
+        Size: =12
+        Text: ="Caregivers by Level"
+        Width: =356
+        X: =950
+        Y: =421
+        ZIndex: =14
 
     Title12_2 As label:
         Align: =Align.Center
@@ -170,7 +111,7 @@ msftDashboard As screen:
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Font: =Font.'Segoe UI'
-        Height: =492
+        Height: =484
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
         Items: |
@@ -189,8 +130,84 @@ msftDashboard As screen:
             )
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         Size: =15
-        Width: =983
-        X: =89
-        Y: =60
+        Width: =735
+        X: =75
+        Y: =149
         ZIndex: =27
+
+    ColumnChart2 As barChart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =306
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        Items: |-
+            =AddColumns(
+                GroupBy(
+                    AddColumns(
+                        Caregivers_1,
+                        "LevelValue",
+                        Level.Value
+                    ),
+                    "LevelValue",
+                    "Detail"
+                ),
+                "Count",
+                CountRows(ThisRecord.Detail)
+            )
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =15
+        Width: =326
+        X: =1004
+        Y: =421
+        ZIndex: =32
+
+    ColumnChart2_1 As barChart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =306
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        Items: |-
+            =AddColumns(
+                GroupBy(
+                    AddColumns(
+                        Caregivers_1,
+                        "Cost Center Name",
+                        CCC.Value
+                    ),
+                    "Cost Center Name",
+                    "CCC"
+                ),
+                "Count",
+                CountRows(ThisRecord.CCC)
+            )
+            
+            AddColumns(
+                GroupBy(
+                    AddColumns(
+                        Caregivers_1,
+                        "LevelValue",
+                        Level.Value
+                    ),
+                    "LevelValue",
+                    "Detail"
+                ),
+                "Count",
+                CountRows(ThisRecord.Detail)
+            )
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =15
+        Width: =326
+        X: =1004
+        Y: =87
+        ZIndex: =33
 
