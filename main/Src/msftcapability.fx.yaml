@@ -7,7 +7,7 @@ msftcapability As screen:
         LayoutMode: ="manual"
         Width: =200
         X: =97
-        Y: =201
+        Y: =219
         ZIndex: =1
 
         "'Report Label_5' As label":
@@ -36,7 +36,7 @@ msftcapability As screen:
         LayoutMode: ="manual"
         Width: =336
         X: =311
-        Y: =201
+        Y: =219
         ZIndex: =2
 
         "'Category Label_7' As label":
@@ -93,7 +93,7 @@ msftcapability As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=8, true, false)
         Width: =200
         X: =1117
-        Y: =201
+        Y: =219
         ZIndex: =3
 
         "'Action Label_5' As label":
@@ -134,7 +134,7 @@ msftcapability As screen:
         Text: =Text(Gallery31.Selected.Capability)
         Width: =483
         X: =108
-        Y: =105
+        Y: =123
         ZIndex: =4
 
     Label15_1 As label:
@@ -149,7 +149,7 @@ msftcapability As screen:
         Size: =10.5
         Text: ="Projects Listed"
         X: =780
-        Y: =201
+        Y: =219
         ZIndex: =5
 
     Label16_1 As label:
@@ -174,7 +174,7 @@ msftcapability As screen:
             
         Width: =315
         X: =332
-        Y: =258
+        Y: =276
         ZIndex: =6
 
     "'Data Analytics_3' As label":
@@ -195,7 +195,7 @@ msftcapability As screen:
         Text: =Text(Gallery31.Selected.Capability)
         Width: =197
         X: =114
-        Y: =258
+        Y: =276
         ZIndex: =7
 
     Button5_2 As button:
@@ -224,7 +224,7 @@ msftcapability As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=8, true, false)
         Width: =70
         X: =1217
-        Y: =262
+        Y: =280
         ZIndex: =8
 
     Button5_3 As button:
@@ -254,43 +254,8 @@ msftcapability As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=8, true, false)
         Width: =70
         X: =1136
-        Y: =262
+        Y: =280
         ZIndex: =9
-
-    msft_Button_35 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =42
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =159
-        X: =99
-        Y: =693
-        ZIndex: =10
 
     Button5_14 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -318,7 +283,7 @@ msftcapability As screen:
         Text: ="View Projects Listed"
         Width: =209
         X: =730
-        Y: =248
+        Y: =266
         ZIndex: =13
 
     Label23 As label:
@@ -336,7 +301,7 @@ msftcapability As screen:
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
         X: =899
-        Y: =253
+        Y: =271
         ZIndex: =14
 
     Container_Admin_35 As groupContainer.verticalAutoLayoutContainer:
@@ -379,4 +344,52 @@ msftcapability As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_11 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Icon2_11 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =78
+            ZIndex: =18
+
+        msft_Label_33 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =78
+            ZIndex: =19
 

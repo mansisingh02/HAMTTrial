@@ -7,7 +7,7 @@ msftgroup As screen:
         LayoutMode: ="manual"
         Width: =200
         X: =112
-        Y: =208
+        Y: =217
         ZIndex: =1
 
         "'Report Label_4' As label":
@@ -35,7 +35,7 @@ msftgroup As screen:
         LayoutMode: ="manual"
         Width: =198
         X: =432
-        Y: =208
+        Y: =217
         ZIndex: =2
 
         "'Category Label_3' As label":
@@ -72,7 +72,7 @@ msftgroup As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =200
         X: =1111
-        Y: =208
+        Y: =217
         ZIndex: =3
 
         "'Action Label_3' As label":
@@ -113,7 +113,7 @@ msftgroup As screen:
         Text: =Text(Gallery17.Selected.'Group Name')
         Width: =467
         X: =112
-        Y: =123
+        Y: =132
         ZIndex: =4
 
     "'Category Header_6' As groupContainer.manualLayoutContainer":
@@ -121,7 +121,7 @@ msftgroup As screen:
         LayoutMode: ="manual"
         Width: =198
         X: =754
-        Y: =208
+        Y: =217
         ZIndex: =5
 
         "'Category Label_6' As label":
@@ -158,7 +158,7 @@ msftgroup As screen:
         Text: =Text(Gallery17.Selected.'Group Name')
         Width: =292
         X: =107
-        Y: =253
+        Y: =262
         ZIndex: =6
 
     descriptionlabel As label:
@@ -184,40 +184,6 @@ msftgroup As screen:
         X: =447
         Y: =252
         ZIndex: =7
-
-    msft_Button_14 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =165
-        X: =89
-        Y: =696
-        ZIndex: =8
 
     Button5 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -245,7 +211,7 @@ msftgroup As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =70
         X: =1217
-        Y: =262
+        Y: =271
         ZIndex: =9
 
     Button5_1 As button:
@@ -276,7 +242,7 @@ msftgroup As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=5, true, false)
         Width: =70
         X: =1132
-        Y: =262
+        Y: =271
         ZIndex: =10
 
     Button5_15 As button:
@@ -305,7 +271,7 @@ msftgroup As screen:
         Text: ="View Projects Listed"
         Width: =200
         X: =723
-        Y: =256
+        Y: =265
         ZIndex: =13
 
     projectsactivelabel As label:
@@ -323,7 +289,7 @@ msftgroup As screen:
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
         X: =884
-        Y: =260
+        Y: =269
         ZIndex: =14
 
     Container_Admin_39 As groupContainer.verticalAutoLayoutContainer:
@@ -366,4 +332,52 @@ msftgroup As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_8 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =20
+
+        Icon2_8 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =84
+            ZIndex: =18
+
+        msft_Label_30 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =84
+            ZIndex: =19
 
