@@ -41,25 +41,7 @@ msftMasterData As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |+
-            =/*Set(loaderVisible, true);
-            UpdateContext({TempCount: 0});
-            ClearCollect(
-                FilteredProjectsGoal,
-                Filter(
-                    Project,
-                    Goal.Value = Gallery28.Selected.Goal
-                )
-            );
-            UpdateContext({TempCount: CountRows(FilteredProjectsGoal)});
-            Navigate(
-                msftprojectgoal,
-                ScreenTransition.Fade,
-                {
-                    SelectedGoal: Gallery28.Selected.Goal,
-                    FilteredProjects: FilteredProjectsGoal,
-                    TempCount: TempCount
-                }
-            )*/
+            =
             Set(loaderVisible, true);
             UpdateContext({TempCount: 0});
             
