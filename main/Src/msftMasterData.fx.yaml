@@ -84,11 +84,11 @@ msftMasterData As screen:
             UpdateContext({TempCount: CountRows(FilteredProjectsGoal)});
             
             Navigate(
-                msftcapability,
+                msftprojectgoal,
                 ScreenTransition.Fade,
                 {
-                    SelectedGroup: LookUp(Gallery31.AllItems, CountRows(FilteredProjectsCapability) > 0),
-                    FilteredProjects: FilteredProjectsCapability,
+                    SelectedGroup: LookUp(Gallery28.AllItems, CountRows(FilteredProjectsGoal) > 0),
+                    FilteredProjects: FilteredProjectsGoal,
                     TempCount: TempCount
                 }
             )
