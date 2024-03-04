@@ -4926,10 +4926,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 1,
-                  "charOffset": 268,
+                  "charLength": 19,
+                  "charOffset": 748,
                   "snippet": {
-                    "text": "="
+                    "text": "SelectedProjectGoal"
                   }
                 }
               },
@@ -4950,49 +4950,8 @@
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 16
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftproject.Gallery16.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftproject.Gallery16.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 449,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftproject",
-                "type": "msftproject.Gallery16"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Table",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 16
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -5089,7 +5048,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 429,
+                  "charOffset": 653,
                   "snippet": {
                     "text": "&&"
                   }
@@ -37965,7 +37924,7 @@
                   "You might need to convert the value to be the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value.",
                   "If you’re comparing records or tables, the field or column types must match exactly."
                 ],
-                "level": "High",
+                "level": "Medium",
                 "primaryCategory": "formula",
                 "whyFix": ""
               }
