@@ -379,15 +379,13 @@ msftproject As screen:
              &&(
                 //(Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
                 (
-                IsEmpty(SelectedProjectGoal) ||
+                IsBlank(SelectedProjectGoal) ||
                 CountRows(
                     Filter(
-                        Goal.Value,
-                        Value in SelectedProjectGoal
+                        Goal,
+                        Value = SelectedProjectGoal
                     )
                 ) > 0
-                ||
-                IsBlank(SelectedProjectGoal)
             )
             
             ||
