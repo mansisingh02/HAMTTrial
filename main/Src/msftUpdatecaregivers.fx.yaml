@@ -20,7 +20,7 @@ msftUpdatecaregivers As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =843
         X: =99
-        Y: =357
+        Y: =381
         ZIndex: =1
 
     "'Update Caregivers' As label":
@@ -40,7 +40,7 @@ msftUpdatecaregivers As screen:
         Text: =If(Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Update Skills","My Profile")
         Width: =230
         X: =98
-        Y: =82
+        Y: =115
         ZIndex: =2
 
     msft_Label_10 As label:
@@ -60,7 +60,7 @@ msftUpdatecaregivers As screen:
         Text: ="Pillar Name"
         Width: =92
         X: =644
-        Y: =191
+        Y: =215
         ZIndex: =4
 
     Label4 As label:
@@ -77,7 +77,7 @@ msftUpdatecaregivers As screen:
         Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Hello, " & User().FullName, "Hello, " & User().FullName)
         Width: =282
         X: =99
-        Y: =135
+        Y: =159
         ZIndex: =8
 
     Gallery3 As gallery.galleryHorizontal:
@@ -93,7 +93,7 @@ msftUpdatecaregivers As screen:
         Visible: =If(ThisItem.Begginer 1)
         Width: =1236
         X: =97
-        Y: =207
+        Y: =231
         ZIndex: =9
 
         Label8 As label:
@@ -161,7 +161,7 @@ msftUpdatecaregivers As screen:
         TemplateSize: =170
         Width: =518
         X: =88
-        Y: =271
+        Y: =295
         ZIndex: =13
 
         Button2 As button:
@@ -216,7 +216,7 @@ msftUpdatecaregivers As screen:
         Text: ="Cost Center Name"
         Width: =142
         X: =370
-        Y: =189
+        Y: =213
         ZIndex: =46
 
     Gallery7_2 As gallery.galleryHorizontal:
@@ -231,7 +231,7 @@ msftUpdatecaregivers As screen:
         TemplateSize: =170
         Width: =386
         X: =600
-        Y: =274
+        Y: =298
         ZIndex: =47
 
         Button2_2 As button:
@@ -297,7 +297,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=1
         Width: =900
         X: =79
-        Y: =363
+        Y: =387
         ZIndex: =50
 
         Title2_1 As label:
@@ -1284,7 +1284,7 @@ msftUpdatecaregivers As screen:
         Visible: =false
         Width: =102
         X: =633
-        Y: =81
+        Y: =105
         ZIndex: =51
 
     Group1 As group:
@@ -1293,40 +1293,6 @@ msftUpdatecaregivers As screen:
         X: =40
         Y: =40
         ZIndex: =54
-
-    msft_Button_58 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(168, 39, 39, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =30
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftcaregivers,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =7
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =10.75
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =127
-        X: =1007
-        Y: =716
-        ZIndex: =120
 
     msft_Label_19 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1345,7 +1311,7 @@ msftUpdatecaregivers As screen:
         Text: ="Caregiver Name"
         Width: =142
         X: =147
-        Y: =189
+        Y: =213
         ZIndex: =121
 
     navBarVertical_cg_3 As navBarVertical_cg:
@@ -1375,7 +1341,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=4
         Width: =1219
         X: =105
-        Y: =359
+        Y: =383
         ZIndex: =124
 
         Label8_3 As label:
@@ -1547,7 +1513,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =827
         X: =107
-        Y: =375
+        Y: =399
         ZIndex: =164
 
         certi1 As label:
@@ -1939,7 +1905,7 @@ msftUpdatecaregivers As screen:
         Visible: =false
         Width: =102
         X: =531
-        Y: =84
+        Y: =108
         ZIndex: =165
 
     Group2 As group:
@@ -1998,7 +1964,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=5
             Width: =219
             X: =105
-            Y: =645
+            Y: =669
             ZIndex: =156
 
         Label34 As label:
@@ -2016,7 +1982,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=5
             Width: =236
             X: =621
-            Y: =648
+            Y: =672
             ZIndex: =158
 
         TextInput3 As text:
@@ -2044,7 +2010,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=5
             Width: =219
             X: =105
-            Y: =704
+            Y: =728
             ZIndex: =159
 
         msft_DatePicker_6 As datepicker:
@@ -2095,7 +2061,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=5
             Width: =238
             X: =355
-            Y: =704
+            Y: =728
             ZIndex: =160
 
         msft_DatePicker_7 As datepicker:
@@ -2120,7 +2086,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=5
             Width: =235
             X: =621
-            Y: =704
+            Y: =728
             ZIndex: =161
 
         Label3_3 As label:
@@ -2136,7 +2102,7 @@ msftUpdatecaregivers As screen:
             Text: ="Start Date"
             Visible: =varTabSelected=5
             X: =350
-            Y: =674
+            Y: =698
             ZIndex: =162
 
         Label3_6 As label:
@@ -2152,7 +2118,7 @@ msftUpdatecaregivers As screen:
             Text: ="End Date"
             Visible: =varTabSelected=5
             X: =615
-            Y: =676
+            Y: =700
             ZIndex: =163
 
     Label19_1 As label:
@@ -2170,7 +2136,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =155
         X: =206
-        Y: =626
+        Y: =650
         ZIndex: =167
 
     Icon1_1 As icon.Help:
@@ -2192,7 +2158,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =18
         X: =332
-        Y: =628
+        Y: =652
         ZIndex: =168
 
     Label34_1 As label:
@@ -2210,7 +2176,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =240
         X: =354
-        Y: =649
+        Y: =673
         ZIndex: =169
 
     msft_Label_55 As label:
@@ -2230,7 +2196,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =122
         X: =353
-        Y: =626
+        Y: =650
         ZIndex: =170
 
     Label7_5 As label:
@@ -2248,7 +2214,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =254
         X: =99
-        Y: =584
+        Y: =608
         ZIndex: =171
 
     Button8_4 As button:
@@ -2312,7 +2278,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =67
         X: =875
-        Y: =704
+        Y: =728
         ZIndex: =181
 
     "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -2342,7 +2308,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=3
         Width: =900
         X: =81
-        Y: =364
+        Y: =388
         ZIndex: =182
 
         Title2_34 As label:
@@ -2861,7 +2827,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =183
             X: =109
-            Y: =646
+            Y: =670
             ZIndex: =125
 
         skillName_4 As combobox:
@@ -2902,7 +2868,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =192
             X: =309
-            Y: =647
+            Y: =671
             ZIndex: =172
 
         comment_4 As text:
@@ -2933,7 +2899,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =314
             X: =523
-            Y: =647
+            Y: =671
             ZIndex: =173
 
         msft_Label_56 As label:
@@ -2953,7 +2919,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =128
             X: =111
-            Y: =624
+            Y: =648
             ZIndex: =174
 
         msft_Label_57 As label:
@@ -2973,7 +2939,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =108
             X: =527
-            Y: =625
+            Y: =649
             ZIndex: =175
 
         msft_Label_58 As label:
@@ -2993,7 +2959,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =36
             X: =308
-            Y: =625
+            Y: =649
             ZIndex: =176
 
         Label7_6 As label:
@@ -3012,7 +2978,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =256
             X: =103
-            Y: =586
+            Y: =610
             ZIndex: =177
 
         Button8_3 As button:
@@ -3080,7 +3046,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=1
             Width: =67
             X: =868
-            Y: =647
+            Y: =671
             ZIndex: =178
 
     Icon1_9 As icon.Help:
@@ -3102,7 +3068,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=1
         Width: =18
         X: =501
-        Y: =626
+        Y: =650
         ZIndex: =193
 
     BeginnerGroup_1 As group:
@@ -3143,7 +3109,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =190
             X: =99
-            Y: =652
+            Y: =676
             ZIndex: =183
 
         Icon1_4 As icon.Help:
@@ -3165,7 +3131,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =18
             X: =493
-            Y: =627
+            Y: =651
             ZIndex: =184
 
         Label19_2 As label:
@@ -3183,7 +3149,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =133
             X: =363
-            Y: =625
+            Y: =649
             ZIndex: =185
 
         skillName_5 As combobox:
@@ -3224,7 +3190,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =200
             X: =308
-            Y: =652
+            Y: =676
             ZIndex: =186
 
         comment_5 As text:
@@ -3255,7 +3221,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =297
             X: =531
-            Y: =653
+            Y: =677
             ZIndex: =187
 
         msft_Label_59 As label:
@@ -3275,7 +3241,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =128
             X: =101
-            Y: =630
+            Y: =654
             ZIndex: =188
 
         msft_Label_60 As label:
@@ -3295,7 +3261,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =108
             X: =536
-            Y: =631
+            Y: =655
             ZIndex: =189
 
         msft_Label_61 As label:
@@ -3315,7 +3281,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =36
             X: =316
-            Y: =631
+            Y: =655
             ZIndex: =190
 
         Label7_7 As label:
@@ -3334,7 +3300,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =304
             X: =97
-            Y: =586
+            Y: =610
             ZIndex: =191
 
         Button8_5 As button:
@@ -3402,7 +3368,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=2
             Width: =67
             X: =857
-            Y: =654
+            Y: =678
             ZIndex: =192
 
     Label19_6 As label:
@@ -3420,7 +3386,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=1
         Width: =133
         X: =372
-        Y: =622
+        Y: =646
         ZIndex: =194
 
     msft_Label_65 As label:
@@ -3440,7 +3406,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =122
         X: =621
-        Y: =624
+        Y: =648
         ZIndex: =205
 
     AdvancedGroup As group:
@@ -3481,7 +3447,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =199
             X: =98
-            Y: =646
+            Y: =670
             ZIndex: =195
 
         Icon1_10 As icon.Help:
@@ -3503,7 +3469,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =18
             X: =518
-            Y: =631
+            Y: =655
             ZIndex: =196
 
         Label19_7 As label:
@@ -3521,7 +3487,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =133
             X: =384
-            Y: =627
+            Y: =651
             ZIndex: =197
 
         skillName_6 As combobox:
@@ -3562,7 +3528,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =218
             X: =319
-            Y: =647
+            Y: =671
             ZIndex: =198
 
         comment_6 As text:
@@ -3593,7 +3559,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =298
             X: =559
-            Y: =646
+            Y: =670
             ZIndex: =199
 
         msft_Label_62 As label:
@@ -3613,7 +3579,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =128
             X: =100
-            Y: =624
+            Y: =648
             ZIndex: =200
 
         msft_Label_63 As label:
@@ -3633,7 +3599,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =108
             X: =560
-            Y: =629
+            Y: =653
             ZIndex: =201
 
         msft_Label_64 As label:
@@ -3653,7 +3619,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =36
             X: =318
-            Y: =625
+            Y: =649
             ZIndex: =202
 
         Label7_8 As label:
@@ -3671,7 +3637,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =280
             X: =92
-            Y: =587
+            Y: =611
             ZIndex: =203
 
         Button8_6 As button:
@@ -3739,7 +3705,7 @@ msftUpdatecaregivers As screen:
             Visible: =varTabSelected=3
             Width: =67
             X: =871
-            Y: =644
+            Y: =668
             ZIndex: =204
 
     msft_Label_66 As label:
@@ -3759,7 +3725,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =122
         X: =103
-        Y: =625
+        Y: =649
         ZIndex: =206
 
     Container_Admin_42 As groupContainer.verticalAutoLayoutContainer:
@@ -3846,7 +3812,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=2
         Width: =900
         X: =79
-        Y: =363
+        Y: =387
         ZIndex: =212
 
         Title2_9 As label:
@@ -4795,4 +4761,52 @@ msftUpdatecaregivers As screen:
             X: =780
             Y: =197
             ZIndex: =48
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =215
+
+        Icon2 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftcaregivers,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =74
+            ZIndex: =213
+
+        msft_Label_22 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftcaregivers,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =74
+            ZIndex: =214
 
