@@ -362,10 +362,34 @@ msftproject As screen:
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
-            (Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
+            //(Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
+            (
+                IsEmpty(ComboBox3_2.SelectedItems) ||
+                CountRows(
+                    Filter(
+                        Goal.Value,
+                        Value in ComboBox3_2.SelectedItems.Value
+                    )
+                ) > 0
+                ||
+                IsBlank(ComboBox3_2.Selected.Value)
+            )
+            
             && ('Group Name'.Value = ComboBox3_3.Selected.Value || ComboBox3_3.Selected.Value=Blank()))
              &&(
-                (Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
+                //(Goal.Value = SelectedProjectGoal || IsBlank(SelectedProjectGoal))
+                (
+                IsEmpty(SelectedProjectGoal) ||
+                CountRows(
+                    Filter(
+                        Goal.Value,
+                        Value in SelectedProjectGoal
+                    )
+                ) > 0
+                ||
+                IsBlank(SelectedProjectGoal)
+            )
+            
             ||
                 ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
                 ||
