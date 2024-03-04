@@ -361,7 +361,7 @@ msftnewMember As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Distinct(Discipline,DisciplineName),ComboBox2_1.SearchText,"Value")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =13
@@ -396,7 +396,7 @@ msftnewMember As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["ComplianceAssetId"]
-        SearchItems: =[]
+        SearchItems: =Search(Filter(Discipline, DisciplineName = ComboBox2_1.Selected.Value),ComboBox5_1.SearchText,"ComplianceAssetId")
         SelectionFill: =RGBA(0, 120, 212, 1)
         Size: =13
         Visible: =false
