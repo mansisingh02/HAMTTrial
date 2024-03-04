@@ -473,7 +473,7 @@ msftUpdatecaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =If(Title2_2.Text=Blank(),"","Edit")
+            Text: =ThisItem.'Description for Beginner Skill 1'
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
@@ -791,9 +791,43 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |-
-                =Set(varSelectedColumn,"B1");
-                Navigate(msftUpdateSkill_Caregiver);
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 1'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 1'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 1'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 1'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 1'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
