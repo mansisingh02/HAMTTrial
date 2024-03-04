@@ -101,7 +101,7 @@ msftDashboard As screen:
         Text: ="Caregivers by Core Leaders"
         Width: =392
         X: =44
-        Y: =171
+        Y: =125
         ZIndex: =22
 
     ColumnChart1 As barChart:
@@ -111,7 +111,7 @@ msftDashboard As screen:
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Font: =Font.'Segoe UI'
-        Height: =484
+        Height: =541
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
         Items: |
@@ -128,21 +128,23 @@ msftDashboard As screen:
                 "Count",
                 CountRows(ThisRecord.Detail)
             )
+        ItemsGap: =1
+        PaddingLeft: =0
+        PaddingRight: =0
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         Size: =15
-        Width: =735
-        X: =75
-        Y: =149
+        Width: =1270
+        X: =96
+        XLabelAngle: =40
         ZIndex: =27
 
     ColumnChart2 As barChart:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        BorderThickness: =2
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Font: =Font.'Segoe UI'
-        Height: =306
+        Height: =208
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
         Items: |-
@@ -159,11 +161,14 @@ msftDashboard As screen:
                 "Count",
                 CountRows(ThisRecord.Detail)
             )
+        ItemsGap: =1
+        PaddingLeft: =0
+        PaddingRight: =0
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         Size: =15
-        Width: =326
-        X: =1004
-        Y: =421
+        Width: =445
+        X: =96
+        Y: =560
         ZIndex: =32
 
     ColumnChart2_1 As barChart:
@@ -173,7 +178,7 @@ msftDashboard As screen:
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         Font: =Font.'Segoe UI'
-        Height: =306
+        Height: =227
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
         Items: |-
@@ -206,8 +211,41 @@ msftDashboard As screen:
             )
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         Size: =15
-        Width: =326
-        X: =1004
-        Y: =87
+        Width: =571
+        X: =672
+        Y: =541
         ZIndex: =33
+
+    Legend2 As legend:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(220, 220, 220, 1)
+        Font: =Font.'Segoe UI'
+        Height: =80
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =LineChart1.ItemColorSet
+        Items: =LineChart1.SeriesLabels
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Width: =320
+        X: =80
+        Y: =480
+        ZIndex: =37
+
+    Title12_3 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        Size: =12
+        Text: ="Caregivers by Level"
+        Width: =392
+        X: =20
+        Y: =539
+        ZIndex: =38
 
