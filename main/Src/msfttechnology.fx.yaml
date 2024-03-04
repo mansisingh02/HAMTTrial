@@ -10,7 +10,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =302
         X: =98
-        Y: =199
+        Y: =209
         ZIndex: =1
 
         "'Report Label' As label":
@@ -39,7 +39,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =152
         X: =409
-        Y: =199
+        Y: =209
         ZIndex: =2
 
         "'Category Label' As label":
@@ -68,7 +68,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =274
         X: =561
-        Y: =199
+        Y: =209
         ZIndex: =3
 
         "'Report Label_1' As label":
@@ -97,7 +97,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =244
         X: =837
-        Y: =199
+        Y: =209
         ZIndex: =4
 
         "'Description Label' As label":
@@ -126,7 +126,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =244
         X: =1083
-        Y: =199
+        Y: =209
         ZIndex: =5
 
         "'Action Label' As label":
@@ -155,7 +155,7 @@ msfttechnology As screen:
         LayoutMode: ="manual"
         Width: =274
         X: =561
-        Y: =260
+        Y: =270
         ZIndex: =6
 
         "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach.' As label":
@@ -200,7 +200,7 @@ msfttechnology As screen:
         Text: =Text(Gallery1_2.Selected.'Skill Name')
         Width: =1178
         X: =107
-        Y: =109
+        Y: =119
         ZIndex: =7
 
     "'Rectangle 31_5' As rectangle":
@@ -242,7 +242,7 @@ msfttechnology As screen:
         Text: =Text(Gallery1_2.Selected.'Skill Name')
         Width: =293
         X: =107
-        Y: =257
+        Y: =267
         ZIndex: =10
 
     CategoryLabel As label:
@@ -259,7 +259,7 @@ msfttechnology As screen:
         Text: =Text(Gallery1_2.Selected.Discipline)
         Width: =190
         X: =400
-        Y: =274
+        Y: =284
         ZIndex: =11
 
     Button5_8 As button:
@@ -287,7 +287,7 @@ msfttechnology As screen:
         Text: ="Delete"
         Width: =70
         X: =1215
-        Y: =288
+        Y: =298
         ZIndex: =12
 
     Button5_9 As button:
@@ -316,42 +316,8 @@ msfttechnology As screen:
         Text: ="Edit"
         Width: =70
         X: =1127
-        Y: =288
+        Y: =298
         ZIndex: =13
-
-    msft_Button_37 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =157
-        X: =98
-        Y: =696
-        ZIndex: =14
 
     Gallery9 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -420,7 +386,7 @@ msfttechnology As screen:
         Text: ="View Skilled Caregivers"
         Width: =229
         X: =837
-        Y: =272
+        Y: =282
         ZIndex: =20
 
     Label32 As label:
@@ -439,7 +405,7 @@ msfttechnology As screen:
             ="("&(CountRows(Gallery9.AllItems) + CountRows(Gallery9_1.AllItems) + CountRows(Gallery9_2.AllItems))&")"
         Width: =45
         X: =1024
-        Y: =283
+        Y: =293
         ZIndex: =21
 
     Container_Admin_18 As groupContainer.verticalAutoLayoutContainer:
@@ -482,4 +448,52 @@ msfttechnology As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =27
+
+        Icon2_6 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =74
+            ZIndex: =25
+
+        msft_Label_28 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =74
+            ZIndex: =26
 

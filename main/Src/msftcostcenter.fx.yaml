@@ -55,7 +55,7 @@ msftcostcenter As screen:
         Text: ="Caregivers and Projects under"
         Width: =385
         X: =108
-        Y: =111
+        Y: =121
         ZIndex: =16
 
     msft_Button_65 As button:
@@ -110,7 +110,7 @@ msftcostcenter As screen:
         Text: =Gallery1_4.Selected.'Cost Center Name'
         Width: =373
         X: =462
-        Y: =111
+        Y: =121
         ZIndex: =34
 
     Button9 As button:
@@ -139,7 +139,7 @@ msftcostcenter As screen:
         Text: ="VIEW CAREGIVERS"
         Width: =141
         X: =803
-        Y: =572
+        Y: =582
         ZIndex: =37
 
     Button9_1 As button:
@@ -169,7 +169,7 @@ msftcostcenter As screen:
         Text: ="VIEW PROJECTS"
         Width: =123
         X: =395
-        Y: =572
+        Y: =582
         ZIndex: =38
 
     CompositePieChart1 As group:
@@ -189,7 +189,7 @@ msftcostcenter As screen:
             Text: ="Count of Caregivers"
             Width: =400
             X: =666
-            Y: =199
+            Y: =209
             ZIndex: =40
 
         PieChart1 As pieChart:
@@ -207,7 +207,7 @@ msftcostcenter As screen:
             ShowLabels: =false
             Size: =15
             X: =674
-            Y: =199
+            Y: =209
             ZIndex: =41
 
         Legend1 As legend:
@@ -227,7 +227,7 @@ msftcostcenter As screen:
             Size: =12
             Width: =400
             X: =743
-            Y: =478
+            Y: =488
             ZIndex: =42
 
     CompositePieChart1_1 As group:
@@ -247,7 +247,7 @@ msftcostcenter As screen:
             Text: ="Count of Projects"
             Width: =400
             X: =253
-            Y: =199
+            Y: =209
             ZIndex: =44
 
         PieChart1_1 As pieChart:
@@ -266,7 +266,7 @@ msftcostcenter As screen:
             Size: =15
             Width: =405
             X: =261
-            Y: =199
+            Y: =209
             ZIndex: =45
 
         Legend1_1 As legend:
@@ -286,7 +286,7 @@ msftcostcenter As screen:
             Size: =12
             Width: =400
             X: =330
-            Y: =478
+            Y: =488
             ZIndex: =46
 
     Container_Admin_25 As groupContainer.verticalAutoLayoutContainer:
@@ -329,4 +329,52 @@ msftcostcenter As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_7 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =52
+
+        Icon2_7 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =84
+            ZIndex: =50
+
+        msft_Label_29 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =84
+            ZIndex: =51
 
