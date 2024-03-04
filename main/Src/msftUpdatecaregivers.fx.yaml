@@ -3845,8 +3845,8 @@ msftUpdatecaregivers As screen:
         TemplateSize: =226
         Visible: =varTabSelected=2
         Width: =900
-        X: =119
-        Y: =403
+        X: =79
+        Y: =363
         ZIndex: =212
 
         Title2_9 As label:
@@ -4360,8 +4360,8 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =3
             RadiusTopRight: =3
             Size: =11
-            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
-            Visible: =If(ThisItem.'Beginner 4'.Value=Blank(),false,true)
+            Text: =If(ThisItem.'Intermediate 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Intermediate 4'.Value=Blank(),false,true)
             Width: =68
             X: =703
             Y: =85
@@ -4382,9 +4382,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Intermediate Skill 4': Blank(), 'Description for Intermediate Skill 4': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4394,7 +4394,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 4'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 4'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =85
@@ -4415,38 +4415,38 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |
-                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 5'}),
-                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 5'}
+                =(If(Gallery5_2.Selected.'Advanced 1'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 1': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id}, 'Description for Advanced Skill 1':ThisItem.'Description for Intermediate Skill 5'}),
+                            Gallery5_2.Selected.'Advanced 2'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id}, 'Description for Advanced Skill 3':ThisItem.'Description for Intermediate Skill 5'}
                             ),
-                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 5'}),
+                            Gallery5_2.Selected.'Advanced 3'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 3': ThisItem.'Description for Intermediate Skill 5'}),
                             
-                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 5'}
+                            Gallery5_2.Selected.'Advanced 4'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 4': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 4': ThisItem.'Description for Intermediate Skill 5'}
                             ),
                             
-                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 5'}
+                            Gallery5_2.Selected.'Advanced 5'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 5': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 5': ThisItem.'Description for Intermediate Skill 5'}
                             ),
                 
-                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 5'}),
+                            Gallery5_2.Selected.'Advanced 6'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 6': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 6': ThisItem.'Description for Intermediate Skill 5'}),
                 
-                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 5'}),
+                            Gallery5_2.Selected.'Advanced 7'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 7': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 7': ThisItem.'Description for Intermediate Skill 5'}),
                             
-                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 5'}),
+                            Gallery5_2.Selected.'Advanced 8'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 8': { Value: ThisItem.'Intermediate 5'.Value , Id: ThisItem.'Intermediate 5'.Id},'Description for Advanced Skill 8': ThisItem.'Description for Intermediate Skill 5'}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -4459,8 +4459,8 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =3
             RadiusTopRight: =3
             Size: =11
-            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
-            Visible: =If(ThisItem.'Beginner 5'.Value=Blank(),false,true)
+            Text: =If(ThisItem.'Intermediate 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Intermediate 5'.Value=Blank(),false,true)
             Width: =68
             X: =703
             Y: =113
@@ -4481,9 +4481,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Intermediate Skill 5': Blank(), 'Description for Intermediate Skill 5': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4493,7 +4493,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 5'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 5'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =113
@@ -4514,38 +4514,38 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |
-                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 6'}),
-                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 6'}
+                =(If(Gallery5_2.Selected.'Advanced 1'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 1': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id}, 'Description for Advanced Skill 1':ThisItem.'Description for Intermediate Skill 6'}),
+                            Gallery5_2.Selected.'Advanced 2'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id}, 'Description for Advanced Skill 3':ThisItem.'Description for Intermediate Skill 6'}
                             ),
-                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 6'}),
+                            Gallery5_2.Selected.'Advanced 3'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 3': ThisItem.'Description for Intermediate Skill 6'}),
                             
-                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 6'}
+                            Gallery5_2.Selected.'Advanced 4'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 4': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 4': ThisItem.'Description for Intermediate Skill 6'}
                             ),
                             
-                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 6'}
+                            Gallery5_2.Selected.'Advanced 5'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 5': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 5': ThisItem.'Description for Intermediate Skill 6'}
                             ),
                 
-                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 6'}),
+                            Gallery5_2.Selected.'Advanced 6'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 6': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 6': ThisItem.'Description for Intermediate Skill 6'}),
                 
-                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 6'}),
+                            Gallery5_2.Selected.'Advanced 7'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 7': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 7': ThisItem.'Description for Intermediate Skill 6'}),
                             
-                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 6'}),
+                            Gallery5_2.Selected.'Advanced 8'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 8': { Value: ThisItem.'Intermediate 6'.Value , Id: ThisItem.'Intermediate 6'.Id},'Description for Advanced Skill 8': ThisItem.'Description for Intermediate Skill 6'}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -4558,8 +4558,8 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =3
             RadiusTopRight: =3
             Size: =11
-            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
-            Visible: =If(ThisItem.'Beginner 6'.Value=Blank(),false,true)
+            Text: =If(ThisItem.'Intermediate 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Intermediate 6'.Value=Blank(),false,true)
             Width: =68
             X: =703
             Y: =141
@@ -4592,7 +4592,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 6'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 6'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =141
@@ -4613,38 +4613,38 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |
-                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 7'}),
-                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 7'}
+                =(If(Gallery5_2.Selected.'Advanced 1'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 1': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id}, 'Description for Advanced Skill 1':ThisItem.'Description for Intermediate Skill 7'}),
+                            Gallery5_2.Selected.'Advanced 2'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id}, 'Description for Advanced Skill 3':ThisItem.'Description for Intermediate Skill 7'}
                             ),
-                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 7'}),
+                            Gallery5_2.Selected.'Advanced 3'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 3': ThisItem.'Description for Intermediate Skill 7'}),
                             
-                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 7'}
+                            Gallery5_2.Selected.'Advanced 4'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 4': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 4': ThisItem.'Description for Intermediate Skill 7'}
                             ),
                             
-                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 7'}
+                            Gallery5_2.Selected.'Advanced 5'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 5': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 5': ThisItem.'Description for Intermediate Skill 7'}
                             ),
                 
-                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 7'}),
+                            Gallery5_2.Selected.'Advanced 6'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 6': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 6': ThisItem.'Description for Intermediate Skill 7'}),
                 
-                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 7'}),
+                            Gallery5_2.Selected.'Advanced 7'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 7': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 7': ThisItem.'Description for Intermediate Skill 7'}),
                             
-                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 7'}),
+                            Gallery5_2.Selected.'Advanced 8'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 8': { Value: ThisItem.'Intermediate 7'.Value , Id: ThisItem.'Intermediate 7'.Id},'Description for Advanced Skill 8': ThisItem.'Description for Intermediate Skill 7'}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -4657,8 +4657,8 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =3
             RadiusTopRight: =3
             Size: =11
-            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
-            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Text: =If(ThisItem.'Intermediate 7'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
             Width: =68
             X: =703
             Y: =169
@@ -4679,9 +4679,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Intermediate Skill 7': Blank(), 'Description for Intermediate Skill 7': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4691,7 +4691,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =169
@@ -4712,38 +4712,38 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |
-                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 8'}),
-                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 8'}
+                =(If(Gallery5_2.Selected.'Advanced 1'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 1': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id}, 'Description for Advanced Skill 1':ThisItem.'Description for Intermediate Skill 8'}),
+                            Gallery5_2.Selected.'Advanced 2'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id}, 'Description for Advanced Skill 3':ThisItem.'Description for Intermediate Skill 8'}
                             ),
-                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 8'}),
+                            Gallery5_2.Selected.'Advanced 3'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 3': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 3': ThisItem.'Description for Intermediate Skill 8'}),
                             
-                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 8'}
+                            Gallery5_2.Selected.'Advanced 4'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 4': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 4': ThisItem.'Description for Intermediate Skill 8'}
                             ),
                             
-                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 8'}
+                            Gallery5_2.Selected.'Advanced 5'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 5': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 5': ThisItem.'Description for Intermediate Skill 8'}
                             ),
                 
-                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 8'}),
+                            Gallery5_2.Selected.'Advanced 6'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 6': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 6': ThisItem.'Description for Intermediate Skill 8'}),
                 
-                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 8'}),
+                            Gallery5_2.Selected.'Advanced 7'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 7': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 7': ThisItem.'Description for Intermediate Skill 8'}),
                             
-                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 8'}),
+                            Gallery5_2.Selected.'Advanced 8'.Value=Blank(),Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Advanced Skill 8': { Value: ThisItem.'Intermediate 8'.Value , Id: ThisItem.'Intermediate 8'.Id},'Description for Advanced Skill 8': ThisItem.'Description for Intermediate Skill 8'}),
                 
                             Notify("You have entered the maximum number of skills!")
                             
@@ -4756,8 +4756,8 @@ msftUpdatecaregivers As screen:
             RadiusTopLeft: =3
             RadiusTopRight: =3
             Size: =11
-            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
-            Visible: =If(ThisItem.'Beginner 8'.Value=Blank(),false,true)
+            Text: =If(ThisItem.'Intermediate 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Intermediate 8'.Value=Blank(),false,true)
             Width: =68
             X: =703
             Y: =197
@@ -4778,9 +4778,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Intermediate Skill 8': Blank(), 'Description for Intermediate Skill 8': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4790,7 +4790,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =197

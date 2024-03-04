@@ -440,160 +440,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftDashboard.Legend2.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftDashboard.Legend2.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "LineChart1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftDashboard",
-                "type": "msftDashboard.Legend2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LineChart1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftDashboard.Legend2.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftDashboard.Legend2.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 10,
-                  "snippet": {
-                    "text": ".SeriesLabels"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftDashboard",
-                "type": "msftDashboard.Legend2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftDashboard.Legend2.ItemColorSet"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftDashboard.Legend2.ItemColorSet",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "LineChart1"
-                  }
-                }
-              },
-              "properties": {
-                "member": "ItemColorSet",
-                "module": "msftDashboard",
-                "type": "msftDashboard.Legend2"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "LineChart1"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftDashboard.Legend2.ItemColorSet"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftDashboard.Legend2.ItemColorSet",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 13,
-                  "charOffset": 10,
-                  "snippet": {
-                    "text": ".ItemColorSet"
-                  }
-                }
-              },
-              "properties": {
-                "member": "ItemColorSet",
-                "module": "msftDashboard",
-                "type": "msftDashboard.Legend2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidDot",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msfteditcapability.TextInput2_2.Default"
                 }
               ],
@@ -5592,46 +5438,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 678,
-                  "charOffset": 21,
-                  "snippet": {
-                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "If"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 11
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Visible"
                 }
               ],
@@ -5895,6 +5701,46 @@
           },
           "ruleId": "app-ErrBadArityMinimum",
           "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 678,
+                  "charOffset": 21,
+                  "snippet": {
+                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -31655,126 +31501,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon6.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon6.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msfteditteam",
-                "type": "msfteditteam.Gallery21.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 20
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon6.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon6.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msfteditteam",
-                "type": "msfteditteam.Gallery21.Icon6"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msfteditteam",
-                "type": "msfteditteam.Gallery21.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 20
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msfteditteam.Gallery21.Icon7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msfteditteam",
-                "type": "msfteditteam.Gallery21.Icon7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msfteditteam.Gallery21.ComboBox5.AccessibleLabel"
                 }
               ],
@@ -42605,6 +42331,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 20
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "msftUpdatecaregivers",
+                "type": "msftUpdatecaregivers.Gallery5_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 21
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "msftUpdatecaregivers.Gallery23.AccessibleLabel"
                 }
               ],
@@ -42798,66 +42584,6 @@
                 "member": "TabIndex",
                 "module": "msftUpdatecaregivers",
                 "type": "msftUpdatecaregivers.Gallery23.Label43_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 20
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery5_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery5_1"
               }
             }
           ],
@@ -46608,36 +46334,6 @@
                 "member": "TabIndex",
                 "module": "msftcertification",
                 "type": "msftcertification.Label11_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftDashboard.Caregivers_2.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftDashboard.Caregivers_2.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "msftDashboard",
-                "type": "msftDashboard.Caregivers_2"
               }
             }
           ],
