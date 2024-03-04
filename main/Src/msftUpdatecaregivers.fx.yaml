@@ -437,29 +437,6 @@ msftUpdatecaregivers As screen:
             Y: =197
             ZIndex: =13
 
-        Title2_8 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B1");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2.Text=Blank(),false,true)
-            Width: =57
-            X: =733
-            Y: =1
-            ZIndex: =14
-
         Title2_9 As label:
             Color: =RGBA(0, 108, 191, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -478,8 +455,8 @@ msftUpdatecaregivers As screen:
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
-            X: =733
-            Y: =29
+            X: =596
+            Y: =124
             ZIndex: =15
 
         Title2_10 As label:
@@ -496,7 +473,7 @@ msftUpdatecaregivers As screen:
             PaddingRight: =0
             PaddingTop: =0
             Size: =12
-            Text: =If(Title2_2.Text=Blank(),"","Edit")
+            Text: =ThisItem.'Description for Beginner Skill 1'
             Underline: =true
             VerticalAlign: =VerticalAlign.Top
             Width: =85
@@ -614,30 +591,6 @@ msftUpdatecaregivers As screen:
             Y: =141
             ZIndex: =21
 
-        Title2_48 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2.Text=Blank(),false,true)
-            Width: =65
-            X: =792
-            Y: =1
-            ZIndex: =22
-
         Title2_49 As label:
             Color: =RGBA(221, 79, 14, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -659,7 +612,7 @@ msftUpdatecaregivers As screen:
             Visible: =If(Title2_1.Text=Blank(),false,true)
             Width: =65
             X: =790
-            Y: =28
+            Y: =79
             ZIndex: =23
 
         Title2_50 As label:
@@ -823,6 +776,104 @@ msftUpdatecaregivers As screen:
             Width: =227
             X: =40
             ZIndex: =31
+
+        Button10_11 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 1'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 1'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 1'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 1'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 1'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 1'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 1'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =1
+            ZIndex: =32
+
+        Button10_12 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Set(varSelectedColumn,"B2");
+                Navigate(msftUpdateSkill_Caregiver);
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 2'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =28
+            ZIndex: =33
 
     txtCaregiverID_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -4000,38 +4051,6 @@ msftUpdatecaregivers As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Button10_6 As button:
-        BorderColor: =RGBA(0, 51, 142, 1)
-        Color: =RGBA(0, 51, 142, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =23
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Set(varSelectedColumn,"B1");
-            Navigate(msftUpdateSkill_Caregiver);
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =3
-        RadiusBottomRight: =3
-        RadiusTopLeft: =3
-        RadiusTopRight: =3
-        Size: =11
-        Text: =If(Title2_32.Text=Blank(),"","Edit")
-        Visible: =If(Title2_32.Text=Blank(),false,true)
-        Width: =68
-        X: =782
-        Y: =366
-        ZIndex: =212
-
     Button10_7 As button:
         BorderColor: =RGBA(151, 0, 0, 1)
         Color: =RGBA(151, 0, 0, 1)
@@ -4047,9 +4066,9 @@ msftUpdatecaregivers As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
-            =Patch(Advanced,  LookUp(
-                        Advanced,
-                        'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 1': Blank(), 'Description for Advanced Skill 1': Blank()})
+            =Patch(Beginner,  LookUp(
+                        Beginner,
+                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4061,8 +4080,8 @@ msftUpdatecaregivers As screen:
         Text: ="Delete"
         Visible: =If(Title2_32.Text=Blank(),false,true)
         Width: =68
-        X: =856
-        Y: =366
+        X: =858
+        Y: =364
         ZIndex: =213
 
     Button10_10 As button:
