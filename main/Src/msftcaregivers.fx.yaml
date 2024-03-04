@@ -463,7 +463,7 @@ msftcaregivers As screen:
         TemplateSize: =60
         Visible: =false
         X: =87
-        Y: =684
+        Y: =677
         ZIndex: =8
 
     rowCount As label:
@@ -479,7 +479,7 @@ msftcaregivers As screen:
         Text: =CountRows(hiddenGallery.AllItems)
         Visible: =false
         X: =87
-        Y: =721
+        Y: =704
         ZIndex: =9
 
     Label1 As label:
@@ -725,7 +725,7 @@ msftcaregivers As screen:
             Visible: =If(showProjects=true,true,false)
             Width: =1291
             X: =75
-            Y: =60
+            Y: =36
             ZIndex: =22
 
         Rectangle4 As rectangle:
@@ -905,7 +905,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true,true,false)
             Width: =1291
             X: =75
-            Y: =60
+            Y: =36
             ZIndex: =31
 
         Rectangle4_1 As rectangle:
@@ -1232,7 +1232,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =400
-            Y: =511
+            Y: =519
             ZIndex: =54
 
         Label51_10 As label:
@@ -1249,7 +1249,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =402
-            Y: =571
+            Y: =579
             ZIndex: =55
 
         Label51_9 As label:
@@ -1266,7 +1266,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =401
-            Y: =541
+            Y: =549
             ZIndex: =56
 
         Label51_8 As label:
@@ -1283,7 +1283,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
             X: =403
-            Y: =607
+            Y: =615
             ZIndex: =57
 
         Label51_23 As label:
@@ -1300,7 +1300,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =393
-            Y: =392
+            Y: =400
             ZIndex: =58
 
         Label51_22 As label:
@@ -1317,7 +1317,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =393
-            Y: =423
+            Y: =431
             ZIndex: =59
 
         Label51_21 As label:
@@ -1334,7 +1334,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =394
-            Y: =451
+            Y: =459
             ZIndex: =60
 
         Label51_20 As label:
@@ -1351,7 +1351,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =396
-            Y: =482
+            Y: =490
             ZIndex: =61
 
         Label51_19 As label:
@@ -1368,7 +1368,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =394
-            Y: =507
+            Y: =515
             ZIndex: =62
 
         Label51_18 As label:
@@ -1385,7 +1385,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =397
-            Y: =571
+            Y: =579
             ZIndex: =63
 
         Label51_17 As label:
@@ -1402,7 +1402,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =394
-            Y: =541
+            Y: =549
             ZIndex: =64
 
         Label51_16 As label:
@@ -1419,7 +1419,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =433
             X: =397
-            Y: =598
+            Y: =606
             ZIndex: =65
 
     Container_PrimaryOwner_35 As groupContainer.verticalAutoLayoutContainer:
@@ -1483,6 +1483,7 @@ msftcaregivers As screen:
         Height: =418
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
         Width: =1
         X: =419
         Y: =256
@@ -1498,6 +1499,7 @@ msftcaregivers As screen:
         Height: =419
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
         Width: =1
         X: =821
         Y: =255
@@ -1528,6 +1530,7 @@ msftcaregivers As screen:
         Height: =1
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
         Width: =1194
         X: =123
         Y: =255
@@ -1543,6 +1546,7 @@ msftcaregivers As screen:
         Height: =420
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
         Width: =1
         X: =1168
         Y: =255
