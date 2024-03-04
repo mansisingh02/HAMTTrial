@@ -90,6 +90,7 @@ msftUpdatecaregivers As screen:
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
+        Visible: =If(ThisItem.Begginer 1)
         Width: =1236
         X: =97
         Y: =207
@@ -437,28 +438,6 @@ msftUpdatecaregivers As screen:
             Y: =197
             ZIndex: =13
 
-        Title2_9 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B2");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_1.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =596
-            Y: =124
-            ZIndex: =15
-
         Title2_10 As label:
             Color: =RGBA(0, 108, 191, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -480,284 +459,6 @@ msftUpdatecaregivers As screen:
             X: =733
             Y: =57
             ZIndex: =16
-
-        Title2_11 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B4");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_3.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =85
-            ZIndex: =17
-
-        Title2_12 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =19
-            OnSelect: |-
-                =Set(varSelectedColumn,"B8");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_7.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =197
-            ZIndex: =18
-
-        Title2_13 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B6");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_5.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =169
-            ZIndex: =19
-
-        Title2_14 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B7");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_4.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =113
-            ZIndex: =20
-
-        Title2_15 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B5");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_6.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =141
-            ZIndex: =21
-
-        Title2_49 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': Blank(), 'Description for Beginner Skill 1': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_1.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =79
-            ZIndex: =23
-
-        Title2_50 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': Blank(), 'Description for Beginner Skill 3': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_2.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =57
-            ZIndex: =24
-
-        Title2_51 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_3.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =86
-            ZIndex: =25
-
-        Title2_52 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_4.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =115
-            ZIndex: =26
-
-        Title2_53 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_6.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =144
-            ZIndex: =27
-
-        Title2_54 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_5.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =173
-            ZIndex: =28
-
-        Title2_60 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_7.Text=Blank(),false,true)
-            Width: =65
-            X: =792
-            Y: =197
-            ZIndex: =29
 
         Title2 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -843,7 +544,39 @@ msftUpdatecaregivers As screen:
             Y: =1
             ZIndex: =32
 
-        Button10_12 As button:
+        Button10_7 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 1'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            ZIndex: =34
+
+        Button10_13 As button:
             BorderColor: =RGBA(0, 51, 142, 1)
             Color: =RGBA(0, 51, 142, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -857,9 +590,43 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |-
-                =Set(varSelectedColumn,"B2");
-                Navigate(msftUpdateSkill_Caregiver);
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 2'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 2'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 2'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 2'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 2'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 2'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 2'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 2'.Value , Id: ThisItem.'Beginner 2'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 2'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -872,8 +639,635 @@ msftUpdatecaregivers As screen:
             Visible: =If(ThisItem.'Beginner 2'.Value=Blank(),false,true)
             Width: =68
             X: =703
+            Y: =29
+            ZIndex: =35
+
+        Button10_12 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': Blank(), 'Description for Beginner Skill 2': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 2'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
             Y: =28
-            ZIndex: =33
+            ZIndex: =36
+
+        Button10_14 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 3'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 3'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 3'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 3'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 3'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 3'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 3'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 3'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 3'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =57
+            ZIndex: =37
+
+        Button10_15 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': Blank(), 'Description for Beginner Skill 3': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 3'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =57
+            ZIndex: =38
+
+        Button10_16 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 4'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 4'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 4'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 4'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 4'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 4'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 4'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 4'.Value , Id: ThisItem.'Beginner 4'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 4'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 4'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =85
+            ZIndex: =39
+
+        Button10_17 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 4'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =85
+            ZIndex: =40
+
+        Button10_18 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 5'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 5'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 5'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 5'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 5'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 5'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 5'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 5'.Value , Id: ThisItem.'Beginner 5'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 5'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 5'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =113
+            ZIndex: =41
+
+        Button10_19 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 5'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =113
+            ZIndex: =42
+
+        Button10_20 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 6'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 6'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 6'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 6'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 6'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 6'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 6'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 6'.Value , Id: ThisItem.'Beginner 6'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 6'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 6'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =141
+            ZIndex: =43
+
+        Button10_21 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 6'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =141
+            ZIndex: =44
+
+        Button10_22 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 7'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 7'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 7'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 7'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 7'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 7'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 7'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 7'.Value , Id: ThisItem.'Beginner 7'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 7'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =169
+            ZIndex: =45
+
+        Button10_23 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =169
+            ZIndex: =46
+
+        Button10_24 As button:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            Color: =RGBA(0, 51, 142, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |
+                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 8'}),
+                            Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 2': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id}, 'Description for Intermediate Skill 2':ThisItem.'Description for Beginner Skill 8'}
+                            ),
+                            Gallery5_1.Selected.'Intermediate 3'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 3': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 3': ThisItem.'Description for Beginner Skill 8'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 4'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 4': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 4': ThisItem.'Description for Beginner Skill 8'}
+                            ),
+                            
+                            Gallery5_1.Selected.'Intermediate 5'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 5': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 5': ThisItem.'Description for Beginner Skill 8'}
+                            ),
+                
+                            Gallery5_1.Selected.'Intermediate 6'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 6': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 6': ThisItem.'Description for Beginner Skill 8'}),
+                
+                            Gallery5_1.Selected.'Intermediate 7'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 7': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 7': ThisItem.'Description for Beginner Skill 8'}),
+                            
+                            Gallery5_1.Selected.'Intermediate 8'.Value=Blank(),Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 8': { Value: ThisItem.'Beginner 8'.Value , Id: ThisItem.'Beginner 8'.Id},'Description for Intermediate Skill 8': ThisItem.'Description for Beginner Skill 8'}),
+                
+                            Notify("You have entered the maximum number of skills!")
+                            
+                            ));
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: =If(ThisItem.'Beginner 1'.Value=Blank(),"","Level Up")
+            Visible: =If(ThisItem.'Beginner 8'.Value=Blank(),false,true)
+            Width: =68
+            X: =703
+            Y: =197
+            ZIndex: =47
+
+        Button10_25 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =197
+            ZIndex: =48
 
     txtCaregiverID_1 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -4050,39 +4444,6 @@ msftUpdatecaregivers As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
-
-    Button10_7 As button:
-        BorderColor: =RGBA(151, 0, 0, 1)
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        Font: =Font.'Segoe UI'
-        FontWeight: =FontWeight.Semibold
-        Height: =23
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |-
-            =Patch(Beginner,  LookUp(
-                        Beginner,
-                        'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =3
-        RadiusBottomRight: =3
-        RadiusTopLeft: =3
-        RadiusTopRight: =3
-        Size: =11
-        Text: ="Delete"
-        Visible: =If(Title2_32.Text=Blank(),false,true)
-        Width: =68
-        X: =858
-        Y: =364
-        ZIndex: =213
 
     Button10_10 As button:
         BorderColor: =RGBA(0, 51, 142, 1)
