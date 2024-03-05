@@ -60,7 +60,7 @@ msftcaregivers As screen:
         Height: =30
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverFill: =RGBA(0, 51, 142, 1)
         OnSelect: |+
             =//searchClass.Selected.Value=Blank();
             Reset([@searchLevel]);
@@ -551,9 +551,8 @@ msftcaregivers As screen:
         ZIndex: =13
 
     msft_Button_48 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
+        BorderColor: =RGBA(0, 51, 142, 1)
+        BorderThickness: =1
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -561,9 +560,9 @@ msftcaregivers As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Semibold
         Height: =31
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =RGBA(0, 51, 142, 1)
+        HoverColor: =RGBA(0, 51, 142, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: =Navigate(msftUploadData)
         PaddingBottom: =7
         PaddingLeft: =32
@@ -1028,8 +1027,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =403
-            Y: =397
+            X: =388
+            Y: =399
             ZIndex: =42
 
         Label51_1 As label:
@@ -1045,8 +1044,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =404
-            Y: =425
+            X: =388
+            Y: =430
             ZIndex: =43
 
         Label51_2 As label:
@@ -1062,8 +1061,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =403
-            Y: =456
+            X: =389
+            Y: =461
             ZIndex: =44
 
         Label51_3 As label:
@@ -1079,8 +1078,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 4'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =395
-            Y: =482
+            X: =389
+            Y: =492
             ZIndex: =45
 
         Label51_4 As label:
@@ -1096,8 +1095,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 5'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =400
-            Y: =511
+            X: =389
+            Y: =522
             ZIndex: =46
 
         Label51_5 As label:
@@ -1130,8 +1129,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 6'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =396
-            Y: =542
+            X: =389
+            Y: =552
             ZIndex: =48
 
         Label51_7 As label:
@@ -1164,8 +1163,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =399
-            Y: =391
+            X: =389
+            Y: =395
             ZIndex: =50
 
         Label51_14 As label:
@@ -1181,8 +1180,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =397
-            Y: =421
+            X: =389
+            Y: =426
             ZIndex: =51
 
         Label51_13 As label:
@@ -1198,8 +1197,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =398
-            Y: =451
+            X: =389
+            Y: =456
             ZIndex: =52
 
         Label51_12 As label:
@@ -1215,8 +1214,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 4'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =399
-            Y: =481
+            X: =389
+            Y: =487
             ZIndex: =53
 
         Label51_11 As label:
@@ -1232,8 +1231,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =400
-            Y: =519
+            X: =389
+            Y: =517
             ZIndex: =54
 
         Label51_10 As label:
@@ -1249,8 +1248,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 7'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =402
-            Y: =579
+            X: =389
+            Y: =577
             ZIndex: =55
 
         Label51_9 As label:
@@ -1266,8 +1265,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 6'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =401
-            Y: =549
+            X: =389
+            Y: =548
             ZIndex: =56
 
         Label51_8 As label:
@@ -1283,8 +1282,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 8'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =403
-            Y: =615
+            X: =393
+            Y: =611
             ZIndex: =57
 
         Label51_23 As label:
