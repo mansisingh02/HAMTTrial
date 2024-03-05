@@ -2281,514 +2281,6 @@ msftUpdatecaregivers As screen:
         Y: =728
         ZIndex: =181
 
-    "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =226
-        Items: |-
-            =Filter(
-                AddColumns(
-                    Advanced,
-                    "Advanced 1", 'Advanced Skill 1',
-                    "Advanced 2", 'Advanced Skill 2',
-                    "Advanced 3", 'Advanced Skill 3',
-                    "Advanced 4", 'Advanced Skill 4',
-                    "Advanced 5", 'Advanced Skill 5',
-                    "Advanced 6", 'Advanced Skill 6',
-                    "Advanced 7", 'Advanced Skill 7',
-                    "Advanced 8", 'Advanced Skill 8'),
-                    'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
-            )
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =
-        ShowNavigation: =true
-        TemplatePadding: =0
-        TemplateSize: =226
-        Visible: =varTabSelected=3
-        Width: =900
-        X: =81
-        Y: =388
-        ZIndex: =182
-
-        Title2_34 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =ThisItem.'Advanced 2'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =29
-            ZIndex: =7
-
-        Title2_36 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: |
-                =ThisItem.'Advanced 3'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =57
-            ZIndex: =8
-
-        Title2_38 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: |
-                =ThisItem.'Advanced 4'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =85
-            ZIndex: =9
-
-        Title2_40 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: |
-                =ThisItem.'Advanced 5'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =113
-            ZIndex: =10
-
-        Title2_44 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =ThisItem.'Advanced 7'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =169
-            ZIndex: =11
-
-        Title2_42 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: |
-                =ThisItem.'Advanced 6'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =141
-            ZIndex: =12
-
-        Title2_46 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: |
-                =ThisItem.'Advanced 8'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            Y: =197
-            ZIndex: =13
-
-        Title2_35 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B2");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_34.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =29
-            ZIndex: =15
-
-        Title2_37 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B3");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_36.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =57
-            ZIndex: =16
-
-        Title2_39 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B4");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_38.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =85
-            ZIndex: =17
-
-        Title2_47 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =19
-            OnSelect: |-
-                =Set(varSelectedColumn,"B8");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_46.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =197
-            ZIndex: =18
-
-        Title2_45 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B6");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_44.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =169
-            ZIndex: =19
-
-        Title2_41 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B7");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =If(Title2_40.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =113
-            ZIndex: =20
-
-        Title2_43 As label:
-            Color: =RGBA(0, 108, 191, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =28
-            OnSelect: |-
-                =Set(varSelectedColumn,"B5");
-                Navigate(msftUpdateSkill_Caregiver);
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: =If(Title2_42.Text=Blank(),"","Edit")
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Width: =85
-            X: =733
-            Y: =141
-            ZIndex: =21
-
-        Title2_65 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 2': Blank(), 'Description for Beginner Skill 1': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_34.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =28
-            ZIndex: =23
-
-        Title2_66 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 3': Blank(), 'Description for Beginner Skill 3': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_36.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =57
-            ZIndex: =24
-
-        Title2_67 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_38.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =86
-            ZIndex: =25
-
-        Title2_68 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =12
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_40.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =115
-            ZIndex: =26
-
-        Title2_69 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_42.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =144
-            ZIndex: =27
-
-        Title2_70 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_44.Text=Blank(),false,true)
-            Width: =65
-            X: =790
-            Y: =173
-            ZIndex: =28
-
-        Title2_71 As label:
-            Color: =RGBA(221, 79, 14, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =29
-            OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: ="Delete"
-            Underline: =true
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =If(Title2_46.Text=Blank(),false,true)
-            Width: =65
-            X: =792
-            Y: =197
-            ZIndex: =29
-
-        Title2_32 As label:
-            Color: =RGBA(50, 49, 48, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Font: =Font.'Segoe UI'
-            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
-            Height: =23
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =11
-            Text: =ThisItem.'Advanced 1'.Value
-            VerticalAlign: =VerticalAlign.Top
-            Width: =227
-            X: =40
-            ZIndex: =31
-
     BeginnerGroup As group:
         Height: =5
         Width: =5
@@ -4748,6 +4240,456 @@ msftUpdatecaregivers As screen:
                 =Patch(Intermediate,  LookUp(
                             Intermediate,
                             'Caregiver ID' = Gallery5_1.Selected.'Caregiver ID') , {'Intermediate Skill 8': Blank(), 'Description for Intermediate Skill 8': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =197
+            ZIndex: =48
+
+    "Gallery5_2 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =226
+        Items: |-
+            =Filter(
+                AddColumns(
+                    Advanced,
+                    "Advanced 1", 'Advanced Skill 1',
+                    "Advanced 2", 'Advanced Skill 2',
+                    "Advanced 3", 'Advanced Skill 3',
+                    "Advanced 4", 'Advanced Skill 4',
+                    "Advanced 5", 'Advanced Skill 5',
+                    "Advanced 6", 'Advanced Skill 6',
+                    "Advanced 7", 'Advanced Skill 7',
+                    "Advanced 8", 'Advanced Skill 8'),
+                    'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =
+        ShowNavigation: =true
+        TemplatePadding: =0
+        TemplateSize: =226
+        Visible: =varTabSelected=3
+        Width: =900
+        X: =69
+        Y: =384
+        ZIndex: =215
+
+        Title2_18 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Advanced 2'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =29
+            ZIndex: =7
+
+        Title2_19 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: |
+                =ThisItem.'Advanced 3'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =57
+            ZIndex: =8
+
+        Title2_20 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: |
+                =ThisItem.'Advanced 4'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =85
+            ZIndex: =9
+
+        Title2_21 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: |
+                =ThisItem.'Advanced 5'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =113
+            ZIndex: =10
+
+        Title2_23 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Advanced 7'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =169
+            ZIndex: =11
+
+        Title2_22 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: |
+                =ThisItem.'Advanced 6'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =141
+            ZIndex: =12
+
+        Title2_24 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: |
+                =ThisItem.'Advanced 8'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            Y: =197
+            ZIndex: =13
+
+        Title2_12 As label:
+            Color: =RGBA(50, 49, 48, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(ThisItem.IsSelected, FontWeight.Semibold, FontWeight.Normal)
+            Height: =23
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =11
+            Text: =ThisItem.'Advanced 1'.Value
+            VerticalAlign: =VerticalAlign.Top
+            Width: =227
+            X: =40
+            ZIndex: =31
+
+        Button10_9 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 1': Blank(), 'Description for Intermediate Skill 1': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Advanced 1'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =1
+            ZIndex: =34
+
+        Button10_42 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 2': Blank(), 'Description for Intermediate Skill 2': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 2'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =28
+            ZIndex: =36
+
+        Button10_45 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 3': Blank(), 'Description for Intermediate Skill 3': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 3'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =57
+            ZIndex: =38
+
+        Button10_47 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 4': Blank(), 'Description for Intermediate Skill 4': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 4'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =85
+            ZIndex: =40
+
+        Button10_49 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 5': Blank(), 'Description for Intermediate Skill 5': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 5'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =113
+            ZIndex: =42
+
+        Button10_51 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 6'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =141
+            ZIndex: =44
+
+        Button10_53 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 7': Blank(), 'Description for Intermediate Skill 7': Blank()})
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =11
+            Text: ="Delete"
+            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
+            Width: =68
+            X: =780
+            Y: =169
+            ZIndex: =46
+
+        Button10_55 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =23
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Intermediate,  LookUp(
+                            Intermediate,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 8': Blank(), 'Description for Intermediate Skill 8': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
