@@ -830,7 +830,7 @@ msftproject As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Distinct('Cost Center','Cost Center Name'),ComboBox3.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =10.75
@@ -878,7 +878,7 @@ msftproject As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Distinct('Project Type','Project Type'),ComboBox3_1.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
         Size: =10.75
