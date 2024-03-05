@@ -4457,9 +4457,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 1': Blank(), 'Description for Intermediate Skill 1': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 1': Blank(), 'Description for Advanced Skill 1': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4490,9 +4490,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 2': Blank(), 'Description for Intermediate Skill 2': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 2': Blank(), 'Description for Advanced Skill 2': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4502,7 +4502,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 2'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 2'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =28
@@ -4523,9 +4523,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 3': Blank(), 'Description for Intermediate Skill 3': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 3': Blank(), 'Description for Advanced Skill 3': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4535,7 +4535,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 3'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 3'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =57
@@ -4556,9 +4556,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 4': Blank(), 'Description for Intermediate Skill 4': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 4': Blank(), 'Description for Advanced Skill 4': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4568,7 +4568,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 4'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 4'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =85
@@ -4589,9 +4589,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 5': Blank(), 'Description for Intermediate Skill 5': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 5': Blank(), 'Description for Advanced Skill 5': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4601,7 +4601,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 5'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 5'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =113
@@ -4622,9 +4622,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Beginner,  LookUp(
-                            Beginner,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 6': Blank(), 'Description for Advanced Skill 6': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4634,7 +4634,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 6'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 6'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =141
@@ -4655,9 +4655,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 7': Blank(), 'Description for Intermediate Skill 7': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 7': Blank(), 'Description for Advanced Skill 7': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4667,7 +4667,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 7'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =169
@@ -4688,9 +4688,9 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
             OnSelect: |-
-                =Patch(Intermediate,  LookUp(
-                            Intermediate,
-                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Intermediate Skill 8': Blank(), 'Description for Intermediate Skill 8': Blank()})
+                =Patch(Advanced,  LookUp(
+                            Advanced,
+                            'Caregiver ID' = Gallery5_2.Selected.'Caregiver ID') , {'Advanced Skill 8': Blank(), 'Description for Advanced Skill 8': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4700,7 +4700,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Advanced 7'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =197
