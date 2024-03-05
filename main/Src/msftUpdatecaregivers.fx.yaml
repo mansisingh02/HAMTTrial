@@ -1321,11 +1321,11 @@ msftUpdatecaregivers As screen:
     Gallery3_1 As gallery.galleryHorizontal:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =234
+        Height: =239
         Items: |-
             =Filter(AddColumns(
                 Caregivers_1,
-                "Project1",
+                    "Project1",
                     LookUp(Project, Text(ID)= Caregivers_1[@'Primary Project '].Value),
                     "Project2",
                     LookUp(Project, Text(ID)= Caregivers_1[@'Secondary Project'].Value),
@@ -1340,12 +1340,11 @@ msftUpdatecaregivers As screen:
         TemplateSize: =833
         Visible: =varTabSelected=4
         Width: =1219
-        X: =105
-        Y: =383
+        X: =98
+        Y: =392
         ZIndex: =124
 
         Label8_3 As label:
-            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1354,6 +1353,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =75
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Project1.'Project Name'
@@ -1373,12 +1373,12 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =If(ThisItem.'Allocation % for Primary Project'=Blank(),"",ThisItem.'Allocation % for Primary Project' * 100 & "%")
-            Width: =232
-            X: =507
+            Width: =100
+            X: =733
+            Y: =17
             ZIndex: =2
 
         Label8_5 As label:
-            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1387,16 +1387,15 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =76
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Project2.'Project Name'
             Width: =320
-            X: =26
-            Y: =52
+            Y: =75
             ZIndex: =3
 
         Label8_7 As label:
-            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1405,12 +1404,12 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =72
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Project3.'Project Name'
             Width: =320
-            X: =19
-            Y: =103
+            Y: =151
             ZIndex: =5
 
         Label8_8 As label:
@@ -1426,9 +1425,9 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =If(ThisItem.'Allocation % of Tertiary Project'=Blank(),"",ThisItem.'Allocation % of Tertiary Project' * 100 & "%")
-            Width: =232
-            X: =507
-            Y: =80
+            Width: =100
+            X: =733
+            Y: =167
             ZIndex: =6
 
         Label8_9 As label:
@@ -1444,10 +1443,66 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =If(ThisItem.'Allocation % for Secondary Project'=Blank(),"",ThisItem.'Allocation % for Secondary Project' * 100 & "%")
-            Width: =232
-            X: =507
-            Y: =40
+            Width: =100
+            X: =733
+            Y: =93
             ZIndex: =7
+
+        Label8_6 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =75
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Discipline for Primary Project'.Value
+            Width: =320
+            X: =285
+            ZIndex: =8
+
+        Label8_10 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =76
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Discipline for Secondary Project'.Value
+            Width: =320
+            X: =285
+            Y: =75
+            ZIndex: =9
+
+        Label8_11 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =72
+            OnSelect: =Select(Parent)
+            Size: =12
+            Text: =ThisItem.'Discipline for Tertiary Project'.Value
+            Width: =320
+            X: =285
+            Y: =151
+            ZIndex: =10
 
     Label7 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -4751,4 +4806,64 @@ msftUpdatecaregivers As screen:
             X: =117
             Y: =74
             ZIndex: =214
+
+    msft_Label_38 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Project"
+        Width: =142
+        X: =108
+        Y: =395
+        ZIndex: =216
+
+    msft_Label_39 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Discipline"
+        Width: =142
+        X: =518
+        Y: =395
+        ZIndex: =217
+
+    msft_Label_40 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Allocation"
+        Width: =142
+        X: =857
+        Y: =395
+        ZIndex: =218
 
