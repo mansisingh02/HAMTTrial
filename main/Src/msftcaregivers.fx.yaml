@@ -634,8 +634,8 @@ msftcaregivers As screen:
         DisplayFields: =["Value"]
         Height: =32
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
         InputTextPlaceholder: ="Search Skills"
         Items: =Distinct(Skills_1,'Skill Name')
         PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -10%)
@@ -666,8 +666,8 @@ msftcaregivers As screen:
         DisplayFields: =["Value"]
         Height: =32
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
         InputTextPlaceholder: ="Search Projects"
         Items: =Distinct(Project,'Project Name')
         PressedBorderColor: =RGBA(0, 51, 142, 1)
@@ -1162,7 +1162,7 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
+            Width: =500
             X: =389
             Y: =395
             ZIndex: =50
@@ -1179,7 +1179,7 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
+            Width: =500
             X: =389
             Y: =426
             ZIndex: =51
@@ -1298,9 +1298,9 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =393
-            Y: =400
+            Width: =500
+            X: =389
+            Y: =399
             ZIndex: =58
 
         Label51_22 As label:
@@ -1315,9 +1315,9 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =393
-            Y: =431
+            Width: =501
+            X: =388
+            Y: =429
             ZIndex: =59
 
         Label51_21 As label:
@@ -1332,9 +1332,9 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =394
-            Y: =459
+            Width: =500
+            X: =389
+            Y: =458
             ZIndex: =60
 
         Label51_20 As label:
@@ -1349,9 +1349,9 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =396
-            Y: =490
+            Width: =500
+            X: =389
+            Y: =488
             ZIndex: =61
 
         Label51_19 As label:
@@ -1366,9 +1366,9 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =394
-            Y: =515
+            Width: =500
+            X: =389
+            Y: =518
             ZIndex: =62
 
         Label51_18 As label:
@@ -1383,8 +1383,8 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =397
+            Width: =501
+            X: =388
             Y: =579
             ZIndex: =63
 
@@ -1400,8 +1400,8 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =394
+            Width: =503
+            X: =386
             Y: =549
             ZIndex: =64
 
@@ -1417,8 +1417,8 @@ msftcaregivers As screen:
             Size: =10
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =433
-            X: =397
+            Width: =500
+            X: =389
             Y: =606
             ZIndex: =65
 
