@@ -31,7 +31,7 @@ msftnewMember As screen:
         Text: ="New Member"
         Width: =203
         X: =100
-        Y: =102
+        Y: =137
         ZIndex: =2
 
     "'Rectangle 31_17' As rectangle":
@@ -80,36 +80,6 @@ msftnewMember As screen:
         Y: =205
         ZIndex: =80
 
-    msft_Dropdown_36 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct(Caregivers_1,'Caregiver Name')
-        OnChange: =
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Width: =191
-        X: =97
-        Y: =233
-        ZIndex: =86
-
     msft_Button_86 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -127,20 +97,20 @@ msftnewMember As screen:
         HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
         OnSelect: |-
             =Patch(Caregivers_1, 
-            First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)),
-            If(First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Primary Project '.Value=Blank(),
+            First(Filter(Caregivers_1,'Caregiver Name'= ComboBox6.Selected.Value)),
+            If(First(Filter(Caregivers_1,'Caregiver Name'= ComboBox6.Selected.Value)).'Primary Project '.Value=Blank(),
               {
                     'Primary Project ':{ Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
                     'Allocation % for Primary Project': msft_Dropdown_41.Selected.Value/100,
                     'Discipline for Primary Project': { Value : ComboBox2_1.Selected.Value , Id : ComboBox5_1.Selected.ID } 
               },
-              First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Primary Project '.Value=Blank(),
+              First(Filter(Caregivers_1,'Caregiver Name'= ComboBox6.Selected.Value)).'Primary Project '.Value=Blank(),
               {
                     'Secondary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
                     'Allocation % for Secondary Project': msft_Dropdown_41.Selected.Value/100,
                     'Discipline for Secondary Project': { Value :ComboBox2_1.Selected.Value , Id :ComboBox5_1.Selected.ID } },
                     
-             First(Filter(Caregivers_1,'Caregiver Name'= msft_Dropdown_36.Selected.Value)).'Tertiary Project'.Value=Blank(),
+             First(Filter(Caregivers_1,'Caregiver Name'= ComboBox6.Selected.Value)).'Tertiary Project'.Value=Blank(),
               {
                     'Tertiary Project': { Value : Gallery16.Selected.'Project ID' , Id : Gallery16.Selected.ID },
                     'Allocation % for Tertiary Project': msft_Dropdown_41.Selected.Value/100,
@@ -268,15 +238,15 @@ msftnewMember As screen:
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
         ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverBackground: =RGBA(182, 204, 242, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
         Items: =Sequence(40, 5, 5)
         OnChange: =
         PaddingBottom: =8
@@ -285,7 +255,8 @@ msftnewMember As screen:
         PaddingTop: =8
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SelectionColor: =RGBA(0, 51, 142, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =199
         X: =516
@@ -341,7 +312,7 @@ msftnewMember As screen:
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(0, 0, 0, 0)
         ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+        ChevronHoverBackground: =RGBA(182, 204, 242, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
         DefaultSelectedItems: =
@@ -351,8 +322,8 @@ msftnewMember As screen:
         DisplayFields: =["Value"]
         Font: =Font.'Segoe UI'
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
         IsSearchable: =false
         Items: =Distinct(Discipline,DisciplineName)
         OnChange: =
@@ -405,41 +376,6 @@ msftnewMember As screen:
         Y: =102
         ZIndex: =100
 
-    msft_Button_94 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =44
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msfteditteam,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =155
-        X: =87
-        Y: =693
-        ZIndex: =101
-
     Container_Admin_14 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -480,4 +416,84 @@ msftnewMember As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    ComboBox6 As combobox:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        ChevronBackground: =RGBA(255, 255, 255, 1)
+        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+        ChevronFill: =RGBA(33, 33, 33, 1)
+        ChevronHoverBackground: =RGBA(182, 204, 242, 1)
+        ChevronHoverFill: =RGBA(33, 33, 33, 1)
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =Font.'Segoe UI'
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =RGBA(0, 51, 142, 1)
+        Items: =Distinct(Caregivers_1,'Caregiver Name')
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 51, 142, 1)
+        SearchFields: =["Value"]
+        SearchItems: =Search(Distinct(Caregivers_1,'Caregiver Name'),ComboBox6.SearchText,"Value")
+        SelectionColor: =RGBA(0, 0, 0, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
+        SelectMultiple: =false
+        Size: =13
+        Width: =191
+        X: =100
+        Y: =233
+        ZIndex: =105
+
+    Group3_12 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =108
+
+        Icon2_12 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msfteditproject,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =94
+            ZIndex: =106
+
+        msft_Label_37 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msfteditproject,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =94
+            ZIndex: =107
 

@@ -152,7 +152,7 @@ msfteditteam As screen:
     "Gallery21 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =480
+        Height: =474
         Items: |-
             =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.ID)  || 'Secondary Project'.Value=Text(Gallery16.Selected.ID) || 
             'Tertiary Project'.Value =Text(Gallery16.Selected.ID) )
@@ -394,7 +394,7 @@ msfteditteam As screen:
             FocusedBorderThickness: =4
             Height: =49
             HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(190, 71, 71, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Trash
             OnSelect: =Set(varItemToDelete, Gallery21.Selected.'Caregiver Name'); Navigate(msftconfirmationscreen)
