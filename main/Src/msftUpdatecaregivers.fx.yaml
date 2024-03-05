@@ -1323,17 +1323,15 @@ msftUpdatecaregivers As screen:
         DelayItemLoading: =true
         Height: =172
         Items: |-
-            =Filter(
-                AddColumns(
+            =    AddColumns(
                 Caregivers_1,
                 "Project1",
-                    LookUp(Project, 'Project ID'= Caregivers_1[@'Primary Project '].Value),
+                    LookUp(Project, 'Project ID'= Gallery3.Selected.'Primary Project '.Value),
                     "Project2",
-                    LookUp(Project, 'Project ID'= Caregivers_1[@'Secondary Project'].Value),
+                    LookUp(Project, 'Project ID'= Gallery3.Selected.'Primary Project '.Value),
                     "Project3",
-                    LookUp(Project, 'Project ID'= Caregivers_1[@'Tertiary Project'].Value)
-                    ),
-               'Caregiver ID'= Gallery3.Selected.'Caregiver ID')
+                    LookUp(Project, 'Project ID'= Gallery3.Selected.'Primary Project '.Value)
+                    )
                     
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
