@@ -2226,6 +2226,8 @@ msftUpdatecaregivers As screen:
 
         navBarVertical_cg_4 As navBarVertical_cg:
             Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
 
     "Gallery5_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
@@ -3724,6 +3726,7 @@ msftUpdatecaregivers As screen:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(adminOrcoreLeader,true,false)
         Width: =75
         ZIndex: =73
 
