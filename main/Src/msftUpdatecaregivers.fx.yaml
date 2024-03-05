@@ -90,7 +90,6 @@ msftUpdatecaregivers As screen:
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219
-        Visible: =If(ThisItem.Begginer 1)
         Width: =1236
         X: =97
         Y: =231
@@ -1264,7 +1263,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Beginner 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Beginner 8'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =197
@@ -1958,7 +1957,7 @@ msftUpdatecaregivers As screen:
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 51, 142, 1)
             SearchFields: =["Value"]
-            SearchItems: =[]
+            SearchItems: =Search(Distinct(Certifications,'Certification Name'),certificationNameDropdown.SearchText,"Value")
             SelectionFill: =RGBA(0, 51, 142, 1)
             SelectMultiple: =false
             Size: =10.75
@@ -4250,7 +4249,7 @@ msftUpdatecaregivers As screen:
             RadiusTopRight: =3
             Size: =11
             Text: ="Delete"
-            Visible: =If(ThisItem.'Intermediate 7'.Value=Blank(),false,true)
+            Visible: =If(ThisItem.'Intermediate 8'.Value=Blank(),false,true)
             Width: =68
             X: =780
             Y: =197
