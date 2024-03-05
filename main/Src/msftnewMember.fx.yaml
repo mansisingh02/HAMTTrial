@@ -238,7 +238,7 @@ msftnewMember As screen:
         ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
         ChevronDisabledFill: =RGBA(166, 166, 166, 1)
         ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+        ChevronHoverBackground: =RGBA(182, 204, 242, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -256,6 +256,7 @@ msftnewMember As screen:
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 51, 142, 1)
+        SelectionColor: =RGBA(0, 51, 142, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =199
         X: =516
@@ -439,7 +440,8 @@ msftnewMember As screen:
         PressedFill: =RGBA(0, 51, 142, 1)
         SearchFields: =["Value"]
         SearchItems: =Search(Distinct(Caregivers_1,'Caregiver Name'),ComboBox6.SearchText,"Value")
-        SelectionFill: =RGBA(0, 51, 142, 1)
+        SelectionColor: =RGBA(0, 0, 0, 1)
+        SelectionFill: =RGBA(255, 255, 255, 1)
         SelectMultiple: =false
         Size: =13
         Width: =191
