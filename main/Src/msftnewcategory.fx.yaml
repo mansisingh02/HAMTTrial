@@ -18,7 +18,7 @@ msftnewcategory As screen:
         Text: ="Add Technology"
         Width: =203
         X: =99
-        Y: =98
+        Y: =122
         ZIndex: =1
 
     msft_Label As label:
@@ -37,7 +37,7 @@ msftnewcategory As screen:
         Text: ="Technology Title"
         Width: =143
         X: =100
-        Y: =170
+        Y: =194
         ZIndex: =2
 
     msft_TextInput As text:
@@ -66,7 +66,7 @@ msftnewcategory As screen:
         Size: =11
         Width: =300
         X: =100
-        Y: =212
+        Y: =236
         ZIndex: =3
 
     msft_Label_1 As label:
@@ -85,7 +85,7 @@ msftnewcategory As screen:
         Text: ="Select Discipline"
         Width: =143
         X: =433
-        Y: =170
+        Y: =194
         ZIndex: =4
 
     msft_Dropdown As dropdown:
@@ -115,7 +115,7 @@ msftnewcategory As screen:
         SelectionFill: =RGBA(230, 230, 230, 1)
         Width: =300
         X: =433
-        Y: =212
+        Y: =236
         ZIndex: =5
 
     msft_Label_2 As label:
@@ -134,7 +134,7 @@ msftnewcategory As screen:
         Text: ="Description"
         Width: =102
         X: =100
-        Y: =287
+        Y: =311
         ZIndex: =6
 
     msft_TextInput_1 As text:
@@ -165,7 +165,7 @@ msftnewcategory As screen:
         Size: =11
         Width: =633
         X: =100
-        Y: =325
+        Y: =349
         ZIndex: =7
 
     msft_Button As button:
@@ -259,7 +259,7 @@ msftnewcategory As screen:
         Size: =11
         Text: ="*"
         X: =214
-        Y: =158
+        Y: =182
         ZIndex: =15
 
     Label6_21 As label:
@@ -274,7 +274,7 @@ msftnewcategory As screen:
         Size: =11
         Text: ="*"
         X: =542
-        Y: =158
+        Y: =182
         ZIndex: =16
 
     Icon1_40 As icon.Help:
@@ -295,7 +295,7 @@ msftnewcategory As screen:
         Tooltip: ="Title of the Skill you wish to add (Eg. ReactJS, SQL)"
         Width: =13
         X: =381
-        Y: =172
+        Y: =196
         ZIndex: =18
 
     Icon1_41 As icon.Help:
@@ -316,43 +316,8 @@ msftnewcategory As screen:
         Tooltip: ="The Job Description for which you wish to add this skillset"
         Width: =13
         X: =717
-        Y: =174
+        Y: =198
         ZIndex: =19
-
-    msft_Button_43 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =45
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 0.9), -10%)
-        OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =157
-        X: =99
-        Y: =693
-        ZIndex: =20
 
     Container_Admin_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -381,4 +346,52 @@ msftnewcategory As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_16 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =25
+
+        Icon2_16 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =77
+            ZIndex: =23
+
+        msft_Label_44 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =77
+            ZIndex: =24
 
