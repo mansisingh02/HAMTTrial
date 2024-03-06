@@ -1351,7 +1351,8 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Project1.'Project Name'
-            Width: =320
+            Width: =385
+            Y: =17
             ZIndex: =1
 
         Label8_4 As label:
@@ -1369,7 +1370,7 @@ msftUpdatecaregivers As screen:
             Text: =If(ThisItem.'Allocation % for Primary Project'=Blank(),"",ThisItem.'Allocation % for Primary Project' * 100 & "%")
             Width: =100
             X: =733
-            Y: =17
+            Y: =35
             ZIndex: =2
 
         Label8_5 As label:
@@ -1458,6 +1459,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.'Discipline for Primary Project'.Value
             Width: =320
             X: =285
+            Y: =18
             ZIndex: =8
 
         Label8_10 As label:
@@ -1986,7 +1988,8 @@ msftUpdatecaregivers As screen:
         HoverColor: =ColorFade(RGBA(0, 142, 51, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Help
-        OnSelect: =Navigate(msftpopupcertification, ScreenTransition.None)
+        OnSelect: |
+            =UpdateContext({showCertificationsPopup: true})
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -3756,29 +3759,248 @@ msftUpdatecaregivers As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Rectangle16 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(153, 153, 153, 1)
-        FocusedBorderThickness: =4
-        Height: =0.5
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =426
-        X: =375
-        Y: =397
-        ZIndex: =84
-
-    skillstPopUp As group:
+    Group4 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =84
+        ZIndex: =90
 
-        Rectangle8_2 As rectangle:
+        Rectangle16 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showSkillsPopup
+            Width: =390
+            X: =375
+            Y: =397
+            ZIndex: =84
+
+        Rectangle16_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showSkillsPopup
+            Width: =390
+            X: =375
+            Y: =541
+            ZIndex: =85
+
+        SkillsTextInput_6 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HintText: ="Enter a Skill"
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =10.75
+            Visible: =showSkillsPopup
+            X: =407
+            Y: =447
+            ZIndex: =86
+
+        Label19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =8
+            Text: ="Skill Title"
+            Visible: =showSkillsPopup
+            X: =401
+            Y: =418
+            ZIndex: =87
+
+        msft_Button_33 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |+
+                =Set(
+                    NewSkillInput,
+                    SkillsTextInput.Text
+                );
+                
+                Set(
+                    CoreLeader,
+                    LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
+                );
+                
+                Set(
+                    UserRecord,
+                    LookUp(Caregivers_1, 'Caregiver Email' = User().Email)
+                );
+                
+                Notify("Core Leader: " & CoreLeader, NotificationType.Information);
+                
+                Set(
+                    CoreLeaderEmail,
+                    LookUp(Caregivers_1, 'Caregiver Name' = CoreLeader).'Caregiver Email'
+                );
+                
+                
+                Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
+                
+                Set(
+                    AdminEmail,
+                    "mansi.singh@providence.org"
+                );
+                Set(
+                    UserLevel,
+                    UserRecord.Level.Value
+                );
+                
+                If(
+                    UserLevel = "1I" || UserLevel = "1P" || UserLevel = "2P" || UserLevel = "3P" || UserLevel = "4P",
+                If(
+                    !IsBlank(AdminEmail),
+                    Office365Outlook.SendEmailV2(
+                        AdminEmail,
+                        "Request for Addition of a New Skill",
+                        "Hi Madhavi,<br>" &
+                        "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
+                        "Request you to kindly approve the same.<br>" &
+                        "Thank you,<br>" & 
+                        User().FullName
+                    );
+                    Notify("Email sent successfully to admin.", NotificationType.Success)
+                ),
+                    If(
+                        !IsBlank(AdminEmail),
+                        Office365Outlook.SendEmailV2(
+                            AdminEmail,
+                            "Adding a New Skill",
+                            "Hi Madhavi,<br>" &
+                            "I am adding this skill (" & NewSkillInput & ") to the already existing list of skills. Please take note.<br>" &
+                            "Thank you,<br>" & 
+                            User().FullName
+                        );
+                        Notify("Email sent successfully to admin.", NotificationType.Success)
+                    )
+                );
+                
+                
+                /*If(
+                    !IsBlank(CoreLeaderEmail),
+                    Office365Outlook.SendEmailV2(
+                        CoreLeaderEmail,
+                        "Request for Addition of a New Skill",
+                        "Hi,<br>" &
+                        "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
+                        "Request you to kindly approve the same.<br>" &
+                        "Thank you,<br>" & 
+                        User().FullName
+                    );
+                    Notify("Email sent successfully to core leader.", NotificationType.Success),
+                    Notify("Error: Core leader email address not found", NotificationType.Error)
+                )*/
+                
+                
+                
+            PaddingBottom: =7
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10.75
+            Text: ="Save"
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =showSkillsPopup
+            Width: =117
+            X: =606
+            Y: =556
+            ZIndex: =88
+
+        msft_Button_77 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: =Navigate(msftpopup,ScreenTransition.Fade)
+            PaddingBottom: =7
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =7
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10.75
+            Text: ="Go Back"
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =showSkillsPopup
+            Width: =122
+            X: =404
+            Y: =556
+            ZIndex: =89
+
+    Group5 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =115
+
+        Rectangle8_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3788,28 +4010,28 @@ msftUpdatecaregivers As screen:
             Height: =708
             HoverFill: =RGBA(255, 255, 255, 0.9)
             PressedFill: =RGBA(255, 255, 255, 0.9)
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =1291
             X: =75
             Y: =60
-            ZIndex: =75
+            ZIndex: =90
 
-        Rectangle4_2 As rectangle:
+        Rectangle4_5 As rectangle:
             BorderColor: =RGBA(230, 230, 230, 1)
             BorderThickness: =1
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =285
+            Height: =524
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
-            Visible: =showSkillsPopup
-            Width: =426
+            Visible: =showCertificationsPopup
+            Width: =424
             X: =375
-            Y: =328
-            ZIndex: =76
+            Y: =183
+            ZIndex: =91
 
-        Label28_8 As label:
+        Label28_11 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3823,14 +4045,14 @@ msftUpdatecaregivers As screen:
             LineHeight: =2
             OnSelect: =
             Size: =17
-            Text: ="Update Skill"
-            Visible: =showSkillsPopup
+            Text: ="Update Certification"
+            Visible: =showCertificationsPopup
             Width: =325
-            X: =398
-            Y: =328
-            ZIndex: =77
+            X: =418
+            Y: =189
+            ZIndex: =92
 
-        Label28_9 As label:
+        Label28_14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3844,13 +4066,13 @@ msftUpdatecaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =Gallery1.Selected.Project2.'Project Name' 
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =398
             X: =414
             Y: =421
-            ZIndex: =78
+            ZIndex: =93
 
-        Label28_10 As label:
+        Label28_15 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3864,13 +4086,13 @@ msftUpdatecaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =Gallery1.Selected.Project3.'Project Name' 
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =256
             X: =423
             Y: =517
-            ZIndex: =79
+            ZIndex: =94
 
-        Label28_12 As label:
+        Label28_16 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3884,13 +4106,13 @@ msftUpdatecaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =If(Gallery1.Selected.Project2.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Secondary Project'*100 & "%")
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =72
             X: =837
             Y: =440
-            ZIndex: =81
+            ZIndex: =95
 
-        Label28_13 As label:
+        Label28_17 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -3904,13 +4126,13 @@ msftUpdatecaregivers As screen:
             OnSelect: =
             Size: =12
             Text: =If(Gallery1.Selected.Project3.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % of Tertiary Project'*100 & "%")
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =72
             X: =758
             Y: =510
-            ZIndex: =82
+            ZIndex: =96
 
-        Icon1_12 As icon.Cancel:
+        Icon1_13 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
@@ -3922,219 +4144,453 @@ msftUpdatecaregivers As screen:
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
             OnSelect: |-
-                =UpdateContext({showSkillsPopup: false})
+                =UpdateContext({showCertificationsPopup: false})
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =showSkillsPopup
+            Visible: =showCertificationsPopup
             Width: =32
-            X: =758
-            Y: =346
-            ZIndex: =83
+            X: =730
+            Y: =204
+            ZIndex: =97
 
-    Rectangle16_1 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(153, 153, 153, 1)
-        FocusedBorderThickness: =4
-        Height: =0.5
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Width: =426
-        X: =375
-        Y: =541
-        ZIndex: =85
+        Rectangle16_3 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showCertificationsPopup
+            Width: =423
+            X: =376
+            Y: =261
+            ZIndex: =98
 
-    SkillsTextInput_6 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =""
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        HintText: ="Enter a Skill"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(255, 255, 255, 1)
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
-        PressedColor: =RGBA(51, 51, 51, 1)
-        PressedFill: =RGBA(255, 255, 255, 1)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =10.75
-        X: =407
-        Y: =447
-        ZIndex: =86
+        Rectangle16_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showCertificationsPopup
+            Width: =427
+            X: =372
+            Y: =638
+            ZIndex: =99
 
-    Label19 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =8
-        Text: ="Skill Title"
-        X: =401
-        Y: =418
-        ZIndex: =87
+        msft_Button_83 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(151, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: |-
+                =UpdateContext({showCertificationsPopup: false})
+            PaddingBottom: =7
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =7
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10.75
+            Text: ="Go Back"
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =showCertificationsPopup
+            Width: =122
+            X: =401
+            Y: =653
+            ZIndex: =103
 
-    msft_Button_33 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =36
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-        OnSelect: |+
-            =Set(
-                NewSkillInput,
-                SkillsTextInput.Text
-            );
-            
-            Set(
-                CoreLeader,
-                LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
-            );
-            
-            Set(
-                UserRecord,
-                LookUp(Caregivers_1, 'Caregiver Email' = User().Email)
-            );
-            
-            Notify("Core Leader: " & CoreLeader, NotificationType.Information);
-            
-            Set(
-                CoreLeaderEmail,
-                LookUp(Caregivers_1, 'Caregiver Name' = CoreLeader).'Caregiver Email'
-            );
-            
-            
-            Notify("Core Leader Email: " & CoreLeaderEmail, NotificationType.Information);
-            
-            Set(
-                AdminEmail,
-                "madhavi.b@providence.org"
-            );
-            Set(
-                UserLevel,
-                UserRecord.Level.Value
-            );
-            
-            If(
-                UserLevel = "1I" || UserLevel = "1P" || UserLevel = "2P" || UserLevel = "3P" || UserLevel = "4P",
-            If(
-                !IsBlank(AdminEmail),
-                Office365Outlook.SendEmailV2(
-                    AdminEmail,
-                    "Request for Addition of a New Skill",
-                    "Hi Madhavi,<br>" &
-                    "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
-                    "Request you to kindly approve the same.<br>" &
-                    "Thank you,<br>" & 
-                    User().FullName
+        SkillsTextInput_7 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HintText: =""
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(0, 51, 142, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.75
+            Visible: =showCertificationsPopup
+            X: =419
+            Y: =291
+            ZIndex: =104
+
+        msft_Button_94 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Set(
+                    NewCertificationInput,
+                    SkillsTextInput_7.Text
                 );
-                Notify("Email sent successfully to admin.", NotificationType.Success)
-            ),
-                If(
-                    !IsBlank(AdminEmail),
-                    Office365Outlook.SendEmailV2(
-                        AdminEmail,
-                        "Adding a New Skill",
-                        "Hi Madhavi,<br>" &
-                        "I am adding this skill (" & NewSkillInput & ") to the already existing list of skills. Please take note.<br>" &
-                        "Thank you,<br>" & 
-                        User().FullName
-                    );
-                    Notify("Email sent successfully to admin.", NotificationType.Success)
-                )
-            );
-            
-            If(
-                !IsBlank(CoreLeaderEmail),
-                Office365Outlook.SendEmailV2(
+                Set(
+                    NewCertificationID,
+                    SkillsTextInput_8.Text
+                );
+                Set(
+                    NewCertificationCode,
+                    SkillsTextInput_9.Text
+                );
+                Set(
+                    validityofCertificate,
+                    SkillsTextInput_10.Text
+                );
+                Set(
+                    dateofCertification,
+                    DatePicker2_1.SelectedDate
+                );
+                Set(
+                    CoreLeader,
+                    LookUp(
+                        Caregivers_1,
+                        'Caregiver Email' = User().Email
+                    ).'Core Leader'
+                );
+                Set(
+                    UserRecord,
+                    LookUp(
+                        Caregivers_1,
+                        'Caregiver Email' = User().Email
+                    )
+                );
+                Notify(
+                    "Core Leader: " & CoreLeader,
+                    NotificationType.Information
+                );
+                Set(
                     CoreLeaderEmail,
-                    "Request for Addition of a New Skill",
-                    "Hi Madhavi,<br>" &
-                    "I am sending this mail to request you for the addition of a new skill (" & NewSkillInput & ") to the system.<br>" &
-                    "Request you to kindly approve the same.<br>" &
-                    "Thank you,<br>" & 
-                    User().FullName
+                    LookUp(
+                        Caregivers_1,
+                        'Caregiver Name' = CoreLeader
+                    ).'Caregiver Email'
                 );
-                Notify("Email sent successfully to core leader.", NotificationType.Success),
-                Notify("Error: Core leader email address not found", NotificationType.Error)
-            )
-            
-            
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =10.75
-        Text: ="Save"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =117
-        X: =606
-        Y: =556
-        ZIndex: =88
+                Notify(
+                    "Core Leader Email: " & CoreLeaderEmail,
+                    NotificationType.Information
+                );
+                Set(
+                    AdminEmail,
+                    "mansi.singh@providence.org"
+                );
+                Set(
+                    UserLevel,
+                    UserRecord.Level.Value
+                );
+                If(
+                    IsBlank(NewCertificationInput) || IsBlank(NewCertificationID) || IsBlank(NewCertificationCode) || IsBlank(dateofCertification),
+                    Notify(
+                        "Error: Fill in all compulsory fields.",
+                        NotificationType.Error
+                    ),
+                    If(
+                        dateofCertification > Now(),
+                        Notify(
+                            "Error: Start date cannot be after the current date.",
+                            NotificationType.Error
+                        ),
+                        If(
+                            UserLevel = "1I" || UserLevel = "1P" || UserLevel = "2P" || UserLevel = "3P" || UserLevel = "4P",
+                            If(
+                                !IsBlank(AdminEmail),
+                                Office365Outlook.SendEmailV2(
+                                    AdminEmail,
+                                    "Request for Addition of a New Certification",
+                                    "Hi Madhavi,<br>" & "I am sending this mail to request you for the addition of a new certification (" & NewCertificationInput & ") to the system.<br>" & "Its' details are as follows<br>" & "My Certification ID: (" & NewCertificationID & ")<br>" & "Certification Code of the Certificate: (" & NewCertificationCode & ")<br>" & "Validity Period of Certificate: (" & validityofCertificate & ")<br>" & "My Start Date of Certification: (" & dateofCertification & ")<br>" & "Request you to kindly approve the same.<br>" & "Thank you,<br>" & User().FullName
+                                );
+                                Notify(
+                                    "Email sent successfully to admin.",
+                                    NotificationType.Success
+                                )
+                            ),
+                            If(
+                                !IsBlank(AdminEmail),
+                                Office365Outlook.SendEmailV2(
+                                    AdminEmail,
+                                    "Adding a New Certification",
+                                    "Hi Madhavi,<br>" & "I am adding this certification (" & NewCertificationInput & ") to the already existing list of certifications. Please take note.<br>" & "Its' details are as follows<br>" & "My Certification ID: (" & NewCertificationID & ")<br>" & "Certification Code of the Certificate: (" & NewCertificationCode & ")<br>" & "Validity Period of Certificate: (" & validityofCertificate & ")<br>" & "My Start Date of Certification: (" & dateofCertification & ")<br>" & "Thank you,<br>" & User().FullName
+                                );
+                                Notify(
+                                    "Email sent successfully to admin.",
+                                    NotificationType.Success
+                                )
+                            )
+                        );
+                        If(
+                            !IsBlank(CoreLeaderEmail),
+                            Office365Outlook.SendEmailV2(
+                                CoreLeaderEmail,
+                                "Request for Addition of a New Skill",
+                                "Hi Madhavi,<br>" & "I am sending this mail to request you for the addition of a new certification (" & NewCertificationInput & ") to the system.<br>" & "Its' details are as follows<br>" & "My Certification ID: (" & NewCertificationID & ")<br>" & "Certification Code of the Certificate: (" & NewCertificationCode & ")<br>" & "Validity Period of Certificate: (" & validityofCertificate & ")<br>" & "My Start Date of Certification: (" & dateofCertification & ")<br>" & "Request you to kindly approve the same.<br>" & "Thank you,<br>" & User().FullName
+                            );
+                            Notify(
+                                "Email sent successfully to core leader.",
+                                NotificationType.Success
+                            ),
+                            Notify(
+                                "Error: Core leader email address not found",
+                                NotificationType.Error
+                            )
+                        )
+                    )
+                );
+                
+                Navigate(msftUpdatecaregivers,ScreenTransition.Fade)
+            PaddingBottom: =7
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =8
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10.75
+            Text: ="Save"
+            VerticalAlign: =VerticalAlign.Top
+            Visible: =showCertificationsPopup
+            Width: =117
+            X: =617
+            Y: =653
+            ZIndex: =105
 
-    msft_Button_77 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =36
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        OnSelect: =Navigate(msftpopup,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =7
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =10.75
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =122
-        X: =404
-        Y: =556
-        ZIndex: =89
+        SkillsTextInput_8 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HintText: =""
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.75
+            Visible: =showCertificationsPopup
+            X: =419
+            Y: =366
+            ZIndex: =106
+
+        SkillsTextInput_9 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            HintText: =""
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.75
+            Visible: =showCertificationsPopup
+            X: =419
+            Y: =445
+            ZIndex: =107
+
+        SkillsTextInput_10 As text:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Format: =TextFormat.Number
+            HintText: =""
+            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedBorderColor: =RGBA(0, 120, 212, 1)
+            PressedColor: =RGBA(51, 51, 51, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Size: =10.75
+            Visible: =showCertificationsPopup
+            X: =418
+            Y: =517
+            ZIndex: =108
+
+        DatePicker2_1 As datepicker:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            CalendarHeaderFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Font: =Font.'Segoe UI'
+            HoverDateFill: =RGBA(200, 200, 200, 1)
+            IconBackground: =RGBA(0, 120, 212, 1)
+            PaddingTop: =5
+            SelectedDateFill: =RGBA(0, 120, 212, 1)
+            Size: =10.75
+            Visible: =showCertificationsPopup
+            Width: =320
+            X: =418
+            Y: =581
+            ZIndex: =109
+
+        Label40_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            Size: =8
+            Text: ="Start Date"
+            Visible: =showCertificationsPopup
+            Width: =311
+            X: =414
+            Y: =553
+            ZIndex: =110
+
+        Label40_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            Size: =8
+            Text: ="Certification Title"
+            Visible: =showCertificationsPopup
+            Width: =311
+            X: =417
+            Y: =261
+            ZIndex: =111
+
+        Label40_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            Size: =8
+            Text: ="Certification ID"
+            Visible: =showCertificationsPopup
+            Width: =311
+            X: =417
+            Y: =337
+            ZIndex: =112
+
+        Label40_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            Size: =8
+            Text: ="Certification Code"
+            Visible: =showCertificationsPopup
+            Width: =311
+            X: =414
+            Y: =416
+            ZIndex: =113
+
+        Label40_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            Size: =8
+            Text: ="Validity Period (in Years)"
+            Visible: =showCertificationsPopup
+            Width: =311
+            X: =417
+            Y: =488
+            ZIndex: =114
 
     Group2 As group:
         Height: =5
