@@ -4013,9 +4013,7 @@ msftUpdatecaregivers As screen:
                 );
                 
                 If(
-                    IsBlank(NewSkillInput),
-                    Notify("Error: Skill input is blank. Please enter a skill.", NotificationType.Error),
-                    /* If NewSkillInput is not blank, proceed with the rest of the code */
+                    !IsBlank(NewSkillInput),
                 
                 Set(
                     CoreLeader,
@@ -4073,7 +4071,9 @@ msftUpdatecaregivers As screen:
                         );
                         Notify("Email sent successfully to admin.", NotificationType.Success)
                     )
-                );
+                ),
+                Notify("Error: Skill input is blank. Please enter a skill.", NotificationType.Error)
+                
                 
                 /*If(
                     !IsBlank(CoreLeaderEmail),
