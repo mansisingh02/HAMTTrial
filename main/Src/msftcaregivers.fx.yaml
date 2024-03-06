@@ -1377,7 +1377,7 @@ msftcaregivers As screen:
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =81
+        ZIndex: =82
 
         Rectangle8 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1391,8 +1391,8 @@ msftcaregivers As screen:
             PressedFill: =RGBA(255, 255, 255, 0.9)
             Visible: =If(showProjects=true,true,false)
             Width: =1291
-            X: =75
-            Y: =36
+            X: =74
+            Y: =60
             ZIndex: =22
 
         Rectangle4 As rectangle:
@@ -1466,8 +1466,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project3.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =393
-            X: =413
-            Y: =525
+            X: =414
+            Y: =509
             ZIndex: =26
 
         Label28_5 As label:
@@ -1486,7 +1486,7 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =848
+            X: =896
             Y: =391
             ZIndex: =27
 
@@ -1506,8 +1506,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project2.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Secondary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =857
-            Y: =449
+            X: =897
+            Y: =453
             ZIndex: =28
 
         Label28_7 As label:
@@ -1526,7 +1526,7 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project3.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % of Tertiary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =857
+            X: =897
             Y: =517
             ZIndex: =29
 
@@ -1603,4 +1603,20 @@ msftcaregivers As screen:
             X: =414
             Y: =331
             ZIndex: =80
+
+        Rectangle16_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =242
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showProjects
+            Width: =0.5
+            X: =868
+            Y: =371
+            ZIndex: =81
 
