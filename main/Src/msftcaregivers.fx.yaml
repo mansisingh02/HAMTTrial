@@ -725,7 +725,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true,true,false)
             Width: =1291
             X: =75
-            Y: =36
+            Y: =60
             ZIndex: =31
 
         Rectangle4_1 As rectangle:
@@ -734,23 +734,22 @@ msftcaregivers As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =373
+            Height: =445
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =If(showSkills=true,true,false)
-            Width: =602
-            X: =375
-            Y: =293
+            Width: =739
+            X: =341
+            Y: =229
             ZIndex: =32
 
         Icon1_11 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(179, 179, 179, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =35
+            Height: =18
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -760,25 +759,25 @@ msftcaregivers As screen:
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(showSkills=true,true,false)
-            Width: =35
-            X: =933
-            Y: =301
+            Width: =23
+            X: =1008
+            Y: =266
             ZIndex: =39
 
         Gallery7_3 As gallery.galleryHorizontal:
             BorderColor: =RGBA(166, 166, 166, 1)
             DelayItemLoading: =true
-            Height: =98
+            Height: =86
             Items: |-
-                =Table({IDD:1,Labell:"Beginner Skills"},{IDD:2,Labell:"Intermediate Skills"},{IDD:3,Labell:"Advanced Skills"})
+                =Table({IDD:1,Labell:"Beginner"},{IDD:2,Labell:"Intermediate"},{IDD:3,Labell:"Advanced"})
             LoadingSpinner: =LoadingSpinner.Data
             ShowScrollbar: =false
             TemplatePadding: =0
-            TemplateSize: =170
+            TemplateSize: =153
             Visible: =If(showSkills=true,true,false)
             Width: =537
-            X: =380
-            Y: =303
+            X: =342
+            Y: =289
             ZIndex: =40
 
             Button2_3 As button:
@@ -830,8 +829,8 @@ msftcaregivers As screen:
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =If(showSkills=true,true,false)
             Width: =493
-            X: =396
-            Y: =391
+            X: =356
+            Y: =385
             ZIndex: =41
 
         Label51 As label:
@@ -847,8 +846,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =388
-            Y: =399
+            X: =353
+            Y: =388
             ZIndex: =42
 
         Label51_1 As label:
@@ -864,8 +863,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =388
-            Y: =430
+            X: =353
+            Y: =419
             ZIndex: =43
 
         Label51_2 As label:
@@ -881,8 +880,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Advancedd.'Advanced Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
-            X: =389
-            Y: =461
+            X: =354
+            Y: =450
             ZIndex: =44
 
         Label51_3 As label:
@@ -899,7 +898,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =389
-            Y: =492
+            Y: =516
             ZIndex: =45
 
         Label51_4 As label:
@@ -916,7 +915,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =389
-            Y: =522
+            Y: =546
             ZIndex: =46
 
         Label51_5 As label:
@@ -933,7 +932,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =397
-            Y: =573
+            Y: =597
             ZIndex: =47
 
         Label51_6 As label:
@@ -950,7 +949,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =389
-            Y: =552
+            Y: =576
             ZIndex: =48
 
         Label51_7 As label:
@@ -967,7 +966,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
             Width: =433
             X: =398
-            Y: =605
+            Y: =629
             ZIndex: =49
 
         Label51_15 As label:
@@ -983,8 +982,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =500
-            X: =389
-            Y: =395
+            X: =354
+            Y: =389
             ZIndex: =50
 
         Label51_14 As label:
@@ -1000,8 +999,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =500
-            X: =389
-            Y: =426
+            X: =354
+            Y: =420
             ZIndex: =51
 
         Label51_13 As label:
@@ -1017,8 +1016,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =389
-            Y: =456
+            X: =356
+            Y: =453
             ZIndex: =52
 
         Label51_12 As label:
@@ -1034,8 +1033,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 4'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =389
-            Y: =487
+            X: =354
+            Y: =481
             ZIndex: =53
 
         Label51_11 As label:
@@ -1051,8 +1050,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =389
-            Y: =517
+            X: =354
+            Y: =511
             ZIndex: =54
 
         Label51_10 As label:
@@ -1068,8 +1067,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 7'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =389
-            Y: =577
+            X: =354
+            Y: =571
             ZIndex: =55
 
         Label51_9 As label:
@@ -1085,8 +1084,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 6'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =389
-            Y: =548
+            X: =354
+            Y: =542
             ZIndex: =56
 
         Label51_8 As label:
@@ -1102,8 +1101,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 8'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
             Width: =433
-            X: =393
-            Y: =611
+            X: =356
+            Y: =603
             ZIndex: =57
 
         Label51_23 As label:
@@ -1119,8 +1118,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =500
-            X: =389
-            Y: =399
+            X: =354
+            Y: =393
             ZIndex: =58
 
         Label51_22 As label:
@@ -1136,8 +1135,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =501
-            X: =388
-            Y: =429
+            X: =353
+            Y: =423
             ZIndex: =59
 
         Label51_21 As label:
@@ -1153,8 +1152,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 3'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =500
-            X: =389
-            Y: =458
+            X: =354
+            Y: =452
             ZIndex: =60
 
         Label51_20 As label:
@@ -1170,8 +1169,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =500
-            X: =389
-            Y: =488
+            X: =354
+            Y: =482
             ZIndex: =61
 
         Label51_19 As label:
@@ -1187,8 +1186,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =500
-            X: =389
-            Y: =518
+            X: =356
+            Y: =516
             ZIndex: =62
 
         Label51_18 As label:
@@ -1204,8 +1203,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =501
-            X: =388
-            Y: =579
+            X: =358
+            Y: =584
             ZIndex: =63
 
         Label51_17 As label:
@@ -1221,8 +1220,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =503
-            X: =386
-            Y: =549
+            X: =356
+            Y: =550
             ZIndex: =64
 
         Label51_16 As label:
@@ -1239,7 +1238,7 @@ msftcaregivers As screen:
             Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
             Width: =500
             X: =389
-            Y: =606
+            Y: =660
             ZIndex: =65
 
     Container_PrimaryOwner_35 As groupContainer.verticalAutoLayoutContainer:
@@ -1394,10 +1393,10 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =17
             Text: =Gallery1.Selected.'Caregiver Name'
-            Visible: =showProjects
+            Visible: =showSkills
             Width: =488
-            X: =414
-            Y: =284
+            X: =381
+            Y: =232
             ZIndex: =77
 
         Rectangle16_4 As rectangle:
@@ -1410,10 +1409,10 @@ msftcaregivers As screen:
             Height: =0.5
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =showProjects
-            Width: =631
-            X: =375
-            Y: =371
+            Visible: =showSkills
+            Width: =738
+            X: =342
+            Y: =319
             ZIndex: =78
 
         Label49 As label:
@@ -1426,25 +1425,9 @@ msftcaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             Size: =13
-            Text: ="Projects"
-            Visible: =showProjects
-            X: =414
-            Y: =331
+            Text: ="Skills"
+            Visible: =showSkills
+            X: =381
+            Y: =279
             ZIndex: =80
-
-        Rectangle16_5 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(179, 179, 179, 1)
-            Fill: =RGBA(153, 153, 153, 1)
-            FocusedBorderThickness: =4
-            Height: =242
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =showProjects
-            Width: =0.5
-            X: =868
-            Y: =371
-            ZIndex: =81
 
