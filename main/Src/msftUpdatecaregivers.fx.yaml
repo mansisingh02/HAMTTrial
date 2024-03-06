@@ -1351,7 +1351,8 @@ msftUpdatecaregivers As screen:
             OnSelect: =Select(Parent)
             Size: =12
             Text: =ThisItem.Project1.'Project Name'
-            Width: =320
+            Width: =385
+            Y: =17
             ZIndex: =1
 
         Label8_4 As label:
@@ -1369,7 +1370,7 @@ msftUpdatecaregivers As screen:
             Text: =If(ThisItem.'Allocation % for Primary Project'=Blank(),"",ThisItem.'Allocation % for Primary Project' * 100 & "%")
             Width: =100
             X: =733
-            Y: =17
+            Y: =35
             ZIndex: =2
 
         Label8_5 As label:
@@ -1458,6 +1459,7 @@ msftUpdatecaregivers As screen:
             Text: =ThisItem.'Discipline for Primary Project'.Value
             Width: =320
             X: =285
+            Y: =18
             ZIndex: =8
 
         Label8_10 As label:
@@ -4012,9 +4014,6 @@ msftUpdatecaregivers As screen:
                     SkillsTextInput.Text
                 );
                 
-                If(
-                    !IsBlank(NewSkillInput),
-                
                 Set(
                     CoreLeader,
                     LookUp(Caregivers_1, 'Caregiver Email' = User().Email).'Core Leader'
@@ -4071,8 +4070,7 @@ msftUpdatecaregivers As screen:
                         );
                         Notify("Email sent successfully to admin.", NotificationType.Success)
                     )
-                ),
-                Notify("Error: Skill input is blank. Please enter a skill.", NotificationType.Error)
+                );
                 
                 
                 /*If(
@@ -4089,7 +4087,7 @@ msftUpdatecaregivers As screen:
                     Notify("Email sent successfully to core leader.", NotificationType.Success),
                     Notify("Error: Core leader email address not found", NotificationType.Error)
                 )*/
-                );
+                
                 
                 
             PaddingBottom: =7
