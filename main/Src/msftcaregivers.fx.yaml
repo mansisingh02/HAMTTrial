@@ -1401,13 +1401,13 @@ msftcaregivers As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =302
+            Height: =335
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =If(showProjects=true,true,false)
-            Width: =602
+            Width: =631
             X: =375
-            Y: =293
+            Y: =278
             ZIndex: =23
 
         Label28_2 As label:
@@ -1427,7 +1427,7 @@ msftcaregivers As screen:
             Visible: =If(showProjects=true,true,false)
             Width: =325
             X: =414
-            Y: =371
+            Y: =379
             ZIndex: =24
 
         Label28_3 As label:
@@ -1447,7 +1447,7 @@ msftcaregivers As screen:
             Visible: =If(showProjects=true,true,false)
             Width: =398
             X: =414
-            Y: =432
+            Y: =440
             ZIndex: =25
 
         Label28_4 As label:
@@ -1466,8 +1466,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project3.'Project Name' 
             Visible: =If(showProjects=true,true,false)
             Width: =393
-            X: =414
-            Y: =503
+            X: =413
+            Y: =525
             ZIndex: =26
 
         Label28_5 As label:
@@ -1486,8 +1486,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =835
-            Y: =385
+            X: =848
+            Y: =391
             ZIndex: =27
 
         Label28_6 As label:
@@ -1506,8 +1506,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project2.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Secondary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =835
-            Y: =441
+            X: =857
+            Y: =449
             ZIndex: =28
 
         Label28_7 As label:
@@ -1526,8 +1526,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.Project3.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % of Tertiary Project'*100 & "%")
             Visible: =If(showProjects=true,true,false)
             Width: =72
-            X: =836
-            Y: =507
+            X: =857
+            Y: =517
             ZIndex: =29
 
         Icon1 As icon.Cancel:
@@ -1547,8 +1547,8 @@ msftcaregivers As screen:
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =If(showProjects=true,true,false)
             Width: =29
-            X: =915
-            Y: =315
+            X: =929
+            Y: =311
             ZIndex: =30
 
         Label28_18 As label:
@@ -1569,7 +1569,7 @@ msftcaregivers As screen:
             Visible: =showProjects
             Width: =488
             X: =414
-            Y: =298
+            Y: =284
             ZIndex: =77
 
         Rectangle16_4 As rectangle:
@@ -1583,9 +1583,9 @@ msftcaregivers As screen:
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =showProjects
-            Width: =602
+            Width: =631
             X: =375
-            Y: =365
+            Y: =371
             ZIndex: =78
 
         Label49 As label:
@@ -1597,10 +1597,10 @@ msftcaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Size: =8
+            Size: =13
             Text: ="Projects"
             Visible: =showProjects
             X: =414
-            Y: =338
+            Y: =331
             ZIndex: =80
 
