@@ -2128,7 +2128,8 @@ msftUpdatecaregivers As screen:
         HoverColor: =ColorFade(RGBA(0, 142, 51, 1), -30%)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Help
-        OnSelect: =Navigate(msftpopup, ScreenTransition.None)
+        OnSelect: |-
+            =UpdateContext({showSkillsPopup: true})
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
@@ -3755,6 +3756,21 @@ msftUpdatecaregivers As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
+    Rectangle16 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(153, 153, 153, 1)
+        FocusedBorderThickness: =4
+        Height: =0.5
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =493
+        X: =375
+        Y: =397
+        ZIndex: =84
+
     skillstPopUp As group:
         Height: =5
         Width: =5
@@ -3788,7 +3804,7 @@ msftUpdatecaregivers As screen:
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =showSkillsPopup
-            Width: =602
+            Width: =493
             X: =375
             Y: =317
             ZIndex: =76
@@ -3802,15 +3818,16 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
             Height: =65
             LineHeight: =2
             OnSelect: =
-            Size: =12
-            Text: =Gallery1.Selected.Project1.'Project Name' 
+            Size: =17
+            Text: ="Update Skills"
             Visible: =showSkillsPopup
             Width: =325
-            X: =419
-            Y: =360
+            X: =398
+            Y: =328
             ZIndex: =77
 
         Label28_9 As label:
@@ -3852,26 +3869,6 @@ msftUpdatecaregivers As screen:
             X: =423
             Y: =517
             ZIndex: =79
-
-        Label28_11 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =35
-            LineHeight: =2
-            OnSelect: =
-            Size: =12
-            Text: =If(Gallery1.Selected.Project1.'Project Name' =Blank(),"",Gallery1.Selected.'Allocation % for Primary Project'*100 & "%")
-            Visible: =showSkillsPopup
-            Width: =72
-            X: =837
-            Y: =375
-            ZIndex: =80
 
         Label28_12 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3915,12 +3912,11 @@ msftUpdatecaregivers As screen:
 
         Icon1_12 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(179, 179, 179, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =35
+            Height: =29
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -3931,10 +3927,25 @@ msftUpdatecaregivers As screen:
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
             Visible: =showSkillsPopup
-            Width: =35
-            X: =933
-            Y: =325
+            Width: =32
+            X: =805
+            Y: =346
             ZIndex: =83
+
+    Rectangle16_1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(230, 230, 230, 1)
+        FocusedBorderThickness: =4
+        Height: =0.5
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Width: =493
+        X: =375
+        Y: =545
+        ZIndex: =85
 
     Group2 As group:
         Height: =5
