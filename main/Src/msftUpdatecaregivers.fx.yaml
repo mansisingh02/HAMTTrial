@@ -76,8 +76,8 @@ msftUpdatecaregivers As screen:
         Size: =13
         Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org","Hello, " & User().FullName, "Hello, " & User().FullName)
         Width: =282
-        X: =99
-        Y: =159
+        X: =368
+        Y: =116
         ZIndex: =4
 
     Gallery3 As gallery.galleryHorizontal:
@@ -492,7 +492,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
-            OnSelect: |
+            OnSelect: |+
                 =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 1'.Value , Id: ThisItem.'Beginner 1'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 1'}),
@@ -529,6 +529,11 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 1': Blank(), 'Description for Beginner Skill 1': Blank()})
+                
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -628,6 +633,10 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 2': Blank(), 'Description for Beginner Skill 2': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -727,6 +736,10 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 3': Blank(), 'Description for Beginner Skill 3': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -826,6 +839,10 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 4': Blank(), 'Description for Beginner Skill 4': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -925,6 +942,10 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 5': Blank(), 'Description for Beginner Skill 5': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1024,6 +1045,9 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 6': Blank(), 'Description for Beginner Skill 6': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1123,6 +1147,10 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 7': Blank(), 'Description for Beginner Skill 7': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -1222,6 +1250,9 @@ msftUpdatecaregivers As screen:
                             Notify("You have entered the maximum number of skills!")
                             
                             ));
+                Patch(Beginner,  LookUp(
+                            Beginner,
+                            'Caregiver ID' = Gallery5.Selected.'Caregiver ID') , {'Beginner Skill 8': Blank(), 'Description for Beginner Skill 8': Blank()})
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
