@@ -123,8 +123,7 @@ msftcaregiverdiscipline As screen:
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =56
-        Width: =1211
-        WrapCount: =3
+        Width: =1161
         X: =117
         Y: =248
         ZIndex: =36
@@ -146,6 +145,24 @@ msftcaregiverdiscipline As screen:
             X: =4
             Y: =20
             ZIndex: =1
+
+        Label35_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =28
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Email'
+            Width: =385
+            X: =454
+            Y: =20
+            ZIndex: =2
 
     Container_Admin_37 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -187,4 +204,36 @@ msftcaregiverdiscipline As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Label27_5 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Caregiver Email"
+        X: =581
+        Y: =201
+        ZIndex: =40
+
+    Label27_6 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Caregiver Email"
+        X: =966
+        Y: =201
+        ZIndex: =41
 

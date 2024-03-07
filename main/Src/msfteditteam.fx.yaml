@@ -354,7 +354,7 @@ msfteditteam As screen:
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =56
+            Height: =47
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -381,7 +381,7 @@ msfteditteam As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =45
+            Width: =27
             X: =923
             Y: =25
             ZIndex: =18
@@ -393,7 +393,7 @@ msfteditteam As screen:
             DisabledColor: =RGBA(220, 220, 220, 1)
             DisabledFill: =RGBA(0, 0, 0, 0)
             FocusedBorderThickness: =4
-            Height: =49
+            Height: =31
             HoverBorderColor: =RGBA(0, 0, 0, 0)
             HoverColor: =RGBA(190, 71, 71, 1)
             HoverFill: =RGBA(0, 0, 0, 0)
@@ -402,10 +402,82 @@ msfteditteam As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =44
-            X: =1013
-            Y: =28
+            Width: =19
+            X: =1029
+            Y: =36
             ZIndex: =19
+
+        Button10 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 51, 142, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: |-
+                =Patch(Caregivers_1,ThisItem,
+                If(ThisItem.'Primary Project '.Value=Gallery16.Selected.'Project ID',
+                  {
+                        'Allocation % for Primary Project': msft_Dropdown_39.Selected.Value/100,
+                        'Discipline for Primary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } 
+                  },
+                  ThisItem.'Secondary Project'.Value=Gallery16.Selected.'Project ID',
+                  {
+                        'Allocation % for Secondary Project': msft_Dropdown_39.Selected.Value/100,
+                        'Discipline for Secondary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } },
+                 ThisItem.'Tertiary Project'.Value=Gallery16.Selected.'Project ID',
+                  {
+                        'Allocation % for Tertiary Project': msft_Dropdown_39.Selected.Value/100,
+                        'Discipline for Tertiary Project': { Value : ComboBox2.Selected.Value , Id : ComboBox5.Selected.ID } }
+                  
+                
+                )
+                )
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =15
+            Text: ="Update"
+            Width: =121
+            X: =864
+            Y: =32
+            ZIndex: =20
+
+        Button10_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(151, 0, 0, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            OnSelect: =Set(varItemToDelete, Gallery21.Selected.'Caregiver Name'); Navigate(msftconfirmationscreen)
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Size: =15
+            Text: ="Delete"
+            Width: =112
+            X: =997
+            Y: =32
+            ZIndex: =21
 
     msft_Button_85 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
