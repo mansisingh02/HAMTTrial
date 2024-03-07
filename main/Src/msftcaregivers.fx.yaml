@@ -257,6 +257,8 @@ msftcaregivers As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =21
+                HoverColor: =RGBA(255,255,255,1)
+                HoverFill: =RGBA(0,51,142,1)
                 OnSelect: =Set(showProjects,true)
                 Size: =9
                 Text: ="View More"
@@ -336,6 +338,8 @@ msftcaregivers As screen:
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =21
+                HoverColor: =RGBA(255,255,255,1)
+                HoverFill: =RGBA(0,51,142,1)
                 OnSelect: =Set(showSkills,true)
                 Size: =9
                 Text: ="View More"
@@ -1424,6 +1428,24 @@ msftcaregivers As screen:
         X: =1180
         Y: =255
         ZIndex: =76
+
+    Label4_6 As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Lato Black'
+        Height: =37
+        Size: =13
+        Text: =If( Lower(User().Email)="rama.ghodke@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="mansi.singh@providence.org",User().FullName, User().FullName)
+        Width: =282
+        X: =1071
+        Y: =5
+        ZIndex: =81
 
     Group6 As group:
         Height: =5
