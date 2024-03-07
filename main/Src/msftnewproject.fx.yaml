@@ -1054,6 +1054,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Capability"
         Items: =Distinct(Capabilities,Capability)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -1085,6 +1086,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Primary Owner"
         Items: |+
             =Distinct(
                 Filter(
@@ -1208,6 +1210,7 @@ msftnewproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(212, 212, 212, 1)
+        InputTextPlaceholder: ="Project Goal"
         Items: =Distinct('Project Goals', Goal)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
