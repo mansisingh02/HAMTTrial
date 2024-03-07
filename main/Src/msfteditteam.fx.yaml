@@ -416,9 +416,9 @@ msfteditteam As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: |-
                 =Patch(Caregivers_1,ThisItem,
                 If(ThisItem.'Primary Project '.Value=Gallery16.Selected.'Project ID',
@@ -445,9 +445,9 @@ msfteditteam As screen:
             RadiusBottomRight: =3
             RadiusTopLeft: =3
             RadiusTopRight: =3
-            Size: =15
-            Text: ="Update"
-            Width: =121
+            Size: =12
+            Text: ="Edit"
+            Width: =107
             X: =864
             Y: =32
             ZIndex: =20
@@ -461,9 +461,9 @@ msfteditteam As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(190, 71, 71, 1)
+            HoverColor: =RGBA(151, 0, 0, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: =Set(varItemToDelete, Gallery21.Selected.'Caregiver Name'); Navigate(msftconfirmationscreen)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -472,10 +472,10 @@ msfteditteam As screen:
             RadiusBottomRight: =3
             RadiusTopLeft: =3
             RadiusTopRight: =3
-            Size: =15
+            Size: =12
             Text: ="Delete"
-            Width: =112
-            X: =997
+            Width: =103
+            X: =987
             Y: =32
             ZIndex: =21
 
