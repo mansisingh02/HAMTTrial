@@ -69,7 +69,7 @@ msftUpdatecaregivers As screen:
         Height: =76
         Items: |
             =Filter(Caregivers_1, If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" && (Lower(User().Email)<>"mansi.singh@providence.org"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="2P")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="3P") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="4P") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1l")  ,
-            StartsWith('Caregiver Email',Lower(User().Email)),  StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email')))
+            StartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver)))
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
         TemplateSize: =1219

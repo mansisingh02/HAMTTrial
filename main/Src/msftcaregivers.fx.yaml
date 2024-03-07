@@ -281,7 +281,9 @@ msftcaregivers As screen:
             HoverBorderColor: =RGBA(0, 51, 142, 1)
             HoverColor: =RGBA(0, 51, 142, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
-            OnSelect: =Navigate(msftUpdatecaregivers)
+            OnSelect: |-
+                =Navigate(msftUpdatecaregivers);
+                Set(gblSelectedCaregiver, ThisItem.'Caregiver Email')
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)

@@ -5093,10 +5093,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 678,
+                  "charLength": 653,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  StartsWith('Caregiver Email',Gallery1.Selected.'Caregiver Email'))"
+                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver))"
                   }
                 }
               },
@@ -13885,6 +13885,314 @@
           },
           "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
           "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": "Rectangle4"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle15"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Rectangle4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": ".Visible"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": "Rectangle4"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Rectangle4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": ".Visible"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": "Rectangle4"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Rectangle4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": ".Visible"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 10,
+                  "charOffset": 26,
+                  "snippet": {
+                    "text": "Rectangle4"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Rectangle4"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 8,
+                  "charOffset": 36,
+                  "snippet": {
+                    "text": ".Visible"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Visible",
+                "module": "msftcaregivers",
+                "type": "msftcaregivers.Rectangle13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 2
         },
         {
           "locations": [
@@ -37339,36 +37647,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftUpdatecaregivers.Gallery3.Items",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "msftUpdatecaregivers",
-                "type": "msftUpdatecaregivers.Gallery3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftUpdatecaregivers.Label28_14.Text"
                 }
               ],
@@ -37952,126 +38230,6 @@
                 "member": "Items",
                 "module": "msftviewteam",
                 "type": "msftviewteam.Gallery21_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle15.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "msftcaregivers",
-                "type": "msftcaregivers.Rectangle15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13_1.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "msftcaregivers",
-                "type": "msftcaregivers.Rectangle13_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13_3.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "msftcaregivers",
-                "type": "msftcaregivers.Rectangle13_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 21
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftcaregivers.Rectangle13.Visible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "msftcaregivers",
-                "type": "msftcaregivers.Rectangle13"
               }
             }
           ],
