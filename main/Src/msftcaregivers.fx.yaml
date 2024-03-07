@@ -197,11 +197,10 @@ msftcaregivers As screen:
             Height: =35
             LineHeight: =2
             OnSelect: =Select(Parent)
-            Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Advancedd.'Advanced Skill 1'.Value & If(ThisItem.Advancedd.'Advanced Skill 1'.Value=Blank(),"", ", ") & ThisItem.Advancedd.'Advanced Skill 2'.Value & If(ThisItem.Advancedd.'Advanced Skill 2'.Value=Blank(), "", ", ")  & ThisItem.Advancedd.'Advanced Skill 3'.Value & If(ThisItem.Advancedd.'Advanced Skill 3'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 4'.Value & If(ThisItem.Advancedd.'Advanced Skill 4'.Value=Blank(), "", ", ") & ThisItem.Advancedd.'Advanced Skill 5'.Value 
             VerticalAlign: =VerticalAlign.Top
-            Width: =377
+            Width: =311
             X: =307
             ZIndex: =9
 
@@ -1303,7 +1302,7 @@ msftcaregivers As screen:
         Height: =418
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
+        Visible: =!Rectangle4_1.Visible
         Width: =1
         X: =419
         Y: =256
@@ -1319,9 +1318,9 @@ msftcaregivers As screen:
         Height: =419
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
+        Visible: =!Rectangle4_1.Visible
         Width: =1
-        X: =821
+        X: =829
         Y: =255
         ZIndex: =73
 
@@ -1350,7 +1349,7 @@ msftcaregivers As screen:
         Height: =1
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
+        Visible: =!Rectangle4_1.Visible
         Width: =1194
         X: =123
         Y: =255
@@ -1366,9 +1365,9 @@ msftcaregivers As screen:
         Height: =420
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =!Rectangle4_1.Visible && !Rectangle4.Visible
+        Visible: =!Rectangle4_1.Visible
         Width: =1
-        X: =1168
+        X: =1180
         Y: =255
         ZIndex: =76
 
