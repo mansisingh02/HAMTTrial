@@ -8,7 +8,7 @@ msfteditcertification As screen:
         LayoutMode: ="manual"
         Width: =240
         X: =109
-        Y: =148
+        Y: =163
         ZIndex: =48
 
         "'Report Label_21' As label":
@@ -37,7 +37,7 @@ msfteditcertification As screen:
         LayoutMode: ="manual"
         Width: =274
         X: =511
-        Y: =268
+        Y: =283
         ZIndex: =50
 
         "'Report Label_32' As label":
@@ -78,7 +78,7 @@ msfteditcertification As screen:
         Text: =Text(Gallery8.Selected.'Certification Name')
         Width: =1129
         X: =176
-        Y: =101
+        Y: =116
         ZIndex: =51
 
     "'Rectangle 31_18' As rectangle":
@@ -123,7 +123,7 @@ msfteditcertification As screen:
         Text: ="Edit "
         Width: =203
         X: =123
-        Y: =100
+        Y: =115
         ZIndex: =56
 
     TextInput2_12 As text:
@@ -151,7 +151,7 @@ msfteditcertification As screen:
         Size: =13
         Width: =422
         X: =594
-        Y: =309
+        Y: =324
         ZIndex: =58
 
     TextInput2_11 As text:
@@ -178,50 +178,15 @@ msfteditcertification As screen:
         Size: =13
         Width: =426
         X: =123
-        Y: =209
+        Y: =224
         ZIndex: =61
-
-    msft_Button_91 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =42
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 0.9), -10%)
-        OnSelect: =Navigate(msftcertification,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =155
-        X: =87
-        Y: =678
-        ZIndex: =62
 
     "'Report Header_37' As groupContainer.manualLayoutContainer":
         Height: =61
         LayoutMode: ="manual"
         Width: =240
         X: =576
-        Y: =148
+        Y: =163
         ZIndex: =63
 
         "'Report Label_36' As label":
@@ -269,7 +234,7 @@ msfteditcertification As screen:
         Size: =13
         Width: =426
         X: =590
-        Y: =209
+        Y: =224
         ZIndex: =64
 
     "'Report Header_38' As groupContainer.manualLayoutContainer":
@@ -277,7 +242,7 @@ msfteditcertification As screen:
         LayoutMode: ="manual"
         Width: =240
         X: =110
-        Y: =248
+        Y: =263
         ZIndex: =65
 
         "'Report Label_37' As label":
@@ -326,7 +291,7 @@ msfteditcertification As screen:
         Size: =13
         Width: =426
         X: =124
-        Y: =309
+        Y: =324
         ZIndex: =66
 
     msft_Button_57 As button:
@@ -418,4 +383,52 @@ msfteditcertification As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Group3_18 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =73
+
+        Icon2_18 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftcertification,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =97
+            Y: =74
+            ZIndex: =71
+
+        msft_Label_48 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftcertification,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =117
+            Y: =74
+            ZIndex: =72
 
