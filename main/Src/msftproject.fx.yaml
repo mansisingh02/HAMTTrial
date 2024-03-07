@@ -318,19 +318,17 @@ msftproject As screen:
         ZIndex: =5
 
     msft_Button_13 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
+        BorderColor: =RGBA(0, 51, 142, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 51, 142, 1)
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
-        Height: =43
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        Height: =39
+        HoverBorderColor: =RGBA(0, 51, 142, 1)
+        HoverColor: =RGBA(0, 51, 142, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: =Navigate(msftnewproject, ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
@@ -345,11 +343,10 @@ msftproject As screen:
         RadiusTopRight: =5
         Size: =12.5
         Text: ="Add New Project"
-        VerticalAlign: =VerticalAlign.Top
         Visible: =If(adminOrcoreLeader,true,false)
         Width: =204
         X: =1123
-        Y: =149
+        Y: =150
         ZIndex: =6
 
     Gallery16 As gallery.galleryVertical:
