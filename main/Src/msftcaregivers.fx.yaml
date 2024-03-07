@@ -217,11 +217,10 @@ msftcaregivers As screen:
             Height: =35
             LineHeight: =2
             OnSelect: =Select(Parent)
-            Overflow: =Overflow.Scroll
             Size: =9
             Text: =ThisItem.Project1.'Project Name'
-            Width: =240
-            X: =705
+            Width: =254
+            X: =711
             ZIndex: =10
 
         projectDot As group:
@@ -236,21 +235,21 @@ msftcaregivers As screen:
                 BorderStyle: =BorderStyle.None
                 BorderThickness: =2
                 DisabledFill: =RGBA(166, 166, 166, 1)
-                Fill: =RGBA(204, 204, 204, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =4
-                Height: =20
+                Height: =18
                 HoverFill: =RGBA(0, 120, 212, 1)
                 OnSelect: =Set(showProjects,true)
                 PressedFill: =RGBA(0, 120, 212, 1)
                 Visible: =If(Label28_1.Text=Blank(),false,true)
-                Width: =19
-                X: =926
+                Width: =14
+                X: =1005
                 Y: =7
                 ZIndex: =11
 
             Label50 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 51, 142, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 51, 142, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -258,13 +257,13 @@ msftcaregivers As screen:
                 Fill: =RGBA(255, 255, 255, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =23
+                Height: =21
                 OnSelect: =Set(showProjects,true)
-                Size: =6
-                Text: ="View Other Projects..."
+                Size: =9
+                Text: ="View More"
                 Visible: =If(Label28_1.Text=Blank(),false,true)
-                Width: =112
-                X: =926
+                Width: =83
+                X: =966
                 Y: =6
                 ZIndex: =12
 
@@ -326,8 +325,8 @@ msftcaregivers As screen:
                 ZIndex: =13
 
             Label50_1 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 51, 142, 1)
                 BorderThickness: =2
                 Color: =RGBA(0, 51, 142, 1)
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -337,8 +336,8 @@ msftcaregivers As screen:
                 Font: =Font.'Segoe UI'
                 Height: =21
                 OnSelect: =Set(showSkills,true)
-                Size: =6
-                Text: ="View Other Skills..."
+                Size: =9
+                Text: ="View More"
                 Visible: =If(Label28.Text="",false,true)
                 Width: =80
                 X: =618
@@ -529,8 +528,8 @@ msftcaregivers As screen:
         FontWeight: =FontWeight.Bold
         Size: =12
         Text: ="Projects"
-        X: =821
-        Y: =203
+        X: =836
+        Y: =204
         ZIndex: =12
 
     Label2_3 As label:
