@@ -2067,9 +2067,9 @@ msftUpdatecaregivers As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Height: =34
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =RGBA(0, 51, 142, 1)
+        HoverColor: =RGBA(0, 51, 142, 1)
+        HoverFill: =RGBA(255,255,255,1)
         OnSelect: |-
             =Patch('Caregiver Certifications_1',  LookUp(
                         'Caregiver Certifications_1',
@@ -5090,9 +5090,9 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =30
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =RGBA(255,255,255,1)
             OnSelect: |
                 =(If(Title2.Text=Blank(),Patch(Beginner,  LookUp(
                             Beginner,
@@ -5391,9 +5391,9 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =30
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =RGBA(255,255,255,1)
             OnSelect: |
                 =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
@@ -5690,9 +5690,9 @@ msftUpdatecaregivers As screen:
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
             Height: =30
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =RGBA(255,255,255,1)
             OnSelect: |
                 =(If(Gallery5_2.Selected.'Advanced 1'.Value=Blank(),Patch(Advanced,  LookUp(
                             Advanced,
