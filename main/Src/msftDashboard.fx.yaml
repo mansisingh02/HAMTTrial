@@ -115,6 +115,15 @@ msftDashboard As screen:
                 CountRows(ThisRecord.Detail)
             )
         ItemsGap: =1
+        OnSelect: |-
+            =/*Set(
+                    SelectedEmployee,
+                    LookUp(
+                        Caregivers_1,
+                        'Caregiver Name' =  // Assuming DisplayName is the field representing the employee's name in your data source
+                    );
+                PopupDetails.IsVisible = true
+            )*/
         PaddingLeft: =0
         PaddingRight: =0
         PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -157,25 +166,6 @@ msftDashboard As screen:
         X: =96
         Y: =606
         ZIndex: =32
-
-    Legend2 As legend:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(220, 220, 220, 1)
-        Font: =Font.'Segoe UI'
-        Height: =80
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        ItemColorSet: =LineChart1.ItemColorSet
-        Items: =LineChart1.SeriesLabels
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        Width: =320
-        X: =80
-        Y: =512
-        ZIndex: =37
 
     Title12_3 As label:
         Align: =Align.Center
