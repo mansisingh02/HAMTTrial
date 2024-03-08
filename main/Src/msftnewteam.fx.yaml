@@ -14,26 +14,6 @@ msftnewteam As screen:
                 LookUp(Project, 'Project Name' = Gallery16.Selected.'Project Name').'In Prod Version'
             )
 
-    "'New Project_12' As label":
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Semibold
-        Height: =35
-        PaddingBottom: =0
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =0
-        Size: =18
-        Text: ="New"
-        Width: =203
-        X: =98
-        Y: =112
-        ZIndex: =2
-
     "'Rectangle 31_16' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -94,9 +74,9 @@ msftnewteam As screen:
         PaddingRight: =0
         PaddingTop: =0
         Size: =18
-        Text: ="Project"
+        Text: =msft_TextInput_13.Text
         Width: =681
-        X: =159
+        X: =99
         Y: =112
         ZIndex: =82
 
