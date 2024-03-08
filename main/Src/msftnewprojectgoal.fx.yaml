@@ -18,7 +18,7 @@ msftnewprojectgoal As screen:
         Text: ="New Project Goal"
         Width: =203
         X: =107
-        Y: =100
+        Y: =105
         ZIndex: =1
 
     msft_Label_14 As label:
@@ -37,7 +37,7 @@ msftnewprojectgoal As screen:
         Text: ="Project Goal"
         Width: =126
         X: =107
-        Y: =171
+        Y: =176
         ZIndex: =2
 
     msft_TextInput_21 As text:
@@ -50,13 +50,13 @@ msftnewprojectgoal As screen:
         DisabledFill: =RGBA(244, 244, 244, 1)
         FocusedBorderThickness: =4
         HintText: ="Enter Project Goal"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =RGBA(0,51,142,1)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         PaddingBottom: =9
         PaddingRight: =12
         PaddingTop: =8
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedBorderColor: =RGBA(0, 51, 142, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =3
@@ -66,7 +66,7 @@ msftnewprojectgoal As screen:
         Size: =11
         Width: =250
         X: =106
-        Y: =212
+        Y: =217
         ZIndex: =3
 
     msft_Label_15 As label:
@@ -85,7 +85,7 @@ msftnewprojectgoal As screen:
         Text: ="Description"
         Width: =114
         X: =420
-        Y: =171
+        Y: =176
         ZIndex: =4
 
     msft_TextInput_22 As text:
@@ -99,14 +99,14 @@ msftnewprojectgoal As screen:
         FocusedBorderThickness: =4
         Height: =206
         HintText: ="Enter Description"
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =RGBA(0,51,142,1)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         Mode: =TextMode.MultiLine
         PaddingBottom: =9
         PaddingRight: =12
         PaddingTop: =8
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedBorderColor: =RGBA(0, 51, 142, 1)
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =3
@@ -116,7 +116,7 @@ msftnewprojectgoal As screen:
         Size: =11
         Width: =465
         X: =420
-        Y: =212
+        Y: =217
         ZIndex: =5
 
     "'Rectangle 31_10' As rectangle":
@@ -145,9 +145,7 @@ msftnewprojectgoal As screen:
         ZIndex: =7
 
     msft_Button_32 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
+        BorderColor: =RGBA(0, 51, 142, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -155,9 +153,9 @@ msftnewprojectgoal As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
         Height: =42
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =RGBA(0, 51, 142, 1)
+        HoverColor: =RGBA(0, 51, 142, 1)
+        HoverFill: =RGBA(255,255,255,1)
         OnSelect: |
             =If(
                 IsBlank(msft_TextInput_21.Text),
@@ -208,7 +206,7 @@ msftnewprojectgoal As screen:
         Size: =11
         Text: ="*"
         X: =191
-        Y: =157
+        Y: =162
         ZIndex: =9
 
     Icon1_46 As icon.Help:
@@ -229,7 +227,7 @@ msftnewprojectgoal As screen:
         Tooltip: ="The envisioned goal under whose bracket your project will lie (E.g. Diagnostics, Delivery of Care)"
         Width: =13
         X: =343
-        Y: =177
+        Y: =182
         ZIndex: =10
 
     Rectangle6_5 As rectangle:
@@ -292,7 +290,7 @@ msftnewprojectgoal As screen:
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.ChevronLeft
-            OnSelect: =Navigate(msftprojectgoal,ScreenTransition.Fade)
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
@@ -310,7 +308,7 @@ msftnewprojectgoal As screen:
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
             Height: =27
-            OnSelect: =Navigate(msftprojectgoal,ScreenTransition.Fade)
+            OnSelect: =Navigate(msftMasterData,ScreenTransition.Fade)
             PaddingBottom: =9
             PaddingLeft: =0
             PaddingRight: =0
@@ -341,7 +339,7 @@ msftnewprojectgoal As screen:
             Visible: =popuptwo
             Width: =312
             X: =91
-            Y: =272
+            Y: =277
             ZIndex: =15
 
         Label32_6 As label:
@@ -360,7 +358,7 @@ msftnewprojectgoal As screen:
             Visible: =popuptwo
             Width: =312
             X: =91
-            Y: =272
+            Y: =277
             ZIndex: =16
 
         Button7_6 As button:
@@ -389,6 +387,6 @@ msftnewprojectgoal As screen:
             Visible: =popuptwo
             Width: =97
             X: =199
-            Y: =323
+            Y: =328
             ZIndex: =17
 
