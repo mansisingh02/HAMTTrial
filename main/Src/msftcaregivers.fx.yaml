@@ -709,542 +709,6 @@ msftcaregivers As screen:
         Y: =154
         ZIndex: =21
 
-    SkillsPopUp As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =66
-
-        Rectangle8_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(255, 255, 255, 0.9)
-            Fill: =RGBA(255, 255, 255, 0.9)
-            FocusedBorderThickness: =4
-            Height: =708
-            HoverFill: =RGBA(255, 255, 255, 0.9)
-            PressedFill: =RGBA(255, 255, 255, 0.9)
-            Visible: =If(showSkills=true,true,false)
-            Width: =1291
-            X: =75
-            Y: =60
-            ZIndex: =31
-
-        Rectangle4_1 As rectangle:
-            BorderColor: =RGBA(230, 230, 230, 1)
-            BorderThickness: =1
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =445
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            Visible: =If(showSkills=true,true,false)
-            Width: =739
-            X: =341
-            Y: =229
-            ZIndex: =32
-
-        Icon1_11 As icon.Cancel:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =18
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Cancel
-            OnSelect: =Set(showSkills,false)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Visible: =If(showSkills=true,true,false)
-            Width: =23
-            X: =1008
-            Y: =266
-            ZIndex: =39
-
-        Gallery7_3 As gallery.galleryHorizontal:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            DelayItemLoading: =true
-            Height: =86
-            Items: |-
-                =Table({IDD:1,Labell:"Beginner"},{IDD:2,Labell:"Intermediate"},{IDD:3,Labell:"Advanced"})
-            LoadingSpinner: =LoadingSpinner.Data
-            ShowScrollbar: =false
-            TemplatePadding: =0
-            TemplateSize: =153
-            Visible: =If(showSkills=true,true,false)
-            Width: =537
-            X: =342
-            Y: =289
-            ZIndex: =40
-
-            Button2_3 As button:
-                BorderColor: |-
-                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#CDCDCD"))
-                BorderStyle: =If(varTabSkills_Caregivers = ThisItem.IDD, BorderStyle.None, BorderStyle.Solid)
-                BorderThickness: =1
-                Color: |-
-                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#FFFFFF"), ColorValue("#00338E"))
-                DisabledBorderColor: =RGBA(255, 255, 255, 1)
-                DisabledColor: =RGBA(255, 255, 255, 1)
-                DisabledFill: =RGBA(255, 255, 255, 1)
-                Fill: |-
-                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#FFFFFF"))
-                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                Height: =46
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: |-
-                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#00338E"))
-                OnSelect: =Set(varTabSkills_Caregivers, ThisItem.IDD)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-                PressedColor: =RGBA(255,255,255,1)
-                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                Size: =9
-                Text: =ThisItem.Labell
-                Width: =148
-                X: =12
-                Y: =40
-                ZIndex: =1
-
-        Rectangle11 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            DisabledFill: =RGBA(255, 255, 255, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Height: =275
-            HoverFill: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(255, 255, 255, 1)
-            Visible: =If(showSkills=true,true,false)
-            Width: =493
-            X: =356
-            Y: =385
-            ZIndex: =41
-
-        Label51 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 1'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =353
-            Y: =388
-            ZIndex: =42
-
-        Label51_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 2'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =353
-            Y: =419
-            ZIndex: =43
-
-        Label51_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 3'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =354
-            Y: =450
-            ZIndex: =44
-
-        Label51_3 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 4'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =352
-            Y: =483
-            ZIndex: =45
-
-        Label51_4 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 5'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =352
-            Y: =516
-            ZIndex: =46
-
-        Label51_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 7'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =348
-            Y: =581
-            ZIndex: =47
-
-        Label51_6 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 6'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =348
-            Y: =547
-            ZIndex: =48
-
-        Label51_7 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 8'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=3,true,false)
-            Width: =433
-            X: =349
-            Y: =614
-            ZIndex: =49
-
-        Label51_15 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =500
-            X: =354
-            Y: =389
-            ZIndex: =50
-
-        Label51_14 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =500
-            X: =354
-            Y: =420
-            ZIndex: =51
-
-        Label51_13 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 3'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =356
-            Y: =453
-            ZIndex: =52
-
-        Label51_12 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 4'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =354
-            Y: =481
-            ZIndex: =53
-
-        Label51_11 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =354
-            Y: =511
-            ZIndex: =54
-
-        Label51_10 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 7'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =354
-            Y: =571
-            ZIndex: =55
-
-        Label51_9 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 6'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =354
-            Y: =542
-            ZIndex: =56
-
-        Label51_8 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 8'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=2,true,false)
-            Width: =433
-            X: =356
-            Y: =603
-            ZIndex: =57
-
-        Label51_23 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =500
-            X: =354
-            Y: =393
-            ZIndex: =58
-
-        Label51_22 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =501
-            X: =353
-            Y: =423
-            ZIndex: =59
-
-        Label51_21 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 3'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =500
-            X: =354
-            Y: =452
-            ZIndex: =60
-
-        Label51_20 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =500
-            X: =354
-            Y: =482
-            ZIndex: =61
-
-        Label51_19 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =500
-            X: =355
-            Y: =518
-            ZIndex: =62
-
-        Label51_18 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =501
-            X: =352
-            Y: =583
-            ZIndex: =63
-
-        Label51_17 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =503
-            X: =351
-            Y: =550
-            ZIndex: =64
-
-        Label51_16 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Height: =34
-            Size: =10
-            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
-            Visible: =If(showSkills=true && varTabSkills_Caregivers=1,true,false)
-            Width: =500
-            X: =354
-            Y: =617
-            ZIndex: =65
-
     Container_PrimaryOwner_35 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -1447,12 +911,541 @@ msftcaregivers As screen:
         Y: =5
         ZIndex: =81
 
-    Group6 As group:
+    SkillsPopUp As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =82
+
+        Rectangle8_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 0.9)
+            Fill: =RGBA(255, 255, 255, 0.9)
+            FocusedBorderThickness: =4
+            Height: =708
+            HoverFill: =RGBA(255, 255, 255, 0.9)
+            PressedFill: =RGBA(255, 255, 255, 0.9)
+            Visible: =showSkills=true
+            Width: =1291
+            X: =75
+            Y: =60
+            ZIndex: =31
+
+        Rectangle4_1 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =445
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =showSkills=true
+            Width: =739
+            X: =341
+            Y: =229
+            ZIndex: =32
+
+        Icon1_11 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =18
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(showSkills,false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showSkills=true
+            Width: =23
+            X: =1008
+            Y: =266
+            ZIndex: =39
+
+        Gallery7_3 As gallery.galleryHorizontal:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DelayItemLoading: =true
+            Height: =86
+            Items: |-
+                =Table({IDD:1,Labell:"Beginner"},{IDD:2,Labell:"Intermediate"},{IDD:3,Labell:"Advanced"})
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =153
+            Visible: =showSkills=true
+            Width: =537
+            X: =342
+            Y: =289
+            ZIndex: =40
+
+            Button2_3 As button:
+                BorderColor: |-
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#CDCDCD"))
+                BorderStyle: =If(varTabSkills_Caregivers = ThisItem.IDD, BorderStyle.None, BorderStyle.Solid)
+                BorderThickness: =1
+                Color: |-
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#FFFFFF"), ColorValue("#00338E"))
+                DisabledBorderColor: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(255, 255, 255, 1)
+                DisabledFill: =RGBA(255, 255, 255, 1)
+                Fill: |-
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#FFFFFF"))
+                FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =46
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: |-
+                    =If(varTabSkills_Caregivers = ThisItem.IDD, ColorValue("#00338E"), ColorValue("#00338E"))
+                OnSelect: =Set(varTabSkills_Caregivers, ThisItem.IDD)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+                PressedColor: =RGBA(255,255,255,1)
+                PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                Size: =9
+                Text: =ThisItem.Labell
+                Width: =148
+                X: =12
+                Y: =40
+                ZIndex: =1
+
+        Rectangle11 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =275
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =showSkills=true
+            Width: =493
+            X: =356
+            Y: =385
+            ZIndex: =41
+
+        Label51 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 1'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =353
+            Y: =388
+            ZIndex: =42
+
+        Label51_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 2'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =353
+            Y: =419
+            ZIndex: =43
+
+        Label51_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 3'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =354
+            Y: =450
+            ZIndex: =44
+
+        Label51_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 4'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =352
+            Y: =483
+            ZIndex: =45
+
+        Label51_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 5'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =352
+            Y: =516
+            ZIndex: =46
+
+        Label51_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 7'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =348
+            Y: =581
+            ZIndex: =47
+
+        Label51_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 6'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =348
+            Y: =547
+            ZIndex: =48
+
+        Label51_7 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Advancedd.'Advanced Skill 8'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =349
+            Y: =614
+            ZIndex: =49
+
+        Label51_15 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 1'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =389
+            ZIndex: =50
+
+        Label51_14 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 2'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =420
+            ZIndex: =51
+
+        Label51_13 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 3'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =356
+            Y: =453
+            ZIndex: =52
+
+        Label51_12 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 4'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =354
+            Y: =481
+            ZIndex: =53
+
+        Label51_11 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =354
+            Y: =511
+            ZIndex: =54
+
+        Label51_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 7'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =354
+            Y: =571
+            ZIndex: =55
+
+        Label51_9 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 6'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =354
+            Y: =542
+            ZIndex: =56
+
+        Label51_8 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 8'.Value
+            Visible: =showSkills=true
+            Width: =433
+            X: =356
+            Y: =603
+            ZIndex: =57
+
+        Label51_23 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 1'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =393
+            ZIndex: =58
+
+        Label51_22 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 2'.Value
+            Visible: =showSkills=true
+            Width: =501
+            X: =353
+            Y: =423
+            ZIndex: =59
+
+        Label51_21 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 3'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =452
+            ZIndex: =60
+
+        Label51_20 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 4'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =482
+            ZIndex: =61
+
+        Label51_19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 5'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =355
+            Y: =518
+            ZIndex: =62
+
+        Label51_18 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 7'.Value
+            Visible: =showSkills=true
+            Width: =501
+            X: =352
+            Y: =583
+            ZIndex: =63
+
+        Label51_17 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 6'.Value
+            Visible: =showSkills=true
+            Width: =503
+            X: =351
+            Y: =550
+            ZIndex: =64
+
+        Label51_16 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Beginnerr.'Beginner Skill 8'.Value
+            Visible: =showSkills=true
+            Width: =500
+            X: =354
+            Y: =617
+            ZIndex: =65
 
         Label28_18 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1469,7 +1462,7 @@ msftcaregivers As screen:
             OnSelect: =
             Size: =17
             Text: =Gallery1.Selected.'Caregiver Name'
-            Visible: =showSkills
+            Visible: =showSkills=true
             Width: =488
             X: =381
             Y: =232
@@ -1485,7 +1478,7 @@ msftcaregivers As screen:
             Height: =0.5
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
-            Visible: =showSkills
+            Visible: =showSkills=true
             Width: =738
             X: =342
             Y: =319
@@ -1502,8 +1495,275 @@ msftcaregivers As screen:
             Font: =Font.'Segoe UI'
             Size: =13
             Text: ="Skills"
-            Visible: =showSkills
+            Visible: =showSkills=true
             X: =381
             Y: =279
             ZIndex: =80
+
+    SkillsPopUp_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =114
+
+        Rectangle8_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 0.9)
+            Fill: =RGBA(255, 255, 255, 0.9)
+            FocusedBorderThickness: =4
+            Height: =708
+            HoverFill: =RGBA(255, 255, 255, 0.9)
+            PressedFill: =RGBA(255, 255, 255, 0.9)
+            Visible: =showProjects=true
+            Width: =1291
+            X: =75
+            Y: =60
+            ZIndex: =82
+
+        Rectangle4_2 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =445
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =showProjects=true
+            Width: =739
+            X: =341
+            Y: =229
+            ZIndex: =83
+
+        Icon1_12 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =18
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(showProjects,false)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showProjects=true
+            Width: =23
+            X: =1008
+            Y: =266
+            ZIndex: =84
+
+        Rectangle11_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =275
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =showProjects=true
+            Width: =493
+            X: =356
+            Y: =385
+            ZIndex: =86
+
+        Label51_36 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =Gallery1.Selected.Intermediatee.'Intermediate Skill 5'.Value
+            Visible: =showProjects=true
+            Width: =433
+            X: =354
+            Y: =511
+            ZIndex: =99
+
+        Label51_41 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =27
+            Size: =10
+            Text: =If(Gallery1.Selected.'Tertiary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % of Tertiary Project' * 100 & "%","")
+            Visible: =showProjects=true
+            Width: =87
+            X: =817
+            Y: =525
+            ZIndex: =104
+
+        Label51_42 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =70
+            Size: =10
+            Text: =Gallery1.Selected.Project2.'Project Name'
+            Visible: =showProjects=true
+            Width: =283
+            X: =459
+            Y: =424
+            ZIndex: =105
+
+        Label51_43 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =74
+            Size: =10
+            Text: =Gallery1.Selected.Project3.'Project Name'
+            Visible: =showProjects=true
+            Width: =288
+            X: =464
+            Y: =500
+            ZIndex: =106
+
+        Label51_45 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =If(Gallery1.Selected.'Secondary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % for Secondary Project' * 100 & "%","")
+            Visible: =showProjects=true
+            Width: =68
+            X: =817
+            Y: =445
+            ZIndex: =108
+
+        Label51_46 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =34
+            Size: =10
+            Text: =If(Gallery1.Selected.'Primary Project '.Value<>Blank(),Gallery1.Selected.'Allocation % for Primary Project' * 100 & "%","")
+            Visible: =showProjects=true
+            Width: =53
+            X: =817
+            Y: =366
+            ZIndex: =109
+
+        Label51_47 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Height: =74
+            Size: =10
+            Text: =Gallery1.Selected.Project1.'Project Name'
+            Visible: =showProjects=true
+            Width: =290
+            X: =462
+            Y: =345
+            ZIndex: =110
+
+        Label28_19 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =65
+            LineHeight: =2
+            OnSelect: =
+            Size: =17
+            Text: =Gallery1.Selected.'Caregiver Name'
+            Visible: =showProjects=true
+            Width: =488
+            X: =381
+            Y: =232
+            ZIndex: =111
+
+        Rectangle16_5 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showProjects=true
+            Width: =738
+            X: =342
+            Y: =319
+            ZIndex: =112
+
+        Label49_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =13
+            Text: ="Projects"
+            Visible: =showProjects=true
+            X: =381
+            Y: =279
+            ZIndex: =113
+
+    Icon1 As icon.HorizontalLine:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =-1
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.HorizontalLine
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =715
+        X: =349
+        Y: =420
+        ZIndex: =115
 
