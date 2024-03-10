@@ -1500,12 +1500,64 @@ msftcaregivers As screen:
             Y: =279
             ZIndex: =80
 
+    Icon1 As icon.HorizontalLine:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(0, 120, 212, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(220, 220, 220, 1)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        Height: =-1
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Icon: =Icon.HorizontalLine
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Width: =715
+        X: =356
+        Y: =426
+        ZIndex: =115
+
+    Label53 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Project Name"
+        X: =397
+        Y: =314
+        ZIndex: =116
+
+    Label53_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Allocation %"
+        X: =947
+        Y: =314
+        ZIndex: =117
+
     SkillsPopUp_1 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =114
+        ZIndex: =120
 
         Rectangle8_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -1605,8 +1657,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Tertiary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % of Tertiary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =87
-            X: =817
-            Y: =525
+            X: =982
+            Y: =529
             ZIndex: =104
 
         Label51_42 As label:
@@ -1622,8 +1674,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project2.'Project Name'
             Visible: =showProjects=true
             Width: =283
-            X: =459
-            Y: =424
+            X: =384
+            Y: =423
             ZIndex: =105
 
         Label51_43 As label:
@@ -1639,8 +1691,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project3.'Project Name'
             Visible: =showProjects=true
             Width: =288
-            X: =464
-            Y: =500
+            X: =384
+            Y: =502
             ZIndex: =106
 
         Label51_45 As label:
@@ -1656,8 +1708,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Secondary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % for Secondary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =68
-            X: =817
-            Y: =445
+            X: =978
+            Y: =436
             ZIndex: =108
 
         Label51_46 As label:
@@ -1673,8 +1725,8 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Primary Project '.Value<>Blank(),Gallery1.Selected.'Allocation % for Primary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =53
-            X: =817
-            Y: =366
+            X: =981
+            Y: =358
             ZIndex: =109
 
         Label51_47 As label:
@@ -1690,8 +1742,8 @@ msftcaregivers As screen:
             Text: =Gallery1.Selected.Project1.'Project Name'
             Visible: =showProjects=true
             Width: =290
-            X: =462
-            Y: =345
+            X: =381
+            Y: =340
             ZIndex: =110
 
         Label28_19 As label:
@@ -1747,23 +1799,35 @@ msftcaregivers As screen:
             Y: =279
             ZIndex: =113
 
-    Icon1 As icon.HorizontalLine:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =-1
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.HorizontalLine
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =715
-        X: =349
-        Y: =420
-        ZIndex: =115
+        Rectangle16_6 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showProjects=true
+            Width: =738
+            X: =344
+            Y: =354
+            ZIndex: =118
+
+        Rectangle16_7 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(179, 179, 179, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =445
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showProjects=true
+            Width: =0.5
+            X: =903
+            Y: =229
+            ZIndex: =119
 
