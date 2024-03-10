@@ -1240,3 +1240,47 @@ msfteditproject As screen:
             Y: =74
             ZIndex: =92
 
+    Group7_11 As group:
+        Height: =5
+        Width: =5
+        X: =1066
+        Y: =40
+        ZIndex: =95
+
+        Label4_28 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =13
+            Text: =User().FullName
+            Width: =282
+            X: =Parent.Width-300
+            Y: =5
+            ZIndex: =93
+
+        Label4_29 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =37
+            Size: =10
+            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
+            Width: =282
+            X: =Parent.Width-300
+            Y: =23
+            ZIndex: =94
+
