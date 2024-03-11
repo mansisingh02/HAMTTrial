@@ -69,6 +69,41 @@ msftpeoplewithskillsintermediate As screen:
         Y: =133
         ZIndex: =16
 
+    msft_Button_72 As button:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(151, 0, 0, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+        FontWeight: =FontWeight.Bold
+        Height: =42
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+        OnSelect: =Navigate(msftpeopleskills,ScreenTransition.Fade)
+        PaddingBottom: =7
+        PaddingLeft: =32
+        PaddingRight: =32
+        PaddingTop: =6
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        RadiusBottomLeft: =5
+        RadiusBottomRight: =5
+        RadiusTopLeft: =5
+        RadiusTopRight: =5
+        Size: =15
+        Text: ="Go Back"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =167
+        X: =97
+        Y: =680
+        ZIndex: =30
+
     Category_27 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -272,6 +307,68 @@ msftpeoplewithskillsintermediate As screen:
             X: =16
             Y: =12
             ZIndex: =4
+
+    Gallery18_4 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =499
+        Items: =SelectedCaregiversIntermediate
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =407
+        Width: =1268
+        WrapCount: =3
+        X: =98
+        Y: =269
+        ZIndex: =45
+
+        Label4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            Width: =406
+            X: =10
+            Y: =5
+            ZIndex: =1
+
+    Gallery18_5 As gallery.galleryVertical:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =499
+        Items: =SelectedCaregiversIntermediate
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =407
+        Width: =1268
+        WrapCount: =3
+        X: =98
+        Y: =92
+        ZIndex: =46
+
+        Label4_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            Width: =406
+            X: =10
+            Y: =5
+            ZIndex: =1
 
     Group3_35 As group:
         Height: =5

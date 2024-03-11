@@ -24,6 +24,7 @@ msftpeopleskills As screen:
         ZIndex: =3
 
         "'Report Label_24' As label":
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -39,9 +40,9 @@ msftpeopleskills As screen:
             PaddingTop: =0
             Size: =10.5
             Text: ="Beginner Level"
-            Width: =182
-            X: =16
-            Y: =12
+            Width: =175
+            X: =5
+            Y: =10
             ZIndex: =4
 
     Category_20 As label:
@@ -85,6 +86,7 @@ msftpeopleskills As screen:
         ZIndex: =34
 
     Label34_2 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -116,7 +118,7 @@ msftpeopleskills As screen:
             =Navigate(msftpeoplewithskillsbeginner, ScreenTransition.Fade); 
             Set(SelectedCaregiversBeginner, Filter(Caregivers_1, 'Caregiver ID' in Gallery9.Selected.'Caregiver ID'))
             
-        PressedBorderColor: =RGBA(0, 51, 142, 1)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         RadiusBottomLeft: =5
@@ -124,7 +126,7 @@ msftpeopleskills As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10.75
-        Text: ="VIEW CAREGIVERS"
+        Text: ="View Caregivers"
         Width: =141
         X: =117
         Y: =316
@@ -139,6 +141,7 @@ msftpeopleskills As screen:
         ZIndex: =40
 
         "'Report Label_25' As label":
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -155,8 +158,8 @@ msftpeopleskills As screen:
             Size: =10.5
             Text: ="Intermediate Level"
             Width: =182
-            X: =16
-            Y: =12
+            X: =5
+            Y: =10
             ZIndex: =4
 
     Button9_3 As button:
@@ -175,7 +178,7 @@ msftpeopleskills As screen:
         OnSelect: |
             =Navigate(msftpeoplewithskillsintermediate, ScreenTransition.Fade); 
             Set(SelectedCaregiversIntermediate, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_1.Selected.'Caregiver ID'))
-        PressedBorderColor: =RGBA(0, 51, 142, 1)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         RadiusBottomLeft: =5
@@ -183,7 +186,7 @@ msftpeopleskills As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10.75
-        Text: ="VIEW CAREGIVERS"
+        Text: ="View Caregivers"
         Width: =141
         X: =310
         Y: =316
@@ -198,6 +201,7 @@ msftpeopleskills As screen:
         ZIndex: =43
 
         "'Report Label_26' As label":
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             Color: =RGBA(51, 51, 51, 1)
@@ -214,8 +218,7 @@ msftpeopleskills As screen:
             Size: =10.5
             Text: ="Advanced Level"
             Width: =182
-            X: =16
-            Y: =12
+            Y: =10
             ZIndex: =4
 
     Button9_4 As button:
@@ -234,7 +237,7 @@ msftpeopleskills As screen:
         OnSelect: |
             =Navigate(msftpeoplewithskillsadvanced, ScreenTransition.Fade); 
             Set(SelectedCaregiversAdvanced, Filter(Caregivers_1, 'Caregiver ID' in Gallery9_2.Selected.'Caregiver ID'))
-        PressedBorderColor: =RGBA(0, 51, 142, 1)
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         RadiusBottomLeft: =5
@@ -242,13 +245,14 @@ msftpeopleskills As screen:
         RadiusTopLeft: =5
         RadiusTopRight: =5
         Size: =10.75
-        Text: ="VIEW CAREGIVERS"
+        Text: ="View Caregivers"
         Width: =141
         X: =513
         Y: =316
         ZIndex: =45
 
     Label34_3 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
@@ -264,6 +268,7 @@ msftpeopleskills As screen:
         ZIndex: =46
 
     Label34_5 As label:
+        Align: =Align.Center
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
         BorderThickness: =2
