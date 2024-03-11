@@ -535,7 +535,7 @@ msfteditproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        Items: =["Active","Inactive","On Hold","Discontinued"]
+        Items: =["Active","Completed","On Hold","Discontinued"]
         OnChange: =Set(varSelectedValue, msft_Dropdown_28.Selected.Value)
         PaddingBottom: =8
         PaddingLeft: =12
@@ -876,7 +876,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The parent group in which your project can be classified. The Start and End dates for the Project have to lie within the Group's start and end dates."
+        Tooltip: ="Select the parent project, if not found, reach out to admin through Support"
         Width: =13
         X: =691
         Y: =244
@@ -897,7 +897,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="Present running status of the project"
+        Tooltip: ="Current status of the project"
         Width: =13
         X: =393
         Y: =326
@@ -918,32 +918,11 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The authority to which the project can be assigned. This can be a 4P/5P/M2/M3/M4/M5/E1/E2"
+        Tooltip: ="Lead PoC for the Project"
         Width: =13
         X: =393
         Y: =409
         ZIndex: =69
-
-    Icon1_29 As icon.Help:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        Color: =RGBA(0, 120, 212, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(220, 220, 220, 1)
-        DisabledFill: =RGBA(0, 0, 0, 0)
-        FocusedBorderThickness: =4
-        Height: =20
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Icon: =Icon.Help
-        PressedBorderColor: =RGBA(0, 0, 0, 0)
-        PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The business category under which the project can be classfied"
-        Width: =13
-        X: =691
-        Y: =405
-        ZIndex: =70
 
     Icon1_30 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -960,7 +939,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The technical classifications accustomed for the project, can be one or more"
+        Tooltip: ="Technical classifications of the project, is multiselect"
         Width: =13
         X: =391
         Y: =491
@@ -981,7 +960,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The envisioned goal in which the project lies"
+        Tooltip: ="Categorize the project based on IS Goals, is multiselect"
         Width: =13
         X: =691
         Y: =489
@@ -1002,7 +981,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The release versions/notes if the project is underway"
+        Tooltip: ="Current on-going version"
         Width: =13
         X: =925
         Y: =490
@@ -1044,7 +1023,7 @@ msfteditproject As screen:
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Tooltip: ="The release notes/version while in Production"
+        Tooltip: ="Version in Production"
         Width: =13
         X: =1221
         Y: =488
