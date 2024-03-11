@@ -359,8 +359,7 @@ msftproject As screen:
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
-            //(Goal.Value = ComboBox3_2.Selected.Value || ComboBox3_2.Selected.Value=Blank())
-            (
+            /*(
                 IsEmpty(ComboBox3_2.SelectedItems) ||
                 CountRows(
                     Filter(
@@ -370,7 +369,21 @@ msftproject As screen:
                 ) > 0
                 ||
                 IsBlank(ComboBox3_2.Selected.Value)
+            )*/
+            (
+                IsEmpty(ComboBox3_2.SelectedItems) ||
+                (
+                    CountRows(
+                        Filter(
+                            Goal.Value,
+                            Value in ComboBox3_2.SelectedItems.Value
+                        )
+                    ) = CountRows(ComboBox3_2.SelectedItems)
+                )
+                &&
+                !IsBlank(ComboBox3_2.Selected.Value)
             )
+            
             
             && ('Group Name'.Value = ComboBox3_3.Selected.Value || ComboBox3_3.Selected.Value=Blank()))
              &&(
@@ -385,12 +398,12 @@ msftproject As screen:
                 ) > 0
             )
             
-            ||
-                ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))
+            /*||
+                ('Cost Center Name'.Value = SelectedProjectCostCenter || IsBlank(SelectedProjectCostCenter))*/
                 ||
                 ('Group Name'.Value = SelectedProjectGroupCreation || IsBlank(SelectedProjectGroupCreation))
-                ||
-                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))
+                /*||
+                ('Project Type'.Value = SelectedProjectType || IsBlank(SelectedProjectType))*/
              )
              )
             
