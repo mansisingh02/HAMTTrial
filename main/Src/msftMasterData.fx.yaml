@@ -1351,7 +1351,7 @@ msftMasterData As screen:
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             PaddingLeft: =1
             PaddingRight: =1
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =RGBA(0,51,142,1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
@@ -1399,7 +1399,7 @@ msftMasterData As screen:
             OnSelect: =Set(varTabSelected, ThisItem.ID)
             PaddingLeft: =1
             PaddingRight: =1
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =RGBA(0,51,142,1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
@@ -1636,7 +1636,7 @@ msftMasterData As screen:
             HoverFill: |-
                 =If(varTabSelected = ThisItem.ID, ColorValue("#00338E"), ColorValue("#00338E"))
             OnSelect: =Set(varTabSelected, ThisItem.ID)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedBorderColor: =RGBA(0,51,142,1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             RadiusBottomLeft: =0
