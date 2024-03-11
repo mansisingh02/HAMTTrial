@@ -114,29 +114,34 @@ msftDashboard_1 As screen:
                 "Count",
                 CountRows(ThisRecord.Detail)
             )*/
-            Set(
-                CaregiverNames,
-                ForAll(
-                    Filter(
+            Filter(
+                AddColumns(
+                    GroupBy(
                         AddColumns(
-                            GroupBy(
-                                AddColumns(
-                                    Caregivers_1,
-                                    "LevelValue",
-                                    'CoreLeader'
-                                ),
-                                "LevelValue",
-                                "Detail"
-                            ),
-                            "Count",
-                            CountRows(Detail)
+                            Caregivers_1,
+                            "LevelValue",
+                            'Core Leader'
                         ),
-                        'CoreLeader' = User().Email
+                        "LevelValue",
+                        "Detail"
                     ),
-                    Detail[0].'caregiver name'
+                    "Count",
+                    CountRows(Detail)
+                ),
+                Caregivers_1.'Caregiver Email' = User().Email &&
+                Or(
+                    Caregivers_1.'Core Leader' = Caregivers_1.'Caregiver Name',
+                    Caregivers_1.'Core Leader' = Caregivers_1.'Caregiver Name 2'
                 )
-            );
-            CaregiverNames
+            )
+            
+            
+            
+            
+            
+            
+            
+            
             
             
         ItemsGap: =1
@@ -156,7 +161,6 @@ msftDashboard_1 As screen:
         Width: =1270
         X: =96
         XLabelAngle: =40
-        Y: =32
         ZIndex: =27
 
     ColumnChart2_1 As barChart:
