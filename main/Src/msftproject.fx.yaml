@@ -380,8 +380,7 @@ msftproject As screen:
                         )
                     ) = CountRows(ComboBox3_2.SelectedItems)
                 )
-                &&
-                !IsBlank(ComboBox3_2.Selected.Value)
+                || IsBlank(ComboBox3_2.Selected.Value)
             )
             
             
@@ -834,7 +833,6 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        IsSearchable: =false
         Items: =Distinct('Cost Center','Cost Center Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -882,7 +880,6 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        IsSearchable: =false
         Items: =Distinct('Project Type','Project Type')
         PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -930,7 +927,6 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        IsSearchable: =false
         Items: =Distinct('Project Goals',Goal)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -991,7 +987,6 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
-        IsSearchable: =false
         Items: =Distinct('Project Parent Group','Group Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
