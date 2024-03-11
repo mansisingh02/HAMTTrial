@@ -1,0 +1,272 @@
+msftDashboard_1 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =// Retrieve data from SharePoint lists
+        ClearCollect(
+            CaregiversData,
+            Caregivers_1
+        );
+        
+        Set(
+            LevelColumnName,
+            "Level"
+        );
+        
+        // Initialize dictionary to store counts for each level
+        ClearCollect(
+            LevelCounts,
+            AddColumns(
+                Distinct(CaregiversData, Level), // Get unique values from the "Level" column
+                "LevelName",
+                LevelColumnName
+            )
+        );
+        
+        // Iterate through each level and count caregivers
+        ForAll(
+            LevelCounts,
+            {
+                LevelName: ThisRecord.LevelName,
+                CaregiverCount: CountIf(CaregiversData,Level.Value = ThisRecord.Level.Value) // Count caregivers where the "Level" matches
+            }
+        );
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+    Container_Admin_43 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =11
+
+        navBarVertical_admin_46 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_Horizontal_8 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =60
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =12
+
+        navBarHorizontal_45 As navBarHorizontal:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Width: =Parent.Width
+
+    Title12_4 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        Size: =12
+        Text: ="Caregivers by Core Leaders"
+        Width: =392
+        X: =44
+        Y: =157
+        ZIndex: =22
+
+    ColumnChart1_1 As barChart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =526
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        Items: |+
+            =/*AddColumns(
+                GroupBy(
+                    AddColumns(
+                        Caregivers_1,
+                        "LevelValue",
+                        'Core Leader'
+                    ),
+                    "LevelValue",
+                    "Detail"
+                ),
+                "Count",
+                CountRows(ThisRecord.Detail)
+            )*/
+            Set(
+                CaregiverNames,
+                ForAll(
+                    Filter(
+                        AddColumns(
+                            GroupBy(
+                                AddColumns(
+                                    Caregivers_1,
+                                    "LevelValue",
+                                    'CoreLeader'
+                                ),
+                                "LevelValue",
+                                "Detail"
+                            ),
+                            "Count",
+                            CountRows(Detail)
+                        ),
+                        'CoreLeader' = User().Email
+                    ),
+                    Detail[0].'caregiver name'
+                )
+            );
+            CaregiverNames
+            
+            
+        ItemsGap: =1
+        OnSelect: |-
+            =/*Set(
+                    SelectedEmployee,
+                    LookUp(
+                        Caregivers_1,
+                        'Caregiver Name' =  // Assuming DisplayName is the field representing the employee's name in your data source
+                    );
+                PopupDetails.IsVisible = true
+            )*/
+        PaddingLeft: =0
+        PaddingRight: =0
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =15
+        Width: =1270
+        X: =96
+        XLabelAngle: =40
+        Y: =32
+        ZIndex: =27
+
+    ColumnChart2_1 As barChart:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        Font: =Font.'Segoe UI'
+        Height: =162
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+        Items: |-
+            =AddColumns(
+                GroupBy(
+                    AddColumns(
+                        Caregivers_1,
+                        "LevelValue",
+                        Level.Value
+                    ),
+                    "LevelValue",
+                    "Detail"
+                ),
+                "Count",
+                CountRows(ThisRecord.Detail)
+            )
+        ItemsGap: =1
+        PaddingLeft: =0
+        PaddingRight: =0
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        Size: =15
+        Width: =1231
+        X: =96
+        Y: =606
+        ZIndex: =32
+
+    Title12_5 As label:
+        Align: =Align.Center
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =21
+        Size: =12
+        Text: ="Caregivers by Level"
+        Width: =392
+        X: =20
+        Y: =571
+        ZIndex: =38
+
+    Caregivers_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Semibold
+        Height: =30
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =18
+        Text: ="Dashboard"
+        Width: =203
+        X: =96
+        Y: =105
+        ZIndex: =39
+
+    Group7_50 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =42
+
+        Label4_10 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =13
+            Text: =User().FullName
+            Width: =282
+            X: =Parent.Width-300
+            Y: =5
+            ZIndex: =40
+
+        Label4_101 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =37
+            Size: =10
+            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
+            Width: =282
+            X: =Parent.Width-300
+            Y: =23
+            ZIndex: =41
+
