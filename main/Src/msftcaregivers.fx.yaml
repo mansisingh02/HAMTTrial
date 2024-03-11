@@ -710,20 +710,6 @@ msftcaregivers As screen:
         Y: =154
         ZIndex: =21
 
-    Container_PrimaryOwner_35 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =67
-
-        navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varPrimaryOwner,true,false)
-
     Container_Caregiver_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -1815,6 +1801,19 @@ msftcaregivers As screen:
             X: =903
             Y: =229
             ZIndex: =119
+
+    "'Container_Primary Owner_1' As groupContainer.verticalAutoLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =122
+
+        navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
 
     Group7_45 As group:
         Height: =5

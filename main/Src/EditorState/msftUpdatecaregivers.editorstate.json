@@ -19180,7 +19180,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Admin_42",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19374,7 +19374,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Caregiver",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19560,7 +19560,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Horizontal_43",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19682,7 +19682,7 @@
       "StyleName": "defaultGroupContainerStyle",
       "Type": "ControlInfo"
     },
-    "Container_PrimaryOwner_34": {
+    "Container_Primary Owner": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "BorderColor",
@@ -19747,9 +19747,9 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Container_PrimaryOwner_34",
+      "Name": "Container_Primary Owner",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -49258,7 +49258,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -49711,7 +49718,14 @@
         "X",
         "Y",
         "ZIndex",
-        "supportNav",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "supportNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "projectNav",
         "caregiversNav",
         "masterDataNav",
@@ -49824,12 +49838,12 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
+          "PropertyName": "Width",
           "RuleProviderType": "Unknown"
         },
         {
