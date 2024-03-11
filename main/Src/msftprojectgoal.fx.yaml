@@ -247,7 +247,7 @@ msftprojectgoal As screen:
         Text: ="Edit"
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=7, true, false)
         Width: =70
-        X: =1132
+        X: =1182
         Y: =280
         ZIndex: =8
 
@@ -274,10 +274,12 @@ msftprojectgoal As screen:
         RadiusTopRight: =4
         Size: =10.5
         Text: ="Delete"
-        Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=7, true, false)
+        Visible: |-
+            = /*If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=7, true, false)*/
+             false
         Width: =70
-        X: =1217
-        Y: =280
+        X: =1182
+        Y: =320
         ZIndex: =9
 
     Button5_17 As button:
