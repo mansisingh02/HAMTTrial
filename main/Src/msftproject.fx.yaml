@@ -852,6 +852,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Sort by Cost Center"
         Items: =Distinct('Cost Center','Cost Center Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -860,7 +861,7 @@ msftproject As screen:
         SearchItems: =Search(Distinct('Cost Center','Cost Center Name'),ComboBox3.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =10.75
+        Size: =9.5
         Width: =180
         X: =339
         Y: =150
@@ -899,6 +900,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Sort by Project Type"
         Items: =Distinct('Project Type','Project Type')
         PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -907,7 +909,7 @@ msftproject As screen:
         SearchItems: =Search(Distinct('Project Type','Project Type'),ComboBox3_1.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =10.75
+        Size: =9.5
         Width: =180
         X: =528
         Y: =150
@@ -946,6 +948,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Sort by Project Goal"
         Items: =Distinct('Project Goals',Goal)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -953,7 +956,7 @@ msftproject As screen:
         SearchFields: =["Value"]
         SearchItems: =Search(Distinct('Project Goals',Goal),ComboBox3_2.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
-        Size: =10.75
+        Size: =9.5
         Width: =180
         X: =907
         Y: =150
@@ -1006,6 +1009,7 @@ msftproject As screen:
         HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 100), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
+        InputTextPlaceholder: ="Sort by Project Group"
         Items: =Distinct('Project Parent Group','Group Name')
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
@@ -1014,7 +1018,7 @@ msftproject As screen:
         SearchItems: =Search(Distinct('Project Parent Group','Group Name'),ComboBox3_3.SearchText,"Value")
         SelectionFill: =RGBA(0, 51, 142, 1)
         SelectMultiple: =false
-        Size: =10.75
+        Size: =9.5
         Width: =180
         X: =717
         Y: =150
