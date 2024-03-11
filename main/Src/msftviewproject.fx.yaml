@@ -31,7 +31,7 @@ msftviewproject As screen:
         Text: ="View"
         Width: =203
         X: =96
-        Y: =109
+        Y: =119
         ZIndex: =2
 
     msft_TextInput_24 As text:
@@ -62,7 +62,7 @@ msftviewproject As screen:
         Size: =11
         Width: =281
         X: =140
-        Y: =267
+        Y: =277
         ZIndex: =3
 
     msft_Dropdown_11 As dropdown:
@@ -111,7 +111,7 @@ msftviewproject As screen:
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =282
         X: =139
-        Y: =428
+        Y: =438
         ZIndex: =5
 
     msft_Dropdown_12 As dropdown:
@@ -142,20 +142,20 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =302
-        X: =434
-        Y: =428
+        X: =394
+        Y: =438
         ZIndex: =6
 
     msft_TextInput_25 As text:
         BorderThickness: =2
-        Color: =RGBA(153, 153, 153, 1)
+        Color: =RGBA(128, 128, 128, 1)
         Default: =Gallery16.Selected.Description
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(219, 219, 219, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
-        Height: =110
+        Height: =126
         HintText: ="Enter Description"
         HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         HoverColor: =RGBA(51, 51, 51, 1)
@@ -173,8 +173,8 @@ msftviewproject As screen:
         RadiusTopRight: =3
         Size: =11
         Width: =433
-        X: =768
-        Y: =351
+        X: =689
+        Y: =361
         ZIndex: =7
 
     msft_DatePicker_8 As datepicker:
@@ -221,8 +221,8 @@ msftviewproject As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =11
         Width: =203
-        X: =768
-        Y: =266
+        X: =689
+        Y: =276
         ZIndex: =8
 
     msft_DatePicker_9 As datepicker:
@@ -264,8 +264,8 @@ msftviewproject As screen:
         SelectedDateFill: =RGBA(0, 120, 212, 1)
         Size: =11
         Width: =202
-        X: =996
-        Y: =266
+        X: =917
+        Y: =276
         ZIndex: =9
 
     "'Rectangle 31_19' As rectangle":
@@ -339,8 +339,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Start Date"
-        X: =767
-        Y: =224
+        X: =688
+        Y: =234
         ZIndex: =24
 
     Label3_15 As label:
@@ -354,8 +354,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="End Date"
-        X: =989
-        Y: =224
+        X: =910
+        Y: =234
         ZIndex: =25
 
     Label3_48 As label:
@@ -370,7 +370,7 @@ msftviewproject As screen:
         Size: =11
         Text: ="Capability"
         X: =134
-        Y: =467
+        Y: =477
         ZIndex: =29
 
     Label3_43 As label:
@@ -385,7 +385,7 @@ msftviewproject As screen:
         Size: =11
         Text: ="Primary Owner"
         X: =134
-        Y: =388
+        Y: =398
         ZIndex: =30
 
     Label3_44 As label:
@@ -399,8 +399,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Project Type"
-        X: =427
-        Y: =388
+        X: =387
+        Y: =398
         ZIndex: =31
 
     Label3_41 As label:
@@ -415,7 +415,7 @@ msftviewproject As screen:
         Size: =11
         Text: ="Status"
         X: =137
-        Y: =306
+        Y: =316
         ZIndex: =33
 
     msft_Dropdown_37 As dropdown:
@@ -449,41 +449,8 @@ msftviewproject As screen:
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =203
         X: =140
-        Y: =348
+        Y: =358
         ZIndex: =44
-
-    msft_Dropdown_42 As dropdown:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(51, 51, 51, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(116, 116, 116, 1)
-        Default: =Gallery16.Selected.Goal.Value
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =DisplayMode.View
-        Height: =38
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        Items: =Distinct('Project Goals',Goal)
-        OnChange: =Set(varSelectedValue, msft_Dropdown_42.Selected.Value)
-        PaddingBottom: =8
-        PaddingLeft: =12
-        PaddingRight: =12
-        PaddingTop: =8
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SelectionFill: =RGBA(255, 255, 255, 1)
-        Width: =202
-        X: =434
-        Y: =510
-        ZIndex: =45
 
     Label3_49 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -498,8 +465,8 @@ msftviewproject As screen:
         Size: =11
         Text: ="Project Goal"
         Width: =184
-        X: =432
-        Y: =468
+        X: =392
+        Y: =478
         ZIndex: =46
 
     msft_Dropdown_38 As dropdown:
@@ -532,8 +499,8 @@ msftviewproject As screen:
         SelectionColor: =RGBA(0, 0, 0, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =302
-        X: =434
-        Y: =348
+        X: =394
+        Y: =358
         ZIndex: =47
 
     Label3_42 As label:
@@ -549,8 +516,8 @@ msftviewproject As screen:
         Size: =11
         Text: ="Cost Center Name"
         Width: =184
-        X: =430
-        Y: =306
+        X: =390
+        Y: =316
         ZIndex: =48
 
     msft_Dropdown_34 As dropdown:
@@ -581,8 +548,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         SelectionFill: =RGBA(255, 255, 255, 1)
         Width: =304
-        X: =432
-        Y: =267
+        X: =392
+        Y: =277
         ZIndex: =52
 
     Label3_39 As label:
@@ -596,8 +563,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Group"
-        X: =432
-        Y: =226
+        X: =392
+        Y: =236
         ZIndex: =53
 
     Label3_46 As label:
@@ -611,8 +578,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="In Flight Version"
-        X: =771
-        Y: =464
+        X: =689
+        Y: =484
         ZIndex: =56
 
     Label3_45 As label:
@@ -628,14 +595,14 @@ msftviewproject As screen:
         Size: =11
         Text: ="In Prod Version"
         Width: =184
-        X: =1055
-        Y: =461
+        X: =976
+        Y: =481
         ZIndex: =59
 
     msft_TextInput_27 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
-        Color: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(128, 128, 128, 1)
         Default: |
             =If(
                 Not(IsBlank(inFlightVersionValue)),
@@ -643,7 +610,7 @@ msftviewproject As screen:
                 "Not Applicable"
             )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledColor: =RGBA(128, 128, 128, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
@@ -670,14 +637,14 @@ msftviewproject As screen:
         RadiusTopRight: =3
         Size: =11
         Width: =149
-        X: =771
-        Y: =504
+        X: =688
+        Y: =526
         ZIndex: =60
 
     msft_TextInput_26 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
         BorderThickness: =2
-        Color: =RGBA(166, 166, 166, 1)
+        Color: =RGBA(128, 128, 128, 1)
         Default: |-
             =If(
                 Not(IsBlank(inProdVersionValue)),
@@ -685,7 +652,7 @@ msftviewproject As screen:
                 "Not Applicable"
             )
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(219, 219, 219, 1)
+        DisabledColor: =RGBA(116, 116, 116, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
@@ -712,8 +679,8 @@ msftviewproject As screen:
         RadiusTopRight: =3
         Size: =11
         Width: =158
-        X: =1055
-        Y: =503
+        X: =975
+        Y: =525
         ZIndex: =61
 
     Label3_47 As label:
@@ -729,8 +696,8 @@ msftviewproject As screen:
         Size: =11
         Text: ="In Prod"
         Width: =184
-        X: =955
-        Y: =461
+        X: =876
+        Y: =481
         ZIndex: =62
 
     Toggle1_2 As toggleSwitch:
@@ -764,8 +731,8 @@ msftviewproject As screen:
         TrueFill: =RGBA(0, 120, 212, 1)
         TrueHoverFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         TrueText: ="Yes"
-        X: =955
-        Y: =508
+        X: =882
+        Y: =530
         ZIndex: =64
 
     Icon1_25 As icon.Help:
@@ -785,8 +752,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="The parent group in which your project can be classified. The Start and End dates for the Project have to lie within the Group's start and end dates."
         Width: =13
-        X: =495
-        Y: =237
+        X: =455
+        Y: =247
         ZIndex: =66
 
     Icon1_38 As icon.Help:
@@ -807,7 +774,7 @@ msftviewproject As screen:
         Tooltip: ="Present running status of the project"
         Width: =13
         X: =191
-        Y: =316
+        Y: =326
         ZIndex: =67
 
     Icon1_53 As icon.Help:
@@ -828,7 +795,7 @@ msftviewproject As screen:
         Tooltip: ="The authority to which the project can be assigned. This can be a 4P/5P/M2/M3/M4/M5/E1/E2"
         Width: =13
         X: =246
-        Y: =398
+        Y: =408
         ZIndex: =69
 
     Icon1_39 As icon.Help:
@@ -848,8 +815,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="The business category under which the project can be classfied"
         Width: =13
-        X: =524
-        Y: =397
+        X: =484
+        Y: =407
         ZIndex: =70
 
     Icon1_58 As icon.Help:
@@ -870,7 +837,7 @@ msftviewproject As screen:
         Tooltip: ="The technical classifications accustomed for the project, can be one or more"
         Width: =13
         X: =271
-        Y: =477
+        Y: =487
         ZIndex: =71
 
     Icon1_57 As icon.Help:
@@ -890,8 +857,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="The envisioned goal in which the project lies"
         Width: =13
-        X: =529
-        Y: =481
+        X: =489
+        Y: =491
         ZIndex: =72
 
     Icon1_54 As icon.Help:
@@ -911,8 +878,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="The release versions/notes if the project is underway"
         Width: =13
-        X: =893
-        Y: =474
+        X: =814
+        Y: =494
         ZIndex: =75
 
     Icon1_55 As icon.Help:
@@ -932,8 +899,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="If in production, toggle to true, else false"
         Width: =13
-        X: =1014
-        Y: =473
+        X: =935
+        Y: =493
         ZIndex: =76
 
     Icon1_56 As icon.Help:
@@ -953,8 +920,8 @@ msftviewproject As screen:
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="The release notes/version while in Production"
         Width: =13
-        X: =1171
-        Y: =474
+        X: =1092
+        Y: =494
         ZIndex: =77
 
     "'New Project_17' As label":
@@ -974,7 +941,7 @@ msftviewproject As screen:
         Text: =Gallery16.Selected.'Project Name'
         Width: =681
         X: =161
-        Y: =109
+        Y: =119
         ZIndex: =82
 
     Label3_40 As label:
@@ -989,43 +956,8 @@ msftviewproject As screen:
         Size: =11
         Text: ="Project Name"
         X: =134
-        Y: =227
+        Y: =237
         ZIndex: =85
-
-    msft_Button_93 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
-        Color: =RGBA(151, 0, 0, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-        FontWeight: =FontWeight.Bold
-        Height: =42
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(190, 71, 71, 0.9), -10%)
-        OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
-        PaddingBottom: =7
-        PaddingLeft: =32
-        PaddingRight: =32
-        PaddingTop: =6
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Size: =15
-        Text: ="Go Back"
-        VerticalAlign: =VerticalAlign.Top
-        Width: =155
-        X: =92
-        Y: =702
-        ZIndex: =86
 
     Label3_50 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -1038,8 +970,8 @@ msftviewproject As screen:
         Font: =Font.'Segoe UI'
         Size: =11
         Text: ="Description"
-        X: =770
-        Y: =314
+        X: =688
+        Y: =324
         ZIndex: =87
 
     Label42 As label:
@@ -1063,7 +995,7 @@ msftviewproject As screen:
             )
         Width: =285
         X: =149
-        Y: =510
+        Y: =520
         ZIndex: =88
 
     Container_Admin_10 As groupContainer.verticalAutoLayoutContainer:
@@ -1106,6 +1038,27 @@ msftviewproject As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
+
+    Label54 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(128, 128, 128, 1)
+        DisplayMode: =DisplayMode.Disabled
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Size: =11
+        Text: |-
+            =If(
+                CountRows(Gallery16.Selected.Goal) > 1,
+                Concat(Gallery16.Selected.Goal, ThisRecord.Value & Char(10)),
+                Concat(Gallery16.Selected.Goal, ThisRecord.Value)
+            )
+        X: =398
+        Y: =523
+        ZIndex: =94
 
     Group7_12 As group:
         Height: =5
@@ -1150,4 +1103,52 @@ msftviewproject As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =93
+
+    Group3_32 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =97
+
+        Icon2_32 As icon.BackArrow:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =27
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =14
+            X: =92
+            Y: =74
+            ZIndex: =95
+
+        msft_Label_74 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =27
+            OnSelect: =Navigate(msftproject,ScreenTransition.Fade)
+            PaddingBottom: =9
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =10.5
+            Text: ="Back"
+            Width: =92
+            X: =112
+            Y: =74
+            ZIndex: =96
 
