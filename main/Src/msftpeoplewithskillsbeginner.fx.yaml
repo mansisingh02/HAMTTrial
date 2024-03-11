@@ -45,8 +45,8 @@ msftpeoplewithskillsbeginner As screen:
             Size: =10.5
             Text: ="List of Caregivers"
             Width: =182
-            X: =16
-            Y: =12
+            X: =18
+            Y: =5
             ZIndex: =4
 
     Category_23 As label:
@@ -88,52 +88,6 @@ msftpeoplewithskillsbeginner As screen:
         X: =525
         Y: =126
         ZIndex: =34
-
-    Gallery18_1 As gallery.galleryVertical:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =481
-        Items: =SelectedCaregiversBeginner
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =410
-        Width: =1250
-        WrapCount: =3
-        X: =98
-        Y: =261
-        ZIndex: =35
-
-        Label37_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =45
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Caregiver Name'
-            Width: =276
-            X: =6
-            ZIndex: =1
-
-    Label18 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Size: =13
-        Text: =CountRows(SelectedCaregiversBeginner)
-        X: =402
-        Y: =201
-        ZIndex: =37
 
     Container_Admin_29 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -220,6 +174,67 @@ msftpeoplewithskillsbeginner As screen:
             Y: =23
             ZIndex: =42
 
+    Gallery25 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =493
+        Items: =Gallery9.AllItems
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =55
+        Width: =1225
+        X: =97
+        Y: =249
+        ZIndex: =45
+
+        Label57 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |
+                =First(
+                    Filter(
+                        Caregivers_1,
+                        'Caregiver ID' = ThisItem.'Caregiver ID'
+                    )
+                ).'Caregiver Name'
+            Width: =412
+            X: =10
+            Y: =10
+            ZIndex: =1
+
+        Label57_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |
+                =First(
+                    Filter(
+                        Caregivers_1,
+                        'Caregiver ID' = ThisItem.'Caregiver ID'
+                    )
+                ).'Caregiver Email'
+            Width: =383
+            X: =480
+            Y: =10
+            ZIndex: =2
+
     Group3_34 As group:
         Height: =5
         Width: =5
@@ -267,4 +282,54 @@ msftpeoplewithskillsbeginner As screen:
             X: =122
             Y: =74
             ZIndex: =44
+
+    "'Report Header_41' As groupContainer.manualLayoutContainer":
+        Height: =48
+        LayoutMode: ="manual"
+        Width: =200
+        X: =566
+        Y: =201
+        ZIndex: =46
+
+        "'Report Label_38' As label":
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Bold
+            Height: =29
+            LineHeight: =1.142857
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: ="Caregivers' Email"
+            Width: =182
+            X: =18
+            Y: =5
+            ZIndex: =4
+
+    "'Report Label_41' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =29
+        LineHeight: =1.142857
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =10.5
+        Text: ="Primary Allocation of Caregiver"
+        Width: =237
+        X: =966
+        Y: =201
+        ZIndex: =47
 
