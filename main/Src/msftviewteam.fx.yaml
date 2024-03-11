@@ -114,145 +114,6 @@ msftviewteam As screen:
         Y: =109
         ZIndex: =82
 
-    "Gallery21_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
-        BorderColor: =RGBA(166, 166, 166, 1)
-        DelayItemLoading: =true
-        Height: =495
-        Items: |-
-            =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.ID)  || 'Secondary Project'.Value=Text(Gallery16.Selected.ID) || 
-            'Tertiary Project'.Value =Text(Gallery16.Selected.ID) )
-        Layout: =Layout.Vertical
-        LoadingSpinner: =LoadingSpinner.Data
-        OnSelect: =
-        TemplatePadding: =0
-        TemplateSize: =104
-        Width: =1157
-        X: =66
-        Y: =214
-        ZIndex: =86
-
-        Rectangle1_1 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
-
-        Label14_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =9
-            Text: ="Caregiver Name"
-            X: =87
-            Y: =1
-            ZIndex: =8
-
-        msft_Dropdown_43 As dropdown:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            ChevronBackground: =RGBA(255, 255, 255, 1)
-            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-            ChevronFill: =RGBA(51, 51, 51, 1)
-            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-            ChevronHoverFill: =RGBA(33, 33, 33, 1)
-            Color: =RGBA(51, 51, 51, 1)
-            Default: =ThisItem.'Allocation % for Primary Project'
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            DisplayMode: =DisplayMode.View
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
-            Items: =Sequence(40, 5, 5)
-            PaddingBottom: =8
-            PaddingLeft: =12
-            PaddingRight: =12
-            PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
-            SelectionFill: =RGBA(255, 255, 255, 1)
-            Width: =89
-            X: =647
-            Y: =40
-            ZIndex: =10
-
-        Label3_52 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =9
-            Text: ="Discipline"
-            X: =339
-            Y: =1
-            ZIndex: =11
-
-        Label3_51 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =9
-            Text: ="Allocation"
-            X: =643
-            ZIndex: =12
-
-        Label17_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Height: =42
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Caregiver Name'
-            Width: =191
-            X: =94
-            Y: =37
-            ZIndex: =15
-
-    Label45 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =38
-        Size: =13
-        Text: ="Text"
-        Width: =241
-        X: =412
-        Y: =250
-        ZIndex: =87
-
     Container_Admin_12 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -337,6 +198,140 @@ msftviewteam As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =92
+
+    "Gallery21_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DelayItemLoading: =true
+        Height: =474
+        Items: |-
+            =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.ID)  || 'Secondary Project'.Value=Text(Gallery16.Selected.ID) || 
+            'Tertiary Project'.Value =Text(Gallery16.Selected.ID) )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =
+        TemplatePadding: =0
+        TemplateSize: =104
+        Width: =1157
+        X: =86
+        Y: =234
+        ZIndex: =95
+
+        Rectangle1_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =6
+
+        Label14_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =9
+            Text: ="Caregiver Name"
+            X: =87
+            Y: =1
+            ZIndex: =8
+
+        Label3_52 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =9
+            Text: ="Discipline"
+            X: =339
+            Y: =1
+            ZIndex: =11
+
+        Label3_51 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Size: =9
+            Text: ="Allocation %"
+            X: =613
+            ZIndex: =12
+
+        Label17_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            Width: =191
+            X: =94
+            Y: =32
+            ZIndex: =15
+
+        Label17_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |-
+                =If(ThisItem.'Primary Project '.Value=Text(Gallery16.Selected.ID),ThisItem.'Discipline for Primary Project'.Value,
+                ThisItem.'Secondary Project'.Value=Text(Gallery16.Selected.ID),ThisItem.'Discipline for Secondary Project'.Value,
+                ThisItem.'Discipline for Tertiary Project'.Value
+                )
+            Width: =191
+            X: =338
+            Y: =40
+            ZIndex: =22
+
+        Label17_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |-
+                =If(ThisItem.'Primary Project '.Value=Text(Gallery16.Selected.ID),ThisItem.'Allocation % for Primary Project'*100 & "%",
+                ThisItem.'Secondary Project'.Value=Text(Gallery16.Selected.ID),ThisItem.'Allocation % for Secondary Project'*100 & "%",
+                ThisItem.'Allocation % of Tertiary Project'*100 & "%"
+                )
+            Width: =191
+            X: =636
+            Y: =40
+            ZIndex: =23
 
     Group3_33 As group:
         Height: =5
