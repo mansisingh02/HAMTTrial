@@ -4915,6 +4915,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search discipline"
             Items: =Distinct(Skills_1,Discipline)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -4956,6 +4957,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search skill"
             Items: =Filter(Skills_1, Discipline = skillCategory_7.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5175,6 +5177,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search Discipline"
             Items: =Distinct(Skills_1,Discipline)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5257,6 +5260,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search Skill"
             Items: =Filter(Skills_1, Discipline = skillCategory_8.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5359,7 +5363,7 @@ msftUpdatecaregivers As screen:
             Text: ="Skill "
             Visible: =varTabSelected=2
             Width: =36
-            X: =316
+            X: =309
             Y: =649
             ZIndex: =46
 
@@ -5476,6 +5480,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search Discipline"
             Items: =Distinct(Skills_1,Discipline)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5557,6 +5562,7 @@ msftUpdatecaregivers As screen:
             HoverBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             HoverColor: =RGBA(51, 51, 51, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
+            InputTextPlaceholder: ="Search Skill"
             Items: =Filter(Skills_1, Discipline = skillCategory_9.Selected.Value)
             PressedBorderColor: =ColorFade(RGBA(0, 51, 142, 1), -30%)
             PressedColor: =RGBA(255, 255, 255, 1)
