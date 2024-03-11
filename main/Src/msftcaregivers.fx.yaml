@@ -64,6 +64,7 @@ msftcaregivers As screen:
         OnSelect: |+
             =//searchClass.Selected.Value=Blank();
             Reset([@searchLevel]);
+            Reset([@searchLevel_1]);
             //searchDesignation.Selected.Value=Blank();
             Set(searchVar,"");
             Reset(search)

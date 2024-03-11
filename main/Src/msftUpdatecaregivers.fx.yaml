@@ -5777,6 +5777,7 @@ msftUpdatecaregivers As screen:
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =If(varCg || varPrimaryOwner, false, true)
             Width: =14
             X: =97
             Y: =74
@@ -5798,6 +5799,7 @@ msftUpdatecaregivers As screen:
             PaddingTop: =8
             Size: =10.5
             Text: ="Back"
+            Visible: =If(varCg || varPrimaryOwner, false, true)
             Width: =92
             X: =117
             Y: =74

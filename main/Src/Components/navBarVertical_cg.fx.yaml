@@ -29,7 +29,7 @@ navBarVertical_cg As CanvasComponent:
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
-        Y: =113
+        Y: =189
         ZIndex: =1
 
     Image5_7 As image:
@@ -42,7 +42,7 @@ navBarVertical_cg As CanvasComponent:
         FocusedBorderThickness: =4
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 38, 106, 1)
-        Image: ='MicrosoftTeams-image (10)'
+        Image: =myProfile
         ImagePosition: =ImagePosition.Fill
         OnSelect: |-
             =Set(gblSelectedCG,2);
@@ -50,7 +50,7 @@ navBarVertical_cg As CanvasComponent:
         PressedBorderColor: =RGBA(0, 60, 106, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
         Width: =75
-        Y: =208
+        Y: =86
         ZIndex: =2
 
     Button6 As button:
@@ -87,33 +87,17 @@ navBarVertical_cg As CanvasComponent:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =63
         HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =RGBA(0, 0, 0, 0)
-        Image: ='MicrosoftTeams-image (12)'
+        HoverFill: =RGBA(0, 38, 106, 1)
+        Image: =supportMenu
+        ImagePosition: =ImagePosition.Fill
         OnSelect: =Navigate(navBarVertical_cg.supportNav)
+        PaddingLeft: =-20
+        PaddingRight: =-20
+        PaddingTop: =
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =50
-        X: =12
-        Y: =318
-        ZIndex: =4
-
-    Label49_1 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =34
-        OnSelect: =
-        Size: =9
-        Text: ="Support"
         Width: =75
-        Y: =364
-        ZIndex: =5
+        Y: =289
+        ZIndex: =4
 
