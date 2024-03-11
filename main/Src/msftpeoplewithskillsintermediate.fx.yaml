@@ -232,20 +232,20 @@ msftpeoplewithskillsintermediate As screen:
             Y: =12
             ZIndex: =4
 
-    Gallery22 As gallery.variableTemplateHeightGallery:
+    Gallery25_1 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =431
-        Items: =SelectedCaregiversIntermediate
+        Height: =493
+        Items: =Gallery9_1.AllItems
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =426
-        Width: =1208
-        X: =97
+        TemplateSize: =55
+        Width: =1225
+        X: =102
         Y: =249
         ZIndex: =47
 
-        Label56 As label:
+        Label57_2 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -254,15 +254,22 @@ msftpeoplewithskillsintermediate As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =41
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.'Caregiver Name'
-            Width: =443
+            Text: |
+                =First(
+                    Filter(
+                        Caregivers_1,
+                        'Caregiver ID' = ThisItem.'Caregiver ID'
+                    )
+                ).'Caregiver Name'
+            Width: =412
             X: =10
-            Y: =15
+            Y: =10
             ZIndex: =1
 
-        Label56_1 As label:
+        Label57_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -271,12 +278,19 @@ msftpeoplewithskillsintermediate As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =41
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.'Caregiver Email'
-            Width: =414
-            X: =486
-            Y: =15
+            Text: |
+                =First(
+                    Filter(
+                        Caregivers_1,
+                        'Caregiver ID' = ThisItem.'Caregiver ID'
+                    )
+                ).'Caregiver Email'
+            Width: =383
+            X: =480
+            Y: =10
             ZIndex: =2
 
     Group3_35 As group:
