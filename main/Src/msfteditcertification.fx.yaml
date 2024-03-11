@@ -295,9 +295,7 @@ msfteditcertification As screen:
         ZIndex: =66
 
     msft_Button_57 As button:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =0
+        BorderColor: =RGBA(0, 51, 142, 1)
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -305,9 +303,9 @@ msfteditcertification As screen:
         FocusedBorderColor: =ColorFade(Self.Fill, -75%)
         FontWeight: =FontWeight.Bold
         Height: =48
-        HoverBorderColor: =RGBA(0, 0, 0, 0)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverBorderColor: =RGBA(0, 51, 142, 1)
+        HoverColor: =RGBA(0, 51, 142, 1)
+        HoverFill: =RGBA(255, 255, 255, 1)
         OnSelect: |
             =If(
                 IsBlank(TextInput2_11.Text) || IsBlank(TextInput2_13.Text),
