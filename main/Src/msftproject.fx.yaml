@@ -675,7 +675,7 @@ msftproject As screen:
             Font: =Font.'Segoe UI'
             Height: =28
             HoverColor: =RGBA(0,51,142,1)
-            OnSelect: =Navigate(msftviewteam,ScreenTransition.Fade)
+            OnSelect: =Navigate(msftviewteam_1,ScreenTransition.Fade)
             Size: =9
             Text: =CountIf(Caregivers_1,'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Tertiary Project'.Value=Text(ThisItem.ID))
             VerticalAlign: =VerticalAlign.Bottom
@@ -753,7 +753,7 @@ msftproject As screen:
             FocusedBorderThickness: =4
             Height: =0.5
             HoverFill: =RGBA(0,51,142,1)
-            OnSelect: =Navigate(msftviewteam,ScreenTransition.Fade)
+            OnSelect: =Navigate(msftviewteam_1,ScreenTransition.Fade)
             PressedFill: =RGBA(0, 120, 212, 1)
             Width: =13
             X: =843
