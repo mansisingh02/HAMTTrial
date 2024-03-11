@@ -296,7 +296,7 @@ msftcaregivers As screen:
             Size: =9
             Text: ="Update"
             Visible: |-
-                =If(Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email) ||
+                =If(Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org" || Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(ThisItem.'Caregiver Email')=Lower(User().Email) ||
                 (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name' || (ThisItem.'Core Leader')=Gallery13.Selected.'Caregiver Name 2' ||
                  Lower(User().Email)="mansi.singh@providence.org",true,false)
             Width: =71
@@ -1802,6 +1802,14 @@ msftcaregivers As screen:
             Y: =229
             ZIndex: =119
 
+    "'Container_Primary Owner_1' As groupContainer.verticalAutoLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =122
+
     Group7_45 As group:
         Height: =5
         Width: =5
@@ -1845,12 +1853,4 @@ msftcaregivers As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =121
-
-    "'Container_Primary Owner_1' As groupContainer.verticalAutoLayoutContainer":
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =122
 
