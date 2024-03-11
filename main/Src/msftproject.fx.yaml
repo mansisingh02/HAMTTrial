@@ -673,12 +673,15 @@ msftproject As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =52
-            OnSelect: =Select(Parent)
+            Height: =28
+            HoverColor: =RGBA(0,51,142,1)
+            OnSelect: =Navigate(msftviewteam,ScreenTransition.Fade)
             Size: =9
             Text: =CountIf(Caregivers_1,'Primary Project '.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Secondary Project'.Value=Text(ThisItem.ID))+CountIf(Caregivers_1,'Tertiary Project'.Value=Text(ThisItem.ID))
+            VerticalAlign: =VerticalAlign.Bottom
             Width: =89
             X: =806
+            Y: =12
             ZIndex: =19
 
         Button5_22 As button:
@@ -740,6 +743,22 @@ msftproject As screen:
             X: =1135
             Y: =12
             ZIndex: =21
+
+        Rectangle4 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0,51,142,1)
+            OnSelect: =Navigate(msftviewteam,ScreenTransition.Fade)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =13
+            X: =843
+            Y: =35
+            ZIndex: =22
 
     "'Category Header_12' As groupContainer.manualLayoutContainer":
         Height: =48
