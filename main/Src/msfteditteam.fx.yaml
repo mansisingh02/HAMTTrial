@@ -193,7 +193,7 @@ msfteditteam As screen:
             BorderColor: =RGBA(166, 166, 166, 1)
             ChevronBackground: =RGBA(255, 255, 255, 1)
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+            ChevronDisabledFill: =RGBA(179, 179, 179, 1)
             ChevronFill: =RGBA(51, 51, 51, 1)
             ChevronHoverBackground: =RGBA(172, 194, 232, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
@@ -205,15 +205,15 @@ msfteditteam As screen:
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverBorderColor: =RGBA(0, 51, 142, 1)
             HoverColor: =RGBA(51, 51, 51, 1)
-            HoverFill: =RGBA(212, 212, 212, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             Items: =Sequence(40, 5, 5)
             PaddingBottom: =8
             PaddingLeft: =12
             PaddingRight: =12
             PaddingTop: =8
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =RGBA(0, 51, 142, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
@@ -276,7 +276,7 @@ msfteditteam As screen:
             ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
             ChevronDisabledFill: =RGBA(166, 166, 166, 1)
             ChevronFill: =RGBA(33, 33, 33, 1)
-            ChevronHoverBackground: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =RGBA(172, 194, 232, 1)
             ChevronHoverFill: =RGBA(33, 33, 33, 1)
             Color: =RGBA(51, 51, 51, 1)
             DefaultSelectedItems: |-
@@ -296,9 +296,9 @@ msfteditteam As screen:
             Items: =Distinct(Discipline,DisciplineName)
             OnChange: =
             OnSelect: =Select(Parent)
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedBorderColor: =RGBA(0, 51, 142, 1)
             PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 51, 142, 1)
             SearchFields: =["Value"]
             SearchItems: =Search(Distinct(Discipline,DisciplineName),ComboBox2.SearchText,"Value")
             SelectionFill: =RGBA(0, 120, 212, 1)
