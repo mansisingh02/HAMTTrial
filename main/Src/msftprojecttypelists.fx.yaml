@@ -20,7 +20,7 @@ msftprojecttypelists As screen:
         Text: =Text(Gallery4.Selected.'Project Type')
         Width: =355
         X: =347
-        Y: =138
+        Y: =136
         ZIndex: =25
 
     "'Rectangle 31_14' As rectangle":
@@ -116,7 +116,7 @@ msftprojecttypelists As screen:
                     SelectedProjectType: Gallery4.Selected.'Project Type'
                 }
             )
-        TemplateSize: =75
+        TemplateSize: =46
         Width: =1246
         X: =107
         Y: =252
@@ -131,14 +131,51 @@ msftprojecttypelists As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =33
+            Height: =37
             OnSelect: =Select(Parent)
-            Size: =13
+            Size: =11
             Text: =ThisItem.'Project Name'
-            Width: =590
-            X: =12
-            Y: =44
+            Width: =374
+            Y: =9
             ZIndex: =1
+
+        Label22_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            Size: =11
+            Text: =ThisItem.'Description'
+            Width: =375
+            X: =374
+            Y: =4
+            ZIndex: =2
+
+        Label22_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =42
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            Size: =11
+            Text: =ThisItem.'Primary Owner'.Value
+            Width: =375
+            X: =840
+            Y: =4
+            ZIndex: =3
 
     Label27_3 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -151,8 +188,8 @@ msftprojecttypelists As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="Project Names"
-        X: =105
+        Text: ="Project Name"
+        X: =111
         Y: =207
         ZIndex: =44
 
@@ -240,4 +277,36 @@ msftprojecttypelists As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =49
+
+    Label27_9 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Description"
+        X: =478
+        Y: =207
+        ZIndex: =51
+
+    Label27_10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Primary Owner"
+        X: =952
+        Y: =207
+        ZIndex: =52
 
