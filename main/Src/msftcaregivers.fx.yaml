@@ -910,7 +910,7 @@ msftcaregivers As screen:
             LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
 
-    "'Container_Primary Owner_1' As groupContainer.verticalAutoLayoutContainer":
+    "'Container_Primary Owner_7' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
@@ -919,9 +919,12 @@ msftcaregivers As screen:
         Width: =75
         ZIndex: =80
 
-        navBarVertical_PrimaryOwner_1 As navBarVertical_PrimaryOwner:
+        navBarVertical_PrimaryOwner_43 As navBarVertical_PrimaryOwner:
+            caregiversNav: =msftcaregivers
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            myAccountNav: =msftUpdatecaregivers
+            projectNav: =msftproject
 
     SkillsPopUp As group:
         Height: =5
