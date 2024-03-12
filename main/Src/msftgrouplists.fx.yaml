@@ -90,7 +90,7 @@ msftgrouplists As screen:
                 }
             )
         TemplateSize: =53
-        Width: =942
+        Width: =1231
         X: =100
         Y: =292
         ZIndex: =29
@@ -111,6 +111,43 @@ msftgrouplists As screen:
             Width: =368
             Y: =8
             ZIndex: =1
+
+        Label26_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =49
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            Size: =13
+            Text: =ThisItem.'Description'
+            Width: =368
+            X: =448
+            Y: =4
+            ZIndex: =2
+
+        Label26_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =38
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Primary Owner'.Value
+            Width: =328
+            X: =893
+            Y: =4
+            ZIndex: =3
 
     Label27 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -213,6 +250,22 @@ msftgrouplists As screen:
             Y: =23
             ZIndex: =35
 
+    Label27_7 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Description"
+        X: =547
+        Y: =231
+        ZIndex: =38
+
     Group3_39 As group:
         Height: =5
         Width: =5
@@ -260,4 +313,20 @@ msftgrouplists As screen:
             X: =117
             Y: =84
             ZIndex: =37
+
+    Label27_8 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Primary Owner"
+        X: =997
+        Y: =231
+        ZIndex: =39
 
