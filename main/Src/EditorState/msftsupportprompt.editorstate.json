@@ -381,7 +381,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Admin_51",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -570,7 +570,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Caregiver_6",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -756,7 +756,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Horizontal_49",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -945,7 +945,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_PrimaryOwner_40",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2738,31 +2738,10 @@
         "Y",
         "ZIndex",
         "supportNav",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.ActiveScreen",
-          "InvariantPropertyName": "projectNav",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.ActiveScreen",
-          "InvariantPropertyName": "caregiversNav",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "projectNav",
+        "caregiversNav",
         "masterDataNav",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.ActiveScreen",
-          "InvariantPropertyName": "myAccountNav",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "myAccountNav",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -2832,7 +2811,7 @@
         {
           "Category": "Data",
           "PropertyName": "myAccountNav",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",
@@ -2842,12 +2821,12 @@
         {
           "Category": "Data",
           "PropertyName": "caregiversNav",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",
           "PropertyName": "projectNav",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",
