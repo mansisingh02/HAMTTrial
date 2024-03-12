@@ -210,20 +210,6 @@ msfteditprojectgoal As screen:
         Y: =256
         ZIndex: =32
 
-    Container_Admin_34 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =34
-
-        navBarVertical_admin_84 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
-
     Container_PrimaryOwner_26 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -298,6 +284,24 @@ msfteditprojectgoal As screen:
             X: =109
             Y: =73
             ZIndex: =38
+
+    Container_Admin_34 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =41
+
+        navBarVertical_admin_79 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     Group7_36 As group:
         Height: =5

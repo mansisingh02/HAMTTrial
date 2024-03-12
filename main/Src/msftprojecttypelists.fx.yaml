@@ -117,7 +117,7 @@ msftprojecttypelists As screen:
             OnSelect: =Select(Parent)
             Overflow: =Overflow.Scroll
             Size: =11
-            Text: =ThisItem.'Description'
+            Text: =ThisItem.Description
             Width: =340
             X: =367
             Y: =4
@@ -184,20 +184,6 @@ msftprojecttypelists As screen:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Width: =Parent.Width
-
-    Container_Admin_51 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =50
-
-        navBarVertical_admin_99 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
 
     Group7_24 As group:
         Height: =5
@@ -274,6 +260,24 @@ msftprojecttypelists As screen:
         X: =904
         Y: =207
         ZIndex: =52
+
+    Container_Admin_33 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =55
+
+        navBarVertical_admin_67 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     Group3_40 As group:
         Height: =5

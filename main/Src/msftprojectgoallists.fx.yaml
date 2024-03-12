@@ -172,20 +172,6 @@ msftprojectgoallists As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Container_Admin_53 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =38
-
-        navBarVertical_admin_101 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
-
     Group7_35 As group:
         Height: =5
         Width: =5
@@ -245,4 +231,22 @@ msftprojectgoallists As screen:
         X: =115
         Y: =202
         ZIndex: =39
+
+    Container_Admin_36 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =40
+
+        navBarVertical_admin_78 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 

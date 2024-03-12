@@ -388,7 +388,7 @@ msftprojecttype As screen:
             Y: =84
             ZIndex: =21
 
-    Container_Admin_50 As groupContainer.verticalAutoLayoutContainer:
+    Container_Admin_24 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
@@ -396,10 +396,14 @@ msftprojecttype As screen:
         Width: =75
         ZIndex: =24
 
-        navBarVertical_admin_95 As navBarVertical_admin:
+        navBarVertical_admin_66 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
             Visible: =true
 
     Group7_23 As group:
