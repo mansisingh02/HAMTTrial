@@ -66,7 +66,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Admin_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -247,7 +247,7 @@
       "MetaDataIDKey": "",
       "Name": "Container_Horizontal_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -389,7 +389,7 @@
       "MetaDataIDKey": "",
       "Name": "Group3_16",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 20,
+      "ParentIndex": 21,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -441,7 +441,7 @@
       "MetaDataIDKey": "",
       "Name": "Group7_2",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 21,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5274,7 +5274,7 @@
       "StyleName": "",
       "Type": "ControlInfo"
     },
-    "navBarVertical_admin_51": {
+    "navBarVertical_admin_45": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -5297,10 +5297,38 @@
         "X",
         "Y",
         "ZIndex",
-        "dasboardNav",
-        "projectNav",
-        "caregiversNav",
-        "masterDataNav",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "dasboardNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "projectNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "caregiversNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "App.ActiveScreen",
+          "InvariantPropertyName": "masterDataNav",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Visible",
         {
           "AFDDataSourceName": "",
@@ -5313,7 +5341,14 @@
       ],
       "DynamicProperties": [
         {
-          "ControlPropertyState": "FillPortions",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "FillPortions",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "FillPortions",
@@ -5363,7 +5398,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "navBarVertical_admin_51",
+      "Name": "navBarVertical_admin_45",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
@@ -5371,27 +5406,27 @@
         {
           "Category": "Data",
           "PropertyName": "masterDataNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "caregiversNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "projectNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "dasboardNav",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
           "PropertyName": "supportNav",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
