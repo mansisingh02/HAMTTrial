@@ -2011,13 +2011,13 @@ msftUpdatecaregivers As screen:
         Fill: =RGBA(255, 255, 255, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =28
+        Height: =32
         Size: =10.75
         Text: =certificationCode
         Visible: =varTabSelected=5
         Width: =240
         X: =354
-        Y: =667
+        Y: =657
         ZIndex: =28
 
     msft_Label_55 As label:
@@ -2037,7 +2037,7 @@ msftUpdatecaregivers As screen:
         Visible: =varTabSelected=5
         Width: =122
         X: =353
-        Y: =644
+        Y: =637
         ZIndex: =29
 
     Label7_5 As label:
@@ -4007,7 +4007,7 @@ msftUpdatecaregivers As screen:
         Height: =232
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =varTabSelected=5
+        Visible: =varTabSelected=5 && Rectangle4_5.Visible=false
         Width: =0.5
         X: =700
         Y: =351
