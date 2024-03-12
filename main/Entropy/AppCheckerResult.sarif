@@ -7612,47 +7612,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "msftpeoplewithskillsbeginner.Gallery25.Label57_6.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "msftpeoplewithskillsbeginner.Gallery25.Label57_6.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 154,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "msftpeoplewithskillsbeginner",
-                "type": "msftpeoplewithskillsbeginner.Gallery25.Label57_6"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Number",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "msftproject.OnVisible"
                 }
               ],
@@ -8264,10 +8223,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 657,
+                  "charLength": 653,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" \n//&& (Lower(User().Email)<>\"mansi.singh@providence.org\")\n)) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver))"
+                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" && (Lower(User().Email)<>\"mansi.singh@providence.org\"))) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver))"
                   }
                 }
               },
@@ -42265,6 +42224,36 @@
                 "member": "Text",
                 "module": "msfteditgroup",
                 "type": "msfteditgroup.Category_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 21
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msfteditgroup.descriptionlabel_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msfteditgroup.descriptionlabel_1.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "msfteditgroup",
+                "type": "msfteditgroup.descriptionlabel_1"
               }
             }
           ],
