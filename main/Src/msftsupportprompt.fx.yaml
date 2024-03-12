@@ -95,19 +95,6 @@ msftsupportprompt As screen:
             projectNav: =msftproject
             Visible: =true
 
-    Container_Caregiver_6 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =8
-
-        navBarVertical_cg_10 As navBarVertical_cg:
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varCg,true,false)
-
     Container_PrimaryOwner_40 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -123,6 +110,20 @@ msftsupportprompt As screen:
             myAccountNav: =msftUpdatecaregivers
             projectNav: =msftproject
             Visible: =If(varPrimaryOwner,true,false)
+
+    Container_Caregiver_6 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =10
+
+        navBarVertical_cg_10 As navBarVertical_cg:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
 
     Group7_49 As group:
         Height: =5
