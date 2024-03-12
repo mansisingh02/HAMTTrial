@@ -124,7 +124,7 @@ msfteditteam As screen:
         Text: ="Team"
         Width: =234
         X: =111
-        Y: =169
+        Y: =165
         ZIndex: =6
 
     "'New Project_11' As label":
@@ -150,7 +150,7 @@ msfteditteam As screen:
     "Gallery21 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =474
+        Height: =447
         Items: |-
             =Filter(Caregivers_1,'Primary Project '.Value=Text(Gallery16.Selected.ID)  || 'Secondary Project'.Value=Text(Gallery16.Selected.ID) || 
             'Tertiary Project'.Value =Text(Gallery16.Selected.ID) )
@@ -160,8 +160,8 @@ msfteditteam As screen:
         TemplatePadding: =0
         TemplateSize: =104
         Width: =1157
-        X: =66
-        Y: =214
+        X: =70
+        Y: =241
         ZIndex: =8
 
         Rectangle1 As rectangle:
@@ -172,22 +172,6 @@ msfteditteam As screen:
             Visible: =ThisItem.IsSelected
             Width: =4
             ZIndex: =6
-
-        Label14 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =9
-            Text: ="Caregiver Name"
-            X: =87
-            Y: =1
-            ZIndex: =8
 
         msft_Dropdown_39 As dropdown:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -221,36 +205,6 @@ msfteditteam As screen:
             X: =643
             Y: =32
             ZIndex: =10
-
-        Label3_35 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =9
-            Text: ="Discipline"
-            X: =339
-            Y: =1
-            ZIndex: =11
-
-        Label3_36 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =9
-            Text: ="Select Allocation %"
-            X: =613
-            ZIndex: =12
 
         Label17 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -556,6 +510,57 @@ msfteditteam As screen:
             LayoutMinWidth: =640
             myAccountNav: =msftUpdatecaregivers
             projectNav: =msftproject
+
+    Label14_10 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        OnSelect: =
+        Size: =13
+        Text: ="Caregiver Name"
+        X: =165
+        Y: =201
+        ZIndex: =17
+
+    Label14_11 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        OnSelect: =
+        Size: =13
+        Text: ="Discipline"
+        X: =405
+        Y: =201
+        ZIndex: =18
+
+    Label14_12 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        OnSelect: =
+        Size: =13
+        Text: ="Allocation %"
+        X: =706
+        Y: =201
+        ZIndex: =19
 
     Group3_3 As group:
         Height: =5
