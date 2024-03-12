@@ -32,7 +32,7 @@ msftnewMember As screen:
         Width: =203
         X: =100
         Y: =137
-        ZIndex: =2
+        ZIndex: =1
 
     "'Rectangle 31_17' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -44,7 +44,7 @@ msftnewMember As screen:
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =70
-        ZIndex: =14
+        ZIndex: =2
 
     "'Rectangle 32_17' As rectangle":
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -57,7 +57,7 @@ msftnewMember As screen:
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =1296.49914550781
         X: =66
-        ZIndex: =15
+        ZIndex: =3
 
     Icon1_52 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -78,7 +78,7 @@ msftnewMember As screen:
         Width: =13
         X: =254
         Y: =205
-        ZIndex: =80
+        ZIndex: =4
 
     msft_Button_86 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -140,7 +140,7 @@ msftnewMember As screen:
         Width: =151
         X: =779
         Y: =312
-        ZIndex: =87
+        ZIndex: =5
 
     Label3_33 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -155,7 +155,7 @@ msftnewMember As screen:
         Text: ="Caregiver Name"
         X: =97
         Y: =188
-        ZIndex: =88
+        ZIndex: =6
 
     Label3_34 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -170,7 +170,7 @@ msftnewMember As screen:
         Text: ="Discipline"
         X: =305
         Y: =189
-        ZIndex: =89
+        ZIndex: =7
 
     Label3_38 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -186,7 +186,7 @@ msftnewMember As screen:
         Width: =161
         X: =516
         Y: =188
-        ZIndex: =90
+        ZIndex: =8
 
     Label6_44 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -201,7 +201,7 @@ msftnewMember As screen:
         Text: ="*"
         X: =204
         Y: =182
-        ZIndex: =91
+        ZIndex: =9
 
     Label6_45 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -216,7 +216,7 @@ msftnewMember As screen:
         Text: ="*"
         X: =372
         Y: =182
-        ZIndex: =92
+        ZIndex: =10
 
     Label6_43 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -231,7 +231,7 @@ msftnewMember As screen:
         Text: ="*"
         X: =645
         Y: =179
-        ZIndex: =93
+        ZIndex: =11
 
     msft_Dropdown_41 As dropdown:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -262,7 +262,7 @@ msftnewMember As screen:
         Width: =199
         X: =516
         Y: =233
-        ZIndex: =96
+        ZIndex: =12
 
     Icon1_33 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -283,7 +283,7 @@ msftnewMember As screen:
         Width: =13
         X: =487
         Y: =202
-        ZIndex: =97
+        ZIndex: =13
 
     Icon1_37 As icon.Help:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -304,7 +304,7 @@ msftnewMember As screen:
         Width: =13
         X: =699
         Y: =202
-        ZIndex: =98
+        ZIndex: =14
 
     ComboBox2_1 As combobox:
         BorderColor: =RGBA(116, 116, 116, 1)
@@ -333,14 +333,14 @@ msftnewMember As screen:
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         SearchFields: =["Value"]
-        SearchItems: =[]
+        SearchItems: =Search(Distinct(Discipline,DisciplineName),ComboBox2_1.SearchText,"Value")
         SelectionFill: =RGBA(0, 120, 212, 1)
         SelectMultiple: =false
         Size: =13
         Width: =201
         X: =302
         Y: =233
-        ZIndex: =99
+        ZIndex: =15
 
     ComboBox5_1 As combobox:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -375,20 +375,7 @@ msftnewMember As screen:
         Width: =50
         X: =360
         Y: =102
-        ZIndex: =100
-
-    Container_PrimaryOwner_6 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =103
-
-        navBarVertical_PrimaryOwner_8 As navBarVertical_PrimaryOwner:
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varPrimaryOwner,true,false)
+        ZIndex: =16
 
     Container_Horizontal_15 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -396,7 +383,7 @@ msftnewMember As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =104
+        ZIndex: =17
 
         navBarHorizontal_64 As navBarHorizontal:
             Height: =Parent.Height
@@ -434,7 +421,38 @@ msftnewMember As screen:
         Width: =191
         X: =100
         Y: =233
-        ZIndex: =105
+        ZIndex: =18
+
+    Container_Admin_14 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =23
+
+        navBarVertical_admin_59 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_PrimaryOwner_6 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =24
+
+        navBarVertical_PrimaryOwner_8 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varPrimaryOwner,true,false)
 
     Group3_12 As group:
         Height: =5
@@ -461,7 +479,7 @@ msftnewMember As screen:
             Width: =14
             X: =97
             Y: =94
-            ZIndex: =106
+            ZIndex: =19
 
         msft_Label_37 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -482,25 +500,7 @@ msftnewMember As screen:
             Width: =92
             X: =117
             Y: =94
-            ZIndex: =107
-
-    Container_Admin_14 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =110
-
-        navBarVertical_admin_59 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
+            ZIndex: =20
 
     Group7_16 As group:
         Height: =5
@@ -525,7 +525,7 @@ msftnewMember As screen:
             Width: =282
             X: =Parent.Width-300
             Y: =5
-            ZIndex: =108
+            ZIndex: =21
 
         Label4_39 As label:
             Align: =Align.Right
@@ -544,5 +544,5 @@ msftnewMember As screen:
             Width: =282
             X: =Parent.Width-300
             Y: =23
-            ZIndex: =109
+            ZIndex: =22
 

@@ -3995,14 +3995,6 @@ msftUpdatecaregivers As screen:
         Y: =362
         ZIndex: =100
 
-    "'Container_Primary Owner' As groupContainer.verticalAutoLayoutContainer":
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =103
-
     Rectangle8 As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -4017,7 +4009,7 @@ msftUpdatecaregivers As screen:
         Width: =0.5
         X: =700
         Y: =351
-        ZIndex: =104
+        ZIndex: =103
 
     Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -4025,7 +4017,7 @@ msftUpdatecaregivers As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =105
+        ZIndex: =104
 
         navBarVertical_admin_87 As navBarVertical_admin:
             caregiversNav: =msftcaregivers
@@ -4043,13 +4035,21 @@ msftUpdatecaregivers As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =106
+        ZIndex: =105
 
         navBarVertical_cg_4 As navBarVertical_cg:
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
+
+    "'Container_Primary Owner' As groupContainer.verticalAutoLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =106
 
     Group7_44 As group:
         Height: =5
@@ -4743,7 +4743,7 @@ msftUpdatecaregivers As screen:
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 51, 142, 1)
             SearchFields: =["Value"]
-            SearchItems: =[]
+            SearchItems: =Search(Distinct(Certifications,'Certification Name'),certificationNameDropdown.SearchText,"Value")
             SelectionFill: =RGBA(0, 51, 142, 1)
             SelectMultiple: =false
             Size: =10.75
