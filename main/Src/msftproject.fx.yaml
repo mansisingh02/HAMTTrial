@@ -359,17 +359,6 @@ msftproject As screen:
             (('Cost Center Name'.Value = ComboBox3.Selected.Value || ComboBox3.Selected.Value=Blank()) &&
             ('Project Type'.Value = ComboBox3_1.Selected.Value || ComboBox3_1.Selected.Value=Blank())
              &&
-            /*(
-                IsEmpty(ComboBox3_2.SelectedItems) ||
-                CountRows(
-                    Filter(
-                        Goal.Value,
-                        Value in ComboBox3_2.SelectedItems.Value
-                    )
-                ) > 0
-                ||
-                IsBlank(ComboBox3_2.Selected.Value)
-            )*/
             (
                 IsEmpty(ComboBox3_2.SelectedItems) ||
                 (
