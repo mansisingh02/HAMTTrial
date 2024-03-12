@@ -2104,7 +2104,12 @@ msftUpdatecaregivers As screen:
                     'Start Date of Certification 5': msft_DatePicker_6.SelectedDate,
                     'End Date of Certification 5':  msft_DatePicker_7.SelectedDate
                 }
-                ))
+                ));
+            Reset([@certificationNameDropdown]);
+            Reset(msft_DatePicker_6);
+            Reset(msft_DatePicker_7);
+            Set(Label34.Text,Blank())
+            Reset()
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
@@ -4741,7 +4746,7 @@ msftUpdatecaregivers As screen:
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 51, 142, 1)
             SearchFields: =["Value"]
-            SearchItems: =Search(Distinct(Certifications,'Certification Name'),certificationNameDropdown.SearchText,"Value")
+            SearchItems: =[]
             SelectionFill: =RGBA(0, 51, 142, 1)
             SelectMultiple: =false
             Size: =10.75
@@ -5150,6 +5155,7 @@ msftUpdatecaregivers As screen:
                             
                             ));
                 Reset([@skillCategory_7]);
+                Reset([@skillName_4]);
                 Reset(comment_4)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5453,6 +5459,7 @@ msftUpdatecaregivers As screen:
                             ));
                 
                 Reset([@skillCategory_8]);
+                Reset([@skillName_5]);
                 Reset(comment_5)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
@@ -5754,6 +5761,7 @@ msftUpdatecaregivers As screen:
                             ));
                 
                 Reset([@skillCategory_9]);
+                Reset([@skillName_6]);
                 Reset(comment_6)
             PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
             PressedColor: =RGBA(255, 255, 255, 1)
