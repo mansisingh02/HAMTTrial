@@ -3721,44 +3721,236 @@ msftUpdatecaregivers As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Group4 As group:
+    msft_Label_46 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Certification Name"
+        Visible: =varTabSelected=5
+        Width: =142
+        X: =117
+        Y: =359
+        ZIndex: =89
+
+    msft_Label_47 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =17
+        PaddingBottom: =9
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =8
+        Size: =10.5
+        Text: ="Issued From"
+        Visible: =varTabSelected=5
+        Width: =142
+        X: =758
+        Y: =362
+        ZIndex: =93
+
+    Rectangle8 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderThickness: =4
+        Height: =232
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =varTabSelected=5
+        Width: =0.5
+        X: =700
+        Y: =351
+        ZIndex: =97
+
+    Container_Caregiver As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =98
+
+        navBarVertical_cg_4 As navBarVertical_cg:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
+
+    "'Container_Primary Owner_3' As groupContainer.verticalAutoLayoutContainer":
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(varPrimaryOwner,true,false)
+        Width: =75
+        ZIndex: =99
+
+        navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
+            caregiversNav: =msftcaregivers
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            myAccountNav: =msftUpdatecaregivers
+            projectNav: =msftproject
+
+    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(adminOrcoreLeader,true,false)
+        Width: =75
+        ZIndex: =100
+
+        navBarVertical_admin_87 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Group7_44 As group:
+        Height: =5
+        Width: =5
+        X: =1066
+        Y: =40
+        ZIndex: =108
+
+        Label4_92 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =13
+            Text: =User().FullName
+            Width: =282
+            X: =Parent.Width-300
+            Y: =5
+            ZIndex: =95
+
+        Label4_100 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =37
+            Size: =10
+            Text: |-
+                =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" 
+                //||Lower(User().Email)="mansi.singh@providence.org"
+                )
+                ,"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
+            Width: =282
+            X: =Parent.Width-300
+            Y: =23
+            ZIndex: =96
+
+    Group6 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =90
+        ZIndex: =110
 
-        Rectangle16 As rectangle:
+        Rectangle8_4 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(153, 153, 153, 1)
+            DisabledFill: =RGBA(255, 255, 255, 0.9)
+            Fill: =RGBA(255, 255, 255, 0.9)
             FocusedBorderThickness: =4
-            Height: =0.5
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            Height: =708
+            HoverFill: =RGBA(255, 255, 255, 0.9)
+            PressedFill: =RGBA(255, 255, 255, 0.9)
             Visible: =showSkillsPopup
-            Width: =390
-            X: =375
-            Y: =367
-            ZIndex: =71
+            Width: =1291
+            X: =75
+            Y: =60
+            ZIndex: =101
 
-        Rectangle16_1 As rectangle:
+        Rectangle4_7 As rectangle:
+            BorderColor: =RGBA(230, 230, 230, 1)
+            BorderThickness: =1
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Height: =455
+            HoverFill: =RGBA(255, 255, 255, 1)
+            PressedFill: =RGBA(255, 255, 255, 1)
+            Visible: =showSkillsPopup
+            Width: =449
+            X: =350
+            Y: =177
+            ZIndex: =102
+
+        Icon1_14 As icon.Cancel:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =29
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({showSkillsPopup: false})
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =showSkillsPopup
+            Width: =32
+            X: =730
+            Y: =204
+            ZIndex: =103
+
+        Label19 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            DisabledFill: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(153, 153, 153, 1)
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
-            Height: =0.5
-            HoverFill: =RGBA(0, 120, 212, 1)
-            PressedFill: =RGBA(0, 120, 212, 1)
+            Font: =Font.'Segoe UI'
+            Size: =8
+            Text: ="Skill Title"
             Visible: =showSkillsPopup
-            Width: =390
-            X: =375
-            Y: =511
-            ZIndex: =72
+            X: =401
+            Y: =388
+            ZIndex: =104
 
         SkillsTextInput_6 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3785,23 +3977,76 @@ msftUpdatecaregivers As screen:
             Visible: =showSkillsPopup
             X: =407
             Y: =417
-            ZIndex: =73
+            ZIndex: =105
 
-        Label19 As label:
+        Rectangle16_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showSkillsPopup
+            Width: =390
+            X: =375
+            Y: =511
+            ZIndex: =106
+
+        Rectangle16 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(153, 153, 153, 1)
+            FocusedBorderThickness: =4
+            Height: =0.5
+            HoverFill: =RGBA(0, 120, 212, 1)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Visible: =showSkillsPopup
+            Width: =390
+            X: =375
+            Y: =367
+            ZIndex: =107
+
+        msft_Button_77 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(151, 0, 0, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            Size: =8
-            Text: ="Skill Title"
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
+            FontWeight: =FontWeight.Bold
+            Height: =36
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
+            OnSelect: |-
+                =UpdateContext({showSkillsPopup: false})
+            PaddingBottom: =7
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =7
+            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Size: =10.75
+            Text: ="Go Back"
+            VerticalAlign: =VerticalAlign.Top
             Visible: =showSkillsPopup
-            X: =401
-            Y: =388
-            ZIndex: =74
+            Width: =122
+            X: =404
+            Y: =526
+            ZIndex: =108
 
         msft_Button_33 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3917,198 +4162,7 @@ msftUpdatecaregivers As screen:
             Width: =117
             X: =606
             Y: =526
-            ZIndex: =75
-
-        msft_Button_77 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
-            Color: =RGBA(151, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderColor: =ColorFade(Self.Fill, -75%)
-            FontWeight: =FontWeight.Bold
-            Height: =36
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(190, 71, 71, 1), -10%)
-            OnSelect: =Navigate(msftpopup,ScreenTransition.Fade)
-            PaddingBottom: =7
-            PaddingLeft: =32
-            PaddingRight: =32
-            PaddingTop: =7
-            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
-            PressedColor: =RGBA(255, 255, 255, 1)
-            PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            RadiusBottomLeft: =5
-            RadiusBottomRight: =5
-            RadiusTopLeft: =5
-            RadiusTopRight: =5
-            Size: =10.75
-            Text: ="Go Back"
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =showSkillsPopup
-            Width: =122
-            X: =404
-            Y: =526
-            ZIndex: =76
-
-    msft_Label_46 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Certification Name"
-        Visible: =varTabSelected=5
-        Width: =142
-        X: =117
-        Y: =359
-        ZIndex: =99
-
-    msft_Label_47 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        FontWeight: =FontWeight.Bold
-        Height: =17
-        PaddingBottom: =9
-        PaddingLeft: =0
-        PaddingRight: =0
-        PaddingTop: =8
-        Size: =10.5
-        Text: ="Issued From"
-        Visible: =varTabSelected=5
-        Width: =142
-        X: =758
-        Y: =362
-        ZIndex: =100
-
-    Rectangle8 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderThickness: =4
-        Height: =232
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =varTabSelected=5
-        Width: =0.5
-        X: =700
-        Y: =351
-        ZIndex: =103
-
-    Container_Caregiver As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =104
-
-        navBarVertical_cg_4 As navBarVertical_cg:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varCg,true,false)
-
-    "'Container_Primary Owner_3' As groupContainer.verticalAutoLayoutContainer":
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Visible: =If(varPrimaryOwner,true,false)
-        Width: =75
-        ZIndex: =105
-
-        navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
-            caregiversNav: =msftcaregivers
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            myAccountNav: =msftUpdatecaregivers
-            projectNav: =msftproject
-
-    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Visible: =If(adminOrcoreLeader,true,false)
-        Width: =75
-        ZIndex: =106
-
-        navBarVertical_admin_87 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
-
-    Group7_44 As group:
-        Height: =5
-        Width: =5
-        X: =1066
-        Y: =40
-        ZIndex: =108
-
-        Label4_92 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Lato Black'
-            Height: =37
-            Size: =13
-            Text: =User().FullName
-            Width: =282
-            X: =Parent.Width-300
-            Y: =5
-            ZIndex: =101
-
-        Label4_100 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Lighter
-            Height: =37
-            Size: =10
-            Text: |-
-                =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" 
-                //||Lower(User().Email)="mansi.singh@providence.org"
-                )
-                ,"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
-            Width: =282
-            X: =Parent.Width-300
-            Y: =23
-            ZIndex: =102
+            ZIndex: =109
 
     Group5 As group:
         Height: =5
@@ -4131,7 +4185,7 @@ msftUpdatecaregivers As screen:
             Width: =1291
             X: =75
             Y: =54
-            ZIndex: =77
+            ZIndex: =71
 
         Rectangle4_5 As rectangle:
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -4146,7 +4200,7 @@ msftUpdatecaregivers As screen:
             Width: =424
             X: =375
             Y: =177
-            ZIndex: =78
+            ZIndex: =72
 
         Label28_11 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4167,7 +4221,7 @@ msftUpdatecaregivers As screen:
             Width: =325
             X: =418
             Y: =183
-            ZIndex: =79
+            ZIndex: =73
 
         Label28_14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4187,7 +4241,7 @@ msftUpdatecaregivers As screen:
             Width: =398
             X: =414
             Y: =415
-            ZIndex: =80
+            ZIndex: =74
 
         Label28_15 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4207,7 +4261,7 @@ msftUpdatecaregivers As screen:
             Width: =256
             X: =423
             Y: =511
-            ZIndex: =81
+            ZIndex: =75
 
         Label28_16 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4227,7 +4281,7 @@ msftUpdatecaregivers As screen:
             Width: =72
             X: =837
             Y: =434
-            ZIndex: =82
+            ZIndex: =76
 
         Label28_17 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4247,7 +4301,7 @@ msftUpdatecaregivers As screen:
             Width: =72
             X: =758
             Y: =504
-            ZIndex: =83
+            ZIndex: =77
 
         Icon1_13 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4269,7 +4323,7 @@ msftUpdatecaregivers As screen:
             Width: =32
             X: =730
             Y: =198
-            ZIndex: =84
+            ZIndex: =78
 
         Rectangle16_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4285,7 +4339,7 @@ msftUpdatecaregivers As screen:
             Width: =423
             X: =376
             Y: =255
-            ZIndex: =85
+            ZIndex: =79
 
         Rectangle16_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4301,7 +4355,7 @@ msftUpdatecaregivers As screen:
             Width: =427
             X: =372
             Y: =632
-            ZIndex: =86
+            ZIndex: =80
 
         msft_Button_83 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4338,7 +4392,7 @@ msftUpdatecaregivers As screen:
             Width: =122
             X: =401
             Y: =647
-            ZIndex: =87
+            ZIndex: =81
 
         SkillsTextInput_7 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4365,7 +4419,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =285
-            ZIndex: =88
+            ZIndex: =82
 
         msft_Button_94 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4516,7 +4570,7 @@ msftUpdatecaregivers As screen:
             Width: =117
             X: =617
             Y: =647
-            ZIndex: =89
+            ZIndex: =83
 
         SkillsTextInput_8 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4543,7 +4597,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =360
-            ZIndex: =90
+            ZIndex: =84
 
         SkillsTextInput_9 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4570,7 +4624,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =439
-            ZIndex: =91
+            ZIndex: =85
 
         SkillsTextInput_10 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4598,7 +4652,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =418
             Y: =511
-            ZIndex: =92
+            ZIndex: =86
 
         DatePicker2_1 As datepicker:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4617,7 +4671,7 @@ msftUpdatecaregivers As screen:
             Width: =320
             X: =418
             Y: =575
-            ZIndex: =93
+            ZIndex: =87
 
         Label40_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4635,7 +4689,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =414
             Y: =547
-            ZIndex: =94
+            ZIndex: =88
 
         Label40_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4653,7 +4707,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =255
-            ZIndex: =95
+            ZIndex: =90
 
         Label40_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4671,7 +4725,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =331
-            ZIndex: =96
+            ZIndex: =91
 
         Label40_6 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4689,7 +4743,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =414
             Y: =410
-            ZIndex: =97
+            ZIndex: =92
 
         Label40_7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4707,7 +4761,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =482
-            ZIndex: =98
+            ZIndex: =94
 
     Group2 As group:
         Height: =5
@@ -5542,7 +5596,8 @@ msftUpdatecaregivers As screen:
             HoverColor: =ColorFade(RGBA(0, 142, 51, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Help
-            OnSelect: =Navigate(msftpopup, ScreenTransition.None)
+            OnSelect: |-
+                =UpdateContext({showSkillsPopup: true})
             PressedBorderColor: =RGBA(0, 0, 0, 0)
             PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             PressedFill: =RGBA(0, 0, 0, 0)
