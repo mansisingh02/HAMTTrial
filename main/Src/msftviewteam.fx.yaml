@@ -280,18 +280,21 @@ msftviewteam As screen:
             projectNav: =msftproject
             Visible: =true
 
-    Container_PrimaryOwner_4 As groupContainer.verticalAutoLayoutContainer:
+    "'Container_Primary Owner_13' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(varPrimaryOwner,true,false)
         Width: =75
         ZIndex: =14
 
-        navBarVertical_PrimaryOwner_6 As navBarVertical_PrimaryOwner:
+        navBarVertical_PrimaryOwner_52 As navBarVertical_PrimaryOwner:
+            caregiversNav: =msftcaregivers
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Visible: =If(varPrimaryOwner,true,false)
+            myAccountNav: =msftUpdatecaregivers
+            projectNav: =msftproject
 
     Group7_14 As group:
         Height: =5
