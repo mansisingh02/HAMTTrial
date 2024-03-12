@@ -878,23 +878,21 @@ msftcaregivers As screen:
         Y: =248
         ZIndex: =71
 
-    Container_Admin_45 As groupContainer.verticalAutoLayoutContainer:
+    "'Container_Primary Owner_7' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(varPrimaryOwner,true,false)
         Width: =75
         ZIndex: =78
 
-        navBarVertical_admin_88 As navBarVertical_admin:
+        navBarVertical_PrimaryOwner_43 As navBarVertical_PrimaryOwner:
             caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
+            myAccountNav: =msftUpdatecaregivers
             projectNav: =msftproject
-            Visible: =true
 
     Container_Caregiver_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -910,21 +908,24 @@ msftcaregivers As screen:
             LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
 
-    "'Container_Primary Owner_7' As groupContainer.verticalAutoLayoutContainer":
+    Container_Admin_45 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
-        Visible: =If(varPrimaryOwner,true,false)
+        Visible: =If(adminOrcoreLeader,true,false)
         Width: =75
         ZIndex: =80
 
-        navBarVertical_PrimaryOwner_43 As navBarVertical_PrimaryOwner:
+        navBarVertical_admin_88 As navBarVertical_admin:
             caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            myAccountNav: =msftUpdatecaregivers
+            masterDataNav: =msftMasterData
             projectNav: =msftproject
+            Visible: =true
 
     SkillsPopUp As group:
         Height: =5

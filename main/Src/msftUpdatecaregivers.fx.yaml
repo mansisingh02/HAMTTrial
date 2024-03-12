@@ -4011,31 +4011,13 @@ msftUpdatecaregivers As screen:
         Y: =351
         ZIndex: =103
 
-    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =104
-
-        navBarVertical_admin_87 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
-
     Container_Caregiver As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =105
+        ZIndex: =104
 
         navBarVertical_cg_4 As navBarVertical_cg:
             Height: =Parent.Height
@@ -4050,7 +4032,7 @@ msftUpdatecaregivers As screen:
         LayoutMode: =LayoutMode.Auto
         Visible: =If(varPrimaryOwner,true,false)
         Width: =75
-        ZIndex: =106
+        ZIndex: =105
 
         navBarVertical_PrimaryOwner_37 As navBarVertical_PrimaryOwner:
             caregiversNav: =msftcaregivers
@@ -4058,6 +4040,25 @@ msftUpdatecaregivers As screen:
             LayoutMinWidth: =640
             myAccountNav: =msftUpdatecaregivers
             projectNav: =msftproject
+
+    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Visible: =If(adminOrcoreLeader,true,false)
+        Width: =75
+        ZIndex: =106
+
+        navBarVertical_admin_87 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     Group7_44 As group:
         Height: =5
