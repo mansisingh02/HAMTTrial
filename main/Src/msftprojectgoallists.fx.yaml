@@ -31,8 +31,8 @@ msftprojectgoallists As screen:
         Size: =18
         Text: =Text(Gallery28.Selected.Goal)
         Width: =203
-        X: =344
-        Y: =140
+        X: =346
+        Y: =138
         ZIndex: =16
 
     msft_Button_40 As button:
@@ -104,10 +104,10 @@ msftprojectgoallists As screen:
                 }
             )
         TemplatePadding: =1
-        TemplateSize: =150
+        TemplateSize: =44
         Width: =1162
-        X: =101
-        Y: =198
+        X: =110
+        Y: =242
         ZIndex: =32
 
         Label30 As label:
@@ -144,6 +144,21 @@ msftprojectgoallists As screen:
             X: =345
             Y: =35
             ZIndex: =2
+
+        Label4 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem
+            Y: =4
+            ZIndex: =3
 
     Container_PrimaryOwner_25 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -241,8 +256,8 @@ msftprojectgoallists As screen:
         Font: =Font.'Segoe UI'
         FontWeight: =FontWeight.Semibold
         Size: =13
-        Text: ="Project Names"
-        X: =115
+        Text: ="Project Name"
+        X: =105
         Y: =202
         ZIndex: =39
 
