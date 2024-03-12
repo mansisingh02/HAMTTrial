@@ -233,13 +233,23 @@ msftpeoplewithskillsbeginner As screen:
             Height: =51
             OnSelect: =Select(Parent)
             Size: =13
-            Text: |
-                =First(
+            Text: |+
+                =/*First(
                     Filter(
                         Caregivers_1,
                         'Caregiver ID' = ThisItem.'Caregiver ID'
                     )
-                ).'PrimaryProject'.Value
+                ).'PrimaryProject'.Value*/
+                LookUp(
+                    Project, 
+                    ID = First(
+                            Filter(
+                                Caregivers_1,
+                                'Caregiver ID' = ThisItem.'Caregiver ID'
+                            )
+                        ).'Primary Project '.Value
+                ).'Project Name'
+                
             Width: =352
             X: =863
             ZIndex: =3
