@@ -1162,18 +1162,18 @@ msfteditproject As screen:
             projectNav: =msftproject
             Visible: =true
 
-    Container_PrimaryOwner_1 As groupContainer.verticalAutoLayoutContainer:
+    "'Container_Primary Owner_4' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(varPrimaryOwner,true,false)
         Width: =75
         ZIndex: =55
 
         navBarVertical_PrimaryOwner_3 As navBarVertical_PrimaryOwner:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
-            Visible: =If(varPrimaryOwner,true,false)
 
     Group3_2 As group:
         Height: =5

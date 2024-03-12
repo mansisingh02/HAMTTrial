@@ -1080,8 +1080,13 @@ msftproject As screen:
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
+        Visible: =If(varPrimaryOwner,true,false)
         Width: =75
         ZIndex: =24
+
+        navBarVertical_PrimaryOwner_38 As navBarVertical_PrimaryOwner:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
 
     Group7_46 As group:
         Height: =5
