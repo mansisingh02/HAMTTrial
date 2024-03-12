@@ -252,6 +252,16 @@ msftnewprojectgoal As screen:
         Width: =75
         ZIndex: =18
 
+        navBarVertical_admin_52 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
     Container_Horizontal_7 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =60
@@ -313,15 +323,6 @@ msftnewprojectgoal As screen:
             X: =110
             Y: =77
             ZIndex: =21
-
-    navBarVertical_admin_52 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        dasboardNav: =msftDashboard
-        Height: =Parent.Height
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        Visible: =true
-        ZIndex: =24
 
     Group7_9 As group:
         Height: =5

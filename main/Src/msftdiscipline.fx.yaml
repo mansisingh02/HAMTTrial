@@ -272,16 +272,6 @@ msftdiscipline As screen:
         Width: =75
         ZIndex: =15
 
-        navBarVertical_admin_61 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
-
     Container_PrimaryOwner_7 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
@@ -356,6 +346,24 @@ msftdiscipline As screen:
             X: =117
             Y: =74
             ZIndex: =19
+
+    Container_Admin_21 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =22
+
+        navBarVertical_admin_61 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     Group7_17 As group:
         Height: =5
