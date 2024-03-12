@@ -117,8 +117,11 @@ msftsupportprompt As screen:
         ZIndex: =9
 
         navBarVertical_PrimaryOwner_42 As navBarVertical_PrimaryOwner:
+            caregiversNav: =msftcaregivers
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            myAccountNav: =msftUpdatecaregivers
+            projectNav: =msftproject
             Visible: =If(varPrimaryOwner,true,false)
 
     Group7_49 As group:
