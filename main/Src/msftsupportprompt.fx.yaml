@@ -147,7 +147,7 @@ msftsupportprompt As screen:
         Y: =533
         ZIndex: =13
 
-    Container_Admin_60 As groupContainer.verticalAutoLayoutContainer:
+    Container_Admin_51 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =Parent.Height
         LayoutDirection: =LayoutDirection.Vertical
@@ -155,9 +155,13 @@ msftsupportprompt As screen:
         Width: =75
         ZIndex: =14
 
-        navBarVertical_admin_108 As navBarVertical_admin:
+        navBarVertical_admin_93 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
             Visible: =true
 

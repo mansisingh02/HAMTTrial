@@ -237,20 +237,6 @@ msftcapabilitylists As screen:
             LayoutMinWidth: =640
             Width: =Parent.Width
 
-    Container_Admin_55 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =39
-
-        navBarVertical_admin_103 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
-
     Group7_38 As group:
         Height: =5
         Width: =5
@@ -294,6 +280,24 @@ msftcapabilitylists As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =38
+
+    Container_Admin_38 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =39
+
+        navBarVertical_admin_81 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
 
     Label27_11 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
