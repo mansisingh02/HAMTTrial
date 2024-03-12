@@ -24,25 +24,12 @@ msftsupportprompt As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =7
+        ZIndex: =2
 
         navBarVertical_PrimaryOwner_42 As navBarVertical_PrimaryOwner:
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             Visible: =If(varPrimaryOwner,true,false)
-
-    Container_Caregiver_6 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =8
-
-        navBarVertical_cg_10 As navBarVertical_cg:
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varCg,true,false)
 
     Container_Horizontal_49 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -50,7 +37,7 @@ msftsupportprompt As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =9
+        ZIndex: =3
 
         navBarHorizontal_98 As navBarHorizontal:
             Height: =Parent.Height
@@ -74,51 +61,7 @@ msftsupportprompt As screen:
         Width: =425
         X: =439
         Y: =140
-        ZIndex: =12
-
-    Group7_49 As group:
-        Height: =5
-        Width: =5
-        X: =1066
-        Y: =40
-        ZIndex: =12
-
-        Label4_98 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Lato Black'
-            Height: =37
-            Size: =13
-            Text: =User().FullName
-            Width: =282
-            X: =Parent.Width-300
-            Y: =5
-            ZIndex: =10
-
-        Label4_99 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Lighter
-            Height: =37
-            Size: =10
-            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
-            Width: =282
-            X: =Parent.Width-300
-            Y: =23
-            ZIndex: =11
+        ZIndex: =6
 
     Button11 As button:
         BorderColor: =RGBA(0, 51, 142, 1)
@@ -145,7 +88,7 @@ msftsupportprompt As screen:
         Width: =249
         X: =527
         Y: =533
-        ZIndex: =13
+        ZIndex: =7
 
     Container_Admin_51 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -153,7 +96,7 @@ msftsupportprompt As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =14
+        ZIndex: =8
 
         navBarVertical_admin_93 As navBarVertical_admin:
             caregiversNav: =msftcaregivers
@@ -164,4 +107,61 @@ msftsupportprompt As screen:
             masterDataNav: =msftMasterData
             projectNav: =msftproject
             Visible: =true
+
+    Container_Caregiver_6 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =9
+
+        navBarVertical_cg_10 As navBarVertical_cg:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
+
+    Group7_49 As group:
+        Height: =5
+        Width: =5
+        X: =1066
+        Y: =40
+        ZIndex: =12
+
+        Label4_98 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =13
+            Text: =User().FullName
+            Width: =282
+            X: =Parent.Width-300
+            Y: =5
+            ZIndex: =4
+
+        Label4_99 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =37
+            Size: =10
+            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
+            Width: =282
+            X: =Parent.Width-300
+            Y: =23
+            ZIndex: =5
 

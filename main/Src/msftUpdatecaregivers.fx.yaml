@@ -2211,20 +2211,6 @@ msftUpdatecaregivers As screen:
         Y: =636
         ZIndex: =62
 
-    Container_Caregiver As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =64
-
-        navBarVertical_cg_4 As navBarVertical_cg:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =If(varCg,true,false)
-
     "Gallery5_1 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver5.0'":
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
@@ -2253,7 +2239,7 @@ msftUpdatecaregivers As screen:
         Width: =900
         X: =79
         Y: =357
-        ZIndex: =65
+        ZIndex: =63
 
         Title2_9 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -3242,7 +3228,7 @@ msftUpdatecaregivers As screen:
         Width: =900
         X: =69
         Y: =354
-        ZIndex: =68
+        ZIndex: =66
 
         Title2_18 As label:
             Color: =RGBA(50, 49, 48, 1)
@@ -3675,7 +3661,7 @@ msftUpdatecaregivers As screen:
         Width: =142
         X: =108
         Y: =365
-        ZIndex: =69
+        ZIndex: =67
 
     msft_Label_39 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -3696,7 +3682,7 @@ msftUpdatecaregivers As screen:
         Width: =142
         X: =518
         Y: =365
-        ZIndex: =70
+        ZIndex: =68
 
     msft_Label_40 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -3717,7 +3703,7 @@ msftUpdatecaregivers As screen:
         Width: =142
         X: =857
         Y: =365
-        ZIndex: =71
+        ZIndex: =69
 
     Container_Horizontal_43 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -3725,7 +3711,7 @@ msftUpdatecaregivers As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =73
+        ZIndex: =70
 
         navBarHorizontal_92 As navBarHorizontal:
             Height: =Parent.Height
@@ -3754,7 +3740,7 @@ msftUpdatecaregivers As screen:
             Width: =390
             X: =375
             Y: =367
-            ZIndex: =74
+            ZIndex: =71
 
         Rectangle16_1 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3770,7 +3756,7 @@ msftUpdatecaregivers As screen:
             Width: =390
             X: =375
             Y: =511
-            ZIndex: =75
+            ZIndex: =72
 
         SkillsTextInput_6 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -3797,7 +3783,7 @@ msftUpdatecaregivers As screen:
             Visible: =showSkillsPopup
             X: =407
             Y: =417
-            ZIndex: =76
+            ZIndex: =73
 
         Label19 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3813,7 +3799,7 @@ msftUpdatecaregivers As screen:
             Visible: =showSkillsPopup
             X: =401
             Y: =388
-            ZIndex: =77
+            ZIndex: =74
 
         msft_Button_33 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3929,7 +3915,7 @@ msftUpdatecaregivers As screen:
             Width: =117
             X: =606
             Y: =526
-            ZIndex: =78
+            ZIndex: =75
 
         msft_Button_77 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -3965,7 +3951,7 @@ msftUpdatecaregivers As screen:
             Width: =122
             X: =404
             Y: =526
-            ZIndex: =79
+            ZIndex: =76
 
     msft_Label_46 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -3986,7 +3972,7 @@ msftUpdatecaregivers As screen:
         Width: =142
         X: =117
         Y: =359
-        ZIndex: =104
+        ZIndex: =99
 
     msft_Label_47 As label:
         BorderColor: =RGBA(0, 0, 0, 0)
@@ -4007,7 +3993,7 @@ msftUpdatecaregivers As screen:
         Width: =142
         X: =758
         Y: =362
-        ZIndex: =105
+        ZIndex: =100
 
     "'Container_Primary Owner' As groupContainer.verticalAutoLayoutContainer":
         DropShadow: =DropShadow.Light
@@ -4015,7 +4001,55 @@ msftUpdatecaregivers As screen:
         LayoutDirection: =LayoutDirection.Vertical
         LayoutMode: =LayoutMode.Auto
         Width: =75
-        ZIndex: =108
+        ZIndex: =103
+
+    Rectangle8 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(0, 51, 142, 1)
+        FocusedBorderThickness: =4
+        Height: =232
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =varTabSelected=5
+        Width: =0.5
+        X: =700
+        Y: =351
+        ZIndex: =104
+
+    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =105
+
+        navBarVertical_admin_87 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
+            Visible: =true
+
+    Container_Caregiver As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =106
+
+        navBarVertical_cg_4 As navBarVertical_cg:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =If(varCg,true,false)
 
     Group7_44 As group:
         Height: =5
@@ -4040,7 +4074,7 @@ msftUpdatecaregivers As screen:
             Width: =282
             X: =Parent.Width-300
             Y: =5
-            ZIndex: =106
+            ZIndex: =101
 
         Label4_100 As label:
             Align: =Align.Right
@@ -4059,41 +4093,7 @@ msftUpdatecaregivers As screen:
             Width: =282
             X: =Parent.Width-300
             Y: =23
-            ZIndex: =107
-
-    Rectangle8 As rectangle:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        DisabledFill: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(0, 51, 142, 1)
-        FocusedBorderThickness: =4
-        Height: =232
-        HoverFill: =RGBA(0, 120, 212, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        Visible: =varTabSelected=5
-        Width: =0.5
-        X: =700
-        Y: =351
-        ZIndex: =109
-
-    Container_Admin_48 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =110
-
-        navBarVertical_admin_87 As navBarVertical_admin:
-            caregiversNav: =msftcaregivers
-            dasboardNav: =msftDashboard
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            masterDataNav: =msftMasterData
-            projectNav: =msftproject
-            Visible: =true
+            ZIndex: =102
 
     Group5 As group:
         Height: =5
@@ -4116,7 +4116,7 @@ msftUpdatecaregivers As screen:
             Width: =1291
             X: =75
             Y: =54
-            ZIndex: =80
+            ZIndex: =77
 
         Rectangle4_5 As rectangle:
             BorderColor: =RGBA(230, 230, 230, 1)
@@ -4131,7 +4131,7 @@ msftUpdatecaregivers As screen:
             Width: =424
             X: =375
             Y: =177
-            ZIndex: =81
+            ZIndex: =78
 
         Label28_11 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4152,7 +4152,7 @@ msftUpdatecaregivers As screen:
             Width: =325
             X: =418
             Y: =183
-            ZIndex: =82
+            ZIndex: =79
 
         Label28_14 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4172,7 +4172,7 @@ msftUpdatecaregivers As screen:
             Width: =398
             X: =414
             Y: =415
-            ZIndex: =83
+            ZIndex: =80
 
         Label28_15 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4192,7 +4192,7 @@ msftUpdatecaregivers As screen:
             Width: =256
             X: =423
             Y: =511
-            ZIndex: =84
+            ZIndex: =81
 
         Label28_16 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4212,7 +4212,7 @@ msftUpdatecaregivers As screen:
             Width: =72
             X: =837
             Y: =434
-            ZIndex: =85
+            ZIndex: =82
 
         Label28_17 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4232,7 +4232,7 @@ msftUpdatecaregivers As screen:
             Width: =72
             X: =758
             Y: =504
-            ZIndex: =86
+            ZIndex: =83
 
         Icon1_13 As icon.Cancel:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4254,7 +4254,7 @@ msftUpdatecaregivers As screen:
             Width: =32
             X: =730
             Y: =198
-            ZIndex: =87
+            ZIndex: =84
 
         Rectangle16_3 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4270,7 +4270,7 @@ msftUpdatecaregivers As screen:
             Width: =423
             X: =376
             Y: =255
-            ZIndex: =88
+            ZIndex: =85
 
         Rectangle16_2 As rectangle:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4286,7 +4286,7 @@ msftUpdatecaregivers As screen:
             Width: =427
             X: =372
             Y: =632
-            ZIndex: =89
+            ZIndex: =86
 
         msft_Button_83 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4323,7 +4323,7 @@ msftUpdatecaregivers As screen:
             Width: =122
             X: =401
             Y: =647
-            ZIndex: =90
+            ZIndex: =87
 
         SkillsTextInput_7 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4350,7 +4350,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =285
-            ZIndex: =91
+            ZIndex: =88
 
         msft_Button_94 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4501,7 +4501,7 @@ msftUpdatecaregivers As screen:
             Width: =117
             X: =617
             Y: =647
-            ZIndex: =92
+            ZIndex: =89
 
         SkillsTextInput_8 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4528,7 +4528,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =360
-            ZIndex: =93
+            ZIndex: =90
 
         SkillsTextInput_9 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4555,7 +4555,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =419
             Y: =439
-            ZIndex: =94
+            ZIndex: =91
 
         SkillsTextInput_10 As text:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4583,7 +4583,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             X: =418
             Y: =511
-            ZIndex: =95
+            ZIndex: =92
 
         DatePicker2_1 As datepicker:
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -4602,7 +4602,7 @@ msftUpdatecaregivers As screen:
             Width: =320
             X: =418
             Y: =575
-            ZIndex: =96
+            ZIndex: =93
 
         Label40_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4620,7 +4620,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =414
             Y: =547
-            ZIndex: =97
+            ZIndex: =94
 
         Label40_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4638,7 +4638,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =255
-            ZIndex: =98
+            ZIndex: =95
 
         Label40_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4656,7 +4656,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =331
-            ZIndex: =99
+            ZIndex: =96
 
         Label40_6 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4674,7 +4674,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =414
             Y: =410
-            ZIndex: =100
+            ZIndex: =97
 
         Label40_7 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -4692,7 +4692,7 @@ msftUpdatecaregivers As screen:
             Width: =311
             X: =417
             Y: =482
-            ZIndex: =101
+            ZIndex: =98
 
     Group2 As group:
         Height: =5
@@ -5801,7 +5801,7 @@ msftUpdatecaregivers As screen:
             Width: =14
             X: =97
             Y: =74
-            ZIndex: =66
+            ZIndex: =64
 
         msft_Label_22 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -5823,5 +5823,5 @@ msftUpdatecaregivers As screen:
             Width: =92
             X: =117
             Y: =74
-            ZIndex: =67
+            ZIndex: =65
 
