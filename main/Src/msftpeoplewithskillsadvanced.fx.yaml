@@ -217,7 +217,7 @@ msftpeoplewithskillsadvanced As screen:
                     )
                 ).'Caregiver Email'
             Width: =383
-            X: =480
+            X: =342
             Y: =10
             ZIndex: =2
 
@@ -238,6 +238,24 @@ msftpeoplewithskillsadvanced As screen:
             X: =810
             Y: =10
             ZIndex: =3
+
+        Label57_10 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =41
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =First(Filter(Project,ID=First(Filter(Caregivers_1,'Caregiver ID'=ThisItem.'Caregiver ID')).'Primary Project '.Value)).'Project Name'
+            Width: =383
+            X: =736
+            Y: =10
+            ZIndex: =4
 
     Group3_36 As group:
         Height: =5
