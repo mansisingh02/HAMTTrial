@@ -221,6 +221,29 @@ msftpeoplewithskillsbeginner As screen:
             Y: =10
             ZIndex: =2
 
+        Label57_6 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =51
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: |
+                =First(
+                    Filter(
+                        Caregivers_1,
+                        'Caregiver ID' = ThisItem.'Caregiver ID'
+                    )
+                ).'PrimaryProject'.Value
+            Width: =352
+            X: =863
+            ZIndex: =3
+
     Group3_34 As group:
         Height: =5
         Width: =5
