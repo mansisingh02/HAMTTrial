@@ -725,15 +725,6 @@ msftcaregivers As screen:
             LayoutMinWidth: =640
             Visible: =If(varCg,true,false)
 
-    navBarVertical_admin_2 As navBarVertical_admin:
-        caregiversNav: =msftcaregivers
-        dasboardNav: =msftDashboard
-        Height: =Parent.Height
-        masterDataNav: =msftMasterData
-        projectNav: =msftproject
-        Visible: =If(adminOrcoreLeader,true,false)
-        ZIndex: =70
-
     Container_Horizontal_44 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =60
@@ -1840,4 +1831,18 @@ msftcaregivers As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =121
+
+    Container_Admin_45 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =123
+
+        navBarVertical_admin_93 As navBarVertical_admin:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =true
 

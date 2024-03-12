@@ -317,20 +317,6 @@ msftnewcategory As screen:
         Y: =198
         ZIndex: =19
 
-    Container_Admin_1 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =21
-
-        navBarVertical_admin_51 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
-
     Container_Horizontal_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Height: =60
@@ -392,6 +378,14 @@ msftnewcategory As screen:
             X: =117
             Y: =77
             ZIndex: =24
+
+    Container_Admin_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =27
 
     Group7_2 As group:
         Height: =5

@@ -381,10 +381,14 @@ msftnewgroup As screen:
         Width: =75
         ZIndex: =25
 
-        navBarVertical_admin_55 As navBarVertical_admin:
+        navBarVertical_admin_50 As navBarVertical_admin:
+            caregiversNav: =msftcaregivers
+            dasboardNav: =msftDashboard
             Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            masterDataNav: =msftMasterData
+            projectNav: =msftproject
             Visible: =true
 
     Container_Horizontal_5 As groupContainer.verticalAutoLayoutContainer:
@@ -448,50 +452,6 @@ msftnewgroup As screen:
             X: =117
             Y: =73
             ZIndex: =28
-
-    Group7_7 As group:
-        Height: =5
-        Width: =5
-        X: =1066
-        Y: =40
-        ZIndex: =31
-
-        Label4_20 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Lato Black'
-            Height: =37
-            Size: =13
-            Text: =User().FullName
-            Width: =282
-            X: =Parent.Width-300
-            Y: =5
-            ZIndex: =29
-
-        Label4_21 As label:
-            Align: =Align.Right
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(255, 255, 255, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.Lato
-            FontWeight: =FontWeight.Lighter
-            Height: =37
-            Size: =10
-            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
-            Width: =282
-            X: =Parent.Width-300
-            Y: =23
-            ZIndex: =30
 
     Group2_4 As group:
         Height: =5
@@ -562,4 +522,48 @@ msftnewgroup As screen:
             X: =487
             Y: =140
             ZIndex: =24
+
+    Group7_7 As group:
+        Height: =5
+        Width: =5
+        X: =1066
+        Y: =40
+        ZIndex: =31
+
+        Label4_20 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Lato Black'
+            Height: =37
+            Size: =13
+            Text: =User().FullName
+            Width: =282
+            X: =Parent.Width-300
+            Y: =5
+            ZIndex: =29
+
+        Label4_21 As label:
+            Align: =Align.Right
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.Lato
+            FontWeight: =FontWeight.Lighter
+            Height: =37
+            Size: =10
+            Text: =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org"),"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
+            Width: =282
+            X: =Parent.Width-300
+            Y: =23
+            ZIndex: =30
 

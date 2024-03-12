@@ -35,30 +35,6 @@ msftprojectgoallists As screen:
         Y: =140
         ZIndex: =16
 
-    Label16_5 As label:
-        BorderColor: =RGBA(0, 0, 0, 0)
-        BorderStyle: =BorderStyle.None
-        BorderThickness: =2
-        Color: =RGBA(51, 51, 51, 1)
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FocusedBorderThickness: =4
-        Font: =Font.'Segoe UI'
-        Height: =123
-        Size: =11
-        Text: |+
-            =Text(
-                LookUp(
-                    'Project Goals',
-                    Goal = Gallery28.Selected.Goal
-                ).Description
-            )
-            
-        Width: =382
-        X: =509
-        Y: =198
-        ZIndex: =23
-
     msft_Button_40 As button:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -127,7 +103,8 @@ msftprojectgoallists As screen:
                     SelectedProjectGoal: Gallery28.Selected.Goal
                 }
             )
-        TemplateSize: =280
+        TemplatePadding: =1
+        TemplateSize: =150
         Width: =1162
         X: =101
         Y: =198
@@ -142,14 +119,16 @@ msftprojectgoallists As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =70
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Project Name'
-            Width: =353
+            Width: =299
             Y: =40
             ZIndex: =1
 
-        Label27_2 As label:
+        Label30_1 As label:
+            AutoHeight: =true
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -158,24 +137,13 @@ msftprojectgoallists As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            FontWeight: =FontWeight.Semibold
+            OnSelect: =Select(Parent)
             Size: =13
-            Text: ="Project Names"
+            Text: =ThisItem.Description
+            Width: =353
+            X: =345
+            Y: =35
             ZIndex: =2
-
-    Container_Admin_33 As groupContainer.verticalAutoLayoutContainer:
-        DropShadow: =DropShadow.Light
-        Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
-        LayoutMode: =LayoutMode.Auto
-        Width: =75
-        ZIndex: =33
-
-        navBarVertical_admin_83 As navBarVertical_admin:
-            Height: =Parent.Height
-            LayoutMinHeight: =640
-            LayoutMinWidth: =640
-            Visible: =true
 
     Container_PrimaryOwner_25 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -247,4 +215,34 @@ msftprojectgoallists As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =37
+
+    Container_Admin_53 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =75
+        ZIndex: =38
+
+        navBarVertical_admin_101 As navBarVertical_admin:
+            Height: =Parent.Height
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            Visible: =true
+
+    Label27_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Size: =13
+        Text: ="Project Names"
+        X: =115
+        Y: =202
+        ZIndex: =39
 
