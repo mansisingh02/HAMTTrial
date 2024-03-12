@@ -896,6 +896,7 @@ msftcaregivers As screen:
 
         navBarVertical_PrimaryOwner_43 As navBarVertical_PrimaryOwner:
             caregiversNav: =msftcaregivers
+            Height: =Parent.Height
             LayoutMinHeight: =640
             LayoutMinWidth: =640
             myAccountNav: =msftUpdatecaregivers
@@ -1861,7 +1862,9 @@ msftcaregivers As screen:
             Height: =37
             Size: =10
             Text: |-
-                =If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" 
+                =If((
+                   // Lower(User().Email)="sunjoy.prabakaran@providence.org" ||
+                     Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" 
                 //||Lower(User().Email)="mansi.singh@providence.org"
                 )
                 ,"Admin",adminOrcoreLeader,"Core Leader", varPrimaryOwner,"Primary Owner", varCg,"Caregiver")
