@@ -1,0 +1,574 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://msmanaged-na.azure-apim.net/apim/office365groupsmail" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Office365GroupsMail" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Office 365 Groups Mail">The Office 365 Groups Mail connector allows users to work with data located in a Office 365 Group mailbox. The functionality in this connector works independently from a single user's personal mailbox and allows users to work with any Group they can access within their organization. The connector works off the Microsoft Graph API, and uses terminology specified in a Office 365 Groups documentation within the Graph API. Learn more in the connector documentation.</doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://msmanaged-na.azure-apim.net/apim/office365groupsmail" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="Conversation_id_def" />
+      <string name="Conversation_topic_def" />
+      <boolean name="Conversation_hasAttachments_def" />
+      <dateTimeString name="Conversation_lastDeliveredDateTime_def" />
+      <string name="Conversation_uniqueSenders_def_items_def" />
+      <array type="string" name="Conversation_uniqueSenders_def" />
+      <string name="Conversation_preview_def" />
+      <array typeRef="ConversationThread" name="Conversation_threads_def" />
+      <object name="Conversation">
+        <property name="id" type="string" />
+        <property name="topic" type="string" />
+        <property name="hasAttachments" type="boolean" />
+        <property name="lastDeliveredDateTime" typeRef="Conversation_lastDeliveredDateTime_def" />
+        <property name="uniqueSenders" typeRef="Conversation_uniqueSenders_def" />
+        <property name="preview" type="string" />
+        <property name="threads" typeRef="Conversation_threads_def" />
+      </object>
+      <string name="ConversationThread_id_def" />
+      <string name="ConversationThread_topic_def" />
+      <boolean name="ConversationThread_hasAttachments_def" />
+      <dateTimeString name="ConversationThread_lastDeliveredDateTime_def" />
+      <string name="ConversationThread_uniqueSenders_def_items_def" />
+      <array type="string" name="ConversationThread_uniqueSenders_def" />
+      <string name="ConversationThread_preview_def" />
+      <boolean name="ConversationThread_isLocked_def" />
+      <array typeRef="EmailAddress" name="ConversationThread_toRecipients_def" />
+      <array typeRef="EmailAddress" name="ConversationThread_ccRecipients_def" />
+      <array typeRef="Post" name="ConversationThread_posts_def" />
+      <object name="ConversationThread">
+        <property name="id" type="string" />
+        <property name="topic" type="string" />
+        <property name="hasAttachments" type="boolean" />
+        <property name="lastDeliveredDateTime" typeRef="ConversationThread_lastDeliveredDateTime_def" />
+        <property name="uniqueSenders" typeRef="ConversationThread_uniqueSenders_def" />
+        <property name="preview" type="string" />
+        <property name="isLocked" type="boolean" />
+        <property name="toRecipients" typeRef="ConversationThread_toRecipients_def" />
+        <property name="ccRecipients" typeRef="ConversationThread_ccRecipients_def" />
+        <property name="posts" typeRef="ConversationThread_posts_def" />
+      </object>
+      <string name="Post_id_def" />
+      <dateTimeString name="Post_createdDateTime_def" />
+      <dateTimeString name="Post_lastModifiedDateTime_def" />
+      <string name="Post_changeKey_def" />
+      <string name="Post_conversationId_def" />
+      <string name="Post_conversationThreadId_def" />
+      <string name="Post_categories_def_items_def" />
+      <array type="string" name="Post_categories_def" />
+      <dateTimeString name="Post_receivedDateTime_def" />
+      <boolean name="Post_hasAttachments_def" />
+      <array typeRef="EmailAddress" name="Post_newParticipants_def" />
+      <array typeRef="Attachment" name="Post_attachments_def" />
+      <object name="Post">
+        <property name="id" type="string" />
+        <property name="createdDateTime" typeRef="Post_createdDateTime_def" />
+        <property name="lastModifiedDateTime" typeRef="Post_lastModifiedDateTime_def" />
+        <property name="changeKey" type="string" />
+        <property name="conversationId" type="string" />
+        <property name="conversationThreadId" type="string" />
+        <property name="categories" typeRef="Post_categories_def" />
+        <property name="receivedDateTime" typeRef="Post_receivedDateTime_def" />
+        <property name="hasAttachments" type="boolean" />
+        <property name="newParticipants" typeRef="Post_newParticipants_def" />
+        <property name="body" typeRef="ItemBody" />
+        <property name="from" typeRef="EmailAddress" />
+        <property name="sender" typeRef="EmailAddress" />
+        <property name="attachments" typeRef="Post_attachments_def" />
+      </object>
+      <string name="Attachment_id_def" />
+      <string name="Attachment_name_def" />
+      <string name="Attachment_contentType_def" />
+      <integer name="Attachment_size_def" />
+      <base64Binary name="Attachment_contentBytes_def" />
+      <object name="Attachment">
+        <property name="id" type="string" />
+        <property name="name" type="string" />
+        <property name="contentType" type="string" />
+        <property name="size" type="integer" />
+        <property name="contentBytes" typeRef="Attachment_contentBytes_def" />
+      </object>
+      <string name="EmailAddress_emailAddress_def_name_def" />
+      <string name="EmailAddress_emailAddress_def_address_def" />
+      <object name="EmailAddress_emailAddress_def">
+        <property name="name" type="string" />
+        <property name="address" type="string" />
+      </object>
+      <object name="EmailAddress">
+        <property name="emailAddress" typeRef="EmailAddress_emailAddress_def" />
+      </object>
+      <string name="ItemBody_contentType_def" />
+      <string name="ItemBody_content_def" />
+      <object name="ItemBody">
+        <property name="contentType" type="string" />
+        <property name="content" type="string" />
+      </object>
+      <object name="ReplyConversationThreadBody">
+        <property name="post" typeRef="NewPostBody" />
+      </object>
+      <string name="ForwardPostBody_comment_def" />
+      <array typeRef="GetUsers__GraphAction" name="ForwardPostBody_toRecipients_def" />
+      <object name="ForwardPostBody">
+        <property name="comment" type="string" />
+        <property name="toRecipients" typeRef="ForwardPostBody_toRecipients_def" />
+      </object>
+      <string name="ForwardPost_V2Body_Comment_def" />
+      <array typeRef="GetUsers__GraphAction" name="ForwardPost_V2Body_ToRecipients_def" />
+      <object name="ForwardPost_V2Body">
+        <property name="Comment" type="string" />
+        <property name="ToRecipients" typeRef="ForwardPost_V2Body_ToRecipients_def" />
+      </object>
+      <string name="CreateConversationBody_topic_def" />
+      <object name="CreateConversationBody">
+        <property name="topic" type="string" />
+        <property name="post" typeRef="NewPostBody" />
+      </object>
+      <string name="NewPostBody_body_def_content_def" />
+      <string name="NewPostBody_body_def_contentType_def" />
+      <object name="NewPostBody_body_def">
+        <property name="content" type="string" />
+        <property name="contentType" type="string" />
+      </object>
+      <string name="NewPostBody_categories_def_items_def" />
+      <array type="string" name="NewPostBody_categories_def" />
+      <array typeRef="GetUsers__GraphAction" name="NewPostBody_newParticipants_def" />
+      <array typeRef="ClientSendAttachment" name="NewPostBody_attachments_def" />
+      <object name="NewPostBody">
+        <property name="body" typeRef="NewPostBody_body_def" />
+        <property name="categories" typeRef="NewPostBody_categories_def" />
+        <property name="newParticipants" typeRef="NewPostBody_newParticipants_def" />
+        <property name="attachments" typeRef="NewPostBody_attachments_def" />
+      </object>
+      <string name="GetUsers__GraphAction_EmailAddress_def_Address_def" />
+      <object name="GetUsers__GraphAction_EmailAddress_def">
+        <property name="Address" type="string" />
+      </object>
+      <object name="GetUsers__GraphAction">
+        <property name="EmailAddress" typeRef="GetUsers__GraphAction_EmailAddress_def" />
+      </object>
+      <string name="CreateConversationResponse__ux40_odata_context_def" />
+      <string name="CreateConversationResponse_id_def" />
+      <string name="CreateConversationResponse_threads_ux40_odata_context_def" />
+      <string name="CreateConversationResponse_threads_def_items_def_id_def" />
+      <object name="CreateConversationResponse_threads_def_items_def">
+        <property name="id" type="string" />
+      </object>
+      <array typeRef="CreateConversationResponse_threads_def_items_def" name="CreateConversationResponse_threads_def" />
+      <object name="CreateConversationResponse">
+        <property name="@odata.context" type="string" />
+        <property name="id" type="string" />
+        <property name="threads@odata.context" type="string" />
+        <property name="threads" typeRef="CreateConversationResponse_threads_def" />
+      </object>
+      <string name="NewConversationThreadResponse__ux40_odata_context_def" />
+      <string name="NewConversationThreadResponse_id_def" />
+      <object name="NewConversationThreadResponse">
+        <property name="@odata.context" type="string" />
+        <property name="id" type="string" />
+      </object>
+      <string name="ClientSendAttachment__ux40_odata_type_def" />
+      <string name="ClientSendAttachment_Name_def" />
+      <base64Binary name="ClientSendAttachment_ContentBytes_def" />
+      <object name="ClientSendAttachment">
+        <property name="@odata.type" type="string" />
+        <property name="Name" type="string" />
+        <property name="ContentBytes" typeRef="ClientSendAttachment_ContentBytes_def" />
+      </object>
+      <string name="ConversationTriggerResponse_id_def" />
+      <dateTimeString name="ConversationTriggerResponse_lastDeliveredDateTime_def" />
+      <array typeRef="ConversationThreadTriggerResponse" name="ConversationTriggerResponse_threads_def" />
+      <object name="ConversationTriggerResponse">
+        <property name="id" type="string" />
+        <property name="lastDeliveredDateTime" typeRef="ConversationTriggerResponse_lastDeliveredDateTime_def" />
+        <property name="threads" typeRef="ConversationTriggerResponse_threads_def" />
+      </object>
+      <string name="ConversationThreadTriggerResponse_id_def" />
+      <array typeRef="PostTriggerResponse" name="ConversationThreadTriggerResponse_posts_def" />
+      <object name="ConversationThreadTriggerResponse">
+        <property name="id" type="string" />
+        <property name="posts" typeRef="ConversationThreadTriggerResponse_posts_def" />
+      </object>
+      <string name="PostTriggerResponse_id_def" />
+      <dateTimeString name="PostTriggerResponse_lastModifiedDateTime_def" />
+      <string name="PostTriggerResponse_changeKey_def" />
+      <object name="PostTriggerResponse">
+        <property name="id" type="string" />
+        <property name="lastModifiedDateTime" typeRef="PostTriggerResponse_lastModifiedDateTime_def" />
+        <property name="changeKey" type="string" />
+      </object>
+      <untypedObject name="ObjectWithoutType" />
+      <string name="ListConversations_responses_200_def__ux40_odata_nextLink_def" />
+      <array typeRef="Conversation" name="ListConversations_responses_200_def_value_def" />
+      <object name="ListConversations_responses_200_def">
+        <property name="@odata.nextLink" type="string" />
+        <property name="value" typeRef="ListConversations_responses_200_def_value_def" />
+      </object>
+      <string name="ListConversationThreads_responses_200_def__ux40_odata_nextLink_def" />
+      <string name="ListConversationThreads_responses_200_def__ux40_odata_context_def" />
+      <array typeRef="ConversationThread" name="ListConversationThreads_responses_200_def_value_def" />
+      <object name="ListConversationThreads_responses_200_def">
+        <property name="@odata.nextLink" type="string" />
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="ListConversationThreads_responses_200_def_value_def" />
+      </object>
+      <string name="ListGroupThreads_responses_200_def__ux40_odata_nextLink_def" />
+      <array typeRef="ConversationThread" name="ListGroupThreads_responses_200_def_value_def" />
+      <object name="ListGroupThreads_responses_200_def">
+        <property name="@odata.nextLink" type="string" />
+        <property name="value" typeRef="ListGroupThreads_responses_200_def_value_def" />
+      </object>
+      <string name="ListThreadPosts_responses_200_def__ux40_odata_nextLink_def" />
+      <string name="ListThreadPosts_responses_200_def__ux40_odata_context_def" />
+      <array typeRef="Post" name="ListThreadPosts_responses_200_def_value_def" />
+      <object name="ListThreadPosts_responses_200_def">
+        <property name="@odata.nextLink" type="string" />
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="ListThreadPosts_responses_200_def_value_def" />
+      </object>
+      <string name="GetAttachments_responses_200_def__ux40_odata_nextLink_def" />
+      <string name="GetAttachments_responses_200_def__ux40_odata_context_def" />
+      <array typeRef="Attachment" name="GetAttachments_responses_200_def_value_def" />
+      <object name="GetAttachments_responses_200_def">
+        <property name="@odata.nextLink" type="string" />
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="GetAttachments_responses_200_def_value_def" />
+      </object>
+      <string name="HttpRequest_param_Body_def" />
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://msmanaged-na.azure-apim.net/apim/office365groupsmail">
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/conversations">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListConversations" actionName="ListConversations" siena:isDeprecated="false">
+        <doc title="List the conversations of a group&#xA;Get all the conversations in this group." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListConversations_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/conversations">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateConversation" actionName="CreateConversation" siena:isDeprecated="false">
+        <doc title="Create a new conversation in a group&#xA;Create a new conversation in this group." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="topic" path="/topic" type="xs:string" required="true" />
+            <param style="plain" name="post" path="/post" type="service:NewPostBody" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:CreateConversationResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/conversations/{conversationId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="conversationId" type="xs:string" required="true">
+        <doc title="Enter the conversation ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetGroupConversation" actionName="GetGroupConversation" siena:isDeprecated="false">
+        <doc title="Get a group conversation&#xA;Retrieves the properties of a particular conversation." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:Conversation" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/conversations/{conversationId}/threads">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="conversationId" type="xs:string" required="true">
+        <doc title="Enter the conversation ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListConversationThreads" actionName="ListConversationThreads" siena:isDeprecated="false">
+        <doc title="List the conversation threads of a conversation&#xA;Get all the threads in a group conversation." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListConversationThreads_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/conversations/{conversationId}/threads">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="conversationId" type="xs:string" required="true">
+        <doc title="Enter the conversation ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateConversationThread" actionName="CreateConversationThread" siena:isDeprecated="false">
+        <doc title="Create a conversation thread&#xA;Create a new thread in the specified conversation." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="topic" path="/topic" type="xs:string" required="true" />
+            <param style="plain" name="post" path="/post" type="service:NewPostBody" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:NewConversationThreadResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListGroupThreads" actionName="ListGroupThreads" siena:isDeprecated="false">
+        <doc title="List the threads of a group&#xA;Get all the threads of a group." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListGroupThreads_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="CreateGroupThread" actionName="CreateGroupThread" siena:isDeprecated="false">
+        <doc title="Start a new group conversation by creating a thread&#xA;Start a new group conversation by first creating a thread." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="topic" path="/topic" type="xs:string" required="true" />
+            <param style="plain" name="post" path="/post" type="service:NewPostBody" />
+          </representation>
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:NewConversationThreadResponse" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetConversationThread" actionName="GetConversationThread" siena:isDeprecated="false">
+        <doc title="Get a conversation thread&#xA;Get a specific thread that belongs to a group." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ConversationThread" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="DELETE" id="DeleteConversationThread" actionName="DeleteConversationThread" siena:isDeprecated="false">
+        <doc title="Delete a conversation thread&#xA;Deletes the specified conversation thread." />
+        <request />
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/posts">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="ListThreadPosts" actionName="ListThreadPosts" siena:isDeprecated="false">
+        <doc title="List the posts of a conversation thread&#xA;Get all the posts of the specified conversation thread." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListThreadPosts_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/posts/{postId}">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <param style="template" name="postId" type="xs:string" required="true">
+        <doc title="Enter the post ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetThreadPost" actionName="GetThreadPost" siena:isDeprecated="false">
+        <doc title="Get a thread post&#xA;Retrieves a post in a specified thread." />
+        <request>
+          <param style="query" name="$expand" type="xs:string" required="true" fixed="attachments" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:Post" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/posts/{postId}/attachments">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <param style="template" name="postId" type="xs:string" required="true">
+        <doc title="Enter the post ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="GET" id="GetAttachments" actionName="GetAttachments" siena:isDeprecated="false">
+        <doc title="List the attachments of a post&#xA;Retrieve a list of attachments that belong to a post." />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:GetAttachments_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/reply">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ReplyToAThread" actionName="ReplyToAThread" siena:isDeprecated="false">
+        <doc title="Reply to a conversation thread&#xA;Reply to a thread in a group conversation and add a new post to it." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="post" path="/post" type="service:NewPostBody" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/posts/{postId}/reply">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <param style="template" name="postId" type="xs:string" required="true">
+        <doc title="Enter the post ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ReplyPost" actionName="ReplyPost" siena:isDeprecated="false">
+        <doc title="Reply to a post&#xA;Reply to a post and add a new post to the specified thread in a group conversation." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="post" path="/post" type="service:NewPostBody" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/beta/groups/{groupMail}/conversations/{conversationId}/threads/{threadId}/posts/{postId}/forward">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupMail" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter the group mail address." />
+      </param>
+      <param style="template" name="conversationId" type="xs:string" required="true">
+        <doc title="Enter the conversation ID." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <param style="template" name="postId" type="xs:string" required="true">
+        <doc title="Enter the post ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ForwardPostV2" actionName="ForwardPost_V2" siena:isDeprecated="false" siena:family="ForwardPost" siena:revision="2" siena:status="Preview">
+        <doc title="Forward a post&#xA;Forward a post to a recipient." />
+        <request>
+          <param style="header" name="Prefer" type="xs:string" required="true" fixed="exchange.behavior=&quot;ForwardPostWithMessage&quot;" />
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="Comment" path="/Comment" type="xs:string" />
+            <param style="plain" name="ToRecipients" path="/ToRecipients" type="service:ForwardPost_V2Body_ToRecipients_def" required="true" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/groups/{groupId}/threads/{threadId}/posts/{postId}/forward">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="groupId" type="xs:string" required="true">
+        <doc title="Pick a group from the drop down or enter group id." />
+      </param>
+      <param style="template" name="threadId" type="xs:string" required="true">
+        <doc title="Enter the conversation thread ID." />
+      </param>
+      <param style="template" name="postId" type="xs:string" required="true">
+        <doc title="Enter the post ID." />
+      </param>
+      <method siena:requiresAuthentication="true" name="POST" id="ForwardPost" actionName="ForwardPost" siena:isDeprecated="true" siena:family="ForwardPost" siena:revision="1" siena:status="Preview">
+        <doc title="Forward a post&#xA;Forward a post to a recipient." />
+        <request>
+          <param style="header" name="content-type" type="xs:string" required="true" fixed="application/json" />
+          <representation mediaType="application/json">
+            <param style="plain" name="comment" path="/comment" type="xs:string" />
+            <param style="plain" name="toRecipients" path="/toRecipients" type="service:ForwardPostBody_toRecipients_def" required="true" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/httprequest">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="HttpRequest" actionName="HttpRequest" visibility="important" siena:isDeprecated="false" siena:status="Production">
+        <doc title="Send an HTTP request&#xA;Construct a Microsoft Graph REST API request to invoke. Learn more: https://docs.microsoft.com/en-us/graph/use-the-api" />
+        <request>
+          <param style="header" name="Uri" type="xs:string" required="true">
+            <doc title="The full or relative URI. Example: https://graph.microsoft.com/{version}/{resource}." />
+          </param>
+          <param style="header" name="Method" type="xs:string" required="true" default="GET">
+            <doc title="The HTTP method (default is GET)." />
+            <option value="GET" />
+            <option value="POST" />
+            <option value="PUT" />
+            <option value="PATCH" />
+            <option value="DELETE" />
+          </param>
+          <param style="header" name="ContentType" type="xs:string" default="application/json">
+            <doc title="The content-type header for the body (default is application/json)." />
+          </param>
+          <param style="header" name="CustomHeader1" type="xs:string">
+            <doc title="Custom header 1. Specify in format: header-name: header-value" />
+          </param>
+          <param style="header" name="CustomHeader2" type="xs:string">
+            <doc title="Custom header 2. Specify in format: header-name: header-value" />
+          </param>
+          <param style="header" name="CustomHeader3" type="xs:string">
+            <doc title="Custom header 3. Specify in format: header-name: header-value" />
+          </param>
+          <param style="header" name="CustomHeader4" type="xs:string">
+            <doc title="Custom header 4. Specify in format: header-name: header-value" />
+          </param>
+          <param style="header" name="CustomHeader5" type="xs:string">
+            <doc title="Custom header 5. Specify in format: header-name: header-value" />
+          </param>
+          <representation mediaType="application/octet-stream" />
+        </request>
+        <response>
+          <representation mediaType="application/json" element="service:ObjectWithoutType" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_office365groupsmail" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

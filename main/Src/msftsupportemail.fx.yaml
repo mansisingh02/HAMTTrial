@@ -1,15 +1,21 @@
 "msftsupportemail As screen.'tabletLayout_Email_ver3.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnVisible: |+
-        =//ClearCollect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"mansi.singh@providence.org"}))) 
-        ClearCollect(
+        =//ClearCollect(MyPeople, First(Office365Users.SearchUser({top:1,searchTerm:"JuniperTeam@providence.org"}))) 
+        /*ClearCollect(
             MyPeople,
-            Office365Users.SearchUser({top: 1, searchTerm: "mansi.singh@providence.org"}),
+             Office365Users.SearchUser({top: 1, searchTerm: "JuniperTeam@providence.org"})
+        )*/
+        
+            /*Office365Users.SearchUser({top: 1, searchTerm: "mansi.singh@providence.org"}),
             Office365Users.SearchUser({top: 1, searchTerm: "rama.ghodke@providence.org"}),
             Office365Users.SearchUser({top: 1, searchTerm: "sunjoy.prabakaran@providence.org"}),
-            Office365Users.SearchUser({top: 1, searchTerm: "madhavi.b@providence.org"})
-        )
+            Office365Users.SearchUser({top: 1, searchTerm: "madhavi.b@providence.org"})*/
         
+        ClearCollect(
+            MyGroups,
+            Office365GroupsMail.
+        )
         
         
         
