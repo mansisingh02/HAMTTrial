@@ -14,8 +14,14 @@
         
         ClearCollect(
             MyGroups,
-            Office365GroupsMail.
+            Filter(
+                Office365Groups.ListGroups().value,
+                StartsWith(mail, "JuniperTeam@providence.org")
+            )
         )
+        
+        
+        
         
         
         
@@ -135,8 +141,8 @@
         PressedFill: =RGBA(0, 0, 0, 0)
         Tooltip: ="Search"
         Width: =TextSearchBox2.Height
-        X: =TextSearchBox2.X + 5
-        Y: =154
+        X: =32
+        Y: =146
         ZIndex: =6
 
     AddIcon2 As icon.Add:
@@ -184,7 +190,7 @@
             Min((Self.TemplateHeight + Self.TemplatePadding * 2) * RoundUp(CountRows(Self.AllItems) / 4, 0), 182)
         Items: |-
             =/*Collection of user selected people*/
-            MyPeople
+             MyGroups
         Layout: =Layout.Vertical
         ShowScrollbar: =Self.Height >= 182
         TemplateSize: =42
@@ -218,7 +224,7 @@
             PaddingLeft: =10
             Size: =13
             TabIndex: =If(PeopleBrowseGallery2.Visible, -1, 0)
-            Text: =ThisItem.DisplayName
+            Text: =ThisItem.classification
             Width: =EmailPeopleGallery2.TemplateWidth - iconRemove2.Width + 10
             Wrap: =false
             ZIndex: =2
@@ -235,7 +241,7 @@
             HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
             HoverFill: =RGBA(0, 0, 0, 0)
             Icon: =Icon.Cancel
-            OnSelect: =Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))
+            OnSelect: =//Remove(MyPeople, LookUp(MyPeople, UserPrincipalName = ThisItem.UserPrincipalName))
             PaddingBottom: =9
             PaddingLeft: =9
             PaddingRight: =9
@@ -371,6 +377,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =2
             Font: =Font.'Segoe UI'
+            Height: =43
             OnSelect: |-
                 =/*Select user, clear search contents and if this user hasn't been added to MyPeople collection, add them*/
                 Concurrent(
@@ -380,9 +387,8 @@
             Size: =17
             TabIndex: =0
             Text: =ThisItem.DisplayName
-            Width: =PeopleBrowseGallery2.TemplateWidth - 2 * Self.X
+            Width: =1302
             Wrap: =false
-            X: =16
             Y: =4
             ZIndex: =2
 
