@@ -4,7 +4,7 @@ msftcaregivers As screen:
     OnVisible: |
         =Set(varPageNumber,1);
         Set(loaderVisible, true);
-        Collect(
+        /*Collect(
             combinedData,
             AddColumns(
             Caregivers_1,
@@ -14,7 +14,7 @@ msftcaregivers As screen:
             Caregivers_1,
                 "Advanced",
                 LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
-        )
+        )*/
 
     search As text:
         BorderColor: =RGBA(166, 166, 166, 1)
