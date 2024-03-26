@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |+
+    OnStart: |-
         =If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" 
         //&& (Lower(User().Email)<>"mansi.singh@providence.org")
         )) || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="2P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="3P" || First(Filter(Caregivers_1,'Caregiver Email'=Lower(User().Email))).Level.Value="1I",Set(varCg,true),
@@ -10,6 +10,8 @@ App As appinfo:
         Set(adminOrcoreLeader,true));
         
         
+        
+        Set(currentUser,Lower(User().Email))
     StartScreen: |-
         =If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" 
         //&&(Lower(User().Email)<>"mansi.singh@providence.org")

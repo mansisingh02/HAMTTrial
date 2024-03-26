@@ -16833,10 +16833,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 657,
+                  "charLength": 658,
                   "charOffset": 21,
                   "snippet": {
-                    "text": "If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" \n//&& (Lower(User().Email)<>\"mansi.singh@providence.org\")\n)) ||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver))"
+                    "text": "If(First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1P\" && (Lower(User().Email)<>\"rama.ghodke@providence.org\" \n//&& (Lower(User().Email)<>\"mansi.singh@providence.org\")\n) \n\n\n||  (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"2P\")  || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"3P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"4P\") || (First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value=\"1l\")  ,\nStartsWith('Caregiver Email',Lower(User().Email)),  ('Caregiver Email'=gblSelectedCaregiver))"
                   }
                 }
               },
@@ -40678,6 +40678,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 14
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.currentUser"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.currentUser",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "currentUser",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 18
         },
         {
           "locations": [
