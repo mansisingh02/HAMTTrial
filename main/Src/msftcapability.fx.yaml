@@ -27,8 +27,7 @@ msftcapability As screen:
             Size: =10.5
             Text: ="Capability"
             Width: =79
-            X: =16
-            Y: =16
+            X: =12
             ZIndex: =4
 
     "'Category Header_8' As groupContainer.manualLayoutContainer":
@@ -36,7 +35,7 @@ msftcapability As screen:
         LayoutMode: ="manual"
         Width: =336
         X: =311
-        Y: =219
+        Y: =211
         ZIndex: =2
 
         "'Category Label_7' As label":
@@ -56,36 +55,8 @@ msftcapability As screen:
             Size: =10.5
             Text: ="Description"
             Width: =101
-            X: =15
-            Y: =15
+            X: =16
             ZIndex: =6
-
-        "'Category Header_9' As groupContainer.manualLayoutContainer":
-            Height: =48
-            LayoutMode: ="manual"
-            Width: =336
-            ZIndex: =7
-
-            "'Category Label_8' As label":
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                Color: =RGBA(51, 51, 51, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FocusedBorderThickness: =4
-                FontWeight: =FontWeight.Bold
-                Height: =19
-                LineHeight: =1.142857
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =10.5
-                Text: ="Description"
-                Width: =101
-                X: =15
-                Y: =15
-                ZIndex: =6
 
     "'Action Header_5' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -93,7 +64,7 @@ msftcapability As screen:
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=8, true, false)
         Width: =200
         X: =1117
-        Y: =219
+        Y: =211
         ZIndex: =3
 
         "'Action Label_5' As label":
@@ -113,8 +84,7 @@ msftcapability As screen:
             Size: =10.5
             Text: ="Action"
             Width: =46
-            X: =79
-            Y: =16
+            X: =80
             ZIndex: =8
 
     Category_3 As label:
@@ -148,8 +118,8 @@ msftcapability As screen:
         FontWeight: =FontWeight.Bold
         Size: =10.5
         Text: ="Projects Listed"
-        X: =780
-        Y: =219
+        X: =730
+        Y: =197
         ZIndex: =5
 
     Label16_1 As label:
@@ -172,6 +142,7 @@ msftcapability As screen:
                 ).Description
             )
             
+        VerticalAlign: =VerticalAlign.Top
         Width: =315
         X: =332
         Y: =276
@@ -184,7 +155,7 @@ msftcapability As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
-        Height: =167
+        Height: =298
         LineHeight: =1.142857
         Overflow: =Overflow.Scroll
         PaddingBottom: =0
@@ -194,8 +165,8 @@ msftcapability As screen:
         Size: =11
         Text: =Text(Gallery31.Selected.Capability)
         Width: =197
-        X: =114
-        Y: =276
+        X: =112
+        Y: =277
         ZIndex: =7
 
     Button5_2 As button:
