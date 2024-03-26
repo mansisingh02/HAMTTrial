@@ -36,8 +36,8 @@ msftprojecttype As screen:
         Height: =48
         LayoutMode: ="manual"
         Width: =274
-        X: =410
-        Y: =198
+        X: =383
+        Y: =199
         ZIndex: =2
 
         "'Report Label_9' As label":
@@ -85,7 +85,7 @@ msftprojecttype As screen:
             Size: =10.5
             Text: ="Projects Running"
             Width: =126
-            X: =65
+            X: =39
             Y: =15
             ZIndex: =10
 
@@ -136,7 +136,7 @@ msftprojecttype As screen:
         Text: =Text(Gallery4.Selected.'Project Type')
         Width: =355
         X: =107
-        Y: =147
+        Y: =137
         ZIndex: =5
 
     "'Rectangle 31_7' As rectangle":
@@ -173,12 +173,13 @@ msftprojecttype As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =34
+        Height: =175
         Size: =11
         Text: =Text(Gallery4.Selected.'Project Type')
-        Width: =166
-        X: =107
-        Y: =264
+        VerticalAlign: =VerticalAlign.Top
+        Width: =187
+        X: =103
+        Y: =280
         ZIndex: =8
 
     Button5_6 As button:
@@ -238,8 +239,8 @@ msftprojecttype As screen:
         Text: ="Edit"
         Visible: = If((Lower(User().Email)="sunjoy.prabakaran@providence.org" || Lower(User().Email)="madhavi.b@providence.org"|| Lower(User().Email)="madhavi.bandiathmakur@providence.org" || Lower(User().Email)="rama.ghodke@providence.org" ||Lower(User().Email)="mansi.singh@providence.org")  && varTabSelected=6, true, false)
         Width: =70
-        X: =1170
-        Y: =264
+        X: =1165
+        Y: =285
         ZIndex: =10
 
     Label13 As label:
@@ -259,9 +260,10 @@ msftprojecttype As screen:
                 'Project Type',
                 'Project Type' = Gallery4.Selected.'Project Type'
             ).Description
+        VerticalAlign: =VerticalAlign.Top
         Width: =337
-        X: =410
-        Y: =252
+        X: =383
+        Y: =285
         ZIndex: =14
 
     Button5_18 As button:
@@ -289,8 +291,8 @@ msftprojecttype As screen:
         Size: =10.5
         Text: ="View Projects Listed"
         Width: =205
-        X: =765
-        Y: =252
+        X: =773
+        Y: =280
         ZIndex: =15
 
     Label11_2 As label:
@@ -309,8 +311,8 @@ msftprojecttype As screen:
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
         Width: =98
-        X: =930
-        Y: =261
+        X: =941
+        Y: =289
         ZIndex: =16
 
     Container_PrimaryOwner_13 As groupContainer.verticalAutoLayoutContainer:
