@@ -26,7 +26,7 @@ msftcertification As screen:
             Size: =10.5
             Text: ="Certification Name"
             Width: =165
-            X: =15
+            X: =6
             Y: =16
             ZIndex: =4
 
@@ -64,7 +64,7 @@ msftcertification As screen:
         Size: =11
         Text: =Text(Gallery8.Selected.'Certification Name')
         Width: =315
-        X: =117
+        X: =107
         Y: =280
         ZIndex: =3
 
@@ -149,7 +149,7 @@ msftcertification As screen:
         FontWeight: =FontWeight.Bold
         Size: =10.5
         Text: ="Caregivers Listed"
-        X: =432
+        X: =425
         Y: =374
         ZIndex: =8
 
@@ -178,7 +178,7 @@ msftcertification As screen:
         Size: =10.5
         Text: ="Edit"
         Width: =70
-        X: =1174
+        X: =1178
         Y: =280
         ZIndex: =9
 
@@ -238,8 +238,8 @@ msftcertification As screen:
         Size: =10.5
         Text: ="View Caregivers Listed"
         Width: =229
-        X: =438
-        Y: =422
+        X: =432
+        Y: =450
         ZIndex: =13
 
     Label11_3 As label:
@@ -258,8 +258,8 @@ msftcertification As screen:
             =Navigate(msftcaregiverdiscipline, ScreenTransition.Fade, { FilteredDiscipline: FilteredDiscipline })
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
-        X: =622
-        Y: =428
+        X: =618
+        Y: =456
         ZIndex: =14
 
     "'Category Label_13' As label":
@@ -308,8 +308,7 @@ msftcertification As screen:
             Size: =10.5
             Text: ="Description"
             Width: =165
-            X: =8
-            Y: =10
+            Y: =12
             ZIndex: =4
 
     "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._3' As label":
@@ -327,9 +326,10 @@ msftcertification As screen:
         PaddingTop: =0
         Size: =10.5
         Text: =Text(Gallery8.Selected.Description)
+        VerticalAlign: =VerticalAlign.Top
         Width: =253
         X: =117
-        Y: =422
+        Y: =450
         ZIndex: =17
 
     "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._4' As label":

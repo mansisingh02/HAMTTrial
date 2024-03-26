@@ -38,8 +38,8 @@ msfttechnology As screen:
         Height: =60
         LayoutMode: ="manual"
         Width: =152
-        X: =409
-        Y: =179
+        X: =367
+        Y: =180
         ZIndex: =2
 
         "'Category Label' As label":
@@ -50,7 +50,7 @@ msfttechnology As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             FontWeight: =FontWeight.Bold
-            Height: =16
+            Height: =21
             LineHeight: =1.142857
             PaddingBottom: =0
             PaddingLeft: =0
@@ -59,8 +59,7 @@ msfttechnology As screen:
             Size: =10.5
             Text: ="Category"
             Width: =72
-            X: =35
-            Y: =25
+            Y: =21
             ZIndex: =6
 
     "'Report Header_1' As groupContainer.manualLayoutContainer":
@@ -88,8 +87,8 @@ msfttechnology As screen:
             Size: =10.5
             Text: ="Description"
             Width: =86
-            X: =95
-            Y: =20
+            X: =30
+            Y: =18
             ZIndex: =8
 
     "'Description Header' As groupContainer.manualLayoutContainer":
@@ -117,8 +116,7 @@ msfttechnology As screen:
             Size: =10.5
             Text: ="Skilled Caregivers"
             Width: =126
-            X: =60
-            Y: =25
+            Y: =21
             ZIndex: =10
 
     "'Action Header' As groupContainer.manualLayoutContainer":
@@ -179,8 +177,8 @@ msfttechnology As screen:
                     'Skill Name' = Gallery1_2.Selected.'Skill Name'
                 ).Description
             VerticalAlign: =VerticalAlign.Top
-            Width: =220
-            X: =5
+            Width: =231
+            Y: =27
             ZIndex: =18
 
     Category As label:
@@ -237,13 +235,13 @@ msfttechnology As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =67
+        Height: =160
         Size: =11
         Text: =Text(Gallery1_2.Selected.'Skill Name')
         VerticalAlign: =VerticalAlign.Top
         Width: =293
         X: =107
-        Y: =237
+        Y: =258
         ZIndex: =10
 
     CategoryLabel As label:
@@ -255,12 +253,13 @@ msfttechnology As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =34
+        Height: =142
         Size: =11
         Text: =Text(Gallery1_2.Selected.Discipline)
+        VerticalAlign: =VerticalAlign.Top
         Width: =190
-        X: =400
-        Y: =237
+        X: =362
+        Y: =258
         ZIndex: =11
 
     Button5_8 As button:
@@ -320,7 +319,7 @@ msfttechnology As screen:
         Text: ="Edit"
         Width: =70
         X: =1170
-        Y: =237
+        Y: =258
         ZIndex: =13
 
     Gallery9 As gallery.galleryVertical:
@@ -390,7 +389,7 @@ msfttechnology As screen:
         Text: ="View Skilled Caregivers"
         Width: =229
         X: =837
-        Y: =237
+        Y: =258
         ZIndex: =20
 
     Label32 As label:
@@ -408,8 +407,8 @@ msfttechnology As screen:
         Text: |
             ="("&(CountRows(Gallery9.AllItems) + CountRows(Gallery9_1.AllItems) + CountRows(Gallery9_2.AllItems))&")"
         Width: =45
-        X: =1026
-        Y: =246
+        X: =1021
+        Y: =268
         ZIndex: =21
 
     Container_PrimaryOwner_10 As groupContainer.verticalAutoLayoutContainer:

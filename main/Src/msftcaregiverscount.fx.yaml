@@ -46,7 +46,6 @@ msftcaregiverscount As screen:
             Text: ="Caregiver Names"
             Width: =182
             X: =16
-            Y: =12
             ZIndex: =4
 
     Category_17 As label:
@@ -66,7 +65,7 @@ msftcaregiverscount As screen:
         Text: ="List of Caregivers under"
         Width: =385
         X: =108
-        Y: =111
+        Y: =128
         ZIndex: =16
 
     Category_16 As label:
@@ -85,22 +84,49 @@ msftcaregiverscount As screen:
         Size: =18
         Text: =Gallery1_4.Selected.'Cost Center Name'
         Width: =373
-        X: =393
-        Y: =111
+        X: =391
+        Y: =128
         ZIndex: =34
 
     Gallery18 As gallery.galleryVertical:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
-        Height: =409
+        Height: =502
         Items: =FilteredCostCenters_Caregiver
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         TemplateSize: =56
         Width: =1130
         X: =108
-        Y: =249
+        Y: =266
         ZIndex: =35
+
+        Rectangle19 As rectangle:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =56
+            HoverFill: =RGBA(0, 120, 212, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =392
+            X: =728
+            ZIndex: =1
+
+        Rectangle16 As rectangle:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =56
+            HoverFill: =RGBA(0, 120, 212, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =297
+            ZIndex: =2
 
         Label37 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -115,8 +141,8 @@ msftcaregiverscount As screen:
             Size: =13
             Text: =ThisItem.'Caregiver Name'
             Width: =308
-            Y: =16
-            ZIndex: =1
+            Y: =8
+            ZIndex: =3
 
         Label37_3 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -131,9 +157,9 @@ msftcaregiverscount As screen:
             Size: =13
             Text: =ThisItem.'Caregiver Email'
             Width: =353
-            X: =298
-            Y: =16
-            ZIndex: =2
+            X: =308
+            Y: =8
+            ZIndex: =4
 
         Label37_4 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -150,7 +176,7 @@ msftcaregiverscount As screen:
             Width: =292
             X: =828
             Y: =16
-            ZIndex: =3
+            ZIndex: =5
 
         Label37_5 As label:
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -164,10 +190,24 @@ msftcaregiverscount As screen:
             OnSelect: =Select(Parent)
             Size: =13
             Text: =First(Filter(Project,ID=First(Filter(Caregivers_1,'Caregiver ID'=ThisItem.'Caregiver ID')).'Primary Project '.Value)).'Project Name'
-            Width: =336
-            X: =784
-            Y: =16
-            ZIndex: =4
+            Width: =378
+            X: =728
+            Y: =8
+            ZIndex: =6
+
+        Rectangle17 As rectangle:
+            BorderColor: =RGBA(0, 51, 142, 1)
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Height: =56
+            HoverFill: =RGBA(0, 120, 212, 1)
+            OnSelect: =Select(Parent)
+            PressedFill: =RGBA(0, 120, 212, 1)
+            Width: =408
+            X: =308
+            ZIndex: =7
 
     "'Report Header_30' As groupContainer.manualLayoutContainer":
         Height: =48
@@ -195,14 +235,13 @@ msftcaregiverscount As screen:
             Text: ="Caregiver Email ID"
             Width: =182
             X: =18
-            Y: =12
             ZIndex: =4
 
     "'Report Header_31' As groupContainer.manualLayoutContainer":
         Height: =48
         LayoutMode: ="manual"
         Width: =200
-        X: =882
+        X: =832
         Y: =201
         ZIndex: =37
 
@@ -223,8 +262,7 @@ msftcaregiverscount As screen:
             Size: =10.5
             Text: ="Primary Allocation"
             Width: =182
-            X: =18
-            Y: =12
+            X: =5
             ZIndex: =4
 
     Container_PrimaryOwner_19 As groupContainer.verticalAutoLayoutContainer:

@@ -59,11 +59,13 @@ msftdiscipline As screen:
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
+        Height: =120
         Size: =11
         Text: =Text(Gallery33.Selected.DisciplineName)
+        VerticalAlign: =VerticalAlign.Top
         Width: =193
         X: =117
-        Y: =272
+        Y: =293
         ZIndex: =3
 
     "'Category Label_9' As label":
@@ -83,8 +85,8 @@ msftdiscipline As screen:
         Size: =10.5
         Text: ="Description"
         Width: =86
-        X: =432
-        Y: =237
+        X: =418
+        Y: =227
         ZIndex: =4
 
     "'React is a JavaScript library for building user interfaces. It is declarative, efficient, and flexible. React makes it easy to create interactive UIs by using a component-based approach._1' As label":
@@ -94,7 +96,7 @@ msftdiscipline As screen:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         FocusedBorderThickness: =4
-        Height: =116
+        Height: =222
         LineHeight: =1.142857
         Overflow: =Overflow.Scroll
         PaddingBottom: =0
@@ -109,8 +111,8 @@ msftdiscipline As screen:
             ).Description
         VerticalAlign: =VerticalAlign.Top
         Width: =253
-        X: =432
-        Y: =272
+        X: =418
+        Y: =293
         ZIndex: =5
 
     "'Action Header_7' As groupContainer.manualLayoutContainer":
@@ -138,7 +140,7 @@ msftdiscipline As screen:
             Size: =10.5
             Text: ="Action"
             Width: =46
-            X: =80
+            X: =75
             Y: =24
             ZIndex: =8
 
@@ -153,8 +155,8 @@ msftdiscipline As screen:
         FontWeight: =FontWeight.Bold
         Size: =10.5
         Text: ="Caregivers Listed"
-        X: =780
-        Y: =221
+        X: =752
+        Y: =215
         ZIndex: =8
 
     Button5_10 As button:
@@ -183,7 +185,7 @@ msftdiscipline As screen:
         Text: ="Edit"
         Width: =70
         X: =1182
-        Y: =272
+        Y: =293
         ZIndex: =9
 
     Button5_11 As button:
@@ -242,8 +244,8 @@ msftdiscipline As screen:
         Size: =10.5
         Text: ="View Caregivers Listed"
         Width: =231
-        X: =752
-        Y: =266
+        X: =753
+        Y: =293
         ZIndex: =13
 
     Label11_1 As label:
@@ -260,8 +262,8 @@ msftdiscipline As screen:
             =Navigate(msftcaregiverdiscipline, ScreenTransition.Fade, { FilteredDiscipline: FilteredDiscipline })
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
-        X: =935
-        Y: =272
+        X: =941
+        Y: =299
         ZIndex: =14
 
     Container_Admin_15 As groupContainer.verticalAutoLayoutContainer:
