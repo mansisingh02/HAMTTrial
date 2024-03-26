@@ -435,11 +435,11 @@ msftcaregivers As screen:
                     "Beginnerr",
                     LookUp(Beginner, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
                     "Project1",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Primary Project '].Value),
+                    LookUp(Project, ID= Caregivers_1[@'Primary Project '].Id),
                     "Project2",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Secondary Project'].Value),
+                    LookUp(Project, ID= Caregivers_1[@'Secondary Project'].Id),
                     "Project3",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Tertiary Project'].Value)
+                    LookUp(Project, ID= Caregivers_1[@'Tertiary Project'].Id)
                     
                     ),
                     StartsWith('Caregiver Name',search.Text) && 
