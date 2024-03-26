@@ -3959,7 +3959,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =1291
             X: =75
-            Y: =54
+            Y: =60
             ZIndex: =73
 
         Rectangle4_5 As rectangle:
@@ -3968,13 +3968,13 @@ msftUpdatecaregivers As screen:
             DisabledFill: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
-            Height: =524
+            Height: =520
             HoverFill: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(255, 255, 255, 1)
             Visible: =showCertificationsPopup
             Width: =424
             X: =375
-            Y: =177
+            Y: =182
             ZIndex: =74
 
         Label28_11 As label:
@@ -3987,7 +3987,7 @@ msftUpdatecaregivers As screen:
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
             FontWeight: =FontWeight.Semibold
-            Height: =65
+            Height: =64
             LineHeight: =2
             OnSelect: =
             Size: =17
@@ -3995,7 +3995,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =325
             X: =418
-            Y: =183
+            Y: =188
             ZIndex: =75
 
         Label28_14 As label:
@@ -4007,7 +4007,7 @@ msftUpdatecaregivers As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =69
+            Height: =68
             LineHeight: =2
             OnSelect: =
             Size: =12
@@ -4015,7 +4015,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =398
             X: =414
-            Y: =415
+            Y: =418
             ZIndex: =76
 
         Label28_15 As label:
@@ -4035,7 +4035,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =256
             X: =423
-            Y: =511
+            Y: =513
             ZIndex: =77
 
         Label28_16 As label:
@@ -4055,7 +4055,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =72
             X: =837
-            Y: =434
+            Y: =437
             ZIndex: =78
 
         Label28_17 As label:
@@ -4075,7 +4075,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =72
             X: =758
-            Y: =504
+            Y: =506
             ZIndex: =79
 
         Icon1_13 As icon.Cancel:
@@ -4097,7 +4097,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =32
             X: =730
-            Y: =198
+            Y: =203
             ZIndex: =80
 
         Rectangle16_3 As rectangle:
@@ -4107,13 +4107,13 @@ msftUpdatecaregivers As screen:
             DisabledFill: =RGBA(179, 179, 179, 1)
             Fill: =RGBA(153, 153, 153, 1)
             FocusedBorderThickness: =4
-            Height: =0.5
+            Height: =0
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =showCertificationsPopup
             Width: =423
             X: =376
-            Y: =255
+            Y: =259
             ZIndex: =81
 
         Rectangle16_2 As rectangle:
@@ -4123,13 +4123,13 @@ msftUpdatecaregivers As screen:
             DisabledFill: =RGBA(179, 179, 179, 1)
             Fill: =RGBA(153, 153, 153, 1)
             FocusedBorderThickness: =4
-            Height: =0.5
+            Height: =0
             HoverFill: =RGBA(0, 120, 212, 1)
             PressedFill: =RGBA(0, 120, 212, 1)
             Visible: =showCertificationsPopup
             Width: =427
             X: =372
-            Y: =632
+            Y: =633
             ZIndex: =82
 
         msft_Button_83 As button:
@@ -4166,7 +4166,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =122
             X: =401
-            Y: =647
+            Y: =648
             ZIndex: =83
 
         SkillsTextInput_7 As text:
@@ -4193,13 +4193,11 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =showCertificationsPopup
             X: =419
-            Y: =285
+            Y: =289
             ZIndex: =84
 
         msft_Button_94 As button:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =0
+            BorderColor: =RGBA(0, 51, 142, 1)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -4207,9 +4205,9 @@ msftUpdatecaregivers As screen:
             FocusedBorderColor: =ColorFade(Self.Fill, -75%)
             FontWeight: =FontWeight.Bold
             Height: =36
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+            HoverBorderColor: =RGBA(0, 51, 172, 1)
+            HoverColor: =RGBA(0, 51, 142, 1)
+            HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: |-
                 =Set(
                     NewCertificationInput,
@@ -4344,7 +4342,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =117
             X: =617
-            Y: =647
+            Y: =648
             ZIndex: =85
 
         SkillsTextInput_8 As text:
@@ -4371,7 +4369,7 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =showCertificationsPopup
             X: =419
-            Y: =360
+            Y: =363
             ZIndex: =86
 
         SkillsTextInput_9 As text:
@@ -4398,7 +4396,7 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =showCertificationsPopup
             X: =419
-            Y: =439
+            Y: =442
             ZIndex: =87
 
         SkillsTextInput_10 As text:
@@ -4426,7 +4424,7 @@ msftUpdatecaregivers As screen:
             Size: =10.75
             Visible: =showCertificationsPopup
             X: =418
-            Y: =511
+            Y: =513
             ZIndex: =88
 
         DatePicker2_1 As datepicker:
@@ -4445,7 +4443,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =320
             X: =418
-            Y: =575
+            Y: =577
             ZIndex: =89
 
         Label40_3 As label:
@@ -4463,7 +4461,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =311
             X: =414
-            Y: =547
+            Y: =549
             ZIndex: =90
 
         Label40_4 As label:
@@ -4481,7 +4479,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =311
             X: =417
-            Y: =255
+            Y: =259
             ZIndex: =91
 
         Label40_5 As label:
@@ -4499,7 +4497,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =311
             X: =417
-            Y: =331
+            Y: =335
             ZIndex: =92
 
         Label40_6 As label:
@@ -4517,7 +4515,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =311
             X: =414
-            Y: =410
+            Y: =413
             ZIndex: =93
 
         Label40_7 As label:
@@ -4535,7 +4533,7 @@ msftUpdatecaregivers As screen:
             Visible: =showCertificationsPopup
             Width: =311
             X: =417
-            Y: =482
+            Y: =484
             ZIndex: =94
 
     Group2 As group:
