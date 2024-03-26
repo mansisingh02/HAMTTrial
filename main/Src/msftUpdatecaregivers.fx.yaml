@@ -1365,11 +1365,11 @@ msftUpdatecaregivers As screen:
             =Filter(AddColumns(
                 Caregivers_1,
                     "Project1",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Primary Project '].Value),
+                    LookUp(Project, ID= Caregivers_1[@'Primary Project '].Id),
                     "Project2",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Secondary Project'].Value),
+                    LookUp(Project, ID= Caregivers_1[@'Secondary Project'].Id),
                     "Project3",
-                    LookUp(Project, Text(ID)= Caregivers_1[@'Tertiary Project'].Value)
+                    LookUp(Project, ID= Caregivers_1[@'Tertiary Project'].Id)
                 ),
                 'Caregiver ID'=Gallery3.Selected.'Caregiver ID'
                 )   
