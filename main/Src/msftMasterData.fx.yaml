@@ -37,7 +37,18 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =352
-        Items: =Sort('Project Goals', Goal)
+        Items: |
+            =Sort(
+                Filter(
+                    'Project Goals',
+                    If(
+                        TextInput1_5.Text in Lower(Trim(Goal)),
+                        true,
+                        false
+                    )
+                ),
+                Goal
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |+
@@ -182,7 +193,18 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =388
-        Items: =Sort('Project Type', 'Project Type')
+        Items: |
+            =Sort(
+                Filter(
+                    'Project Type',
+                    If(
+                        TextInput1_4.Text in Lower(Trim('Project Type')),
+                        true,
+                        false
+                    )
+                ),
+                'Project Type'
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |+
@@ -451,7 +473,18 @@ msftMasterData As screen:
         BorderColor: =RGBA(166, 166, 166, 1)
         DelayItemLoading: =true
         Height: =361
-        Items: =Sort(Capabilities, Capability)
+        Items: |
+            =Sort(
+                Filter(
+                    Capabilities,
+                    If(
+                        TextInput1_6.Text in Lower(Trim('Capability')),
+                        true,
+                        false
+                    )
+                ),
+                'Capability'
+            )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         OnSelect: |
