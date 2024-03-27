@@ -478,12 +478,12 @@ msftMasterData As screen:
                 Filter(
                     Capabilities,
                     If(
-                        TextInput1_6.Text in Lower(Trim('Capability')),
+                        TextInput1_6.Text in Lower(Trim(Capability)),
                         true,
                         false
                     )
                 ),
-                'Capability'
+                Capability
             )
             
         Layout: =Layout.Vertical
@@ -2511,4 +2511,21 @@ msftMasterData As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =61
+
+    Image8_8 As image:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledFill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 0, 0, 0)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Image: ='Prov Infinite Loader'
+        PressedBorderColor: =RGBA(0, 0, 0, 0)
+        PressedFill: =RGBA(0, 0, 0, 0)
+        Visible: =varTabSelected=5 && loaderVisible
+        X: =658
+        Y: =449
+        ZIndex: =63
 

@@ -1619,6 +1619,7 @@ msftcaregivers As screen:
             ZIndex: =62
 
         Label51_41 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1631,7 +1632,7 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Tertiary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % of Tertiary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =87
-            X: =988
+            X: =958
             Y: =530
             ZIndex: =63
 
@@ -1670,6 +1671,7 @@ msftcaregivers As screen:
             ZIndex: =65
 
         Label51_45 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1682,11 +1684,12 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Secondary Project'.Value<>Blank(),Gallery1.Selected.'Allocation % for Secondary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =68
-            X: =985
+            X: =968
             Y: =436
             ZIndex: =66
 
         Label51_46 As label:
+            Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
             BorderStyle: =BorderStyle.None
             BorderThickness: =2
@@ -1699,7 +1702,7 @@ msftcaregivers As screen:
             Text: =If(Gallery1.Selected.'Primary Project '.Value<>Blank(),Gallery1.Selected.'Allocation % for Primary Project' * 100 & "%","")
             Visible: =showProjects=true
             Width: =53
-            X: =981
+            X: =973
             Y: =359
             ZIndex: =67
 
