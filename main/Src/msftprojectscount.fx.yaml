@@ -27,7 +27,7 @@ msftprojectscount As screen:
             Size: =10.5
             Text: ="List of Projects"
             Width: =182
-            X: =16
+            X: =8
             Y: =12
             ZIndex: =4
 
@@ -47,8 +47,8 @@ msftprojectscount As screen:
         Size: =18
         Text: ="List of Projects under"
         Width: =385
-        X: =108
-        Y: =111
+        X: =110
+        Y: =132
         ZIndex: =16
 
     msft_Button_67 As button:
@@ -103,7 +103,7 @@ msftprojectscount As screen:
         Text: =Gallery1_4.Selected.'Cost Center Name'
         Width: =373
         X: =362
-        Y: =111
+        Y: =132
         ZIndex: =34
 
     Gallery19 As gallery.galleryVertical:
@@ -121,11 +121,10 @@ msftprojectscount As screen:
                     SelectedProjectCostCenter: Gallery1_4.Selected.'Cost Center Name'
                 }
             )
-        TemplateSize: =84
-        Width: =1172
-        WrapCount: =3
-        X: =108
-        Y: =249
+        TemplateSize: =49
+        Width: =1183
+        X: =97
+        Y: =239
         ZIndex: =35
 
         Label38 As label:
@@ -137,13 +136,52 @@ msftprojectscount As screen:
             DisabledColor: =RGBA(166, 166, 166, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
-            Height: =45
+            Height: =47
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Project Name'
-            Width: =372
-            Y: =36
+            Width: =434
+            Y: =2
             ZIndex: =1
+
+        Label5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =47
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            Size: =13
+            Text: =ThisItem.Description
+            Width: =328
+            X: =422
+            Y: =2
+            ZIndex: =2
+
+        Label5_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            Height: =47
+            OnSelect: =Select(Parent)
+            Overflow: =Overflow.Scroll
+            PaddingTop: =12
+            Size: =13
+            Text: =ThisItem.'Primary Owner'.Value
+            Width: =328
+            X: =780
+            Y: =2
+            ZIndex: =3
 
     Container_PrimaryOwner_24 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -233,4 +271,46 @@ msftprojectscount As screen:
             X: =Parent.Width-300
             Y: =23
             ZIndex: =40
+
+    "'Report Label_44' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =29
+        LineHeight: =1.142857
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =10.5
+        Text: ="Description"
+        Width: =182
+        X: =531
+        Y: =210
+        ZIndex: =42
+
+    "'Report Label_45' As label":
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =29
+        LineHeight: =1.142857
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Size: =10.5
+        Text: ="Primary Owner"
+        Width: =182
+        X: =884
+        Y: =210
+        ZIndex: =43
 
