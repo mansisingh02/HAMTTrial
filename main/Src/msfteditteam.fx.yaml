@@ -202,7 +202,7 @@ msfteditteam As screen:
             PressedFill: =RGBA(0, 120, 212, 1)
             SelectionFill: =RGBA(255, 255, 255, 1)
             Width: =89
-            X: =643
+            X: =741
             Y: =32
             ZIndex: =10
 
@@ -216,12 +216,13 @@ msfteditteam As screen:
             Fill: =RGBA(255, 255, 255, 1)
             FocusedBorderThickness: =4
             Font: =Font.'Segoe UI'
+            Height: =41
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Caregiver Name'
-            Width: =191
+            Width: =264
             X: =94
-            Y: =32
+            Y: =30
             ZIndex: =15
 
         ComboBox2 As combobox:
@@ -259,8 +260,8 @@ msfteditteam As screen:
             SelectMultiple: =false
             Size: =13
             Width: =251
-            X: =340
-            Y: =32
+            X: =412
+            Y: =31
             ZIndex: =16
 
         ComboBox5 As combobox:
@@ -337,27 +338,6 @@ msfteditteam As screen:
             Y: =25
             ZIndex: =18
 
-        Icon7 As icon.Trash:
-            BorderColor: =RGBA(166, 166, 166, 1)
-            Color: =RGBA(151, 0, 0, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(0, 0, 0, 0)
-            FocusedBorderThickness: =4
-            Height: =31
-            HoverBorderColor: =RGBA(0, 0, 0, 0)
-            HoverColor: =RGBA(190, 71, 71, 1)
-            HoverFill: =RGBA(0, 0, 0, 0)
-            Icon: =Icon.Trash
-            OnSelect: =Set(varItemToDelete, Gallery21.Selected.'Caregiver Name'); Navigate(msftconfirmationscreen)
-            PressedBorderColor: =RGBA(0, 0, 0, 0)
-            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            PressedFill: =RGBA(0, 0, 0, 0)
-            Width: =19
-            X: =1029
-            Y: =36
-            ZIndex: =19
-
         Button10 As button:
             BorderColor: =RGBA(0, 0, 0, 0)
             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -399,7 +379,7 @@ msfteditteam As screen:
             Size: =12
             Text: ="Edit"
             Width: =107
-            X: =864
+            X: =923
             Y: =32
             ZIndex: =20
 
@@ -426,7 +406,7 @@ msfteditteam As screen:
             Size: =12
             Text: ="Delete"
             Width: =103
-            X: =987
+            X: =1054
             Y: =32
             ZIndex: =21
 
@@ -542,7 +522,7 @@ msfteditteam As screen:
         OnSelect: =
         Size: =13
         Text: ="Discipline"
-        X: =405
+        X: =472
         Y: =201
         ZIndex: =18
 
@@ -559,7 +539,7 @@ msfteditteam As screen:
         OnSelect: =
         Size: =13
         Text: ="Allocation %"
-        X: =706
+        X: =800
         Y: =201
         ZIndex: =19
 
