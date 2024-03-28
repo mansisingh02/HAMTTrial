@@ -202,7 +202,7 @@ msftnewcertification As screen:
                     Defaults(Certifications),
                     {
                         'Certification Name': msft_TextInput_2,
-                        'Validity Period (in Years)': msft_TextInput_3,
+                        'Validity Period (in Years)': msft_TextInput_3.Text,
                         'Certification Code': msft_TextInput_18,
                         Description: msft_TextInput_23
                     }
@@ -220,7 +220,7 @@ msftnewcertification As screen:
         PaddingTop: =8
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -50%)
         PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedFill: =RGBA(0, 51, 142, 1)
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
         RadiusTopLeft: =5
