@@ -727,7 +727,7 @@ msftUpdatecaregivers As screen:
             HoverColor: =RGBA(0, 51, 142, 1)
             HoverFill: =RGBA(255, 255, 255, 1)
             OnSelect: |
-                =(If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
+                = (If(Gallery5_1.Selected.'Intermediate 1'.Value=Blank(),Patch(Intermediate,  LookUp(
                             Intermediate,
                             'Caregiver ID' = Gallery3.Selected.'Caregiver ID') , {'Intermediate Skill 1': { Value: ThisItem.'Beginner 3'.Value , Id: ThisItem.'Beginner 3'.Id}, 'Description for Intermediate Skill 1':ThisItem.'Description for Beginner Skill 3'}),
                             Gallery5_1.Selected.'Intermediate 2'.Value=Blank(),Patch(Intermediate,  LookUp(
