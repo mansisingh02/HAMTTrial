@@ -15,6 +15,7 @@ msftcaregivers As screen:
                 "Advanced",
                 LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']))
         )*/
+        ClearCollect(test,Caregivers_1)
 
     search As text:
         BorderColor: =RGBA(166, 166, 166, 1)
@@ -426,22 +427,8 @@ msftcaregivers As screen:
         Height: =67
         Items: |-
             =Filter(
-                AddColumns(
-                Caregivers_1,
-                    "Intermediatee",
-                    LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
-                    "Advancedd",
-                    LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
-                    "Beginnerr",
-                    LookUp(Beginner, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
-                    "Project1",
-                    LookUp(Project, ID= Caregivers_1[@'Primary Project '].Id),
-                    "Project2",
-                    LookUp(Project, ID= Caregivers_1[@'Secondary Project'].Id),
-                    "Project3",
-                    LookUp(Project, ID= Caregivers_1[@'Tertiary Project'].Id)
-                    
-                    ),
+                CaregiverInfo,
+                
                     StartsWith('Caregiver Name',search.Text) && 
                     //(Level.Value = searchLevel.Selected.Value || searchLevel.Selected.Value=Blank())   && 
                     
@@ -455,7 +442,8 @@ msftcaregivers As screen:
                    (Intermediatee.'Intermediate Skill 6'.Value=searchLevel.Selected.Value || searchLevel.Selected.Value=Blank()) ||
                    (Intermediatee.'Intermediate Skill 7'.Value=searchLevel.Selected.Value || searchLevel.Selected.Value=Blank()) ||
                    (Intermediatee.'Intermediate Skill 8'.Value=searchLevel.Selected.Value || searchLevel.Selected.Value=Blank())
-                    ) &&
+                    ) 
+                    &&
             
                     (('Primary Project '.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank()) ||
                     ('Secondary Project'.Value=Text(First(Filter(Project,'Project Name'=searchLevel_1.Selected.Value)).ID) || searchLevel_1.Selected.Value=Blank())  ||

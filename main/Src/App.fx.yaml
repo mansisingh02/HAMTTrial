@@ -11,7 +11,31 @@ App As appinfo:
         
         
         
-        Set(currentUser,Lower(User().Email))
+        Set(currentUser,Lower(User().Email));
+        
+        ClearCollect(CaregiverInfo,
+         AddColumns(
+            Caregivers_1,
+                "Intermediatee",
+                LookUp(Intermediate, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
+                "Advancedd",
+                LookUp(Advanced, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
+                "Beginnerr",
+                LookUp(Beginner, 'Caregiver ID' = Caregivers_1[@'Caregiver ID']),
+                "Project1",
+                LookUp(Project, ID= Caregivers_1[@'Primary Project '].Id),
+                "Project2",
+                LookUp(Project, ID= Caregivers_1[@'Secondary Project'].Id),
+                "Project3",
+                LookUp(Project, ID= Caregivers_1[@'Tertiary Project'].Id))
+                //,
+                //ShowColumns(CaregiverInfo,"Intermediatee")
+                )
+        
+        //Collect(combinedData,ShowColumns(CaregiverInfo,"Intermediatee","Advancedd","Beginnerr","Project1","Project2","Project3"))
+                
+                
+                
     StartScreen: |-
         =If((First(Filter(Caregivers_1, 'Caregiver Email'=Lower(User().Email))).Level.Value="1P" && (Lower(User().Email)<>"rama.ghodke@providence.org" 
         //&&(Lower(User().Email)<>"mansi.singh@providence.org")
