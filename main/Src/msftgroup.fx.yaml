@@ -141,6 +141,7 @@ msftgroup As screen:
             Size: =10.5
             Text: ="Projects Active"
             Width: =129
+            X: =28
             Y: =16
             ZIndex: =6
 
@@ -181,8 +182,8 @@ msftgroup As screen:
                     'Group Name' = Gallery17.Selected.'Group Name'
                 ).Description
             )
-        Width: =247
-        X: =437
+        Width: =290
+        X: =433
         Y: =282
         ZIndex: =7
 
@@ -273,7 +274,7 @@ msftgroup As screen:
         Size: =10.5
         Text: ="View Projects Listed"
         Width: =200
-        X: =723
+        X: =748
         Y: =282
         ZIndex: =13
 
@@ -291,7 +292,7 @@ msftgroup As screen:
             =Navigate(msftgrouplists, ScreenTransition.Fade, { FilteredProjectsGroup: FilteredProjectsGroup })
         Size: =10.75
         Text: ="("&Text(TempCount)&")"
-        X: =884
+        X: =908
         Y: =285
         ZIndex: =14
 
