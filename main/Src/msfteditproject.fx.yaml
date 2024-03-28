@@ -348,7 +348,30 @@ msfteditproject As screen:
         HoverBorderColor: =RGBA(0, 51, 142, 1)
         HoverColor: =RGBA(0, 51, 142, 1)
         HoverFill: =RGBA(255,255,255,1)
-        OnSelect: =Navigate(msfteditteam,ScreenTransition.Fade)
+        OnSelect: |-
+            =Patch(
+                    Project,
+                    Defaults(Project),
+                    {
+                        'Project Name': msft_TextInput_8,
+                        'Status': msft_Dropdown_28.Selected.Value,
+                        'Primary Owner': msft_Dropdown_9.Selected.Value,
+                        Capability: ComboBox1_1.SelectedItems,
+                        'Group Name': msft_Dropdown_32.Selected.Value,
+                        'Cost Center Name': msft_Dropdown_30.Selected.Value,
+                        'Project Type': msft_Dropdown_10.Selected.Value,
+                        'Goal': ComboBox1_2.SelectedItems,
+                        'Start Date': msft_DatePicker_2.SelectedDate,
+                        'End Date': msft_DatePicker_3.SelectedDate,
+                        'Description': msft_TextInput_12,
+                        'In Flight Version': msft_TextInput_11,
+                        'In Prod Version': msft_TextInput_14,
+                        'In Production': Toggle1.Value,
+                        
+                    }
+                );
+                Refresh(Project);
+                Navigate(msfteditteam,ScreenTransition.Fade)
         PaddingBottom: =7
         PaddingLeft: =32
         PaddingRight: =32
@@ -1178,41 +1201,6 @@ msfteditproject As screen:
             LayoutMinWidth: =640
             myAccountNav: =msftUpdatecaregivers
             projectNav: =msftproject
-
-    ComboBox9 As combobox:
-        BorderColor: =RGBA(166, 166, 166, 1)
-        ChevronBackground: =RGBA(255, 255, 255, 1)
-        ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
-        ChevronDisabledFill: =RGBA(166, 166, 166, 1)
-        ChevronFill: =RGBA(33, 33, 33, 1)
-        ChevronHoverBackground: =RGBA(212, 212, 212, 1)
-        ChevronHoverFill: =RGBA(33, 33, 33, 1)
-        Color: =RGBA(51, 51, 51, 1)
-        Default: =Gallery16.Selected.Status
-        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayFields: =["Value"]
-        Font: =Font.'Segoe UI'
-        Height: =45
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        HoverColor: =RGBA(51, 51, 51, 1)
-        HoverFill: =RGBA(212, 212, 212, 1)
-        InputTextPlaceholder: ="Status"
-        Items: =Choices(Project.Status)
-        OnChange: =Set(varSelectedValue, ComboBox9.Selected.Value)
-        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 120, 212, 1)
-        SearchFields: =["Value"]
-        SearchItems: =Choices(Project.Status,ComboBox9.SearchText)
-        SelectionFill: =RGBA(0, 120, 212, 1)
-        SelectMultiple: =false
-        Size: =13
-        Width: =234
-        X: =367
-        Y: =196
-        ZIndex: =56
 
     Group3_2 As group:
         Height: =5
