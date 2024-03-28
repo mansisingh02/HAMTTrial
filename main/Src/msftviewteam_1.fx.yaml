@@ -145,33 +145,6 @@ msftviewteam_1 As screen:
         Y: =234
         ZIndex: =12
 
-        Rectangle1_2 As rectangle:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
-            Height: =
-            OnSelect: =Select(Parent)
-            Visible: =ThisItem.IsSelected
-            Width: =4
-            ZIndex: =6
-
-        Label17_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 0)
-            BorderStyle: =BorderStyle.None
-            BorderThickness: =2
-            Color: =RGBA(51, 51, 51, 1)
-            DisabledBorderColor: =RGBA(0, 0, 0, 0)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            FocusedBorderThickness: =4
-            Font: =Font.'Segoe UI'
-            OnSelect: =Select(Parent)
-            Size: =13
-            Text: =ThisItem.'Caregiver Name'
-            Width: =191
-            X: =94
-            Y: =32
-            ZIndex: =15
-
         Label17_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 0)
@@ -193,7 +166,34 @@ msftviewteam_1 As screen:
             Width: =191
             X: =469
             Y: =32
-            ZIndex: =22
+            ZIndex: =1
+
+        Rectangle1_2 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            Fill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+            Height: =
+            OnSelect: =Select(Parent)
+            Visible: =ThisItem.IsSelected
+            Width: =4
+            ZIndex: =2
+
+        Label17_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(51, 51, 51, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.'Caregiver Name'
+            Width: =191
+            X: =94
+            Y: =32
+            ZIndex: =3
 
         Label17_7 As label:
             Align: =Align.Center
@@ -217,7 +217,7 @@ msftviewteam_1 As screen:
             Width: =67
             X: =891
             Y: =32
-            ZIndex: =23
+            ZIndex: =4
 
     Container_Admin_13 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
