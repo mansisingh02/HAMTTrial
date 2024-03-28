@@ -7302,9 +7302,9 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 810,
+                  "charOffset": 811,
                   "snippet": {
-                    "text": ","
+                    "text": "3"
                   }
                 }
               },
@@ -7316,12 +7316,16 @@
             }
           ],
           "message": {
+            "arguments": [
+              "3",
+              "Ident"
+            ],
             "id": "issue"
           },
           "properties": {
             "level": "High"
           },
-          "ruleId": "app-ErrColonExpected",
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
           "ruleIndex": 10
         },
         {
@@ -7339,9 +7343,9 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 833,
+                  "charOffset": 811,
                   "snippet": {
-                    "text": "}"
+                    "text": "3"
                   }
                 }
               },
@@ -7354,8 +7358,8 @@
           ],
           "message": {
             "arguments": [
-              "CurlyClose",
-              "Ident"
+              "3",
+              "Colon"
             ],
             "id": "issue"
           },
@@ -7363,6 +7367,43 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "msfteditproject.msft_Button_21.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "msfteditproject.msft_Button_21.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 811,
+                  "snippet": {
+                    "text": "3"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "msfteditproject",
+                "type": "msfteditproject.msft_Button_21"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColonExpected",
           "ruleIndex": 11
         },
         {
@@ -7379,10 +7420,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 840,
+                  "charLength": 841,
                   "charOffset": 0,
                   "snippet": {
-                    "text": "Patch(\n        Project,\n        Defaults(Project),\n        {\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,\n            \n        }\n    )"
+                    "text": "Patch(\n        Project,\n        Defaults(Project),\n        {\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,3\n            \n        }\n    )"
                   }
                 }
               },
@@ -7419,10 +7460,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 775,
+                  "charLength": 776,
                   "charOffset": 59,
                   "snippet": {
-                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,\n            \n        }"
+                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,3\n            \n        }"
                   }
                 }
               },
@@ -7459,10 +7500,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 775,
+                  "charLength": 776,
                   "charOffset": 59,
                   "snippet": {
-                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,\n            \n        }"
+                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,3\n            \n        }"
                   }
                 }
               },
@@ -7500,10 +7541,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 775,
+                  "charLength": 776,
                   "charOffset": 59,
                   "snippet": {
-                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,\n            \n        }"
+                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,3\n            \n        }"
                   }
                 }
               },
@@ -7540,10 +7581,10 @@
                   "relativeAddress": 0
                 },
                 "region": {
-                  "charLength": 775,
+                  "charLength": 776,
                   "charOffset": 59,
                   "snippet": {
-                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,\n            \n        }"
+                    "text": "{\n            'Project Name': msft_TextInput_8,\n            'Status': msft_Dropdown_28.Selected.Value,\n            'Primary Owner': msft_Dropdown_9.Selected.Value,\n            Capability: ComboBox1_1.SelectedItems,\n            'Group Name': msft_Dropdown_32.Selected.Value,\n            'Cost Center Name': msft_Dropdown_30.Selected.Value,\n            'Project Type': msft_Dropdown_10.Selected.Value,\n            'Goal': ComboBox1_2.SelectedItems,\n            'Start Date': msft_DatePicker_2.SelectedDate,\n            'End Date': msft_DatePicker_3.SelectedDate,\n            'Description': msft_TextInput_12,\n            'In Flight Version': msft_TextInput_11,\n            'In Prod Version': msft_TextInput_14,\n            'In Production': Toggle1.Value,3\n            \n        }"
                   }
                 }
               },
@@ -45965,23 +46006,6 @@
               }
             },
             {
-              "id": "app-ErrColonExpected",
-              "messageStrings": {
-                "issue": {
-                  "text": "Expected colon. We expect a colon (:) at this point in the formula."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Edit your formula so that it includes a colon."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrExpectedFound-Ex-Fnd",
               "messageStrings": {
                 "issue": {
@@ -45992,6 +46016,23 @@
                 "componentType": "app",
                 "howToFix": [
                   "Remove or replace the unexpected characters with an expected character."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColonExpected",
+              "messageStrings": {
+                "issue": {
+                  "text": "Expected colon. We expect a colon (:) at this point in the formula."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Edit your formula so that it includes a colon."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
