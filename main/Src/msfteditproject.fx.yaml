@@ -1188,6 +1188,7 @@ msfteditproject As screen:
         ChevronHoverBackground: =RGBA(212, 212, 212, 1)
         ChevronHoverFill: =RGBA(33, 33, 33, 1)
         Color: =RGBA(51, 51, 51, 1)
+        Default: =Gallery16.Selected.Status
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -1199,6 +1200,7 @@ msfteditproject As screen:
         HoverFill: =RGBA(212, 212, 212, 1)
         InputTextPlaceholder: ="Status"
         Items: =Choices(Project.Status)
+        OnChange: =Set(varSelectedValue, ComboBox9.Selected.Value)
         PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
